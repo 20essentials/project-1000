@@ -32,7 +32,6 @@ img {
   height: 100%;
   inset: 0;
   width: calc(2240px / 8);
-  background-color: #fff8;
   z-index: 2;
   transform: scaleY(0.97) scaleX(0.92);
   border-radius: var(--border-r);
