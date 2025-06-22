@@ -4,6 +4,7 @@
   animation: mover 16s steps(8) infinite;
   border-radius: var(--border-r);
   transform: scale(0.97);
+  border-radius: 40px;
   position: absolute;
   height: 100%;
   inset: 0;

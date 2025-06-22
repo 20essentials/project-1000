@@ -23,7 +23,7 @@ img {
     #00f,
     var(--global-blue)
   );
-  --border-r: 40px;
+  --border-r: 38px;
 }
 
 .layer-container {
@@ -35,7 +35,7 @@ img {
   background-color: #fff8;
   z-index: 2;
   transform: scaleY(0.97) scaleX(0.92);
-  border-radius: 38px;
+  border-radius: var(--border-r);
   height: 99.4%;
 }
 

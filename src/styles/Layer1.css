@@ -1,3 +1,36 @@
 .layer1 {
-  background-color: red;
+  background-color: #f008;
+  display: flex;
+  flex-direction: column;
+
+  .padTop {
+    height: 7%;
+  }
+
+  .container-grid {
+    height: 93%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+
+    .social-container {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      background-color: #fff4;
+      width: 100%;
+
+      .social-top {
+        aspect-ratio: 1;
+        border-radius: 8px;
+        border: 1px solid #fff;
+      }
+
+      .social-bottom {
+        background-color: orange;
+        font-size: 10px;
+        text-align: center;
+      }
+    }
+  }
 }
