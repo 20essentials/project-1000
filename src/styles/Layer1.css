@@ -4,6 +4,7 @@
 
   .padTop {
     height: 7%;
+    background-color: #0f08;
   }
 
   .container-grid {
@@ -11,9 +12,59 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(7, 1fr);
-    padding-bottom: 12px;
+    padding: 10px;
+    gap: 15px;
+    position: relative;
 
-    .social-container {
+    .social-top {
+      width: 36px;
+      height: 36px;
+      border-radius: 7px;
+      border: 1px solid #fff8;
+      user-select: none;
+      position: relative;
+      cursor: grab;
+      pointer-events: none;
+      opacity: 0;
+
+      &.drag {
+        position: absolute;
+
+        &::before {
+          opacity: 0;
+        }
+      }
+
+      &::before {
+        content: 'TikTok';
+        position: absolute;
+        bottom: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 10px;
+        text-align: center;
+        color: #fff;
+        user-select: none;
+        transition: opacity 0.2s ease;
+      }
+
+      &.visible {
+        pointer-events: auto;
+        opacity: 1;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        object-fit: center;
+        border-radius: inherit;
+        pointer-events: none;
+      }
+    }
+
+    /*   .social-container {
       display: flex;
       flex-direction: column;
       padding: 10px;
@@ -27,22 +78,12 @@
         opacity: 1;
       }
 
-      .social-top {
-        aspect-ratio: 1;
-        border-radius: 7px;
-        border: 1px solid #fff8;
-        background-image: url('/assets/tiktok-logo.avif');
-        background-size: cover;
-        background-position: center;
-        user-select: none;
-      }
-
       .social-bottom {
-        font-size: 11px;
+        font-size: 10px;
         text-align: center;
         color: #fff;
         user-select: none;
-        transition: opacity .2s ease;
+        transition: opacity 0.2s ease;
       }
 
       &:active {
@@ -50,6 +91,6 @@
           opacity: 0;
         }
       }
-    }
+    } */
   }
 }
