@@ -1,0 +1,91 @@
+@keyframes changeBg {
+  0% {
+    --top: #c953df;
+    --bottom: #b6c4d1;
+  }
+
+  12.5% {
+    --top: #8ccfea;
+    --bottom: #8191a8;
+  }
+
+  25% {
+    --top: #85c2ef;
+    --bottom: #caada7;
+  }
+
+  37.5% {
+    --top: #60de97;
+    --bottom: #4a5159;
+  }
+
+  50% {
+    --top: #fdce42;
+    --bottom: #e4cb93;
+  }
+
+  62.5% {
+    --top: #ab74dc;
+    --bottom: #cbbdd7;
+  }
+
+  75% {
+    --top: #c0b3ba;
+    --bottom: #b1c3c7;
+  }
+
+  87.5% {
+    --top: #eba35b;
+    --bottom: #aa2425;
+  }
+
+  100% {
+    --top: #c953df;
+    --bottom: #b6c4d1;
+  }
+}
+
+body {
+  height: 100dvh;
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
+  animation: changeBg 16s steps(8) infinite both;
+  animation-delay: 1s;
+  background-image: linear-gradient(to bottom, var(--top), var(--bottom));
+}
+
+.phone {
+  width: 280px;
+  height: 580px;
+  background-size: contain;
+  background-image: url('/assets/iphone-15.png');
+  position: relative;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: '';
+    display: block;
+    border-radius: 2vmax;
+    position: absolute;
+    inset: 0;
+    background-color: red;
+    z-index: -1;
+    transform: scale(0.97);
+    background-image: url('/assets/spritesheet.avif');
+    width: calc(2240px / 8);
+    height: 100%;
+    transition: filter 0.5s ease;
+    animation: mover 16s steps(8) infinite;
+  }
+}
+
+@keyframes mover {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: -2240px 0;
+  }
+}
