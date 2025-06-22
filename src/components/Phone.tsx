@@ -4,7 +4,7 @@ import { Layer0 } from '@/components/Layer0';
 
 export function Phone() {
   return <main className='phone'>
-    {/* <Layer1></Layer1> */}
     <Layer0 />
+    <Layer1 />
   </main>;
 }
