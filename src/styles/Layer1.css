@@ -1,0 +1,6 @@
+.layer1 {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-color: red;
+}

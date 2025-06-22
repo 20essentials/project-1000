@@ -63,45 +63,19 @@ body {
   position: relative;
   background-repeat: no-repeat;
 
-  @media (width <= 1250px) and (orientation: landscape)  {
+  @media (width <= 1250px) and (orientation: landscape) {
     zoom: 0.75;
   }
 
-  @media (width <= 1025px) and (orientation: landscape)  {
+  @media (width <= 1025px) and (orientation: landscape) {
     zoom: 0.5;
   }
 
-  @media (width <= 650px) and (orientation: landscape)  {
+  @media (width <= 650px) and (orientation: landscape) {
     zoom: 0.3;
   }
 
-  @media (width <= 400px) and (orientation: landscape)  {
+  @media (width <= 400px) and (orientation: landscape) {
     zoom: 0.2;
-  }
-
-  &::before {
-    content: '';
-    display: block;
-    border-radius: 40px;
-    position: absolute;
-    inset: 0;
-    background-color: red;
-    z-index: -1;
-    transform: scale(0.97);
-    background-image: url('/assets/spritesheet.avif');
-    width: calc(2240px / 8);
-    height: 100%;
-    transition: filter 0.5s ease;
-    animation: mover 16s steps(8) infinite;
-  }
-}
-
-@keyframes mover {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: -2240px 0;
   }
 }
