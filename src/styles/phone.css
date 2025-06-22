@@ -63,10 +63,26 @@ body {
   position: relative;
   background-repeat: no-repeat;
 
+  @media (width <= 1250px) and (orientation: landscape)  {
+    zoom: 0.75;
+  }
+
+  @media (width <= 1025px) and (orientation: landscape)  {
+    zoom: 0.5;
+  }
+
+  @media (width <= 650px) and (orientation: landscape)  {
+    zoom: 0.3;
+  }
+
+  @media (width <= 400px) and (orientation: landscape)  {
+    zoom: 0.2;
+  }
+
   &::before {
     content: '';
     display: block;
-    border-radius: 2vmax;
+    border-radius: 40px;
     position: absolute;
     inset: 0;
     background-color: red;
