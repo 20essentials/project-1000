@@ -24,11 +24,12 @@
       user-select: none;
       position: relative;
       cursor: grab;
-      pointer-events: none;
+      /* pointer-events: none; */
       opacity: 0;
 
       &.drag {
         position: absolute;
+        pointer-events: none;
 
         &::before {
           opacity: 0;
@@ -46,11 +47,25 @@
         color: #fff;
         user-select: none;
         transition: opacity 0.2s ease;
+        opacity: 0;
       }
 
       &.visible {
         pointer-events: auto;
         opacity: 1;
+
+        &::before {
+          opacity: 0;
+        }
+      }
+
+      &.elegido {
+        pointer-events: auto;
+        opacity: 1;
+
+        &::before {
+          opacity: 1;
+        }
       }
 
       img {
@@ -63,34 +78,5 @@
         pointer-events: none;
       }
     }
-
-    /*   .social-container {
-      display: flex;
-      flex-direction: column;
-      padding: 10px;
-      width: 100%;
-      gap: 5px;
-      pointer-events: none;
-      opacity: 0;
-
-      &.visible {
-        pointer-events: auto;
-        opacity: 1;
-      }
-
-      .social-bottom {
-        font-size: 10px;
-        text-align: center;
-        color: #fff;
-        user-select: none;
-        transition: opacity 0.2s ease;
-      }
-
-      &:active {
-        .social-bottom {
-          opacity: 0;
-        }
-      }
-    } */
   }
 }
