@@ -1,0 +1,56 @@
+
+
+.social-top {
+  width: 36px;
+  height: 36px;
+  border-radius: 7px;
+  border: 1px solid #fff8;
+  user-select: none;
+  position: relative;
+  cursor: grab;
+  pointer-events: none;
+  opacity: 0;
+  transition: top 0s ease-in-out, left 0s ease-in-out;
+
+  &::before {
+    content: 'TikTok';
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    text-align: center;
+    color: #fff;
+    user-select: none;
+    transition: opacity 0.2s ease;
+    opacity: 0;
+  }
+
+  &.visible {
+    pointer-events: auto;
+    opacity: 1;
+
+    &::before {
+      opacity: 0;
+    }
+  }
+
+  &.elegido {
+    pointer-events: auto !important;
+    opacity: 1;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-fit: center;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+}
