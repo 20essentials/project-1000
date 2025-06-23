@@ -1,5 +1,5 @@
 import '@/styles/Layer1.css';
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export function Layer1() {
   const [indexOfVisibleIcon, setindexOfVisibleIcon] = useState(12);
@@ -17,7 +17,11 @@ export function Layer1() {
 
     const handlePress = (e: MouseEvent) => {
       target = e.target as HTMLElement;
-      if (!target.classList.contains('social-top') || !target.classList.contains('elegido')) return;
+      if (
+        !target.classList.contains('social-top') ||
+        !target.classList.contains('elegido')
+      )
+        return;
 
       const containerRect = container.getBoundingClientRect();
       const targetRect = target.getBoundingClientRect();
@@ -47,6 +51,7 @@ export function Layer1() {
 
       container.appendChild(clone);
       target.classList.remove('elegido');
+      target.querySelector('img')?.remove();
 
       document.addEventListener('mousemove', handleMove);
       document.addEventListener('mouseup', handleRelease);
@@ -61,11 +66,9 @@ export function Layer1() {
 
         target.addEventListener('mouseleave', () => {
           target.classList.remove('visible');
-          lastTargetSocialTop.current = null;
 
           target.removeEventListener('mouseover', handleMouseOver);
           target.removeEventListener('mouseleave', handleMouseOver);
-          
         });
       }
     }
@@ -74,14 +77,14 @@ export function Layer1() {
       if (!clone) return;
 
       const containerRect = container.getBoundingClientRect();
-      const maxLeft = container.clientWidth - clone.offsetWidth - 5;
-      const maxTop = container.clientHeight - clone.offsetHeight - 14;
+      const maxLeft = container.clientWidth - clone.offsetWidth - 10;
+      const maxTop = container.clientHeight - clone.offsetHeight - 25;
 
       let newLeft = e.clientX - containerRect.left - offsetX;
       let newTop = e.clientY - containerRect.top - offsetY;
 
       // Limitar para que no se salga del container
-      newLeft = Math.max(5, Math.min(newLeft, maxLeft));
+      newLeft = Math.max(10, Math.min(newLeft, maxLeft));
       newTop = Math.max(10, Math.min(newTop, maxTop));
 
       clone.style.left = `${newLeft}px`;
@@ -92,20 +95,20 @@ export function Layer1() {
       document.removeEventListener('mousemove', handleMove);
       document.removeEventListener('mouseup', handleRelease);
       document.removeEventListener('mouseover', handleMouseOver);
-      // console.log(lastTargetSocialTop.current, clone);
 
-      // if (lastTargetSocialTop.current && clone) {
-      //   lastTargetSocialTop.current.classList.remove('drag');
-      //   lastTargetSocialTop.current.replaceWith(clone);
-      // }
-
-      if (clone) {
-        clone.remove();
-        clone = null;
-      }
-      if (target) {
-        target.classList.add('elegido');
+      if (target && lastTargetSocialTop.current && clone) {
+        const newDestino = lastTargetSocialTop.current;
+        newDestino.classList.add('elegido');
+        newDestino.classList.remove('drag');
+        // clone.remove();
         target = null;
+        clone = null;
+        newDestino.innerHTML = `      <img
+                  draggable='false'
+                  src='/assets/tiktok-logo.avif'
+                  className='titk-tok-logo'
+                />`;
+        lastTargetSocialTop.current = null;
       }
     };
 

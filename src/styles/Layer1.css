@@ -4,7 +4,6 @@
 
   .padTop {
     height: 7%;
-    background-color: #0f08;
   }
 
   .container-grid {
@@ -24,8 +23,8 @@
       user-select: none;
       position: relative;
       cursor: grab;
-      /* pointer-events: none; */
-      opacity: 0;
+      pointer-events: none; 
+       opacity: 0;
 
       &.drag {
         position: absolute;
@@ -60,7 +59,7 @@
       }
 
       &.elegido {
-        pointer-events: auto;
+        pointer-events: auto !important;
         opacity: 1;
 
         &::before {
