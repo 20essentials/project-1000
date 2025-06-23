@@ -25,15 +25,8 @@
       cursor: grab;
       pointer-events: none; 
        opacity: 0;
+      transition: top 0s ease-in-out, left 0s ease-in-out;
 
-      &.drag {
-        position: absolute;
-        pointer-events: none;
-
-        &::before {
-          opacity: 0;
-        }
-      }
 
       &::before {
         content: 'TikTok';

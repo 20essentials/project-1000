@@ -1,145 +1,122 @@
 import '@/styles/Layer1.css';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 export function Layer1() {
-  const [indexOfVisibleIcon, setindexOfVisibleIcon] = useState(12);
-  const containerGrid = useRef<HTMLElement | null>(null);
-  const lastTargetSocialTop = useRef<HTMLElement | null>(null);
+  const containerRef = useRef<HTMLElement | null>(null);
+  const iconRef = useRef<HTMLElement | null>(null);
 
-  useEffect(() => {
-    const container = containerGrid.current;
-    if (!container) return;
+useEffect(() => {
+  const container = containerRef.current;
+  const icon = iconRef.current;
+  if (!container || !icon) return;
 
-    let clone: HTMLElement | null = null;
-    let target: HTMLElement | null = null;
-    let offsetX = 0;
-    let offsetY = 0;
+  let offsetX = 0;
+  let offsetY = 0;
+  let isDragging = false;
+  let dragStarted = false;
+  let startX = 0;
+  let startY = 0;
+  const dragThreshold = 3; // px para empezar a arrastrar
 
-    const handlePress = (e: MouseEvent) => {
-      target = e.target as HTMLElement;
+  const onMouseDown = (e: MouseEvent) => {
+    if (!icon.contains(e.target as Node)) return;
+
+    const rect = icon.getBoundingClientRect();
+    offsetX = e.clientX - rect.left;
+    offsetY = e.clientY - rect.top;
+
+    startX = e.clientX;
+    startY = e.clientY;
+
+    dragStarted = false; // Todavía no está arrastrando
+
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseup', onMouseUp);
+  };
+
+  const moveAt = (clientX: number, clientY: number) => {
+    const containerRect = container.getBoundingClientRect();
+
+    let left = clientX - containerRect.left - offsetX;
+    let top = clientY - containerRect.top - offsetY;
+
+    left = Math.max(
+      10,
+      Math.min(left, container.clientWidth - icon.offsetWidth) - 10
+    );
+    top = Math.max(
+      10,
+      Math.min(top, container.clientHeight - icon.offsetHeight) - 25
+    );
+
+    icon.style.left = `${left}px`;
+    icon.style.top = `${top}px`;
+  };
+
+  const onMouseMove = (e: MouseEvent) => {
+    if (!dragStarted) {
+      // Solo activamos drag si se movió más que el umbral
       if (
-        !target.classList.contains('social-top') ||
-        !target.classList.contains('elegido')
-      )
-        return;
-
-      const containerRect = container.getBoundingClientRect();
-      const targetRect = target.getBoundingClientRect();
-
-      offsetX = e.clientX - targetRect.left;
-      offsetY = e.clientY - targetRect.top;
-
-      clone = target.cloneNode(true) as HTMLElement;
-      clone.classList.add('drag', 'elegido');
-      clone.style.position = 'absolute';
-      clone.style.pointerEvents = 'none';
-      clone.style.zIndex = '9999';
-
-      // Posición inicial
-      let initLeft = e.clientX - containerRect.left - offsetX;
-      let initTop = e.clientY - containerRect.top - offsetY;
-
-      // Limitar desde el inicio también
-      const maxLeft = container.clientWidth - target.offsetWidth;
-      const maxTop = container.clientHeight - target.offsetHeight;
-
-      initLeft = Math.max(0, Math.min(initLeft, maxLeft));
-      initTop = Math.max(0, Math.min(initTop, maxTop));
-
-      clone.style.left = `${initLeft}px`;
-      clone.style.top = `${initTop}px`;
-
-      container.appendChild(clone);
-      target.classList.remove('elegido');
-      target.querySelector('img')?.remove();
-
-      document.addEventListener('mousemove', handleMove);
-      document.addEventListener('mouseup', handleRelease);
-      document.addEventListener('mouseover', handleMouseOver);
-    };
-
-    function handleMouseOver(e: MouseEvent) {
-      const target = e.target as HTMLElement;
-      if (target.classList.contains('social-top')) {
-        target.classList.add('visible');
-        lastTargetSocialTop.current = target;
-
-        target.addEventListener('mouseleave', () => {
-          target.classList.remove('visible');
-
-          target.removeEventListener('mouseover', handleMouseOver);
-          target.removeEventListener('mouseleave', handleMouseOver);
-        });
+        Math.abs(e.clientX - startX) >= dragThreshold ||
+        Math.abs(e.clientY - startY) >= dragThreshold
+      ) {
+        dragStarted = true;
+        isDragging = true;
+        icon.style.position = 'absolute';
+        icon.style.pointerEvents = 'none';
+      } else {
+        return; // No hacemos nada aún, no superó el umbral
       }
     }
 
-    const handleMove = (e: MouseEvent) => {
-      if (!clone) return;
+    if (isDragging) {
+      moveAt(e.clientX, e.clientY);
+    }
+  };
 
-      const containerRect = container.getBoundingClientRect();
-      const maxLeft = container.clientWidth - clone.offsetWidth - 10;
-      const maxTop = container.clientHeight - clone.offsetHeight - 25;
+  const onMouseUp = () => {
+    if (isDragging) {
+      isDragging = false;
+      icon.style.pointerEvents = 'auto';
+    }
+    dragStarted = false;
 
-      let newLeft = e.clientX - containerRect.left - offsetX;
-      let newTop = e.clientY - containerRect.top - offsetY;
+    document.removeEventListener('mousemove', onMouseMove);
+    document.removeEventListener('mouseup', onMouseUp);
+  };
 
-      // Limitar para que no se salga del container
-      newLeft = Math.max(10, Math.min(newLeft, maxLeft));
-      newTop = Math.max(10, Math.min(newTop, maxTop));
+  document.addEventListener('mousedown', onMouseDown);
 
-      clone.style.left = `${newLeft}px`;
-      clone.style.top = `${newTop}px`;
-    };
+  return () => {
+    document.removeEventListener('mousedown', onMouseDown);
+  };
+}, []);
 
-    const handleRelease = () => {
-      document.removeEventListener('mousemove', handleMove);
-      document.removeEventListener('mouseup', handleRelease);
-      document.removeEventListener('mouseover', handleMouseOver);
-
-      if (target && lastTargetSocialTop.current && clone) {
-        const newDestino = lastTargetSocialTop.current;
-        newDestino.classList.add('elegido');
-        newDestino.classList.remove('drag');
-        // clone.remove();
-        target = null;
-        clone = null;
-        newDestino.innerHTML = `      <img
-                  draggable='false'
-                  src='/assets/tiktok-logo.avif'
-                  className='titk-tok-logo'
-                />`;
-        lastTargetSocialTop.current = null;
-      }
-    };
-
-    document.addEventListener('mousedown', handlePress);
-
-    return () => {
-      document.removeEventListener('mousedown', handlePress);
-      document.removeEventListener('mousemove', handleMove);
-      document.removeEventListener('mouseup', handleRelease);
-    };
-  }, []);
 
   return (
     <article className='layer1 layer-container'>
       <aside className='padTop'></aside>
-      <section className='container-grid' ref={containerGrid}>
-        {[...Array(35).keys()].map(idx => {
-          const isVisible = idx === indexOfVisibleIcon;
-          const className = `social-top ${isVisible ? 'elegido' : ''}`;
-          return (
-            <article key={idx} className={className} draggable='false'>
-              {isVisible && (
-                <img
-                  draggable='false'
-                  src='/assets/tiktok-logo.avif'
-                  className='titk-tok-logo'
-                />
-              )}
-            </article>
-          );
-        })}
+      <section
+        className='container-grid'
+        ref={containerRef}
+        style={{ position: 'relative', overflow: 'hidden' }}
+      >
+        <article
+          className='social-top elegido'
+          ref={iconRef}
+          style={{
+            position: 'absolute',
+            left: '10px',
+            top: '10px',
+            cursor: 'grab'
+          }}
+        >
+          <img
+            draggable='false'
+            src='/assets/tiktok-logo.avif'
+            className='titk-tok-logo'
+          />
+        </article>
       </section>
     </article>
   );
