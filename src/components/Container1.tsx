@@ -1,9 +1,20 @@
+import { useNcontainer } from '@/store/useNcontainer';
+import { useTransformOrigin } from '@/store/useTransformOrigin';
 import '@/styles/Container1.css';
 import { useEffect, useRef } from 'react';
+import { CONTAINER } from '@/types/consts';
 
 export function Container1() {
   const containerRef = useRef<HTMLElement | null>(null);
+  const showContainewNum = useNcontainer(state => state.showContainewNum);
   const iconRef = useRef<HTMLElement | null>(null);
+  const setTransformOrigin = useTransformOrigin(
+    state => state.setTransformOrigin
+  );
+
+  function showIntroTikTok() {
+    showContainewNum(CONTAINER.INTRO_PAGE);
+  }
 
   useEffect(() => {
     const container = containerRef.current;
@@ -78,6 +89,14 @@ export function Container1() {
       if (isDragging) {
         isDragging = false;
         icon.style.pointerEvents = 'auto';
+
+        //Transform Origin
+        const iconWidth = icon.scrollWidth;
+        const iconHeight = icon.scrollHeight;
+        const { offsetTop, offsetLeft } = icon;
+        const x = offsetLeft + iconWidth / 2;
+        const y = offsetTop + iconHeight / 2;
+        setTransformOrigin({ x, y });
       }
       dragStarted = false;
 
@@ -101,6 +120,7 @@ export function Container1() {
       <article
         className='social-top elegido'
         ref={iconRef}
+        onClick={showIntroTikTok} 
         style={{
           position: 'absolute',
           left: '10px',

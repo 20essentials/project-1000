@@ -23,7 +23,7 @@ img {
     #00f,
     var(--global-blue)
   );
-  --border-r: 38px;
+  --border-r: 37px;
 }
 
 .layer-container {
@@ -35,13 +35,11 @@ img {
   z-index: 2;
   transform: scaleY(0.97) scaleX(0.92);
   border-radius: var(--border-r);
-  height: 99.4%;
+  height: 99.5%;
 }
 /***************************GLOBAL***************************/
 .container-content {
-  height: 92.8%;
-  width: 99.4%;
-  transform: translateX(0.3%);
+  height: 92.9%;
   padding: 10px;
   gap: 15px;
   position: relative;

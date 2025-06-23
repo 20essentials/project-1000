@@ -1,14 +1,19 @@
 import '@/styles/Layer1.css';
 import { Container1 } from '@/components/Container1';
 import { Container2 } from '@/components/Container2';
+import { useNcontainer } from '@/store/useNcontainer';
+import { CONTAINER } from '@/types/consts';
 
 export function Layer1() {
+  const containerNum = useNcontainer(state => state.containerNum);
+
   return (
     <article className='layer1 layer-container'>
       <aside className='padTop'></aside>
       <section className='container-content'>
-        <Container1 />
-        <Container2 />
+        {/* After prove with an Array */}
+        {CONTAINER.DRAG_AND_DROP_ICON === containerNum && <Container1 />}
+        {CONTAINER.INTRO_PAGE === containerNum && <Container2 />}
       </section>
     </article>
   );

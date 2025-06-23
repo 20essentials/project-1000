@@ -1,3 +1,14 @@
 .container2 {
-  background-color: #f0f4;
+  background-color: #000;
+  transform-origin: var(--x) var(--y);
+  animation: scalado 0.2s ease-in-out;
+}
+
+@keyframes scalado {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
