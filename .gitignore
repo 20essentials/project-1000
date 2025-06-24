@@ -1,6 +1,9 @@
 # build output
 dist/
 
+# testing carpets
+privateData/
+
 # generated types
 .astro/
 

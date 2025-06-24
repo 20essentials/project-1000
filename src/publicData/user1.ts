@@ -11,7 +11,7 @@
    
 */
 
-const commonProps = {
+export const user1PublicCommonProps = {
   userId: 'b5a8904a-310a-4757-808c-3e5ca8b9609d',
   username: 'midudev',
   profileImageSrc: '/assets/profileTest/midu-profile-testing.jpeg',
@@ -22,9 +22,8 @@ const commonProps = {
   profileDescription: '👨‍💻 Programación Web con JavaScript Cursos, Tutoriales, Trucos y Consejos'
 };
 
-export const user1 = [
+export const user1Public = [
   {
-    ...commonProps,
     videoSrc: '/assets/profileTest/midu-video1.mp4',
     description: `¿Te cuesta el CSS y el diseño de tu web?
   ¡Este recurso te va a facilitar la vida!
@@ -37,10 +36,11 @@ export const user1 = [
     hearts: 3601,
     comments: 9,
     saved: 2621,
-    shared: 520
+    isSaved: false,
+    shared: 520,
+    
   },
   {
-    ...commonProps,
     videoSrc: '/assets/profileTest/midu-video2.mp4',
     description: `Pon en tu buscador favorito "replit 100 days python"`,
     tags: ['python', 'backend'],
@@ -49,10 +49,10 @@ export const user1 = [
     hearts: 4594,
     comments: 39,
     saved: 3088,
-    shared: 840
+    isSaved: false,
+    shared: 840,
   },
   {
-    ...commonProps,
     videoSrc: '/assets/profileTest/midu-video3.mp4',
     description: `¡Aprende Programación, Cloud y DevOps practicando!
 Servidores gratis con ejercicios reales.
@@ -67,6 +67,7 @@ Si te sirve, compártelo y deja tu like.`,
     hearts: 11_600,
     comments: 39,
     saved: 3088,
-    shared: 840
+    isSaved: false,
+    shared: 840,
   }
 ];
