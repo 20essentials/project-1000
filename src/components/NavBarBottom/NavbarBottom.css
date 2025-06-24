@@ -16,11 +16,11 @@
     gap: 2px;
     --move-icons: 8px;
 
-    &.search {
+    &.wrapper-search {
       transform: translateX(var(--move-icons));
     }
 
-    &.inbox {
+    &.wrapper-inbox {
       transform: translateX(calc(var(--move-icons) * -1));
     }
 
@@ -38,7 +38,10 @@
     stroke-width: 1px;
     position: relative;
     --w: 25px;
-   
+
+    &.btn-active {
+      fill: #fff;
+    }
 
     &.logo-home {
       width: var(--w);

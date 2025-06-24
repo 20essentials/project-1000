@@ -78,4 +78,8 @@ body {
   @media (width <= 400px) and (orientation: landscape) {
     zoom: 0.2;
   }
+
+  @media (height <= 450px) and (width <= 450px)  {
+    zoom: 0.1;
+  }
 }
