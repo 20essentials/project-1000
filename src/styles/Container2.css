@@ -2,6 +2,23 @@
   background-color: #000;
   transform-origin: var(--x) var(--y);
   animation: scalado 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  place-content: center;
+  place-items: center;
+
+  .am-tik-tok-logo {
+    width: 68px;
+    height: 68px;
+    transform: translateY(-70px);
+  }
+
+  .am-tik-tok-logo-text {
+    width: 88px;
+    filter: invert(1);
+    transform: translateY(-70px);
+  }
 }
 
 @keyframes scalado {

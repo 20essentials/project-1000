@@ -3,6 +3,8 @@ import { useTransformOrigin } from '@/store/useTransformOrigin';
 import '@/styles/Container1.css';
 import { useEffect, useRef } from 'react';
 import { CONTAINER } from '@/types/consts';
+import { baseUrl } from '@/utils/functions';
+const tikTokLogo = baseUrl('/assets/tiktok-logo.avif');
 
 export function Container1() {
   const containerRef = useRef<HTMLElement | null>(null);
@@ -130,7 +132,7 @@ export function Container1() {
       >
         <img
           draggable='false'
-          src='/assets/tiktok-logo.avif'
+          src={tikTokLogo}
           className='titk-tok-logo'
         />
       </article>
