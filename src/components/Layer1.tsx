@@ -3,6 +3,7 @@ import { Container1 } from '@/components/Container1';
 import { Container2 } from '@/components/Container2';
 import { useNcontainer } from '@/store/useNcontainer';
 import { CONTAINER } from '@/types/consts';
+import { Container3 } from './Container3';
 
 export function Layer1() {
   const containerNum = useNcontainer(state => state.containerNum);
@@ -14,6 +15,7 @@ export function Layer1() {
         {/* After prove with an Array */}
         {CONTAINER.DRAG_AND_DROP_ICON === containerNum && <Container1 />}
         {CONTAINER.INTRO_PAGE === containerNum && <Container2 />}
+        {CONTAINER.HOME === containerNum && <Container3 />}
       </section>
     </article>
   );

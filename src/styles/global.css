@@ -108,3 +108,13 @@ body::-webkit-scrollbar-thumb {
     scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   }
 }
+/***************************GLOBAL KEYFRAMES***************************/
+
+@keyframes scalado {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
