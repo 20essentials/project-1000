@@ -10,7 +10,12 @@ import { IS_ACTIVE_BUTTON } from '@/store/useCurrentPage';
 
 export function NavbarBottom() {
   const currenPage = useCurrentPage(state => state.currenPage);
-  
+  const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
+
+  function handleCurrentPage(currenPage: number) {
+    setCurrentPage(currenPage);
+  }
+
   const homeClass = `logo-home ${
     currenPage === IS_ACTIVE_BUTTON.HOME ? 'btn-active' : ''
   }`;
@@ -30,22 +35,37 @@ export function NavbarBottom() {
   return (
     <article className='navbar-bottom'>
       <aside className='wrapper-logo'>
-        <HomeButton className={homeClass} />
+        <HomeButton
+          className={homeClass}
+          onClick={() => handleCurrentPage(IS_ACTIVE_BUTTON.HOME)}
+        />
         <span>Home</span>
       </aside>
       <aside className='wrapper-logo wrapper-search'>
-        <SearchButton className={searchClass} />
+        <SearchButton
+          className={searchClass}
+          onClick={() => handleCurrentPage(IS_ACTIVE_BUTTON.SEARCH)}
+        />
         <span>Search</span>
       </aside>
       <aside className='wrapper-logo'>
-        <UploadButton className={uploadClass} />
+        <UploadButton
+          className={uploadClass}
+          onClick={() => handleCurrentPage(IS_ACTIVE_BUTTON.UPLOAD)}
+        />
       </aside>
       <aside className='wrapper-logo wrapper-inbox'>
-        <InboxButton className={inboxClass} />
+        <InboxButton
+          className={inboxClass}
+          onClick={() => handleCurrentPage(IS_ACTIVE_BUTTON.INBOX)}
+        />
         <span>Inbox</span>
       </aside>
       <aside className='wrapper-logo'>
-        <ProfileButton className={profileClass} />
+        <ProfileButton
+          className={profileClass}
+          onClick={() => handleCurrentPage(IS_ACTIVE_BUTTON.PROFILE)}
+        />
         <span>Profile</span>
       </aside>
     </article>

@@ -18,7 +18,6 @@ export function Container3() {
       {IS_ACTIVE_BUTTON.UPLOAD === currenPage && <Upload />}
       {IS_ACTIVE_BUTTON.INBOX === currenPage && <Inbox />}
       {IS_ACTIVE_BUTTON.PROFILE === currenPage && <Profile />}
-      <SliderPosts />
       <NavbarBottom />
     </article>
   );

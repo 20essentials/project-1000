@@ -40,7 +40,11 @@
     --w: 25px;
 
     &.btn-active {
-      fill: #fff;
+      color: #0f0;
+
+      & + span {
+        color: #0f0;
+      }
     }
 
     &.logo-home {

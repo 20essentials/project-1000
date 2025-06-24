@@ -27,7 +27,7 @@ export function UploadButton(props: React.SVGAttributes<SVGSVGElement>) {
       ></path>
       <rect width='36' height='28' x='19.5' y='10.5' fill='#161823' rx='8'></rect>
       <path
-        fill='#fff'
+        fill='currentColor'
         fillRule='evenodd'
         d='M37 18a.5.5 0 00-.5.5v5h-5a.5.5 0 00-.5.5v1a.5.5 0 00.5.5h5v5a.5.5 0 00.5.5h1a.5.5 0 00.5-.5v-5h5a.5.5 0 00.5-.5v-1a.5.5 0 00-.5-.5h-5v-5a.5.5 0 00-.5-.5h-1z'
         clipRule='evenodd'
