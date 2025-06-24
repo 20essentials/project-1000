@@ -1,11 +1,10 @@
-import '@/styles/UploadButton.css';
-
-export function UploadButton() {
+export function UploadButton(props: React.SVGAttributes<SVGSVGElement>) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
       fill='none'
       viewBox='0 0 75 49'
+      {...props}
     >
       <path
         fill='#D8D8D8'

@@ -1,9 +1,10 @@
-export function InboxButton() {
+export function InboxButton(props: React.SVGAttributes<SVGSVGElement>) {
   return (
     <svg
       viewBox='0 0 32 32'
       fill='currentColor'
       xmlns='http://www.w3.org/2000/svg'
+      {...props}
     >
       <path
         fill-rule='evenodd'
