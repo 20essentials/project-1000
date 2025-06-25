@@ -22,3 +22,6 @@ export type postComonProps = {
   followed: number;
   profileDescription: string;
 };
+
+
+export type arrayOfPosts = [postComonProps, postProps[]][]

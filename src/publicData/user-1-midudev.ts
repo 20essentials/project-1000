@@ -11,7 +11,7 @@
    
 */
 
-export const user1PublicCommonProps = {
+export const midudev_commonProps = {
   userId: 'b5a8904a-310a-4757-808c-3e5ca8b9609d',
   username: 'midudev',
   profileImageSrc: '/assets/profileTest/midu-profile-testing.jpeg',
@@ -22,7 +22,7 @@ export const user1PublicCommonProps = {
   profileDescription: '👨‍💻 Programación Web con JavaScript Cursos, Tutoriales, Trucos y Consejos'
 };
 
-export const user1Public = [
+export const midudev_array_of_posts = [
   {
     videoSrc: '/assets/profileTest/midu-video1.mp4',
     description: `¿Te cuesta el CSS y el diseño de tu web?

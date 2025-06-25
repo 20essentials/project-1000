@@ -1,22 +1,13 @@
 import '@/components/pages/SliderPosts/SliderPosts.css';
-import { user1Public, user1PublicCommonProps } from '@/publicData/user1.ts';
-import { user1Private, user1PrivateCommonProps } from '@/privateData/user1.ts';
 import { PostImage } from '@/components/pages/SliderPosts/PostImage.tsx';
 import { PostVideo } from '@/components/pages/SliderPosts/PostVideo.tsx';
-import type {
-  postComonProps,
-  postProps
-} from '@/components/pages/SliderPosts/types.d.ts';
+import type { arrayOfPosts } from '@/components/pages/SliderPosts/types.d.ts';
 import { useFollowedOrForYou } from '@/store/useFollowedOrForYou';
+import { PRIVATE_DATA } from '@/privateData/amPrivateData';
+import { PUBLIC_DATA } from '@/publicData/amPublicData';
 
-const FOLLOWED: [postComonProps, postProps[]][] = [
-  [user1PrivateCommonProps, user1Private],
-  [user1PublicCommonProps, user1Public],
-];
-const FOR_YOU: [postComonProps, postProps[]][] = [
-  [user1PublicCommonProps, user1Public],
-  [user1PrivateCommonProps, user1Private]
-];
+const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
+const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 
 export function SliderPosts() {
   const isForYou = useFollowedOrForYou(state => state.isForYou);
