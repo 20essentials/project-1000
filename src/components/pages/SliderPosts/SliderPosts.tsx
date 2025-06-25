@@ -10,12 +10,12 @@ import type {
 import { useFollowedOrForYou } from '@/store/useFollowedOrForYou';
 
 const FOLLOWED: [postComonProps, postProps[]][] = [
+  [user1PrivateCommonProps, user1Private],
   [user1PublicCommonProps, user1Public],
-  [user1PrivateCommonProps, user1Private]
 ];
 const FOR_YOU: [postComonProps, postProps[]][] = [
-  [user1PrivateCommonProps, user1Private],
-  [user1PublicCommonProps, user1Public]
+  [user1PublicCommonProps, user1Public],
+  [user1PrivateCommonProps, user1Private]
 ];
 
 export function SliderPosts() {
