@@ -19,7 +19,8 @@ export function PostVideo(props: postProps & postComonProps) {
     comments,
     saved,
     shared,
-    profileImageSrc
+    profileImageSrc,
+    username
   } = props;
 
   return (
@@ -67,6 +68,16 @@ export function PostVideo(props: postProps & postComonProps) {
           />
         </section>
       </article>
+
+      <section className='aside-text-and-description'>
+        <p>@{username}</p>
+        <p>{description}</p>
+        <p>
+          {tags.map(word => (
+            <span>#{word}&nbsp;</span>
+          ))}
+        </p>
+      </section>
     </aside>
   );
 }
