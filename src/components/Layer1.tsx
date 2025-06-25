@@ -14,7 +14,7 @@ export function Layer1() {
   return (
     <article className='layer1 layer-container'>
       <aside className='padTop'>
-        {(IS_ACTIVE_BUTTON.HOME === currenPage) && <NavbarTop />}
+        {(IS_ACTIVE_BUTTON.HOME === currenPage && CONTAINER.HOME === containerNum) && <NavbarTop />}
       </aside>
       <section className='container-content'>
         {/* After prove with an Array */}

@@ -1,4 +1,6 @@
-export function PostImage(props: currentPostProps) {
+import type { postProps } from '@/components/pages/SliderPosts/types.d.ts';
+
+export function PostImage(props: postProps) {
   const {
     arrayImages,
     description,
