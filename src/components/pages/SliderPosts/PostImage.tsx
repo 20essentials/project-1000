@@ -76,8 +76,8 @@ export function PostImage(props: postProps & postComonProps) {
         <p>@{username}</p>
         <p>{description}</p>
         <p>
-          {tags.map(word => (
-            <span>#{word}&nbsp;</span>
+          {tags.map((word, i) => (
+            <span key={`letter-${i}`}>#{word}&nbsp;</span>
           ))}
         </p>
       </section>
