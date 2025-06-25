@@ -4,13 +4,18 @@ import { Container2 } from '@/components/Container2';
 import { useNcontainer } from '@/store/useNcontainer';
 import { CONTAINER } from '@/types/consts';
 import { Container3 } from './Container3';
+import { NavbarTop } from "@/components/pages/SliderPosts/NavbarTop";
+import { useCurrentPage, IS_ACTIVE_BUTTON } from '@/store/useCurrentPage';
 
 export function Layer1() {
   const containerNum = useNcontainer(state => state.containerNum);
+  const currenPage = useCurrentPage(state => state.currenPage)
 
   return (
     <article className='layer1 layer-container'>
-      <aside className='padTop'></aside>
+      <aside className='padTop'>
+        {(IS_ACTIVE_BUTTON.HOME === currenPage) && <NavbarTop />}
+      </aside>
       <section className='container-content'>
         {/* After prove with an Array */}
         {CONTAINER.DRAG_AND_DROP_ICON === containerNum && <Container1 />}

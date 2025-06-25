@@ -25,7 +25,7 @@
     }
 
     span {
-      font-size: 9px;
+      font-size: 10px;
       color: #fff;
       width: 100%;
       text-align: center;
@@ -44,6 +44,7 @@
 
       & + span {
         color: #0f0;
+
       }
     }
 

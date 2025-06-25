@@ -28,9 +28,17 @@
       width: 100%;
       height: 100%;
       position: relative;
-      object-fit: cover;
       scroll-snap-align: center;
       scroll-snap-stop: always;
+      overflow: visible;
+
+      video {
+        position: relative;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
     .post-image {
