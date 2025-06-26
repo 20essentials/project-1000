@@ -8,7 +8,7 @@ import { Share } from '@/components/pages/SliderPosts/AsideRight/Share.tsx';
 import { Comments } from '@/components/pages/SliderPosts/AsideRight/Comments.tsx';
 import { baseUrl } from '@/utils/functions';
 
-export function PostImage(props: postProps & postComonProps) {
+export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const {
     arrayImages,
     description,
@@ -20,10 +20,13 @@ export function PostImage(props: postProps & postComonProps) {
     saved,
     shared,
     username,
-    profileImageSrc
+    profileImageSrc,
+    idx
   } = props;
+  
 
   const arrayImagesLength = arrayImages?.length ?? 0;
+
 
   function stopAnimation(e: React.MouseEvent) {
     const target = e.target as HTMLElement;
@@ -35,7 +38,7 @@ export function PostImage(props: postProps & postComonProps) {
       {arrayImages?.map((src, i) => (
         <section key={i} className='container-img-post'>
           <img src={src} alt='image' draggable='false' onClick={stopAnimation} />
-
+       
           {arrayImagesLength > 1 && (
             <output className='num-of-post'>
               {i + 1} / {arrayImagesLength}
@@ -97,6 +100,7 @@ export function PostImage(props: postProps & postComonProps) {
               ))}
             </p>
           </section>
+          
         </section>
       ))}
     </article>

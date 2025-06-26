@@ -11,7 +11,7 @@ import { useEffect, useRef, useState } from 'react';
 import { PlayButton } from '@/components/pages/SliderPosts/PostVideo/PlayButton';
 import { userHasInteracted } from '@/store/userHasInteracted';
 
-export function PostVideo(props: postProps & postComonProps) {
+export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   const hasInteracted = userHasInteracted(state => state.hasInteracted);
   const setUserHasInteracted = userHasInteracted(state => state.setUserHasInteracted);
 
@@ -26,8 +26,10 @@ export function PostVideo(props: postProps & postComonProps) {
     saved,
     shared,
     profileImageSrc,
-    username
+    username,
+    idx
   } = props;
+    const thisPostWillRenderMorePost = idx % 3 === 0;
 
   const [isPaused, setIsPaused] = useState(true);
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -101,6 +103,13 @@ export function PostVideo(props: postProps & postComonProps) {
   return (
     <aside className='post-video' ref={postVideoRef}>
       <video src={videoSrc} ref={videoRef} loop onClick={handlePlayVideo}></video>
+
+         {
+            thisPostWillRenderMorePost && (
+              <div className='post-image-overlay'>
+              </div>
+            )
+          }
 
       <article className='aside-right-buttons'>
         <section className='button-container btn-container-user-profile'>
