@@ -5,6 +5,7 @@ import type { arrayOfPosts } from '@/components/pages/SliderPosts/types.d.ts';
 import { useFollowedOrForYou } from '@/store/useFollowedOrForYou';
 import { PRIVATE_DATA } from '@/privateData/amPrivateData';
 import { PUBLIC_DATA } from '@/publicData/amPublicData';
+import { useRef } from 'react';
 
 const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
 const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];

@@ -7,10 +7,14 @@ import { Save } from '@/components/pages/SliderPosts/AsideRight/Save.tsx';
 import { Share } from '@/components/pages/SliderPosts/AsideRight/Share.tsx';
 import { Comments } from '@/components/pages/SliderPosts/AsideRight/Comments.tsx';
 import { baseUrl } from '@/utils/functions';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { PlayButton } from '@/components/pages/SliderPosts/PostVideo/PlayButton';
+import { userHasInteracted } from '@/store/userHasInteracted';
 
 export function PostVideo(props: postProps & postComonProps) {
+  const hasInteracted = userHasInteracted(state => state.hasInteracted);
+  const setUserHasInteracted = userHasInteracted(state => state.setUserHasInteracted);
+
   const {
     videoSrc,
     description,
@@ -26,20 +30,81 @@ export function PostVideo(props: postProps & postComonProps) {
   } = props;
 
   const [isPaused, setIsPaused] = useState(true);
-  const videoRef = useRef<null | HTMLVideoElement>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const postVideoRef = useRef<HTMLElement | null>(null);
 
-  function handlePlayVideo() {
-    const videoElement = videoRef.current;
-    if (videoElement == null) return;
-    videoElement.paused 
-      ? videoElement.play()
-      : videoElement.pause();
-    setIsPaused(!isPaused)
+  // Mantener refs actualizadas para evitar cierres con valores antiguos
+  const hasInteractedRef = useRef(hasInteracted);
+  hasInteractedRef.current = hasInteracted;
+
+  const isPausedRef = useRef(isPaused);
+  isPausedRef.current = isPaused;
+
+  // Función para reproducir video si está pausado
+  function playVideo() {
+    const video = videoRef.current;
+    if (!video) return;
+    if (video.paused) {
+      video.play();
+      setIsPaused(false);
+    }
   }
 
+  // Función para pausar video si está reproduciéndose
+  function pauseVideo() {
+    const video = videoRef.current;
+    if (!video) return;
+    if (!video.paused) {
+      video.pause();
+      setIsPaused(true);
+    }
+  }
+
+  // Toggle manual con click
+  function handlePlayVideo() {
+    if (!hasInteractedRef.current) {
+      setUserHasInteracted({ hasInteracted: true });
+    }
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (video.paused) {
+      video.play();
+      setIsPaused(false);
+    } else {
+      video.pause();
+      setIsPaused(true);
+    }
+  }
+
+  useEffect(() => {
+    if (!postVideoRef.current) return;
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!hasInteractedRef.current) return;
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          if (isPausedRef.current) playVideo();
+        } else {
+          entry.target.classList.remove('visible');
+          if (!isPausedRef.current) pauseVideo();
+        }
+      });
+    });
+
+    observer.observe(postVideoRef.current);
+
+    return () => {
+      if (postVideoRef.current) observer.unobserve(postVideoRef.current);
+      observer.disconnect();
+    };
+  }, []); // Observer creado solo una vez
+
   return (
-    <aside className='post-video'>
-      <video src={videoSrc} ref={videoRef} onClick={handlePlayVideo}></video>
+    <aside className='post-video' ref={postVideoRef}>
+      <video src={videoSrc} ref={videoRef} loop onClick={handlePlayVideo}></video>
 
       <article className='aside-right-buttons'>
         <section className='button-container btn-container-user-profile'>

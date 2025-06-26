@@ -6,7 +6,7 @@ export function PlayButton(
       onClick={props.handlePlayVideo}
       xmlns='http://www.w3.org/2000/svg'
       viewBox='-0.5 0 7 7'
-      {...props}
+      className={props.className}
     >
       <path
         fill='currentColor'
