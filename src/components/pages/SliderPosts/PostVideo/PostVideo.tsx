@@ -7,6 +7,8 @@ import { Save } from '@/components/pages/SliderPosts/AsideRight/Save.tsx';
 import { Share } from '@/components/pages/SliderPosts/AsideRight/Share.tsx';
 import { Comments } from '@/components/pages/SliderPosts/AsideRight/Comments.tsx';
 import { baseUrl } from '@/utils/functions';
+import { useRef, useState } from 'react';
+import { PlayButton } from '@/components/pages/SliderPosts/PostVideo/PlayButton';
 
 export function PostVideo(props: postProps & postComonProps) {
   const {
@@ -23,9 +25,21 @@ export function PostVideo(props: postProps & postComonProps) {
     username
   } = props;
 
+  const [isPaused, setIsPaused] = useState(true);
+  const videoRef = useRef<null | HTMLVideoElement>(null);
+
+  function handlePlayVideo() {
+    const videoElement = videoRef.current;
+    if (videoElement == null) return;
+    videoElement.paused 
+      ? videoElement.play()
+      : videoElement.pause();
+    setIsPaused(!isPaused)
+  }
+
   return (
     <aside className='post-video'>
-      <video src={videoSrc}></video>
+      <video src={videoSrc} ref={videoRef} onClick={handlePlayVideo}></video>
 
       <article className='aside-right-buttons'>
         <section className='button-container btn-container-user-profile'>
@@ -73,11 +87,15 @@ export function PostVideo(props: postProps & postComonProps) {
         <p>@{username}</p>
         <p>{description}</p>
         <p>
-          {tags.map((word,i) => (
+          {tags.map((word, i) => (
             <span key={`letter-${i}`}>#{word}&nbsp;</span>
           ))}
         </p>
       </section>
+
+      {isPaused && (
+        <PlayButton className='play-btn' handlePlayVideo={handlePlayVideo} />
+      )}
     </aside>
   );
 }

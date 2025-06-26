@@ -23,15 +23,24 @@ export function PostImage(props: postProps & postComonProps) {
     profileImageSrc
   } = props;
 
-  const arrayImagesLength = arrayImages?.length;
+  const arrayImagesLength = arrayImages?.length ?? 0;
+
+  function stopAnimation(e: React.MouseEvent) {
+    const target = e.target as HTMLElement;
+    target.classList.toggle('pausado');
+  }
 
   return (
     <article className='post-image'>
       {arrayImages?.map((src, i) => (
         <section key={i} className='container-img-post'>
-          <img src={src} alt='image' draggable='false' />
+          <img src={src} alt='image' draggable='false' onClick={stopAnimation} />
 
-          <output className="num-of-post">{i + 1} / {arrayImagesLength}</output>
+          {arrayImagesLength > 1 && (
+            <output className='num-of-post'>
+              {i + 1} / {arrayImagesLength}
+            </output>
+          )}
 
           <article className='aside-right-buttons'>
             <section className='button-container btn-container-user-profile'>
