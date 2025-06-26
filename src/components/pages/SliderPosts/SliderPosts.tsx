@@ -16,7 +16,7 @@ export function SliderPosts() {
   const ALL_POSTS = isForYou ? FOR_YOU : FOLLOWED;
   const sliderRef = useRef<HTMLDivElement>(null);
   const limit = useLimitOfPost(state => state.limit);
-  const setLimit = useLimitOfPost(state => state.setLimit);
+  
 
   useEffect(() => {
     if (sliderRef.current) {

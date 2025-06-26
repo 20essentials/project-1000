@@ -248,6 +248,7 @@
       height: 70px;
       background-color: red;
       z-index: 80;
+      pointer-events: none;
     }
   }
 }

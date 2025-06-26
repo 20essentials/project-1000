@@ -10,10 +10,15 @@ import { baseUrl } from '@/utils/functions';
 import { useEffect, useRef, useState } from 'react';
 import { PlayButton } from '@/components/pages/SliderPosts/PostVideo/PlayButton';
 import { userHasInteracted } from '@/store/userHasInteracted';
+import { useLimitOfPost } from '@/store/useLimitOfPosts';
 
 export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   const hasInteracted = userHasInteracted(state => state.hasInteracted);
-  const setUserHasInteracted = userHasInteracted(state => state.setUserHasInteracted);
+  const setUserHasInteracted = userHasInteracted(
+    state => state.setUserHasInteracted
+  );
+  const setLimit = useLimitOfPost(state => state.setLimit);
+  const offsetOfPosts = useLimitOfPost(state => state.offsetOfPosts);
 
   const {
     videoSrc,
@@ -29,7 +34,7 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
     username,
     idx
   } = props;
-    const thisPostWillRenderMorePost = idx % 3 === 0;
+  const thisPostWillRenderMorePost = idx % 3 === 0;
 
   const [isPaused, setIsPaused] = useState(true);
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -81,12 +86,18 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (!hasInteractedRef.current) return;
-
         if (entry.isIntersecting) {
+          if (thisPostWillRenderMorePost) {
+            setLimit(prev => prev + offsetOfPosts);
+          }
+          if (!hasInteractedRef.current) return;
           entry.target.classList.add('visible');
-          if (isPausedRef.current) playVideo();
+          if (isPausedRef.current) {
+            playVideo();
+          }
         } else {
+
+          if (!hasInteractedRef.current) return;
           entry.target.classList.remove('visible');
           if (!isPausedRef.current) pauseVideo();
         }
@@ -99,17 +110,13 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
       if (postVideoRef.current) observer.unobserve(postVideoRef.current);
       observer.disconnect();
     };
-  }, []); 
+  }, []);
+  
   return (
     <aside className='post-video' ref={postVideoRef}>
       <video src={videoSrc} ref={videoRef} loop onClick={handlePlayVideo}></video>
 
-         {
-            thisPostWillRenderMorePost && (
-              <div className='post-image-overlay'>
-              </div>
-            )
-          }
+      {thisPostWillRenderMorePost && <div className='post-image-overlay'></div>}
 
       <article className='aside-right-buttons'>
         <section className='button-container btn-container-user-profile'>

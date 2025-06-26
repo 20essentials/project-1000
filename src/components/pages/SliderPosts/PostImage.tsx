@@ -7,6 +7,8 @@ import { Save } from '@/components/pages/SliderPosts/AsideRight/Save.tsx';
 import { Share } from '@/components/pages/SliderPosts/AsideRight/Share.tsx';
 import { Comments } from '@/components/pages/SliderPosts/AsideRight/Comments.tsx';
 import { baseUrl } from '@/utils/functions';
+import { useLimitOfPost } from '@/store/useLimitOfPosts';
+import { useEffect, useRef } from 'react';
 
 export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const {
@@ -23,26 +25,48 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
     profileImageSrc,
     idx
   } = props;
-  
 
   const arrayImagesLength = arrayImages?.length ?? 0;
-
+  const thisPostWillRenderMorePost = idx % 3 === 0;
+  const setLimit = useLimitOfPost(state => state.setLimit);
+  const offsetOfPosts = useLimitOfPost(state => state.offsetOfPosts);
+  const postImageRef = useRef<HTMLElement | null>(null);
 
   function stopAnimation(e: React.MouseEvent) {
     const target = e.target as HTMLElement;
     target.classList.toggle('pausado');
   }
 
+  useEffect(() => {
+    const element = postImageRef.current;
+    if (!element || !thisPostWillRenderMorePost) return;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && thisPostWillRenderMorePost) {
+        console.log('hola')
+        setLimit(prev => prev + offsetOfPosts);
+      }
+    });
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, [offsetOfPosts, setLimit, thisPostWillRenderMorePost]);
+
   return (
-    <article className='post-image'>
+    <article className='post-image' ref={postImageRef}>
       {arrayImages?.map((src, i) => (
-        <section key={i} className='container-img-post'>
+        <section key={i} className='container-img-post' >
           <img src={src} alt='image' draggable='false' onClick={stopAnimation} />
-       
+
           {arrayImagesLength > 1 && (
             <output className='num-of-post'>
               {i + 1} / {arrayImagesLength}
             </output>
+          )}
+
+          {thisPostWillRenderMorePost && (
+            <div className='post-image-overlay'></div>
           )}
 
           <article className='aside-right-buttons'>
@@ -100,7 +124,6 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
               ))}
             </p>
           </section>
-          
         </section>
       ))}
     </article>
