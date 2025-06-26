@@ -13,7 +13,7 @@
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
 
-    /* &::-webkit-scrollbar {
+    &::-webkit-scrollbar {
       width: 0.01px;
     }
     &::-webkit-scrollbar-thumb {
@@ -23,7 +23,7 @@
 
     &::-webkit-scrollbar-track {
       background: transparent;
-    } */
+    }
 
     .post-video {
       width: 100%;
@@ -246,7 +246,7 @@
       left: 0px;
       width: 70px;
       height: 70px;
-      background-color: red;
+      background-color: transparent;
       z-index: 80;
       pointer-events: none;
     }

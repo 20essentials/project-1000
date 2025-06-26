@@ -39,6 +39,7 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   const [isPaused, setIsPaused] = useState(true);
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const postVideoRef = useRef<HTMLElement | null>(null);
+  const thisPostHasBeenRendered = useRef(false);
 
   // Mantener refs actualizadas para evitar cierres con valores antiguos
   const hasInteractedRef = useRef(hasInteracted);
@@ -87,7 +88,8 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          if (thisPostWillRenderMorePost) {
+          if (thisPostWillRenderMorePost && !thisPostHasBeenRendered.current) {
+            thisPostHasBeenRendered.current = true;
             setLimit(prev => prev + offsetOfPosts);
           }
           if (!hasInteractedRef.current) return;
@@ -96,7 +98,6 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
             playVideo();
           }
         } else {
-
           if (!hasInteractedRef.current) return;
           entry.target.classList.remove('visible');
           if (!isPausedRef.current) pauseVideo();
@@ -111,7 +112,7 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
       observer.disconnect();
     };
   }, []);
-  
+
   return (
     <aside className='post-video' ref={postVideoRef}>
       <video src={videoSrc} ref={videoRef} loop onClick={handlePlayVideo}></video>

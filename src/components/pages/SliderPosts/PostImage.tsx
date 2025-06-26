@@ -31,6 +31,7 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const setLimit = useLimitOfPost(state => state.setLimit);
   const offsetOfPosts = useLimitOfPost(state => state.offsetOfPosts);
   const postImageRef = useRef<HTMLElement | null>(null);
+  const thisPostHasBeenRendered = useRef(false);
 
   function stopAnimation(e: React.MouseEvent) {
     const target = e.target as HTMLElement;
@@ -43,7 +44,8 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
 
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting && thisPostWillRenderMorePost) {
-        console.log('hola')
+        if (thisPostHasBeenRendered.current) return;
+        thisPostHasBeenRendered.current = true;
         setLimit(prev => prev + offsetOfPosts);
       }
     });
