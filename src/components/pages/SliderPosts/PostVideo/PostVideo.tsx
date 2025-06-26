@@ -40,7 +40,6 @@ export function PostVideo(props: postProps & postComonProps) {
   const isPausedRef = useRef(isPaused);
   isPausedRef.current = isPaused;
 
-  // Función para reproducir video si está pausado
   function playVideo() {
     const video = videoRef.current;
     if (!video) return;
@@ -50,7 +49,6 @@ export function PostVideo(props: postProps & postComonProps) {
     }
   }
 
-  // Función para pausar video si está reproduciéndose
   function pauseVideo() {
     const video = videoRef.current;
     if (!video) return;
@@ -60,7 +58,6 @@ export function PostVideo(props: postProps & postComonProps) {
     }
   }
 
-  // Toggle manual con click
   function handlePlayVideo() {
     if (!hasInteractedRef.current) {
       setUserHasInteracted({ hasInteracted: true });
@@ -100,8 +97,7 @@ export function PostVideo(props: postProps & postComonProps) {
       if (postVideoRef.current) observer.unobserve(postVideoRef.current);
       observer.disconnect();
     };
-  }, []); // Observer creado solo una vez
-
+  }, []); 
   return (
     <aside className='post-video' ref={postVideoRef}>
       <video src={videoSrc} ref={videoRef} loop onClick={handlePlayVideo}></video>
