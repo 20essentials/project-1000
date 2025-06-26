@@ -6,8 +6,8 @@ import { useFollowedOrForYou } from '@/store/useFollowedOrForYou';
 import { PRIVATE_DATA } from '@/privateData/amPrivateData';
 import { PUBLIC_DATA } from '@/publicData/amPublicData';
 
-const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
-const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
+const FOLLOWED: arrayOfPosts = [...PUBLIC_DATA];
+const FOR_YOU: arrayOfPosts = [...PRIVATE_DATA];
 
 export function SliderPosts() {
   const isForYou = useFollowedOrForYou(state => state.isForYou);

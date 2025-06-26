@@ -22,65 +22,74 @@ export function PostImage(props: postProps & postComonProps) {
     username,
     profileImageSrc
   } = props;
+
+  const arrayImagesLength = arrayImages?.length;
+
   return (
     <article className='post-image'>
       {arrayImages?.map((src, i) => (
         <section key={i} className='container-img-post'>
           <img src={src} alt='image' draggable='false' />
+
+          <output className="num-of-post">{i + 1} / {arrayImagesLength}</output>
+
+          <article className='aside-right-buttons'>
+            <section className='button-container btn-container-user-profile'>
+              <img
+                className='user-profile'
+                draggable='false'
+                src={profileImageSrc}
+                alt='User Profile'
+              />
+              <img
+                src='/assets/plus.png'
+                draggable='false'
+                alt='Badge'
+                className='badge'
+              />
+            </section>
+            <section className='button-container'>
+              <Heart />
+              <span className='count'>{hearts}</span>
+            </section>
+            <section className='button-container'>
+              <Comments />
+              <span className='count'>{comments}</span>
+            </section>
+            <section className='button-container'>
+              <Save />
+              <span className='count'>{saved}</span>
+            </section>
+            <section className='button-container'>
+              <Share />
+              <span className='count'>{shared}</span>
+            </section>
+            <section className='button-container btn-container-vinyl'>
+              <img
+                className='vinyl'
+                src={baseUrl('/assets/vinyl.png')}
+                alt='Vinyl'
+              />
+              <img
+                className='user-profile-vinyl'
+                draggable='false'
+                src={profileImageSrc}
+                alt='User Profile'
+              />
+            </section>
+          </article>
+
+          <section className='aside-text-and-description'>
+            <p>@{username}</p>
+            <p>{description}</p>
+            <p>
+              {tags.map((word, i) => (
+                <span key={`letter-${i}`}>#{word}&nbsp;</span>
+              ))}
+            </p>
+          </section>
         </section>
       ))}
-
-      <article className='aside-right-buttons'>
-        <section className='button-container btn-container-user-profile'>
-          <img
-            className='user-profile'
-            draggable='false'
-            src={profileImageSrc}
-            alt='User Profile'
-          />
-          <img
-            src='/assets/plus.png'
-            draggable='false'
-            alt='Badge'
-            className='badge'
-          />
-        </section>
-        <section className='button-container'>
-          <Heart />
-          <span className='count'>{hearts}</span>
-        </section>
-        <section className='button-container'>
-          <Comments />
-          <span className='count'>{comments}</span>
-        </section>
-        <section className='button-container'>
-          <Save />
-          <span className='count'>{saved}</span>
-        </section>
-        <section className='button-container'>
-          <Share />
-          <span className='count'>{shared}</span>
-        </section>
-        <section className='button-container btn-container-vinyl'>
-          <img className='vinyl' src={baseUrl('/assets/vinyl.png')} alt='Vinyl' />
-          <img
-            className='user-profile-vinyl'
-            draggable='false'
-            src={profileImageSrc}
-            alt='User Profile'
-          />
-        </section>
-      </article>
-
-      <section className='aside-text-and-description'>
-        <p>@{username}</p>
-        <p>{description}</p>
-        <p>
-          {tags.map((word, i) => (
-            <span key={`letter-${i}`}>#{word}&nbsp;</span>
-          ))}
-        </p>
-      </section>
     </article>
   );
 }
