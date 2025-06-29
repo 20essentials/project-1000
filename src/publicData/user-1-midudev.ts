@@ -8,7 +8,6 @@
     - Thanks to the dateOfPublication I can get the "Time Ago" for example "2 days ago"
    - There will be only an username (not a name)
    - I don't do the option of repost.
-   
 */
 
 export const midudev_commonProps = {
