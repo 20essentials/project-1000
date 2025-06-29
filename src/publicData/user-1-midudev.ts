@@ -13,7 +13,7 @@
 export const midudev_commonProps = {
   userId: 'b5a8904a-310a-4757-808c-3e5ca8b9609d',
   username: 'midudev',
-  profileImageSrc: '/assets/profileTest/midu-profile-testing.jpeg',
+  profileImageSrc: 'https://avatars.githubusercontent.com/u/1561955?v=4',
   following: false,
   followers: 323_302,
   totalLikes: 6_800_000,
@@ -24,7 +24,8 @@ export const midudev_commonProps = {
 
 export const midudev_array_of_posts = [
   {
-    videoSrc: '/assets/profileTest/midu-video1.mp4',
+    videoSrc:
+      'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v1.mp4',
     description: `¿Te cuesta el CSS y el diseño de tu web?
   ¡Este recurso te va a facilitar la vida!
   Crea layouts con Grid de forma visual e interactiva.
@@ -50,12 +51,13 @@ export const midudev_array_of_posts = [
     isSaved: false,
     shared: 320,
     arrayImages: [
-      'https://mysupercoolprojects.github.io/repo-1/assets/nin4-parod1/1.jpg'
+      'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v2.avif'
     ]
   },
 
   {
-    videoSrc: '/assets/profileTest/midu-video2.mp4',
+    videoSrc:
+      'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v3.mp4',
     description: `Pon en tu buscador favorito "replit 100 days python"`,
     tags: ['python', 'backend'],
     dateOfPublication: '2025-06-22T14:30:00',
@@ -77,11 +79,12 @@ export const midudev_array_of_posts = [
     isSaved: false,
     shared: 280,
     arrayImages: [
-      'https://mysupercoolprojects.github.io/repo-1/assets/nin4-parod1/1.jpg'
+      'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v4.avif'
     ]
   },
   {
-    videoSrc: '/assets/profileTest/midu-video3.mp4',
+    videoSrc:
+      'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v5.mp4',
     description: `¡Aprende Programación, Cloud y DevOps practicando!
 Servidores gratis con ejercicios reales.
 ✓ Practica Git y servidores Linux
@@ -110,11 +113,12 @@ Si te sirve, compártelo y deja tu like.`,
     isSaved: false,
     shared: 700,
     arrayImages: [
-      'https://mysupercoolprojects.github.io/repo-1/assets/nin4-parod1/1.jpg'
+      'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v6.avif'
     ]
   },
   {
-    videoSrc: '/assets/profileTest/midu-video3.mp4',
+    videoSrc:
+      'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v7.mp4',
     description: `¿Preparando una entrevista técnica? Recurso con una guía que te ayuda con:
 - Patrones de diseño y arquitectura
 - Buenas prácticas de desarrollo
@@ -155,11 +159,12 @@ Pero no te sientas mal, buscar las respuestas en Internet no te hace peor progra
     isSaved: false,
     shared: 234,
     arrayImages: [
-      'https://mysupercoolprojects.github.io/repo-1/assets/nin4-parod1/1.jpg'
+      'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v8.avif'
     ]
   },
   {
-    videoSrc: '/assets/profileTest/midu-video3.mp4',
+    videoSrc:
+      'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v9.mp4',
     description: `Ahora puedes compartir tu proyecto local directamente desde Visual Studio Code, sin instalar nada.
 Solo activa el Port Forwarding y tendrás una URL pública para enseñar tu trabajo.
 Ideal para mostrar avances a tu equipo mientras desarrollas:
@@ -197,11 +202,12 @@ Todos tenemos una, y aunque parezca un desorden, siempre terminas recurriendo a 
     isSaved: false,
     shared: 1234,
     arrayImages: [
-      'https://mysupercoolprojects.github.io/repo-1/assets/nin4-parod1/1.jpg'
+      'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v10.avif'
     ]
   },
   {
-    videoSrc: '/assets/profileTest/midu-video3.mp4',
+    videoSrc:
+      'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v11.mp4',
     description: `¿Buscas un calendario ligero y fácil de integrar en tu web?
 Este componente tiene todo lo que necesitas:
 ✓ Solo 9 KB
@@ -221,7 +227,7 @@ Si te parece útil, ¡regálale un ❤️ y compártelo con quien lo necesite!`,
     isSaved: false,
     shared: 720
   },
- {
+  {
     description: `¡Poca sabe esto de HTML!
 
 Puedes hacer submit de cualquier formulario desde un botón... ¡que no está dentro del formulario!
@@ -241,11 +247,12 @@ Sólo tienes que tener un id único en el formulario, y usar el atributo form en
     isSaved: false,
     shared: 720,
     arrayImages: [
-      'https://mysupercoolprojects.github.io/repo-1/assets/nin4-parod1/1.jpg'
+      'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v12.avif'
     ]
   },
   {
-    videoSrc: '/assets/profileTest/midu-video3.mp4',
+    videoSrc:
+      'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v13.mp4',
     description: `Una joyita para devs web:
 Guía completa de patrones de diseño y arquitectura para tus proyectos con JavaScript y TypeScript.
 - Código comentado
@@ -263,7 +270,7 @@ Una lectura obligatoria si quieres llevar tu código al siguiente nivel.`,
     isSaved: false,
     shared: 3200
   },
-{
+  {
     description: `Hacer un pequeño cambio en CSS... y ver cómo toda tu web se descompone como un castillo de cartas 😅
 
 ¿Te suena?
@@ -289,11 +296,11 @@ No subestimes el poder de una línea de CSS mal escrita... o bien dominada.
     isSaved: false,
     shared: 350,
     arrayImages: [
-      'https://mysupercoolprojects.github.io/repo-1/assets/nin4-parod1/1.jpg'
+            'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v14.avif'
     ]
   },
   {
-    videoSrc: '/assets/profileTest/midu-video3.mp4',
+    videoSrc: 'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v15.mp4',
     description: `Aprende Python mientras juegas gracias a Code Strike.
 Lo tienes sin coste en Steam por tiempo limitado.
 Es un videojuego de acción, aventura y programación.
@@ -309,7 +316,7 @@ Disponible para Windows.
     isSaved: false,
     shared: 2362
   },
-{
+  {
     description: `¿Usas console.log para todo?
 
 Con todas las herramientas de depuración que tenemos hoy en día… :D
@@ -336,11 +343,11 @@ Aunque también tiene sus contras:
     isSaved: false,
     shared: 578,
     arrayImages: [
-      'https://mysupercoolprojects.github.io/repo-1/assets/nin4-parod1/1.jpg'
+      'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v16.avif'
     ]
   },
   {
-    videoSrc: '/assets/profileTest/midu-video3.mp4',
+        videoSrc: 'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v17.mp4',
     description: `¿Buscas ahorrar tiempo desarrollando interfaces?
 Esta web es un tesoro escondido para devs.
 Más de 1500 plantillas HTML gratuitas con componentes de UI listos para usar.
@@ -355,7 +362,7 @@ Se llama HTMLRev y te puede salvar más de una tarde de código.`,
     isSaved: false,
     shared: 741
   },
-{
+  {
     description: `A veces escribimos código tan rápido y con tanta confianza que ni nos preocupamos por documentarlo o dejarlo claro.
 
 Porque en ese momento lo entendemos perfectamente…
@@ -374,11 +381,12 @@ Y cuando vuelves a ese archivo, lo miras como si lo hubiera escrito otra persona
     isSaved: false,
     shared: 432,
     arrayImages: [
-      'https://mysupercoolprojects.github.io/repo-1/assets/nin4-parod1/1.jpg'
+      'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v18.avif'
     ]
   },
   {
-    videoSrc: '/assets/profileTest/midu-video3.mp4',
+    
+        videoSrc: 'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v19.mp4',
     description: `Recurso para crear diagramas interactivos de tu SQL.
 Funciona con mySQL, PostgreSQL, SQLite y más.
 Si eres programador o estás estudiando una ingeniería, seguro que te salva la vida alguna vez.`,
@@ -409,7 +417,7 @@ Si eres programador o estás estudiando una ingeniería, seguro que te salva la 
     isSaved: false,
     shared: 5323,
     arrayImages: [
-      'https://mysupercoolprojects.github.io/repo-1/assets/nin4-parod1/1.jpg'
+      'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v20.avif'
     ]
-  },
+  }
 ];
