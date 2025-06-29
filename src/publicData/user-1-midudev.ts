@@ -296,11 +296,12 @@ No subestimes el poder de una línea de CSS mal escrita... o bien dominada.
     isSaved: false,
     shared: 350,
     arrayImages: [
-            'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v14.avif'
+      'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v14.avif'
     ]
   },
   {
-    videoSrc: 'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v15.mp4',
+    videoSrc:
+      'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v15.mp4',
     description: `Aprende Python mientras juegas gracias a Code Strike.
 Lo tienes sin coste en Steam por tiempo limitado.
 Es un videojuego de acción, aventura y programación.
@@ -347,7 +348,8 @@ Aunque también tiene sus contras:
     ]
   },
   {
-        videoSrc: 'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v17.mp4',
+    videoSrc:
+      'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v17.mp4',
     description: `¿Buscas ahorrar tiempo desarrollando interfaces?
 Esta web es un tesoro escondido para devs.
 Más de 1500 plantillas HTML gratuitas con componentes de UI listos para usar.
@@ -385,8 +387,8 @@ Y cuando vuelves a ese archivo, lo miras como si lo hubiera escrito otra persona
     ]
   },
   {
-    
-        videoSrc: 'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v19.mp4',
+    videoSrc:
+      'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/v19.mp4',
     description: `Recurso para crear diagramas interactivos de tu SQL.
 Funciona con mySQL, PostgreSQL, SQLite y más.
 Si eres programador o estás estudiando una ingeniería, seguro que te salva la vida alguna vez.`,

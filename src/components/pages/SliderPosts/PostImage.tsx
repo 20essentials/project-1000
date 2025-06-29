@@ -58,7 +58,7 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
   return (
     <article className='post-image' ref={postImageRef}>
       {arrayImages?.map((src, i) => (
-        <section key={i} className='container-img-post' >
+        <section key={i} className='container-img-post'>
           <img src={src} alt='image' draggable='false' onClick={stopAnimation} />
 
           {arrayImagesLength > 1 && (
@@ -119,12 +119,14 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
 
           <section className='aside-text-and-description'>
             <p>@{username}</p>
-            <p>{description}</p>
-            <p>
-              {tags.map((word, i) => (
-                <span key={`letter-${i}`}>#{word}&nbsp;</span>
-              ))}
-            </p>
+            {description && <p>{description}</p>}
+            {tags && (
+              <p>
+                {tags.map((word, i) => (
+                  <span key={`letter-${i}`}>#{word}&nbsp;</span>
+                ))}
+              </p>
+            )}
           </section>
         </section>
       ))}

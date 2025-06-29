@@ -1,8 +1,8 @@
 export type postProps = {
   videoSrc?: string;
   arrayImages?: string[];
-  description: string;
-  tags: string[];
+  description?: string;
+  tags?: string[];
   dateOfPublication: string;
   totalViewsOfThePost: number;
   hearts: number;
