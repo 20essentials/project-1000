@@ -1,13 +1,21 @@
 import '@/components/pages/ProfileCreator/ProfileCreator.css';
 import { useUserCreator } from '@/store/useUserCreator';
+import { FollowButton } from './FollowButton';
+import { generateTotalNum } from '@/utils/functions';
 
 export function ProfileCreator() {
   const setCommonProps = useUserCreator(state => state.setCommonProps);
   const setArrayOfPosts = useUserCreator(state => state.setArrayOfPosts);
   const commonProps = useUserCreator(state => state.commonProps);
   const arrayOfPosts = useUserCreator(state => state.arrayOfPosts);
-  const { profileImageSrc, username, followed, followers, totalLikes } =
-    commonProps;
+  const {
+    profileImageSrc,
+    username,
+    followed,
+    followers,
+    totalLikes,
+    profileDescription
+  } = commonProps;
 
   return (
     <article className='profile-creator'>
@@ -20,23 +28,20 @@ export function ProfileCreator() {
         <p className='name-of-the-user'>@{username}</p>
         <aside className='container-data-user'>
           <article className='tab-data'>
-            <p className='num'>{followed}</p>
-            <p className="desc">Followed</p>
+            <p className='num'>{generateTotalNum(followed)}</p>
+            <p className='desc'>Followed</p>
           </article>
           <article className='tab-data'>
-            <p className='num'>{followers.toLocaleString('es-ES')}</p>
-            <p className="desc">Followers</p>
+            <p className='num'>{generateTotalNum(followers)}</p>
+            <p className='desc'>Followers</p>
           </article>
           <article className='tab-data'>
-            <p className='num'>
-              {(totalLikes / 1_000_000).toLocaleString('es-ES', {
-                minimumFractionDigits: 1,
-                maximumFractionDigits: 1
-              })} Mln
-            </p>
-            <p className="desc">Likes</p>
+            <p className='num'>{generateTotalNum(totalLikes)}</p>
+            <p className='desc'>Likes</p>
           </article>
         </aside>
+        <FollowButton />
+        <p className='description'>{profileDescription}</p>
       </aside>
       <aside className='profile-creator-bottom'>
         {arrayOfPosts.map((post, index) => {

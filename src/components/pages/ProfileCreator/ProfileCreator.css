@@ -31,10 +31,18 @@
     gap: 8px;
     font-size: 12.5px;
 
+    * {
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
     .profile-of-the-user {
+      display: flex;
       width: 48px;
       height: 48px;
       border-radius: 50%;
+      aspect-ratio: 1;
+      object-fit: cover;
     }
 
     .container-data-user {
@@ -62,6 +70,22 @@
           text-align: center;
         }
       }
+    }
+
+    .follow-button {
+      background-color: #fe2b54;
+      padding: 9px 20px;
+      color: #fff;
+      border-radius: 8px;
+      font-family: 'Montserrat';
+      font-weight: 500;
+      transform: scale(0.9);
+    }
+
+    .description {
+      text-align: center;
+      width: 90%;
+      font-size: 12px;
     }
   }
 

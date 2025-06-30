@@ -2,7 +2,7 @@ export const $ = (el: string) => document.querySelector(el);
 export const $$ = (el: string) => document.querySelectorAll(el);
 
 export function baseUrl(path: string) {
-  return new URL(path.replace(/^\/+/, ""), import.meta.env.SITE).toString();
+  return new URL(path.replace(/^\/+/, ''), import.meta.env.SITE).toString();
 }
 
 export function getRandomNumber(min: number, max: number): number {
@@ -13,7 +13,7 @@ export function generateRandomISODate(
   from: Date = new Date(2000, 0, 1),
   to: Date = new Date()
 ): string {
-  const pad = (n: number) => n.toString().padStart(2, "0");
+  const pad = (n: number) => n.toString().padStart(2, '0');
 
   const randomDate = new Date(
     from.getTime() + Math.random() * (to.getTime() - from.getTime())
@@ -27,4 +27,14 @@ export function generateRandomISODate(
   const seconds = pad(randomDate.getSeconds());
 
   return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}`;
+}
+
+export function generateTotalNum(num: number) {
+  if (num < 99_999) return num;
+  if (num >= 100_000 && num <= 999_999) return num.toLocaleString('es-ES');
+  if (num >= 1_000_000)
+    return `${(num / 1_000_000).toLocaleString('es-ES', {
+      minimumFractionDigits: 1,
+      maximumFractionDigits: 1
+    })} Mln`;
 }
