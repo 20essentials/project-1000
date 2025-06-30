@@ -1,18 +1,77 @@
 .profile-creator {
   height: 90%;
-  background-color: yellow;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
   overflow-y: auto;
+  --white: #e9e9e9;
 
-  .content-post {
-    background-color: black;
-    width: 100%;
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: color-mix(in srgb, var(--white) 50%, transparent 50%);
+    opacity: 0.5;
   }
 
-  .square_user_creator {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  &::-webkit-scrollbar-track {
+    background: #111;
+  }
+
+  .profile-creator-top {
+    height: fit-content;
+    background-color: #111;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    color: var(--white);
+    gap: 8px;
+    font-size: 12.5px;
+
+    .profile-of-the-user {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+    }
+
+    /* .name-of-the-user {
+      font-size: 12.5px;
+    } */
+
+    .container-data-user {
+      display: flex;
+      gap: 11px;
+
+      .tab-data {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 4px;
+
+        p {
+          font-family: TikTokDisplayFont;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .profile-creator-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .content-post {
+      background-color: black;
+      width: 100%;
+    }
+
+    .square_user_creator {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }

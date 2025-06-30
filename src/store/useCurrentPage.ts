@@ -11,7 +11,7 @@ export const IS_ACTIVE_BUTTON = {
 };
 
 const initialState = {
-  currenPage: 1
+  currenPage: 6
 };
 
 export const useCurrentPage = create(
