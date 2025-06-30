@@ -3,11 +3,11 @@ import { PostImage } from '@/components/pages/SliderPosts/PostImage/PostImage';
 import { PostVideo } from '@/components/pages/SliderPosts/PostVideo/PostVideo';
 import type { arrayOfPosts } from '@/components/pages/SliderPosts/types.d.ts';
 import { useFollowedOrForYou } from '@/store/useFollowedOrForYou';
-import { PRIVATE_DATA } from '@/privateData/amPrivateData';
-import { PUBLIC_DATA } from '@/publicData/amPublicData';
 import { useEffect, useRef } from 'react';
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
 import { useMemo } from 'react';
+import { PUBLIC_DATA } from '@/publicData/amPublicData';
+import { PRIVATE_DATA } from '@/privateData/amPrivateData';
 
 const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
 const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];

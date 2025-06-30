@@ -6,7 +6,8 @@ export const IS_ACTIVE_BUTTON = {
   SEARCH: 2,
   UPLOAD: 3,
   INBOX: 4,
-  PROFILE: 5
+  PROFILE: 5,
+  PROFILE_CREATOR: 6
 };
 
 const initialState = {

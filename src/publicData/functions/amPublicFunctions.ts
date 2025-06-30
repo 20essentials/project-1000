@@ -73,8 +73,8 @@ export function generatePostImage({
   description
 }: {
   arrayImages: string[];
-  tags: string[];
-  description: string;
+  tags?: string[];
+  description?: string;
 }) {
   return {
     arrayImages,
@@ -91,8 +91,8 @@ export function generatePostVideo({
   description
 }: {
   videoSrc: string;
-  tags: string[];
-  description: string;
+  tags?: string[];
+  description?: string;
 }) {
   return {
     videoSrc,
@@ -114,8 +114,8 @@ type ContentVideo = {
 };
 
 type ImageAndVideoCommon = {
-  tags: string[];
-  description: string;
+  tags?: string[];
+  description?: string;
 };
 
 type Content = (ContentImage | ContentVideo) & ImageAndVideoCommon;
@@ -130,19 +130,19 @@ export function generateArrayPosts({
 }): postProps[] {
   return ARRAY_CONTENT.map(content => {
     if (content.type === 'image') {
-      const { arrayImages = [] } = content;
+      const { arrayImages = [], description, tags } = content;
       return generatePostImage({
         arrayImages: arrayImages.map(image => `${PREFIX}${image}`),
-        description: content.description,
-        tags: content.tags
+        description: description,
+        tags: tags
       });
     }
     //Video By Default
-    const { videoSrc = '' } = content;
+    const { videoSrc , description, tags } = content;
     return generatePostVideo({
       videoSrc: `${PREFIX}${videoSrc}`,
-      description: content.description,
-      tags: content.tags
+      description: description,
+      tags: tags
     });
   });
 }

@@ -5,6 +5,7 @@ import { Search } from '@/components/pages/Search/Search';
 import { Upload } from '@/components/pages/Upload/Upload';
 import { Inbox } from '@/components/pages/Inbox/Inbox';
 import { Profile } from '@/components/pages/Profile/Profile';
+import { ProfileCreator } from '@/components/pages/ProfileCreator/ProfileCreator';
 import { NavbarBottom } from '@/components/NavBarBottom/NavbarBottom';
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 
@@ -18,6 +19,7 @@ export function Container3() {
       {IS_ACTIVE_BUTTON.UPLOAD === currenPage && <Upload />}
       {IS_ACTIVE_BUTTON.INBOX === currenPage && <Inbox />}
       {IS_ACTIVE_BUTTON.PROFILE === currenPage && <Profile />}
+      {IS_ACTIVE_BUTTON.PROFILE_CREATOR === currenPage && <ProfileCreator />}
       <NavbarBottom />
     </article>
   );

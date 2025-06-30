@@ -11,6 +11,7 @@ import { useEffect, useRef, useState } from 'react';
 import { PlayButton } from '@/components/pages/SliderPosts/PostVideo/PlayButton';
 import { userHasInteracted } from '@/store/userHasInteracted';
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
+import { UserProfile } from '@/components/pages/SliderPosts/AsideRight/UserProfile';
 
 export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   const hasInteracted = userHasInteracted(state => state.hasInteracted);
@@ -32,7 +33,8 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
     shared,
     profileImageSrc,
     username,
-    idx
+    idx,
+    userId
   } = props;
   const thisPostWillRenderMorePost = idx % 3 === 0;
 
@@ -121,18 +123,7 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
 
       <article className='aside-right-buttons'>
         <section className='button-container btn-container-user-profile'>
-          <img
-            className='user-profile'
-            draggable='false'
-            src={profileImageSrc}
-            alt='User Profile'
-          />
-          <img
-            src='/assets/plus.png'
-            draggable='false'
-            alt='Badge'
-            className='badge'
-          />
+          <UserProfile profileImageSrc={profileImageSrc}  userId={userId}/>
         </section>
         <section className='button-container'>
           <Heart />

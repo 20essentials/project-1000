@@ -12,6 +12,7 @@ import { useEffect, useRef, useState } from "react";
 import { ARRAY_OF_SONGS } from "@/utils/arrayOfSongs";
 import { userHasInteracted } from "@/store/userHasInteracted";
 import { PlayButton } from "@/components/pages/SliderPosts/PostVideo/PlayButton";
+import { UserProfile } from '@/components/pages/SliderPosts/AsideRight/UserProfile';
 
 export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const {
@@ -27,6 +28,7 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
     username,
     profileImageSrc,
     idx,
+    userId
   } = props;
 
   const arrayImagesLength = arrayImages?.length ?? 0;
@@ -158,18 +160,7 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
 
           <article className="aside-right-buttons">
             <section className="button-container btn-container-user-profile">
-              <img
-                className="user-profile"
-                draggable="false"
-                src={profileImageSrc}
-                alt="User Profile"
-              />
-              <img
-                src="/assets/plus.png"
-                draggable="false"
-                alt="Badge"
-                className="badge"
-              />
+              <UserProfile profileImageSrc={profileImageSrc} userId={userId} />
             </section>
             <section className="button-container">
               <Heart />
