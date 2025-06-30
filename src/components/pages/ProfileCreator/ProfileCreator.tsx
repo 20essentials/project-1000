@@ -2,12 +2,14 @@ import '@/components/pages/ProfileCreator/ProfileCreator.css';
 import { useUserCreator } from '@/store/useUserCreator';
 import { FollowButton } from './FollowButton';
 import { generateTotalNum } from '@/utils/functions';
+import { GridPosts } from './GridPosts';
 
 export function ProfileCreator() {
   const setCommonProps = useUserCreator(state => state.setCommonProps);
   const setArrayOfPosts = useUserCreator(state => state.setArrayOfPosts);
   const commonProps = useUserCreator(state => state.commonProps);
   const arrayOfPosts = useUserCreator(state => state.arrayOfPosts);
+
   const {
     profileImageSrc,
     username,
@@ -43,32 +45,9 @@ export function ProfileCreator() {
         <FollowButton />
         <p className='description'>{profileDescription}</p>
       </aside>
-      <aside className='profile-creator-bottom'>
-        {arrayOfPosts.map((post, index) => {
-          const { videoSrc, arrayImages } = post;
 
-          return (
-            <aside key={index} className='content-post'>
-              {videoSrc ? (
-                <video
-                  className='square_user_creator profile-creator__video'
-                  src={videoSrc}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                />
-              ) : arrayImages && arrayImages.length > 0 ? (
-                <img
-                  className='square_user_creator profile-creator__image'
-                  src={arrayImages[0]}
-                  alt={`Post ${index}`}
-                />
-              ) : null}
-            </aside>
-          );
-        })}
-      </aside>
+
+      <GridPosts arrayOfPosts={arrayOfPosts}/>
     </article>
   );
 }
