@@ -1,5 +1,5 @@
 export function PlayButton(
-  props: React.SVGAttributes<SVGSVGElement> & { handlePlayVideo: () => any }
+  props: React.SVGAttributes<SVGSVGElement> & { handlePlayVideo: (e:any) => any }
 ) {
   return (
     <svg

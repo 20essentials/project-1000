@@ -10,6 +10,7 @@ export type postProps = {
   saved: number;
   shared: number;
   isSaved: boolean;
+  idPost: string;
 };
 
 export type postComonProps = {

@@ -25,6 +25,18 @@
       background: transparent;
     }
 
+    .play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 38px;
+      height: 85px;
+      color: #fff;
+      opacity: 0.6;
+      z-index: 40;
+    }
+
     .post-video {
       width: 100%;
       height: 100%;
@@ -33,18 +45,6 @@
       scroll-snap-stop: always;
       overflow: visible;
       margin-bottom: 3px;
-
-      .play-btn {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 38px;
-        height: 85px;
-        color: #fff;
-        opacity: 0.6;
-        z-index: 40;
-      }
 
       video {
         position: relative;
@@ -117,13 +117,13 @@
           width: 100%;
           height: 100%;
           position: absolute;
-          object-fit: cover;
-          object-position: left;
-          animation: imageAnimation 10s linear infinite;
+          object-fit: contain;
+          object-position: center;
+          /* animation: imageAnimation 10s linear infinite; */
 
-          &.pausado {
+          /* &.pausado {
             animation-play-state: paused;
-          }
+          } */
         }
       }
     }
@@ -262,7 +262,7 @@
   }
 }
 
-@keyframes imageAnimation {
+/* @keyframes imageAnimation {
   0% {
     object-position: left;
   }
@@ -272,4 +272,4 @@
   100% {
     object-position: left;
   }
-}
+} */

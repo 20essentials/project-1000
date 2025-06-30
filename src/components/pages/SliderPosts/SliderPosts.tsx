@@ -1,5 +1,5 @@
 import '@/components/pages/SliderPosts/SliderPosts.css';
-import { PostImage } from '@/components/pages/SliderPosts/PostImage.tsx';
+import { PostImage } from '@/components/pages/SliderPosts/PostImage/PostImage';
 import { PostVideo } from '@/components/pages/SliderPosts/PostVideo/PostVideo';
 import type { arrayOfPosts } from '@/components/pages/SliderPosts/types.d.ts';
 import { useFollowedOrForYou } from '@/store/useFollowedOrForYou';
@@ -12,17 +12,25 @@ import { useMemo } from 'react';
 const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
 const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 
-
 export function SliderPosts() {
   const isForYou = useFollowedOrForYou(state => state.isForYou);
   const ALL_POSTS = isForYou ? FOR_YOU : FOLLOWED;
   const sliderRef = useRef<HTMLDivElement>(null);
   const limit = useLimitOfPost(state => state.limit);
   const flattenedPosts = useMemo(() => {
-  return ALL_POSTS.flatMap(([userCommonProps, userPosts]) =>
-    userPosts.map(post => ({ ...post, ...userCommonProps }))
-  ).toSorted(() => Math.random() - 0.5);
-}, [ALL_POSTS]);
+    const allPostsShuffled = ALL_POSTS.flatMap(([userCommonProps, userPosts]) =>
+      userPosts.map(post => ({ ...post, ...userCommonProps }))
+    ).toSorted(() => Math.random() - 0.5);
+
+    // Eliminar duplicados por id
+    const uniquePosts = Array.from(
+      new Map(allPostsShuffled.map(post => [post.idPost, post])).values()
+    );
+
+    const shuffled = uniquePosts.toSorted(() => Math.random() - 0.5);
+
+    return shuffled;
+  }, [ALL_POSTS]);
 
   useEffect(() => {
     if (sliderRef.current) {
