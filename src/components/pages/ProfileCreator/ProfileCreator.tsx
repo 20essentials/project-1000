@@ -20,21 +20,21 @@ export function ProfileCreator() {
         <p className='name-of-the-user'>@{username}</p>
         <aside className='container-data-user'>
           <article className='tab-data'>
-            <p>{followed}</p>
-            <p>Followed</p>
+            <p className='num'>{followed}</p>
+            <p className="desc">Followed</p>
           </article>
           <article className='tab-data'>
-            <p>{followers.toLocaleString('es-ES')}</p>
-            <p>Followers</p>
+            <p className='num'>{followers.toLocaleString('es-ES')}</p>
+            <p className="desc">Followers</p>
           </article>
           <article className='tab-data'>
-            <p>
+            <p className='num'>
               {(totalLikes / 1_000_000).toLocaleString('es-ES', {
                 minimumFractionDigits: 1,
                 maximumFractionDigits: 1
               })} Mln
             </p>
-            <p>Likes</p>
+            <p className="desc">Likes</p>
           </article>
         </aside>
       </aside>

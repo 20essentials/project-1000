@@ -37,10 +37,6 @@
       border-radius: 50%;
     }
 
-    /* .name-of-the-user {
-      font-size: 12.5px;
-    } */
-
     .container-data-user {
       display: flex;
       gap: 11px;
@@ -51,8 +47,18 @@
         text-align: center;
         gap: 4px;
 
+        .num {
+          font-weight: 700;
+        }
+
+        .desc {
+          opacity: 0.6;
+          font-size: 11.5px;
+        }
+
         p {
-          font-family: TikTokDisplayFont;
+          font-family: Montserrat;
+          font-weight: 500;
           text-align: center;
         }
       }
