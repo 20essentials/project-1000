@@ -8,6 +8,7 @@ import { Profile } from '@/components/pages/Profile/Profile';
 import { ProfileCreator } from '@/components/pages/ProfileCreator/ProfileCreator';
 import { NavbarBottom } from '@/components/NavBarBottom/NavbarBottom';
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
+import { SliderPostsOfSingleUser } from './pages/SliderPosts/SliderPostsOfSingleUser';
 
 export function Container3() {
   const currenPage = useCurrentPage(state => state.currenPage);
@@ -20,6 +21,7 @@ export function Container3() {
       {IS_ACTIVE_BUTTON.INBOX === currenPage && <Inbox />}
       {IS_ACTIVE_BUTTON.PROFILE === currenPage && <Profile />}
       {IS_ACTIVE_BUTTON.PROFILE_CREATOR === currenPage && <ProfileCreator />}
+      {IS_ACTIVE_BUTTON.CREATOR_POSTS === currenPage && <SliderPostsOfSingleUser />}
       <NavbarBottom />
     </article>
   );

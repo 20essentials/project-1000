@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { combine } from 'zustand/middleware';
 
+
 const initialState = {
   limit: 3,
   offsetOfPosts: 3
@@ -15,10 +16,13 @@ export const useLimitOfPost = create(
       } else {
         set({ limit: newLimit });
       }
-
+      
       setTimeout(() => {
-        console.log('Current limit:', get().limit);
-      }, 100)
+        console.log('limit', get().limit)
+      }, 500)
+    },
+    resetLimit: () => {
+      set({ limit: 3 });
     }
   }))
 );

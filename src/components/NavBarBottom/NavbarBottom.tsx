@@ -7,20 +7,34 @@ import { InboxButton } from '@/components/NavBarBottom/InboxButton';
 import { ProfileButton } from '@/components/NavBarBottom/ProfileButton';
 import { useCurrentPage } from '@/store/useCurrentPage';
 import { IS_ACTIVE_BUTTON } from '@/store/useCurrentPage';
+import { useLimitOfPost } from '@/store/useLimitOfPosts';
 
 export function NavbarBottom() {
   const currenPage = useCurrentPage(state => state.currenPage);
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
+  const limit = useLimitOfPost(state => state.limit);
+  const resetLimit = useLimitOfPost(state => state.resetLimit);
 
   function handleCurrentPage(currenPage: number) {
     setCurrentPage(currenPage);
+  }
+
+  function hanleGoToHome() {
+    setCurrentPage(IS_ACTIVE_BUTTON.HOME);
+    if (limit > 3) {
+      resetLimit();
+    }
   }
 
   const homeClass = `logo-home ${
     currenPage === IS_ACTIVE_BUTTON.HOME ? 'btn-active' : ''
   }`;
   const searchClass = `logo-search ${
-    currenPage === IS_ACTIVE_BUTTON.SEARCH ? 'btn-active' : ''
+    currenPage === IS_ACTIVE_BUTTON.SEARCH ||
+    currenPage === IS_ACTIVE_BUTTON.PROFILE_CREATOR ||
+    currenPage === IS_ACTIVE_BUTTON.CREATOR_POSTS
+      ? 'btn-active'
+      : ''
   }`;
   const uploadClass = `logo-upload ${
     currenPage === IS_ACTIVE_BUTTON.UPLOAD ? 'btn-active' : ''

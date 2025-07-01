@@ -7,11 +7,12 @@ export const IS_ACTIVE_BUTTON = {
   UPLOAD: 3,
   INBOX: 4,
   PROFILE: 5,
-  PROFILE_CREATOR: 6
+  PROFILE_CREATOR: 6,
+  CREATOR_POSTS: 7,
 };
 
 const initialState = {
-  currenPage: 6
+  currenPage: IS_ACTIVE_BUTTON.PROFILE_CREATOR
 };
 
 export const useCurrentPage = create(

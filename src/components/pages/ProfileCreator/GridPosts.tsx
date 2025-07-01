@@ -1,7 +1,21 @@
-import type { postProps } from '@/components/pages/SliderPosts/types.d';
+import type {
+  postProps,
+  postComonProps,
+  arrayOfPosts
+} from '@/components/pages/SliderPosts/types.d';
+import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
+import { useFollowedOrForYou } from '@/store/useFollowedOrForYou';
+import { useGlobalArrayPosts } from '@/store/useGlobalArrayPosts';
+import { useUserCreator } from '@/store/useUserCreator';
 import { useEffect, useState, useRef, useCallback } from 'react';
 
-export function GridPosts({ arrayOfPosts }: { arrayOfPosts: postProps[] }) {
+export function GridPosts({
+  arrayOfPosts,
+  commonProps
+}: {
+  arrayOfPosts: postProps[];
+  commonProps: postComonProps;
+}) {
   const [visibleCount, setVisibleCount] = useState(9); // inicialmente 9 posts visibles
   const containerRef = useRef<HTMLDivElement>(null);
   const [observedIndexes, setObservedIndexes] = useState<number[]>([]);
@@ -10,13 +24,11 @@ export function GridPosts({ arrayOfPosts }: { arrayOfPosts: postProps[] }) {
   const lastThreeRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   // Callback para IntersectionObserver de los últimos 3 posts visibles
-  const onIntersect: IntersectionObserverCallback = (entries) => {
-    entries.forEach((entry) => {
+  const onIntersect: IntersectionObserverCallback = entries => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         // Cuando algún post de los últimos 3 entra en viewport, agregamos 9 más
-        setVisibleCount((prev) =>
-          Math.min(prev + 9, arrayOfPosts.length)
-        );
+        setVisibleCount(prev => Math.min(prev + 9, arrayOfPosts.length));
       }
     });
   };
@@ -26,16 +38,16 @@ export function GridPosts({ arrayOfPosts }: { arrayOfPosts: postProps[] }) {
       const observer = new IntersectionObserver(onIntersect, {
         root: null,
         rootMargin: '0px',
-        threshold: 0.1,
+        threshold: 0.1
       });
 
       // Observamos los últimos 3 posts visibles
-      lastThreeRefs.current.forEach((el) => {
+      lastThreeRefs.current.forEach(el => {
         if (el) observer.observe(el);
       });
 
       return () => {
-        lastThreeRefs.current.forEach((el) => {
+        lastThreeRefs.current.forEach(el => {
           if (el) observer.unobserve(el);
         });
         observer.disconnect();
@@ -44,29 +56,44 @@ export function GridPosts({ arrayOfPosts }: { arrayOfPosts: postProps[] }) {
   }, [visibleCount, arrayOfPosts.length]);
 
   return (
-    <aside className="profile-creator-bottom" ref={containerRef}>
+    <aside className='profile-creator-bottom' ref={containerRef}>
       {arrayOfPosts.slice(0, visibleCount).map((post, index) => (
         <div
           key={index}
-          ref={(el) => {
+          ref={el => {
             // Guardar referencia solo para los últimos 3 visibles
             if (index >= visibleCount - 3) {
               lastThreeRefs.current[index - (visibleCount - 3)] = el;
             }
           }}
         >
-          <PostVideoOrImage post={post} />
+          <PostVideoOrImage post={post} arrayPosts={arrayOfPosts } commonProps={commonProps} />
         </div>
       ))}
     </aside>
   );
 }
 
-function PostVideoOrImage({ post }: { post: postProps }) {
+function PostVideoOrImage({
+  post,
+  arrayPosts,
+  commonProps
+}: {
+  post: postProps;
+  arrayPosts: postProps[];
+  commonProps: postComonProps;
+}) {
   const { videoSrc, arrayImages } = post;
   const [poster, setPoster] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const setForYou = useGlobalArrayPosts(state => state.setForYou);
+  const setFollowed = useGlobalArrayPosts(state => state.setFollowed);
+  const FOLLOWED = useGlobalArrayPosts(state => state.FOLLOWED);
+  const FOR_YOU = useGlobalArrayPosts(state => state.FOR_YOU);
+  const isForYou = useFollowedOrForYou(state => state.isForYou);
+  const setCurrentPage = useCurrentPage(state => state.setCurrentPage)
+  const setIndexOfPost = useUserCreator(state => state.setIndexOfPost);
 
   useEffect(() => {
     if (!videoSrc) return;
@@ -80,7 +107,7 @@ function PostVideoOrImage({ post }: { post: postProps }) {
       },
       {
         root: null,
-        threshold: 0.1,
+        threshold: 0.1
       }
     );
 
@@ -124,21 +151,33 @@ function PostVideoOrImage({ post }: { post: postProps }) {
     }
   }, [videoSrc, isVisible, poster]);
 
+  function handleGoToHome(e: React.MouseEvent) {
+    e.preventDefault();
+    const currentContentPost = e.target as HTMLElement;
+    const parent = currentContentPost.closest(
+      '.profile-creator-bottom'
+    ) as HTMLElement;
+    const firstParent = currentContentPost.parentElement as HTMLElement;
+    const indexStart = [...parent.children].indexOf(firstParent);
+    setCurrentPage(IS_ACTIVE_BUTTON.CREATOR_POSTS)
+    setIndexOfPost(indexStart);
+  }
+
   return (
-    <div ref={containerRef} className='content-post'>
+    <div ref={containerRef} className='content-post' onClick={handleGoToHome}>
       {videoSrc ? (
         <video
-          className="square_user_creator profile-creator__video"
+          className='square_user_creator profile-creator__video'
           poster={poster ?? ''}
-          preload="none"
+          preload='none'
           controls={false}
           playsInline
         />
       ) : arrayImages && arrayImages.length > 0 ? (
         <img
-          className="square_user_creator profile-creator__image"
+          className='square_user_creator profile-creator__image'
           src={arrayImages[0]}
-          alt="Post image"
+          alt='Post image'
         />
       ) : null}
     </div>

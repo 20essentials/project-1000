@@ -3,6 +3,7 @@ import { useUserCreator } from '@/store/useUserCreator';
 import { FollowButton } from './FollowButton';
 import { generateTotalNum } from '@/utils/functions';
 import { GridPosts } from './GridPosts';
+import { ArrowLeft } from './ArrowLeft';
 
 export function ProfileCreator() {
   const setCommonProps = useUserCreator(state => state.setCommonProps);
@@ -16,7 +17,8 @@ export function ProfileCreator() {
     followed,
     followers,
     totalLikes,
-    profileDescription
+    profileDescription,
+    userId
   } = commonProps;
 
   return (
@@ -44,10 +46,11 @@ export function ProfileCreator() {
         </aside>
         <FollowButton />
         <p className='description'>{profileDescription}</p>
+        <ArrowLeft className='arrow-left' />
       </aside>
 
 
-      <GridPosts arrayOfPosts={arrayOfPosts}/>
+      <GridPosts arrayOfPosts={arrayOfPosts} commonProps={commonProps}/>
     </article>
   );
 }
