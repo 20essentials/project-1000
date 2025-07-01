@@ -12,7 +12,7 @@ export const IS_ACTIVE_BUTTON = {
 };
 
 const initialState = {
-  currenPage: IS_ACTIVE_BUTTON.PROFILE_CREATOR
+  currenPage: IS_ACTIVE_BUTTON.HOME
 };
 
 export const useCurrentPage = create(

@@ -20,7 +20,6 @@ export function SliderPostsOfSingleUser() {
 
   useEffect(() => {
     if (sliderRef.current) {
-      // sliderRef.current.scrollTop = 0;
       sliderRef.current.children[indexOfPost].scrollIntoView({ behavior: 'smooth'})
     }
   }, [indexOfPost]);
