@@ -5,7 +5,7 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 export const midudev_commonProps = generateExactlyCommonProps({
-  userId: 'b5a8904a-310a-4757-808c-3e5ca8b9609d',
+  userId: '21a87f69-c341-492f-a156-47588fd606d6',
   username: 'midudev',
   profileImageSrc: 'https://avatars.githubusercontent.com/u/1561955?v=4',
   following: false,

@@ -5,9 +5,9 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 export const goated_ai_art_commonProps = generateExactlyCommonProps({
-  userId: 'b5a8904a-310a-4757-808c-3e5ca8b9609d',
+  userId: '1339e4cd-cd20-40b5-8e47-1f4483d586a3',
   username: 'goated_ai_art',
-  profileImageSrc: '',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-183/assets/goated-ai/f1.avif',
   following: false,
   followers: 150_000,
   totalLikes: 3_532_720,
@@ -15,7 +15,7 @@ export const goated_ai_art_commonProps = generateExactlyCommonProps({
   profileDescription: 'Art With IA'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-183/assets/goated-ai/';
 const ARRAY_CONTENT: ArrayContent = [
   {
     type: "image",
