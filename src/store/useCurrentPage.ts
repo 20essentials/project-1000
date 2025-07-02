@@ -2,6 +2,7 @@ import { create } from 'zustand';
 import { combine } from 'zustand/middleware';
 
 export const IS_ACTIVE_BUTTON = {
+  LOGIN_PAGE: 0,
   HOME: 1,
   SEARCH: 2,
   UPLOAD: 3,
@@ -12,7 +13,7 @@ export const IS_ACTIVE_BUTTON = {
 };
 
 const initialState = {
-  currenPage: IS_ACTIVE_BUTTON.SEARCH
+  currenPage: IS_ACTIVE_BUTTON.HOME
 };
 
 export const useCurrentPage = create(

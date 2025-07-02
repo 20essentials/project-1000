@@ -10,12 +10,16 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
+    "@astrojs/vercel": "^8.2.0",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
+    "add": "^2.0.6",
     "astro": "^5.8.0",
+    "pnpm": "^10.12.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "typescript": "^5.8.3",
+    "vercel": "^44.2.9",
     "zustand": "^5.0.5"
   },
   "devDependencies": {

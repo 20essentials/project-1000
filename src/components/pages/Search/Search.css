@@ -45,8 +45,7 @@
       display: flex;
       border-radius: 4px;
       align-items: center;
-      gap: 5vmax;
-      justify-content: space-between;
+      gap: 3px;
       padding: 3px;
       padding-inline: 0;
       cursor: pointer;
@@ -66,6 +65,8 @@
         display: flex;
         align-items: center;
         gap: 3px;
+        background-color: red;
+        width: 100%;
 
         h5 {
           color: #eee;

@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-
 import react from '@astrojs/react';
+import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,6 +19,7 @@ export default defineConfig({
 
   //Localhost
   site: 'http://localhost:4321/',
-
+  output: 'server',
+  adapter: vercel(),
   integrations: [react()]
 });

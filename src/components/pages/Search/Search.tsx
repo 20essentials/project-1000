@@ -12,7 +12,7 @@ export function Search() {
   const arrayUserNameAndId = ALL_POSTS.map(user => ({
     userId: user[0].userId,
     username: user[0].username
-  }));
+  })).toSorted(() => Math.random() - 0.5);
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
   const setArrayOfPosts = useUserCreator(state => state.setArrayOfPosts);
   const setCommonProps = useUserCreator(state => state.setCommonProps);
