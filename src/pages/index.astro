@@ -1,9 +1,30 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import { Phone } from '@/components/Phone';
-
+import { SignedOut, SignIn } from '@clerk/astro/components';
 ---
 
 <Layout>
   <Phone client:only='react' />
+  <aside class='signin-modal'>
+    <SignedOut>
+      <SignIn />
+    </SignedOut>
+  </aside>
 </Layout>
+
+<style>
+  .signin-modal {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    zoom: 0.4;
+    z-index: -1;
+    overflow: hidden;
+    /* opacity: 0; */
+
+    .cl-signIn-root {
+      transform: translateY(90%);
+    }
+  }
+</style>

@@ -13,7 +13,7 @@ export const IS_ACTIVE_BUTTON = {
 };
 
 const initialState = {
-  currenPage: IS_ACTIVE_BUTTON.HOME
+  currenPage: IS_ACTIVE_BUTTON.LOGIN_PAGE
 };
 
 export const useCurrentPage = create(

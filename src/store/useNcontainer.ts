@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { combine } from 'zustand/middleware';
 
 const initialState = {
-  containerNum: 0
+  containerNum: 2
 };
 
 export const useNcontainer = create(

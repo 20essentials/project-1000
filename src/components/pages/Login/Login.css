@@ -1,6 +1,72 @@
 .login {
   height: 100%;
-  background-color: blue;
   border-bottom-right-radius: var(--border-r);
+  background-color: #fff;
   border-bottom-left-radius: var(--border-r);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  place-content: center;
+  text-align: center;
+  padding: 25px;
+  gap: 18px;
+
+  * {
+    font-family: Montserrat;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p,
+  button {
+    font-size: 13px;
+  }
+
+  footer {
+    font-size: 13px;
+    text-wrap: balance;
+    
+    output {
+      text-decoration: underline;
+      font-weight: 500;
+    }
+  }
+
+  p,
+  footer {
+    text-wrap: balanc0;
+  }
+
+  button {
+    width: 98%;
+    display: flex;
+
+    padding: 8px;
+    border: 1.5px solid #ddd;
+    background-color: transparent;
+    align-items: center;
+    font-size: 12px;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    transition: border-color .3s ease-in-out;
+
+    * {
+      pointer-events: none;
+    }
+
+    &:hover {
+      border-color: #000d;
+    }
+
+    .logito {
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      left: 8px;
+    }
+  }
 }
