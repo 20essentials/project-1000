@@ -1,13 +1,11 @@
 import '@/components/pages/ProfileCreator/ProfileCreator.css';
 import { useUserCreator } from '@/store/useUserCreator';
-import { FollowButton } from './FollowButton';
+import { FollowButton } from '@/components/pages/ProfileCreator/FollowButton';
 import { generateTotalNum } from '@/utils/functions';
-import { GridPosts } from './GridPosts';
-import { ArrowLeft } from './ArrowLeft';
+import { GridPosts } from '@/components/pages/ProfileCreator/GridPosts';
+import { ArrowLeft } from '@/components/pages/ProfileCreator/ArrowLeft';
 
 export function ProfileCreator() {
-  const setCommonProps = useUserCreator(state => state.setCommonProps);
-  const setArrayOfPosts = useUserCreator(state => state.setArrayOfPosts);
   const commonProps = useUserCreator(state => state.commonProps);
   const arrayOfPosts = useUserCreator(state => state.arrayOfPosts);
 

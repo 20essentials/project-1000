@@ -4,21 +4,20 @@ import { Google } from './Google';
 import { Twitch } from './Twitch';
 import { GitHub } from './GitHub';
 
+function openGoogle() {
+  const $buttonGoogle = $('.cl-button__google') as HTMLButtonElement;
+  $buttonGoogle.click();
+}
+function openGithub() {
+  const $buttonGithub = $('.cl-button__github') as HTMLButtonElement;
+  $buttonGithub.click();
+}
+function openTwitch() {
+  const $buttonTwitch = $('.cl-button__twitch') as HTMLButtonElement;
+  $buttonTwitch.click();
+}
 
 export function Login() {
-  function openGoogle() {
-    const $buttonGoogle = $('.cl-button__google') as HTMLButtonElement;
-    $buttonGoogle.click();
-  }
-  function openGithub() {
-    const $buttonGithub = $('.cl-button__github') as HTMLButtonElement;
-    $buttonGithub.click();
-  }
-  function openTwitch() {
-    const $buttonTwitch = $('.cl-button__twitch') as HTMLButtonElement;
-    $buttonTwitch.click();
-  }
-
   return (
     <article className='login'>
       <h2>Login For TikTok</h2>
@@ -35,8 +34,8 @@ export function Login() {
         <GitHub className='logito github' /> Continue With GitHub
       </button>
       <footer>
-        By continuing, you agree to TikTok's <output>Terms of Use</output> and confirm that you
-        have TikTok's <output>Privacy Policy</output>
+        By continuing, you agree to TikTok's <output>Terms of Use</output> and
+        confirm that you have TikTok's <output>Privacy Policy</output>
       </footer>
     </article>
   );

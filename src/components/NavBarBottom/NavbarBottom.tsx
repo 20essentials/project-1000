@@ -29,6 +29,7 @@ export function NavbarBottom() {
   const homeClass = `logo-home ${
     currenPage === IS_ACTIVE_BUTTON.HOME ? 'btn-active' : ''
   }`;
+  
   const searchClass = `logo-search ${
     currenPage === IS_ACTIVE_BUTTON.SEARCH ||
     currenPage === IS_ACTIVE_BUTTON.PROFILE_CREATOR ||
