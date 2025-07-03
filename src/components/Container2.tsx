@@ -3,9 +3,8 @@ import '@/styles/Container2.css';
 import { baseUrl } from '@/utils/functions';
 const tikTokLogo = baseUrl('/assets/tiktok-logo.avif');
 const tikTokLogoText = baseUrl('/assets/tiktok-logo-text.webp');
-import { useNcontainer } from '@/store/useNcontainer';
+import { useNcontainer, CONTAINER_IS } from '@/store/useNcontainer';
 import { useEffect } from 'react';
-import { CONTAINER } from '@/types/consts';
 
 export function Container2() {
   const x = useTransformOrigin(state => state.x);
@@ -14,7 +13,7 @@ export function Container2() {
 
   useEffect(() => {
     let timeOutId = setTimeout(() => {
-      showContainewNum(CONTAINER.HOME);
+      showContainewNum(CONTAINER_IS.HOME);
     }, 1000);
 
     return () => {

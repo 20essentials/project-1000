@@ -1,8 +1,7 @@
-import { useNcontainer } from '@/store/useNcontainer';
+import { useNcontainer, CONTAINER_IS } from '@/store/useNcontainer';
 import { useTransformOrigin } from '@/store/useTransformOrigin';
 import '@/styles/Container1.css';
 import { useEffect, useRef } from 'react';
-import { CONTAINER } from '@/types/consts';
 import { baseUrl } from '@/utils/functions';
 const tikTokLogo = baseUrl('/assets/tiktok-logo.avif');
 
@@ -15,7 +14,7 @@ export function Container1() {
   );
 
   function showIntroTikTok() {
-    showContainewNum(CONTAINER.INTRO_PAGE);
+    showContainewNum(CONTAINER_IS.INTRO_PAGE);
   }
 
   useEffect(() => {

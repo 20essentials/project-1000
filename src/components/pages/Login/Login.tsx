@@ -4,12 +4,11 @@ import { Google } from './Google';
 import { Twitch } from './Twitch';
 import { GitHub } from './GitHub';
 
+
 export function Login() {
   function openGoogle() {
-    alert('h')
     const $buttonGoogle = $('.cl-button__google') as HTMLButtonElement;
     $buttonGoogle.click();
-    console.log($buttonGoogle);
   }
   function openGithub() {
     const $buttonGithub = $('.cl-button__github') as HTMLButtonElement;

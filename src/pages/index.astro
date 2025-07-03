@@ -2,10 +2,12 @@
 import Layout from '@/layouts/Layout.astro';
 import { Phone } from '@/components/Phone';
 import { SignedOut, SignIn } from '@clerk/astro/components';
+import { type User } from '@clerk/astro/server';
+const user  = await Astro.locals.currentUser();
 ---
 
 <Layout>
-  <Phone client:only='react' />
+  <Phone client:only='react' user={user} />
   <aside class='signin-modal'>
     <SignedOut>
       <SignIn />
