@@ -72,20 +72,24 @@ export function Search() {
         />
       </aside>
       <section className='search-bottom' ref={searchBottomRef}>
-        {filteredArray.map(({ userId, username }) => (
-          <article
-            className='user-search'
-            key={userId}
-            onClick={() => nextToProfileCreator({ userId })}
-          >
-            <div className='user-search-left'>
-              <WatchIcon className='watch' />
-              <h5 className='user-name'>{username}</h5>
-              <aside className='line'></aside>
-            </div>
-            {/* <DeleteIcon className='delete-icon' /> */}
-          </article>
-        ))}
+        {filteredArray.length > 0 ? (
+          filteredArray.map(({ userId, username }) => (
+            <article
+              className='user-search'
+              key={userId}
+              onClick={() => nextToProfileCreator({ userId })}
+            >
+              <div className='user-search-left'>
+                <WatchIcon className='watch' />
+                <h5 className='user-name'>{username}</h5>
+                <aside className='line'></aside>
+              </div>
+              {/* <DeleteIcon className='delete-icon' /> */}
+            </article>
+          ))
+        ) : (
+          <p className='not-found'>😅 Nothing for here</p>
+        )}
       </section>
     </article>
   );
