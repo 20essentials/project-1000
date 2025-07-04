@@ -1,9 +1,10 @@
-import '@/components/pages/ProfileCreator/ProfileCreator.css';
+import '@/components/pages/Profile/Profile.css';
 import { useUserCreator } from '@/store/useUserCreator';
 import { FollowButton } from '@/components/pages/ProfileCreator/FollowButton';
 import { generateTotalNum } from '@/utils/functions';
 import { GridPosts } from '@/components/pages/ProfileCreator/GridPosts';
 import { ArrowLeft } from '@/components/pages/ProfileCreator/ArrowLeft';
+import { Logout } from './Logout';
 
 export function Profile() {
   const commonProps = useUserCreator(state => state.commonProps);
@@ -20,7 +21,7 @@ export function Profile() {
   } = commonProps;
 
   return (
-    <article className='profile-creator'>
+    <article className='profile-user-original'>
       <aside className='profile-creator-top'>
         <img
           className='profile-of-the-user'
@@ -45,6 +46,7 @@ export function Profile() {
         {/* <FollowButton /> */}
         {/* <p className='description'>{profileDescription}</p> */}
         <ArrowLeft className='arrow-left' />
+        <Logout />
       </aside>
 
 

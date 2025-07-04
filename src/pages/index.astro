@@ -1,17 +1,23 @@
 ---
 import Layout from '@/layouts/Layout.astro';
 import { Phone } from '@/components/Phone';
-import { SignedOut, SignIn } from '@clerk/astro/components';
-import { type User } from '@clerk/astro/server';
+import { SignedIn, SignedOut, SignIn, UserButton } from '@clerk/astro/components';
 const user  = await Astro.locals.currentUser();
 ---
 
 <Layout>
   <Phone client:only='react' user={user} />
+
   <aside class='signin-modal'>
     <SignedOut>
       <SignIn />
     </SignedOut>
+  </aside>
+
+  <aside class='logout-container'>
+    <SignedIn>
+      <UserButton />
+    </SignedIn>
   </aside>
 </Layout>
 
@@ -28,5 +34,12 @@ const user  = await Astro.locals.currentUser();
     .cl-signIn-root {
       transform: translateY(90%);
     }
+  }
+
+  .logout-container {
+    position: absolute;
+    background-color: red;
+    top: 0;
+    right: 0;
   }
 </style>
