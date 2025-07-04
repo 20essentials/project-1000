@@ -1,6 +1,6 @@
 import '@/components/pages/Search/Search.css';
 import { WatchIcon } from './WatchIcon';
-import { DeleteIcon } from './DeleteIcon';
+// import { DeleteIcon } from './DeleteIcon';
 import { useGlobalArrayPosts } from '@/store/useGlobalArrayPosts';
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 import { useUserCreator } from '@/store/useUserCreator';
@@ -28,7 +28,8 @@ export function Search() {
     <article className='search'>
       <aside className='search-top'>
         <input type='text' placeholder='Search some user...' />
-        <button>Search</button>
+        {/* <button>Search</button> */}
+        <img src="/assets/search-gif.gif" alt="Search Gif Logo" className='search-gif' />
       </aside>
       <section className='search-bottom'>
         {arrayUserNameAndId.map(({ userId, username }) => (
@@ -40,8 +41,9 @@ export function Search() {
             <div className='user-search-left'>
               <WatchIcon className='watch' />
               <h5 className='user-name'>{username}</h5>
+              <aside className="line"></aside>
             </div>
-            <DeleteIcon className='delete-icon' />
+            {/* <DeleteIcon className='delete-icon' /> */}
           </article>
         ))}
       </section>

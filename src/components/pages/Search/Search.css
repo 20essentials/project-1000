@@ -11,27 +11,39 @@
     gap: 8px;
 
     input {
-      width: 80%;
+      width: 84%;
       border: none;
       outline: none;
       background-color: #555;
       padding: 5px;
+      border-radius: 4px;
+      padding-block: 3px;
+      color: #eee;
     }
 
     input::placeholder {
       color: #ccc;
     }
 
-    input,
-    button {
-      border-radius: 4px;
-    }
-
-    button {
+ 
+    /* button {
       text-align: center;
       background-color: gray;
       width: 20%;
       padding: 5px;
+      font-size: 12px;
+      transition: opacity 0.2s ease-in-out;
+
+      &:active {
+        opacity: 0.3;
+      }
+    } */
+
+    .search-gif {
+      width: 10%;
+      object-fit: contain;
+      object-position: center;
+      transform: scale(1.4);
     }
   }
 
@@ -65,11 +77,22 @@
         display: flex;
         align-items: center;
         gap: 3px;
-        background-color: red;
         width: 100%;
+        /* background-color: red; */
 
         h5 {
           color: #eee;
+          position: relative;
+        }
+
+        .line {
+          position: relative;
+          flex-grow: 1;
+          height: 50%;
+          border-bottom: 2px dotted #fff;
+          opacity: 0.4;
+          background-color: transparent;
+          top: 0;
         }
       }
     }
