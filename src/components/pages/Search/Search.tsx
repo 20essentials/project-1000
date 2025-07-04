@@ -55,6 +55,7 @@ export function Search() {
       document.removeEventListener('keydown', handlekeydown);
     };
   }, []);
+
   return (
     <article className='search'>
       <aside className='search-top'>
@@ -67,6 +68,7 @@ export function Search() {
           src='/assets/search-gif.gif'
           alt='Search Gif Logo'
           className='search-gif'
+          draggable='false'
         />
       </aside>
       <section className='search-bottom' ref={searchBottomRef}>
