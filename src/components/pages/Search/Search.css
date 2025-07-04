@@ -16,28 +16,15 @@
       outline: none;
       background-color: #555;
       padding: 5px;
-      border-radius: 4px;
+      border-radius: 8px;
       padding-block: 3px;
+      padding-left: 10px;
       color: #eee;
     }
 
     input::placeholder {
       color: #ccc;
     }
-
- 
-    /* button {
-      text-align: center;
-      background-color: gray;
-      width: 20%;
-      padding: 5px;
-      font-size: 12px;
-      transition: opacity 0.2s ease-in-out;
-
-      &:active {
-        opacity: 0.3;
-      }
-    } */
 
     .search-gif {
       width: 10%;

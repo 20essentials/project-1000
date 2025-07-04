@@ -4,15 +4,22 @@ import { WatchIcon } from './WatchIcon';
 import { useGlobalArrayPosts } from '@/store/useGlobalArrayPosts';
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 import { useUserCreator } from '@/store/useUserCreator';
+import { useEffect, useRef, useState } from 'react';
 
 export function Search() {
+  const [searchText, setSearchText] = useState('');
   const FOLLOWED = useGlobalArrayPosts(state => state.FOLLOWED);
   const FOR_YOU = useGlobalArrayPosts(state => state.FOR_YOU);
   const ALL_POSTS = [...FOR_YOU, ...FOLLOWED];
+  const searchBottomRef = useRef<HTMLElement | null>(null);
   const arrayUserNameAndId = ALL_POSTS.map(user => ({
     userId: user[0].userId,
     username: user[0].username
   })).toSorted(() => Math.random() - 0.5);
+  const filteredArray =
+    searchText !== ''
+      ? arrayUserNameAndId.filter(({ username }) => username.includes(searchText))
+      : arrayUserNameAndId;
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
   const setArrayOfPosts = useUserCreator(state => state.setArrayOfPosts);
   const setCommonProps = useUserCreator(state => state.setCommonProps);
@@ -24,15 +31,46 @@ export function Search() {
     setCommonProps(commonPropsUser);
     setArrayOfPosts(arrayPosts);
   }
+
+  function handleChange(e: React.ChangeEvent) {
+    const inputElement = e.target as HTMLInputElement;
+    const { value } = inputElement;
+    setSearchText(value);
+  }
+
+  useEffect(() => {
+    function handlekeydown(event: KeyboardEvent) {
+      if (event.key === 'Enter') {
+        const firstElement = searchBottomRef.current
+          ?.firstElementChild as HTMLElement | null;
+        if (firstElement) {
+          firstElement.click();
+        }
+      }
+    }
+
+    document.addEventListener('keydown', handlekeydown);
+
+    return () => {
+      document.removeEventListener('keydown', handlekeydown);
+    };
+  }, []);
   return (
     <article className='search'>
       <aside className='search-top'>
-        <input type='text' placeholder='Search some user...' />
-        {/* <button>Search</button> */}
-        <img src="/assets/search-gif.gif" alt="Search Gif Logo" className='search-gif' />
+        <input
+          onChange={handleChange}
+          type='text'
+          placeholder='Search some user...'
+        />
+        <img
+          src='/assets/search-gif.gif'
+          alt='Search Gif Logo'
+          className='search-gif'
+        />
       </aside>
-      <section className='search-bottom'>
-        {arrayUserNameAndId.map(({ userId, username }) => (
+      <section className='search-bottom' ref={searchBottomRef}>
+        {filteredArray.map(({ userId, username }) => (
           <article
             className='user-search'
             key={userId}
@@ -41,7 +79,7 @@ export function Search() {
             <div className='user-search-left'>
               <WatchIcon className='watch' />
               <h5 className='user-name'>{username}</h5>
-              <aside className="line"></aside>
+              <aside className='line'></aside>
             </div>
             {/* <DeleteIcon className='delete-icon' /> */}
           </article>
