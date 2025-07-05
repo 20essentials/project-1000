@@ -146,7 +146,7 @@ body {
 body {
   --sb-track-color: #000;
   --sb-thumb-color: var(--gradient-btn);
-  --sb-size: 0.7vmax;
+  --sb-size: 20px;
 }
 
 /***************************SCROLL***************************/
