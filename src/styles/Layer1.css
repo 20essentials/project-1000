@@ -1,3 +1,28 @@
+@keyframes animate {
+  from {
+    background-position: 0 3px;
+  }
+  to {
+    background-position: 0 -447px;
+  }
+}
+@keyframes animate2 {
+  from {
+    background-position: -260px 3px;
+  }
+  to {
+    background-position: -260px -447px;
+  }
+}
+@keyframes animate3 {
+  from {
+    background-position: -480px 3px;
+  }
+  to {
+    background-position: -480px -447px;
+  }
+}
+
 .layer1 {
   display: flex;
   flex-direction: column;
@@ -21,6 +46,34 @@
       padding-right: 19px;
       align-items: center;
 
+      .container-sprites {
+        padding-right: 0px;
+        display: flex;
+
+        .iphone-sprite {
+          position: relative;
+          width: calc(700px / 3);
+          height: calc(447px / 3);
+          background-image: url('/assets/iphone-sprite.png');
+          zoom: 0.11;
+          background-repeat: no-repeat;
+
+          --top: 2px;
+
+          &.sprite-1 {
+            animation: animate 30s steps(3) infinite alternate both;
+          }
+
+          &.sprite-2 {
+            animation: animate2 30s steps(3) infinite alternate both;
+          }
+
+          &.sprite-3 {
+            animation: animate3 30s steps(3) infinite alternate both;
+          }
+        }
+      }
+
       button {
         color: rgb(35, 34, 34);
         font-weight: 500;
@@ -32,6 +85,11 @@
         &.mode-btn-active {
           background-color: #0004;
           color: #e9e9e9;
+        }
+
+        &.hour-and-wifi {
+          font-size: 13px;
+          font-weight: 700;
         }
       }
     }
