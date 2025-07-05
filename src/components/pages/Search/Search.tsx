@@ -63,6 +63,7 @@ export function Search() {
           onChange={handleChange}
           type='text'
           placeholder='Search some user...'
+          autoFocus={true}
         />
         <img
           src='/assets/search-gif.gif'

@@ -1,18 +1,19 @@
 import type {
   postProps,
   postComonProps
-} from "@/components/pages/SliderPosts/types.d.ts";
-import { Heart } from "@/components/pages/SliderPosts/AsideRight/Heart.tsx";
-import { Save } from "@/components/pages/SliderPosts/AsideRight/Save.tsx";
-import { Share } from "@/components/pages/SliderPosts/AsideRight/Share.tsx";
-import { Comments } from "@/components/pages/SliderPosts/AsideRight/Comments.tsx";
-import { baseUrl } from "@/utils/functions";
-import { useLimitOfPost } from "@/store/useLimitOfPosts";
-import { useEffect, useRef, useState } from "react";
-import { ARRAY_OF_SONGS } from "@/utils/arrayOfSongs";
-import { userHasInteracted } from "@/store/userHasInteracted";
-import { PlayButton } from "@/components/pages/SliderPosts/PostVideo/PlayButton";
+} from '@/components/pages/SliderPosts/types.d.ts';
+import { Heart } from '@/components/pages/SliderPosts/AsideRight/Heart.tsx';
+import { Save } from '@/components/pages/SliderPosts/AsideRight/Save.tsx';
+import { Share } from '@/components/pages/SliderPosts/AsideRight/Share.tsx';
+import { Comments } from '@/components/pages/SliderPosts/AsideRight/Comments.tsx';
+import { baseUrl } from '@/utils/functions';
+import { useLimitOfPost } from '@/store/useLimitOfPosts';
+import { useEffect, useRef, useState } from 'react';
+import { ARRAY_OF_SONGS } from '@/utils/arrayOfSongs';
+import { userHasInteracted } from '@/store/userHasInteracted';
+import { PlayButton } from '@/components/pages/SliderPosts/PostVideo/PlayButton';
 import { UserProfile } from '@/components/pages/SliderPosts/AsideRight/UserProfile';
+import { AsideText } from '@/components/pages/SliderPosts/AsideText';
 
 export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const {
@@ -33,8 +34,8 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
 
   const arrayImagesLength = arrayImages?.length ?? 0;
   const thisPostWillRenderMorePost = idx % 3 === 0;
-  const setLimit = useLimitOfPost((state) => state.setLimit);
-  const offsetOfPosts = useLimitOfPost((state) => state.offsetOfPosts);
+  const setLimit = useLimitOfPost(state => state.setLimit);
+  const offsetOfPosts = useLimitOfPost(state => state.offsetOfPosts);
 
   const postImageRef = useRef<HTMLElement | null>(null);
   const thisPostHasBeenRendered = useRef(false);
@@ -50,9 +51,9 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const hasInteracted = userHasInteracted((state) => state.hasInteracted);
+  const hasInteracted = userHasInteracted(state => state.hasInteracted);
   const setUserHasInteracted = userHasInteracted(
-    (state) => state.setUserHasInteracted
+    state => state.setUserHasInteracted
   );
 
   const [isPaused, setIsPaused] = useState(true);
@@ -105,15 +106,15 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
       if (entry.isIntersecting) {
         if (thisPostWillRenderMorePost && !thisPostHasBeenRendered.current) {
           thisPostHasBeenRendered.current = true;
-          setLimit((prev) => prev + offsetOfPosts);
+          setLimit(prev => prev + offsetOfPosts);
         }
 
         if (!hasInteractedRef.current) return;
-        entry.target.classList.add("visible");
+        entry.target.classList.add('visible');
         if (isPausedRef.current) playAudio();
       } else {
         if (!hasInteractedRef.current) return;
-        entry.target.classList.remove("visible");
+        entry.target.classList.remove('visible');
         if (!isPausedRef.current) pauseAudio();
       }
     });
@@ -126,84 +127,85 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
   }, []);
 
   return (
-    <article className="post-image" ref={postImageRef}>
+    <article className='post-image' ref={postImageRef}>
       {randomSong && (
-        <audio ref={audioRef} src={randomSong} loop preload="auto" />
+        <audio ref={audioRef} src={randomSong} loop preload='auto' />
       )}
 
       {arrayImages?.map((src, i) => (
         <section
           key={i}
-          className="container-img-post"
-          style={{ position: "relative" }}
-         
+          className='container-img-post'
+          style={{ position: 'relative' }}
         >
-          <img src={src} alt="image" draggable="false"  onClick={handleAudioToggle} />
+          <img
+            src={src}
+            alt='image'
+            draggable='false'
+            onClick={handleAudioToggle}
+          />
 
           {isPaused && (
             <PlayButton
-              className="play-btn"
-              handlePlayVideo={(e) => {
-                e.stopPropagation(); 
+              className='play-btn'
+              handlePlayVideo={e => {
+                e.stopPropagation();
                 handleAudioToggle();
               }}
             />
           )}
 
           {arrayImagesLength > 1 && (
-            <output className="num-of-post">
+            <output className='num-of-post'>
               {i + 1} / {arrayImagesLength}
             </output>
           )}
 
-          {thisPostWillRenderMorePost && <div className="post-image-overlay"></div>}
+          {thisPostWillRenderMorePost && (
+            <div className='post-image-overlay'></div>
+          )}
 
-          <article className="aside-right-buttons">
-            <section className="button-container btn-container-user-profile">
+          <article className='aside-right-buttons'>
+            <section className='button-container btn-container-user-profile'>
               <UserProfile profileImageSrc={profileImageSrc} userId={userId} />
             </section>
-            <section className="button-container">
+            <section className='button-container'>
               <Heart />
-              <span className="count">{hearts}</span>
+              <span className='count'>{hearts}</span>
             </section>
-            <section className="button-container">
+            <section className='button-container'>
               <Comments />
-              <span className="count">{comments}</span>
+              <span className='count'>{comments}</span>
             </section>
-            <section className="button-container">
+            <section className='button-container'>
               <Save />
-              <span className="count">{saved}</span>
+              <span className='count'>{saved}</span>
             </section>
-            <section className="button-container">
+            <section className='button-container'>
               <Share />
-              <span className="count">{shared}</span>
+              <span className='count'>{shared}</span>
             </section>
-            <section className="button-container btn-container-vinyl">
+            <section className='button-container btn-container-vinyl'>
               <img
-                className="vinyl"
-                src={baseUrl("/assets/vinyl.png")}
-                alt="Vinyl"
+                className='vinyl'
+                src={baseUrl('/assets/vinyl.png')}
+                alt='Vinyl'
               />
               <img
-                className="user-profile-vinyl"
-                draggable="false"
+                className='user-profile-vinyl'
+                draggable='false'
                 src={profileImageSrc}
-                alt="User Profile"
+                alt='User Profile'
               />
             </section>
           </article>
 
-          <section className="aside-text-and-description">
-            <p>@{username}</p>
-            {description && <p>{description}</p>}
-            {tags && (
-              <p>
-                {tags.map((word, i) => (
-                  <span key={`letter-${i}`}>#{word}&nbsp;</span>
-                ))}
-              </p>
-            )}
-          </section>
+          <AsideText
+            username={username}
+            description={description}
+            tags={tags}
+            ref={postImageRef}
+          />
         </section>
       ))}
     </article>

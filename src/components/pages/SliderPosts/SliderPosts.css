@@ -54,16 +54,25 @@
         object-fit: cover;
       }
 
-      &::after {
-        content: '';
-        position: absolute;
-        background-color: black;
-        mask-image: linear-gradient(to bottom, transparent 20%, white 96%);
-        z-index: 10;
-        width: 100%;
-        height: 100%;
-        inset: 0;
-        pointer-events: none;
+      &.showBackgroundBlackInText {
+        &::after {
+          content: '';
+          position: absolute;
+          background-color: black;
+          mask-image: linear-gradient(to bottom, transparent 20%, white 96%);
+          z-index: 10;
+          width: 100%;
+          height: 100%;
+          inset: 0;
+          pointer-events: none;
+        }
+      }
+    }
+
+    .paragraph-text {
+      
+      span {
+        display: inline-flex;
       }
     }
 
@@ -76,6 +85,7 @@
       display: flex;
       overflow-x: auto;
       margin-bottom: 4px;
+      align-items: center;
 
       &::-webkit-scrollbar {
         width: 1px;
@@ -112,6 +122,8 @@
         overflow-x: auto;
         scroll-snap-align: center;
         overflow: hidden;
+        display: flex;
+        align-items: center;
 
         img {
           width: 100%;
@@ -119,11 +131,20 @@
           position: absolute;
           object-fit: contain;
           object-position: center;
-          /* animation: imageAnimation 10s linear infinite; */
+        }
+      }
 
-          /* &.pausado {
-            animation-play-state: paused;
-          } */
+      &.showBackgroundBlackInText {
+        &::after {
+          content: '';
+          position: absolute;
+          background-color: black;
+          mask-image: linear-gradient(to bottom, transparent 20%, white 96%);
+          z-index: 10;
+          width: 100%;
+          height: 100%;
+          inset: 0;
+          pointer-events: none;
         }
       }
     }
@@ -220,8 +241,9 @@
     }
 
     .aside-text-and-description {
-      width: calc(100% - 48px);
+      width: 100%;
       min-height: 200px;
+      height: fit-content;
       position: absolute;
       bottom: 1px;
       left: 1px;
@@ -229,14 +251,15 @@
       flex-direction: column;
       justify-content: end;
       padding: 10px;
+      padding-right: 48px;
       gap: 8px;
       color: #e9e9e9;
       z-index: 30;
-      pointer-events: none;
+      user-select: none;
 
       p {
         font-size: 10px;
-        overflow-wrap: anywhere;
+        text-wrap: balance;
       }
     }
 
@@ -249,7 +272,6 @@
       background-color: transparent;
       z-index: 80;
       pointer-events: none;
-      /* background-color: red; */
     }
   }
 }

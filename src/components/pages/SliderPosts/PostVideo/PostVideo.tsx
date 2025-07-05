@@ -12,6 +12,7 @@ import { PlayButton } from '@/components/pages/SliderPosts/PostVideo/PlayButton'
 import { userHasInteracted } from '@/store/userHasInteracted';
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
 import { UserProfile } from '@/components/pages/SliderPosts/AsideRight/UserProfile';
+import { AsideText } from '@/components/pages/SliderPosts/AsideText';
 
 export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   const hasInteracted = userHasInteracted(state => state.hasInteracted);
@@ -123,7 +124,7 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
 
       <article className='aside-right-buttons'>
         <section className='button-container btn-container-user-profile'>
-          <UserProfile profileImageSrc={profileImageSrc}  userId={userId}/>
+          <UserProfile profileImageSrc={profileImageSrc} userId={userId} />
         </section>
         <section className='button-container'>
           <Heart />
@@ -152,17 +153,12 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
         </section>
       </article>
 
-      <section className='aside-text-and-description'>
-        <p>@{username}</p>
-        {description && <p>{description}</p>}
-        {tags && (
-          <p>
-            {tags.map((word, i) => (
-              <span key={`letter-${i}`}>#{word}&nbsp;</span>
-            ))}
-          </p>
-        )}
-      </section>
+      <AsideText
+        username={username}
+        description={description}
+        tags={tags}
+        ref={postVideoRef}
+      />
 
       {isPaused && (
         <PlayButton className='play-btn' handlePlayVideo={handlePlayVideo} />
