@@ -6,12 +6,6 @@ import { useEffect, useRef } from 'react';
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
 import { useMemo } from 'react';
 import { useGlobalArrayPosts } from '@/store/useGlobalArrayPosts';
-// import type { arrayOfPosts } from '@/components/pages/SliderPosts/types.d.ts';
-// import { PUBLIC_DATA } from '@/publicData/amPublicData';
-// import { PRIVATE_DATA } from '@/privateData/amPrivateData';
-
-// const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
-// const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 
 export function SliderPosts() {
   const isForYou = useFollowedOrForYou(state => state.isForYou);
@@ -25,7 +19,6 @@ export function SliderPosts() {
       userPosts.map(post => ({ ...post, ...userCommonProps }))
     ).toSorted(() => Math.random() - 0.5);
 
-    // Eliminar duplicados por id
     const uniquePosts = Array.from(
       new Map(allPostsShuffled.map(post => [post.idPost, post])).values()
     );

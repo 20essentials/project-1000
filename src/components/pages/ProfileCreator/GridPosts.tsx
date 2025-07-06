@@ -8,6 +8,8 @@ import { useFollowedOrForYou } from '@/store/useFollowedOrForYou';
 import { useGlobalArrayPosts } from '@/store/useGlobalArrayPosts';
 import { useUserCreator } from '@/store/useUserCreator';
 import { useEffect, useState, useRef, useCallback } from 'react';
+import { PostVideo } from '@/components/pages/SliderPosts/PostVideo/PostVideo';
+import { PostImage } from '@/components/pages/SliderPosts/PostImage/PostImage';
 
 export function GridPosts({
   arrayOfPosts,
@@ -67,7 +69,17 @@ export function GridPosts({
             }
           }}
         >
-          <PostVideoOrImage post={post} arrayPosts={arrayOfPosts } commonProps={commonProps} />
+          {/* {post.videoSrc ? (
+            <PostVideo idx={index} key={index} {...post} {...commonProps} />
+          ) : (
+            <PostImage idx={index} key={index} {...post} {...commonProps} />
+          )} */}
+          
+          <PostVideoOrImage
+            post={post}
+            arrayPosts={arrayOfPosts}
+            commonProps={commonProps}
+          />
         </div>
       ))}
     </aside>
@@ -87,12 +99,7 @@ function PostVideoOrImage({
   const [poster, setPoster] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const setForYou = useGlobalArrayPosts(state => state.setForYou);
-  const setFollowed = useGlobalArrayPosts(state => state.setFollowed);
-  const FOLLOWED = useGlobalArrayPosts(state => state.FOLLOWED);
-  const FOR_YOU = useGlobalArrayPosts(state => state.FOR_YOU);
-  const isForYou = useFollowedOrForYou(state => state.isForYou);
-  const setCurrentPage = useCurrentPage(state => state.setCurrentPage)
+  const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
   const setIndexOfPost = useUserCreator(state => state.setIndexOfPost);
 
   useEffect(() => {
@@ -159,7 +166,7 @@ function PostVideoOrImage({
     ) as HTMLElement;
     const firstParent = currentContentPost.parentElement as HTMLElement;
     const indexStart = [...parent.children].indexOf(firstParent);
-    setCurrentPage(IS_ACTIVE_BUTTON.CREATOR_POSTS)
+    setCurrentPage(IS_ACTIVE_BUTTON.CREATOR_POSTS);
     setIndexOfPost(indexStart);
   }
 

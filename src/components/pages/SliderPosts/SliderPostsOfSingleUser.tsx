@@ -1,7 +1,6 @@
 import '@/components/pages/SliderPosts/SliderPosts.css';
 import { PostImage } from '@/components/pages/SliderPosts/PostImage/PostImage';
 import { PostVideo } from '@/components/pages/SliderPosts/PostVideo/PostVideo';
-import { useFollowedOrForYou } from '@/store/useFollowedOrForYou';
 import { useRef, useEffect } from 'react';
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
 import type { arrayOfPosts } from './types';
@@ -30,7 +29,7 @@ export function SliderPostsOfSingleUser() {
     <article className='slider-posts'>
       <aside className='slider' ref={sliderRef}>
         {postsToShow.map((post, idx) => {
-          const key = `post-${idx}`;
+          const key = `post-${idx}-${idx}`;
 
           return post.videoSrc ? (
             <PostVideo idx={idx + 1} key={key} {...post} />

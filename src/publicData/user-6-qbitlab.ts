@@ -4,19 +4,13 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-/*
-  falta:
-
-  profileImageSrc
-  PREFIX
-
-*/
 // Thanks to: https://www.tiktok.com/@qbitlab
 
 export const qbitlab_commonProps = generateExactlyCommonProps({
-  userId: '9dbb26a1-f205-4218-8987-dab325cf79b6',
+  userId: '0b9709cb-4a26-4393-9293-68da9e5ef909',
   username: 'qbitlab',
-  profileImageSrc: '',
+  profileImageSrc:
+    'https://dominicnikolai.github.io/project-189/assets/qb1tlab/foto-de-perfil.avif',
   following: false,
   followers: 41_800,
   totalLikes: 350_720,
@@ -24,7 +18,7 @@ export const qbitlab_commonProps = generateExactlyCommonProps({
   profileDescription: 'Simulaciones físicas usando métodos computacionales.'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-189/assets/qb1tlab/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
@@ -130,7 +124,7 @@ const ARRAY_CONTENT: ArrayContent = [
     type: 'video',
     videoSrc: 'v20.mp4',
     description: 'Attractor de Aizawa'
-  },
+  }
 ];
 
 export const qbitlab_array_of_posts = generateArrayPosts({

@@ -48,6 +48,9 @@
       scroll-snap-stop: always;
       overflow: visible;
       align-content: center;
+      /* It's important for the Intersection observer */
+      margin-bottom: 3px;
+      /* It's important for the Intersection observer */
 
       video {
         position: relative;
@@ -72,7 +75,6 @@
     }
 
     .paragraph-text {
-      
       span {
         display: inline-flex;
       }
@@ -86,7 +88,9 @@
       scroll-snap-type: x mandatory;
       display: flex;
       overflow-x: auto;
-      margin-bottom: 4px;
+      /* It's important for the Intersection observer */
+      margin-bottom: 3px;
+      /* It's important for the Intersection observer */
 
       &::-webkit-scrollbar {
         width: 1px;
@@ -244,7 +248,7 @@
 
     .aside-text-and-description {
       width: 100%;
-      min-height: 200px;
+      height: fit-content;
       height: fit-content;
       position: absolute;
       bottom: 1px;
