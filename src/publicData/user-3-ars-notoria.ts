@@ -4,20 +4,12 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-/*
-  falta:
 
-  https://www.tiktok.com/@ars..notoria
-
-  profileImageSrc
-  PREFIX
-
-*/
 
 export const ars_notoria_commonProps = generateExactlyCommonProps({
   userId: 'c2828638-e41c-48c8-ad20-4c20b6c4853a',
   username: 'ars_notoria',
-  profileImageSrc: '',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-190/assets/4rs-notoria/foto-perfil.avif',
   following: false,
   followers: 69_800,
   totalLikes: 530_320,
@@ -25,7 +17,7 @@ export const ars_notoria_commonProps = generateExactlyCommonProps({
   profileDescription: '🔥Aprende matemáticas mientras vez TikToks🔥'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-190/assets/4rs-notoria/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
