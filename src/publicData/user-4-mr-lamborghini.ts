@@ -4,18 +4,11 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-/*
-  falta:
-
-  profileImageSrc
-  PREFIX
-
-*/
-
 export const mr_lamborghini_commonProps = generateExactlyCommonProps({
   userId: '459047e6-abb8-481e-bc67-3d7cd1ac9980',
   username: 'mr_lamborghini',
-  profileImageSrc: '',
+  profileImageSrc:
+    'https://dominicnikolai.github.io/project-144/assets/mr-l4mborghini/foto-perfil.avif',
   following: false,
   followers: 73_000,
   totalLikes: 500_380,
@@ -23,7 +16,8 @@ export const mr_lamborghini_commonProps = generateExactlyCommonProps({
   profileDescription: '🔥'
 });
 
-const PREFIX = '';
+const PREFIX =
+  'https://dominicnikolai.github.io/project-144/assets/mr-l4mborghini/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
@@ -34,7 +28,7 @@ const ARRAY_CONTENT: ArrayContent = [
   {
     type: 'video',
     videoSrc: 'v2.mp4',
-    description: `Bentley Flying Spur W12 Peacock`
+    description: `Lamborghini Aventador RDS LP700-4`
   },
   {
     type: 'video',
@@ -70,11 +64,6 @@ const ARRAY_CONTENT: ArrayContent = [
     type: 'video',
     videoSrc: 'v9.mp4',
     description: `Bentley Continental GTC W12 Camel`
-  },
-  {
-    type: 'video',
-    videoSrc: 'v10.mp4',
-    description: `Lamborghini Aventador RDS LP700-4`
   }
 ];
 

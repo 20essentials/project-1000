@@ -4,18 +4,11 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-/*
-  falta:
-
-  profileImageSrc
-  PREFIX
-
-*/
-
 export const beats_commonProps = generateExactlyCommonProps({
-  userId: '1542a694-886e-4ad7-a750-739da225abc8',
+  userId: '3f5a6e40-04e1-4387-a0d9-7dc3fd33d7c1',
   username: 'beats',
-  profileImageSrc: '',
+  profileImageSrc:
+    'https://dominicnikolai.github.io/project-192/assets/beats/perfil-foto.avif',
   following: false,
   followers: 436_000,
   totalLikes: 31_000_720,
@@ -23,7 +16,7 @@ export const beats_commonProps = generateExactlyCommonProps({
   profileDescription: 'Only nothing'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-192/assets/beats/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
@@ -45,7 +38,7 @@ const ARRAY_CONTENT: ArrayContent = [
     type: 'video',
     videoSrc: 'v4.mp4',
     description: `Nope`
-  },
+  }
 ];
 
 export const beats_array_of_posts = generateArrayPosts({

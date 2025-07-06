@@ -167,6 +167,10 @@
       gap: var(--gap);
       z-index: 20;
 
+      * {
+        user-select: none;
+      }
+
       .button-container {
         width: 48px;
         height: 48px;
