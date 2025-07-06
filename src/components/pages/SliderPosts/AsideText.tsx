@@ -18,14 +18,19 @@ export function AsideText({
     ref.current?.classList.toggle('showBackgroundBlackInText', showDescription);
   }
 
+  function handleDescription() {
+    if (!description) return;
+    setShowDescription(!showDescription)
+  }
+
   return (
     <section className={className}>
-      <p onClick={() => setShowDescription(!showDescription)}>@{username}</p>
+      <p onClick={handleDescription}>@{username}</p>
       {showDescription && description && (
-        <p onClick={() => setShowDescription(!showDescription)}>{description}</p>
+        <p onClick={handleDescription}>{description}</p>
       )}
       {showDescription && tags && (
-        <p className='paragraph-text' onClick={() => setShowDescription(!showDescription)}>
+        <p className='paragraph-text' onClick={handleDescription}>
           {tags.map((word, i) => (
             <span key={`letter-${i}`}>#{word}&nbsp;</span>
           ))}
