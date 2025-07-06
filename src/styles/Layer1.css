@@ -6,6 +6,7 @@
     background-position: 0 -447px;
   }
 }
+
 @keyframes animate2 {
   from {
     background-position: -260px 3px;
@@ -16,10 +17,10 @@
 }
 @keyframes animate3 {
   from {
-    background-position: -480px 3px;
+    background-position: -495px 3px;
   }
   to {
-    background-position: -480px -447px;
+    background-position: -495px -447px;
   }
 }
 
