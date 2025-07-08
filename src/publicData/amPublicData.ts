@@ -11,6 +11,7 @@ import { qbitlab_array_of_posts, qbitlab_commonProps } from './user-6-qbitlab';
 import { ars_notoria_array_of_posts, ars_notoria_commonProps } from './user-3-ars-notoria';
 import { beats_array_of_posts, beats_commonProps } from './user-5-beats';
 import { mr_lamborghini_array_of_posts, mr_lamborghini_commonProps } from './user-4-mr-lamborghini';
+import { vid_favorites_array_of_posts, vid_favorites_commonProps } from './user-7-vidfavorites';
 
 export const PUBLIC_DATA: arrayOfPosts = [
   [midudev_commonProps, midudev_array_of_posts],
@@ -18,5 +19,6 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [qbitlab_commonProps, qbitlab_array_of_posts],
   [ars_notoria_commonProps, ars_notoria_array_of_posts],
   [beats_commonProps, beats_array_of_posts],
-  [mr_lamborghini_commonProps, mr_lamborghini_array_of_posts]
+  [mr_lamborghini_commonProps, mr_lamborghini_array_of_posts],
+  [vid_favorites_commonProps, vid_favorites_array_of_posts]
 ];

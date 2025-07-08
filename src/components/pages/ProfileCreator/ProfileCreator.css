@@ -108,6 +108,7 @@
       position: relative;
       display: flex;
       align-content: center;
+      aspect-ratio: 9 / 16;
     }
 
     .square_user_creator {
