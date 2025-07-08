@@ -26,10 +26,14 @@ export function NavbarBottom() {
     }
   }
 
+  function goToUserProfile() {
+    handleCurrentPage(IS_ACTIVE_BUTTON.PROFILE);
+  }
+
   const homeClass = `logo-home ${
     currenPage === IS_ACTIVE_BUTTON.HOME ? 'btn-active' : ''
   }`;
-  
+
   const searchClass = `logo-search ${
     currenPage === IS_ACTIVE_BUTTON.SEARCH ||
     currenPage === IS_ACTIVE_BUTTON.PROFILE_CREATOR ||
@@ -76,13 +80,14 @@ export function NavbarBottom() {
         />
         <span>Inbox</span>
       </aside>
-      <aside className='wrapper-logo'>
+      <ProfileButton className={profileClass} onClick={goToUserProfile} />
+      {/* <aside className='wrapper-logo wrapper-profile-user'>
         <ProfileButton
           className={profileClass}
-          onClick={() => handleCurrentPage(IS_ACTIVE_BUTTON.PROFILE)}
+          onClick={goToUserProfile}
         />
         <span>Profile</span>
-      </aside>
+      </aside> */}
     </article>
   );
 }

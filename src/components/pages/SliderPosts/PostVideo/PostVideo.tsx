@@ -134,7 +134,7 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
           <Comments />
           <span className='count'>{comments}</span>
         </section>
-        <section className='button-container'>
+        <section className='button-container btn-container-saved'>
           <Save />
           <span className='count'>{saved}</span>
         </section>

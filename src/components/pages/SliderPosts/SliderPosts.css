@@ -196,15 +196,19 @@
 
         &.btn-container-user-profile {
           background-color: transparent;
+          aspect-ratio: 1;
+          padding: 0;
 
           .user-profile {
             position: absolute;
             width: 68%;
             height: 68%;
             border-radius: 50%;
+            aspect-ratio: 1;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            object-fit: cover;
           }
 
           .badge {
@@ -245,6 +249,15 @@
             opacity: 0.8;
             animation: rotar 3s linear infinite;
             animation-delay: 0.8s;
+          }
+        }
+
+        &.btn-container-saved {
+          &.this-post-is-saved {
+            svg {
+              /* yellow */
+              color: #e6e60d;
+            }
           }
         }
       }

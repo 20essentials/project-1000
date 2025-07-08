@@ -29,7 +29,8 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
     username,
     profileImageSrc,
     idx,
-    userId
+    userId,
+    idPost
   } = props;
 
   const arrayImagesLength = arrayImages?.length ?? 0;
@@ -177,7 +178,7 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
               <Comments />
               <span className='count'>{comments}</span>
             </section>
-            <section className='button-container'>
+            <section className='button-container btn-container-saved'>
               <Save />
               <span className='count'>{saved}</span>
             </section>

@@ -7,6 +7,10 @@ const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
 const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 
+import { getUser } from '@/db/User.ts';
+import { useCurrentUser } from '@/store/useCurrentUser';
+import { $ } from '@/utils/functions';
+
 export function UserProfile({
   profileImageSrc,
   userId
@@ -17,8 +21,16 @@ export function UserProfile({
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
   const setArrayOfPosts = useUserCreator(state => state.setArrayOfPosts);
   const setCommonProps = useUserCreator(state => state.setCommonProps);
+  const user = useCurrentUser(state => state.user);
+  if (user == null) return null;
+  const theUserId = user.id;
 
   function nextToProfileCreator() {
+    if (userId === theUserId) {
+      const $profileUserbutton = $('.wrapper-profile-user') as HTMLElement;
+      $profileUserbutton.click();
+      return;
+    }
     setCurrentPage(IS_ACTIVE_BUTTON.PROFILE_CREATOR);
     const currentUser = ALL_POSTS.find(user => user[0].userId === userId);
     const [commonPropsUser, arrayPosts] = currentUser || ALL_POSTS[0];

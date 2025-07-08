@@ -1,12 +1,18 @@
 import type {
   postComonProps,
-  postProps
+  postProps,
+  arrayOfPosts
 } from '@/components/pages/SliderPosts/types';
 import {
   generateExactlyCommonProps,
   generateArrayPosts,
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
+/***** just for testing */
+import { midudev_commonProps, midudev_array_of_posts } from '@/publicData/user-1-midudev';
+import { goated_ai_art_commonProps, goated_ai_art_array_of_posts } from '@/publicData/user-2-goated-ai-art';
+
+/***** just for testing */
 
 const PREFIX = 'https://mysupercoolprojects.github.io/repo-15/assets/al4ska/';
 
@@ -27,10 +33,15 @@ export const user_array_of_posts = generateArrayPosts({
   ARRAY_CONTENT
 });
 
-export const user_array_of_saved_posts = generateArrayPosts({
-  PREFIX,
-  ARRAY_CONTENT
-}).toReversed();
+export const user_array_of_saved_posts: arrayOfPosts = [
+  [midudev_commonProps, [midudev_array_of_posts[0]]],
+  [goated_ai_art_commonProps, [goated_ai_art_array_of_posts[0], goated_ai_art_array_of_posts[1]]],
+];
+
+// export const user_array_of_saved_posts = generateArrayPosts({
+//   PREFIX,
+//   ARRAY_CONTENT
+// }).toReversed();
 
 export function getUser({
   userId,
@@ -40,7 +51,7 @@ export function getUser({
   userId: string;
   profileImageSrc: string;
   username: string;
-}): [postComonProps, postProps[], postProps[]] {
+}): [postComonProps, postProps[], arrayOfPosts] {
   const user_commonProps = generateExactlyCommonProps({
     profileImageSrc,
     userId,
@@ -53,4 +64,5 @@ export function getUser({
   });
 
   return [user_commonProps, user_array_of_posts, user_array_of_saved_posts];
+  // return [user_commonProps, [], user_array_of_saved_posts];
 }

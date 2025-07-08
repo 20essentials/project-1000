@@ -1,18 +1,17 @@
 import '@/components/pages/Profile/Profile.css';
 import { useUserCreator } from '@/store/useUserCreator';
-import { FollowButton } from '@/components/pages/ProfileCreator/FollowButton';
 import { generateTotalNum } from '@/utils/functions';
 import { GridPosts } from '@/components/pages/ProfileCreator/GridPosts';
 import { ArrowLeft } from '@/components/pages/ProfileCreator/ArrowLeft';
 import { Logout } from './Logout';
 import { NavVideosOrSaved } from './NavVideosOrSaved';
+import { useUserSavedPosts } from '@/store/useUserSavedPosts';
+import { GridOfUserSavedPosts } from './GridOfUserSavedPosts';
 
 export function Profile() {
   const commonProps = useUserCreator(state => state.commonProps);
   const arrayOfPosts = useUserCreator(state => state.arrayOfPosts);
-    const arrayOfSavedPosts = useUserCreator(state => state.arrayOfSavedPosts);
-    const showSavedPosts = useUserCreator(state => state.showSavedPosts);
-    const currentArrayPosts = showSavedPosts ? arrayOfSavedPosts : arrayOfPosts;
+  const showSavedPosts = useUserCreator(state => state.showSavedPosts);
 
   const {
     profileImageSrc,
@@ -47,13 +46,16 @@ export function Profile() {
             <p className='desc'>Likes</p>
           </article>
         </aside>
-        {/* <FollowButton /> */}
         {/* <p className='description'>{profileDescription}</p> */}
         <ArrowLeft className='arrow-left' />
         <Logout />
         <NavVideosOrSaved />
       </aside>
-      <GridPosts arrayOfPosts={currentArrayPosts} commonProps={commonProps}/>
+      {showSavedPosts ? (
+        <GridOfUserSavedPosts />
+      ) : (
+        <GridPosts arrayOfPosts={arrayOfPosts} commonProps={commonProps} />
+      )}
     </article>
   );
 }

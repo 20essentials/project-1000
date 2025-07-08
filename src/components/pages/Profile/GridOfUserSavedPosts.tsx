@@ -4,40 +4,42 @@ import type {
 } from '@/components/pages/SliderPosts/types.d';
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 import { useUserCreator } from '@/store/useUserCreator';
+import { useUserSavedPosts } from '@/store/useUserSavedPosts';
 import { useEffect, useState, useRef } from 'react';
 
-export function GridPosts({
-  arrayOfPosts,
-  commonProps
-}: {
-  arrayOfPosts: postProps[];
-  commonProps: postComonProps;
-}) {
-  const [visibleCount, setVisibleCount] = useState(9); // inicialmente 9 posts visibles
+export function GridOfUserSavedPosts() {
+  const [visibleCount, setVisibleCount] = useState(9);
+  const arrayOfSavedPostOfTheUser = useUserSavedPosts(
+    state => state.arrayOfSavedPostOfTheUser
+  );
+
+  const flatPostsWithProps = arrayOfSavedPostOfTheUser.flatMap(
+    ([commonProps, posts]) =>
+      posts.map(post => ({
+        post,
+        commonProps
+      }))
+  );
+
   const containerRef = useRef<HTMLDivElement>(null);
-  const [observedIndexes, setObservedIndexes] = useState<number[]>([]);
-  // Referencias para los últimos 3 posts visibles
   const lastThreeRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  // Callback para IntersectionObserver de los últimos 3 posts visibles
   const onIntersect: IntersectionObserverCallback = entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // Cuando algún post de los últimos 3 entra en viewport, agregamos 9 más
-        setVisibleCount(prev => Math.min(prev + 9, arrayOfPosts.length));
+        setVisibleCount(prev => Math.min(prev + 9, flatPostsWithProps.length));
       }
     });
   };
 
   useEffect(() => {
-    if (visibleCount < arrayOfPosts.length) {
+    if (visibleCount < flatPostsWithProps.length) {
       const observer = new IntersectionObserver(onIntersect, {
         root: null,
         rootMargin: '0px',
         threshold: 0.1
       });
 
-      // Observamos los últimos 3 posts visibles
       lastThreeRefs.current.forEach(el => {
         if (el) observer.observe(el);
       });
@@ -49,15 +51,14 @@ export function GridPosts({
         observer.disconnect();
       };
     }
-  }, [visibleCount, arrayOfPosts.length]);
+  }, [visibleCount, flatPostsWithProps.length]);
 
   return (
     <aside className='profile-creator-bottom' ref={containerRef}>
-      {arrayOfPosts.slice(0, visibleCount).map((post, index) => (
+      {flatPostsWithProps.slice(0, visibleCount).map(({ post, commonProps }, index) => (
         <div
           key={index}
           ref={el => {
-            // Guardar referencia solo para los últimos 3 visibles
             if (index >= visibleCount - 3) {
               lastThreeRefs.current[index - (visibleCount - 3)] = el;
             }
@@ -65,7 +66,6 @@ export function GridPosts({
         >
           <PostVideoOrImage
             post={post}
-            arrayPosts={arrayOfPosts}
             commonProps={commonProps}
           />
         </div>
@@ -76,11 +76,9 @@ export function GridPosts({
 
 function PostVideoOrImage({
   post,
-  arrayPosts,
   commonProps
 }: {
   post: postProps;
-  arrayPosts: postProps[];
   commonProps: postComonProps;
 }) {
   const { videoSrc, arrayImages } = post;
@@ -97,7 +95,7 @@ function PostVideoOrImage({
       ([entry], obs) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          if (containerRef.current) obs.unobserve(containerRef.current); // Dejar de observar
+          if (containerRef.current) obs.unobserve(containerRef.current);
         }
       },
       {
@@ -155,6 +153,7 @@ function PostVideoOrImage({
     const firstParent = currentContentPost.parentElement as HTMLElement;
     const indexStart = [...parent.children].indexOf(firstParent);
     setCurrentPage(IS_ACTIVE_BUTTON.CREATOR_POSTS);
+    
     setIndexOfPost(indexStart);
   }
 
