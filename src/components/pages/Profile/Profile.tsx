@@ -5,6 +5,7 @@ import { generateTotalNum } from '@/utils/functions';
 import { GridPosts } from '@/components/pages/ProfileCreator/GridPosts';
 import { ArrowLeft } from '@/components/pages/ProfileCreator/ArrowLeft';
 import { Logout } from './Logout';
+import { NavVideosOrSaved } from './NavVideosOrSaved';
 
 export function Profile() {
   const commonProps = useUserCreator(state => state.commonProps);
@@ -47,9 +48,8 @@ export function Profile() {
         {/* <p className='description'>{profileDescription}</p> */}
         <ArrowLeft className='arrow-left' />
         <Logout />
+        <NavVideosOrSaved />
       </aside>
-
-
       <GridPosts arrayOfPosts={arrayOfPosts} commonProps={commonProps}/>
     </article>
   );

@@ -39,5 +39,5 @@ export function getUser({
     username
   });
 
-  return [user_commonProps, []];
+  return [user_commonProps, user_array_of_posts];
 }

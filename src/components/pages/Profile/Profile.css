@@ -30,6 +30,7 @@
     color: var(--white);
     gap: 8px;
     font-size: 12.5px;
+    padding-bottom: 1px;
 
     * {
       user-select: none;
@@ -100,6 +101,7 @@
   .profile-creator-bottom {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #444;
 
     .content-post {
       background-color: black;
@@ -114,6 +116,36 @@
       width: 100%;
       object-fit: cover;
       pointer-events: none;
+    }
+  }
+
+  /*****************************BUTTON LOGOUT**************************/
+
+  .nav-videos-or-saved {
+    display: flex;
+    width: 100%;
+
+    .aside-nav {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+
+      &.aside-nav-active {
+
+        svg {
+          color: #fff;
+          border-color: #fff;
+        }
+      }
+    }
+
+    svg {
+      color: #888;
+      width: 28px;
+      height: 28px;
+      /* padding: 5px; */
+      padding-bottom: 5px;
+      border-bottom: 2px solid transparent;
     }
   }
 
