@@ -1,9 +1,12 @@
-import type { postComonProps, postProps } from '@/components/pages/SliderPosts/types';
+import type {
+  postComonProps,
+  postProps
+} from '@/components/pages/SliderPosts/types';
 import {
-  generateRandomCommonProps,
+  generateExactlyCommonProps,
   generateArrayPosts,
   type ArrayContent
-} from '@/privateData/functions/amPrivateFunctions';
+} from '@/publicData/functions/amPublicFunctions';
 
 const PREFIX = 'https://mysupercoolprojects.github.io/repo-15/assets/al4ska/';
 
@@ -24,6 +27,11 @@ export const user_array_of_posts = generateArrayPosts({
   ARRAY_CONTENT
 });
 
+export const user_array_of_saved_posts = generateArrayPosts({
+  PREFIX,
+  ARRAY_CONTENT
+}).toReversed();
+
 export function getUser({
   userId,
   profileImageSrc,
@@ -32,12 +40,17 @@ export function getUser({
   userId: string;
   profileImageSrc: string;
   username: string;
-}): [postComonProps, postProps[]] {
-  const user_commonProps = generateRandomCommonProps({
+}): [postComonProps, postProps[], postProps[]] {
+  const user_commonProps = generateExactlyCommonProps({
     profileImageSrc,
     userId,
-    username
+    username,
+    followed: 0,
+    followers: 0,
+    following: false,
+    profileDescription: `I'm Batman`,
+    totalLikes: 0
   });
 
-  return [user_commonProps, user_array_of_posts];
+  return [user_commonProps, user_array_of_posts, user_array_of_saved_posts];
 }

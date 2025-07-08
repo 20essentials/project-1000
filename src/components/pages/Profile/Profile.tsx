@@ -10,6 +10,9 @@ import { NavVideosOrSaved } from './NavVideosOrSaved';
 export function Profile() {
   const commonProps = useUserCreator(state => state.commonProps);
   const arrayOfPosts = useUserCreator(state => state.arrayOfPosts);
+    const arrayOfSavedPosts = useUserCreator(state => state.arrayOfSavedPosts);
+    const showSavedPosts = useUserCreator(state => state.showSavedPosts);
+    const currentArrayPosts = showSavedPosts ? arrayOfSavedPosts : arrayOfPosts;
 
   const {
     profileImageSrc,
@@ -50,7 +53,7 @@ export function Profile() {
         <Logout />
         <NavVideosOrSaved />
       </aside>
-      <GridPosts arrayOfPosts={arrayOfPosts} commonProps={commonProps}/>
+      <GridPosts arrayOfPosts={currentArrayPosts} commonProps={commonProps}/>
     </article>
   );
 }

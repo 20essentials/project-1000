@@ -17,16 +17,20 @@ export function ProfileButton(props: React.SVGAttributes<SVGSVGElement>) {
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
   const setArrayOfPosts = useUserCreator(state => state.setArrayOfPosts);
   const setCommonProps = useUserCreator(state => state.setCommonProps);
+  const setArrayOfSavedPosts = useUserCreator(
+    state => state.setArrayOfSavedPosts
+  );
 
   function nextToProfileCreator() {
     setCurrentPage(IS_ACTIVE_BUTTON.PROFILE);
-    const [commonPropsUser, arrayPosts] = getUser({
+    const [commonPropsUser, arrayPosts, user_array_of_saved_posts] = getUser({
       userId,
       profileImageSrc: user?.imageUrl ?? '',
       username: user?.username ?? 'Batman'
     });
     setCommonProps(commonPropsUser);
     setArrayOfPosts(arrayPosts);
+    setArrayOfSavedPosts(user_array_of_saved_posts);
   }
 
   return (

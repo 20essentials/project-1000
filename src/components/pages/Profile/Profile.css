@@ -10,8 +10,9 @@
     width: 4px;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: color-mix(in srgb, var(--white) 50%, transparent 50%);
-    opacity: 0.5;
+    background-color: color-mix(in srgb, var(--white) 50%, transparent 80%);
+    opacity: 0.3;
+    border-radius: 8px;
   }
 
   &::-webkit-scrollbar-track {

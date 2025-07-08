@@ -47,8 +47,7 @@ export function ProfileCreator() {
         <ArrowLeft className='arrow-left' />
       </aside>
 
-
-      <GridPosts arrayOfPosts={arrayOfPosts} commonProps={commonProps}/>
+      <GridPosts arrayOfPosts={arrayOfPosts} commonProps={commonProps} />
     </article>
   );
 }

@@ -8,19 +8,27 @@ import type { arrayOfPosts } from '@/components/pages/SliderPosts/types.d.ts';
 const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 
 interface UserCreatorState {
+  showSavedPosts: boolean;
   commonProps: postComonProps;
   arrayOfPosts: postProps[];
+  arrayOfSavedPosts: postProps[];
   setCommonProps: (commonProps: postComonProps) => void;
   setArrayOfPosts: (arrayOfPosts: postProps[]) => void;
+  setArrayOfSavedPosts: (arrayOfSavedPost: postProps[]) => void;
   setIndexOfPost: (indexOfPost: number) => void;
+  setShowSavedPosts: (showSavedPosts: boolean) => void;
   indexOfPost: number;
 }
 
 export const useUserCreator = create<UserCreatorState>(set => ({
+  showSavedPosts: false,
   commonProps: FOR_YOU[0][0],
   arrayOfPosts: FOR_YOU[0][1],
+  arrayOfSavedPosts: FOR_YOU[0][1],
   indexOfPost: 0,
   setCommonProps: commonProps => set({ commonProps }),
   setArrayOfPosts: arrayOfPosts => set({ arrayOfPosts }),
-  setIndexOfPost: indexOfPost => set({ indexOfPost })
+  setArrayOfSavedPosts: arrayOfSavedPosts => set({ arrayOfSavedPosts }),
+  setIndexOfPost: indexOfPost => set({ indexOfPost }),
+  setShowSavedPosts: showSavedPosts => set({ showSavedPosts })
 }));
