@@ -6,17 +6,21 @@ import { useLimitOfPost } from '@/store/useLimitOfPosts';
 import type { arrayOfPosts } from './types';
 import { useUserCreator } from '@/store/useUserCreator';
 import { useUserSavedPosts } from '@/store/useUserSavedPosts';
+import { useCurrentUser } from '@/store/useCurrentUser';
 
 export function SliderPostsOfSingleUser() {
+  const user = useCurrentUser(state => state.user);
+  const usernameOfTheUser = user?.username ?? '';
   const commonProps = useUserCreator(state => state.commonProps);
   const arrayOfPosts = useUserCreator(state => state.arrayOfPosts);
   const showSavedPosts = useUserCreator(state => state.showSavedPosts);
   const arrayOfSavedPostOfTheUser = useUserSavedPosts(
     state => state.arrayOfSavedPostOfTheUser
   );
-  const ALL_POSTS: arrayOfPosts = showSavedPosts
-    ? arrayOfSavedPostOfTheUser
-    : [[commonProps, arrayOfPosts]];
+  const ALL_POSTS: arrayOfPosts =
+    showSavedPosts && (commonProps.username === usernameOfTheUser)
+      ? arrayOfSavedPostOfTheUser
+      : [[commonProps, arrayOfPosts]];
   const sliderRef = useRef<HTMLDivElement>(null);
   const limit = useLimitOfPost(state => state.limit);
   const flattenedPosts = ALL_POSTS.flatMap(([userCommonProps, userPosts]) =>
