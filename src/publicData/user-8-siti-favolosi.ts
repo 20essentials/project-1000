@@ -4,13 +4,10 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-//Falto profileImageSrc
-//Falta Prefix
-
 export const siti_favolosi_commonProps = generateExactlyCommonProps({
-  userId: '3f5a6e40-04e1-4387-a0d9-7dc3fd33d7c1',
+  userId: '6d33c7d3-dcad-413c-bb93-a5b76361d475',
   username: 'siti_favolosi',
-  profileImageSrc: '',
+  profileImageSrc: 'https://20essentials.github.io/project-000-830/assets/fondin.avif',
   following: false,
   followers: 18_320,
   totalLikes: 639_720,
@@ -18,7 +15,7 @@ export const siti_favolosi_commonProps = generateExactlyCommonProps({
   profileDescription: 'il pc si chiama: HP pavlion'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-194/assets/siti-favolosi/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
