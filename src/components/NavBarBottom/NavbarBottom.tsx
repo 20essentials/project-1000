@@ -36,11 +36,11 @@ export function NavbarBottom() {
 
   const searchClass = `logo-search ${
     currenPage === IS_ACTIVE_BUTTON.SEARCH ||
-    currenPage === IS_ACTIVE_BUTTON.PROFILE_CREATOR ||
-    currenPage === IS_ACTIVE_BUTTON.CREATOR_POSTS
+    currenPage === IS_ACTIVE_BUTTON.PROFILE_CREATOR
       ? 'btn-active'
       : ''
   }`;
+
   const uploadClass = `logo-upload ${
     currenPage === IS_ACTIVE_BUTTON.UPLOAD ? 'btn-active' : ''
   }`;
@@ -48,7 +48,10 @@ export function NavbarBottom() {
     currenPage === IS_ACTIVE_BUTTON.INBOX ? 'btn-active' : ''
   }`;
   const profileClass = `logo-profile ${
-    currenPage === IS_ACTIVE_BUTTON.PROFILE ? 'btn-active' : ''
+    currenPage === IS_ACTIVE_BUTTON.PROFILE ||
+    currenPage === IS_ACTIVE_BUTTON.CREATOR_POSTS
+      ? 'btn-active'
+      : ''
   }`;
 
   return (

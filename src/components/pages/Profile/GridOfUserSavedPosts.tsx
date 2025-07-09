@@ -153,7 +153,6 @@ function PostVideoOrImage({
     const firstParent = currentContentPost.parentElement as HTMLElement;
     const indexStart = [...parent.children].indexOf(firstParent);
     setCurrentPage(IS_ACTIVE_BUTTON.CREATOR_POSTS);
-    
     setIndexOfPost(indexStart);
   }
 

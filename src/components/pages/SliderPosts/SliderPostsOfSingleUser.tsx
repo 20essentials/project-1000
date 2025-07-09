@@ -5,21 +5,30 @@ import { useRef, useEffect } from 'react';
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
 import type { arrayOfPosts } from './types';
 import { useUserCreator } from '@/store/useUserCreator';
+import { useUserSavedPosts } from '@/store/useUserSavedPosts';
 
 export function SliderPostsOfSingleUser() {
   const commonProps = useUserCreator(state => state.commonProps);
   const arrayOfPosts = useUserCreator(state => state.arrayOfPosts);
-  const ALL_POSTS: arrayOfPosts = [[commonProps, arrayOfPosts]];
+  const showSavedPosts = useUserCreator(state => state.showSavedPosts);
+  const arrayOfSavedPostOfTheUser = useUserSavedPosts(
+    state => state.arrayOfSavedPostOfTheUser
+  );
+  const ALL_POSTS: arrayOfPosts = showSavedPosts
+    ? arrayOfSavedPostOfTheUser
+    : [[commonProps, arrayOfPosts]];
   const sliderRef = useRef<HTMLDivElement>(null);
   const limit = useLimitOfPost(state => state.limit);
   const flattenedPosts = ALL_POSTS.flatMap(([userCommonProps, userPosts]) =>
     userPosts.map(post => ({ ...post, ...userCommonProps }))
   );
-  const indexOfPost = useUserCreator(state => state.indexOfPost)
+  const indexOfPost = useUserCreator(state => state.indexOfPost);
 
   useEffect(() => {
     if (sliderRef.current) {
-      sliderRef.current.children[indexOfPost].scrollIntoView({ behavior: 'smooth'})
+      sliderRef.current.children[indexOfPost].scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   }, [indexOfPost]);
 
