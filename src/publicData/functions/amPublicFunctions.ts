@@ -71,19 +71,22 @@ export function generatePostImage({
   arrayImages,
   tags,
   description,
-  idPost = `${crypto.randomUUID()}-${getRandomNumber(1000, 9999)}`
+  idPost = `${crypto.randomUUID()}-${getRandomNumber(1000, 9999)}`,
+  isLiked = false
 }: {
   arrayImages: string[];
   tags?: string[];
   description?: string;
   idPost: string;
+  isLiked: boolean;
 }) {
   return {
     arrayImages,
     ...generaPostData(),
     idPost,
     description,
-    tags
+    tags,
+    isLiked
   };
 }
 
@@ -91,37 +94,42 @@ export function generatePostVideo({
   videoSrc,
   tags,
   description,
-   idPost = `${crypto.randomUUID()}-${getRandomNumber(1000, 9999)}`
+  idPost = `${crypto.randomUUID()}-${getRandomNumber(1000, 9999)}`,
+  isLiked = false
 }: {
   videoSrc: string;
   tags?: string[];
   description?: string;
   idPost: string;
+  isLiked: boolean;
 }) {
   return {
     videoSrc,
     ...generaPostData(),
     idPost,
     description,
-    tags
+    tags,
+    isLiked
   };
 }
 
 type ContentImage = {
   type: 'image';
   arrayImages?: string[];
+  idPost: string;
+  isLiked: boolean;
 };
 
 type ContentVideo = {
   type: 'video';
   videoSrc?: string;
   idPost: string;
+  isLiked: boolean;
 };
 
 type ImageAndVideoCommon = {
   tags?: string[];
   description?: string;
-  idPost: string;
 };
 
 type Content = (ContentImage | ContentVideo) & ImageAndVideoCommon;
@@ -136,21 +144,23 @@ export function generateArrayPosts({
 }): postProps[] {
   return ARRAY_CONTENT.map(content => {
     if (content.type === 'image') {
-      const { arrayImages = [], description, tags, idPost } = content;
+      const { arrayImages = [], description, tags, idPost, isLiked } = content;
       return generatePostImage({
         arrayImages: arrayImages.map(image => `${PREFIX}${image}`),
         description: description,
         tags: tags,
-        idPost
+        idPost,
+        isLiked
       });
     }
     //Video By Default
-    const { videoSrc, description, tags, idPost } = content;
+    const { videoSrc, description, tags, idPost, isLiked } = content;
     return generatePostVideo({
       videoSrc: `${PREFIX}${videoSrc}`,
       description: description,
       tags: tags,
-      idPost
+      idPost,
+      isLiked
     });
   });
 }

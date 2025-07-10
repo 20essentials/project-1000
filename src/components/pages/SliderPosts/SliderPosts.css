@@ -259,6 +259,14 @@
             }
           }
         }
+
+        &.btn-container-liked {
+          &.this-post-is-liked {
+            svg {
+              color: red;
+            }
+          }
+        }
       }
     }
 

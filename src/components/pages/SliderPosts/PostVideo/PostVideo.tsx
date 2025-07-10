@@ -14,6 +14,7 @@ import { useLimitOfPost } from '@/store/useLimitOfPosts';
 import { UserProfile } from '@/components/pages/SliderPosts/AsideRight/UserProfile';
 import { AsideText } from '@/components/pages/SliderPosts/AsideText';
 import { SaveContainer } from '../AsideRight/SaveContainer';
+import { HeartContainer } from '../AsideRight/HeartContainer';
 
 // interface Props {
 //   postCommonProps: postComonProps;
@@ -133,10 +134,11 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
         <section className='button-container btn-container-user-profile'>
           <UserProfile profileImageSrc={profileImageSrc} userId={userId} />
         </section>
-        <section className='button-container'>
+        {/* <section className='button-container'>
           <Heart />
           <span className='count'>{hearts}</span>
-        </section>
+        </section> */}
+        <HeartContainer hearts={hearts} post={props} />
         <section className='button-container'>
           <Comments />
           <span className='count'>{comments}</span>

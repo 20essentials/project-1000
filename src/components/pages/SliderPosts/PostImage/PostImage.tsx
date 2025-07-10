@@ -15,6 +15,7 @@ import { PlayButton } from '@/components/pages/SliderPosts/PostVideo/PlayButton'
 import { UserProfile } from '@/components/pages/SliderPosts/AsideRight/UserProfile';
 import { AsideText } from '@/components/pages/SliderPosts/AsideText';
 import { SaveContainer } from '../AsideRight/SaveContainer';
+import { HeartContainer } from '../AsideRight/HeartContainer';
 
 export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const {
@@ -171,10 +172,11 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
             <section className='button-container btn-container-user-profile'>
               <UserProfile profileImageSrc={profileImageSrc} userId={userId} />
             </section>
-            <section className='button-container'>
+            {/* <section className='button-container'>
               <Heart />
               <span className='count'>{hearts}</span>
-            </section>
+            </section> */}
+            <HeartContainer hearts={hearts} post={props} />
             <section className='button-container'>
               <Comments />
               <span className='count'>{comments}</span>

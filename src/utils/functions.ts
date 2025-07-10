@@ -36,7 +36,8 @@ const postPropsKeys: (keyof postProps)[] = [
   'shared',
   'tags',
   'totalViewsOfThePost',
-  'videoSrc'
+  'videoSrc',
+  'isLiked',
 ];
 
 export function getPostpropsFromProps(

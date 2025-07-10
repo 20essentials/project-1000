@@ -4,6 +4,7 @@ import type {
   postComonProps,
   arrayOfPosts
 } from '@/components/pages/SliderPosts/types.d.ts';
+import { persist } from 'zustand/middleware';
 
 interface UserSavedPostsState {
   getFlattenedSavedPosts: () => (postComonProps & postProps)[];
@@ -21,7 +22,7 @@ interface UserSavedPostsState {
   }) => void;
 }
 
-export const useUserSavedPosts = create<UserSavedPostsState>((set, get) => ({
+export const useUserSavedPosts = create<UserSavedPostsState>()(persist((set, get) => ({
   arrayOfSavedPostOfTheUser: [],
   getFlattenedSavedPosts: () => {
     const { arrayOfSavedPostOfTheUser } = get();
@@ -100,4 +101,6 @@ export const useUserSavedPosts = create<UserSavedPostsState>((set, get) => ({
 
     return newArrayOfSavedPost;
   }
+}),{
+  name: 'saved-posts-of-the-user'
 }));

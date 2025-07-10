@@ -10,6 +10,7 @@ export type postProps = {
   saved: number;
   shared: number;
   isSaved: boolean;
+  isLiked: boolean;
   idPost: string;
 };
 
