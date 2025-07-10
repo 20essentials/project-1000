@@ -1,42 +1,19 @@
 import { useEffect, useState } from 'react';
-import { Save } from './Save';
+import { Save } from '@/components/pages/SliderPosts/AsideRight/Save';
 import type {
   postProps,
   postComonProps
 } from '@/components/pages/SliderPosts/types.d.ts';
 import { useUserSavedPosts } from '@/store/useUserSavedPosts';
-import { useCurrentUser } from '@/store/useCurrentUser';
+import {
+  getCommonpropsFromProps,
+  getPostpropsFromProps
+} from '@/utils/functions';
 
 interface Props {
   post: postProps & postComonProps;
   saved: number;
 }
-
-const commonPropsKeys: (keyof postComonProps)[] = [
-  'followed',
-  'followers',
-  'following',
-  'profileDescription',
-  'profileImageSrc',
-  'totalLikes',
-  'userId',
-  'username'
-];
-
-const postPropsKeys: (keyof postProps)[] = [
-  'arrayImages',
-  'comments',
-  'dateOfPublication',
-  'description',
-  'hearts',
-  'idPost',
-  'isSaved',
-  'saved',
-  'shared',
-  'tags',
-  'totalViewsOfThePost',
-  'videoSrc'
-];
 
 export function SaveContainer({ saved, post }: Props) {
   const [thisPostIsSave, setThisPostIsSaved] = useState(post.isSaved);
@@ -45,7 +22,6 @@ export function SaveContainer({ saved, post }: Props) {
   }`;
   const deletePostSaved = useUserSavedPosts(state => state.deletePostSaved);
   const addPostInSaved = useUserSavedPosts(state => state.addPostInSaved);
-
   const getFlattenedSavedPosts = useUserSavedPosts(
     state => state.getFlattenedSavedPosts
   );
@@ -59,16 +35,8 @@ export function SaveContainer({ saved, post }: Props) {
 
     setThisPostIsSaved(true);
     addPostInSaved({
-      commonProps: Object.fromEntries(
-        Object.entries(post).filter(([key]) =>
-          commonPropsKeys.includes(key as keyof postComonProps)
-        )
-      ) as postComonProps,
-      postProps: Object.fromEntries(
-        Object.entries(post).filter(([key]) =>
-          postPropsKeys.includes(key as keyof postProps)
-        )
-      ) as postProps,
+      commonProps: getCommonpropsFromProps(post),
+      postProps: getPostpropsFromProps(post),
       userIdOfCreatorOfThePost: post.idPost
     });
   }

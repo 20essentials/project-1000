@@ -41,6 +41,7 @@ export const user_array_of_posts = generateArrayPosts({
 
 export const user_array_of_saved_posts: arrayOfPosts = [
   [midudev_commonProps, [midudev_array_of_posts[0]]],
+  // [midudev_commonProps, [midudev_array_of_posts[0], midudev_array_of_posts[1]]],
   [qbitlab_commonProps, [qbitlab_array_of_posts[0]]]
 ];
 

@@ -5,7 +5,7 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 /*
-  falsta: userid, profilesrc, prefix
+  falta: userid, profilesrc, prefix
 */
 
 export const marshall_jassan_commonProps = generateExactlyCommonProps({
