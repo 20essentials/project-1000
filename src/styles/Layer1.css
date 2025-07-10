@@ -1,4 +1,4 @@
-@keyframes animate {
+4@keyframes animate {
   from {
     background-position: 0 3px;
   }
@@ -9,18 +9,18 @@
 
 @keyframes animate2 {
   from {
-    background-position: -260px 3px;
+    background-position: -220px 3px;
   }
   to {
-    background-position: -260px -447px;
+    background-position: -220px -447px;
   }
 }
 @keyframes animate3 {
   from {
-    background-position: -495px 3px;
+    background-position: -445px 3px;
   }
   to {
-    background-position: -495px -447px;
+    background-position: -445px -447px;
   }
 }
 
@@ -50,27 +50,34 @@
       .container-sprites {
         padding-right: 0px;
         display: flex;
+        transform: translateY(2px);
 
         .iphone-sprite {
           position: relative;
           width: calc(700px / 3);
           height: calc(447px / 3);
           background-image: url('/assets/iphone-sprite.png');
-          zoom: 0.11;
+          zoom: 0.12;
           background-repeat: no-repeat;
 
           --top: 2px;
 
           &.sprite-1 {
+            transform: translateX(70px);
             animation: animate 30s steps(3) infinite alternate both;
+            /* background-color: red; */
           }
 
           &.sprite-2 {
+            transform: translateX(10px) translateY(-1px);
             animation: animate2 30s steps(3) infinite alternate both;
+            /* background-color: orange; */
           }
 
           &.sprite-3 {
+            transform: translateX(-40px);
             animation: animate3 30s steps(3) infinite alternate both;
+            /* background-color: red; */
           }
         }
       }

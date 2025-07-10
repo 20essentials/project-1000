@@ -29,7 +29,14 @@ const ARRAY_CONTENT: ArrayContent = [
   Es personalizable y luego te da todo el código que necesitas para tu página.
   ¡Deja tu corazón si te sirve!`,
     idPost: `${midudev_commonProps.userId}-5efd3a2d-55d0-431e-b365-480095f8c1f1`
-  }
+  },
+    {
+    type: 'image',
+    arrayImages: ['v2.avif'],
+    tags: ['react', 'javascript', 'programacion', 'software', 'programadores'],
+    description: `✓ Dar una charla en inglés sobre JavaScript y React ✓ Delante de 1000 personas en Ámsterdam ✓ Tus héroes viéndote desde la primera fila ✓ Y marcarte un live-coding sin problemas El viernes participé en la React Summit para hablar de JavaScript y React. Desarrollé en directo un Global State Manager en 50 líneas de código basado en el código de Zustand. Sin contexto, providers ni estados. ¡Deja un comentario si te gustaría que hiciese un directo para enseñar cómo lo hice! Además pude disfrutar de Amsterdam con la mejor compañía. :)`,
+    idPost: `${midudev_commonProps.userId}-3f7bd846-868a-48ad-a93c-c2b5fbf8fb49`
+  },
 ];
 
 // const ARRAY_CONTENT: ArrayContent = [

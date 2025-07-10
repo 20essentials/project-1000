@@ -14,6 +14,7 @@ import { userHasInteracted } from '@/store/userHasInteracted';
 import { PlayButton } from '@/components/pages/SliderPosts/PostVideo/PlayButton';
 import { UserProfile } from '@/components/pages/SliderPosts/AsideRight/UserProfile';
 import { AsideText } from '@/components/pages/SliderPosts/AsideText';
+import { SaveContainer } from '../AsideRight/SaveContainer';
 
 export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const {
@@ -178,10 +179,11 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
               <Comments />
               <span className='count'>{comments}</span>
             </section>
-            <section className='button-container btn-container-saved'>
+            {/* <section className='button-container btn-container-saved'>
               <Save />
               <span className='count'>{saved}</span>
-            </section>
+            </section> */}
+            <SaveContainer saved={saved} post={props} />
             <section className='button-container'>
               <Share />
               <span className='count'>{shared}</span>
