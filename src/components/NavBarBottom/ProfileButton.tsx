@@ -21,6 +21,9 @@ export function ProfileButton(props: React.SVGAttributes<SVGSVGElement>) {
   const setSavePostsOfTheUser = useUserSavedPosts(
     state => state.setSavePostsOfTheUser
   );
+  const arrayOfSavedPostOfTheUser = useUserSavedPosts(
+    state => state.arrayOfSavedPostOfTheUser
+  );
 
   function nextToProfileCreator() {
     setCurrentPage(IS_ACTIVE_BUTTON.PROFILE);
@@ -31,7 +34,7 @@ export function ProfileButton(props: React.SVGAttributes<SVGSVGElement>) {
     });
     setCommonProps(commonPropsUser);
     setArrayOfPosts(arrayPosts);
-    setSavePostsOfTheUser(user_array_of_saved_posts);
+    setSavePostsOfTheUser(arrayOfSavedPostOfTheUser);
   }
 
   return (

@@ -9,8 +9,14 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 /***** just for testing */
-import { midudev_commonProps, midudev_array_of_posts } from '@/publicData/user-1-midudev';
-import { goated_ai_art_commonProps, goated_ai_art_array_of_posts } from '@/publicData/user-2-goated-ai-art';
+import {
+  midudev_commonProps,
+  midudev_array_of_posts
+} from '@/publicData/user-1-midudev';
+import {
+  qbitlab_array_of_posts,
+  qbitlab_commonProps
+} from '@/publicData/user-6-qbitlab';
 
 /***** just for testing */
 
@@ -35,7 +41,7 @@ export const user_array_of_posts = generateArrayPosts({
 
 export const user_array_of_saved_posts: arrayOfPosts = [
   [midudev_commonProps, [midudev_array_of_posts[0]]],
-  [goated_ai_art_commonProps, [goated_ai_art_array_of_posts[0], goated_ai_art_array_of_posts[1]]],
+  [qbitlab_commonProps, [qbitlab_array_of_posts[0]]]
 ];
 
 // export const user_array_of_saved_posts = generateArrayPosts({
@@ -51,7 +57,7 @@ export function getUser({
   userId: string;
   profileImageSrc: string;
   username: string;
-}): [postComonProps, postProps[], arrayOfPosts] {
+}): [postComonProps, postProps[], arrayOfPosts, (postComonProps & postProps)[]] {
   const user_commonProps = generateExactlyCommonProps({
     profileImageSrc,
     userId,
@@ -63,6 +69,14 @@ export function getUser({
     totalLikes: 0
   });
 
-  return [user_commonProps, user_array_of_posts, user_array_of_saved_posts];
-  // return [user_commonProps, [], user_array_of_saved_posts];
+  const flattened_saved_post = user_array_of_saved_posts.flatMap(
+    ([commonProps, posts]) =>
+      posts.map(post => ({
+        ...post,
+        ...commonProps
+      }))
+  );
+
+  // return [user_commonProps, user_array_of_posts, user_array_of_saved_posts, flattened_saved_post];
+  return [user_commonProps, [], user_array_of_saved_posts, flattened_saved_post];
 }

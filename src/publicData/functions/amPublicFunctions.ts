@@ -70,16 +70,18 @@ function generaPostData() {
 export function generatePostImage({
   arrayImages,
   tags,
-  description
+  description,
+  idPost = `${crypto.randomUUID()}-${getRandomNumber(1000, 9999)}`
 }: {
   arrayImages: string[];
   tags?: string[];
   description?: string;
+  idPost: string;
 }) {
   return {
     arrayImages,
-    idPost: `${crypto.randomUUID()}-${getRandomNumber(1000, 9999)}`,
     ...generaPostData(),
+    idPost,
     description,
     tags
   };
@@ -88,16 +90,18 @@ export function generatePostImage({
 export function generatePostVideo({
   videoSrc,
   tags,
-  description
+  description,
+   idPost = `${crypto.randomUUID()}-${getRandomNumber(1000, 9999)}`
 }: {
   videoSrc: string;
   tags?: string[];
   description?: string;
+  idPost: string;
 }) {
   return {
     videoSrc,
-    idPost: `${crypto.randomUUID()}-${getRandomNumber(1000, 9999)}`,
     ...generaPostData(),
+    idPost,
     description,
     tags
   };
@@ -111,11 +115,13 @@ type ContentImage = {
 type ContentVideo = {
   type: 'video';
   videoSrc?: string;
+  idPost: string;
 };
 
 type ImageAndVideoCommon = {
   tags?: string[];
   description?: string;
+  idPost: string;
 };
 
 type Content = (ContentImage | ContentVideo) & ImageAndVideoCommon;
@@ -130,19 +136,21 @@ export function generateArrayPosts({
 }): postProps[] {
   return ARRAY_CONTENT.map(content => {
     if (content.type === 'image') {
-      const { arrayImages = [], description, tags } = content;
+      const { arrayImages = [], description, tags, idPost } = content;
       return generatePostImage({
         arrayImages: arrayImages.map(image => `${PREFIX}${image}`),
         description: description,
-        tags: tags
+        tags: tags,
+        idPost
       });
     }
     //Video By Default
-    const { videoSrc , description, tags } = content;
+    const { videoSrc, description, tags, idPost } = content;
     return generatePostVideo({
       videoSrc: `${PREFIX}${videoSrc}`,
       description: description,
-      tags: tags
+      tags: tags,
+      idPost
     });
   });
 }

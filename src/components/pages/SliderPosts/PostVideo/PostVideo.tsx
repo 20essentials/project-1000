@@ -13,6 +13,13 @@ import { userHasInteracted } from '@/store/userHasInteracted';
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
 import { UserProfile } from '@/components/pages/SliderPosts/AsideRight/UserProfile';
 import { AsideText } from '@/components/pages/SliderPosts/AsideText';
+import { SaveContainer } from '../AsideRight/SaveContainer';
+
+// interface Props {
+//   postCommonProps: postComonProps;
+//   postProps: postProps;
+//   idx: number;
+// }
 
 export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   const hasInteracted = userHasInteracted(state => state.hasInteracted);
@@ -134,10 +141,11 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
           <Comments />
           <span className='count'>{comments}</span>
         </section>
-        <section className='button-container btn-container-saved'>
+        {/* <section className='button-container btn-container-saved'>
           <Save />
           <span className='count'>{saved}</span>
-        </section>
+        </section> */}
+        <SaveContainer saved={saved} post={props} />
         <section className='button-container'>
           <Share />
           <span className='count'>{shared}</span>

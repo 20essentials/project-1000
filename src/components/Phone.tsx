@@ -5,18 +5,29 @@ import type { User } from '@clerk/astro/server';
 import { useCurrentUser } from '@/store/useCurrentUser';
 import { useEffect } from 'react';
 import { useCurrentPage, IS_ACTIVE_BUTTON } from '@/store/useCurrentPage';
-import { useNcontainer , CONTAINER_IS} from '@/store/useNcontainer';
+import { useNcontainer, CONTAINER_IS } from '@/store/useNcontainer';
+import { useUserSavedPosts } from '@/store/useUserSavedPosts';
+import { getUser } from '@/db/User';
 
 export function Phone({ user }: { user: User | null }) {
   const setUser = useCurrentUser(state => state.setUser);
-  const setPage = useCurrentPage(state => state.setCurrentPage)
-  const setContainerNum = useNcontainer(state => state.setContainerNum)
+  const setPage = useCurrentPage(state => state.setCurrentPage);
+  const setContainerNum = useNcontainer(state => state.setContainerNum);
+  const setSavePostsOfTheUser = useUserSavedPosts(
+    state => state.setSavePostsOfTheUser
+  );
 
   useEffect(() => {
     if (user) {
       setUser(user);
-      setPage(IS_ACTIVE_BUTTON.HOME)
-      setContainerNum(CONTAINER_IS.INTRO_PAGE)
+      setPage(IS_ACTIVE_BUTTON.HOME);
+      setContainerNum(CONTAINER_IS.INTRO_PAGE);
+      const [_, __, user_array_of_saved_posts] = getUser({
+        userId: user.id ?? '',
+        profileImageSrc: user?.imageUrl ?? '',
+        username: user?.username ?? ''
+      });
+      setSavePostsOfTheUser(user_array_of_saved_posts);
     }
   }, [user]);
 

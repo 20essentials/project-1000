@@ -7,7 +7,6 @@ const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
 const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 
-import { getUser } from '@/db/User.ts';
 import { useCurrentUser } from '@/store/useCurrentUser';
 import { $ } from '@/utils/functions';
 

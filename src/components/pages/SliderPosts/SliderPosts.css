@@ -255,7 +255,6 @@
         &.btn-container-saved {
           &.this-post-is-saved {
             svg {
-              /* yellow */
               color: #e6e60d;
             }
           }
