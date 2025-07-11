@@ -20,9 +20,11 @@ import { edaserkanbolat_edits_array_of_posts, edaserkanbolat_edits_commonProps }
 export const PUBLIC_DATA: arrayOfPosts = [
   [midudev_commonProps, midudev_array_of_posts],
   [qbitlab_commonProps, qbitlab_array_of_posts],
-  [luxury_commonProps, luxury_array_of_posts],
-  [marshall_jassan_commonProps, marshall_jassan_array_of_posts],
-  [edaserkanbolat_edits_commonProps, edaserkanbolat_edits_array_of_posts]
+  // [luxury_commonProps, luxury_array_of_posts],
+  // [marshall_jassan_commonProps, marshall_jassan_array_of_posts],
+  // [edaserkanbolat_edits_commonProps, edaserkanbolat_edits_array_of_posts]
+
+
   // [beats_commonProps, beats_array_of_posts],
   // [goated_ai_art_commonProps, goated_ai_art_array_of_posts],
   // [ars_notoria_commonProps, ars_notoria_array_of_posts],

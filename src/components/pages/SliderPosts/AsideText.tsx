@@ -4,15 +4,17 @@ export function AsideText({
   username,
   description,
   tags,
-  ref
+  ref,
+  otherClassNames
 }: {
   username: string;
   description?: string;
   tags?: string[];
   ref: React.RefObject<HTMLElement | null>;
+  otherClassNames: string;
 }) {
   const [showDescription, setShowDescription] = useState(false);
-  const className = `aside-text-and-description `;
+  const className = `aside-text-and-description ${otherClassNames}`;
 
   if (ref) {
     ref.current?.classList.toggle('showBackgroundBlackInText', showDescription);

@@ -2,8 +2,6 @@ import type {
   postProps,
   postComonProps
 } from '@/components/pages/SliderPosts/types.d.ts';
-import { Heart } from '@/components/pages/SliderPosts/AsideRight/Heart.tsx';
-import { Save } from '@/components/pages/SliderPosts/AsideRight/Save.tsx';
 import { Share } from '@/components/pages/SliderPosts/AsideRight/Share.tsx';
 import { Comments } from '@/components/pages/SliderPosts/AsideRight/Comments.tsx';
 import { baseUrl } from '@/utils/functions';
@@ -130,23 +128,15 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
 
       {thisPostWillRenderMorePost && <div className='post-image-overlay'></div>}
 
-      <article className='aside-right-buttons'>
+      <article className='aside-right-buttons aside-right-buttons-postvideo'>
         <section className='button-container btn-container-user-profile'>
           <UserProfile profileImageSrc={profileImageSrc} userId={userId} />
         </section>
-        {/* <section className='button-container'>
-          <Heart />
-          <span className='count'>{hearts}</span>
-        </section> */}
         <HeartContainer hearts={hearts} post={props} />
         <section className='button-container'>
           <Comments />
           <span className='count'>{comments}</span>
         </section>
-        {/* <section className='button-container btn-container-saved'>
-          <Save />
-          <span className='count'>{saved}</span>
-        </section> */}
         <SaveContainer saved={saved} post={props} />
         <section className='button-container'>
           <Share />
@@ -164,6 +154,7 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
       </article>
 
       <AsideText
+        otherClassNames='aside-text-post-video'
         username={username}
         description={description}
         tags={tags}

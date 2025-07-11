@@ -2,8 +2,6 @@ import type {
   postProps,
   postComonProps
 } from '@/components/pages/SliderPosts/types.d.ts';
-import { Heart } from '@/components/pages/SliderPosts/AsideRight/Heart.tsx';
-import { Save } from '@/components/pages/SliderPosts/AsideRight/Save.tsx';
 import { Share } from '@/components/pages/SliderPosts/AsideRight/Share.tsx';
 import { Comments } from '@/components/pages/SliderPosts/AsideRight/Comments.tsx';
 import { baseUrl } from '@/utils/functions';
@@ -14,8 +12,8 @@ import { userHasInteracted } from '@/store/userHasInteracted';
 import { PlayButton } from '@/components/pages/SliderPosts/PostVideo/PlayButton';
 import { UserProfile } from '@/components/pages/SliderPosts/AsideRight/UserProfile';
 import { AsideText } from '@/components/pages/SliderPosts/AsideText';
-import { SaveContainer } from '../AsideRight/SaveContainer';
-import { HeartContainer } from '../AsideRight/HeartContainer';
+import { SaveContainer } from '@/components/pages/SliderPosts/AsideRight/SaveContainer';
+import { HeartContainer } from '@/components/pages/SliderPosts/AsideRight/HeartContainer';
 
 export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const {
@@ -46,7 +44,6 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const [randomSong, setRandomSong] = useState<string | null>(null);
 
   useEffect(() => {
-    // Solo se ejecuta en el cliente
     const song =
       ARRAY_OF_SONGS[Math.floor(Math.random() * ARRAY_OF_SONGS.length)];
     setRandomSong(song);
@@ -135,12 +132,16 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
         <audio ref={audioRef} src={randomSong} loop preload='auto' />
       )}
 
+      <AsideText
+        otherClassNames='aside-text-post-image'
+        username={username}
+        description={description}
+        tags={tags}
+        ref={postImageRef}
+      />
+
       {arrayImages?.map((src, i) => (
-        <section
-          key={i}
-          className='container-img-post'
-          style={{ position: 'relative' }}
-        >
+        <section key={i} className='container-img-post'>
           <img
             src={src}
             alt='image'
@@ -158,61 +159,42 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
             />
           )}
 
-          {arrayImagesLength > 1 && (
-            <output className='num-of-post'>
-              {i + 1} / {arrayImagesLength}
-            </output>
-          )}
-
           {thisPostWillRenderMorePost && (
             <div className='post-image-overlay'></div>
           )}
-
-          <article className='aside-right-buttons'>
-            <section className='button-container btn-container-user-profile'>
-              <UserProfile profileImageSrc={profileImageSrc} userId={userId} />
-            </section>
-            {/* <section className='button-container'>
-              <Heart />
-              <span className='count'>{hearts}</span>
-            </section> */}
-            <HeartContainer hearts={hearts} post={props} />
-            <section className='button-container'>
-              <Comments />
-              <span className='count'>{comments}</span>
-            </section>
-            {/* <section className='button-container btn-container-saved'>
-              <Save />
-              <span className='count'>{saved}</span>
-            </section> */}
-            <SaveContainer saved={saved} post={props} />
-            <section className='button-container'>
-              <Share />
-              <span className='count'>{shared}</span>
-            </section>
-            <section className='button-container btn-container-vinyl'>
-              <img
-                className='vinyl'
-                src={baseUrl('/assets/vinyl.png')}
-                alt='Vinyl'
-              />
-              <img
-                className='user-profile-vinyl'
-                draggable='false'
-                src={profileImageSrc}
-                alt='User Profile'
-              />
-            </section>
-          </article>
-
-          <AsideText
-            username={username}
-            description={description}
-            tags={tags}
-            ref={postImageRef}
-          />
         </section>
       ))}
+
+      <article className='aside-right-buttons aside-right-buttons-postimage'>
+        <section className='button-container btn-container-user-profile'>
+          <UserProfile profileImageSrc={profileImageSrc} userId={userId} />
+        </section>
+        <HeartContainer hearts={hearts} post={props} />
+        <section className='button-container'>
+          <Comments />
+          <span className='count'>{comments}</span>
+        </section>
+        <SaveContainer saved={saved} post={props} />
+        <section className='button-container'>
+          <Share />
+          <span className='count'>{shared}</span>
+        </section>
+        <section className='button-container btn-container-vinyl'>
+          <img className='vinyl' src={baseUrl('/assets/vinyl.png')} alt='Vinyl' />
+          <img
+            className='user-profile-vinyl'
+            draggable='false'
+            src={profileImageSrc}
+            alt='User Profile'
+          />
+        </section>
+      </article>
+
+      {arrayImagesLength > 1 && (
+        <output className='num-of-post'>
+          {0 + 1} / {arrayImagesLength}
+        </output>
+      )}
     </article>
   );
 }
