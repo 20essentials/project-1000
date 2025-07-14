@@ -84,30 +84,36 @@
       height: 100%;
       position: relative;
       scroll-snap-align: center;
-      scroll-snap-type: x mandatory;
-      display: flex;
-      overflow-x: auto;
+
       /* It's important for the Intersection observer */
       margin-bottom: 3px;
       /* It's important for the Intersection observer */
 
-      &::-webkit-scrollbar {
-        width: 1px;
-        display: none;
-        height: 1px;
-      }
+      .layer-1-post-image {
+        width: 100%;
+        height: 100%;
+        scroll-snap-type: x mandatory;
+        display: flex;
+        overflow-x: auto;
 
-      &::-webkit-scrollbar-thumb {
-        background-color: transparent;
-        opacity: 0.5;
-      }
+        &::-webkit-scrollbar {
+          width: 1px;
+          display: none;
+          height: 1px;
+        }
 
-      &::-webkit-scrollbar-track {
-        background: transparent;
+        &::-webkit-scrollbar-thumb {
+          background-color: transparent;
+          opacity: 0.5;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
       }
 
       .num-of-post {
-        position: sticky;
+        position: absolute;
         top: 12px;
         right: 12px;
         background-color: #fff3;
@@ -158,6 +164,14 @@
       }
     }
 
+    .layer-2-post-image {
+      /* background-color: #0f0a; */
+      /* background-color: green; */
+      pointer-events: none;
+      position: absolute;
+      inset: 0;
+    }
+
     .aside-right-buttons {
       right: 1px;
       display: flex;
@@ -166,17 +180,10 @@
       --gap: 5px;
       height: calc(48px * 6 + (var(--gap) * 6));
       gap: var(--gap);
-      z-index: 20;
-
-      &.aside-right-buttons-postimage {
-        position: sticky;
-        top: 100%;
-      }
-
-      &.aside-right-buttons-postvideo {
-        position: absolute;
-        bottom: 1px;
-      }
+      z-index: 90;
+      position: absolute;
+      bottom: 1px;
+      pointer-events: auto;
 
       * {
         user-select: none;
@@ -283,25 +290,23 @@
 
 
     .aside-text-and-description {
-      width: 100%;
       height: fit-content;
       display: flex;
       flex-direction: column;
       justify-content: end;
       padding: 10px;
-      padding-right: 38px;
+      padding-right: 68px;
       gap: 8px;
       color: #e9e9e9;
-      z-index: 30;
+      z-index: 70;
       user-select: none;
-      min-width: 230px;
+      min-width: 200px;
+      pointer-events: auto;
 
       &.aside-text-post-image {
-        position: sticky;
-        top: 100%;
-        left: 0%;
-        /* background-color: orange; */
-        z-index: 50;
+        position: absolute;
+        left: 0;
+        bottom: 0;
       }
 
       &.aside-text-post-video {

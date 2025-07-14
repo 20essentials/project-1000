@@ -64,19 +64,19 @@
 
           &.sprite-1 {
             transform: translateX(70px);
-            animation: animate 30s steps(3) infinite alternate both;
+            animation: animate 120s steps(3) infinite alternate both;
             /* background-color: red; */
           }
 
           &.sprite-2 {
             transform: translateX(10px) translateY(-1px);
-            animation: animate2 30s steps(3) infinite alternate both;
+            animation: animate2 120s steps(3) infinite alternate both;
             /* background-color: orange; */
           }
 
           &.sprite-3 {
             transform: translateX(-40px);
-            animation: animate3 30s steps(3) infinite alternate both;
+            animation: animate3 120s steps(3) infinite alternate both;
             /* background-color: red; */
           }
         }

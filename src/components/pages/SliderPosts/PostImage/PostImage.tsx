@@ -132,69 +132,76 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
         <audio ref={audioRef} src={randomSong} loop preload='auto' />
       )}
 
-      <AsideText
-        otherClassNames='aside-text-post-image'
-        username={username}
-        description={description}
-        tags={tags}
-        ref={postImageRef}
-      />
-
-      {arrayImages?.map((src, i) => (
-        <section key={i} className='container-img-post'>
-          <img
-            src={src}
-            alt='image'
-            draggable='false'
-            onClick={handleAudioToggle}
-          />
-
-          {isPaused && (
-            <PlayButton
-              className='play-btn'
-              handlePlayVideo={e => {
-                e.stopPropagation();
-                handleAudioToggle();
-              }}
+      <section className='layer-1-post-image'>
+        {arrayImages?.map((src, i) => (
+          <>
+            <img
+              key={i}
+              src={src}
+              alt='image'
+              draggable='false'
+              onClick={handleAudioToggle}
             />
-          )}
+          </>
+        ))}
+      </section>
 
-          {thisPostWillRenderMorePost && (
-            <div className='post-image-overlay'></div>
-          )}
-        </section>
-      ))}
+      <aside className='layer-2-post-image'>
+        <AsideText
+          otherClassNames='aside-text-post-image'
+          username={username}
+          description={description}
+          tags={tags}
+          ref={postImageRef}
+        />
 
-      <article className='aside-right-buttons aside-right-buttons-postimage'>
-        <section className='button-container btn-container-user-profile'>
-          <UserProfile profileImageSrc={profileImageSrc} userId={userId} />
-        </section>
-        <HeartContainer hearts={hearts} post={props} />
-        <section className='button-container'>
-          <Comments />
-          <span className='count'>{comments}</span>
-        </section>
-        <SaveContainer saved={saved} post={props} />
-        <section className='button-container'>
-          <Share />
-          <span className='count'>{shared}</span>
-        </section>
-        <section className='button-container btn-container-vinyl'>
-          <img className='vinyl' src={baseUrl('/assets/vinyl.png')} alt='Vinyl' />
-          <img
-            className='user-profile-vinyl'
-            draggable='false'
-            src={profileImageSrc}
-            alt='User Profile'
+        {isPaused && (
+          <PlayButton
+            className='play-btn'
+            handlePlayVideo={e => {
+              e.stopPropagation();
+              handleAudioToggle();
+            }}
           />
-        </section>
-      </article>
+        )}
 
-      {arrayImagesLength > 1 && (
-        <output className='num-of-post'>
-          {0 + 1} / {arrayImagesLength}
-        </output>
-      )}
+        {thisPostWillRenderMorePost && <div className='post-image-overlay'></div>}
+
+        <article className='aside-right-buttons aside-right-buttons-postimage'>
+          <section className='button-container btn-container-user-profile'>
+            <UserProfile profileImageSrc={profileImageSrc} userId={userId} />
+          </section>
+          <HeartContainer hearts={hearts} post={props} />
+          <section className='button-container'>
+            <Comments />
+            <span className='count'>{comments}</span>
+          </section>
+          <SaveContainer saved={saved} post={props} />
+          <section className='button-container'>
+            <Share />
+            <span className='count'>{shared}</span>
+          </section>
+          <section className='button-container btn-container-vinyl'>
+            <img
+              className='vinyl'
+              src={baseUrl('/assets/vinyl.png')}
+              alt='Vinyl'
+            />
+            <img
+              className='user-profile-vinyl'
+              draggable='false'
+              src={profileImageSrc}
+              alt='User Profile'
+            />
+          </section>
+        </article>
+
+        {arrayImagesLength > 1 && (
+          <output className='num-of-post'>
+            {0 + 1} / {arrayImagesLength}
+          </output>
+        )}
+      </aside>
     </article>
   );
 }

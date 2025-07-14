@@ -13,6 +13,7 @@ import {
   midudev_commonProps,
   midudev_array_of_posts
 } from '@/publicData/user-1-midudev';
+import { lucia_sora_array_of_posts } from '@/publicData/user-13-luciasora';
 import {
   qbitlab_array_of_posts,
   qbitlab_commonProps
@@ -20,69 +21,6 @@ import {
 
 /***** just for testing */
 
-const PREFIX = 'https://mysupercoolprojects.github.io/repo-15/assets/al4ska/';
-
-const ARRAY_CONTENT: ArrayContent = [
-  {
-    type: 'image',
-    arrayImages: ['a1.avif'],
-    idPost: 'a8d7db38-69b9-4e9e-a823-6d48e71182db',
-    isLiked: false
-  },
-  {
-    type: 'image',
-    arrayImages: ['a2.avif'],
-    idPost: 'a8d7db38-69b9-4e9e-a823-6d48e71182dc',
-    isLiked: false
-  },
-  {
-    type: 'image',
-    arrayImages: ['a3.avif'],
-    idPost: 'a8d7db38-69b9-4e9e-a823-6d48e71182dd',
-    isLiked: false
-  },
-  {
-    type: 'image',
-    arrayImages: ['a4.avif'],
-    idPost: 'a8d7db38-69b9-4e9e-a823-6d48e71182de',
-    isLiked: false
-  },
-  {
-    type: 'image',
-    arrayImages: ['a5.avif'],
-    idPost: 'a8d7db38-69b9-4e9e-a823-6d48e71182df',
-    isLiked: false
-  },
-  {
-    type: 'image',
-    arrayImages: ['a6.avif'],
-    idPost: 'a8d7db38-69b9-4e9e-a823-6d48e71182e0',
-    isLiked: false
-  },
-  {
-    type: 'image',
-    arrayImages: ['a7.avif'],
-    idPost: 'a8d7db38-69b9-4e9e-a823-6d48e71182e1',
-    isLiked: false
-  },
-  {
-    type: 'image',
-    arrayImages: ['a8.avif'],
-    idPost: 'a8d7db38-69b9-4e9e-a823-6d48e71182e2',
-    isLiked: false
-  },
-  {
-    type: 'image',
-    arrayImages: ['a9.avif'],
-    idPost: 'a8d7db38-69b9-4e9e-a823-6d48e71182e3',
-    isLiked: false
-  }
-];
-
-export const user_array_of_posts = generateArrayPosts({
-  PREFIX,
-  ARRAY_CONTENT
-});
 
 export const user_array_of_saved_posts: arrayOfPosts = [
   // [midudev_commonProps, [midudev_array_of_posts[0]]],
@@ -132,6 +70,8 @@ export function getUser({
         ...commonProps
       }))
   );
+
+  const user_array_of_posts = lucia_sora_array_of_posts.slice(0,6);
 
   return {
     user_commonProps,

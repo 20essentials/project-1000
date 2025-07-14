@@ -5,7 +5,7 @@ export function AsideText({
   description,
   tags,
   ref,
-  otherClassNames
+  otherClassNames,
 }: {
   username: string;
   description?: string;
@@ -26,7 +26,7 @@ export function AsideText({
   }
 
   return (
-    <section className={className}>
+    <section className={className} >
       <p onClick={handleDescription}>@{username}</p>
       {showDescription && description && (
         <p onClick={handleDescription}>{description}</p>

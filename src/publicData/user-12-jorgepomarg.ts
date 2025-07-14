@@ -4,14 +4,10 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-/*
-  falsta: userid, profilesrc, prefix
-*/
-
 export const jorgepomarg_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: 'ff2abc15-2b8f-47ce-9894-19f8b329a2a4',
   username: 'jorgepomarg',
-  profileImageSrc: '',
+  profileImageSrc: 'https://20essentials.github.io/project-000-940/assets/j1.avif',
   following: false,
   followers: 15_200,
   totalLikes: 639_720,
@@ -19,7 +15,7 @@ export const jorgepomarg_commonProps = generateExactlyCommonProps({
   profileDescription: '😅'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-198/assets/jorgepomarg/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
