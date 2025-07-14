@@ -6,7 +6,7 @@ import { Share } from '@/components/pages/SliderPosts/AsideRight/Share.tsx';
 import { Comments } from '@/components/pages/SliderPosts/AsideRight/Comments.tsx';
 import { baseUrl } from '@/utils/functions';
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type RefObject, Fragment } from 'react';
 import { ARRAY_OF_SONGS } from '@/utils/arrayOfSongs';
 import { userHasInteracted } from '@/store/userHasInteracted';
 import { PlayButton } from '@/components/pages/SliderPosts/PostVideo/PlayButton';
@@ -14,6 +14,9 @@ import { UserProfile } from '@/components/pages/SliderPosts/AsideRight/UserProfi
 import { AsideText } from '@/components/pages/SliderPosts/AsideText';
 import { SaveContainer } from '@/components/pages/SliderPosts/AsideRight/SaveContainer';
 import { HeartContainer } from '@/components/pages/SliderPosts/AsideRight/HeartContainer';
+import { useSwipeScroll } from '@/hooks/useSwipeScroll';
+import { NumOfPost } from './NumOfPost';
+import { useTrackVisibleImage } from '@/hooks/useTrackVisibleImage';
 
 export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const {
@@ -39,6 +42,7 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const offsetOfPosts = useLimitOfPost(state => state.offsetOfPosts);
 
   const postImageRef = useRef<HTMLElement | null>(null);
+  const layerOfImagesRef = useRef<HTMLElement | null>(null);
   const thisPostHasBeenRendered = useRef(false);
 
   const [randomSong, setRandomSong] = useState<string | null>(null);
@@ -62,6 +66,12 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
 
   const hasInteractedRef = useRef(hasInteracted);
   hasInteractedRef.current = hasInteracted;
+
+  const currentNumImage = useTrackVisibleImage({
+    containerRef: layerOfImagesRef,
+    imageSelector: 'img.layer-img-inner',
+    arrayImages
+  });
 
   function playAudio() {
     const audio = audioRef.current;
@@ -126,23 +136,54 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
     };
   }, []);
 
+  useSwipeScroll(layerOfImagesRef);
+
+  /*   useEffect(() => {
+    const images = layerOfImagesRef.current?.querySelectorAll(
+      'img.layer-img-inner'
+    );
+    if (!images || images.length === 0) return;
+
+    const observers: IntersectionObserver[] = [];
+
+    images.forEach((img, i) => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setCurrentNumImage(i + 1);
+          }
+        },
+        {
+          threshold: 0.5,
+          root: layerOfImagesRef.current 
+        }
+      );
+
+      observer.observe(img);
+      observers.push(observer);
+    });
+
+    return () => {
+      observers.forEach(observer => observer.disconnect());
+    };
+  }, [arrayImages]); */
+
   return (
     <article className='post-image' ref={postImageRef}>
       {randomSong && (
         <audio ref={audioRef} src={randomSong} loop preload='auto' />
       )}
 
-      <section className='layer-1-post-image'>
+      <section className='layer-1-post-image' ref={layerOfImagesRef}>
         {arrayImages?.map((src, i) => (
-          <>
-            <img
-              key={i}
-              src={src}
-              alt='image'
-              draggable='false'
-              onClick={handleAudioToggle}
-            />
-          </>
+          <img
+            key={`${idPost}-${i}`}
+            src={src}
+            className='layer-img-inner'
+            alt='image'
+            draggable='false'
+            onClick={handleAudioToggle}
+          />
         ))}
       </section>
 
@@ -197,9 +238,10 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
         </article>
 
         {arrayImagesLength > 1 && (
-          <output className='num-of-post'>
-            {0 + 1} / {arrayImagesLength}
-          </output>
+          <NumOfPost
+            arrayImagesLength={arrayImagesLength}
+            currentNumImage={currentNumImage}
+          />
         )}
       </aside>
     </article>

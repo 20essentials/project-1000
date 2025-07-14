@@ -84,6 +84,7 @@
       height: 100%;
       position: relative;
       scroll-snap-align: center;
+      
 
       /* It's important for the Intersection observer */
       margin-bottom: 3px;
@@ -95,6 +96,7 @@
         scroll-snap-type: x mandatory;
         display: flex;
         overflow-x: auto;
+        scroll-behavior: smooth;
 
         &::-webkit-scrollbar {
           width: 1px;
