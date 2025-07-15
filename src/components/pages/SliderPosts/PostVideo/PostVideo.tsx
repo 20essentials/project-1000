@@ -13,6 +13,7 @@ import { UserProfile } from '@/components/pages/SliderPosts/AsideRight/UserProfi
 import { AsideText } from '@/components/pages/SliderPosts/AsideText';
 import { SaveContainer } from '../AsideRight/SaveContainer';
 import { HeartContainer } from '../AsideRight/HeartContainer';
+import { InputRange } from './inputRange';
 
 // interface Props {
 //   postCommonProps: postComonProps;
@@ -27,6 +28,7 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   );
   const setLimit = useLimitOfPost(state => state.setLimit);
   const offsetOfPosts = useLimitOfPost(state => state.offsetOfPosts);
+  
 
   const {
     videoSrc,
@@ -122,6 +124,8 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
     };
   }, []);
 
+
+
   return (
     <aside className='post-video' ref={postVideoRef}>
       <video src={videoSrc} ref={videoRef} loop onClick={handlePlayVideo}></video>
@@ -164,6 +168,8 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
       {isPaused && (
         <PlayButton className='play-btn' handlePlayVideo={handlePlayVideo} />
       )}
+
+      <InputRange videoRef={videoRef} />
     </aside>
   );
 }

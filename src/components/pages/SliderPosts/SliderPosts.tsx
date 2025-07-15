@@ -6,6 +6,7 @@ import { useEffect, useRef } from 'react';
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
 import { useMemo } from 'react';
 import { useGlobalArrayPosts } from '@/store/useGlobalArrayPosts';
+import { useSwipeVerticalScroll } from '@/hooks/useSwipeVerticalScroll';
 
 export function SliderPosts() {
   const isForYou = useFollowedOrForYou(state => state.isForYou);
@@ -36,6 +37,7 @@ export function SliderPosts() {
 
   const postsToShow = flattenedPosts.slice(0, limit);
 
+  useSwipeVerticalScroll(sliderRef)
   return (
     <article className='slider-posts'>
       <aside className='slider' ref={sliderRef}>

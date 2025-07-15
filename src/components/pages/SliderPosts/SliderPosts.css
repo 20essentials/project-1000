@@ -304,17 +304,17 @@
       user-select: none;
       min-width: 200px;
       pointer-events: auto;
+      bottom: 15px;
+      padding-bottom: 5px;
 
       &.aside-text-post-image {
         position: absolute;
         left: 0;
-        bottom: 0;
       }
 
       &.aside-text-post-video {
         left: 1px;
         position: absolute;
-        bottom: 1px;
       }
 
       p {
