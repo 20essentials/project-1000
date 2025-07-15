@@ -15,6 +15,8 @@ export function SliderPosts() {
   const ALL_POSTS = isForYou ? FOR_YOU : FOLLOWED;
   const sliderRef = useRef<HTMLDivElement>(null);
   const limit = useLimitOfPost(state => state.limit);
+  const reRenderFollowed = useFollowedOrForYou(state => state.reRenderFollowed);
+  const reRenderForYou = useFollowedOrForYou(state => state.reRenderForYou);
   const flattenedPosts = useMemo(() => {
     const allPostsShuffled = ALL_POSTS.flatMap(([userCommonProps, userPosts]) =>
       userPosts.map(post => ({ ...post, ...userCommonProps }))
@@ -27,7 +29,7 @@ export function SliderPosts() {
     const shuffled = uniquePosts.toSorted(() => Math.random() - 0.5);
 
     return shuffled;
-  }, [ALL_POSTS]);
+  }, [ALL_POSTS, reRenderFollowed, reRenderForYou]);
 
   useEffect(() => {
     if (sliderRef.current) {
@@ -37,7 +39,7 @@ export function SliderPosts() {
 
   const postsToShow = flattenedPosts.slice(0, limit);
 
-  useSwipeVerticalScroll(sliderRef)
+  useSwipeVerticalScroll(sliderRef);
   return (
     <article className='slider-posts'>
       <aside className='slider' ref={sliderRef}>
