@@ -4,12 +4,10 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-//falta userId, profilesrc, prefix
-
 export const mr_rombus_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: '9bfed983-4c2d-4c0a-af65-c407d28a6ea9',
   username: 'mr_rombus',
-  profileImageSrc: '',
+  profileImageSrc: 'https://20essentials.github.io/project-000-940/assets/j5.avif',
   following: false,
   followers: 238_320,
   totalLikes: 580_238,
@@ -17,7 +15,7 @@ export const mr_rombus_commonProps = generateExactlyCommonProps({
   profileDescription: 'SuperCars!'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-202/assets/mr-rombus/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
@@ -159,7 +157,7 @@ const ARRAY_CONTENT: ArrayContent = [
     description: `Check Out 1 of 1 Bugatti Chiron Super Sport`,
     isLiked: false,
     idPost: `${mr_rombus_commonProps.userId}-b8dee4fb-3715-4c10-a916-419d81ea91f4`
-  },
+  }
 ];
 
 export const mr_rombus_array_of_posts = generateArrayPosts({

@@ -138,35 +138,6 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
 
   useSwipeScroll(layerOfImagesRef);
 
-  /*   useEffect(() => {
-    const images = layerOfImagesRef.current?.querySelectorAll(
-      'img.layer-img-inner'
-    );
-    if (!images || images.length === 0) return;
-
-    const observers: IntersectionObserver[] = [];
-
-    images.forEach((img, i) => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setCurrentNumImage(i + 1);
-          }
-        },
-        {
-          threshold: 0.5,
-          root: layerOfImagesRef.current 
-        }
-      );
-
-      observer.observe(img);
-      observers.push(observer);
-    });
-
-    return () => {
-      observers.forEach(observer => observer.disconnect());
-    };
-  }, [arrayImages]); */
 
   return (
     <article className='post-image' ref={postImageRef}>

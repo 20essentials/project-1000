@@ -117,14 +117,14 @@ type ContentImage = {
   type: 'image';
   arrayImages?: string[];
   idPost: string;
-  isLiked: boolean;
+  isLiked?: boolean;
 };
 
 type ContentVideo = {
   type: 'video';
   videoSrc?: string;
   idPost: string;
-  isLiked: boolean;
+  isLiked?: boolean;
 };
 
 type ImageAndVideoCommon = {
@@ -144,7 +144,7 @@ export function generateArrayPosts({
 }): postProps[] {
   return ARRAY_CONTENT.map(content => {
     if (content.type === 'image') {
-      const { arrayImages = [], description, tags, idPost, isLiked } = content;
+      const { arrayImages = [], description, tags, idPost, isLiked = false } = content;
       return generatePostImage({
         arrayImages: arrayImages.map(image => `${PREFIX}${image}`),
         description: description,
@@ -154,7 +154,7 @@ export function generateArrayPosts({
       });
     }
     //Video By Default
-    const { videoSrc, description, tags, idPost, isLiked } = content;
+    const { videoSrc, description, tags, idPost, isLiked = false } = content;
     return generatePostVideo({
       videoSrc: `${PREFIX}${videoSrc}`,
       description: description,

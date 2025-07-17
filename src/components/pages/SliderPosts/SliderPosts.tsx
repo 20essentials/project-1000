@@ -40,6 +40,8 @@ export function SliderPosts() {
   const postsToShow = flattenedPosts.slice(0, limit);
 
   useSwipeVerticalScroll(sliderRef);
+
+  
   return (
     <article className='slider-posts'>
       <aside className='slider' ref={sliderRef}>

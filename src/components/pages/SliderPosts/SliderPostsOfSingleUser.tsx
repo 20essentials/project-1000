@@ -7,6 +7,7 @@ import type { arrayOfPosts } from './types';
 import { useUserCreator } from '@/store/useUserCreator';
 import { useUserSavedPosts } from '@/store/useUserSavedPosts';
 import { useCurrentUser } from '@/store/useCurrentUser';
+import { useSwipeVerticalScroll } from '@/hooks/useSwipeVerticalScroll';
 
 export function SliderPostsOfSingleUser() {
   const user = useCurrentUser(state => state.user);
@@ -37,6 +38,8 @@ export function SliderPostsOfSingleUser() {
   }, [indexOfPost]);
 
   const postsToShow = flattenedPosts.slice(0, indexOfPost + limit);
+
+  useSwipeVerticalScroll(sliderRef);
 
   return (
     <article className='slider-posts'>

@@ -39,6 +39,8 @@ import {
   jorgepomarg_commonProps
 } from './user-12-jorgepomarg';
 import { lucia_sora_array_of_posts, lucia_sora_commonProps } from './user-13-luciasora';
+import { elcodigobravo_array_of_posts, elcodigobravo_commonProps } from './user-14-elcodigo-bravo';
+import { mr_rombus_array_of_posts, mr_rombus_commonProps } from './user-15-mr-rombus';
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
@@ -46,12 +48,13 @@ import { lucia_sora_array_of_posts, lucia_sora_commonProps } from './user-13-luc
 export const PUBLIC_DATA: arrayOfPosts = [
   [midudev_commonProps, midudev_array_of_posts],
   [qbitlab_commonProps, qbitlab_array_of_posts],
+  [mr_rombus_commonProps, mr_rombus_array_of_posts]
+  // [elcodigobravo_commonProps, elcodigobravo_array_of_posts],
   // [lucia_sora_commonProps, lucia_sora_array_of_posts]
   // [luxury_commonProps, luxury_array_of_posts],
   // [marshall_jassan_commonProps, marshall_jassan_array_of_posts],
   // [edaserkanbolat_edits_commonProps, edaserkanbolat_edits_array_of_posts]
   // [jorgepomarg_commonProps, jorgepomarg_array_of_posts],
-
   // [goated_ai_art_commonProps, goated_ai_art_array_of_posts],
   // [ars_notoria_commonProps, ars_notoria_array_of_posts],
   // [mr_lamborghini_commonProps, mr_lamborghini_array_of_posts],
