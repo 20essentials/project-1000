@@ -41,6 +41,7 @@ import {
 import { lucia_sora_array_of_posts, lucia_sora_commonProps } from './user-13-luciasora';
 import { elcodigobravo_array_of_posts, elcodigobravo_commonProps } from './user-14-elcodigo-bravo';
 import { mr_rombus_array_of_posts, mr_rombus_commonProps } from './user-15-mr-rombus';
+import { cata_array_of_posts, cata_commonProps } from './user-16-cata copy';
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
@@ -48,7 +49,8 @@ import { mr_rombus_array_of_posts, mr_rombus_commonProps } from './user-15-mr-ro
 export const PUBLIC_DATA: arrayOfPosts = [
   [midudev_commonProps, midudev_array_of_posts],
   [qbitlab_commonProps, qbitlab_array_of_posts],
-  [mr_rombus_commonProps, mr_rombus_array_of_posts]
+  // [mr_rombus_commonProps, mr_rombus_array_of_posts],
+  // [cata_commonProps, cata_array_of_posts],
   // [elcodigobravo_commonProps, elcodigobravo_array_of_posts],
   // [lucia_sora_commonProps, lucia_sora_array_of_posts]
   // [luxury_commonProps, luxury_array_of_posts],

@@ -4,12 +4,10 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-//falta userId, profilesrc, prefix
-
 export const cata_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: '83918a64-3057-48c9-8797-1c406b800436',
   username: 'cata',
-  profileImageSrc: '',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-203/assets/c4ta/p3rfil.avif',
   following: false,
   followers: 28_720,
   totalLikes: 848_720,
@@ -17,7 +15,7 @@ export const cata_commonProps = generateExactlyCommonProps({
   profileDescription: 'Estudia en Italia'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-203/assets/c4ta/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
