@@ -42,7 +42,7 @@ export function ProfileCreator() {
             <p className='desc'>Likes</p>
           </article>
         </aside>
-        <FollowButton />
+        <FollowButton userId={userId}/>
         <p className='description'>{profileDescription}</p>
         <ArrowLeft className='arrow-left' />
       </aside>

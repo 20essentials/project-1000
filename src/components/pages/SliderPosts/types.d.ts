@@ -1,3 +1,14 @@
+export type postComonProps = {
+  userId: string;
+  username: string;
+  profileImageSrc: string;
+  following: boolean;
+  followers: number;
+  totalLikes: number;
+  followed: number;
+  profileDescription: string;
+};
+
 export type postProps = {
   videoSrc?: string;
   arrayImages?: string[];
@@ -14,16 +25,4 @@ export type postProps = {
   idPost: string;
 };
 
-export type postComonProps = {
-  userId: string;
-  username: string;
-  profileImageSrc: string;
-  following: boolean;
-  followers: number;
-  totalLikes: number;
-  followed: number;
-  profileDescription: string;
-};
-
-
-export type arrayOfPosts = [postComonProps, postProps[]][]
+export type arrayOfPosts = [postComonProps, postProps[]][];

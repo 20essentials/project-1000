@@ -5,7 +5,7 @@
   width: 100%;
   pointer-events: auto;
   z-index: 300;
-  height: 13px;
+  height: 9px;
 
   .am-input-range {
     width: 98%;
@@ -13,7 +13,7 @@
     left: 50%;
     position: absolute;
     transform: translateX(-50%);
-    height: 6px;
+    height: 5px;
     bottom: -4px;
     opacity: 0;
     pointer-events: none;

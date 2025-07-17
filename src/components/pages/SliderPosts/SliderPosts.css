@@ -129,6 +129,7 @@
         flex-wrap: wrap;
         place-content: center;
         pointer-events: none;
+        user-select: none;
       }
 
       .container-img-post {
@@ -241,6 +242,10 @@
             transform: translate(-50%, -50%);
             object-fit: cover;
             filter: hue-rotate(90deg);
+
+            &.hiddenBadge {
+              display: none;
+            }
           }
         }
 
@@ -304,7 +309,7 @@
       user-select: none;
       min-width: 200px;
       pointer-events: auto;
-      bottom: 15px;
+      bottom: 11px;
       padding-bottom: 5px;
 
       &.aside-text-post-image {

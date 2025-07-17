@@ -9,6 +9,7 @@ const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 
 import { useCurrentUser } from '@/store/useCurrentUser';
 import { $ } from '@/utils/functions';
+import { FollowCircleButton } from '@/components/pages/SliderPosts/AsideRight/FollowCircleButton';
 
 export function UserProfile({
   profileImageSrc,
@@ -23,9 +24,10 @@ export function UserProfile({
   const user = useCurrentUser(state => state.user);
   if (user == null) return null;
   const theUserId = user.id;
+  const theCreatorOfThisPostIsTheSameUser = userId === theUserId
 
   function nextToProfileCreator() {
-    if (userId === theUserId) {
+    if (theCreatorOfThisPostIsTheSameUser) {
       const $profileUserbutton = $('.wrapper-profile-user') as HTMLElement;
       $profileUserbutton.click();
       return;
@@ -46,12 +48,7 @@ export function UserProfile({
         onClick={nextToProfileCreator}
         alt='User Profile'
       />
-      <img
-        src='/assets/plus.png'
-        draggable='false'
-        alt='Badge'
-        className='badge'
-      />
+      <FollowCircleButton userId={userId} theCreatorOfThisPostIsTheSameUser={theCreatorOfThisPostIsTheSameUser}/>
     </>
   );
 }

@@ -75,13 +75,20 @@
     }
 
     .follow-button {
-      background-color: #fe2b54;
       padding: 9px 20px;
       color: #fff;
       border-radius: 8px;
       font-family: 'Montserrat';
       font-weight: 500;
       transform: scale(0.9);
+
+      &.red {
+        background-color: #fe2b54;
+      }
+
+      &.gray {
+        background-color: #3b3838;
+      }
     }
 
     .description {
@@ -132,7 +139,6 @@
       justify-content: center;
 
       &.aside-nav-active {
-
         svg {
           color: #fff;
           border-color: #fff;

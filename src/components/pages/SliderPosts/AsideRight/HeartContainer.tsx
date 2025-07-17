@@ -4,10 +4,6 @@ import type {
   postProps,
   postComonProps
 } from '@/components/pages/SliderPosts/types.d.ts';
-import {
-  getCommonpropsFromProps,
-  getPostpropsFromProps
-} from '@/utils/functions';
 import { useUserLikedPosts } from '@/store/useUserLikedPosts';
 
 interface Props {
@@ -25,6 +21,9 @@ export function HeartContainer({ hearts, post }: Props) {
   }`;
   const deleteLikedPost = useUserLikedPosts(state => state.deleteLikedPost);
   const addPostInLiked = useUserLikedPosts(state => state.addPostInLiked);
+  const arrayOfLikedPostOfTheUser = useUserLikedPosts(
+    state => state.arrayOfLikedPostOfTheUser
+  );
 
   function likePost() {
     if (thisPostIsLiked) {
@@ -35,9 +34,9 @@ export function HeartContainer({ hearts, post }: Props) {
 
     setThisPostIsLiked(true);
     addPostInLiked({
-      commonProps: getCommonpropsFromProps(post),
-      postProps: getPostpropsFromProps(post),
-      userIdOfCreatorOfThePost: post.idPost
+      username: post.username,
+      idPost: post.idPost,
+      userIdOfCreatorOfThePost: post.userId
     });
   }
 
@@ -48,7 +47,7 @@ export function HeartContainer({ hearts, post }: Props) {
       el => el.idPost === idPost
     );
     setThisPostIsLiked(Boolean(existThispostInSavedPost));
-  }, []);
+  }, [arrayOfLikedPostOfTheUser]);
 
   return (
     <section className={className} onClick={likePost}>

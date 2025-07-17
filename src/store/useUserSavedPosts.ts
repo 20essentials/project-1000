@@ -68,6 +68,7 @@ export const useUserSavedPosts = create<UserSavedPostsState>()(persist((set, get
       setSavePostsOfTheUser,
       getFlattenedSavedPosts
     } = get();
+
     //Verfiicamos si el userIdCreatorNoExiste
     const arrayFlattenedOfPost = getFlattenedSavedPosts();
     const existTheCreatorOfThePost = arrayFlattenedOfPost.find(

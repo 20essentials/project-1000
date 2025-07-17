@@ -22,6 +22,7 @@ export function SaveContainer({ saved, post }: Props) {
   }`;
   const deletePostSaved = useUserSavedPosts(state => state.deletePostSaved);
   const addPostInSaved = useUserSavedPosts(state => state.addPostInSaved);
+  const arrayOfSavedPostOfTheUser = useUserSavedPosts(state => state.arrayOfSavedPostOfTheUser)
   const getFlattenedSavedPosts = useUserSavedPosts(
     state => state.getFlattenedSavedPosts
   );
@@ -37,7 +38,7 @@ export function SaveContainer({ saved, post }: Props) {
     addPostInSaved({
       commonProps: getCommonpropsFromProps(post),
       postProps: getPostpropsFromProps(post),
-      userIdOfCreatorOfThePost: post.idPost
+      userIdOfCreatorOfThePost:  post.userId,
     });
   }
 
@@ -48,7 +49,7 @@ export function SaveContainer({ saved, post }: Props) {
       el => el.idPost === idPost
     );
     setThisPostIsSaved(Boolean(existThispostInSavedPost));
-  }, []);
+  }, [arrayOfSavedPostOfTheUser]);
 
   return (
     <section className={className} onClick={savePost}>
