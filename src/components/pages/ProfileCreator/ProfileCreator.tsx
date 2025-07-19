@@ -4,6 +4,7 @@ import { FollowButton } from '@/components/pages/ProfileCreator/FollowButton';
 import { generateTotalNum } from '@/utils/functions';
 import { GridPosts } from '@/components/pages/ProfileCreator/GridPosts';
 import { ArrowLeft } from '@/components/pages/ProfileCreator/ArrowLeft';
+import { NumFollowed } from './ProfileAndProfileCreatorCommonComponents/NumFollowed';
 
 export function ProfileCreator() {
   const commonProps = useUserCreator(state => state.commonProps);
@@ -29,10 +30,11 @@ export function ProfileCreator() {
         />
         <p className='name-of-the-user'>@{username}</p>
         <aside className='container-data-user'>
-          <article className='tab-data'>
+          {/* <article className='tab-data'>
             <p className='num'>{generateTotalNum(followed)}</p>
             <p className='desc'>Followed</p>
-          </article>
+          </article> */}
+          <NumFollowed followedCount={generateTotalNum(followed)}/>
           <article className='tab-data'>
             <p className='num'>{generateTotalNum(followers)}</p>
             <p className='desc'>Followers</p>

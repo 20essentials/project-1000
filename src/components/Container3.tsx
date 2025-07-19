@@ -10,6 +10,7 @@ import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 import { SliderPostsOfSingleUser } from './pages/SliderPosts/SliderPostsOfSingleUser';
 import { Login } from '@/components/pages/Login/Login';
 import { useCurrentUser } from '@/store/useCurrentUser';
+import { FollowedAndFollow } from '@/components/pages/FollowedAndFollow/FollowedAndFollow';
 
 export function Container3() {
   const user = useCurrentUser(state => state.user);
@@ -17,6 +18,9 @@ export function Container3() {
 
   return (
     <article className='Container3 inner-content'>
+      {IS_ACTIVE_BUTTON.FOLLOWED_AND_FOLLOW_CONTAINER === currenPage && (
+        <FollowedAndFollow />
+      )}
       {(IS_ACTIVE_BUTTON.LOGIN_PAGE === currenPage || !user) && <Login />}
       {IS_ACTIVE_BUTTON.HOME === currenPage && <SliderPosts />}
       {IS_ACTIVE_BUTTON.SEARCH === currenPage && <Search />}
@@ -27,6 +31,7 @@ export function Container3() {
       {IS_ACTIVE_BUTTON.CREATOR_POSTS === currenPage && (
         <SliderPostsOfSingleUser />
       )}
+      {/* *********************THIS MUST BE ALWAYS AT THE END  */}
       {IS_ACTIVE_BUTTON.LOGIN_PAGE !== currenPage && <NavbarBottom />}
     </article>
   );

@@ -1,7 +1,14 @@
 import { useFollowButtonLogic } from '@/hooks/useFollowButtonLogic';
 import { useCurrentUser } from '@/store/useCurrentUser';
+import '@/components/pages/ProfileCreator/FollowButton.css';
 
-export function FollowButton({ userId }: { userId: string }) {
+export function FollowButton({
+  userId,
+  classNameExtra = ''
+}: {
+  userId: string;
+  classNameExtra?: string;
+}) {
   const user = useCurrentUser(state => state.user);
   if (user == null) return null;
   const theUserId = user.id;
@@ -10,11 +17,13 @@ export function FollowButton({ userId }: { userId: string }) {
     userId,
     theCreatorOfThisPostIsTheSameUser
   });
-  const className = `follow-button ${thisUserIsFollowed ? 'gray' : 'red'}`;
+  const className = `follow-button ${classNameExtra} ${
+    thisUserIsFollowed ? 'gray' : 'red'
+  }`;
 
   return (
     <article onClick={followThisUser} className={className}>
-      { thisUserIsFollowed ? 'Unfollow' : 'Follow'}
+      {thisUserIsFollowed ? 'Followed' : 'Follow'}
     </article>
   );
 }

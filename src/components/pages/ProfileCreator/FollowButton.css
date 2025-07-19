@@ -1,0 +1,21 @@
+.follow-button {
+  padding: 9px 20px;
+  color: #fff;
+  border-radius: 8px;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  transform: scale(0.9);
+  cursor: pointer;
+
+  &.followcito {
+    zoom: 0.75;
+  }
+
+  &.red {
+    background-color: #fe2b54;
+  }
+
+  &.gray {
+    background-color: #3b3838;
+  }
+}

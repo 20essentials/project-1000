@@ -22,12 +22,6 @@ export function Phone({ user }: { user: User | null }) {
       setUser(user);
       setPage(IS_ACTIVE_BUTTON.HOME);
       setContainerNum(CONTAINER_IS.INTRO_PAGE);
-      // const { user_array_of_saved_posts } = getUser({
-      //   userId: user.id ?? '',
-      //   profileImageSrc: user?.imageUrl ?? '',
-      //   username: user?.username ?? ''
-      // });
-      // setSavePostsOfTheUser(user_array_of_saved_posts);
     }
   }, [user]);
 

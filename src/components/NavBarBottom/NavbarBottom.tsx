@@ -49,7 +49,8 @@ export function NavbarBottom() {
   }`;
   const profileClass = `logo-profile ${
     currenPage === IS_ACTIVE_BUTTON.PROFILE ||
-    currenPage === IS_ACTIVE_BUTTON.CREATOR_POSTS
+    currenPage === IS_ACTIVE_BUTTON.CREATOR_POSTS ||
+    currenPage === IS_ACTIVE_BUTTON.FOLLOWED_AND_FOLLOW_CONTAINER
       ? 'btn-active'
       : ''
   }`;

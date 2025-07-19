@@ -89,6 +89,7 @@ export function generateTotalNum(num: number) {
       minimumFractionDigits: 1,
       maximumFractionDigits: 1
     })} Mln`;
+  return 0
 }
 
 export function formatTimeHH_MM_SS(seconds: number) {
