@@ -7,9 +7,9 @@ import {
 //falta userId, profilesrc, prefix,
 
 export const pumpkim_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: '3250bb8e-af5b-4e72-9a8e-7e4737f0c138',
   username: 'pumpkim',
-  profileImageSrc: '',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-205/assets/pumpkim/p3rfil.avif',
   following: false,
   followers: 2350,
   totalLikes: 192_320,
@@ -17,7 +17,7 @@ export const pumpkim_commonProps = generateExactlyCommonProps({
   profileDescription: '🎅'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-205/assets/pumpkim/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {

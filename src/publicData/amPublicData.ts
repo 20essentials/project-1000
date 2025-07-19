@@ -42,13 +42,21 @@ import { lucia_sora_array_of_posts, lucia_sora_commonProps } from './user-13-luc
 import { elcodigobravo_array_of_posts, elcodigobravo_commonProps } from './user-14-elcodigo-bravo';
 import { mr_rombus_array_of_posts, mr_rombus_commonProps } from './user-15-mr-rombus';
 import { cata_array_of_posts, cata_commonProps } from './user-16-cata copy';
+import { whoisangenr_array_of_posts, whoisangenr_commonProps } from './user-17-whoisangenr';
+import { pumpkim_array_of_posts, pumpkim_commonProps } from './user-18-pumpkim';
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
 
 export const PUBLIC_DATA: arrayOfPosts = [
+  //testing
   [midudev_commonProps, midudev_array_of_posts],
   [qbitlab_commonProps, qbitlab_array_of_posts],
+  //testing
+
+
+  // [pumpkim_commonProps, pumpkim_array_of_posts],
+  // [whoisangenr_commonProps, whoisangenr_array_of_posts],
   // [mr_rombus_commonProps, mr_rombus_array_of_posts],
   // [cata_commonProps, cata_array_of_posts],
   // [elcodigobravo_commonProps, elcodigobravo_array_of_posts],

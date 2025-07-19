@@ -4,12 +4,10 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-//falta userId, profilesrc, prefix
-
 export const whoisangenr_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: '98469e0a-576a-4ddc-938e-3909549142ab',
   username: 'whoisangenr',
-  profileImageSrc: '',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-204/assets/whoisangenr/p3rfil.avif',
   following: false,
   followers: 28_720,
   totalLikes: 848_720,
@@ -17,7 +15,7 @@ export const whoisangenr_commonProps = generateExactlyCommonProps({
   profileDescription: 'Estudia en Italia'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-204/assets/whoisangenr/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
