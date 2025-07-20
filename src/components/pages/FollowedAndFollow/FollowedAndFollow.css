@@ -79,12 +79,8 @@
       width: 50%;
       color: #e9e9e9;
       padding: 8px;
-      opacity: 0.6;
+      opacity: 1;
       font-size: 12px;
-
-      &.navi-active {
-        opacity: 1;
-      }
     }
   }
 

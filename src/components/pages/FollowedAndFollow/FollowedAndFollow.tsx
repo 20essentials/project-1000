@@ -42,8 +42,10 @@ export function FollowedAndFollow() {
   const followedSection = useRef<HTMLElement | null>(null);
   const followersSection = useRef<HTMLElement | null>(null);
 
-  const { followedClass, followersClass, showFollowed, showFollowers } =
-    useFollowedContainer({ isFollowed: true, followedSection, followersSection });
+  const { showFollowed, showFollowers } = useFollowedContainer({
+    followedSection,
+    followersSection
+  });
 
   return (
     <article className='followed-and-follow-container'>
@@ -98,14 +100,13 @@ export function FollowedAndFollow() {
       </section>
 
       <section className='section-nav'>
-        <button onClick={showFollowed} className={followedClass}>
+        <button onClick={showFollowed} className={`followed navi`}>
           Followed
         </button>
-        <button onClick={showFollowers} className={followersClass}>
+        <button onClick={showFollowers} className={`follower navi`}>
           Followers
         </button>
       </section>
-      
     </article>
   );
 }
