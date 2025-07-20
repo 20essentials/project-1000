@@ -1,7 +1,6 @@
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 
 
-
 export function NumFollowed({
   followedCount = 0
 }: {

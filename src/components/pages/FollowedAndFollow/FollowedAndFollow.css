@@ -1,13 +1,16 @@
 .followed-and-follow-container {
+  --black-bg: #111;
   height: 90%;
-  background-color: #111;
+  background-color: var(--black-bg);
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   --white: #e9e9e9;
+  overflow: hidden;
+  position: relative;
 
-  &::-webkit-scrollbar {
-    width: 4px;
+  /*   &::-webkit-scrollbar {
+    height: 4px;
   }
   &::-webkit-scrollbar-thumb {
     background-color: color-mix(in srgb, var(--white) 50%, transparent 80%);
@@ -17,7 +20,7 @@
 
   &::-webkit-scrollbar-track {
     background: #111;
-  }
+  } */
 
   .section-top {
     height: 38px;
@@ -32,6 +35,9 @@
     padding-bottom: 1px;
     overflow: hidden;
     border-bottom: 1px solid #fff4;
+    position: absolute;
+    top: 0;
+    width: 100%;
 
     * {
       user-select: none;
@@ -40,7 +46,7 @@
 
     .titulin {
       display: flex;
-      transform: translateY(2px);
+      transform: scale(0.9) translateY(2px);
     }
 
     .arrow-left {
@@ -64,25 +70,67 @@
   .section-nav {
     width: 100%;
     display: flex;
-    /* margin-top: 8px; */
+    position: absolute;
+    bottom: 2px;
+    background-color: transparent;
+    background-color: var(--black-bg);
 
     .navi {
       width: 50%;
       color: #e9e9e9;
       padding: 8px;
       opacity: 0.6;
+      font-size: 12px;
 
       &.navi-active {
-        border-bottom: 1px solid #fff;
         opacity: 1;
       }
     }
   }
 
   .section-bottom {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    /* height: calc(100% - 40px); */
+    height: 100%;
+    --white: #e9e9e9;
+
+    &::-webkit-scrollbar {
+      height: 1.8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #e9e9e9;
+      opacity: 0.3;
+      border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  }
+
+  .contenedor-of-rows {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    position: relative;
+    min-width: 100%;
+    scroll-snap-align: center;
+    margin-top: 40px;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: color-mix(in srgb, var(--white) 50%, transparent 80%);
+      opacity: 0.3;
+      border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #111;
+    }
 
     .followed-account-row {
       display: flex;
@@ -91,6 +139,10 @@
       padding-inline: 12px;
       align-items: center;
       justify-content: space-between;
+
+      * {
+        user-select: none;
+      }
 
       .left {
         display: flex;

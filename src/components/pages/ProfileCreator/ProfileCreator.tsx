@@ -7,6 +7,7 @@ import { ArrowLeft } from '@/components/pages/ProfileCreator/ArrowLeft';
 import { NumFollowed } from './ProfileAndProfileCreatorCommonComponents/NumFollowed';
 
 export function ProfileCreator() {
+  
   const commonProps = useUserCreator(state => state.commonProps);
   const arrayOfPosts = useUserCreator(state => state.arrayOfPosts);
 

@@ -15,6 +15,8 @@ import type {
 } from '@/components/pages/SliderPosts/types.d.ts';
 import { useFollowedAccount } from '@/store/useFollowedAccount';
 import { FollowButton } from '../ProfileCreator/FollowButton';
+import { useRef } from 'react';
+import { useFollowedContainer } from '@/hooks/useFollowedContainer';
 const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
 const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
@@ -33,10 +35,15 @@ export function FollowedAndFollow() {
         arrayOfFollowedAccountsIds.includes(el[0].userId)
       ).map(el => el[0])
     : arrayOfRandomRandomFollowed;
-  console.log(arrayOfFollowedAccounts);
   //con los followed es diferente
   //Pero con los following es igual tanto para un creator aleatorio y el mismo usuario.
   //En UserProfile se puede ir a un perfil solo con el Id
+
+  const followedSection = useRef<HTMLElement | null>(null);
+  const followersSection = useRef<HTMLElement | null>(null);
+
+  const { followedClass, followersClass, showFollowed, showFollowers } =
+    useFollowedContainer({ isFollowed: true, followedSection, followersSection });
 
   return (
     <article className='followed-and-follow-container'>
@@ -45,28 +52,60 @@ export function FollowedAndFollow() {
         <h3 className='titulin'>{username}</h3>
         <img src={urlFirework} alt='firework' className='firework' />
       </header>
-      <section className='section-nav'>
-        <button className='followed navi navi-active'>Followed</button>
-        <button className='followed navi'>Followers</button>
-      </section>
 
       <section className='section-bottom'>
-        {arrayOfFollowedAccounts.map((el, index) => {
-          return (
-            <div key={index} className='followed-account-row'>
-              <aside className='left'>
-                <img
-                  src={el.profileImageSrc}
-                  alt={`${el.username}'s profile`}
-                  className='profile-image'
-                />
-                <h4 className='username'>{el.username}</h4>
-              </aside>
-              <FollowButton classNameExtra='followcito' userId={el.userId} />
-            </div>
-          );
-        })}
+        <section
+          className='contenedor-of-rows followed-section-bottom'
+          ref={followedSection}
+        >
+          {arrayOfFollowedAccounts.map((el, index) => {
+            return (
+              <div key={index} className='followed-account-row'>
+                <aside className='left'>
+                  <img
+                    src={el.profileImageSrc}
+                    alt={`${el.username}'s profile`}
+                    className='profile-image'
+                  />
+                  <h4 className='username'>{el.username}</h4>
+                </aside>
+                <FollowButton classNameExtra='followcito' userId={el.userId} />
+              </div>
+            );
+          })}
+        </section>
+        <section
+          className='contenedor-of-rows followers-section-bottom'
+          ref={followersSection}
+        >
+          {/* Cambiar esto por following luego */}
+          {arrayOfFollowedAccounts.map((el, index) => {
+            return (
+              <div key={index} className='followed-account-row'>
+                <aside className='left'>
+                  <img
+                    src={el.profileImageSrc}
+                    alt={`${el.username}'s profile`}
+                    className='profile-image'
+                  />
+                  <h4 className='username'>{el.username}</h4>
+                </aside>
+                <FollowButton classNameExtra='followcito' userId={el.userId} />
+              </div>
+            );
+          })}
+        </section>
       </section>
+
+      <section className='section-nav'>
+        <button onClick={showFollowed} className={followedClass}>
+          Followed
+        </button>
+        <button onClick={showFollowers} className={followersClass}>
+          Followers
+        </button>
+      </section>
+      
     </article>
   );
 }

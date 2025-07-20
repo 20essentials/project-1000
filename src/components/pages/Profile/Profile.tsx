@@ -8,11 +8,17 @@ import { NavVideosOrSaved } from './NavVideosOrSaved';
 import { GridOfUserSavedPosts } from './GridOfUserSavedPosts';
 
 import { NumFollowed } from '../ProfileCreator/ProfileAndProfileCreatorCommonComponents/NumFollowed';
+import { useFollowedAccount } from '@/store/useFollowedAccount';
 
 export function Profile() {
+  //This is the same User
   const commonProps = useUserCreator(state => state.commonProps);
   const arrayOfPosts = useUserCreator(state => state.arrayOfPosts);
   const showSavedPosts = useUserCreator(state => state.showSavedPosts);
+  const arrayOfFollowedAccounts = useFollowedAccount(
+    state => state.arrayOfFollowedAccounts
+  );
+  const { length: numOfFollowed } = arrayOfFollowedAccounts;
 
   const {
     profileImageSrc,
@@ -34,7 +40,7 @@ export function Profile() {
         />
         <p className='name-of-the-user'>@{username}</p>
         <aside className='container-data-user'>
-          <NumFollowed followedCount={generateTotalNum(followed)} />
+          <NumFollowed followedCount={generateTotalNum(numOfFollowed)} />
           <article className='tab-data'>
             <p className='num'>{generateTotalNum(followers)}</p>
             <p className='desc'>Followers</p>

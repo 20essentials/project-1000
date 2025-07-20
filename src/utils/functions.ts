@@ -3,6 +3,10 @@ import type {
   postComonProps
 } from '@/components/pages/SliderPosts/types.d.ts';
 
+export function baseUrl(path: string) {
+  return new URL(path.replace(/^\/+/, ''), import.meta.env.SITE).toString();
+}
+
 const commonPropsKeys: (keyof postComonProps)[] = [
   'followed',
   'followers',
@@ -53,10 +57,6 @@ export function getPostpropsFromProps(
 export const $ = (el: string) => document.querySelector(el);
 export const $$ = (el: string) => document.querySelectorAll(el);
 
-export function baseUrl(path: string) {
-  return new URL(path.replace(/^\/+/, ''), import.meta.env.SITE).toString();
-}
-
 export function getRandomNumber(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -89,7 +89,7 @@ export function generateTotalNum(num: number) {
       minimumFractionDigits: 1,
       maximumFractionDigits: 1
     })} Mln`;
-  return 0
+  return 0;
 }
 
 export function formatTimeHH_MM_SS(seconds: number) {
