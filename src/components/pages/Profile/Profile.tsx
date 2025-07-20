@@ -19,13 +19,14 @@ export function Profile() {
     state => state.arrayOfFollowedAccounts
   );
   const { length: numOfFollowed } = arrayOfFollowedAccounts;
+  const theTotalLikes = arrayOfPosts.reduce((total, obj) => total + obj.hearts, 0 )
 
   const {
     profileImageSrc,
     username,
-    followed,
+    // followed,
     followers,
-    totalLikes,
+    // totalLikes,
     profileDescription,
     userId
   } = commonProps;
@@ -46,7 +47,7 @@ export function Profile() {
             <p className='desc'>Followers</p>
           </article>
           <article className='tab-data'>
-            <p className='num'>{generateTotalNum(totalLikes)}</p>
+            <p className='num'>{generateTotalNum(theTotalLikes)}</p>
             <p className='desc'>Likes</p>
           </article>
         </aside>
