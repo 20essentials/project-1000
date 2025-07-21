@@ -13,6 +13,7 @@ export function FollowButton({
   if (user == null) return null;
   const theUserId = user.id;
   const theCreatorOfThisPostIsTheSameUser = userId === theUserId;
+  if (theCreatorOfThisPostIsTheSameUser) return null; 
   const { followThisUser, thisUserIsFollowed } = useFollowButtonLogic({
     userId,
     theCreatorOfThisPostIsTheSameUser

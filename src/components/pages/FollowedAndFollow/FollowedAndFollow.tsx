@@ -29,12 +29,55 @@ export function FollowedAndFollow() {
   const arrayOfFollowedAccountsIds = useFollowedAccount(
     state => state.arrayOfFollowedAccounts
   );
-  let arrayOfRandomRandomFollowed: postComonProps[] = [];
+  const existThisUserInFollowed = useFollowedAccount(
+    state => state.existThisUserInFollowed
+  );
+
+  const theCurrentUserFollowThisAccount = existThisUserInFollowed({
+    userId: commonProps.userId
+  });
+  const thecurrentUser = {
+    profileImageSrc: user?.imageUrl,
+    username: user?.username,
+    userId: user?.id
+  };
+  const totalFollowedOfTheUser = commonProps.followed;
+  const totalFollowersOfTheUser = commonProps.followers;
+  const flattenedArrayOfAllPostsCommonProps = ALL_POSTS.map(el => el[0]).filter(
+    el => el.userId !== commonProps.userId
+  );
+  let arrayOfRandomRandomFollowed: postComonProps[] = Array.from(
+    { length: totalFollowedOfTheUser },
+    (_, i) => {
+      const index = i % flattenedArrayOfAllPostsCommonProps.length;
+      return flattenedArrayOfAllPostsCommonProps[index];
+    }
+  );
+
   let arrayOfFollowedAccounts = theUserIsInItsSameProfile
     ? ALL_POSTS.filter(el =>
         arrayOfFollowedAccountsIds.includes(el[0].userId)
       ).map(el => el[0])
     : arrayOfRandomRandomFollowed;
+
+  // let arrayOfFollowers: postComonProps[] = flattenedArrayOfAllPostsCommonProps
+  //   .slice(0, totalFollowersOfTheUser)
+  //   .concat(
+  //     theCurrentUserFollowThisAccount ? [thecurrentUser as postComonProps] : []
+  //   )
+  //   .toReversed();
+
+  let arrayOfFollowers: postComonProps[] = Array.from(
+    { length: totalFollowersOfTheUser },
+    (_, i) => {
+      const index = i % flattenedArrayOfAllPostsCommonProps.length;
+      if (i === totalFollowersOfTheUser - 1 && theCurrentUserFollowThisAccount) {
+        return thecurrentUser as postComonProps;
+      }
+      return flattenedArrayOfAllPostsCommonProps[index];
+    }
+  ).toReversed();
+
   //con los followed es diferente
   //Pero con los following es igual tanto para un creator aleatorio y el mismo usuario.
   //En UserProfile se puede ir a un perfil solo con el Id
@@ -62,7 +105,7 @@ export function FollowedAndFollow() {
         >
           {arrayOfFollowedAccounts.map((el, index) => {
             return (
-              <div key={index} className='followed-account-row'>
+              <div key={`${el.userId}-${index}`} className='followed-account-row'>
                 <aside className='left'>
                   <img
                     src={el.profileImageSrc}
@@ -81,9 +124,9 @@ export function FollowedAndFollow() {
           ref={followersSection}
         >
           {/* Cambiar esto por following luego */}
-          {arrayOfFollowedAccounts.map((el, index) => {
+          {arrayOfFollowers.map((el, index) => {
             return (
-              <div key={index} className='followed-account-row'>
+              <div key={`${el.userId}-${index}`} className='followed-account-row'>
                 <aside className='left'>
                   <img
                     src={el.profileImageSrc}

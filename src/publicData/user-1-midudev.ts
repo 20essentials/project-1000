@@ -9,9 +9,11 @@ export const midudev_commonProps = generateExactlyCommonProps({
   username: 'midudev',
   profileImageSrc: 'https://dominicnikolai.github.io/project-208/assets/m1dudev/p3rfil.avif',
   following: false,
-  followers: 323_302,
+  // followers: 323_302,
+  followers: 8,
   totalLikes: 6_800_000,
-  followed: 38,
+  // followed: 38,
+  followed: 8,
   profileDescription:
     '👨‍💻 Programación Web con JavaScript Cursos, Tutoriales, Trucos y Consejos'
 });
