@@ -47,7 +47,7 @@ export function getUser({
   username: string;
 }): {
   user_commonProps: postComonProps;
-  user_array_of_posts: postProps[];
+  user_array_of_posts: postProps[] ;
   user_array_of_saved_posts: arrayOfPosts;
   flattened_saved_post: (postComonProps & postProps)[];
   user_array_of_liked_posts: arrayOfPosts;
@@ -75,11 +75,18 @@ export function getUser({
 
   return {
     user_commonProps,
-    user_array_of_posts,
+    user_array_of_posts: user_array_of_posts,
     user_array_of_saved_posts,
     flattened_saved_post,
     user_array_of_liked_posts
   };
+  
+  // return {
+  //   user_commonProps,
+  //   user_array_of_posts: [],
+  //   user_array_of_saved_posts,
+  //   flattened_saved_post,
+  //   user_array_of_liked_posts
+  // };
 
-  // return [user_commonProps, [], user_array_of_saved_posts, flattened_saved_post];
 }

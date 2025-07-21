@@ -19,6 +19,7 @@ export function GridPosts({
   // Referencias para los últimos 3 posts visibles
   const lastThreeRefs = useRef<(HTMLDivElement | null)[]>([]);
 
+
   // Callback para IntersectionObserver de los últimos 3 posts visibles
   const onIntersect: IntersectionObserverCallback = entries => {
     entries.forEach(entry => {

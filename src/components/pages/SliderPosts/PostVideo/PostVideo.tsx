@@ -14,6 +14,8 @@ import { AsideText } from '@/components/pages/SliderPosts/AsideText';
 import { SaveContainer } from '../AsideRight/SaveContainer';
 import { HeartContainer } from '../AsideRight/HeartContainer';
 import { InputRange } from './inputRange';
+import { CommentsContainer } from '../AsideRight/CommentsContainer';
+import { ShareContainer } from '../AsideRight/ShareContainer';
 
 // interface Props {
 //   postCommonProps: postComonProps;
@@ -28,7 +30,6 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   );
   const setLimit = useLimitOfPost(state => state.setLimit);
   const offsetOfPosts = useLimitOfPost(state => state.offsetOfPosts);
-  
 
   const {
     videoSrc,
@@ -124,8 +125,6 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
     };
   }, []);
 
-
-
   return (
     <aside className='post-video' ref={postVideoRef}>
       <video src={videoSrc} ref={videoRef} loop onClick={handlePlayVideo}></video>
@@ -137,15 +136,9 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
           <UserProfile profileImageSrc={profileImageSrc} userId={userId} />
         </section>
         <HeartContainer hearts={hearts} post={props} />
-        <section className='button-container'>
-          <Comments />
-          <span className='count'>{comments}</span>
-        </section>
+        <CommentsContainer comments={comments} post={props} />
         <SaveContainer saved={saved} post={props} />
-        <section className='button-container'>
-          <Share />
-          <span className='count'>{shared}</span>
-        </section>
+        <ShareContainer shared={shared} post={props}/>
         <section className='button-container btn-container-vinyl'>
           <img className='vinyl' src={baseUrl('/assets/vinyl.png')} alt='Vinyl' />
           <img

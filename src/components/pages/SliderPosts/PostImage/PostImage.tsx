@@ -17,6 +17,8 @@ import { HeartContainer } from '@/components/pages/SliderPosts/AsideRight/HeartC
 import { useSwipeScroll } from '@/hooks/useSwipeScroll';
 import { NumOfPost } from './NumOfPost';
 import { useTrackVisibleImage } from '@/hooks/useTrackVisibleImage';
+import { CommentsContainer } from '../AsideRight/CommentsContainer';
+import { ShareContainer } from '../AsideRight/ShareContainer';
 
 export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const {
@@ -138,7 +140,6 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
 
   useSwipeScroll(layerOfImagesRef);
 
-
   return (
     <article className='post-image' ref={postImageRef}>
       {randomSong && (
@@ -184,15 +185,9 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
             <UserProfile profileImageSrc={profileImageSrc} userId={userId} />
           </section>
           <HeartContainer hearts={hearts} post={props} />
-          <section className='button-container'>
-            <Comments />
-            <span className='count'>{comments}</span>
-          </section>
+          <CommentsContainer comments={comments} post={props} />
           <SaveContainer saved={saved} post={props} />
-          <section className='button-container'>
-            <Share />
-            <span className='count'>{shared}</span>
-          </section>
+          <ShareContainer shared={shared} post={props} />
           <section className='button-container btn-container-vinyl'>
             <img
               className='vinyl'

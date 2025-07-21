@@ -6,6 +6,7 @@ import type {
 } from '@/components/pages/SliderPosts/types.d.ts';
 import { useUserSavedPosts } from '@/store/useUserSavedPosts';
 import {
+  generateNumOfAsideRight,
   getCommonpropsFromProps,
   getPostpropsFromProps
 } from '@/utils/functions';
@@ -54,7 +55,7 @@ export function SaveContainer({ saved, post }: Props) {
   return (
     <section className={className} onClick={savePost}>
       <Save />
-      <span className='count'>{saved}</span>
+      <span className='count'>{generateNumOfAsideRight(saved)}</span>
     </section>
   );
 }
