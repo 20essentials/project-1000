@@ -7,7 +7,7 @@ import {
 export const midudev_commonProps = generateExactlyCommonProps({
   userId: '21a87f69-c341-492f-a156-47588fd606dd6',
   username: 'midudev',
-  profileImageSrc: 'https://avatars.githubusercontent.com/u/1561955?v=4',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-208/assets/m1dudev/p3rfil.avif',
   following: false,
   followers: 323_302,
   totalLikes: 6_800_000,
@@ -16,7 +16,7 @@ export const midudev_commonProps = generateExactlyCommonProps({
     '👨‍💻 Programación Web con JavaScript Cursos, Tutoriales, Trucos y Consejos'
 });
 
-const PREFIX = 'https://mysupercoolprojects.github.io/repo-7/assets/m1dudev/';
+const PREFIX = 'https://dominicnikolai.github.io/project-208/assets/m1dudev/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {

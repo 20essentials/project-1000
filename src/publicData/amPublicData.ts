@@ -44,17 +44,24 @@ import { mr_rombus_array_of_posts, mr_rombus_commonProps } from './user-15-mr-ro
 import { cata_array_of_posts, cata_commonProps } from './user-16-cata copy';
 import { whoisangenr_array_of_posts, whoisangenr_commonProps } from './user-17-whoisangenr';
 import { pumpkim_array_of_posts, pumpkim_commonProps } from './user-18-pumpkim';
+import { gregorian_array_of_posts, gregorian_commonProps } from './user-19-gregorian';
+import { milan_cars_array_of_posts, milan_cars_commonProps } from './user-20-milan-cars';
+import { francesco_viaggi_array_of_posts, francesco_viaggi_commonProps } from './user-21-francesco-viaggi';
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
 
 export const PUBLIC_DATA: arrayOfPosts = [
   //testing
-  [midudev_commonProps, midudev_array_of_posts],
-  [qbitlab_commonProps, qbitlab_array_of_posts],
+  [midudev_commonProps, midudev_array_of_posts], //esto no existe abajo
+  [qbitlab_commonProps, qbitlab_array_of_posts], //esto no existe abajo
+  [gregorian_commonProps, [gregorian_array_of_posts[0]]], //esto si existe abajo
   //testing
-
-
+  
+  
+  // [francesco_viaggi_commonProps, francesco_viaggi_array_of_posts],
+  // [milan_cars_commonProps, milan_cars_array_of_posts],
+  // [gregorian_commonProps, gregorian_array_of_posts],
   // [pumpkim_commonProps, pumpkim_array_of_posts],
   // [whoisangenr_commonProps, whoisangenr_array_of_posts],
   // [mr_rombus_commonProps, mr_rombus_array_of_posts],

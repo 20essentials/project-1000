@@ -7,17 +7,18 @@ import {
 //falta userId, profilesrc, prefix, profileDescription
 
 export const gregorian_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: 'dca8f935-8dab-4c0c-815c-615e2169770a',
   username: 'gregorian',
-  profileImageSrc: '',
+  profileImageSrc:
+    'https://dominicnikolai.github.io/project-206/assets/gregorian/f1.avif',
   following: false,
   followers: 222_720,
   totalLikes: 9_700_320,
   followed: 1135,
-  profileDescription: ''
+  profileDescription: '😎'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-206/assets/gregorian/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
@@ -128,7 +129,7 @@ const ARRAY_CONTENT: ArrayContent = [
   {
     type: 'video',
     videoSrc: 'v15.mp4',
-       tags: ['ibiza', 'obeach'],
+    tags: ['ibiza', 'obeach'],
     description: `Ibiza Club`,
     idPost: `${gregorian_commonProps.userId}-9f278864-6362-4e81-a406-fc99443828a1`
   }

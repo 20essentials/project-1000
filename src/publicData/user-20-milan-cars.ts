@@ -4,20 +4,19 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-//falta userId, profilesrc, prefix, profileDescription
-
 export const milan_cars_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: 'a5c08c2a-3a93-41f2-ae54-1957d80dfaf7',
   username: 'milan_cars',
-  profileImageSrc: '',
+  profileImageSrc:
+    'https://dominicnikolai.github.io/project-207/assets/mil4n-c4rs/p3rfil.avif',
   following: false,
   followers: 63_720,
   totalLikes: 4_320_729,
   followed: 120,
-  profileDescription: ''
+  profileDescription: '🏎️'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-207/assets/mil4n-c4rs/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
