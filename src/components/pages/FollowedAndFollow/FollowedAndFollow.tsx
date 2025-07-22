@@ -15,11 +15,13 @@ import type {
 } from '@/components/pages/SliderPosts/types.d.ts';
 import { useFollowedAccount } from '@/store/useFollowedAccount';
 import { FollowButton } from '../ProfileCreator/FollowButton';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useFollowedContainer } from '@/hooks/useFollowedContainer';
+import { RowUser } from './RowUser';
 const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
 const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
+const NUM_OF_ROW_THAT_RENDER_MORE_ROWS = 9;
 
 export function FollowedAndFollow() {
   const commonProps = useUserCreator(state => state.commonProps);
@@ -43,6 +45,12 @@ export function FollowedAndFollow() {
   };
   const totalFollowedOfTheUser = commonProps.followed;
   const totalFollowersOfTheUser = commonProps.followers;
+  const [limit, setLImit] = useState(10);
+
+  function updateLimit() {
+    setLImit(prev => prev + NUM_OF_ROW_THAT_RENDER_MORE_ROWS);
+  }
+
   const flattenedArrayOfAllPostsCommonProps = ALL_POSTS.map(el => el[0]).filter(
     el => el.userId !== commonProps.userId
   );
@@ -103,20 +111,21 @@ export function FollowedAndFollow() {
           className='contenedor-of-rows followed-section-bottom'
           ref={followedSection}
         >
-          {arrayOfFollowedAccounts.map((el, index) => {
+          {arrayOfFollowedAccounts.slice(0, limit).map((el, index) => {
+            const { profileImageSrc, userId, username } = el;
+            const thisRowRenderMorePosts =
+              (index + 1) % NUM_OF_ROW_THAT_RENDER_MORE_ROWS === 0;
             return (
-              <div key={`${el.userId}-${index}`} className='followed-account-row'>
-                <aside className='left'>
-                  <img
-                    src={el.profileImageSrc}
-                    alt={`${el.username}'s profile`}
-                    className='profile-image'
-                  />
-                  <h4 className='username'>{el.username}</h4>
-                </aside>
-                <aside className="current-index-testing">{index + 1}</aside>
-                <FollowButton classNameExtra='followcito' userId={el.userId} />
-              </div>
+              <RowUser
+                index={`${userId}-${index}`}
+                key={`${userId}-${index}`}
+                profileImageSrc={profileImageSrc}
+                userId={userId}
+                i={index}
+                username={username}
+                thisRowRenderMorePosts={thisRowRenderMorePosts}
+                updateLimit={updateLimit}
+              />
             );
           })}
         </section>
@@ -124,21 +133,21 @@ export function FollowedAndFollow() {
           className='contenedor-of-rows followers-section-bottom'
           ref={followersSection}
         >
-          {/* Cambiar esto por following luego */}
-          {arrayOfFollowers.map((el, index) => {
+          {arrayOfFollowers.slice(0, limit).map((el, index) => {
+            const { profileImageSrc, userId, username } = el;
+            const thisRowRenderMorePosts =
+              (index + 1) % NUM_OF_ROW_THAT_RENDER_MORE_ROWS === 0;
             return (
-              <div key={`${el.userId}-${index}`} className='followed-account-row'>
-                <aside className='left'>
-                  <img
-                    src={el.profileImageSrc}
-                    alt={`${el.username}'s profile`}
-                    className='profile-image'
-                  />
-                  <h4 className='username'>{el.username}</h4>
-                </aside>
-                <aside className="current-index-testing">{index + 1}</aside>
-                <FollowButton classNameExtra='followcito' userId={el.userId} />
-              </div>
+              <RowUser
+                index={`${userId}-${index}`}
+                i={index}
+                key={`${userId}-${index}`}
+                profileImageSrc={profileImageSrc}
+                userId={userId}
+                username={username}
+                thisRowRenderMorePosts={thisRowRenderMorePosts}
+                updateLimit={updateLimit}
+              />
             );
           })}
         </section>
