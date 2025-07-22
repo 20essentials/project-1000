@@ -114,6 +114,7 @@ export function FollowedAndFollow() {
                   />
                   <h4 className='username'>{el.username}</h4>
                 </aside>
+                <aside className="current-index-testing">{index + 1}</aside>
                 <FollowButton classNameExtra='followcito' userId={el.userId} />
               </div>
             );
@@ -135,6 +136,7 @@ export function FollowedAndFollow() {
                   />
                   <h4 className='username'>{el.username}</h4>
                 </aside>
+                <aside className="current-index-testing">{index + 1}</aside>
                 <FollowButton classNameExtra='followcito' userId={el.userId} />
               </div>
             );
