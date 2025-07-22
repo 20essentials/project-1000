@@ -47,6 +47,8 @@ import { pumpkim_array_of_posts, pumpkim_commonProps } from './user-18-pumpkim';
 import { gregorian_array_of_posts, gregorian_commonProps } from './user-19-gregorian';
 import { milan_cars_array_of_posts, milan_cars_commonProps } from './user-20-milan-cars';
 import { francesco_viaggi_array_of_posts, francesco_viaggi_commonProps } from './user-21-francesco-viaggi';
+import { ariel_array_of_posts, ariel_commonProps } from './user-22-ariel';
+import { javier_santaolalla_array_of_posts, javier_santaolalla_commonProps } from './user-23-javier-santaolalla';
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
@@ -58,7 +60,8 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [gregorian_commonProps, [gregorian_array_of_posts[0]]], //esto si existe abajo
   //testing
   
-  
+  // [ariel_commonProps, ariel_array_of_posts],
+  // [javier_santaolalla_commonProps, javier_santaolalla_array_of_posts],
   // [francesco_viaggi_commonProps, francesco_viaggi_array_of_posts],
   // [milan_cars_commonProps, milan_cars_array_of_posts],
   // [gregorian_commonProps, gregorian_array_of_posts],

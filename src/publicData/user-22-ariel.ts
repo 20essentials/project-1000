@@ -7,17 +7,17 @@ import {
 //falta userId, profilesrc, prefix, profileDescription
 
 export const ariel_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: '98bf11e8-30e9-4b96-b2be-c08b9d577538',
   username: 'ariel',
-  profileImageSrc: '',
+  profileImageSrc: 'https://20essentials.github.io/project-000-940/assets/j4.avif',
   following: false,
   followers: 4_720,
   totalLikes: 380_715,
   followed: 51,
-  profileDescription: ''
+  profileDescription: 'Maths'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-211/assets/ariel/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {

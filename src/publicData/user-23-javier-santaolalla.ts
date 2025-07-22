@@ -4,20 +4,20 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-//falta userId, profilesrc, prefix, profileDescription
-
 export const javier_santaolalla_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: '6fdf899a-16d5-43bd-848c-181ba4518dae',
   username: 'javier_santaolalla',
-  profileImageSrc: '',
+  profileImageSrc:
+    'https://backend.starmus.com/uploads/person/659_1730721200.jpg',
   following: false,
   followers: 4_800_720,
   totalLikes: 220_720_222,
   followed: 95,
-  profileDescription: ''
+  profileDescription: 'The World...'
 });
 
-const PREFIX = '';
+const PREFIX =
+  'https://dominicnikolai.github.io/project-210/assets/j4vier-s4ntaolalla/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
@@ -30,7 +30,7 @@ const ARRAY_CONTENT: ArrayContent = [
   {
     type: 'video',
     videoSrc: 'v2.mp4',
-    tags:['física' , 'relatividad'],
+    tags: ['física', 'relatividad'],
     description: `Gravedad y relatividad`,
     idPost: `${javier_santaolalla_commonProps.userId}-2a04dc1e-8c3e-4950-92d2-470487e3f8e1`
   },
@@ -66,7 +66,7 @@ const ARRAY_CONTENT: ArrayContent = [
     type: 'video',
     videoSrc: 'v7.mp4',
     description: `Energia`,
-    tags: ["world", "inicio"],
+    tags: ['world', 'inicio'],
     idPost: `${javier_santaolalla_commonProps.userId}-6bcd548d-6371-409b-b7c9-63ee02aae38f`
   },
   {
@@ -154,7 +154,7 @@ const ARRAY_CONTENT: ArrayContent = [
     tags: ['fin', 'vida', 'girar'],
     description: `Giramos alrededor...`,
     idPost: `${javier_santaolalla_commonProps.userId}-b8dee4fb-3715-4c10-a916-419d81ea91f4`
-  },
+  }
 ];
 
 export const javier_santaolalla_array_of_posts = generateArrayPosts({
