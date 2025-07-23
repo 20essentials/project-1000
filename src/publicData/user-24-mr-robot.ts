@@ -7,9 +7,9 @@ import {
 //falta userId, profilesrc, prefix, profileDescription
 
 export const mr_robot_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: 'cff79c90-0788-4b5f-832c-0c31287d364a',
   username: 'mr_robot',
-  profileImageSrc: '',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-212/assets/mr-robot/mr-robot/p3rfil.avif',
   following: false,
   followers: 180_720,
   totalLikes: 720_720,
@@ -17,7 +17,7 @@ export const mr_robot_commonProps = generateExactlyCommonProps({
   profileDescription: '🤖'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-212/assets/mr-robot/mr-robot/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {

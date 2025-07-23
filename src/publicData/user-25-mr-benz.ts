@@ -7,9 +7,9 @@ import {
 //falta userId, profilesrc, prefix, profileDescription
 
 export const mr_benz_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: '0a4d0971-3863-4d1d-bd5e-e72f0898ec4f',
   username: 'mr_benz',
-  profileImageSrc: '',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-213/assets/mr-benz/p3rfil.avif',
   following: false,
   followers: 19_700_200,
   totalLikes: 540_000_710,
@@ -17,7 +17,7 @@ export const mr_benz_commonProps = generateExactlyCommonProps({
   profileDescription: `NEW and Exclusive`
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-213/assets/mr-benz/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
