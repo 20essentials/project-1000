@@ -1,12 +1,16 @@
 import { useCurrentPage, IS_ACTIVE_BUTTON } from '@/store/useCurrentPage';
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
+import { useLastPagedVisited } from '@/store/userLastPageVisited';
 
 export function ArrowLeft({ className }: { className: string }) {
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
-  const resetLimit = useLimitOfPost(state => state.resetLimit)
+  const resetLimit = useLimitOfPost(state => state.resetLimit);
+  const getPenultimatePage = useLastPagedVisited(
+    state => state.getPenultimatePage
+  );
 
   function goToHome() {
-    setCurrentPage(IS_ACTIVE_BUTTON.HOME);
+    setCurrentPage(getPenultimatePage());
     resetLimit();
   }
 

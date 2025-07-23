@@ -11,10 +11,17 @@ import { SliderPostsOfSingleUser } from './pages/SliderPosts/SliderPostsOfSingle
 import { Login } from '@/components/pages/Login/Login';
 import { useCurrentUser } from '@/store/useCurrentUser';
 import { FollowedAndFollow } from '@/components/pages/FollowedAndFollow/FollowedAndFollow';
+import { useEffect } from 'react';
+import { useLastPagedVisited } from '@/store/userLastPageVisited';
 
 export function Container3() {
   const user = useCurrentUser(state => state.user);
   const currenPage = useCurrentPage(state => state.currenPage);
+  const setLastPagedVisited = useLastPagedVisited(st => st.setLastPagedVisited);
+
+  useEffect(() => {
+    setLastPagedVisited(prev => [...prev, currenPage])
+  }, [currenPage])
 
   return (
     <article className='Container3 inner-content'>
