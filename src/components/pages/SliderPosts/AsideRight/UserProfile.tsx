@@ -21,6 +21,8 @@ export function UserProfile({
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
   const setArrayOfPosts = useUserCreator(state => state.setArrayOfPosts);
   const setCommonProps = useUserCreator(state => state.setCommonProps);
+
+  
   const user = useCurrentUser(state => state.user);
   if (user == null) return null;
   const theUserId = user.id;

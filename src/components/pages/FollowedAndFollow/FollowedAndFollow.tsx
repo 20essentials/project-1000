@@ -5,14 +5,14 @@ import type {
 import '@/components/pages/FollowedAndFollow/FollowedAndFollow.css';
 import { ArrowLeft } from '../ProfileCreator/ArrowLeft';
 import { useCurrentUser } from '@/store/useCurrentUser';
-import { baseUrl } from '@/utils/functions';
+import { $, baseUrl } from '@/utils/functions';
 import { useUserCreator } from '@/store/useUserCreator';
-import { PRIVATE_DATA } from '@/privateData/amPrivateData';
-import { PUBLIC_DATA } from '@/publicData/amPublicData';
 import { useFollowedAccount } from '@/store/useFollowedAccount';
 import { useRef, useState } from 'react';
 import { RowUser } from './RowUser';
 import { NavFollowedAndFollow } from './NavFollowedAndFollow';
+import { PRIVATE_DATA } from '@/privateData/amPrivateData';
+import { PUBLIC_DATA } from '@/publicData/amPublicData';
 const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
 const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
@@ -23,6 +23,7 @@ export function FollowedAndFollow() {
   const commonProps = useUserCreator(state => state.commonProps);
   const username = commonProps.username;
   const user = useCurrentUser(state => state.user);
+  const theIdOfTheUserThaisYou = user?.id;
   const theUserIsInItsSameProfile = username === user?.username;
   const arrayOfFollowedAccountsIds = useFollowedAccount(
     state => state.arrayOfFollowedAccounts
@@ -75,10 +76,6 @@ export function FollowedAndFollow() {
     }
   ).toReversed();
 
-  //con los followed es diferente
-  //Pero con los following es igual tanto para un creator aleatorio y el mismo usuario.
-  //En UserProfile se puede ir a un perfil solo con el Id
-
   const followedSection = useRef<HTMLElement | null>(null);
   const followersSection = useRef<HTMLElement | null>(null);
 
@@ -103,12 +100,14 @@ export function FollowedAndFollow() {
               <RowUser
                 index={`${userId}-${index}`}
                 key={`${userId}-${index}`}
+                theIdOfTheUserThaisYou={theIdOfTheUserThaisYou ?? ''}
                 profileImageSrc={profileImageSrc}
                 userId={userId}
                 i={index}
                 username={username}
                 thisRowRenderMorePosts={thisRowRenderMorePosts}
                 updateLimit={updateLimit}
+                theUserIsInItsSameProfile={theUserIsInItsSameProfile}
               />
             );
           })}
@@ -123,6 +122,8 @@ export function FollowedAndFollow() {
               (index + 1) % NUM_OF_ROW_THAT_RENDER_MORE_ROWS === 0;
             return (
               <RowUser
+                theUserIsInItsSameProfile={theUserIsInItsSameProfile}
+                theIdOfTheUserThaisYou={theIdOfTheUserThaisYou ?? ''}
                 index={`${userId}-${index}`}
                 i={index}
                 key={`${userId}-${index}`}
@@ -141,14 +142,6 @@ export function FollowedAndFollow() {
         followedSection={followedSection}
         followersSection={followersSection}
       />
-      {/* <section className='section-nav'>
-        <button onClick={showFollowed} className={`followed navi`}>
-          Followed
-        </button>
-        <button onClick={showFollowers} className={`follower navi`}>
-          Followers
-        </button>
-      </section> */}
     </article>
   );
 }
