@@ -5,6 +5,7 @@ import { generateTotalNum } from '@/utils/functions';
 import { GridPosts } from '@/components/pages/ProfileCreator/GridPosts';
 import { ArrowLeft } from '@/components/pages/ProfileCreator/ArrowLeft';
 import { NumFollowed } from './ProfileAndProfileCreatorCommonComponents/NumFollowed';
+import { NumFollowers } from './ProfileAndProfileCreatorCommonComponents/NumFollowers';
 
 export function ProfileCreator() {
   const commonProps = useUserCreator(state => state.commonProps);
@@ -35,10 +36,7 @@ export function ProfileCreator() {
         <p className='name-of-the-user'>@{username}</p>
         <aside className='container-data-user'>
           <NumFollowed followedCount={generateTotalNum(followed)} />
-          <article className='tab-data'>
-            <p className='num'>{generateTotalNum(followers)}</p>
-            <p className='desc'>Followers</p>
-          </article>
+          <NumFollowers followersCount={generateTotalNum(followers)}/>
           <article className='tab-data'>
             <p className='num'>{generateTotalNum(theTotalLikes)}</p>
             <p className='desc'>Likes</p>

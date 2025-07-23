@@ -1,20 +1,15 @@
-import '@/components/pages/FollowedAndFollow/FollowedAndFollow.css';
-import { ArrowLeft } from '../ProfileCreator/ArrowLeft';
-// import { Logout } from '../Profile/Logout';
-import { useCurrentUser } from '@/store/useCurrentUser';
-import { baseUrl } from '@/utils/functions';
-import { useUserCreator } from '@/store/useUserCreator';
-const urlFirework = baseUrl('/assets/firework.gif');
-
-//New
-import { PRIVATE_DATA } from '@/privateData/amPrivateData';
-import { PUBLIC_DATA } from '@/publicData/amPublicData';
 import type {
   arrayOfPosts,
   postComonProps
 } from '@/components/pages/SliderPosts/types.d.ts';
+import '@/components/pages/FollowedAndFollow/FollowedAndFollow.css';
+import { ArrowLeft } from '../ProfileCreator/ArrowLeft';
+import { useCurrentUser } from '@/store/useCurrentUser';
+import { baseUrl } from '@/utils/functions';
+import { useUserCreator } from '@/store/useUserCreator';
+import { PRIVATE_DATA } from '@/privateData/amPrivateData';
+import { PUBLIC_DATA } from '@/publicData/amPublicData';
 import { useFollowedAccount } from '@/store/useFollowedAccount';
-import { FollowButton } from '../ProfileCreator/FollowButton';
 import { useRef, useState } from 'react';
 import { useFollowedContainer } from '@/hooks/useFollowedContainer';
 import { RowUser } from './RowUser';
@@ -22,6 +17,7 @@ const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
 const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 const NUM_OF_ROW_THAT_RENDER_MORE_ROWS = 9;
+const urlFirework = baseUrl('/assets/firework.gif');
 
 export function FollowedAndFollow() {
   const commonProps = useUserCreator(state => state.commonProps);
@@ -67,13 +63,6 @@ export function FollowedAndFollow() {
         arrayOfFollowedAccountsIds.includes(el[0].userId)
       ).map(el => el[0])
     : arrayOfRandomRandomFollowed;
-
-  // let arrayOfFollowers: postComonProps[] = flattenedArrayOfAllPostsCommonProps
-  //   .slice(0, totalFollowersOfTheUser)
-  //   .concat(
-  //     theCurrentUserFollowThisAccount ? [thecurrentUser as postComonProps] : []
-  //   )
-  //   .toReversed();
 
   let arrayOfFollowers: postComonProps[] = Array.from(
     { length: totalFollowersOfTheUser },

@@ -18,6 +18,7 @@ import {
   qbitlab_array_of_posts,
   qbitlab_commonProps
 } from '@/publicData/user-6-qbitlab';
+import { getRandomNumber } from '@/utils/functions';
 
 /***** just for testing */
 
@@ -36,6 +37,8 @@ export const user_array_of_liked_posts: arrayOfPosts = [
 //   PREFIX,
 //   ARRAY_CONTENT
 // }).toReversed();
+
+const randomNumOfFollowersFirstTime = getRandomNumber(1000, 100_000)
 
 export function getUser({
   userId,
@@ -57,7 +60,7 @@ export function getUser({
     userId,
     username,
     followed: 0,
-    followers: 0,
+    followers: randomNumOfFollowersFirstTime,
     following: false,
     profileDescription: `I'm Batman`,
     totalLikes: 0

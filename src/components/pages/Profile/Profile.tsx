@@ -9,6 +9,7 @@ import { GridOfUserSavedPosts } from './GridOfUserSavedPosts';
 
 import { NumFollowed } from '../ProfileCreator/ProfileAndProfileCreatorCommonComponents/NumFollowed';
 import { useFollowedAccount } from '@/store/useFollowedAccount';
+import { NumFollowers } from '../ProfileCreator/ProfileAndProfileCreatorCommonComponents/NumFollowers';
 
 export function Profile() {
   //This is the same User
@@ -42,10 +43,11 @@ export function Profile() {
         <p className='name-of-the-user'>@{username}</p>
         <aside className='container-data-user'>
           <NumFollowed followedCount={generateTotalNum(numOfFollowed)} />
-          <article className='tab-data'>
+          <NumFollowers followersCount={generateTotalNum(followers)}/>
+          {/* <article className='tab-data'>
             <p className='num'>{generateTotalNum(followers)}</p>
             <p className='desc'>Followers</p>
-          </article>
+          </article> */}
           <article className='tab-data'>
             <p className='num'>{generateTotalNum(theTotalLikes)}</p>
             <p className='desc'>Likes</p>

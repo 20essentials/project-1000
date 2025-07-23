@@ -12,7 +12,7 @@ export const midudev_commonProps = generateExactlyCommonProps({
   // followers: 323_302,
   // followed: 38,
   followers: 30,
-  followed: 30,
+  followed: 20,
   totalLikes: 6_800_000,
   profileDescription:
     '👨‍💻 Programación Web con JavaScript Cursos, Tutoriales, Trucos y Consejos'
