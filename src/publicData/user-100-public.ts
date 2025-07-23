@@ -12,7 +12,6 @@ export const user100_commonProps = generateExactlyCommonProps({
   profileImageSrc: '',
   following: false,
   followers: 238_320,
-  totalLikes: 580_238,
   followed: 50,
   profileDescription: ''
 });

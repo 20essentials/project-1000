@@ -31,7 +31,7 @@ export function generateExactlyCommonProps({
   profileDescription,
   following,
   followers,
-  totalLikes,
+  totalLikes = 0,
   followed
 }: {
   userId: string;
@@ -40,7 +40,7 @@ export function generateExactlyCommonProps({
   profileDescription: string;
   following: boolean;
   followers: number;
-  totalLikes: number;
+  totalLikes?: number;
   followed: number;
 }) {
   return {

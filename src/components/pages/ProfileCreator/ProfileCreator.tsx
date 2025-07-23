@@ -7,9 +7,12 @@ import { ArrowLeft } from '@/components/pages/ProfileCreator/ArrowLeft';
 import { NumFollowed } from './ProfileAndProfileCreatorCommonComponents/NumFollowed';
 
 export function ProfileCreator() {
-  
   const commonProps = useUserCreator(state => state.commonProps);
   const arrayOfPosts = useUserCreator(state => state.arrayOfPosts);
+  const theTotalLikes = arrayOfPosts.reduce(
+    (total, obj) => total + obj.hearts,
+    0
+  );
 
   const {
     profileImageSrc,
@@ -31,21 +34,17 @@ export function ProfileCreator() {
         />
         <p className='name-of-the-user'>@{username}</p>
         <aside className='container-data-user'>
-          {/* <article className='tab-data'>
-            <p className='num'>{generateTotalNum(followed)}</p>
-            <p className='desc'>Followed</p>
-          </article> */}
-          <NumFollowed followedCount={generateTotalNum(followed)}/>
+          <NumFollowed followedCount={generateTotalNum(followed)} />
           <article className='tab-data'>
             <p className='num'>{generateTotalNum(followers)}</p>
             <p className='desc'>Followers</p>
           </article>
           <article className='tab-data'>
-            <p className='num'>{generateTotalNum(totalLikes)}</p>
+            <p className='num'>{generateTotalNum(theTotalLikes)}</p>
             <p className='desc'>Likes</p>
           </article>
         </aside>
-        <FollowButton userId={userId}/>
+        <FollowButton userId={userId} />
         <p className='description'>{profileDescription}</p>
         <ArrowLeft className='arrow-left' />
       </aside>
