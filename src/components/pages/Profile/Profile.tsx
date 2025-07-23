@@ -44,10 +44,6 @@ export function Profile() {
         <aside className='container-data-user'>
           <NumFollowed followedCount={generateTotalNum(numOfFollowed)} />
           <NumFollowers followersCount={generateTotalNum(followers)}/>
-          {/* <article className='tab-data'>
-            <p className='num'>{generateTotalNum(followers)}</p>
-            <p className='desc'>Followers</p>
-          </article> */}
           <article className='tab-data'>
             <p className='num'>{generateTotalNum(theTotalLikes)}</p>
             <p className='desc'>Likes</p>

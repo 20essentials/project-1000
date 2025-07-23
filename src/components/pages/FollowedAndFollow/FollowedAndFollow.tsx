@@ -11,8 +11,8 @@ import { PRIVATE_DATA } from '@/privateData/amPrivateData';
 import { PUBLIC_DATA } from '@/publicData/amPublicData';
 import { useFollowedAccount } from '@/store/useFollowedAccount';
 import { useRef, useState } from 'react';
-import { useFollowedContainer } from '@/hooks/useFollowedContainer';
 import { RowUser } from './RowUser';
+import { NavFollowedAndFollow } from './NavFollowedAndFollow';
 const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
 const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
@@ -82,11 +82,6 @@ export function FollowedAndFollow() {
   const followedSection = useRef<HTMLElement | null>(null);
   const followersSection = useRef<HTMLElement | null>(null);
 
-  const { showFollowed, showFollowers } = useFollowedContainer({
-    followedSection,
-    followersSection
-  });
-
   return (
     <article className='followed-and-follow-container'>
       <header className='section-top'>
@@ -142,14 +137,18 @@ export function FollowedAndFollow() {
         </section>
       </section>
 
-      <section className='section-nav'>
+      <NavFollowedAndFollow
+        followedSection={followedSection}
+        followersSection={followersSection}
+      />
+      {/* <section className='section-nav'>
         <button onClick={showFollowed} className={`followed navi`}>
           Followed
         </button>
         <button onClick={showFollowers} className={`follower navi`}>
           Followers
         </button>
-      </section>
+      </section> */}
     </article>
   );
 }
