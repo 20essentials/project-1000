@@ -14,7 +14,9 @@ function NavbarTopWithHourAndWifi() {
   useEffect(() => {
     const updateHour = () => {
       const now = new Date();
-      setCurrentHour(now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }));
+      setCurrentHour(
+        now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      );
     };
 
     updateHour();
@@ -25,9 +27,10 @@ function NavbarTopWithHourAndWifi() {
 
   return (
     <aside className='navbar-top'>
-      <button className='navbar-top-button hour-and-wifi' ref={hourRef}>{currentHour}</button>
+      <button className='navbar-top-button hour-and-wifi' ref={hourRef}>
+        {currentHour}
+      </button>
       <button className='navbar-top-button hour-and-wifi container-sprites'>
-        {/* iphone-sprite */}
         <div className='iphone-sprite sprite-1'></div>
         <div className='iphone-sprite sprite-2'></div>
         <div className='iphone-sprite sprite-3'></div>
@@ -35,7 +38,6 @@ function NavbarTopWithHourAndWifi() {
     </aside>
   );
 }
-
 
 export function Layer1() {
   const containerNum = useNcontainer(state => state.containerNum);
@@ -48,9 +50,11 @@ export function Layer1() {
           CONTAINER_IS.HOME === containerNum && <NavbarTop />}
         {IS_ACTIVE_BUTTON.HOME !== currenPage &&
           CONTAINER_IS.HOME === containerNum && <NavbarTopWithHourAndWifi />}
+        {CONTAINER_IS.DRAG_AND_DROP_ICON === containerNum && (
+          <NavbarTopWithHourAndWifi />
+        )}
       </aside>
       <section className='container-content'>
-        {/* After prove with an Array */}
         {CONTAINER_IS.DRAG_AND_DROP_ICON === containerNum && <Container1 />}
         {CONTAINER_IS.INTRO_PAGE === containerNum && <Container2 />}
         {CONTAINER_IS.HOME === containerNum && <Container3 />}

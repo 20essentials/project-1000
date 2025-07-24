@@ -12,6 +12,8 @@ export function Container1() {
   const setTransformOrigin = useTransformOrigin(
     state => state.setTransformOrigin
   );
+  const amX = useTransformOrigin(st => st.x)
+  const amY = useTransformOrigin(st => st.y)
 
   function showIntroTikTok() {
     showContainewNum(CONTAINER_IS.INTRO_PAGE);
@@ -28,8 +30,7 @@ export function Container1() {
     let dragStarted = false;
     let startX = 0;
     let startY = 0;
-    const dragThreshold = 3; // px para empezar a arrastrar
-
+    const dragThreshold = 3; 
     const onMouseDown = (e: MouseEvent) => {
       if (!icon.contains(e.target as Node)) return;
 
@@ -124,8 +125,8 @@ export function Container1() {
         onClick={showIntroTikTok} 
         style={{
           position: 'absolute',
-          left: '10px',
-          top: '10px',
+          left: `${amX}px`,
+          top: `${amY}px`,
           cursor: 'grab'
         }}
       >

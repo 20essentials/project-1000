@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { combine } from 'zustand/middleware';
+import { combine, persist } from 'zustand/middleware';
 
 const initialState = {
   x: 16,
@@ -7,7 +7,12 @@ const initialState = {
 };
 
 export const useTransformOrigin = create(
-  combine(initialState, set => ({
-    setTransformOrigin: ({ x, y }: { x: number; y: number }) => set({ x, y })
-  }))
+  persist(
+    combine(initialState, set => ({
+      setTransformOrigin: ({ x, y }: { x: number; y: number }) => set({ x, y })
+    })),
+    {
+      name: 'transform-origin-storage'
+    }
+  )
 );

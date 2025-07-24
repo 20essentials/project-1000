@@ -3,12 +3,12 @@ import { $ } from '@/utils/functions';
 export function Logout() {
   function handleLogout() {
     const containerModal = $(
-      '.cl-userButtonTrigger.cl-button.cl-internal-1gxsji4'
+      'button.cl-userButtonTrigger.cl-button[aria-label="Open user button"]'
     ) as HTMLElement;
     containerModal.click();
     let timeout = setTimeout(() => {
       const logoutButton = $(
-        '.cl-userButtonPopoverActionButton.cl-button.cl-userButtonPopoverActionButton__signOut.cl-button__signOut.cl-internal-w46wub'
+        'button.cl-userButtonPopoverActionButton.cl-button.cl-userButtonPopoverActionButton__signOut.cl-button__signOut[role="menuitem"]'
       ) as HTMLElement;
       logoutButton.click();
       clearTimeout(timeout);
