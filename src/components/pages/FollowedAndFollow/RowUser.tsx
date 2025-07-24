@@ -19,7 +19,7 @@ interface Props {
   thisRowRenderMorePosts: boolean;
   updateLimit: () => void;
   theUserIsInItsSameProfile: boolean;
-  theIdOfTheUserThaisYou: string
+  theIdOfTheUserThaisYou: string;
 }
 
 export function RowUser({
@@ -39,7 +39,7 @@ export function RowUser({
   const rowRef = useRef<HTMLDivElement | null>(null);
   const setCommonProps = useUserCreator(state => state.setCommonProps);
   const setArrayOfPosts = useUserCreator(state => state.setArrayOfPosts);
-  const setCurrentPage = useCurrentPage(state => state.setCurrentPage)
+  const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
 
   function nextToProfileCreator() {
     if (theIdOfTheUserThaisYou === userId) {
@@ -54,19 +54,16 @@ export function RowUser({
     const [commonPropsUser, arrayPosts] = currentUser || ALL_POSTS[0];
     setCommonProps(commonPropsUser);
     setArrayOfPosts(arrayPosts);
-    
   }
 
-  useEffect(() => {
-    if (!rowRef.current) return;
+   useEffect(() => {
+    if (!rowRef.current || !thisRowRenderMorePosts) return;
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          if (thisRowRenderMorePosts) {
-            updateLimit();
-            if (rowRef.current) observer.unobserve(rowRef?.current);
-          }
+          updateLimit();
+          if (rowRef.current) observer.unobserve(rowRef?.current);
         }
       });
     });
@@ -79,6 +76,7 @@ export function RowUser({
     };
   }, []);
 
+  
   return (
     <div key={index} className='followed-account-row' ref={rowRef}>
       <aside className='left' onClick={nextToProfileCreator}>
@@ -93,7 +91,4 @@ export function RowUser({
       <FollowButton classNameExtra='followcito' userId={userId} />
     </div>
   );
-}
-function setCurrentPage(PROFILE_CREATOR: any) {
-  throw new Error('Function not implemented.');
 }

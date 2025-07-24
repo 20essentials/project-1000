@@ -86,6 +86,22 @@
     margin-top: 40px;
     overflow-y: auto;
 
+    .recommended-accounts {
+      width: 100%;
+      color: #e9e9e9;
+      font-size: 12px;
+      padding: 8px;
+      padding-left: 13px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .info-logo {
+        width: 16px;
+      }
+
+    }
+
     &::-webkit-scrollbar {
       width: 1px;
     }

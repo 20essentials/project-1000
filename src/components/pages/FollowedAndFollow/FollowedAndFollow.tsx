@@ -8,7 +8,7 @@ import { useCurrentUser } from '@/store/useCurrentUser';
 import { baseUrl } from '@/utils/functions';
 import { useUserCreator } from '@/store/useUserCreator';
 import { useFollowedAccount } from '@/store/useFollowedAccount';
-import { useRef, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { NavFollowedAndFollow } from '@/components/pages/FollowedAndFollow/NavFollowedAndFollow';
 import { PRIVATE_DATA } from '@/privateData/amPrivateData';
 import { PUBLIC_DATA } from '@/publicData/amPublicData';
@@ -18,6 +18,7 @@ const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 const NUM_OF_ROW_THAT_RENDER_MORE_ROWS = 9;
 const urlFirework = baseUrl('/assets/firework.gif');
+const MAXIMUM_FOLLOWERS_OR_FOLLOWED = 20_000;
 
 export function FollowedAndFollow() {
   const commonProps = useUserCreator(state => state.commonProps);
@@ -40,8 +41,15 @@ export function FollowedAndFollow() {
     username: user?.username,
     userId: user?.id
   };
-  const totalFollowedOfTheUser = commonProps.followed;
-  const totalFollowersOfTheUser = commonProps.followers;
+  const totalFollowedOfTheUser =
+    commonProps.followed > MAXIMUM_FOLLOWERS_OR_FOLLOWED
+      ? MAXIMUM_FOLLOWERS_OR_FOLLOWED
+      : commonProps.followed;
+  const totalFollowersOfTheUser =
+    commonProps.followers > MAXIMUM_FOLLOWERS_OR_FOLLOWED
+      ? MAXIMUM_FOLLOWERS_OR_FOLLOWED
+      : commonProps.followers;
+
   const [limit, setLImit] = useState(10);
 
   function updateLimit() {

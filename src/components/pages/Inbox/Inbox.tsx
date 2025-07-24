@@ -19,27 +19,31 @@ const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 const NUM_OF_ROW_THAT_RENDER_MORE_ROWS = 9;
 const urlFirework = baseUrl('/assets/tik-tok-animated-logo.gif');
+const infoImg = baseUrl('/assets/info.svg');
 
 export function Inbox() {
   const commonProps = useUserCreator(state => state.commonProps);
+  const arrayOfFollowedAccounts = useFollowedAccount(
+    state => state.arrayOfFollowedAccounts
+  );
   const username = commonProps.username;
   const user = useCurrentUser(state => state.user);
   const theIdOfTheUserThaisYou = user?.id;
   const theUserIsInItsSameProfile = username === user?.username;
-
-  const totalFollowersOfTheUser = commonProps.followers;
   const [limit, setLImit] = useState(10);
 
   function updateLimit() {
     setLImit(prev => prev + NUM_OF_ROW_THAT_RENDER_MORE_ROWS);
   }
 
-  const flattenedArrayOfAllPostsCommonProps = ALL_POSTS.map(el => el[0]).filter(
-    el => el.userId !== commonProps.userId
-  );
+  const flattenedArrayOfAllPostsCommonProps = ALL_POSTS.map(el => el[0])
+    .filter(el => el.userId !== commonProps.userId)
+    .filter(el => !arrayOfFollowedAccounts.includes(el.userId));
 
-  let arrayOfFollowers: postComonProps[] = Array.from(
-    { length: totalFollowersOfTheUser },
+  const { length: LENGTH_ACCOUNTS_AVAILABLE} = flattenedArrayOfAllPostsCommonProps
+
+  let arrayOfReccomendedAccounts: postComonProps[] = Array.from(
+    { length: LENGTH_ACCOUNTS_AVAILABLE },
     (_, i) => {
       const index = i % flattenedArrayOfAllPostsCommonProps.length;
       return flattenedArrayOfAllPostsCommonProps[index];
@@ -58,8 +62,13 @@ export function Inbox() {
 
       <section className='section-bottom'>
         <section className='contenedor-of-rows' ref={followersSection}>
+          <aside className='recommended-accounts'>
+            Recommended accounts{' '}
+            <img className='info-logo' src={infoImg} alt='Info Img' />
+          </aside>
+
           <ListOfUsers
-            arrayOFAccounts={arrayOfFollowers}
+            arrayOFAccounts={arrayOfReccomendedAccounts}
             limit={limit}
             updateLimit={updateLimit}
             theUserIsInItsSameProfile={theUserIsInItsSameProfile}
