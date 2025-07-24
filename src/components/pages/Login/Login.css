@@ -14,6 +14,7 @@
 
   * {
     font-family: Montserrat;
+    user-select: none;
   }
 
   h2 {
