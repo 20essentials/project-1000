@@ -1,4 +1,5 @@
 import { RowUser } from '@/components/pages/FollowedAndFollow/RowUser';
+import type { userId } from '@/store/useFollowedAccount';
 
 interface Accounts {
   profileImageSrc: string;
@@ -13,6 +14,7 @@ interface ListOfUsersProps {
   theUserIsInItsSameProfile: boolean;
   theIdOfTheUserThaisYou?: string;
   NUM_OF_ROW_THAT_RENDER_MORE_ROWS: number;
+  updateFollowedAccountsIds?: (arrayOfIds: userId[]) => void;
 }
 
 const ListOfUsers = ({
@@ -21,7 +23,8 @@ const ListOfUsers = ({
   updateLimit,
   theUserIsInItsSameProfile,
   theIdOfTheUserThaisYou,
-  NUM_OF_ROW_THAT_RENDER_MORE_ROWS
+  NUM_OF_ROW_THAT_RENDER_MORE_ROWS,
+  updateFollowedAccountsIds
 }: ListOfUsersProps) => {
 
   return (
@@ -33,6 +36,7 @@ const ListOfUsers = ({
 
         return (
           <RowUser
+          updateFollowedAccountsIds={updateFollowedAccountsIds}
             index={`${userId}-${index}`}
             key={`${userId}-${index}`}
             theIdOfTheUserThaisYou={theIdOfTheUserThaisYou ?? ''}

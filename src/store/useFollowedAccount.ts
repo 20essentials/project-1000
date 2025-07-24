@@ -4,11 +4,12 @@ import type {
 } from '@/components/pages/SliderPosts/types.d.ts';
 import { persist } from 'zustand/middleware';
 
-type userId = postComonProps['userId'];
+export type userId = postComonProps['userId'];
 
 interface UserLikedPostsState {
   arrayOfFollowedAccounts: userId[];
   addFollowed: ({ userId }: { userId: userId }) => void;
+  getArrayOfFollowedAccounts: () => userId[];
   deleteFollowed: ({ userId }: { userId: userId }) => void;
   existThisUserInFollowed: ({ userId }: { userId: userId }) => boolean;
   setArrayOfFollowedAccounts: ({
@@ -24,6 +25,13 @@ export const useFollowedAccount = create<UserLikedPostsState>()(
       arrayOfFollowedAccounts: [],
       setArrayOfFollowedAccounts: ({ arrayOfFollowedAccounts }) => {
         set({ arrayOfFollowedAccounts });
+      },
+      getArrayOfFollowedAccounts: () => {
+          const {
+          arrayOfFollowedAccounts
+        } = get();
+
+        return window.structuredClone(arrayOfFollowedAccounts);
       },
       addFollowed: ({ userId }) => {
         const {

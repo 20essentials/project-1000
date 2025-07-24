@@ -7,7 +7,7 @@ import { ArrowLeft } from '../ProfileCreator/ArrowLeft';
 import { useCurrentUser } from '@/store/useCurrentUser';
 import { baseUrl } from '@/utils/functions';
 import { useUserCreator } from '@/store/useUserCreator';
-import { useFollowedAccount } from '@/store/useFollowedAccount';
+import { useFollowedAccount, type userId } from '@/store/useFollowedAccount';
 import { useMemo, useRef, useState } from 'react';
 import { NavFollowedAndFollow } from '@/components/pages/FollowedAndFollow/NavFollowedAndFollow';
 import { PRIVATE_DATA } from '@/privateData/amPrivateData';
@@ -26,8 +26,18 @@ export function FollowedAndFollow() {
   const user = useCurrentUser(state => state.user);
   const theIdOfTheUserThaisYou = user?.id;
   const theUserIsInItsSameProfile = username === user?.username;
-  const arrayOfFollowedAccountsIds = useFollowedAccount(
-    state => state.arrayOfFollowedAccounts
+  const getArrayOfFollowedAccounts = useFollowedAccount(
+    state => state.getArrayOfFollowedAccounts
+  );
+
+  function updateFollowedAccountsIds(arrayOfIds: userId[]) {
+    setArrayOfFollowedAccountsIds(arrayOfIds);
+  }
+
+  const [arrayOfFollowedAccountsIds, setArrayOfFollowedAccountsIds] = useState(
+    () => {
+      return getArrayOfFollowedAccounts();
+    }
   );
   const existThisUserInFollowed = useFollowedAccount(
     state => state.existThisUserInFollowed
@@ -116,6 +126,7 @@ export function FollowedAndFollow() {
           <ListOfUsers
             arrayOFAccounts={arrayOfFollowers}
             limit={limit}
+            updateFollowedAccountsIds={updateFollowedAccountsIds}
             updateLimit={updateLimit}
             theUserIsInItsSameProfile={theUserIsInItsSameProfile}
             theIdOfTheUserThaisYou={theIdOfTheUserThaisYou ?? ''}

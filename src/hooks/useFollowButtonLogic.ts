@@ -46,6 +46,7 @@ export function useFollowButtonLogic({
   return {
     className,
     followThisUser,
-    thisUserIsFollowed
+    thisUserIsFollowed,
+    arrayOfFollowedAccounts
   };
 }

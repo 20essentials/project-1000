@@ -6,6 +6,7 @@ import { PRIVATE_DATA } from '@/privateData/amPrivateData';
 import { PUBLIC_DATA } from '@/publicData/amPublicData';
 import type { arrayOfPosts } from '../SliderPosts/types';
 import { $ } from '@/utils/functions';
+import type { userId } from '@/store/useFollowedAccount';
 const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
 const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
@@ -20,6 +21,7 @@ interface Props {
   updateLimit: () => void;
   theUserIsInItsSameProfile: boolean;
   theIdOfTheUserThaisYou: string;
+  updateFollowedAccountsIds?: (arrayOfIds: userId[]) => void;
 }
 
 export function RowUser({
@@ -31,6 +33,7 @@ export function RowUser({
   updateLimit,
   theUserIsInItsSameProfile,
   theIdOfTheUserThaisYou,
+  updateFollowedAccountsIds,
   i
 }: Props) {
   const indiceTestingClassName = `current-index-testing ${
@@ -40,6 +43,7 @@ export function RowUser({
   const setCommonProps = useUserCreator(state => state.setCommonProps);
   const setArrayOfPosts = useUserCreator(state => state.setArrayOfPosts);
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
+  
 
   function nextToProfileCreator() {
     if (theIdOfTheUserThaisYou === userId) {
@@ -88,7 +92,7 @@ export function RowUser({
         <h4 className='username'>{username}</h4>
       </aside>
       <aside className={indiceTestingClassName}>{i + 1}</aside>
-      <FollowButton classNameExtra='followcito' userId={userId} />
+      <FollowButton updateFollowedAccountsIds={updateFollowedAccountsIds} classNameExtra='followcito' userId={userId} />
     </div>
   );
 }
