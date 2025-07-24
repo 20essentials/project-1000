@@ -52,6 +52,7 @@ import { javier_santaolalla_array_of_posts, javier_santaolalla_commonProps } fro
 import { mr_robot_array_of_posts, mr_robot_commonProps } from './user-24-mr-robot';
 import { mr_benz_array_of_posts, mr_benz_commonProps } from './user-25-mr-benz';
 import { about_life_array_of_posts, about_life_commonProps } from './user-27-about-life';
+import { arte_settima_array_of_posts, arte_settima_commonProps } from './user-26-arte-settima';
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
@@ -63,7 +64,8 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [gregorian_commonProps, [gregorian_array_of_posts[0]]], //esto si existe abajo
   //testing
 
-  [about_life_commonProps, about_life_array_of_posts],
+  // [arte_settima_commonProps, arte_settima_array_of_posts],
+  // [about_life_commonProps, about_life_array_of_posts],
   // [mr_benz_commonProps, mr_benz_array_of_posts],
   // [mr_robot_commonProps, mr_robot_array_of_posts],
   // [ariel_commonProps, ariel_array_of_posts],

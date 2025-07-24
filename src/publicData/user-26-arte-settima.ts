@@ -4,12 +4,11 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-//falta userId, profilesrc, prefix, profileDescription
 
 export const arte_settima_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: 'ce0e1e61-b9a7-40c3-98c7-72e2879cf77c',
   username: 'arte_settima',
-  profileImageSrc: '',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-215/assets/arte-settima/p3rfil.avif',
   following: false,
   followers: 122_720,
   totalLikes: 7_328_220,
@@ -17,7 +16,7 @@ export const arte_settima_commonProps = generateExactlyCommonProps({
   profileDescription: 'MASTERS OF CINEMA'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-215/assets/arte-settima/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
