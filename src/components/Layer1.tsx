@@ -50,7 +50,7 @@ export function Layer1() {
           CONTAINER_IS.HOME === containerNum && <NavbarTop />}
         {IS_ACTIVE_BUTTON.HOME !== currenPage &&
           CONTAINER_IS.HOME === containerNum && <NavbarTopWithHourAndWifi />}
-        {CONTAINER_IS.DRAG_AND_DROP_ICON === containerNum && (
+        {(CONTAINER_IS.DRAG_AND_DROP_ICON === containerNum || CONTAINER_IS.INTRO_PAGE === containerNum) && (
           <NavbarTopWithHourAndWifi />
         )}
       </aside>
