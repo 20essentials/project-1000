@@ -7,9 +7,9 @@ import {
 //falta userId, profilesrc, prefix, profileDescription
 
 export const about_life_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: '8b463629-8ec8-4d4a-b32c-89ea36fd67a1',
   username: 'about_life',
-  profileImageSrc: '',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-214/assets/about-life/p3rfil.avif',
   following: false,
   followers: 413_720,
   totalLikes: 10_900_720,
@@ -17,7 +17,7 @@ export const about_life_commonProps = generateExactlyCommonProps({
   profileDescription: '🌍 Descubriendo el mundo laboral'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-214/assets/about-life/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
