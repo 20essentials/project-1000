@@ -7,16 +7,16 @@ import {
 //falta userId, profilesrc, prefix, profileDescription
 
 export const lacosaes_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: 'b5899b16-0eba-4756-854a-4b684bd4118d',
   username: 'lacosaes',
-  profileImageSrc: '',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-218/assets/lacosaes/p3rfil.avif',
   following: false,
   followers: 291_720,
   followed: 143,
   profileDescription: 'Te cuento algo.'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-218/assets/lacosaes/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {

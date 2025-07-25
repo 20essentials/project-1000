@@ -114,22 +114,25 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
     const element = postImageRef.current;
     if (!element) return;
 
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        if (thisPostWillRenderMorePost && !thisPostHasBeenRendered.current) {
-          thisPostHasBeenRendered.current = true;
-          setLimit(prev => prev + offsetOfPosts);
-        }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          if (thisPostWillRenderMorePost && !thisPostHasBeenRendered.current) {
+            thisPostHasBeenRendered.current = true;
+            setLimit(prev => prev + offsetOfPosts);
+          }
 
-        if (!hasInteractedRef.current) return;
-        entry.target.classList.add('visible');
-        if (isPausedRef.current) playAudio();
-      } else {
-        if (!hasInteractedRef.current) return;
-        entry.target.classList.remove('visible');
-        if (!isPausedRef.current) pauseAudio();
-      }
-    });
+          if (!hasInteractedRef.current) return;
+          entry.target.classList.add('visible');
+          if (isPausedRef.current) playAudio();
+        } else {
+          if (!hasInteractedRef.current) return;
+          entry.target.classList.remove('visible');
+          if (!isPausedRef.current) pauseAudio();
+        }
+      },
+      { threshold: 0.9 }
+    );
 
     observer.observe(element);
     return () => {

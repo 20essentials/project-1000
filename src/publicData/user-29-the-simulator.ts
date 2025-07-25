@@ -4,12 +4,11 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-//falta userId, profilesrc, prefix, profileDescription
-
 export const the_simulator_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: '615bb0e7-c976-4c64-898d-f176440946ff',
   username: 'the_simulator',
-  profileImageSrc: '',
+  profileImageSrc:
+    'https://dominicnikolai.github.io/project-217/assets/the-simulator/p3rfil.avif',
   following: false,
   followers: 868_720,
   followed: 362,
@@ -17,7 +16,8 @@ export const the_simulator_commonProps = generateExactlyCommonProps({
     'Life presents info. You listen to all sides, then filter alarmism and trickery.'
 });
 
-const PREFIX = '';
+const PREFIX =
+  'https://dominicnikolai.github.io/project-217/assets/the-simulator/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {

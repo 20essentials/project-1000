@@ -4,7 +4,7 @@ import type {
 } from '@/components/pages/SliderPosts/types.d.ts';
 import { Share } from '@/components/pages/SliderPosts/AsideRight/Share.tsx';
 import { Comments } from '@/components/pages/SliderPosts/AsideRight/Comments.tsx';
-import { baseUrl } from '@/utils/functions';
+import { $$, baseUrl } from '@/utils/functions';
 import { useEffect, useRef, useState } from 'react';
 import { PlayButton } from '@/components/pages/SliderPosts/PostVideo/PlayButton';
 import { userHasInteracted } from '@/store/userHasInteracted';
@@ -97,25 +97,37 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   useEffect(() => {
     if (!postVideoRef.current) return;
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          if (thisPostWillRenderMorePost && !thisPostHasBeenRendered.current) {
-            thisPostHasBeenRendered.current = true;
-            setLimit(prev => prev + offsetOfPosts);
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (thisPostWillRenderMorePost && !thisPostHasBeenRendered.current) {
+              thisPostHasBeenRendered.current = true;
+              setLimit(prev => prev + offsetOfPosts);
+            }
+            if (!hasInteractedRef.current) return;
+            entry.target.classList.add('visible');
+            if (isPausedRef.current) {
+              playVideo();
+            }
+          } else {
+            if (!hasInteractedRef.current) return;
+
+            entry.target.classList.remove('visible');
+            if (!isPausedRef.current) {
+              pauseVideo();
+   /*            const $videos = $$('.am-video-of-post');
+              $videos.forEach(el => {
+                if (el instanceof HTMLVideoElement) {
+                  el.pause();
+                }
+              }); */
+            }
           }
-          if (!hasInteractedRef.current) return;
-          entry.target.classList.add('visible');
-          if (isPausedRef.current) {
-            playVideo();
-          }
-        } else {
-          if (!hasInteractedRef.current) return;
-          entry.target.classList.remove('visible');
-          if (!isPausedRef.current) pauseVideo();
-        }
-      });
-    });
+        });
+      },
+      { threshold: 0.9 }
+    );
 
     observer.observe(postVideoRef.current);
 
@@ -127,7 +139,13 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
 
   return (
     <aside className='post-video' ref={postVideoRef}>
-      <video src={videoSrc} ref={videoRef} loop onClick={handlePlayVideo}></video>
+      <video
+        className='am-video-of-post'
+        src={videoSrc}
+        ref={videoRef}
+        loop
+        onClick={handlePlayVideo}
+      ></video>
 
       {thisPostWillRenderMorePost && <div className='post-image-overlay'></div>}
 
@@ -138,7 +156,7 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
         <HeartContainer hearts={hearts} post={props} />
         <CommentsContainer comments={comments} post={props} />
         <SaveContainer saved={saved} post={props} />
-        <ShareContainer shared={shared} post={props}/>
+        <ShareContainer shared={shared} post={props} />
         <section className='button-container btn-container-vinyl'>
           <img className='vinyl' src={baseUrl('/assets/vinyl.png')} alt='Vinyl' />
           <img

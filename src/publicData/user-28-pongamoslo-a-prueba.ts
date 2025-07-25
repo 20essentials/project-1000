@@ -7,16 +7,16 @@ import {
 //falta userId, profilesrc, prefix, profileDescription
 
 export const pongamoslo_a_prueba_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: 'a02a7ec3-c2bc-4939-ad22-6ae801815182',
   username: 'pongamoslo_a_prueba',
-  profileImageSrc: '',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-216/assets/pong4moslo-a-prueba/p3rfil.avif',
   following: false,
   followers: 46_720_321,
   followed: 982,
   profileDescription: 'Aquí está todo lo que pongo a prueba'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-216/assets/pong4moslo-a-prueba/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
@@ -144,12 +144,12 @@ const ARRAY_CONTENT: ArrayContent = [
     description: `la pijama en la que puedes dibujar y se borra #verdadomentira #pijama`,
     idPost: `${pongamoslo_a_prueba_commonProps.userId}-27c1569a-7950-48dc-9384-079e46448ba5`
   },
-  {
-    type: 'video',
-    videoSrc: 'v19.mp4',
-    description: `Puse a prueba el hacha pala de supervivencia #camping #invento #acampar #gadget`,
-    idPost: `${pongamoslo_a_prueba_commonProps.userId}-8d9b86b2-4f3c-46b3-be0c-4157fecc9ae6`
-  },
+  // {
+  //   type: 'video',
+  //   videoSrc: 'v19.mp4',
+  //   description: `Puse a prueba el hacha pala de supervivencia #camping #invento #acampar #gadget`,
+  //   idPost: `${pongamoslo_a_prueba_commonProps.userId}-8d9b86b2-4f3c-46b3-be0c-4157fecc9ae6`
+  // },
   {
     type: 'video',
     videoSrc: 'v20.mp4',
