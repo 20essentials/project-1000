@@ -93,6 +93,7 @@
       overflow-x: scroll;
       gap: 12px;
       padding: 10px;
+
       &::-webkit-scrollbar {
         height: 1px;
         width: 1px;
@@ -116,24 +117,24 @@
         .history-container-circle {
           width: 48px;
           height: 48px;
-          border-radius: 50%;
+          border-radius: 55%;
           display: flex;
           flex-wrap: wrap;
           place-content: center;
           place-items: center;
           position: relative;
-          aspect-ratio: 1;
 
           &::before {
             content: '';
             position: absolute;
-            top: -6.5%;
-            left: -6.5%;
-            width: 113%;
-            height: 113%;
+            top: -5.5%;
+            left: -5.5%;
+            width: 111%;
+            height: 111%;
             border-radius: inherit;
             background-image: linear-gradient(to right bottom, cyan, lime);
             z-index: 1;
+            aspect-ratio: 1;
           }
 
           img {
@@ -141,6 +142,7 @@
             height: 100%;
             object-fit: cover;
             border-radius: 50%;
+            display: flex;
             border-radius: inherit;
             z-index: 5;
             border: 5px solid #111;

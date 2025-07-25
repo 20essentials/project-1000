@@ -74,9 +74,9 @@ export function Inbox() {
         <section className='contenedor-of-rows' ref={followersSection}>
           <aside className='navbar-of-histories'>
             {arrayOfNavBarHistories.map(
-              ({ profileImageSrc, userId, username }) => {
+              ({ profileImageSrc, userId, username }, i) => {
                 return (
-                  <aside className='history-container'>
+                  <aside className='history-container' key={i}>
                     <article className='history-container-circle'>
                       <img
                         className='history-container-circle-inner'
