@@ -31,7 +31,6 @@ const ARRAY_CONTENT: ArrayContent = [
   Es personalizable y luego te da todo el código que necesitas para tu página.
   ¡Deja tu corazón si te sirve!`,
     idPost: `${midudev_commonProps.userId}-5efd3a2d-55d0-431e-b365-480095f8c1f1`,
-    isLiked: false
   },
   {
     type: 'image',
@@ -39,8 +38,14 @@ const ARRAY_CONTENT: ArrayContent = [
     tags: ['react', 'javascript', 'programacion', 'software', 'programadores'],
     description: `✓ Dar una charla en inglés sobre JavaScript y React ✓ Delante de 1000 personas en Ámsterdam ✓ Tus héroes viéndote desde la primera fila ✓ Y marcarte un live-coding sin problemas El viernes participé en la React Summit para hablar de JavaScript y React. Desarrollé en directo un Global State Manager en 50 líneas de código basado en el código de Zustand. Sin contexto, providers ni estados. ¡Deja un comentario si te gustaría que hiciese un directo para enseñar cómo lo hice! Además pude disfrutar de Amsterdam con la mejor compañía. :)`,
     idPost: `${midudev_commonProps.userId}-3f7bd846-868a-48ad-a93c-c2b5fbf8fb49`,
-    isLiked: false
-  }
+  },
+    {
+    type: 'video',
+    videoSrc: 'v3.mp4',
+    tags: ['python', 'backend'],
+    description: `Pon en tu buscador favorito "replit 100 days python"`,
+    idPost: `${midudev_commonProps.userId}-5efd3a2d-55d0-431e-b365-48papif8c1f1`,
+  },
 ];
 
 // const ARRAY_CONTENT: ArrayContent = [

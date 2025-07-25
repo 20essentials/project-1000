@@ -16,6 +16,7 @@ import { HeartContainer } from '../AsideRight/HeartContainer';
 import { InputRange } from './inputRange';
 import { CommentsContainer } from '../AsideRight/CommentsContainer';
 import { ShareContainer } from '../AsideRight/ShareContainer';
+import { useIsScrolling } from '@/store/useIsScrolling';
 
 // interface Props {
 //   postCommonProps: postComonProps;
@@ -30,6 +31,7 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   );
   const setLimit = useLimitOfPost(state => state.setLimit);
   const offsetOfPosts = useLimitOfPost(state => state.offsetOfPosts);
+  const isScrolling = useIsScrolling(state => state.isScrolling);
 
   const {
     videoSrc,
@@ -61,8 +63,11 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   isPausedRef.current = isPaused;
 
   function playVideo() {
+    if (isScrolling) return; 
     const video = videoRef.current;
     if (!video) return;
+    pauseAllOtherVideos(video);
+
     if (video.paused) {
       video.play();
       setIsPaused(false);
@@ -94,6 +99,17 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
     }
   }
 
+  function pauseAllOtherVideos(currentVideo: HTMLVideoElement) {
+    const videos = document.querySelectorAll<HTMLVideoElement>(
+      'video.am-video-of-post'
+    );
+    videos.forEach(video => {
+      if (video !== currentVideo && !video.paused) {
+        video.pause();
+      }
+    });
+  }
+
   useEffect(() => {
     if (!postVideoRef.current) return;
 
@@ -105,7 +121,7 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
               thisPostHasBeenRendered.current = true;
               setLimit(prev => prev + offsetOfPosts);
             }
-            if (!hasInteractedRef.current) return;
+            if (!hasInteractedRef.current || isScrolling) return;
             entry.target.classList.add('visible');
             if (isPausedRef.current) {
               playVideo();
@@ -116,12 +132,6 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
             entry.target.classList.remove('visible');
             if (!isPausedRef.current) {
               pauseVideo();
-   /*            const $videos = $$('.am-video-of-post');
-              $videos.forEach(el => {
-                if (el instanceof HTMLVideoElement) {
-                  el.pause();
-                }
-              }); */
             }
           }
         });

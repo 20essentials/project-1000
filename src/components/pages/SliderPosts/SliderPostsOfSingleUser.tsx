@@ -1,7 +1,7 @@
 import '@/components/pages/SliderPosts/SliderPosts.css';
 import { PostImage } from '@/components/pages/SliderPosts/PostImage/PostImage';
 import { PostVideo } from '@/components/pages/SliderPosts/PostVideo/PostVideo';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useMemo } from 'react';
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
 import type { arrayOfPosts } from './types';
 import { useUserCreator } from '@/store/useUserCreator';
@@ -9,6 +9,7 @@ import { useUserSavedPosts } from '@/store/useUserSavedPosts';
 import { useCurrentUser } from '@/store/useCurrentUser';
 import { useSwipeVerticalScroll } from '@/hooks/useSwipeVerticalScroll';
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
+import { useIsScrolling } from '@/store/useIsScrolling';
 
 export function SliderPostsOfSingleUser() {
   const user = useCurrentUser(state => state.user);
@@ -21,28 +22,44 @@ export function SliderPostsOfSingleUser() {
     state => state.arrayOfSavedPostOfTheUser
   );
   const isTheSameuser = commonProps.username === usernameOfTheUser;
-  const ALL_POSTS: arrayOfPosts =
-    showSavedPosts && isTheSameuser
-      ? arrayOfSavedPostOfTheUser
-      : [[commonProps, arrayOfPosts]];
+  const showSavedPostOfTheCurrentUser = showSavedPosts && isTheSameuser;
+  const ALL_POSTS: arrayOfPosts = showSavedPostOfTheCurrentUser
+    ? arrayOfSavedPostOfTheUser
+    : [[commonProps, arrayOfPosts]];
   const sliderRef = useRef<HTMLDivElement>(null);
   const limit = useLimitOfPost(state => state.limit);
-  const flattenedPosts = ALL_POSTS.flatMap(([userCommonProps, userPosts]) =>
+  let flattenedPosts = ALL_POSTS.flatMap(([userCommonProps, userPosts]) =>
     userPosts.map(post => ({ ...post, ...userCommonProps }))
   );
   const indexOfPost = useUserCreator(state => state.indexOfPost);
+  const postRefs = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
     if (isTheSameuser && ALL_POSTS.length === 0) {
       setCurrentPage(IS_ACTIVE_BUTTON.PROFILE);
     }
-  }, [isTheSameuser, ALL_POSTS.length, setCurrentPage]);
+  }, [isTheSameuser, ALL_POSTS.length]);
+
+  // const orderedPosts = useMemo(() => {
+  //   const start = flattenedPosts.slice(indexOfPost);
+  //   const end = flattenedPosts.slice(0, indexOfPost);
+  //   return [...start, ...end];
+  // }, [indexOfPost]);
+
+  // const postsToShow = orderedPosts.slice(0, limit);
+
+  const setIsScrolling = useIsScrolling(state => state.setIsScrolling);
 
   useEffect(() => {
     if (sliderRef.current) {
+      setIsScrolling({ isScrolling: true });
       sliderRef.current.children[indexOfPost].scrollIntoView({
         behavior: 'smooth'
       });
+
+      setTimeout(() => {
+        setIsScrolling({ isScrolling: false });
+      }, 300);
     }
   }, [indexOfPost]);
 

@@ -19,6 +19,7 @@ import { NumOfPost } from './NumOfPost';
 import { useTrackVisibleImage } from '@/hooks/useTrackVisibleImage';
 import { CommentsContainer } from '../AsideRight/CommentsContainer';
 import { ShareContainer } from '../AsideRight/ShareContainer';
+import { useIsScrolling } from '@/store/useIsScrolling';
 
 export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const {
@@ -46,7 +47,7 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const postImageRef = useRef<HTMLElement | null>(null);
   const layerOfImagesRef = useRef<HTMLElement | null>(null);
   const thisPostHasBeenRendered = useRef(false);
-
+  const isScrolling = useIsScrolling(state => state.isScrolling);
   const [randomSong, setRandomSong] = useState<string | null>(null);
 
   useEffect(() => {
@@ -78,6 +79,7 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
   function playAudio() {
     const audio = audioRef.current;
     if (!audio) return;
+    if (isScrolling) return;
     if (audio.paused) {
       audio.play();
       setIsPaused(false);
@@ -122,7 +124,7 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
             setLimit(prev => prev + offsetOfPosts);
           }
 
-          if (!hasInteractedRef.current) return;
+          if (!hasInteractedRef.current || isScrolling) return;
           entry.target.classList.add('visible');
           if (isPausedRef.current) playAudio();
         } else {
