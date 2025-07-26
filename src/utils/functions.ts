@@ -54,6 +54,13 @@ export function getPostpropsFromProps(
   ) as postProps;
 }
 
+export function formatUsername(rawUsername: string, maxLength: number): string {
+  const username =  rawUsername.split('_')[0]
+  return username.length >= maxLength
+    ? `${username.slice(0, maxLength - 3)}...`
+    : username;
+}
+
 export const $ = (el: string) => document.querySelector(el);
 export const $$ = (el: string) => document.querySelectorAll(el);
 

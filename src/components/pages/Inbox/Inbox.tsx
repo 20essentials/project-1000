@@ -7,7 +7,7 @@ import type {
 import '@/components/pages/FollowedAndFollow/FollowedAndFollow.css';
 import { ArrowLeft } from '../ProfileCreator/ArrowLeft';
 import { useCurrentUser } from '@/store/useCurrentUser';
-import { baseUrl } from '@/utils/functions';
+import { baseUrl, formatUsername } from '@/utils/functions';
 import { useUserCreator } from '@/store/useUserCreator';
 import { useFollowedAccount } from '@/store/useFollowedAccount';
 import { useRef, useState } from 'react';
@@ -29,7 +29,7 @@ export function Inbox() {
   );
   const [arrayOfFollowedAccounts, setArrayOfFollowedAccount] = useState(() => {
     return getArrayOfFollowedAccounts();
-  })
+  });
   const username = commonProps.username;
   const user = useCurrentUser(state => state.user);
   const theIdOfTheUserThaisYou = user?.id;
@@ -84,11 +84,11 @@ export function Inbox() {
                         alt={`Image Profile of ${username}}`}
                       />
                     </article>
-                    <article className='history-container-description'>
-                      {username.length >= MAX_LENGTH_OF_USERNAME
-                        ? `${username.slice(0, MAX_LENGTH_OF_USERNAME - 3)}...`
-                        : `${username.slice(0, MAX_LENGTH_OF_USERNAME)}`.padEnd(MAX_LENGTH_OF_USERNAME, '.')}
-                    </article>
+                    <aside className='history-container-description'>
+                      <h5>
+                        {formatUsername(username, MAX_LENGTH_OF_USERNAME)}
+                      </h5>
+                    </aside>
                   </aside>
                 );
               }

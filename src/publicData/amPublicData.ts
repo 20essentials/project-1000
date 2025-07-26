@@ -38,24 +38,66 @@ import {
   jorgepomarg_array_of_posts,
   jorgepomarg_commonProps
 } from './user-12-jorgepomarg';
-import { lucia_sora_array_of_posts, lucia_sora_commonProps } from './user-13-luciasora';
-import { elcodigobravo_array_of_posts, elcodigobravo_commonProps } from './user-14-elcodigo-bravo';
-import { mr_rombus_array_of_posts, mr_rombus_commonProps } from './user-15-mr-rombus';
+import {
+  lucia_sora_array_of_posts,
+  lucia_sora_commonProps
+} from './user-13-luciasora';
+import {
+  elcodigobravo_array_of_posts,
+  elcodigobravo_commonProps
+} from './user-14-elcodigo-bravo';
+import {
+  mr_rombus_array_of_posts,
+  mr_rombus_commonProps
+} from './user-15-mr-rombus';
 import { cata_array_of_posts, cata_commonProps } from './user-16-cata copy';
-import { whoisangenr_array_of_posts, whoisangenr_commonProps } from './user-17-whoisangenr';
+import {
+  whoisangenr_array_of_posts,
+  whoisangenr_commonProps
+} from './user-17-whoisangenr';
 import { pumpkim_array_of_posts, pumpkim_commonProps } from './user-18-pumpkim';
-import { gregorian_array_of_posts, gregorian_commonProps } from './user-19-gregorian';
-import { milan_cars_array_of_posts, milan_cars_commonProps } from './user-20-milan-cars';
-import { francesco_viaggi_array_of_posts, francesco_viaggi_commonProps } from './user-21-francesco-viaggi';
+import {
+  gregorian_array_of_posts,
+  gregorian_commonProps
+} from './user-19-gregorian';
+import {
+  milan_cars_array_of_posts,
+  milan_cars_commonProps
+} from './user-20-milan-cars';
+import {
+  francesco_viaggi_array_of_posts,
+  francesco_viaggi_commonProps
+} from './user-21-francesco-viaggi';
 import { ariel_array_of_posts, ariel_commonProps } from './user-22-ariel';
-import { javier_santaolalla_array_of_posts, javier_santaolalla_commonProps } from './user-23-javier-santaolalla';
-import { mr_robot_array_of_posts, mr_robot_commonProps } from './user-24-mr-robot';
+import {
+  javier_santaolalla_array_of_posts,
+  javier_santaolalla_commonProps
+} from './user-23-javier-santaolalla';
+import {
+  mr_robot_array_of_posts,
+  mr_robot_commonProps
+} from './user-24-mr-robot';
 import { mr_benz_array_of_posts, mr_benz_commonProps } from './user-25-mr-benz';
-import { about_life_array_of_posts, about_life_commonProps } from './user-27-about-life';
-import { arte_settima_array_of_posts, arte_settima_commonProps } from './user-26-arte-settima';
-import { pongamoslo_a_prueba_array_of_posts, pongamoslo_a_prueba_commonProps } from './user-28-pongamoslo-a-prueba';
-import { the_simulator_array_of_posts, the_simulator_commonProps } from './user-29-the-simulator';
-import { lacosaes_array_of_posts, lacosaes_commonProps } from './user-30-lacosaes';
+import {
+  about_life_array_of_posts,
+  about_life_commonProps
+} from './user-27-about-life';
+import {
+  arte_settima_array_of_posts,
+  arte_settima_commonProps
+} from './user-26-arte-settima';
+import {
+  pongamoslo_a_prueba_array_of_posts,
+  pongamoslo_a_prueba_commonProps
+} from './user-28-pongamoslo-a-prueba';
+import {
+  the_simulator_array_of_posts,
+  the_simulator_commonProps
+} from './user-29-the-simulator';
+import {
+  lacosaes_array_of_posts,
+  lacosaes_commonProps
+} from './user-30-lacosaes';
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
