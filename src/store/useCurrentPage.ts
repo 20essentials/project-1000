@@ -11,6 +11,7 @@ export const IS_ACTIVE_BUTTON = {
   PROFILE_CREATOR: 6,
   CREATOR_POSTS: 7,
   FOLLOWED_AND_FOLLOW_CONTAINER: 8,
+  STORY: 9,
 };
 
 const initialState = {

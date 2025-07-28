@@ -45,7 +45,9 @@ export function NavbarBottom() {
     currenPage === IS_ACTIVE_BUTTON.UPLOAD ? 'btn-active' : ''
   }`;
   const inboxClass = `logo-inbox ${
-    currenPage === IS_ACTIVE_BUTTON.INBOX ? 'btn-active' : ''
+    currenPage === IS_ACTIVE_BUTTON.INBOX || currenPage === IS_ACTIVE_BUTTON.STORY
+      ? 'btn-active'
+      : ''
   }`;
   const profileClass = `logo-profile ${
     currenPage === IS_ACTIVE_BUTTON.PROFILE ||

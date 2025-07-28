@@ -2,27 +2,19 @@ import type {
   postProps,
   postComonProps
 } from '@/components/pages/SliderPosts/types.d.ts';
-import { Share } from '@/components/pages/SliderPosts/AsideRight/Share.tsx';
-import { Comments } from '@/components/pages/SliderPosts/AsideRight/Comments.tsx';
-import { $$, baseUrl } from '@/utils/functions';
+import { baseUrl } from '@/utils/functions';
 import { useEffect, useRef, useState } from 'react';
 import { PlayButton } from '@/components/pages/SliderPosts/PostVideo/PlayButton';
 import { userHasInteracted } from '@/store/userHasInteracted';
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
 import { UserProfile } from '@/components/pages/SliderPosts/AsideRight/UserProfile';
 import { AsideText } from '@/components/pages/SliderPosts/AsideText';
-import { SaveContainer } from '../AsideRight/SaveContainer';
-import { HeartContainer } from '../AsideRight/HeartContainer';
+import { SaveContainer } from '@/components/pages/SliderPosts/AsideRight/SaveContainer';
+import { HeartContainer } from '@/components/pages/SliderPosts/AsideRight/HeartContainer';
 import { InputRange } from './inputRange';
-import { CommentsContainer } from '../AsideRight/CommentsContainer';
-import { ShareContainer } from '../AsideRight/ShareContainer';
+import { CommentsContainer } from '@/components/pages/SliderPosts/AsideRight/CommentsContainer';
+import { ShareContainer } from '@/components/pages/SliderPosts/AsideRight/ShareContainer';
 import { useIsScrolling } from '@/store/useIsScrolling';
-
-// interface Props {
-//   postCommonProps: postComonProps;
-//   postProps: postProps;
-//   idx: number;
-// }
 
 export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   const hasInteracted = userHasInteracted(state => state.hasInteracted);
@@ -37,7 +29,6 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
     videoSrc,
     description,
     tags,
-    dateOfPublication,
     totalViewsOfThePost,
     hearts,
     comments,
@@ -55,7 +46,6 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   const postVideoRef = useRef<HTMLElement | null>(null);
   const thisPostHasBeenRendered = useRef(false);
 
-  // Mantener refs actualizadas para evitar cierres con valores antiguos
   const hasInteractedRef = useRef(hasInteracted);
   hasInteractedRef.current = hasInteracted;
 
@@ -63,7 +53,7 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   isPausedRef.current = isPaused;
 
   function playVideo() {
-    if (isScrolling) return; 
+    if (isScrolling) return;
     const video = videoRef.current;
     if (!video) return;
     pauseAllOtherVideos(video);

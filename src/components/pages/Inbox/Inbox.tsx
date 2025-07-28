@@ -7,13 +7,14 @@ import type {
 import '@/components/pages/FollowedAndFollow/FollowedAndFollow.css';
 import { ArrowLeft } from '../ProfileCreator/ArrowLeft';
 import { useCurrentUser } from '@/store/useCurrentUser';
-import { baseUrl, formatUsername } from '@/utils/functions';
+import { baseUrl, formatUsername, getRandomNumber } from '@/utils/functions';
 import { useUserCreator } from '@/store/useUserCreator';
 import { useFollowedAccount } from '@/store/useFollowedAccount';
 import { useMemo, useRef, useState } from 'react';
 import { PRIVATE_DATA } from '@/privateData/amPrivateData';
 import { PUBLIC_DATA } from '@/publicData/amPublicData';
 import { ListOfUsers } from '@/components/pages/FollowedAndFollow/ListOfUser';
+import { ArrayOfNavbarStories } from './ArrayOfNavbarStories';
 const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
 const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
@@ -61,8 +62,26 @@ export function Inbox() {
   const arrayOfNavBarHistories = useMemo(() => {
     return flattenedArrayOfAllPosts
       .toSorted(() => Math.random() - 0.5)
-      .slice(0, 20);
+      .slice(0, 20)
+      .map(currentUser => {
+        const user = ALL_POSTS.find(el => el[0].userId === currentUser.userId);
+        if (user) {
+          const posts = user[1];
+          const randomIndex = getRandomNumber(0, posts.length - 1);
+          return {
+            ...currentUser,
+            story: posts[randomIndex]
+          };
+        }
+
+        return currentUser;
+      });
   }, []);
+  // const arrayOfNavBarHistories = useMemo(() => {
+  //   return flattenedArrayOfAllPosts
+  //     .toSorted(() => Math.random() - 0.5)
+  //     .slice(0, 20)
+  // }, []);
 
   return (
     <article className='inbox-container'>
@@ -74,7 +93,8 @@ export function Inbox() {
 
       <section className='section-bottom'>
         <aside className='navbar-of-histories'>
-          {arrayOfNavBarHistories.map(
+          <ArrayOfNavbarStories arrayOfNavBarHistories={arrayOfNavBarHistories} />
+          {/* {arrayOfNavBarHistories.map(
             ({ profileImageSrc, userId, username }, i) => {
               return (
                 <aside className='history-container' key={i}>
@@ -91,7 +111,7 @@ export function Inbox() {
                 </aside>
               );
             }
-          )}
+          )} */}
         </aside>
 
         <aside className='recommended-accounts'>

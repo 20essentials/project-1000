@@ -13,6 +13,7 @@ import { useCurrentUser } from '@/store/useCurrentUser';
 import { FollowedAndFollow } from '@/components/pages/FollowedAndFollow/FollowedAndFollow';
 import { useEffect } from 'react';
 import { useLastPagedVisited } from '@/store/userLastPageVisited';
+import { Story } from './pages/Story/Story';
 
 export function Container3() {
   const user = useCurrentUser(state => state.user);
@@ -37,6 +38,9 @@ export function Container3() {
       {IS_ACTIVE_BUTTON.PROFILE_CREATOR === currenPage && <ProfileCreator />}
       {IS_ACTIVE_BUTTON.CREATOR_POSTS === currenPage && (
         <SliderPostsOfSingleUser />
+      )}
+      {IS_ACTIVE_BUTTON.STORY === currenPage && (
+        <Story />
       )}
       {/* *********************THIS MUST BE ALWAYS AT THE END  */}
       {IS_ACTIVE_BUTTON.LOGIN_PAGE !== currenPage && <NavbarBottom />}
