@@ -71,35 +71,33 @@ export function Inbox() {
       </header>
 
       <section className='section-bottom'>
-        <section className='contenedor-of-rows' ref={followersSection}>
-          <aside className='navbar-of-histories'>
-            {arrayOfNavBarHistories.map(
-              ({ profileImageSrc, userId, username }, i) => {
-                return (
-                  <aside className='history-container' key={i}>
-                    <article className='history-container-circle'>
-                      <img
-                        className='history-container-circle-inner'
-                        src={profileImageSrc}
-                        alt={`Image Profile of ${username}}`}
-                      />
-                    </article>
-                    <aside className='history-container-description'>
-                      <h5>
-                        {formatUsername(username, MAX_LENGTH_OF_USERNAME)}
-                      </h5>
-                    </aside>
+        <aside className='navbar-of-histories'>
+          {arrayOfNavBarHistories.map(
+            ({ profileImageSrc, userId, username }, i) => {
+              return (
+                <aside className='history-container' key={i}>
+                  <article className='history-container-circle'>
+                    <img
+                      className='history-container-circle-inner'
+                      src={profileImageSrc}
+                      alt={`Image Profile of ${username}}`}
+                    />
+                  </article>
+                  <aside className='history-container-description'>
+                    <h5>{formatUsername(username, MAX_LENGTH_OF_USERNAME)}</h5>
                   </aside>
-                );
-              }
-            )}
-          </aside>
+                </aside>
+              );
+            }
+          )}
+        </aside>
 
-          <aside className='recommended-accounts'>
-            Recommended accounts{' '}
-            <img className='info-logo' src={infoImg} alt='Info Img' />
-          </aside>
+        <aside className='recommended-accounts'>
+          Recommended accounts{' '}
+          <img className='info-logo' src={infoImg} alt='Info Img' />
+        </aside>
 
+        <section className='contenedor-of-rows' ref={followersSection}>
           <ListOfUsers
             arrayOFAccounts={arrayOfReccomendedAccounts}
             limit={limit}
