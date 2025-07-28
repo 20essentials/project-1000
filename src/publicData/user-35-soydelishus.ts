@@ -7,16 +7,17 @@ import {
 //falta userId, profilesrc, prefix, profileDescription
 
 export const soy_delishus_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: '3d5a59e2-bb83-4bdd-bec6-119817a3146d',
   username: 'soy_delishus',
-  profileImageSrc: '',
+  profileImageSrc:
+    'https://dominicnikolai.github.io/project-223/assets/soyd3lishus/p3rfil.avif',
   following: false,
   followers: 7_320_740,
   followed: 27,
   profileDescription: 'Todo lo que ves aquí no solo se ve rico, sabe delishus'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-223/assets/soyd3lishus/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
@@ -90,55 +91,7 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v12.mp4',
     description: `La combinación más #delishus la tienes con estas #palomitas y #galletasdechocolate Disfruta 🍿🍪 #cocinacondelishus #Delishers`,
     idPost: `${soy_delishus_commonProps.userId}-b467d312-cb8d-4554-bec0-590590565d77`
-  },
-  {
-    type: 'video',
-    videoSrc: 'v13.mp4',
-    description: ``,
-    idPost: `${soy_delishus_commonProps.userId}-a6a20e67-0771-4112-a915-d4db596daef6`
-  },
-  {
-    type: 'video',
-    videoSrc: 'v14.mp4',
-    description: ``,
-    idPost: `${soy_delishus_commonProps.userId}-43973d48-d59b-4dc7-aaa1-c5e69ea055f7`
-  },
-  {
-    type: 'video',
-    videoSrc: 'v15.mp4',
-    description: ``,
-    idPost: `${soy_delishus_commonProps.userId}-9f278864-6362-4e81-a406-fc99443828a1`
-  },
-  {
-    type: 'video',
-    videoSrc: 'v16.mp4',
-    description: ``,
-    idPost: `${soy_delishus_commonProps.userId}-e8023a99-ae84-46f0-9f6f-133d9cf5b741`
-  },
-  {
-    type: 'video',
-    videoSrc: 'v17.mp4',
-    description: ``,
-    idPost: `${soy_delishus_commonProps.userId}-53b20bf6-9713-4530-aee7-e0b96ba95280`
-  },
-  {
-    type: 'video',
-    videoSrc: 'v18.mp4',
-    description: ``,
-    idPost: `${soy_delishus_commonProps.userId}-27c1569a-7950-48dc-9384-079e46448ba5`
-  },
-  {
-    type: 'video',
-    videoSrc: 'v19.mp4',
-    description: ``,
-    idPost: `${soy_delishus_commonProps.userId}-8d9b86b2-4f3c-46b3-be0c-4157fecc9ae6`
-  },
-  {
-    type: 'video',
-    videoSrc: 'v20.mp4',
-    description: ``,
-    idPost: `${soy_delishus_commonProps.userId}-b8dee4fb-3715-4c10-a916-419d81ea91f4`
-  },
+  }
 ];
 
 export const soy_delishus_array_of_posts = generateArrayPosts({

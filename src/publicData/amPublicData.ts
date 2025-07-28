@@ -102,6 +102,7 @@ import { miguel_araiza_array_of_posts, miguel_araiza_commonProps } from './user-
 import { presocratico_array_of_posts, presocratico_commonProps } from './user-32-presocratico';
 import { eddy_beef_array_of_posts, eddy_beef_commonProps } from './user-33-eddy-beef';
 import { lalobri_array_of_posts, lalobri_commonProps } from './user-34-lalobri';
+import { soy_delishus_array_of_posts, soy_delishus_commonProps } from './user-35-soydelishus';
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
@@ -116,6 +117,7 @@ export const PUBLIC_DATA: arrayOfPosts = [
   // [presocratico_commonProps, presocratico_array_of_posts],
   // [eddy_beef_commonProps, eddy_beef_array_of_posts],
   // [lalobri_commonProps, lalobri_array_of_posts],
+  // [soy_delishus_commonProps, soy_delishus_array_of_posts],
   [pongamoslo_a_prueba_commonProps, pongamoslo_a_prueba_array_of_posts],
   // [miguel_araiza_commonProps, miguel_araiza_array_of_posts],
   // [lacosaes_commonProps, lacosaes_array_of_posts],
