@@ -10,7 +10,7 @@ import { useCurrentUser } from '@/store/useCurrentUser';
 import { baseUrl, formatUsername } from '@/utils/functions';
 import { useUserCreator } from '@/store/useUserCreator';
 import { useFollowedAccount } from '@/store/useFollowedAccount';
-import { useRef, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { PRIVATE_DATA } from '@/privateData/amPrivateData';
 import { PUBLIC_DATA } from '@/publicData/amPublicData';
 import { ListOfUsers } from '@/components/pages/FollowedAndFollow/ListOfUser';
@@ -58,9 +58,11 @@ export function Inbox() {
 
   const followersSection = useRef<HTMLElement | null>(null);
 
-  const arrayOfNavBarHistories = flattenedArrayOfAllPosts
-    .toSorted(() => Math.random() - 0.5)
-    .slice(0, 20);
+  const arrayOfNavBarHistories = useMemo(() => {
+    return flattenedArrayOfAllPosts
+      .toSorted(() => Math.random() - 0.5)
+      .slice(0, 20);
+  }, []);
 
   return (
     <article className='inbox-container'>
