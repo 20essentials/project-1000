@@ -4,19 +4,18 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-//falta userId, profilesrc, prefix, profileDescription
-
 export const arthur_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: '5bcd3ce9-5bff-46b8-894e-bd3936dbc470',
   username: 'arthur',
-  profileImageSrc: '',
+  profileImageSrc:
+    'https://dominicnikolai.github.io/project-224/assets/arthur/p3rfil.avif',
   following: false,
   followers: 105_430,
   followed: 571,
   profileDescription: '🇫🇷'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-224/assets/arthur/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
