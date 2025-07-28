@@ -2,11 +2,9 @@ import type {
   postProps,
   postComonProps
 } from '@/components/pages/SliderPosts/types.d.ts';
-import { Share } from '@/components/pages/SliderPosts/AsideRight/Share.tsx';
-import { Comments } from '@/components/pages/SliderPosts/AsideRight/Comments.tsx';
 import { baseUrl } from '@/utils/functions';
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
-import { useEffect, useRef, useState, type RefObject, Fragment } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ARRAY_OF_SONGS } from '@/utils/arrayOfSongs';
 import { userHasInteracted } from '@/store/userHasInteracted';
 import { PlayButton } from '@/components/pages/SliderPosts/PostVideo/PlayButton';
@@ -15,10 +13,10 @@ import { AsideText } from '@/components/pages/SliderPosts/AsideText';
 import { SaveContainer } from '@/components/pages/SliderPosts/AsideRight/SaveContainer';
 import { HeartContainer } from '@/components/pages/SliderPosts/AsideRight/HeartContainer';
 import { useSwipeScroll } from '@/hooks/useSwipeScroll';
-import { NumOfPost } from './NumOfPost';
+import { NumOfPost } from '@/components/pages/SliderPosts/PostImage/NumOfPost';
 import { useTrackVisibleImage } from '@/hooks/useTrackVisibleImage';
-import { CommentsContainer } from '../AsideRight/CommentsContainer';
-import { ShareContainer } from '../AsideRight/ShareContainer';
+import { CommentsContainer } from '@/components/pages/SliderPosts/AsideRight/CommentsContainer';
+import { ShareContainer } from '@/components/pages/SliderPosts/AsideRight/ShareContainer';
 import { useIsScrolling } from '@/store/useIsScrolling';
 
 export function PostImage(props: postProps & postComonProps & { idx: number }) {
