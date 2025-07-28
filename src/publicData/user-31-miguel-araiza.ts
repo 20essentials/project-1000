@@ -4,19 +4,19 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-//falta userId, profilesrc, prefix, profileDescription
-
 export const miguel_araiza_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: 'c1904f19-54c7-44f5-8ccb-14a063abf53a',
   username: 'miguel_araiza',
-  profileImageSrc: '',
+  profileImageSrc:
+    'https://dominicnikolai.github.io/project-219/assets/m1guel-ar4iza/p3rfil.avif',
   following: false,
   followers: 1_230_720,
   followed: 830,
   profileDescription: 'todo sobre cine y tv 🎬🇲🇽'
 });
 
-const PREFIX = '';
+const PREFIX =
+  'https://dominicnikolai.github.io/project-219/assets/m1guel-ar4iza/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
