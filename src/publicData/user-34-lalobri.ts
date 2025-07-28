@@ -4,19 +4,18 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-//falta userId, profilesrc, prefix, profileDescription
 
 export const lalobri_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: 'a3baa371-b666-40aa-a94b-96028c6541e3',
   username: 'lalobri',
-  profileImageSrc: '',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-222/assets/lalobri/p3rfil.avif',
   following: false,
   followers: 2_720_320,
   followed: 1720,
   profileDescription: 'CEO de los buenos días ✌️'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-222/assets/lalobri/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
@@ -25,12 +24,12 @@ const ARRAY_CONTENT: ArrayContent = [
     description: `Qué bonito recuerdo 😌✨ #fyp #viral #storytime`,
     idPost: `${lalobri_commonProps.userId}-9fd97a84-c39d-4c2e-872f-53eb5fbdfe4e`
   },
-  {
+/*   {
     type: 'video',
     videoSrc: 'v2.mp4',
     description: `$10,000 en TERNURINES en mi bio estára la info del TERNUFEST 14 de Septiembre 👀 #ternurines #ternufest`,
     idPost: `${lalobri_commonProps.userId}-2a04dc1e-8c3e-4950-92d2-470487e3f8e1`
-  },
+  }, */
   {
     type: 'video',
     videoSrc: 'v3.mp4',

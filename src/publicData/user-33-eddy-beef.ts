@@ -4,19 +4,18 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-//falta userId, profilesrc, prefix, profileDescription
-
 export const eddy_beef_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: '8b6b8931-2b49-4607-b386-7ffd002af2e3',
   username: 'eddy_beef',
-  profileImageSrc: '',
+  profileImageSrc:
+    'https://dominicnikolai.github.io/project-221/assets/eddy-beef/p3rfil.avif',
   following: false,
   followers: 811_720,
   followed: 212,
   profileDescription: 'Cosa fai nella vita?'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-221/assets/eddy-beef/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {

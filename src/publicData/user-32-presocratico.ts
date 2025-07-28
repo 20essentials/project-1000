@@ -7,16 +7,16 @@ import {
 //falta userId, profilesrc, prefix, profileDescription
 
 export const presocratico_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: '6322d80a-ee2c-4fd4-ae15-d13a37dfd427',
   username: 'presocratico',
-  profileImageSrc: '',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-220/assets/presocratico/p3rfil.avif',
   following: false,
   followers: 1_520_720,
   followed: 586,
   profileDescription: 'Todos los DERECHOS reservados ®'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-220/assets/presocratico/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
