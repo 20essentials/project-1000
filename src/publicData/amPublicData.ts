@@ -119,7 +119,7 @@ export const PUBLIC_DATA: arrayOfPosts = [
   // [eddy_beef_commonProps, eddy_beef_array_of_posts],
   // [lalobri_commonProps, lalobri_array_of_posts],
   // [soy_delishus_commonProps, soy_delishus_array_of_posts],
-  [arthur_commonProps, arthur_array_of_posts],
+  // [arthur_commonProps, arthur_array_of_posts],
   [pongamoslo_a_prueba_commonProps, pongamoslo_a_prueba_array_of_posts],
   // [miguel_araiza_commonProps, miguel_araiza_array_of_posts],
   // [lacosaes_commonProps, lacosaes_array_of_posts],
