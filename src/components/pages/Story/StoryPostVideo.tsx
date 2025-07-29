@@ -145,7 +145,7 @@ export function StoryPostVideo(
   }, []);
 
   return (
-    <aside className='post-video' ref={postVideoRef}>
+    <aside className='post-video showBackgroundBlackInText' ref={postVideoRef}>
       <video
         className='am-video-of-post'
         src={videoSrc}
@@ -170,7 +170,7 @@ export function StoryPostVideo(
         <CloseX className='am-x-story-container' />
       </article>
 
-      {/* <HeartContainer hearts={hearts} post={props} /> */}
+      <HeartContainer otherClassName={'am-heart-from-story'} hearts={hearts} post={props} />
 
       {isPaused && (
         <PlayButton className='play-btn' handlePlayVideo={handlePlayVideo} />

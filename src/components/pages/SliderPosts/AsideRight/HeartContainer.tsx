@@ -10,14 +10,15 @@ import { generateNumOfAsideRight } from '@/utils/functions';
 interface Props {
   post: postProps & postComonProps;
   hearts: number;
+  otherClassName?:string;
 }
 
-export function HeartContainer({ hearts, post }: Props) {
+export function HeartContainer({ hearts, post , otherClassName}: Props) {
   const getFlattenedLikedPosts = useUserLikedPosts(
     state => state.getFlattenedLikedPosts
   );
   const [thisPostIsLiked, setThisPostIsLiked] = useState(post.isLiked);
-  const className = `button-container btn-container-liked ${
+  const className = `button-container btn-container-liked ${otherClassName} ${
     thisPostIsLiked ? 'this-post-is-liked' : ''
   }`;
   const deleteLikedPost = useUserLikedPosts(state => state.deleteLikedPost);
