@@ -32,7 +32,9 @@
   }
 
   &.story-input-range {
-    top: 5px;
+    top: 11px;
+    overflow: hidden;
+    height: 5px;
 
     & + .am-timer-input-range {
       opacity: 0;
@@ -43,6 +45,7 @@
       opacity: 1;
       pointer-events: auto !important;
       width: 92%;
+      bottom: 0px;
     }
   }
 }
