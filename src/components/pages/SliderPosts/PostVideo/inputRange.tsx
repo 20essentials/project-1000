@@ -3,9 +3,11 @@ import { formatTimeHH_MM_SS } from '@/utils/functions';
 import { useEffect, useState } from 'react';
 
 export function InputRange({
-  videoRef
+  videoRef,
+  otherClassName
 }: {
   videoRef: React.RefObject<HTMLVideoElement | null>;
+  otherClassName?: string;
 }) {
   const [totalDuration, setTotalDuration] = useState(0);
   const [currentDuration, setCurrentDuration] = useState(0);
@@ -41,7 +43,7 @@ export function InputRange({
 
   return (
     <>
-      <aside className='container-input-range'>
+      <aside className={`container-input-range ${otherClassName}`}>
         <input
           onChange={handleDuration}
           className='am-input-range'

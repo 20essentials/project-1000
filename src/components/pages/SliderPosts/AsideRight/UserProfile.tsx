@@ -13,10 +13,12 @@ import { FollowCircleButton } from '@/components/pages/SliderPosts/AsideRight/Fo
 
 export function UserProfile({
   profileImageSrc,
-  userId
+  userId,
+  otherClassName
 }: {
   profileImageSrc: string;
   userId?: string;
+  otherClassName?: string;
 }) {
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
   const setArrayOfPosts = useUserCreator(state => state.setArrayOfPosts);
@@ -44,7 +46,7 @@ export function UserProfile({
   return (
     <>
       <img
-        className='user-profile'
+        className={`user-profile ${otherClassName}`}
         draggable='false'
         src={profileImageSrc}
         onClick={nextToProfileCreator}

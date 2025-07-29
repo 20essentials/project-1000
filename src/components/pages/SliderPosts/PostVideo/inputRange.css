@@ -17,7 +17,7 @@
     bottom: -4px;
     opacity: 0;
     pointer-events: none;
-    transition: opacity ease-in-out .3s ;
+    transition: opacity ease-in-out 0.3s;
   }
 
   &:hover {
@@ -28,6 +28,21 @@
 
     & + .am-timer-input-range {
       color: #e9e9e9;
+    }
+  }
+
+  &.story-input-range {
+    top: 5px;
+
+    & + .am-timer-input-range {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .am-input-range {
+      opacity: 1;
+      pointer-events: auto !important;
+      width: 92%;
     }
   }
 }
@@ -41,7 +56,7 @@
   transform: translateX(-50%);
   user-select: none;
   color: transparent;
-  transition: color .4s ease;
+  transition: color 0.4s ease;
 
   .total-time {
     opacity: 0.5;

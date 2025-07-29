@@ -2,8 +2,8 @@ import type {
   postProps,
   postComonProps
 } from '@/components/pages/SliderPosts/types.d.ts';
-import { baseUrl } from '@/utils/functions';
-import { useEffect, useRef, useState } from 'react';
+import { baseUrl, getRandomNumber } from '@/utils/functions';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { PlayButton } from '@/components/pages/SliderPosts/PostVideo/PlayButton';
 import { userHasInteracted } from '@/store/userHasInteracted';
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
@@ -15,8 +15,11 @@ import { InputRange } from '@/components/pages/SliderPosts/PostVideo/inputRange'
 import { CommentsContainer } from '@/components/pages/SliderPosts/AsideRight/CommentsContainer';
 import { ShareContainer } from '@/components/pages/SliderPosts/AsideRight/ShareContainer';
 import { useIsScrolling } from '@/store/useIsScrolling';
+import { CloseX } from './CloseX';
 
-export function PostVideo(props: postProps & postComonProps & { idx: number }) {
+export function StoryPostVideo(
+  props: postProps & postComonProps & { idx: number }
+) {
   const hasInteracted = userHasInteracted(state => state.hasInteracted);
   const setUserHasInteracted = userHasInteracted(
     state => state.setUserHasInteracted
@@ -137,6 +140,10 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
     };
   }, []);
 
+  const randomNumOfHours = useMemo(() => {
+    return getRandomNumber(1, 23);
+  }, []);
+
   return (
     <aside className='post-video' ref={postVideoRef}>
       <video
@@ -149,38 +156,27 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
 
       {thisPostWillRenderMorePost && <div className='post-image-overlay'></div>}
 
-      <article className='aside-right-buttons aside-right-buttons-postvideo'>
+      <article className='navbar-user-story'>
         <section className='button-container btn-container-user-profile'>
-          <UserProfile profileImageSrc={profileImageSrc} userId={userId} />
-        </section>
-        <HeartContainer hearts={hearts} post={props} />
-        <CommentsContainer comments={comments} post={props} />
-        <SaveContainer saved={saved} post={props} />
-        <ShareContainer shared={shared} post={props} />
-        <section className='button-container btn-container-vinyl'>
-          <img className='vinyl' src={baseUrl('/assets/vinyl.png')} alt='Vinyl' />
-          <img
-            className='user-profile-vinyl'
-            draggable='false'
-            src={profileImageSrc}
-            alt='User Profile'
+          <UserProfile
+            profileImageSrc={profileImageSrc}
+            userId={userId}
+            otherClassName={'user-profile-story'}
           />
         </section>
+        <h2 className='am-username'>
+          {username} · <output className='am-time'>{randomNumOfHours} hours ago</output>
+        </h2>
+        <CloseX className='am-x-story-container' />
       </article>
 
-      <AsideText
-        otherClassNames='aside-text-post-video'
-        username={username}
-        description={description}
-        tags={tags}
-        ref={postVideoRef}
-      />
+      {/* <HeartContainer hearts={hearts} post={props} /> */}
 
       {isPaused && (
         <PlayButton className='play-btn' handlePlayVideo={handlePlayVideo} />
       )}
 
-      <InputRange videoRef={videoRef} />
+      <InputRange videoRef={videoRef} otherClassName={'story-input-range'} />
     </aside>
   );
 }
