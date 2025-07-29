@@ -1,5 +1,5 @@
 import '@/components/pages/Story/Story.css';
-import { PostImage } from '@/components/pages/SliderPosts/PostImage/PostImage';
+import { StoryPostImage } from '@/components/pages/Story/StoryPostImage';
 import { StoryPostVideo } from '@/components/pages/Story/StoryPostVideo';
 import { useRef } from 'react';
 import { usePostsOftheStory } from '@/store/usePostsOfTheStory';
@@ -21,7 +21,7 @@ export function Story() {
           return post.videoSrc ? (
             <StoryPostVideo idx={idx + 1} key={key} {...post} />
           ) : (
-            <PostImage idx={idx + 1} key={key} {...post} />
+            <StoryPostImage idx={idx + 1} key={key} {...post} />
           );
         })}
       </aside>
