@@ -5,6 +5,8 @@ import type {
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 import { useUserCreator } from '@/store/useUserCreator';
 import { useEffect, useState, useRef } from 'react';
+import { TotalViews } from './TotalViews';
+import { SqureSubSquare } from './SqureSubSquare';
 
 export function GridPosts({
   arrayOfPosts,
@@ -18,7 +20,6 @@ export function GridPosts({
   const [observedIndexes, setObservedIndexes] = useState<number[]>([]);
   // Referencias para los últimos 3 posts visibles
   const lastThreeRefs = useRef<(HTMLDivElement | null)[]>([]);
-
 
   // Callback para IntersectionObserver de los últimos 3 posts visibles
   const onIntersect: IntersectionObserverCallback = entries => {
@@ -84,7 +85,7 @@ function PostVideoOrImage({
   arrayPosts: postProps[];
   commonProps: postComonProps;
 }) {
-  const { videoSrc, arrayImages } = post;
+  const { videoSrc, arrayImages, totalViewsOfThePost } = post;
   const [poster, setPoster] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -170,12 +171,16 @@ function PostVideoOrImage({
           playsInline
         />
       ) : arrayImages && arrayImages.length > 0 ? (
-        <img
-          className='square_user_creator profile-creator__image'
-          src={arrayImages[0]}
-          alt='Post image'
-        />
+        <>
+          <img
+            className='square_user_creator profile-creator__image'
+            src={arrayImages[0]}
+            alt='Post image'
+          />
+         <SqureSubSquare />
+        </>
       ) : null}
+      <TotalViews totalViews={totalViewsOfThePost} />
     </div>
   );
 }

@@ -6,6 +6,8 @@ import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 import { useUserCreator } from '@/store/useUserCreator';
 import { useUserSavedPosts } from '@/store/useUserSavedPosts';
 import { useEffect, useState, useRef } from 'react';
+import { TotalViews } from '@/components/pages/ProfileCreator/TotalViews';
+import { SqureSubSquare } from '../ProfileCreator/SqureSubSquare';
 
 export function GridOfUserSavedPosts() {
   const [visibleCount, setVisibleCount] = useState(9);
@@ -55,21 +57,20 @@ export function GridOfUserSavedPosts() {
 
   return (
     <aside className='profile-creator-bottom' ref={containerRef}>
-      {flatPostsWithProps.slice(0, visibleCount).map(({ post, commonProps }, index) => (
-        <div
-          key={index}
-          ref={el => {
-            if (index >= visibleCount - 3) {
-              lastThreeRefs.current[index - (visibleCount - 3)] = el;
-            }
-          }}
-        >
-          <PostVideoOrImage
-            post={post}
-            commonProps={commonProps}
-          />
-        </div>
-      ))}
+      {flatPostsWithProps
+        .slice(0, visibleCount)
+        .map(({ post, commonProps }, index) => (
+          <div
+            key={index}
+            ref={el => {
+              if (index >= visibleCount - 3) {
+                lastThreeRefs.current[index - (visibleCount - 3)] = el;
+              }
+            }}
+          >
+            <PostVideoOrImage post={post} commonProps={commonProps} />
+          </div>
+        ))}
     </aside>
   );
 }
@@ -81,7 +82,7 @@ function PostVideoOrImage({
   post: postProps;
   commonProps: postComonProps;
 }) {
-  const { videoSrc, arrayImages } = post;
+  const { videoSrc, arrayImages, totalViewsOfThePost } = post;
   const [poster, setPoster] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -167,12 +168,16 @@ function PostVideoOrImage({
           playsInline
         />
       ) : arrayImages && arrayImages.length > 0 ? (
-        <img
-          className='square_user_creator profile-creator__image'
-          src={arrayImages[0]}
-          alt='Post image'
-        />
+        <>
+          <img
+            className='square_user_creator profile-creator__image'
+            src={arrayImages[0]}
+            alt='Post image'
+          />
+          <SqureSubSquare />
+        </>
       ) : null}
+      <TotalViews totalViews={totalViewsOfThePost} />
     </div>
   );
 }
