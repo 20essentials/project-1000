@@ -19,6 +19,7 @@ import { CommentsContainer } from '@/components/pages/SliderPosts/AsideRight/Com
 import { ShareContainer } from '@/components/pages/SliderPosts/AsideRight/ShareContainer';
 import { useIsScrolling } from '@/store/useIsScrolling';
 import { CloseX } from './CloseX';
+import { InputRangeAudio } from './InputRangeAudio';
 
 export function StoryPostImage(
   props: postProps & postComonProps & { idx: number }
@@ -50,6 +51,31 @@ export function StoryPostImage(
   const thisPostHasBeenRendered = useRef(false);
   const isScrolling = useIsScrolling(state => state.isScrolling);
   const [randomSong, setRandomSong] = useState<string | null>(null);
+
+  const [totalDuration, setTotalDuration] = useState(0);
+const [currentDuration, setCurrentDuration] = useState(0);
+
+useEffect(() => {
+  const audio = audioRef.current;
+  if (!audio) return;
+
+  const handleLoadedMetadata = () => {
+    setTotalDuration(Math.floor(audio.duration));
+  };
+
+  const handleTimeUpdate = () => {
+    setCurrentDuration(Math.floor(audio.currentTime));
+  };
+
+  audio.addEventListener("loadedmetadata", handleLoadedMetadata);
+  audio.addEventListener("timeupdate", handleTimeUpdate);
+
+  return () => {
+    audio.removeEventListener("loadedmetadata", handleLoadedMetadata);
+    audio.removeEventListener("timeupdate", handleTimeUpdate);
+  };
+}, [randomSong]);
+  
 
   useEffect(() => {
     const song =
@@ -209,6 +235,18 @@ export function StoryPostImage(
             currentNumImage={currentNumImage}
           />
         )}
+
+  <InputRangeAudio
+  otherClassName="story-input-range"
+  audioRef={audioRef}
+  totalDuration={totalDuration}
+  currentDuration={currentDuration}
+  setCurrentDuration={(newTime: number) => {
+    if (audioRef.current) {
+      audioRef.current.currentTime = newTime;
+    }
+  }}
+/>
       </aside>
     </article>
   );

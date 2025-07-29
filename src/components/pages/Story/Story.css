@@ -123,8 +123,8 @@
 
       .num-of-post {
         position: absolute;
-        top: 12px;
-        right: 12px;
+        bottom: 12px;
+        left: 12px;
         background-color: #fff3;
         padding: 6px 12px;
         border-radius: 15px;
