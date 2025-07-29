@@ -77,11 +77,6 @@ export function Inbox() {
         return currentUser;
       });
   }, []);
-  // const arrayOfNavBarHistories = useMemo(() => {
-  //   return flattenedArrayOfAllPosts
-  //     .toSorted(() => Math.random() - 0.5)
-  //     .slice(0, 20)
-  // }, []);
 
   return (
     <article className='inbox-container'>

@@ -6,6 +6,7 @@ import {
   type ArrayOfNavBarHistories
 } from '@/store/usePostsOfTheStory';
 import { useEffect } from 'react';
+import { useUserCreator } from '@/store/useUserCreator';
 const MAX_LENGTH_OF_USERNAME = 10;
 export type TypeArrayOfNavBarHistories = (postComonProps & {
   story?: postProps;
@@ -24,9 +25,17 @@ export function ArrayOfNavbarStories({
   const setArrayOfStoryPosts = usePostsOftheStory(
     state => state.setArrayOfStoryPosts
   );
+  const setIndexOfPost = useUserCreator(state => state.setIndexOfPost);
 
-  function goToHistory() {
+  function goToHistory(e: React.MouseEvent) {
+    e.preventDefault();
+    const currentHistoryCircle = e.target as HTMLElement;
+    const parent = currentHistoryCircle.closest(
+      '.navbar-of-histories'
+    ) as HTMLElement;
+    const indexStart = [...parent.children].indexOf(currentHistoryCircle);
     setCurrentPage(IS_ACTIVE_BUTTON.STORY);
+    setIndexOfPost(indexStart);
   }
 
   useEffect(() => {
@@ -41,6 +50,7 @@ export function ArrayOfNavbarStories({
             <img
               className='history-container-circle-inner'
               src={profileImageSrc}
+              draggable={false}
               alt={`Image Profile of ${username}}`}
             />
           </article>

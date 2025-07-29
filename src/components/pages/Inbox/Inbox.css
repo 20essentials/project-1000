@@ -111,6 +111,10 @@
       place-items: center;
       /* background-color: orange; */
 
+      * {
+        pointer-events: none;
+      }
+
       .history-container-circle {
         width: 48px;
         height: 48px;
@@ -141,6 +145,7 @@
           border-radius: 50%;
           display: flex;
           border-radius: inherit;
+          pointer-events: none;
           z-index: 5;
           border: 5px solid #111;
         }

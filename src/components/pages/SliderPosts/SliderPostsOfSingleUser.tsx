@@ -32,21 +32,12 @@ export function SliderPostsOfSingleUser() {
     userPosts.map(post => ({ ...post, ...userCommonProps }))
   );
   const indexOfPost = useUserCreator(state => state.indexOfPost);
-  const postRefs = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
     if (isTheSameuser && ALL_POSTS.length === 0) {
       setCurrentPage(IS_ACTIVE_BUTTON.PROFILE);
     }
   }, [isTheSameuser, ALL_POSTS.length]);
-
-  // const orderedPosts = useMemo(() => {
-  //   const start = flattenedPosts.slice(indexOfPost);
-  //   const end = flattenedPosts.slice(0, indexOfPost);
-  //   return [...start, ...end];
-  // }, [indexOfPost]);
-
-  // const postsToShow = orderedPosts.slice(0, limit);
 
   const setIsScrolling = useIsScrolling(state => state.setIsScrolling);
 
