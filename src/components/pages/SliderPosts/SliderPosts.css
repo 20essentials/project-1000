@@ -352,10 +352,11 @@
       overscroll-behavior: contain;
 
       &::-webkit-scrollbar {
-        width: 2px;
+        width: 1px;
       }
+
       &::-webkit-scrollbar-thumb {
-        background-color: #fff;
+        background-image: linear-gradient(to bottom, transparent 0 15%, #fff 15%);
         opacity: 0.5;
       }
 
@@ -365,9 +366,13 @@
 
       .am-header-of-comments {
         text-align: center;
-        position: relative;
+        position: sticky;
+        top: 0px;
+        width: 100%;
         font-weight: bold;
         padding: 10px;
+        background-color: #111;
+        z-index: 300;
         color: #e9e9e9;
         font-size: 12px;
         border-bottom: 1px solid #e9e9e9;
@@ -384,15 +389,11 @@
 
       .am-footer-of-the-comments {
         position: relative;
-
-        /* height: max-content; */
         padding: 5px;
 
         .am-comment-of-an-user {
           display: flex;
           height: max-content;
-
-          /* background-color: orange; */
 
           .left-am-comments-of-an-user {
             width: 40px;
@@ -422,7 +423,7 @@
 
             .am-footer-of-comments {
               display: flex;
-              background-color: orange;
+              /* background-color: orange; */
               justify-content: space-between;
             }
 
