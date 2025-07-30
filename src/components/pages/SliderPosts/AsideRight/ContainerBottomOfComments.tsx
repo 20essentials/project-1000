@@ -52,7 +52,7 @@ export function ContainerBottomOfComments({
               </article>
               <article className='right-am-comments-of-an-user'>
                 <p className='paraghaph'>{username}</p>
-                <p className='paraghaph'>{randomComments[indexOfComment]}</p>
+                <p className='paraghaph the-comment'>{randomComments[indexOfComment]}</p>
                 <footer className='am-footer-of-comments'>
                   <p className='date-of-comment paraghaph'>30-07-25</p>
                   <aside className='footer-right'>

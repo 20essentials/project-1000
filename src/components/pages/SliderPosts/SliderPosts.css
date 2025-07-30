@@ -352,7 +352,7 @@
       overscroll-behavior: contain;
 
       &::-webkit-scrollbar {
-        width: 1px;
+        width: 1.5px;
       }
 
       &::-webkit-scrollbar-thumb {
@@ -419,6 +419,11 @@
             .paraghaph {
               font-size: 12px;
               opacity: 0.7;
+
+              &.the-comment {
+                margin-right: 42px;
+                /* background-color: orange; */
+              }
             }
 
             .am-footer-of-comments {
