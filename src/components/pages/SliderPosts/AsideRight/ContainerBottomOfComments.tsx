@@ -12,6 +12,7 @@ const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 import { ARRAY_OF_COMMENTS } from '@/utils/arrayOfComments';
 import { useMemo, useState } from 'react';
+import { UserProfile } from './UserProfile';
 
 export function ContainerBottomOfComments({
   totalNumberOfComments,
@@ -44,11 +45,12 @@ export function ContainerBottomOfComments({
       </header>
       <section className='am-footer-of-the-comments'>
         {flattenedArrayOfAllPostsCommonProps.map((amProps, indexOfComment) => {
-          const { profileImageSrc, username } = amProps;
+          const { profileImageSrc, username, userId } = amProps;
           return (
             <aside className='am-comment-of-an-user'>
               <article className='left-am-comments-of-an-user'>
-                <img src={profileImageSrc} alt='User Image' />
+                {/* <img src={profileImageSrc} alt='User Image' /> */}
+                <UserProfile profileImageSrc={profileImageSrc} userId={userId} otherClassName='profile-in-comments-of-the-user' />
               </article>
               <article className='right-am-comments-of-an-user'>
                 <p className='paraghaph'>{username}</p>
