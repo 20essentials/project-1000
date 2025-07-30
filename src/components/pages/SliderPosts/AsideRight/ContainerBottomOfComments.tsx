@@ -11,7 +11,7 @@ const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
 const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 import { ARRAY_OF_COMMENTS } from '@/utils/arrayOfComments';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 
 export function ContainerBottomOfComments({
   totalNumberOfComments,
@@ -28,9 +28,10 @@ export function ContainerBottomOfComments({
   const flattenedArrayOfAllPostsCommonProps = flattenedArrayOfAllPosts
     .filter(el => el.userId !== commonProps.userId)
     .slice(0, limit);
-  const randomComments = ARRAY_OF_COMMENTS.toSorted(
-    () => Math.random() - 0.5
-  ).slice(0, limit);
+
+  const randomComments = useMemo(() => {
+    return ARRAY_OF_COMMENTS.toSorted(() => Math.random() - 0.5).slice(0, limit);
+  }, []);
 
   return (
     <article className='container-bottom-of-comments'>
@@ -41,7 +42,7 @@ export function ContainerBottomOfComments({
           onClick={updateIsContainerBottomOpen}
         />
       </header>
-      <section className='am-footer-of-comments'>
+      <section className='am-footer-of-the-comments'>
         {flattenedArrayOfAllPostsCommonProps.map((amProps, indexOfComment) => {
           const { profileImageSrc, username } = amProps;
           return (
@@ -54,11 +55,13 @@ export function ContainerBottomOfComments({
                 <p className='paraghaph'>{randomComments[indexOfComment]}</p>
                 <footer className='am-footer-of-comments'>
                   <p className='date-of-comment paraghaph'>30-07-25</p>
-                  <aside className='heart-of-comment'>
-                    <HeartComment className='am-svg am-dislike' />
-                  </aside>
-                  <aside className='dislike-of-comment'>
-                    <DisLikeComment className='am-svg am-dislike' />
+                  <aside className='footer-right'>
+                    <aside className='heart-of-comment'>
+                      <HeartComment className='am-svg am-heart' />
+                    </aside>
+                    <aside className='dislike-of-comment'>
+                      <DisLikeComment className='am-svg am-dislike' />
+                    </aside>
                   </aside>
                 </footer>
               </article>

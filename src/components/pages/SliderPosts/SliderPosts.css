@@ -348,10 +348,25 @@
       border-top-left-radius: 16px;
       border-top-right-radius: 16px;
       z-index: 100;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+
+      &::-webkit-scrollbar {
+        width: 2px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #fff;
+        opacity: 0.5;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
 
       .am-header-of-comments {
         text-align: center;
         position: relative;
+        font-weight: bold;
         padding: 10px;
         color: #e9e9e9;
         font-size: 12px;
@@ -367,17 +382,16 @@
         }
       }
 
-      .am-footer-of-comments {
+      .am-footer-of-the-comments {
         position: relative;
-        height: max-content;
-        overflow-y: auto;
-        gap: 8px;
+
+        /* height: max-content; */
         padding: 5px;
 
         .am-comment-of-an-user {
           display: flex;
           height: max-content;
-          
+
           /* background-color: orange; */
 
           .left-am-comments-of-an-user {
@@ -399,7 +413,7 @@
             color: #e9e9e9;
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 3px;
 
             .paraghaph {
               font-size: 12px;
@@ -409,12 +423,22 @@
             .am-footer-of-comments {
               display: flex;
               background-color: orange;
+              justify-content: space-between;
+            }
+
+            .footer-right {
+              display: flex;
+              gap: 8px;
             }
 
             .am-svg {
-              width: 20px;
-              height: 20px;
+              width: 14px;
+              height: 14px;
               color: #e9e9e9;
+
+              &.am-dislike {
+                transform: rotate(-180deg) scale(0.85);
+              }
             }
           }
         }
