@@ -84,7 +84,6 @@
       height: 100%;
       position: relative;
       scroll-snap-align: center;
-      
 
       /* It's important for the Intersection observer */
       margin-bottom: 3px;
@@ -295,7 +294,6 @@
       }
     }
 
-
     .aside-text-and-description {
       height: fit-content;
       display: flex;
@@ -337,6 +335,36 @@
       background-color: transparent;
       z-index: 80;
       pointer-events: none;
+    }
+
+    .container-bottom-of-comments {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      height: 332px;
+      background-color: #111;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      z-index: 100;
+
+      .am-header-of-comments {
+        text-align: center;
+        position: relative;
+        padding: 10px;
+        color: #e9e9e9;
+        font-size: 12px;
+        border-bottom: 1px solid #e9e9e9;
+
+        .close-container-bottom {
+          position: absolute;
+          width: 19px;
+          height: 19px;
+          right: 15px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
     }
   }
 }

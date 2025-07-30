@@ -7,21 +7,20 @@ import type {
 import '@/components/pages/FollowedAndFollow/FollowedAndFollow.css';
 import { ArrowLeft } from '../ProfileCreator/ArrowLeft';
 import { useCurrentUser } from '@/store/useCurrentUser';
-import { baseUrl, formatUsername, getRandomNumber } from '@/utils/functions';
+import { baseUrl, getRandomNumber } from '@/utils/functions';
 import { useUserCreator } from '@/store/useUserCreator';
 import { useFollowedAccount } from '@/store/useFollowedAccount';
 import { useMemo, useRef, useState } from 'react';
+import { ArrayOfNavbarStories } from './ArrayOfNavbarStories';
+import { ListOfUsers } from '@/components/pages/FollowedAndFollow/ListOfUser';
 import { PRIVATE_DATA } from '@/privateData/amPrivateData';
 import { PUBLIC_DATA } from '@/publicData/amPublicData';
-import { ListOfUsers } from '@/components/pages/FollowedAndFollow/ListOfUser';
-import { ArrayOfNavbarStories } from './ArrayOfNavbarStories';
 const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
 const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 const NUM_OF_ROW_THAT_RENDER_MORE_ROWS = 9;
 const urlFirework = baseUrl('/assets/tik-tok-animated-logo.gif');
 const infoImg = baseUrl('/assets/info.svg');
-const MAX_LENGTH_OF_USERNAME = 10;
 
 export function Inbox() {
   const commonProps = useUserCreator(state => state.commonProps);
@@ -89,24 +88,6 @@ export function Inbox() {
       <section className='section-bottom'>
         <aside className='navbar-of-histories'>
           <ArrayOfNavbarStories arrayOfNavBarHistories={arrayOfNavBarHistories} />
-          {/* {arrayOfNavBarHistories.map(
-            ({ profileImageSrc, userId, username }, i) => {
-              return (
-                <aside className='history-container' key={i}>
-                  <article className='history-container-circle'>
-                    <img
-                      className='history-container-circle-inner'
-                      src={profileImageSrc}
-                      alt={`Image Profile of ${username}}`}
-                    />
-                  </article>
-                  <aside className='history-container-description'>
-                    <h5>{formatUsername(username, MAX_LENGTH_OF_USERNAME)}</h5>
-                  </aside>
-                </aside>
-              );
-            }
-          )} */}
         </aside>
 
         <aside className='recommended-accounts'>

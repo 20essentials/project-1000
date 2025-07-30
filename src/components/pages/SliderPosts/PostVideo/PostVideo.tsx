@@ -15,6 +15,7 @@ import { InputRange } from '@/components/pages/SliderPosts/PostVideo/inputRange'
 import { CommentsContainer } from '@/components/pages/SliderPosts/AsideRight/CommentsContainer';
 import { ShareContainer } from '@/components/pages/SliderPosts/AsideRight/ShareContainer';
 import { useIsScrolling } from '@/store/useIsScrolling';
+import { ContainerBottomOfComments } from '../AsideRight/ContainerBottomOfComments';
 
 export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   const hasInteracted = userHasInteracted(state => state.hasInteracted);
@@ -24,6 +25,11 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   const setLimit = useLimitOfPost(state => state.setLimit);
   const offsetOfPosts = useLimitOfPost(state => state.offsetOfPosts);
   const isScrolling = useIsScrolling(state => state.isScrolling);
+  const [isContainerBottomOpen, setIsContainerBottomOpen] = useState(true);
+
+  function updateIsContainerBottomOpen() {
+    setIsContainerBottomOpen(!isContainerBottomOpen);
+  }
 
   const {
     videoSrc,
@@ -154,7 +160,11 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
           <UserProfile profileImageSrc={profileImageSrc} userId={userId} />
         </section>
         <HeartContainer hearts={hearts} post={props} />
-        <CommentsContainer comments={comments} post={props} />
+        <CommentsContainer
+          updateIsContainerBottomOpen={updateIsContainerBottomOpen}
+          comments={comments}
+          post={props}
+        />
         <SaveContainer saved={saved} post={props} />
         <ShareContainer shared={shared} post={props} />
         <section className='button-container btn-container-vinyl'>
@@ -181,6 +191,13 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
       )}
 
       <InputRange videoRef={videoRef} />
+
+      {isContainerBottomOpen && (
+        <ContainerBottomOfComments
+          totalNumberOfComments={comments}
+          updateIsContainerBottomOpen={updateIsContainerBottomOpen}
+        />
+      )}
     </aside>
   );
 }
