@@ -25,7 +25,7 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   const setLimit = useLimitOfPost(state => state.setLimit);
   const offsetOfPosts = useLimitOfPost(state => state.offsetOfPosts);
   const isScrolling = useIsScrolling(state => state.isScrolling);
-  const [isContainerBottomOpen, setIsContainerBottomOpen] = useState(true);
+  const [isContainerBottomOpen, setIsContainerBottomOpen] = useState(false);
 
   function updateIsContainerBottomOpen() {
     setIsContainerBottomOpen(!isContainerBottomOpen);

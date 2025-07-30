@@ -18,6 +18,7 @@ import { useTrackVisibleImage } from '@/hooks/useTrackVisibleImage';
 import { CommentsContainer } from '@/components/pages/SliderPosts/AsideRight/CommentsContainer';
 import { ShareContainer } from '@/components/pages/SliderPosts/AsideRight/ShareContainer';
 import { useIsScrolling } from '@/store/useIsScrolling';
+import { ContainerBottomOfComments } from '../AsideRight/ContainerBottomOfComments';
 
 export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const {
@@ -47,6 +48,12 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const thisPostHasBeenRendered = useRef(false);
   const isScrolling = useIsScrolling(state => state.isScrolling);
   const [randomSong, setRandomSong] = useState<string | null>(null);
+
+  const [isContainerBottomOpen, setIsContainerBottomOpen] = useState(false);
+
+  function updateIsContainerBottomOpen() {
+    setIsContainerBottomOpen(!isContainerBottomOpen);
+  }
 
   useEffect(() => {
     const song =
@@ -188,7 +195,11 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
             <UserProfile profileImageSrc={profileImageSrc} userId={userId} />
           </section>
           <HeartContainer hearts={hearts} post={props} />
-          <CommentsContainer comments={comments} post={props} />
+          <CommentsContainer
+            updateIsContainerBottomOpen={updateIsContainerBottomOpen}
+            comments={comments}
+            post={props}
+          />
           <SaveContainer saved={saved} post={props} />
           <ShareContainer shared={shared} post={props} />
           <section className='button-container btn-container-vinyl'>
@@ -210,6 +221,13 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
           <NumOfPost
             arrayImagesLength={arrayImagesLength}
             currentNumImage={currentNumImage}
+          />
+        )}
+
+        {isContainerBottomOpen && (
+          <ContainerBottomOfComments
+            totalNumberOfComments={comments}
+            updateIsContainerBottomOpen={updateIsContainerBottomOpen}
           />
         )}
       </aside>
