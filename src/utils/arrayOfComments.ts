@@ -1,7 +1,8 @@
 export const ARRAY_OF_COMMENTS = [
   "😎",
   "🤣🤣🤣",
-/*   "💗💗💗",
+   "💗💗💗",
+/*  
   "🔥🔥🔥",
   "Qué buena esa 😂",
   "No paro de reír 🤣",

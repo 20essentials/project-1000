@@ -1,10 +1,6 @@
-import type {
-  arrayOfPosts,
-  postComonProps
-} from '@/components/pages/SliderPosts/types.d.ts';
+import type { arrayOfPosts } from '@/components/pages/SliderPosts/types.d.ts';
 import { PRIVATE_DATA } from '@/privateData/amPrivateData';
 import { PUBLIC_DATA } from '@/publicData/amPublicData';
-import { useCurrentUser } from '@/store/useCurrentUser';
 import { useUserCreator } from '@/store/useUserCreator';
 import { CloseContainer } from './CloseContainer';
 const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
@@ -33,12 +29,8 @@ export function ContainerBottomOfComments({
   const flattenedArrayOfAllPosts = useMemo(
     () =>
       ALL_POSTS.map(el => el[0]).filter(el => el.userId !== commonProps.userId),
-    []
+    [commonProps.userId]
   );
-  // const flattenedArrayOfAllPostsCommonProps = flattenedArrayOfAllPosts.slice(
-  //   0,
-  //   limit
-  // );
 
   const flattenedArrayOfAllPostsCommonProps = useMemo(() => {
     return Array.from(
@@ -48,9 +40,9 @@ export function ContainerBottomOfComments({
         return flattenedArrayOfAllPosts[index];
       }
     );
-  }, [limit]);
+  }, [limit, flattenedArrayOfAllPosts]);
 
-  const arrayOfRAndomComments = useMemo(
+  const arrayOfRandomComments = useMemo(
     () => ARRAY_OF_COMMENTS.toSorted(() => Math.random() - 0.5),
     []
   );
@@ -59,8 +51,8 @@ export function ContainerBottomOfComments({
     return Array.from(
       { length: modEspecial(limit, totalNumberOfComments) },
       (_, i) => {
-        const index = i % arrayOfRAndomComments.length;
-        return arrayOfRAndomComments[index];
+        const index = i % arrayOfRandomComments.length;
+        return arrayOfRandomComments[index];
       }
     );
   }, [limit]);
