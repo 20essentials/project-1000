@@ -122,7 +122,7 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [lalobri_commonProps, lalobri_array_of_posts],
   [soy_delishus_commonProps, soy_delishus_array_of_posts],
   [ellian_sanchez_commonProps, ellian_sanchez_array_of_posts],
-  // [salary_transparent_street_commonProps, salary_transparent_street_array_of_posts],
+  [salary_transparent_street_commonProps, salary_transparent_street_array_of_posts],
   [arthur_commonProps, arthur_array_of_posts],
   [pongamoslo_a_prueba_commonProps, pongamoslo_a_prueba_array_of_posts],
   [miguel_araiza_commonProps, miguel_araiza_array_of_posts],

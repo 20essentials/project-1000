@@ -10,6 +10,7 @@ import type { userId } from '@/store/useFollowedAccount';
 const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
 const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
+const LIMIT_CHARS_USERNAME = 20;
 
 interface Props {
   profileImageSrc: string;
@@ -43,7 +44,6 @@ export function RowUser({
   const setCommonProps = useUserCreator(state => state.setCommonProps);
   const setArrayOfPosts = useUserCreator(state => state.setArrayOfPosts);
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
-  
 
   function nextToProfileCreator() {
     if (theIdOfTheUserThaisYou === userId) {
@@ -60,7 +60,7 @@ export function RowUser({
     setArrayOfPosts(arrayPosts);
   }
 
-   useEffect(() => {
+  useEffect(() => {
     if (!rowRef.current || !thisRowRenderMorePosts) return;
 
     const observer = new IntersectionObserver(entries => {
@@ -80,7 +80,6 @@ export function RowUser({
     };
   }, []);
 
-  
   return (
     <div key={index} className='followed-account-row' ref={rowRef}>
       <aside className='left' onClick={nextToProfileCreator}>
@@ -89,10 +88,18 @@ export function RowUser({
           alt={`${username}'s profile`}
           className='profile-image'
         />
-        <h4 className='username'>{username}</h4>
+        <h4 className='username'>
+          {username.length >= LIMIT_CHARS_USERNAME
+            ? `${username.slice(0, LIMIT_CHARS_USERNAME)}...`
+            : username.slice(0, LIMIT_CHARS_USERNAME)}
+        </h4>
       </aside>
       <aside className={indiceTestingClassName}>{i + 1}</aside>
-      <FollowButton updateFollowedAccountsIds={updateFollowedAccountsIds} classNameExtra='followcito' userId={userId} />
+      <FollowButton
+        updateFollowedAccountsIds={updateFollowedAccountsIds}
+        classNameExtra='followcito'
+        userId={userId}
+      />
     </div>
   );
 }
