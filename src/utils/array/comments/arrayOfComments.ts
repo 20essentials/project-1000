@@ -1,8 +1,10 @@
+import { EMOJIS } from '@/utils/array/comments/arrayOfEmojis';
+import { EMOJIS_REPEATED } from './arrayOfRepeatedEmojis';
+
 export const ARRAY_OF_COMMENTS = [
-  "😎",
-  "🤣🤣🤣",
-   "💗💗💗",
-/*  
+  ...EMOJIS,
+  ...EMOJIS_REPEATED,
+  /*  
   "🔥🔥🔥",
   "Qué buena esa 😂",
   "No paro de reír 🤣",

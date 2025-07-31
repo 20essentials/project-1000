@@ -6,7 +6,7 @@ import { CloseContainer } from './CloseContainer';
 const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
 const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
-import { ARRAY_OF_COMMENTS } from '@/utils/arrayOfComments';
+import { ARRAY_OF_COMMENTS } from '@/utils/array/comments/arrayOfComments';
 import { useMemo, useState } from 'react';
 import { RowComment } from './RowComment';
 import { modEspecial } from '@/utils/functions';
