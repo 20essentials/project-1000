@@ -83,6 +83,7 @@
     display: flex;
     position: absolute; 
     overflow-x: scroll;
+    overflow-y: hidden;
     gap: 12px;
     /* background-color: orange; */
     padding: 10px;
@@ -109,7 +110,6 @@
       gap: 7px;
       place-content: center;
       place-items: center;
-      /* background-color: orange; */
 
       * {
         pointer-events: none;
@@ -190,15 +190,16 @@
     display: flex;
     flex-direction: column;
     min-width: 100%;
+    height: 320px;
     overflow-x: hidden;
     overflow-y: auto;
     position: relative;
     top: 160px;
-    
 
     &::-webkit-scrollbar {
       width: 1px;
     }
+
     &::-webkit-scrollbar-thumb {
       background-color: #e9e9e9;
       opacity: 0.3;
