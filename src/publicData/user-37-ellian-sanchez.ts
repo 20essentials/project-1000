@@ -7,16 +7,16 @@ import {
 //falta userId, profilesrc, prefix, profileDescription
 
 export const ellian_sanchez_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: 'fc7bae71-09b7-412a-8532-38933686454d',
   username: 'ellian_sanchez',
-  profileImageSrc: '',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-225/assets/ell1an-s4nchez/p3rfil.avif',
   following: false,
   followers: 761_720,
   followed: 943,
   profileDescription: 'Leo mentes y hago magia en Cancún'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-225/assets/ell1an-s4nchez/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
