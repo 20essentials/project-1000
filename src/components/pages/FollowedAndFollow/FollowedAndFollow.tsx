@@ -69,6 +69,7 @@ export function FollowedAndFollow() {
   const flattenedArrayOfAllPostsCommonProps = ALL_POSTS.map(el => el[0]).filter(
     el => el.userId !== commonProps.userId
   );
+  
   let arrayOfRandomRandomFollowed: postComonProps[] = Array.from(
     { length: totalFollowedOfTheUser },
     (_, i) => {

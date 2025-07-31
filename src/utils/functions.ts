@@ -54,8 +54,12 @@ export function getPostpropsFromProps(
   ) as postProps;
 }
 
+export function modEspecial(left: number, right: number) {
+  return left < right ? left % right : right;
+}
+
 export function formatUsername(rawUsername: string, maxLength: number): string {
-  const username =  rawUsername.split('_')[0]
+  const username = rawUsername.split('_')[0];
   return username.length >= maxLength
     ? `${username.slice(0, maxLength - 3)}...`
     : username;

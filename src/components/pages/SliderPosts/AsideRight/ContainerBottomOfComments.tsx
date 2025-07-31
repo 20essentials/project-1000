@@ -12,8 +12,9 @@ const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 import { ARRAY_OF_COMMENTS } from '@/utils/arrayOfComments';
 import { useMemo, useState } from 'react';
-import { UserProfile } from './UserProfile';
-import { HeartAndDislikeFooter } from './HeartAndDislikeFooter';
+import { RowComment } from './RowComment';
+import { modEspecial } from '@/utils/functions';
+const NUM_OF_COMMENT_THAT_RENDER_MORE_COMMENTS = 9;
 
 export function ContainerBottomOfComments({
   totalNumberOfComments,
@@ -24,16 +25,45 @@ export function ContainerBottomOfComments({
 }) {
   const commonProps = useUserCreator(state => state.commonProps);
   const [limit, setLimit] = useState(10);
-  // const username = commonProps.username;
-  // const user = useCurrentUser(state => state.user);
-  const flattenedArrayOfAllPosts = ALL_POSTS.map(el => el[0]);
-  const flattenedArrayOfAllPostsCommonProps = flattenedArrayOfAllPosts
-    .filter(el => el.userId !== commonProps.userId)
-    .slice(0, limit);
+
+  function updateLimit() {
+    setLimit(prev => prev + NUM_OF_COMMENT_THAT_RENDER_MORE_COMMENTS);
+  }
+
+  const flattenedArrayOfAllPosts = useMemo(
+    () =>
+      ALL_POSTS.map(el => el[0]).filter(el => el.userId !== commonProps.userId),
+    []
+  );
+  // const flattenedArrayOfAllPostsCommonProps = flattenedArrayOfAllPosts.slice(
+  //   0,
+  //   limit
+  // );
+
+  const flattenedArrayOfAllPostsCommonProps = useMemo(() => {
+    return Array.from(
+      { length: modEspecial(limit, totalNumberOfComments) },
+      (_, i) => {
+        const index = i % flattenedArrayOfAllPosts.length;
+        return flattenedArrayOfAllPosts[index];
+      }
+    );
+  }, [limit]);
+
+  const arrayOfRAndomComments = useMemo(
+    () => ARRAY_OF_COMMENTS.toSorted(() => Math.random() - 0.5),
+    []
+  );
 
   const randomComments = useMemo(() => {
-    return ARRAY_OF_COMMENTS.toSorted(() => Math.random() - 0.5).slice(0, limit);
-  }, []);
+    return Array.from(
+      { length: modEspecial(limit, totalNumberOfComments) },
+      (_, i) => {
+        const index = i % arrayOfRAndomComments.length;
+        return arrayOfRAndomComments[index];
+      }
+    );
+  }, [limit]);
 
   return (
     <article className='container-bottom-of-comments'>
@@ -45,29 +75,27 @@ export function ContainerBottomOfComments({
         />
       </header>
       <section className='am-footer-of-the-comments'>
-        {flattenedArrayOfAllPostsCommonProps.map((amProps, indexOfComment) => {
-          const { profileImageSrc, username, userId } = amProps;
-          return (
-            <aside className='am-comment-of-an-user' key={indexOfComment}>
-              <article className='left-am-comments-of-an-user'>
-                {/* <img src={profileImageSrc} alt='User Image' /> */}
-                <UserProfile
-                  profileImageSrc={profileImageSrc}
-                  userId={userId}
-                  otherClassName='profile-in-comments-of-the-user'
-                />
-              </article>
-              <article className='right-am-comments-of-an-user'>
-                <p className='paraghaph'>{username}</p>
-                <p className='paraghaph the-comment'>
-                  {randomComments[indexOfComment]}
-                </p>
+        {flattenedArrayOfAllPostsCommonProps
+          .slice(0, limit)
+          .map((amProps, indexOfComment) => {
+            const { profileImageSrc, username, userId } = amProps;
+            const thisCommenRenderMorePosts =
+              (indexOfComment + 1) % NUM_OF_COMMENT_THAT_RENDER_MORE_COMMENTS ===
+              0;
 
-                <HeartAndDislikeFooter />
-              </article>
-            </aside>
-          );
-        })}
+            return (
+              <RowComment
+                indexOfComment={indexOfComment}
+                profileImageSrc={profileImageSrc}
+                randomComment={randomComments[indexOfComment]}
+                userId={userId}
+                username={username}
+                key={indexOfComment}
+                thisCommenRenderMorePosts={thisCommenRenderMorePosts}
+                updateLimit={updateLimit}
+              />
+            );
+          })}
       </section>
     </article>
   );
