@@ -11,26 +11,30 @@ import { FIRMAR } from '@/utils/array/comments/arrayofFirmar';
 import { GOOD_CONTENT } from '@/utils/array/comments/arrayofGoodContent';
 import { AFIRMAR } from '@/utils/array/comments/arrayofAfirmar';
 import { AGRADECER } from '@/utils/array/comments/arrayofAgradecimiento';
-import { GENIAL } from './arrayofGenial';
-import { ESTUPENDO } from './arrayofEstupendo';
-import { FANTASTIC } from './arrayofFantastic';
-import { COOL } from './arrayofCool';
-import { FENOMENAL } from './arrayofFenomenal';
-import { ENCANTO } from './arrayofEncanto';
-import { MOTIVACION } from './arrayofMotivacion';
-import { DIVERSION } from './arrayofDiversion';
-import { SORPRESA } from './arrayofSorpresa';
-import { ELOGIOS } from './arrayofElogios';
-import { GOOD_JOB } from './arrayofGoodJob';
-import { REFLEXIONES } from './arrayofReflexiones';
-import { EMOCIONES_POSITIVAS } from './arrayofEmocionesPositivas';
-import { EMOCIONES_NEGATIVAS } from './arrayofEmocionesNegativas';
-import { SUGERENCIAS } from './arrayofSugerencias';
-import { QUESTIONS } from './arrayofQuestion';
-import { CONFIRMACIONES } from './arrayofConfirmaciones';
-import { CHISTES } from './arrayofChistes';
-import { HUMOR } from './arrayofHumor';
-import { TESTIMONIOS } from './arrayofTestimonios';
+import { GENIAL } from '@/utils/array/comments/arrayofGenial';
+import { ESTUPENDO } from '@/utils/array/comments/arrayofEstupendo';
+import { FANTASTIC } from '@/utils/array/comments/arrayofFantastic';
+import { COOL } from '@/utils/array/comments/arrayofCool';
+import { FENOMENAL } from '@/utils/array/comments/arrayofFenomenal';
+import { ENCANTO } from '@/utils/array/comments/arrayofEncanto';
+import { MOTIVACION } from '@/utils/array/comments/arrayofMotivacion';
+import { DIVERSION } from '@/utils/array/comments/arrayofDiversion';
+import { SORPRESA } from '@/utils/array/comments/arrayofSorpresa';
+import { ELOGIOS } from '@/utils/array/comments/arrayofElogios';
+import { GOOD_JOB } from '@/utils/array/comments/arrayofGoodJob';
+import { REFLEXIONES } from '@/utils/array/comments/arrayofReflexiones';
+import { EMOCIONES_POSITIVAS } from '@/utils/array/comments/arrayofEmocionesPositivas';
+import { EMOCIONES_NEGATIVAS } from '@/utils/array/comments/arrayofEmocionesNegativas';
+import { SUGERENCIAS } from '@/utils/array/comments/arrayofSugerencias';
+import { QUESTIONS } from '@/utils/array/comments/arrayofQuestion';
+import { CONFIRMACIONES } from '@/utils/array/comments/arrayofConfirmaciones';
+import { CHISTES } from '@/utils/array/comments/arrayofChistes';
+import { HUMOR } from '@/utils/array/comments/arrayofHumor';
+import { TESTIMONIOS } from '@/utils/array/comments/arrayofTestimonios';
+import { CRITICAS_CONSTRUCTIVAS } from '@/utils/array/comments/arrayofCriticasConstructivas';
+import { REACCIONES } from '@/utils/array/comments/arrayofReacciones';
+import { APOYO } from '@/utils/array/comments/arrayOfApoyo';
+import { ANIMO } from '@/utils/array/comments/arrayofAnimo';
 
 export const ARRAY_OF_COMMENTS = [
   ...EMOJIS,
@@ -66,20 +70,8 @@ export const ARRAY_OF_COMMENTS = [
   ...CHISTES,
   ...HUMOR,
   ...TESTIMONIOS,
-  /*
-
-
-
-
-Comentarios que aportan sugerencias para mejorar.
-
-REACCIONES A NOTICIAS
-Comentarios que reaccionan a novedades o eventos.
-
-ANIMOS Y APOYO
-Comentarios para apoyar y motivar a otros usuarios.
-
-
-  */
-
+  ...CRITICAS_CONSTRUCTIVAS,
+  ...REACCIONES,
+  ...APOYO,
+  ...ANIMO
 ];
