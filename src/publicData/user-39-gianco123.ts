@@ -4,19 +4,18 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-//falta userId, profilesrc, prefix, profileDescription
-
 export const gianco123_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: '16b103bf-167d-4d2f-8451-52cdd3fc1295',
   username: 'gianco123',
-  profileImageSrc: '',
+  profileImageSrc:
+    'https://dominicnikolai.github.io/project-227/assets/gianco123/p3rfil.avif',
   following: false,
   followers: 604_320,
   followed: 30,
   profileDescription: 'Moda y cuidado personal ✨'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-227/assets/gianco123/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
