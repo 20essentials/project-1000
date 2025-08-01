@@ -108,6 +108,7 @@ import { ellian_sanchez_array_of_posts, ellian_sanchez_commonProps } from './use
 import { salary_transparent_street_array_of_posts, salary_transparent_street_commonProps } from './user-38-salary-transparent-street';
 import { gianco123_array_of_posts, gianco123_commonProps } from './user-39-gianco123';
 import { laVidaDeTomas_array_of_posts, laVidaDeTomas_commonProps } from './user-41-la-vida-de-tomas';
+import { holvek_array_of_posts, holvek_commonProps } from './user-40-holvek';
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
@@ -128,6 +129,7 @@ export const PUBLIC_DATA: arrayOfPosts = [
   // [arthur_commonProps, arthur_array_of_posts],
   // [pongamoslo_a_prueba_commonProps, pongamoslo_a_prueba_array_of_posts],
   // [gianco123_commonProps, gianco123_array_of_posts],
+  [holvek_commonProps, holvek_array_of_posts],
   [laVidaDeTomas_commonProps, laVidaDeTomas_array_of_posts],
   [miguel_araiza_commonProps, miguel_araiza_array_of_posts],
   // [lacosaes_commonProps, lacosaes_array_of_posts],

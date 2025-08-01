@@ -5,16 +5,16 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 export const holvek_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: 'a6bdf6c4-54a5-41ab-b6a8-7b94ccefa8f2',
   username: 'holvek',
-  profileImageSrc: '',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-229/assets/holvek/p3rfil.avif',
   following: false,
   followers: 1_920_715,
   followed: 19,
   profileDescription: 'мой тгк'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-229/assets/holvek/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
