@@ -3,6 +3,8 @@ import { EMOJIS_REPEATED } from '@/utils/array/comments/arrayOfRepeatedEmojis';
 import { JAJAJAJS } from '@/utils/array/comments/arrayOfJajajaj';
 import { EPICO } from './arrayOfEpic';
 import { BRUTAL } from './arrayofBrutal';
+import { TOP } from './arrayofTop';
+import { ACUERDO } from './arrayofAcuerdo';
 
 export const ARRAY_OF_COMMENTS = [
   ...EMOJIS,
@@ -10,10 +12,12 @@ export const ARRAY_OF_COMMENTS = [
   ...JAJAJAJS,
   ...EPICO,
   ...BRUTAL,
+  ...TOP,
+  ...ACUERDO,
 
   /*  
-  "Totalmente de acuerdo 💯",
-  "Esto es arte 🎨",
+  
+  
   "Me encantó 💕",
   "Simplemente genial 😍",
   "¡Lo necesito ya! 😩",
