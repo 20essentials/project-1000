@@ -18,6 +18,11 @@ import { COOL } from './arrayofCool';
 import { FENOMENAL } from './arrayofFenomenal';
 import { ENCANTO } from './arrayofEncanto';
 import { MOTIVACION } from './arrayofMotivacion';
+import { DIVERSION } from './arrayofDiversion';
+import { SORPRESA } from './arrayofSorpresa';
+import { ELOGIOS } from './arrayofElogios';
+import { GOOD_JOB } from './arrayofGoodJob';
+import { REFLEXIONES } from './arrayofReflexiones';
 
 export const ARRAY_OF_COMMENTS = [
   ...EMOJIS,
@@ -40,11 +45,15 @@ export const ARRAY_OF_COMMENTS = [
   ...FENOMENAL,
   ...ENCANTO,
   ...MOTIVACION,
+  ...DIVERSION,
+  ...SORPRESA,
+  ...ELOGIOS,
+  ...GOOD_JOB,
+  ...REFLEXIONES,
   /*
 
-DIVERSIÓN
-SORPRESA
-ELOGIOS
+
+
   */
 
 ];
