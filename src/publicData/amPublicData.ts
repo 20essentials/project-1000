@@ -7,112 +7,178 @@ import {
   goated_ai_art_commonProps
 } from '@/publicData/user-2-goated-ai-art';
 import type { arrayOfPosts } from '@/components/pages/SliderPosts/types.d.ts';
-import { qbitlab_array_of_posts, qbitlab_commonProps } from './user-6-qbitlab';
+import {
+  qbitlab_array_of_posts,
+  qbitlab_commonProps
+} from '@/publicData/user-6-qbitlab';
 import {
   ars_notoria_array_of_posts,
   ars_notoria_commonProps
-} from './user-3-ars-notoria';
-import { beats_array_of_posts, beats_commonProps } from './user-5-beats';
+} from '@/publicData/user-3-ars-notoria';
+import {
+  beats_array_of_posts,
+  beats_commonProps
+} from '@/publicData/user-5-beats';
 import {
   mr_lamborghini_array_of_posts,
   mr_lamborghini_commonProps
-} from './user-4-mr-lamborghini';
+} from '@/publicData/user-4-mr-lamborghini';
 import {
   vid_favorites_array_of_posts,
   vid_favorites_commonProps
-} from './user-7-vidfavorites';
+} from '@/publicData/user-7-vidfavorites';
 import {
   siti_favolosi_array_of_posts,
   siti_favolosi_commonProps
-} from './user-8-siti-favolosi';
-import { luxury_array_of_posts, luxury_commonProps } from './user-9-luxury';
+} from '@/publicData/user-8-siti-favolosi';
+import {
+  luxury_array_of_posts,
+  luxury_commonProps
+} from '@/publicData/user-9-luxury';
 import {
   marshall_jassan_array_of_posts,
   marshall_jassan_commonProps
-} from './user-10-marshall-jassan';
+} from '@/publicData/user-10-marshall-jassan';
 import {
   edaserkanbolat_edits_array_of_posts,
   edaserkanbolat_edits_commonProps
-} from './user-11-edaserkanbolat-edits';
+} from '@/publicData/user-11-edaserkanbolat-edits';
 import {
   jorgepomarg_array_of_posts,
   jorgepomarg_commonProps
-} from './user-12-jorgepomarg';
+} from '@/publicData/user-12-jorgepomarg';
 import {
   lucia_sora_array_of_posts,
   lucia_sora_commonProps
-} from './user-13-luciasora';
+} from '@/publicData/user-13-luciasora';
 import {
   elcodigobravo_array_of_posts,
   elcodigobravo_commonProps
-} from './user-14-elcodigo-bravo';
+} from '@/publicData/user-14-elcodigo-bravo';
 import {
   mr_rombus_array_of_posts,
   mr_rombus_commonProps
-} from './user-15-mr-rombus';
-import { cata_array_of_posts, cata_commonProps } from './user-16-cata copy';
+} from '@/publicData/user-15-mr-rombus';
+import {
+  cata_array_of_posts,
+  cata_commonProps
+} from '@/publicData/user-16-cata copy';
 import {
   whoisangenr_array_of_posts,
   whoisangenr_commonProps
-} from './user-17-whoisangenr';
-import { pumpkim_array_of_posts, pumpkim_commonProps } from './user-18-pumpkim';
+} from '@/publicData/user-17-whoisangenr';
+import {
+  pumpkim_array_of_posts,
+  pumpkim_commonProps
+} from '@/publicData/user-18-pumpkim';
 import {
   gregorian_array_of_posts,
   gregorian_commonProps
-} from './user-19-gregorian';
+} from '@/publicData/user-19-gregorian';
 import {
   milan_cars_array_of_posts,
   milan_cars_commonProps
-} from './user-20-milan-cars';
+} from '@/publicData/user-20-milan-cars';
 import {
   francesco_viaggi_array_of_posts,
   francesco_viaggi_commonProps
-} from './user-21-francesco-viaggi';
-import { ariel_array_of_posts, ariel_commonProps } from './user-22-ariel';
+} from '@/publicData/user-21-francesco-viaggi';
+import {
+  ariel_array_of_posts,
+  ariel_commonProps
+} from '@/publicData/user-22-ariel';
 import {
   javier_santaolalla_array_of_posts,
   javier_santaolalla_commonProps
-} from './user-23-javier-santaolalla';
+} from '@/publicData/user-23-javier-santaolalla';
 import {
   mr_robot_array_of_posts,
   mr_robot_commonProps
-} from './user-24-mr-robot';
-import { mr_benz_array_of_posts, mr_benz_commonProps } from './user-25-mr-benz';
+} from '@/publicData/user-24-mr-robot';
+import {
+  mr_benz_array_of_posts,
+  mr_benz_commonProps
+} from '@/publicData/user-25-mr-benz';
 import {
   about_life_array_of_posts,
   about_life_commonProps
-} from './user-27-about-life';
+} from '@/publicData/user-27-about-life';
 import {
   arte_settima_array_of_posts,
   arte_settima_commonProps
-} from './user-26-arte-settima';
+} from '@/publicData/user-26-arte-settima';
 import {
   pongamoslo_a_prueba_array_of_posts,
   pongamoslo_a_prueba_commonProps
-} from './user-28-pongamoslo-a-prueba';
+} from '@/publicData/user-28-pongamoslo-a-prueba';
 import {
   the_simulator_array_of_posts,
   the_simulator_commonProps
-} from './user-29-the-simulator';
+} from '@/publicData/user-29-the-simulator';
 import {
   lacosaes_array_of_posts,
   lacosaes_commonProps
-} from './user-30-lacosaes';
-import { miguel_araiza_array_of_posts, miguel_araiza_commonProps } from './user-31-miguel-araiza';
-import { presocratico_array_of_posts, presocratico_commonProps } from './user-32-presocratico';
-import { eddy_beef_array_of_posts, eddy_beef_commonProps } from './user-33-eddy-beef';
-import { lalobri_array_of_posts, lalobri_commonProps } from './user-34-lalobri';
-import { soy_delishus_array_of_posts, soy_delishus_commonProps } from './user-35-soydelishus';
-import { arthur_array_of_posts, arthur_commonProps } from './user-36-arthur';
-import { ellian_sanchez_array_of_posts, ellian_sanchez_commonProps } from './user-37-ellian-sanchez';
-import { salary_transparent_street_array_of_posts, salary_transparent_street_commonProps } from './user-38-salary-transparent-street';
-import { gianco123_array_of_posts, gianco123_commonProps } from './user-39-gianco123';
-import { laVidaDeTomas_array_of_posts, laVidaDeTomas_commonProps } from './user-41-la-vida-de-tomas';
-import { holvek_array_of_posts, holvek_commonProps } from './user-40-holvek';
-import { geridoo_array_of_posts, geridoo_commonProps } from './user-42-geridoo';
-import { riccardosegna_array_of_posts, riccardosegna_commonProps } from './user-43-ricardos3gna';
-import { manuel_villa_array_of_posts, manuel_villa_commonProps } from './user-44-manuel-villa';
-import { chico_collection_array_of_posts, chico_collection_commonProps } from './user-45-chico-collection';
+} from '@/publicData/user-30-lacosaes';
+import {
+  miguel_araiza_array_of_posts,
+  miguel_araiza_commonProps
+} from '@/publicData/user-31-miguel-araiza';
+import {
+  presocratico_array_of_posts,
+  presocratico_commonProps
+} from '@/publicData/user-32-presocratico';
+import {
+  eddy_beef_array_of_posts,
+  eddy_beef_commonProps
+} from '@/publicData/user-33-eddy-beef';
+import {
+  lalobri_array_of_posts,
+  lalobri_commonProps
+} from '@/publicData/user-34-lalobri';
+import {
+  soy_delishus_array_of_posts,
+  soy_delishus_commonProps
+} from '@/publicData/user-35-soydelishus';
+import {
+  arthur_array_of_posts,
+  arthur_commonProps
+} from '@/publicData/user-36-arthur';
+import {
+  ellian_sanchez_array_of_posts,
+  ellian_sanchez_commonProps
+} from '@/publicData/user-37-ellian-sanchez';
+import {
+  salary_transparent_street_array_of_posts,
+  salary_transparent_street_commonProps
+} from '@/publicData/user-38-salary-transparent-street';
+import {
+  gianco123_array_of_posts,
+  gianco123_commonProps
+} from '@/publicData/user-39-gianco123';
+import {
+  laVidaDeTomas_array_of_posts,
+  laVidaDeTomas_commonProps
+} from '@/publicData/user-41-la-vida-de-tomas';
+import {
+  holvek_array_of_posts,
+  holvek_commonProps
+} from '@/publicData/user-40-holvek';
+import {
+  geridoo_array_of_posts,
+  geridoo_commonProps
+} from '@/publicData/user-42-geridoo';
+import {
+  riccardosegna_array_of_posts,
+  riccardosegna_commonProps
+} from '@/publicData/user-43-ricardos3gna';
+import {
+  manuel_villa_array_of_posts,
+  manuel_villa_commonProps
+} from '@/publicData/user-44-manuel-villa';
+import {
+  chico_collection_array_of_posts,
+  chico_collection_commonProps
+} from '@/publicData/user-45-chico-collection';
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
@@ -139,7 +205,7 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [laVidaDeTomas_commonProps, laVidaDeTomas_array_of_posts],
   [miguel_araiza_commonProps, miguel_araiza_array_of_posts],
   [chico_collection_commonProps, chico_collection_array_of_posts],
-  [riccardosegna_commonProps, riccardosegna_array_of_posts],
+  [riccardosegna_commonProps, riccardosegna_array_of_posts]
   // [lacosaes_commonProps, lacosaes_array_of_posts],
   // [the_simulator_commonProps, the_simulator_array_of_posts],
   // [arte_settima_commonProps, arte_settima_array_of_posts],
