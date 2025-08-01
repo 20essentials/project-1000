@@ -107,6 +107,7 @@ import { arthur_array_of_posts, arthur_commonProps } from './user-36-arthur';
 import { ellian_sanchez_array_of_posts, ellian_sanchez_commonProps } from './user-37-ellian-sanchez';
 import { salary_transparent_street_array_of_posts, salary_transparent_street_commonProps } from './user-38-salary-transparent-street';
 import { gianco123_array_of_posts, gianco123_commonProps } from './user-39-gianco123';
+import { laVidaDeTomas_array_of_posts, laVidaDeTomas_commonProps } from './user-41-la-vida-de-tomas';
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
@@ -118,15 +119,16 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [gregorian_commonProps, [gregorian_array_of_posts[0]]], //esto si existe abajo
   //testing
 
-  [presocratico_commonProps, presocratico_array_of_posts],
-  [eddy_beef_commonProps, eddy_beef_array_of_posts],
-  [lalobri_commonProps, lalobri_array_of_posts],
-  [soy_delishus_commonProps, soy_delishus_array_of_posts],
-  [ellian_sanchez_commonProps, ellian_sanchez_array_of_posts],
-  [salary_transparent_street_commonProps, salary_transparent_street_array_of_posts],
-  [arthur_commonProps, arthur_array_of_posts],
-  [pongamoslo_a_prueba_commonProps, pongamoslo_a_prueba_array_of_posts],
-  [gianco123_commonProps, gianco123_array_of_posts],
+  // [presocratico_commonProps, presocratico_array_of_posts],
+  // [eddy_beef_commonProps, eddy_beef_array_of_posts],
+  // [lalobri_commonProps, lalobri_array_of_posts],
+  // [soy_delishus_commonProps, soy_delishus_array_of_posts],
+  // [ellian_sanchez_commonProps, ellian_sanchez_array_of_posts],
+  // [salary_transparent_street_commonProps, salary_transparent_street_array_of_posts],
+  // [arthur_commonProps, arthur_array_of_posts],
+  // [pongamoslo_a_prueba_commonProps, pongamoslo_a_prueba_array_of_posts],
+  // [gianco123_commonProps, gianco123_array_of_posts],
+  [laVidaDeTomas_commonProps, laVidaDeTomas_array_of_posts],
   [miguel_araiza_commonProps, miguel_araiza_array_of_posts],
   // [lacosaes_commonProps, lacosaes_array_of_posts],
   // [the_simulator_commonProps, the_simulator_array_of_posts],

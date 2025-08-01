@@ -7,16 +7,16 @@ import {
 //falta userId, profilesrc, prefix, profileDescription
 
 export const laVidaDeTomas_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: '25cece57-ea13-4af7-b4e7-d8c563072d5d',
   username: 'laVidaDeTomas',
-  profileImageSrc: '',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-228/assets/laVidaDeTomas/p3rfil.avif',
   following: false,
   followers: 2_720_321,
   followed: 872,
   profileDescription: 'Top Forbes Influencer 2021 & 2022'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-228/assets/laVidaDeTomas/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {

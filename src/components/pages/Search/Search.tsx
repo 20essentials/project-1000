@@ -18,7 +18,7 @@ export function Search() {
   })).toSorted(() => Math.random() - 0.5);
   const filteredArray =
     searchText !== ''
-      ? arrayUserNameAndId.filter(({ username }) => username.includes(searchText))
+      ? arrayUserNameAndId.filter(({ username }) => username.toLowerCase().includes(searchText.toLowerCase()))
       : arrayUserNameAndId;
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
   const setArrayOfPosts = useUserCreator(state => state.setArrayOfPosts);
