@@ -28,7 +28,7 @@ export function ContainerBottomOfComments({
 
   const flattenedArrayOfAllPosts = useMemo(
     () =>
-      ALL_POSTS.map(el => el[0]).filter(el => el.userId !== commonProps.userId),
+      ALL_POSTS.map(el => el[0]).filter(el => el.userId !== commonProps.userId).toSorted(() => Math.random() - 0.5),
     [commonProps.userId]
   );
 
