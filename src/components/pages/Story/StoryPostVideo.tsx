@@ -2,20 +2,16 @@ import type {
   postProps,
   postComonProps
 } from '@/components/pages/SliderPosts/types.d.ts';
-import { baseUrl, getRandomNumber } from '@/utils/functions';
+import { getRandomNumber } from '@/utils/functions';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { PlayButton } from '@/components/pages/SliderPosts/PostVideo/PlayButton';
 import { userHasInteracted } from '@/store/userHasInteracted';
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
 import { UserProfile } from '@/components/pages/SliderPosts/AsideRight/UserProfile';
-import { AsideText } from '@/components/pages/SliderPosts/AsideText';
-import { SaveContainer } from '@/components/pages/SliderPosts/AsideRight/SaveContainer';
 import { HeartContainer } from '@/components/pages/SliderPosts/AsideRight/HeartContainer';
 import { InputRange } from '@/components/pages/SliderPosts/PostVideo/inputRange';
-import { CommentsContainer } from '@/components/pages/SliderPosts/AsideRight/CommentsContainer';
-import { ShareContainer } from '@/components/pages/SliderPosts/AsideRight/ShareContainer';
 import { useIsScrolling } from '@/store/useIsScrolling';
-import { CloseX } from './CloseX';
+import { CloseX } from '@/components/pages/Story//CloseX';
 
 export function StoryPostVideo(
   props: postProps & postComonProps & { idx: number }
@@ -28,20 +24,7 @@ export function StoryPostVideo(
   const offsetOfPosts = useLimitOfPost(state => state.offsetOfPosts);
   const isScrolling = useIsScrolling(state => state.isScrolling);
 
-  const {
-    videoSrc,
-    description,
-    tags,
-    totalViewsOfThePost,
-    hearts,
-    comments,
-    saved,
-    shared,
-    profileImageSrc,
-    username,
-    idx,
-    userId
-  } = props;
+  const { videoSrc, hearts, profileImageSrc, username, idx, userId } = props;
   const thisPostWillRenderMorePost = idx % 3 === 0;
 
   const [isPaused, setIsPaused] = useState(true);
@@ -165,12 +148,17 @@ export function StoryPostVideo(
           />
         </section>
         <h2 className='am-username'>
-          {username} · <output className='am-time'>{randomNumOfHours} hours ago</output>
+          {username} ·{' '}
+          <output className='am-time'>{randomNumOfHours} hours ago</output>
         </h2>
         <CloseX className='am-x-story-container' />
       </article>
 
-      <HeartContainer otherClassName={'am-heart-from-story'} hearts={hearts} post={props} />
+      <HeartContainer
+        otherClassName={'am-heart-from-story'}
+        hearts={hearts}
+        post={props}
+      />
 
       {isPaused && (
         <PlayButton className='play-btn' handlePlayVideo={handlePlayVideo} />

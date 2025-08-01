@@ -2,38 +2,27 @@ import type {
   postProps,
   postComonProps
 } from '@/components/pages/SliderPosts/types.d.ts';
-import { baseUrl, getRandomNumber } from '@/utils/functions';
+import { getRandomNumber } from '@/utils/functions';
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { ARRAY_OF_SONGS } from '@/utils/arrayOfSongs';
 import { userHasInteracted } from '@/store/userHasInteracted';
 import { PlayButton } from '@/components/pages/SliderPosts/PostVideo/PlayButton';
 import { UserProfile } from '@/components/pages/SliderPosts/AsideRight/UserProfile';
-import { AsideText } from '@/components/pages/SliderPosts/AsideText';
-import { SaveContainer } from '@/components/pages/SliderPosts/AsideRight/SaveContainer';
 import { HeartContainer } from '@/components/pages/SliderPosts/AsideRight/HeartContainer';
 import { useSwipeScroll } from '@/hooks/useSwipeScroll';
 import { NumOfPost } from '@/components/pages/SliderPosts/PostImage/NumOfPost';
 import { useTrackVisibleImage } from '@/hooks/useTrackVisibleImage';
-import { CommentsContainer } from '@/components/pages/SliderPosts/AsideRight/CommentsContainer';
-import { ShareContainer } from '@/components/pages/SliderPosts/AsideRight/ShareContainer';
 import { useIsScrolling } from '@/store/useIsScrolling';
-import { CloseX } from './CloseX';
-import { InputRangeAudio } from './InputRangeAudio';
+import { CloseX } from '@/components/pages/Story/CloseX';
+import { InputRangeAudio } from '@/components/pages/Story/InputRangeAudio';
 
 export function StoryPostImage(
   props: postProps & postComonProps & { idx: number }
 ) {
   const {
     arrayImages,
-    description,
-    tags,
-    dateOfPublication,
-    totalViewsOfThePost,
     hearts,
-    comments,
-    saved,
-    shared,
     username,
     profileImageSrc,
     idx,
@@ -53,29 +42,28 @@ export function StoryPostImage(
   const [randomSong, setRandomSong] = useState<string | null>(null);
 
   const [totalDuration, setTotalDuration] = useState(0);
-const [currentDuration, setCurrentDuration] = useState(0);
+  const [currentDuration, setCurrentDuration] = useState(0);
 
-useEffect(() => {
-  const audio = audioRef.current;
-  if (!audio) return;
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
 
-  const handleLoadedMetadata = () => {
-    setTotalDuration(Math.floor(audio.duration));
-  };
+    const handleLoadedMetadata = () => {
+      setTotalDuration(Math.floor(audio.duration));
+    };
 
-  const handleTimeUpdate = () => {
-    setCurrentDuration(Math.floor(audio.currentTime));
-  };
+    const handleTimeUpdate = () => {
+      setCurrentDuration(Math.floor(audio.currentTime));
+    };
 
-  audio.addEventListener("loadedmetadata", handleLoadedMetadata);
-  audio.addEventListener("timeupdate", handleTimeUpdate);
+    audio.addEventListener('loadedmetadata', handleLoadedMetadata);
+    audio.addEventListener('timeupdate', handleTimeUpdate);
 
-  return () => {
-    audio.removeEventListener("loadedmetadata", handleLoadedMetadata);
-    audio.removeEventListener("timeupdate", handleTimeUpdate);
-  };
-}, [randomSong]);
-  
+    return () => {
+      audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
+      audio.removeEventListener('timeupdate', handleTimeUpdate);
+    };
+  }, [randomSong]);
 
   useEffect(() => {
     const song =
@@ -236,17 +224,17 @@ useEffect(() => {
           />
         )}
 
-  <InputRangeAudio
-  otherClassName="story-input-range"
-  audioRef={audioRef}
-  totalDuration={totalDuration}
-  currentDuration={currentDuration}
-  setCurrentDuration={(newTime: number) => {
-    if (audioRef.current) {
-      audioRef.current.currentTime = newTime;
-    }
-  }}
-/>
+        <InputRangeAudio
+          otherClassName='story-input-range'
+          audioRef={audioRef}
+          totalDuration={totalDuration}
+          currentDuration={currentDuration}
+          setCurrentDuration={(newTime: number) => {
+            if (audioRef.current) {
+              audioRef.current.currentTime = newTime;
+            }
+          }}
+        />
       </aside>
     </article>
   );
