@@ -1,0 +1,22 @@
+export const JAJAJAJS = [
+  "jajajajajaja 🤣",
+  "hahahahaha 😂",
+  "JAJAJAJAJAJA 😭",
+  "jajajaajjsjsjs 🤣",
+  "hahhahaahha 🤪",
+  "jajsjsjajsjsj",
+  "LOL 😂😂",
+  "xD xD xD",
+  "jajajajajaksksks",
+  "hahaha sksksksk",
+  "jajajajaa qué risa 😂",
+  "HAHAAHAHAHAH 🤣",
+  "lmaooo 😭",
+  "jajaJAjaJAjaJA 🤣🤣",
+  "hahAHhahAHhahAH",
+  "jsjsjsjsjsjsjsjsjs",
+  "jajajjaja no puedo 😭",
+  "ROFL 🤣",
+  "jajajajaja literal me morí 😂",
+  "AY NO JAJAJAJAJA 🤣"
+];

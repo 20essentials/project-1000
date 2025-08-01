@@ -1,9 +1,12 @@
 import { EMOJIS } from '@/utils/array/comments/arrayOfEmojis';
-import { EMOJIS_REPEATED } from './arrayOfRepeatedEmojis';
+import { EMOJIS_REPEATED } from '@/utils/array/comments/arrayOfRepeatedEmojis';
+import { JAJAJAJS } from '@/utils/array/comments/arrayOfJajajaj';
 
 export const ARRAY_OF_COMMENTS = [
   ...EMOJIS,
   ...EMOJIS_REPEATED,
+  ...JAJAJAJS,
+
   /*  
   "🔥🔥🔥",
   "Qué buena esa 😂",
