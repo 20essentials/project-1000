@@ -15,6 +15,9 @@ import { GENIAL } from './arrayofGenial';
 import { ESTUPENDO } from './arrayofEstupendo';
 import { FANTASTIC } from './arrayofFantastic';
 import { COOL } from './arrayofCool';
+import { FENOMENAL } from './arrayofFenomenal';
+import { ENCANTO } from './arrayofEncanto';
+import { MOTIVACION } from './arrayofMotivacion';
 
 export const ARRAY_OF_COMMENTS = [
   ...EMOJIS,
@@ -34,12 +37,14 @@ export const ARRAY_OF_COMMENTS = [
   ...ESTUPENDO,
   ...FANTASTIC,
   ...COOL,
+  ...FENOMENAL,
+  ...ENCANTO,
+  ...MOTIVACION,
   /*
-   
-   
-   
-   
-   "Esto es Fenomenal"
 
+DIVERSIÓN
+SORPRESA
+ELOGIOS
   */
+
 ];
