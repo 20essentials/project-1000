@@ -23,6 +23,14 @@ import { SORPRESA } from './arrayofSorpresa';
 import { ELOGIOS } from './arrayofElogios';
 import { GOOD_JOB } from './arrayofGoodJob';
 import { REFLEXIONES } from './arrayofReflexiones';
+import { EMOCIONES_POSITIVAS } from './arrayofEmocionesPositivas';
+import { EMOCIONES_NEGATIVAS } from './arrayofEmocionesNegativas';
+import { SUGERENCIAS } from './arrayofSugerencias';
+import { QUESTIONS } from './arrayofQuestion';
+import { CONFIRMACIONES } from './arrayofConfirmaciones';
+import { CHISTES } from './arrayofChistes';
+import { HUMOR } from './arrayofHumor';
+import { TESTIMONIOS } from './arrayofTestimonios';
 
 export const ARRAY_OF_COMMENTS = [
   ...EMOJIS,
@@ -50,8 +58,26 @@ export const ARRAY_OF_COMMENTS = [
   ...ELOGIOS,
   ...GOOD_JOB,
   ...REFLEXIONES,
+  ...EMOCIONES_POSITIVAS,
+  ...EMOCIONES_NEGATIVAS,
+  ...SUGERENCIAS,
+  ...QUESTIONS,
+  ...CONFIRMACIONES,
+  ...CHISTES,
+  ...HUMOR,
+  ...TESTIMONIOS,
   /*
 
+
+
+
+Comentarios que aportan sugerencias para mejorar.
+
+REACCIONES A NOTICIAS
+Comentarios que reaccionan a novedades o eventos.
+
+ANIMOS Y APOYO
+Comentarios para apoyar y motivar a otros usuarios.
 
 
   */
