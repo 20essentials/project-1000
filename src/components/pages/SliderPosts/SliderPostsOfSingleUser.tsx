@@ -1,9 +1,9 @@
 import '@/components/pages/SliderPosts/SliderPosts.css';
 import { PostImage } from '@/components/pages/SliderPosts/PostImage/PostImage';
 import { PostVideo } from '@/components/pages/SliderPosts/PostVideo/PostVideo';
-import { useRef, useEffect, useMemo } from 'react';
+import { useRef, useEffect } from 'react';
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
-import type { arrayOfPosts } from './types';
+import type { arrayOfPosts } from '@/components/pages/SliderPosts//types';
 import { useUserCreator } from '@/store/useUserCreator';
 import { useUserSavedPosts } from '@/store/useUserSavedPosts';
 import { useCurrentUser } from '@/store/useCurrentUser';

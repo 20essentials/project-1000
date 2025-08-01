@@ -5,8 +5,8 @@ import type {
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 import { useUserCreator } from '@/store/useUserCreator';
 import { useEffect, useState, useRef } from 'react';
-import { TotalViews } from './TotalViews';
-import { SqureSubSquare } from './SqureSubSquare';
+import { TotalViews } from '@/components/pages/ProfileCreator/TotalViews';
+import { SqureSubSquare } from '@/components/pages/ProfileCreator/SqureSubSquare';
 
 export function GridPosts({
   arrayOfPosts,
@@ -15,17 +15,13 @@ export function GridPosts({
   arrayOfPosts: postProps[];
   commonProps: postComonProps;
 }) {
-  const [visibleCount, setVisibleCount] = useState(9); // inicialmente 9 posts visibles
+  const [visibleCount, setVisibleCount] = useState(9);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [observedIndexes, setObservedIndexes] = useState<number[]>([]);
-  // Referencias para los últimos 3 posts visibles
   const lastThreeRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  // Callback para IntersectionObserver de los últimos 3 posts visibles
   const onIntersect: IntersectionObserverCallback = entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // Cuando algún post de los últimos 3 entra en viewport, agregamos 9 más
         setVisibleCount(prev => Math.min(prev + 9, arrayOfPosts.length));
       }
     });
@@ -39,7 +35,6 @@ export function GridPosts({
         threshold: 0.1
       });
 
-      // Observamos los últimos 3 posts visibles
       lastThreeRefs.current.forEach(el => {
         if (el) observer.observe(el);
       });
@@ -59,7 +54,6 @@ export function GridPosts({
         <div
           key={index}
           ref={el => {
-            // Guardar referencia solo para los últimos 3 visibles
             if (index >= visibleCount - 3) {
               lastThreeRefs.current[index - (visibleCount - 3)] = el;
             }
@@ -99,7 +93,7 @@ function PostVideoOrImage({
       ([entry], obs) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          if (containerRef.current) obs.unobserve(containerRef.current); // Dejar de observar
+          if (containerRef.current) obs.unobserve(containerRef.current); 
         }
       },
       {
@@ -177,7 +171,7 @@ function PostVideoOrImage({
             src={arrayImages[0]}
             alt='Post image'
           />
-         <SqureSubSquare />
+          <SqureSubSquare />
         </>
       ) : null}
       <TotalViews totalViews={totalViewsOfThePost} />

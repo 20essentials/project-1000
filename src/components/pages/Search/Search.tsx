@@ -1,6 +1,5 @@
 import '@/components/pages/Search/Search.css';
-import { WatchIcon } from './WatchIcon';
-// import { DeleteIcon } from './DeleteIcon';
+import { WatchIcon } from '@/components/pages/Search/WatchIcon';
 import { useGlobalArrayPosts } from '@/store/useGlobalArrayPosts';
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 import { useUserCreator } from '@/store/useUserCreator';
@@ -85,7 +84,6 @@ export function Search() {
                 <h5 className='user-name'>{username}</h5>
                 <aside className='line'></aside>
               </div>
-              {/* <DeleteIcon className='delete-icon' /> */}
             </article>
           ))
         ) : (

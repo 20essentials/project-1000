@@ -3,13 +3,12 @@ import { useUserCreator } from '@/store/useUserCreator';
 import { generateTotalNum } from '@/utils/functions';
 import { GridPosts } from '@/components/pages/ProfileCreator/GridPosts';
 import { ArrowLeft } from '@/components/pages/ProfileCreator/ArrowLeft';
-import { Logout } from './Logout';
-import { NavVideosOrSaved } from './NavVideosOrSaved';
-import { GridOfUserSavedPosts } from './GridOfUserSavedPosts';
-
-import { NumFollowed } from '../ProfileCreator/ProfileAndProfileCreatorCommonComponents/NumFollowed';
+import { Logout } from '@/components/pages/Profile/Logout';
+import { NavVideosOrSaved } from '@/components/pages/Profile/NavVideosOrSaved';
+import { GridOfUserSavedPosts } from '@/components/pages/Profile/GridOfUserSavedPosts';
+import { NumFollowed } from '@/components/pages/ProfileCreator/ProfileAndProfileCreatorCommonComponents/NumFollowed';
 import { useFollowedAccount } from '@/store/useFollowedAccount';
-import { NumFollowers } from '../ProfileCreator/ProfileAndProfileCreatorCommonComponents/NumFollowers';
+import { NumFollowers } from '@/components/pages/ProfileCreator/ProfileAndProfileCreatorCommonComponents/NumFollowers';
 
 export function Profile() {
   //This is the same User
@@ -20,17 +19,12 @@ export function Profile() {
     state => state.arrayOfFollowedAccounts
   );
   const { length: numOfFollowed } = arrayOfFollowedAccounts;
-  const theTotalLikes = arrayOfPosts.reduce((total, obj) => total + obj.hearts, 0 )
+  const theTotalLikes = arrayOfPosts.reduce(
+    (total, obj) => total + obj.hearts,
+    0
+  );
 
-  const {
-    profileImageSrc,
-    username,
-    // followed,
-    followers,
-    // totalLikes,
-    profileDescription,
-    userId
-  } = commonProps;
+  const { profileImageSrc, username, followers } = commonProps;
 
   return (
     <article className='profile-user-original'>
@@ -43,7 +37,7 @@ export function Profile() {
         <p className='name-of-the-user'>@{username}</p>
         <aside className='container-data-user'>
           <NumFollowed followedCount={generateTotalNum(numOfFollowed)} />
-          <NumFollowers followersCount={generateTotalNum(followers)}/>
+          <NumFollowers followersCount={generateTotalNum(followers)} />
           <article className='tab-data'>
             <p className='num'>{generateTotalNum(theTotalLikes)}</p>
             <p className='desc'>Likes</p>
