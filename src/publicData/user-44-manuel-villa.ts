@@ -7,9 +7,9 @@ import {
 //falta userId, profilesrc, prefix, profileDescription
 
 export const manuel_villa_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: '23229d1e-6fab-4c72-82eb-673abd464dc5',
   username: 'manuel_villa',
-  profileImageSrc: '',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-232/assets/m4nuelvill4/p3rfil.avif',
   following: false,
   followers: 89_720,
   followed: 23,
@@ -17,7 +17,7 @@ export const manuel_villa_commonProps = generateExactlyCommonProps({
     'No me importa perder contra otros, pero no puedo perder ante mí mismo'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-232/assets/m4nuelvill4/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {

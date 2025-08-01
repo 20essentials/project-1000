@@ -111,6 +111,8 @@ import { laVidaDeTomas_array_of_posts, laVidaDeTomas_commonProps } from './user-
 import { holvek_array_of_posts, holvek_commonProps } from './user-40-holvek';
 import { geridoo_array_of_posts, geridoo_commonProps } from './user-42-geridoo';
 import { riccardosegna_array_of_posts, riccardosegna_commonProps } from './user-43-ricardos3gna';
+import { manuel_villa_array_of_posts, manuel_villa_commonProps } from './user-44-manuel-villa';
+import { chico_collection_array_of_posts, chico_collection_commonProps } from './user-45-chico-collection';
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
@@ -131,10 +133,12 @@ export const PUBLIC_DATA: arrayOfPosts = [
   // [arthur_commonProps, arthur_array_of_posts],
   // [pongamoslo_a_prueba_commonProps, pongamoslo_a_prueba_array_of_posts],
   // [gianco123_commonProps, gianco123_array_of_posts],
+  [manuel_villa_commonProps, manuel_villa_array_of_posts],
   [geridoo_commonProps, geridoo_array_of_posts],
   [holvek_commonProps, holvek_array_of_posts],
   [laVidaDeTomas_commonProps, laVidaDeTomas_array_of_posts],
   [miguel_araiza_commonProps, miguel_araiza_array_of_posts],
+  [chico_collection_commonProps, chico_collection_array_of_posts],
   [riccardosegna_commonProps, riccardosegna_array_of_posts],
   // [lacosaes_commonProps, lacosaes_array_of_posts],
   // [the_simulator_commonProps, the_simulator_array_of_posts],

@@ -5,16 +5,16 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 export const chico_collection_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: '34d39439-6a96-4198-90b4-46202826c602',
   username: 'chico_collection',
-  profileImageSrc: '',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-233/assets/ch1cocollection/p3rfil.avif',
   following: false,
   followers: 14_700,
   followed: 525,
   profileDescription: 'Custom Collector'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-233/assets/ch1cocollection/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
