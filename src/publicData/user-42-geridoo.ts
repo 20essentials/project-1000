@@ -4,19 +4,18 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-//falta userId, profilesrc, prefix, profileDescription
-
 export const geridoo_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: '5cf81a74-b693-4f94-b67c-5e7779f11525',
   username: 'geridoo',
-  profileImageSrc: '',
+  profileImageSrc:
+    'https://dominicnikolai.github.io/project-230/assets/geridoo/p3rfil.avif',
   following: false,
   followers: 30_423,
   followed: 50,
   profileDescription: 'Story'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-230/assets/geridoo/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {

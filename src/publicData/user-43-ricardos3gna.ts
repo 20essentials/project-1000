@@ -7,16 +7,16 @@ import {
 //falta userId, profilesrc, prefix, profileDescription
 
 export const riccardosegna_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: 'bf05cc5d-fda9-41b3-9c17-2512649be7e3',
   username: 'riccardosegna',
-  profileImageSrc: '',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-231/assets/ric4rdo4ssegna/p3rfil.avif',
   following: false,
   followers: 314_720,
   followed: 50,
   profileDescription: 'REPORTER - CREATOR'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-231/assets/ric4rdo4ssegna/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
