@@ -5,13 +5,13 @@ import type {
   postComonProps
 } from '@/components/pages/SliderPosts/types.d.ts';
 import '@/components/pages/FollowedAndFollow/FollowedAndFollow.css';
-import { ArrowLeft } from '../ProfileCreator/ArrowLeft';
+import { ArrowLeft } from '@/components/pages/ProfileCreator/ArrowLeft';
 import { useCurrentUser } from '@/store/useCurrentUser';
 import { baseUrl, getRandomNumber } from '@/utils/functions';
 import { useUserCreator } from '@/store/useUserCreator';
 import { useFollowedAccount } from '@/store/useFollowedAccount';
 import { useMemo, useRef, useState } from 'react';
-import { ArrayOfNavbarStories } from './ArrayOfNavbarStories';
+import { ArrayOfNavbarStories } from '@/components/pages/Inbox/ArrayOfNavbarStories';
 import { ListOfUsers } from '@/components/pages/FollowedAndFollow/ListOfUser';
 import { PRIVATE_DATA } from '@/privateData/amPrivateData';
 import { PUBLIC_DATA } from '@/publicData/amPublicData';

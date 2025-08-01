@@ -2,7 +2,7 @@ import '@/styles/Layer1.css';
 import { Container1 } from '@/components/Container1';
 import { Container2 } from '@/components/Container2';
 import { useNcontainer, CONTAINER_IS } from '@/store/useNcontainer';
-import { Container3 } from './Container3';
+import { Container3 } from '@/components/Container3';
 import { NavbarTop } from '@/components/pages/SliderPosts/NavbarTop';
 import { useCurrentPage, IS_ACTIVE_BUTTON } from '@/store/useCurrentPage';
 import { useEffect, useRef, useState } from 'react';

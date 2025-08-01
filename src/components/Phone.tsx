@@ -1,5 +1,5 @@
 import '@/styles/phone.css';
-import { Layer1 } from './Layer1';
+import { Layer1 } from '@/components/Layer1';
 import { Layer0 } from '@/components/Layer0';
 import type { User } from '@clerk/astro/server';
 import { useCurrentUser } from '@/store/useCurrentUser';

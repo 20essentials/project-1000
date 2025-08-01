@@ -42,7 +42,8 @@ export function Container3() {
       {IS_ACTIVE_BUTTON.STORY === currenPage && (
         <Story />
       )}
-      {/* *********************THIS MUST BE ALWAYS AT THE END  */}
+
+      {/* *********************THIS ALWAYS AT THE END  */}
       {IS_ACTIVE_BUTTON.LOGIN_PAGE !== currenPage && <NavbarBottom />}
     </article>
   );
