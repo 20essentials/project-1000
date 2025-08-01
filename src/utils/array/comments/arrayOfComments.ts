@@ -6,6 +6,10 @@ import { BRUTAL } from './arrayofBrutal';
 import { TOP } from './arrayofTop';
 import { ACUERDO } from './arrayofAcuerdo';
 import { ARTE } from './arrayofArte';
+import { NECESITAR } from './arrayOfComment';
+import { FIRMAR } from './arrayofFirmar';
+import { GOOD_CONTENT } from './arrayofGoodContent';
+import { AFIRMAR } from './arrayofAfirmar';
 
 export const ARRAY_OF_COMMENTS = [
   ...EMOJIS,
@@ -16,14 +20,18 @@ export const ARRAY_OF_COMMENTS = [
   ...TOP,
   ...ACUERDO,
   ...ARTE,
+  ...NECESITAR,
+  ...FIRMAR,
+  ...GOOD_CONTENT,
+  ...AFIRMAR,
   /*  
   
   
 
-  "¡Lo necesito ya! 😩",
-  "¿Dónde firmo? 😅",
-  "Esto sí que es contenido 🙌",
-  "Muy cierto eso 👏",
+  
+  
+  
+  
   "Gracias por esto 🙏",
    */
 ];
