@@ -7,7 +7,7 @@ import { Profile } from '@/components/pages/Profile/Profile';
 import { ProfileCreator } from '@/components/pages/ProfileCreator/ProfileCreator';
 import { NavbarBottom } from '@/components/NavBarBottom/NavbarBottom';
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
-import { SliderPostsOfSingleUser } from './pages/SliderPosts/SliderPostsOfSingleUser';
+import { SliderPostsOfSingleUser } from '@/components/pages/SliderPosts/SliderPostsOfSingleUser';
 import { Login } from '@/components/pages/Login/Login';
 import { useCurrentUser } from '@/store/useCurrentUser';
 import { FollowedAndFollow } from '@/components/pages/FollowedAndFollow/FollowedAndFollow';
