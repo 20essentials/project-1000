@@ -13,7 +13,7 @@ import { useCurrentUser } from '@/store/useCurrentUser';
 import { FollowedAndFollow } from '@/components/pages/FollowedAndFollow/FollowedAndFollow';
 import { useEffect } from 'react';
 import { useLastPagedVisited } from '@/store/userLastPageVisited';
-import { Story } from './pages/Story/Story';
+import { Story } from '@/components/pages/Story/Story';
 
 export function Container3() {
   const user = useCurrentUser(state => state.user);
