@@ -2,13 +2,13 @@ import type { arrayOfPosts } from '@/components/pages/SliderPosts/types.d.ts';
 import { PRIVATE_DATA } from '@/privateData/amPrivateData';
 import { PUBLIC_DATA } from '@/publicData/amPublicData';
 import { useUserCreator } from '@/store/useUserCreator';
-import { CloseContainer } from './CloseContainer';
+import { CloseContainer } from '@/components/pages/SliderPosts/AsideRight/CloseContainer';
 const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
 const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 import { ARRAY_OF_COMMENTS } from '@/utils/array/comments/arrayOfComments';
 import { useMemo, useState } from 'react';
-import { RowComment } from './RowComment';
+import { RowComment } from '@/components/pages/SliderPosts/AsideRight/RowComment';
 import { modEspecial } from '@/utils/functions';
 const NUM_OF_COMMENT_THAT_RENDER_MORE_COMMENTS = 9;
 
@@ -28,7 +28,9 @@ export function ContainerBottomOfComments({
 
   const flattenedArrayOfAllPosts = useMemo(
     () =>
-      ALL_POSTS.map(el => el[0]).filter(el => el.userId !== commonProps.userId).toSorted(() => Math.random() - 0.5),
+      ALL_POSTS.map(el => el[0])
+        .filter(el => el.userId !== commonProps.userId)
+        .toSorted(() => Math.random() - 0.5),
     [commonProps.userId]
   );
 

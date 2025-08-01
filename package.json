@@ -1,7 +1,7 @@
 {
   "name": "tik-tok-lite-clon",
   "type": "module",
-  "version": "100.000.000.000.000",
+  "version": "100.0.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

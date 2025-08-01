@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
-import { HeartAndDislikeFooter } from './HeartAndDislikeFooter';
-import { UserProfile } from './UserProfile';
+import { HeartAndDislikeFooter } from '@/components/pages/SliderPosts/AsideRight/HeartAndDislikeFooter';
+import { UserProfile } from '@/components/pages/SliderPosts/AsideRight/UserProfile';
 
 export function RowComment({
   indexOfComment,
@@ -23,8 +23,6 @@ export function RowComment({
 
   useEffect(() => {
     if (!commentRowRef.current || !thisCommenRenderMorePosts) return;
-
-    
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
