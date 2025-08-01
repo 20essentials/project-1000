@@ -11,6 +11,10 @@ import { FIRMAR } from '@/utils/array/comments/arrayofFirmar';
 import { GOOD_CONTENT } from '@/utils/array/comments/arrayofGoodContent';
 import { AFIRMAR } from '@/utils/array/comments/arrayofAfirmar';
 import { AGRADECER } from '@/utils/array/comments/arrayofAgradecimiento';
+import { GENIAL } from './arrayofGenial';
+import { ESTUPENDO } from './arrayofEstupendo';
+import { FANTASTIC } from './arrayofFantastic';
+import { COOL } from './arrayofCool';
 
 export const ARRAY_OF_COMMENTS = [
   ...EMOJIS,
@@ -25,5 +29,17 @@ export const ARRAY_OF_COMMENTS = [
   ...FIRMAR,
   ...GOOD_CONTENT,
   ...AFIRMAR,
-  ...AGRADECER
+  ...AGRADECER,
+  ...GENIAL,
+  ...ESTUPENDO,
+  ...FANTASTIC,
+  ...COOL,
+  /*
+   
+   
+   
+   
+   "Esto es Fenomenal"
+
+  */
 ];
