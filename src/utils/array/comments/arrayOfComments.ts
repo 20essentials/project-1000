@@ -10,6 +10,7 @@ import { NECESITAR } from './arrayOfComment';
 import { FIRMAR } from './arrayofFirmar';
 import { GOOD_CONTENT } from './arrayofGoodContent';
 import { AFIRMAR } from './arrayofAfirmar';
+import { AGRADECER } from './arrayofAgradecimiento';
 
 export const ARRAY_OF_COMMENTS = [
   ...EMOJIS,
@@ -24,14 +25,5 @@ export const ARRAY_OF_COMMENTS = [
   ...FIRMAR,
   ...GOOD_CONTENT,
   ...AFIRMAR,
-  /*  
-  
-  
-
-  
-  
-  
-  
-  "Gracias por esto 🙏",
-   */
+  ...AGRADECER
 ];
