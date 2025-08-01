@@ -1,5 +1,4 @@
 import '@/components/pages/Inbox/Inbox.css';
-
 import type {
   arrayOfPosts,
   postComonProps

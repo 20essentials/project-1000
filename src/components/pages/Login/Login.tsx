@@ -1,17 +1,19 @@
 import '@/components/pages/Login/Login.css';
 import { $ } from '@/utils/functions';
-import { Google } from './Google';
-import { Twitch } from './Twitch';
-import { GitHub } from './GitHub';
+import { Google } from '@/components/pages/Login/Google';
+import { Twitch } from '@/components/pages/Login/Twitch';
+import { GitHub } from '@/components/pages/Login/GitHub';
 
 function openGoogle() {
   const $buttonGoogle = $('.cl-button__google') as HTMLButtonElement;
   $buttonGoogle.click();
 }
+
 function openGithub() {
   const $buttonGithub = $('.cl-button__github') as HTMLButtonElement;
   $buttonGithub.click();
 }
+
 function openTwitch() {
   const $buttonTwitch = $('.cl-button__twitch') as HTMLButtonElement;
   $buttonTwitch.click();
