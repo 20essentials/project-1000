@@ -16,6 +16,7 @@ import { CommentsContainer } from '@/components/pages/SliderPosts/AsideRight/Com
 import { ShareContainer } from '@/components/pages/SliderPosts/AsideRight/ShareContainer';
 import { useIsScrolling } from '@/store/useIsScrolling';
 import { ContainerBottomOfComments } from '../AsideRight/ContainerBottomOfComments';
+import { AsideBottomOfShare } from '../AsideRight/AsideBottomOfShare';
 
 export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   const hasInteracted = userHasInteracted(state => state.hasInteracted);
@@ -29,6 +30,12 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
 
   function updateIsContainerBottomOpen() {
     setIsContainerBottomOpen(!isContainerBottomOpen);
+  }
+
+  const [isContainerShareOpen, setIsContainerShareOpen] = useState(false);
+
+  function updateIsContainerShareOpen() {
+    setIsContainerShareOpen(!isContainerShareOpen);
   }
 
   const {
@@ -166,7 +173,11 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
           post={props}
         />
         <SaveContainer saved={saved} post={props} />
-        <ShareContainer shared={shared} post={props} />
+        <ShareContainer
+          updateIsContainerShareOpen={updateIsContainerShareOpen}
+          shared={shared}
+          post={props}
+        />
         <section className='button-container btn-container-vinyl'>
           <img className='vinyl' src={baseUrl('/assets/vinyl.png')} alt='Vinyl' />
           <img
@@ -196,6 +207,12 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
         <ContainerBottomOfComments
           totalNumberOfComments={comments}
           updateIsContainerBottomOpen={updateIsContainerBottomOpen}
+        />
+      )}
+
+      {isContainerShareOpen && (
+        <AsideBottomOfShare
+          updateIsContainerShareOpen={updateIsContainerShareOpen}
         />
       )}
     </aside>

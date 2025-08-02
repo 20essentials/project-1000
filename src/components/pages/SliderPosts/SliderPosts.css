@@ -514,6 +514,105 @@
         }
       }
     }
+
+    .aside-bottom-of-share {
+      position: absolute;
+      width: 100%;
+      bottom: 1px;
+      left: 0;
+      height: max-content;
+      background-color: #111;
+      pointer-events: auto; /* important */
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+
+      .am-header-of-share {
+        text-align: center;
+        position: relative;
+        top: 0px;
+        width: 100%;
+        font-weight: bold;
+        padding: 10px;
+        background-color: #111;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        z-index: 300;
+        color: #e9e9e9;
+        font-size: 12px;
+        border-bottom: 1px solid #e9e9e9;
+
+        .close-container-bottom {
+          position: absolute;
+          width: 19px;
+          height: 19px;
+          right: 15px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      .am-footer-of-the-share {
+        position: relative;
+        padding: 5px;
+        padding-block: 10px;
+        flex-grow: 1;
+        overflow-x: scroll;
+        overscroll-behavior: contain;
+        /* background-color: blue; */
+        display: flex;
+        gap: 5px;
+
+        &::-webkit-scrollbar {
+          height: 2px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: #fff;
+          opacity: 0.5;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+
+        .item-share {
+          min-width: 55px;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          /* background-color: #e6e60d; */
+          align-items: center;
+
+          .circle-gradient {
+            aspect-ratio: 1;
+            max-width: 35px;
+            border-radius: 50%;
+            background-color: orange;
+            display: flex;
+            flex-wrap: wrap;
+            place-content: center;
+
+            svg {
+              width: 75%;
+              height: 75%;
+              color: #e9e9e9;
+            }
+          }
+
+          .title-share {
+            text-align: center;
+            font-size: 9px;
+            color: #fff;
+            opacity: 0.7;
+            text-wrap: balance;
+          }
+        }
+      }
+    }
   }
 }
 
