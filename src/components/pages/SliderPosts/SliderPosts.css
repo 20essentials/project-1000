@@ -591,15 +591,21 @@
             aspect-ratio: 1;
             max-width: 35px;
             border-radius: 50%;
-            background-color: orange;
+            border: none;
+            outline: none;
             display: flex;
             flex-wrap: wrap;
             place-content: center;
 
             svg {
-              width: 75%;
-              height: 75%;
+              width: 70%;
+              height: 70%;
               color: #e9e9e9;
+
+              &.are-pure-svg {
+                width: 100%;
+                height: 100%;
+              }
             }
           }
 
