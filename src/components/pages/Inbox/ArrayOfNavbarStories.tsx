@@ -22,6 +22,7 @@ export function ArrayOfNavbarStories({
     ...el,
     ...el.story
   })) as ArrayOfNavBarHistories;
+  
   const setArrayOfStoryPosts = usePostsOftheStory(
     state => state.setArrayOfStoryPosts
   );

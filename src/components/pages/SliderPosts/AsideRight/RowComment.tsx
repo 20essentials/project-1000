@@ -1,6 +1,9 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import { HeartAndDislikeFooter } from '@/components/pages/SliderPosts/AsideRight/HeartAndDislikeFooter';
-import { UserProfile } from '@/components/pages/SliderPosts/AsideRight/UserProfile';
+
+import { UserCircleStory } from './UserCircleStory';
+import { getRandomNumber } from '@/utils/functions';
+import { UserProfile } from './UserProfile';
 
 export function RowComment({
   indexOfComment,
@@ -41,6 +44,8 @@ export function RowComment({
     };
   }, []);
 
+  const thisCommentHasStory = useMemo(() => getRandomNumber(0, 100) > 92, []);
+
   return (
     <aside
       className={`am-comment-of-an-user comment-${indexOfComment + 1}`}
@@ -48,11 +53,20 @@ export function RowComment({
       ref={commentRowRef}
     >
       <article className='left-am-comments-of-an-user'>
-        <UserProfile
-          profileImageSrc={profileImageSrc}
-          userId={userId}
-          otherClassName='profile-in-comments-of-the-user'
-        />
+        {thisCommentHasStory ? (
+          <UserCircleStory
+            profileImageSrc={profileImageSrc}
+            username={username}
+            userId={userId}
+            i={indexOfComment}
+          />
+        ) : (
+          <UserProfile
+            profileImageSrc={profileImageSrc}
+            userId={userId}
+            otherClassName='profile-in-comments-of-the-user'
+          />
+        )}
       </article>
       <article className='right-am-comments-of-an-user'>
         <p className='paraghaph'>{username}</p>
