@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { HeartAndDislikeFooter } from '@/components/pages/SliderPosts/AsideRight/HeartAndDislikeFooter';
 
-import { UserCircleStory } from './UserCircleStory';
+import { UserCircleStory } from '@/components/pages/SliderPosts/AsideRight/UserCircleStory';
+import { UserProfile } from '@/components/pages/SliderPosts/AsideRight//UserProfile';
 import { getRandomNumber } from '@/utils/functions';
-import { UserProfile } from './UserProfile';
 
 export function RowComment({
   indexOfComment,

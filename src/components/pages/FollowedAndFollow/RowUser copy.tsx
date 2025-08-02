@@ -1,14 +1,12 @@
-import { useEffect, useMemo, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { FollowButton } from '../ProfileCreator/FollowButton';
 import { useUserCreator } from '@/store/useUserCreator';
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 import { PRIVATE_DATA } from '@/privateData/amPrivateData';
 import { PUBLIC_DATA } from '@/publicData/amPublicData';
 import type { arrayOfPosts } from '../SliderPosts/types';
-import { $, getRandomNumber } from '@/utils/functions';
+import { $ } from '@/utils/functions';
 import type { userId } from '@/store/useFollowedAccount';
-import { UserCircleStory } from '@/components/pages/SliderPosts/AsideRight/UserCircleStory';
-import { UserProfile } from '@/components/pages/SliderPosts/AsideRight//UserProfile';
 const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
 const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
@@ -82,26 +80,15 @@ export function RowUser({
     };
   }, []);
 
-  const thisRowHasStory = useMemo(() => getRandomNumber(0, 100) > 92, []);
-
   return (
     <div key={index} className='followed-account-row' ref={rowRef}>
-      <aside className='left' >
-        {thisRowHasStory ? (
-          <UserCircleStory
-            profileImageSrc={profileImageSrc}
-            username={username}
-            userId={userId}
-            i={i}
-          />
-        ) : (
-          <UserProfile
-            profileImageSrc={profileImageSrc}
-            userId={userId}
-            otherClassName='profile-in-comments-of-the-user'
-          />
-        )}
-        <h4 className='username' onClick={nextToProfileCreator}>
+      <aside className='left' onClick={nextToProfileCreator}>
+        <img
+          src={profileImageSrc}
+          alt={`${username}'s profile`}
+          className='profile-image'
+        />
+        <h4 className='username'>
           {username.length >= LIMIT_CHARS_USERNAME
             ? `${username.slice(0, LIMIT_CHARS_USERNAME)}...`
             : username.slice(0, LIMIT_CHARS_USERNAME)}
