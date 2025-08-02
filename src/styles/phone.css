@@ -63,23 +63,111 @@ body {
   position: relative;
   background-repeat: no-repeat;
 
-  @media (width <= 1250px) and (orientation: landscape) {
+  @media (width >= 1500px) {
+    zoom: 1.1;
+  }
+
+  @media (width >= 1700px) {
+    zoom: 1.3;
+  }
+
+  @media (width >= 2000px) {
+    zoom: 1.5;
+  }
+
+  @media (width >= 2300px) {
+    zoom: 1.7;
+  }
+
+  @media (width >= 2700px) {
+    zoom: 2;
+  }
+
+  @media (width >= 3000px) {
+    zoom: 2.2;
+  }
+
+  @media (width >= 3500px) {
+    zoom: 2.7;
+  }
+
+  @media (width >= 4000px) {
+    zoom: 3;
+  }
+
+  @media (width >= 4300px) {
+    zoom: 3.3;
+  }
+
+  @media (width >= 5000px) {
+    zoom: 3.8;
+  }
+
+  @media (width >= 5500px) {
+    zoom: 4;
+  }
+
+  @media (width >= 6000px) {
+    zoom: 4.5;
+  }
+
+  @media (width <= 1250px) and (orientation: landscape) and (hover: none) {
     zoom: 0.75;
   }
 
-  @media (width <= 1025px) and (orientation: landscape) {
-    zoom: 0.5;
+  @media (width <= 1250px) and (orientation: landscape) and (hover: hover) {
+    zoom: 0.9;
   }
 
-  @media (width <= 650px) and (orientation: landscape) {
+  @media (width <= 1095px) and (orientation: landscape) and (hover: none) {
+    zoom: 0.7;
+  }
+
+  @media (width <= 1095px) and (orientation: landscape) and (hover: hover) {
+    zoom: 0.7;
+  }
+
+  @media (width <= 650px) and (orientation: landscape) and (hover: none) {
     zoom: 0.3;
   }
 
-  @media (width <= 400px) and (orientation: landscape) {
+  @media (width <= 900px) and (orientation: landscape) and (hover: hover) {
+    zoom: 0.6;
+  }
+
+  @media (width <= 770px) and (orientation: landscape) and (hover: hover) {
+    zoom: 0.55;
+  }
+
+  @media (width <= 650px) and (orientation: landscape) and (hover: hover) {
+    zoom: 0.4;
+  }
+
+  @media (width <= 520px) and (orientation: landscape) and (hover: hover) {
+    zoom: 0.35;
+  }
+
+  @media (width <= 390px) and (orientation: landscape) and (hover: hover) {
+    zoom: 0.25;
+  }
+
+  @media (width <= 320px) and (orientation: landscape) and (hover: hover) {
     zoom: 0.2;
   }
 
-  @media (height <= 450px) and (width <= 450px)  {
+  @media (width <= 350px) and (orientation: portrait) and (hover: hover) {
+    zoom: 0.2;
+  }
+
+  @media (width <= 400px) and (orientation: landscape) and (hover: none) {
+    zoom: 0.2;
+  }
+
+  @media (height <= 450px) and (width <= 450px) and (hover: none) and (orientation: landscape) {
     zoom: 0.1;
+  }
+
+  @media (width <= 450px) and (orientation: portrait) and (hover: none) {
+    zoom: 0.3;
   }
 }
