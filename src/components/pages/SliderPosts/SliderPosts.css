@@ -575,6 +575,14 @@
             box-shadow: 0 0 15px rgba(75, 75, 255, 0.3),
               inset 0 0 10px rgba(75, 75, 255, 0.2);
             min-width: 110px;
+            opacity: 1;
+            scale: 1;
+            
+
+            &.btn-hidden {
+              opacity: 0;
+              scale: 0;
+            }
 
             &:hover {
               &::before {

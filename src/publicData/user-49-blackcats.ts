@@ -13,7 +13,7 @@ export const blackcats_commonProps = generateExactlyCommonProps({
   following: false,
   followers: 9_720_520,
   followed: 150,
-  profileDescription: ''
+  profileDescription: 'Cats 👑🐈‍⬛'
 });
 
 const PREFIX = '';

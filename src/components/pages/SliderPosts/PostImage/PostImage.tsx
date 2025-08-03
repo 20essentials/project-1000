@@ -19,6 +19,7 @@ import { CommentsContainer } from '@/components/pages/SliderPosts/AsideRight/Com
 import { ShareContainer } from '@/components/pages/SliderPosts/AsideRight/ShareContainer';
 import { useIsScrolling } from '@/store/useIsScrolling';
 import { ContainerBottomOfComments } from '../AsideRight/ContainerBottomOfComments';
+import { AsideBottomOfShare } from '../AsideRight/AsideBottomOfShare';
 
 export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const {
@@ -62,6 +63,12 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
   }, []);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const [isContainerShareOpen, setIsContainerShareOpen] = useState(false);
+
+  function updateIsContainerShareOpen() {
+    setIsContainerShareOpen(!isContainerShareOpen);
+  }
 
   const hasInteracted = userHasInteracted(state => state.hasInteracted);
   const setUserHasInteracted = userHasInteracted(
@@ -201,7 +208,11 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
             post={props}
           />
           <SaveContainer saved={saved} post={props} />
-          <ShareContainer shared={shared} post={props} />
+          <ShareContainer
+            shared={shared}
+            post={props}
+            updateIsContainerShareOpen={updateIsContainerShareOpen}
+          />
           <section className='button-container btn-container-vinyl'>
             <img
               className='vinyl'
@@ -228,6 +239,14 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
           <ContainerBottomOfComments
             totalNumberOfComments={comments}
             updateIsContainerBottomOpen={updateIsContainerBottomOpen}
+          />
+        )}
+
+        {isContainerShareOpen && (
+          <AsideBottomOfShare
+            username={username}
+            arrayImages={arrayImages}
+            updateIsContainerShareOpen={updateIsContainerShareOpen}
           />
         )}
       </aside>

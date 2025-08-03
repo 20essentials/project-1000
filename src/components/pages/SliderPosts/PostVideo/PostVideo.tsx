@@ -212,6 +212,8 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
 
       {isContainerShareOpen && (
         <AsideBottomOfShare
+          videoSrc={videoSrc}
+          username={username}
           updateIsContainerShareOpen={updateIsContainerShareOpen}
         />
       )}

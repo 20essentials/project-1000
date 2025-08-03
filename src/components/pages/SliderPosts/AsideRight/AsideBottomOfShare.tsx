@@ -15,41 +15,53 @@ const ARRAY_OF_SHARE = [
       </svg>
     ),
     onclick: ({
-      url,
+      urls,
       nombreArchivo,
       refButton
     }: {
-      url: string;
+      urls: string[];
       nombreArchivo: string;
       refButton: React.RefObject<HTMLButtonElement | null>;
     }) => {
+      if (urls.length === 0) return;
       const $buttonSystem = refButton?.current;
       if ($buttonSystem instanceof HTMLButtonElement) {
-        $buttonSystem.classList.add('ssd');
+        $buttonSystem.classList.remove('btn-hidden');
         $buttonSystem.innerHTML = 'Downloading';
       }
 
-      fetch(url)
-        .then(response => {
-          if (!response.ok) {
-            console.log('The File cannot be download');
-            return;
-          }
-          return response.blob();
-        })
-        .then(blob => {
-          const blobUrl = URL.createObjectURL(blob as Blob);
-          const a = document.createElement('a');
-          a.href = blobUrl;
-          a.download = nombreArchivo;
-          document.body.appendChild(a);
-          a.click();
-          a.remove();
-          URL.revokeObjectURL(blobUrl);
-        })
-        .finally(() => {
-          refButton.current && (refButton.current.innerHTML = 'Downloading');
-        });
+      const downloadPromises = urls.map((url, index) =>
+        fetch(url)
+          .then(response => {
+            if (!response.ok) {
+              console.warn(`The file at ${url} cannot be downloaded`);
+              return null;
+            }
+            return response.blob();
+          })
+          .then(blob => {
+            if (!blob) return;
+            const blobUrl = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = blobUrl;
+            a.download =
+              urls.length === 1 ? nombreArchivo : `${nombreArchivo}-${index + 1}`;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            URL.revokeObjectURL(blobUrl);
+          })
+          .catch(err => {
+            console.error(`Error downloading ${url}`, err);
+          })
+      );
+
+      Promise.allSettled(downloadPromises).finally(() => {
+        if ($buttonSystem) {
+          $buttonSystem.innerHTML = 'Downloaded';
+          $buttonSystem.classList.add('btn-hidden');
+        }
+      });
     }
   },
   {
@@ -314,10 +326,20 @@ const ARRAY_OF_SHARE = [
   }
 ];
 
+const MODE_SHARE = {
+  SAVE_VIDEO_OR_IMAGE: 0
+};
+
 export function AsideBottomOfShare({
-  updateIsContainerShareOpen
+  updateIsContainerShareOpen,
+  videoSrc,
+  arrayImages,
+  username
 }: {
   updateIsContainerShareOpen: () => void;
+  videoSrc?: string;
+  arrayImages?: string[];
+  username: string;
 }) {
   const systembtn = useRef<null | HTMLButtonElement>(null);
 
@@ -330,25 +352,55 @@ export function AsideBottomOfShare({
           onClick={updateIsContainerShareOpen}
         />
         <div className='system-container'>
-          <button className='system-btn' ref={systembtn}>
+          <button className='system-btn btn-hidden' ref={systembtn}>
             OK
           </button>
         </div>
       </header>
       <section className='am-footer-of-the-share'>
-        {ARRAY_OF_SHARE.map(({ id, title, gradient, svg }) => {
-          return (
-            <aside className='item-share' key={id}>
-              <article
-                className='circle-gradient'
-                style={{ backgroundImage: gradient }}
+        {ARRAY_OF_SHARE.map(
+          (
+            {
+              id,
+              title,
+              gradient,
+              svg,
+              onclick = () => console.log('Without Function')
+            },
+            index
+          ) => {
+            let amTitle =
+              index === MODE_SHARE.SAVE_VIDEO_OR_IMAGE
+                ? videoSrc
+                  ? 'Save Video'
+                  : `Save Photo${(arrayImages?.length ?? 0) > 1 ? 's' : ''}`
+                : title;
+
+            return (
+              <aside
+                className='item-share'
+                key={id}
+                onClick={() => {
+                  if (index === MODE_SHARE.SAVE_VIDEO_OR_IMAGE) {
+                    onclick({
+                      refButton: systembtn,
+                      nombreArchivo: username,
+                      urls: videoSrc ? [videoSrc] : arrayImages ?? []
+                    });
+                  }
+                }}
               >
-                {svg}
-              </article>
-              <h4 className='title-share'>{title}</h4>
-            </aside>
-          );
-        })}
+                <article
+                  className='circle-gradient'
+                  style={{ backgroundImage: gradient }}
+                >
+                  {svg}
+                </article>
+                <h4 className='title-share'>{amTitle}</h4>
+              </aside>
+            );
+          }
+        )}
       </section>
     </article>
   );
