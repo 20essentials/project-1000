@@ -4,19 +4,19 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-//falta userId, profilesrc, prefix, profileDescription
-
 export const mycelium_mirrors_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: '0240839e-cf68-406f-86df-5b7a54427b34',
   username: 'mycelium_mirrors',
-  profileImageSrc: '',
+  profileImageSrc:
+    'https://dominicnikolai.github.io/project-235/assets/myc3lium-m1rrors/p3rfil.avif',
   following: false,
   followers: 372_320,
   followed: 720,
   profileDescription: 'Explore the art of kaleidoscopes'
 });
 
-const PREFIX = '';
+const PREFIX =
+  'https://dominicnikolai.github.io/project-235/assets/myc3lium-m1rrors/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {

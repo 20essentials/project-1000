@@ -180,6 +180,8 @@ import {
   chico_collection_commonProps
 } from '@/publicData/user-45-chico-collection';
 import { justtrip_array_of_posts, justtrip_commonProps } from './user-46-justtrip';
+import { mycelium_mirrors_array_of_posts, mycelium_mirrors_commonProps } from './user-47-mycelium-mirrors';
+import { michelle_navarro_array_of_posts } from '@/privateData/user-3-mich3lle-nav4rro';
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
@@ -191,7 +193,8 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [gregorian_commonProps, [gregorian_array_of_posts[0]]], //esto si existe abajo
   //testing
 
-  [justtrip_commonProps, justtrip_array_of_posts],
+  // [justtrip_commonProps, justtrip_array_of_posts],
+  // [mycelium_mirrors_commonProps, mycelium_mirrors_array_of_posts],
   [presocratico_commonProps, presocratico_array_of_posts],
   // [eddy_beef_commonProps, eddy_beef_array_of_posts],
   // [lalobri_commonProps, lalobri_array_of_posts],
