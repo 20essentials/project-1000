@@ -179,6 +179,7 @@ import {
   chico_collection_array_of_posts,
   chico_collection_commonProps
 } from '@/publicData/user-45-chico-collection';
+import { justtrip_array_of_posts, justtrip_commonProps } from './user-46-justtrip';
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
@@ -190,7 +191,8 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [gregorian_commonProps, [gregorian_array_of_posts[0]]], //esto si existe abajo
   //testing
 
-  // [presocratico_commonProps, presocratico_array_of_posts],
+  [justtrip_commonProps, justtrip_array_of_posts],
+  [presocratico_commonProps, presocratico_array_of_posts],
   // [eddy_beef_commonProps, eddy_beef_array_of_posts],
   // [lalobri_commonProps, lalobri_array_of_posts],
   // [soy_delishus_commonProps, soy_delishus_array_of_posts],

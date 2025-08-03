@@ -5,16 +5,16 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 export const justtrip_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: '150e9126-adff-48fb-bfb1-b151ef0c1af9',
   username: 'justtrip',
-  profileImageSrc: '',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-234/assets/justtrip/p3rfil.avif',
   following: false,
   followers: 1_720_534,
   followed: 325,
   profileDescription: 'Trippy/Hypnotic Visuals'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-234/assets/justtrip/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
@@ -35,12 +35,12 @@ const ARRAY_CONTENT: ArrayContent = [
     description: `✨✨✨`,
     idPost: `${justtrip_commonProps.userId}-cfba6620-d11c-4baf-8546-91d426127ede`
   },
-  {
+/*   {
     type: 'video',
     videoSrc: 'v4.mp4',
     description: `✨✨✨💖 . #glitters #synth #music #stars #night #space`,
     idPost: `${justtrip_commonProps.userId}-d59c3b2f-f3b3-4df0-bd30-ec9c11d27f30`
-  },
+  }, */
   {
     type: 'video',
     videoSrc: 'v5.mp4',
