@@ -25,11 +25,13 @@ const ARRAY_OF_SHARE: ItemType[] = [
     onclick: ({
       urls,
       nombreArchivo,
-      refButton
+      refButton,
+      updateIsContainerShareOpen
     }: {
       urls: string[];
       nombreArchivo: string;
       refButton: React.RefObject<HTMLButtonElement | null>;
+      updateIsContainerShareOpen: () => void;
     }) => {
       if (urls.length === 0) return;
       const $buttonSystem = refButton?.current;
@@ -68,6 +70,7 @@ const ARRAY_OF_SHARE: ItemType[] = [
         if ($buttonSystem) {
           $buttonSystem.innerHTML = 'Downloaded';
           $buttonSystem.classList.add('btn-hidden');
+          updateIsContainerShareOpen();
         }
       });
     }
@@ -396,7 +399,8 @@ export function AsideBottomOfShare({
                     onclick({
                       refButton: systembtn,
                       nombreArchivo: username,
-                      urls: videoSrc ? [videoSrc] : arrayImages ?? []
+                      urls: videoSrc ? [videoSrc] : arrayImages ?? [],
+                      updateIsContainerShareOpen
                     });
                   } else if (index === MODE_SHARE.COPY_LINK) {
                     onclick();
