@@ -6,7 +6,7 @@ export type postComonProps = {
   followers: number;
   totalLikes: number;
   followed: number;
-  profileDescription: string;
+  profileDescription?: string;
 };
 
 export type postProps = {

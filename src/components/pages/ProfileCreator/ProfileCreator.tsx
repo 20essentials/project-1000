@@ -42,7 +42,7 @@ export function ProfileCreator() {
           </article>
         </aside>
         <FollowButton userId={userId} />
-        <p className='description'>{profileDescription}</p>
+        { profileDescription && <p className='description'>{profileDescription}</p> }
         <ArrowLeft className='arrow-left' />
       </aside>
 
