@@ -17,6 +17,7 @@ import { ShareContainer } from '@/components/pages/SliderPosts/AsideRight/ShareC
 import { useIsScrolling } from '@/store/useIsScrolling';
 import { ContainerBottomOfComments } from '../AsideRight/ContainerBottomOfComments';
 import { AsideBottomOfShare } from '../AsideRight/AsideBottomOfShare';
+import { useUpdateUrlParamsPostVideoOrImage } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 
 export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   const hasInteracted = userHasInteracted(state => state.hasInteracted);
@@ -42,7 +43,6 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
     videoSrc,
     description,
     tags,
-    totalViewsOfThePost,
     hearts,
     comments,
     saved,
@@ -50,7 +50,8 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
     profileImageSrc,
     username,
     idx,
-    userId
+    userId,
+    idPost
   } = props;
   const thisPostWillRenderMorePost = idx % 3 === 0;
 
@@ -120,11 +121,17 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
       entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
+            //Agregarlo despues en image
+            useUpdateUrlParamsPostVideoOrImage({
+              postId: idPost,
+              userId: userId
+            });
             if (thisPostWillRenderMorePost && !thisPostHasBeenRendered.current) {
               thisPostHasBeenRendered.current = true;
               setLimit(prev => prev + offsetOfPosts);
             }
             if (!hasInteractedRef.current || isScrolling) return;
+
             entry.target.classList.add('visible');
             if (isPausedRef.current) {
               playVideo();
@@ -133,6 +140,7 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
             if (!hasInteractedRef.current) return;
 
             entry.target.classList.remove('visible');
+
             if (!isPausedRef.current) {
               pauseVideo();
             }

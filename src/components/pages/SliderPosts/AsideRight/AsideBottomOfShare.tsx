@@ -1,7 +1,15 @@
-import { useRef } from 'react';
+import { useRef, type JSX } from 'react';
 import { CloseContainer } from './CloseContainer';
 
-const ARRAY_OF_SHARE = [
+type ItemType = {
+  title: string;
+  id: string;
+  gradient: string;
+  svg: JSX.Element;
+  onclick?: (...args: any[]) => void; 
+};
+
+const ARRAY_OF_SHARE: ItemType[] = [
   {
     title: 'Save Video',
     id: '7e46518d-d7cb-43e0-bdab-4aab2fda1e06',
@@ -97,7 +105,10 @@ const ARRAY_OF_SHARE = [
           </clipPath>
         </defs>
       </svg>
-    )
+    ),
+    onclick: () => {
+      alert('copy')
+    }
   },
   {
     title: 'Republish',
@@ -210,7 +221,6 @@ const ARRAY_OF_SHARE = [
       </svg>
     )
   },
-
   {
     title: 'WhatsApp',
     id: 'd1e2f3g4-5h6i-7j8k-9l0m-1n2o3p4q5r6t',
@@ -327,7 +337,8 @@ const ARRAY_OF_SHARE = [
 ];
 
 const MODE_SHARE = {
-  SAVE_VIDEO_OR_IMAGE: 0
+  SAVE_VIDEO_OR_IMAGE: 0,
+  COPY_LINK: 1,
 };
 
 export function AsideBottomOfShare({
@@ -387,6 +398,8 @@ export function AsideBottomOfShare({
                       nombreArchivo: username,
                       urls: videoSrc ? [videoSrc] : arrayImages ?? []
                     });
+                  } else if (index === MODE_SHARE.COPY_LINK) {
+                    onclick();
                   }
                 }}
               >

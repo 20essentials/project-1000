@@ -235,6 +235,146 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v36.mp4',
     description: `Super BlackCat`,
     idPost: `${blackcats_commonProps.userId}-48d78650-dc03-4994-9802-bb8d99d02737`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b1.avif'],
+    idPost: `${blackcats_commonProps.userId}-c604e43a-347f-4d09-8236-e2a1e3d8f852`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b2.avif'],
+    idPost: `${blackcats_commonProps.userId}-fbc8a9b9-72db-4d19-9e1d-1c1f4b571ef0`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b3.avif'],
+    idPost: `${blackcats_commonProps.userId}-35d497e6-6c2f-4a7b-9954-5f7d3b81f37c`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b4.avif'],
+    idPost: `${blackcats_commonProps.userId}-a9b6fdb4-3f5e-43c7-bf64-cd26aeb8d8ef`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b5.avif'],
+    idPost: `${blackcats_commonProps.userId}-56a1be17-8f75-44c3-bddf-0199fbc82320`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b6.avif'],
+    idPost: `${blackcats_commonProps.userId}-6d28d0a9-6a27-4a34-bf4f-4d1e9d32a5f7`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b7.avif'],
+    idPost: `${blackcats_commonProps.userId}-80a45f5e-8d18-40e5-81f4-5a0ec7cbdc06`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b8.avif'],
+    idPost: `${blackcats_commonProps.userId}-9c8bcba2-9c45-4e18-9a0c-e8d930aeb8e5`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b9.avif'],
+    idPost: `${blackcats_commonProps.userId}-71a4c5e9-80c8-4e3e-b0ca-1058821d8f25`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b10.avif'],
+    idPost: `${blackcats_commonProps.userId}-d1f9c3bd-f012-4bd8-a92d-c5b80ac0b70e`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b11.avif'],
+    idPost: `${blackcats_commonProps.userId}-38f09bd7-c2f8-4669-9ae6-10a7b3f52a64`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b12.avif'],
+    idPost: `${blackcats_commonProps.userId}-25798c48-b3a2-4a2a-bf5d-2258a8e2547f`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b13.avif'],
+    idPost: `${blackcats_commonProps.userId}-65b19e38-05b3-4af2-bf2a-8a69f5ea77cc`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b14.avif'],
+    idPost: `${blackcats_commonProps.userId}-944fedb7-44e6-4e38-9a0e-4f32f7a4e9b0`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b15.avif'],
+    idPost: `${blackcats_commonProps.userId}-1a15b530-0d77-46a0-9d2c-199e09c5a6ea`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b16.avif'],
+    idPost: `${blackcats_commonProps.userId}-4e9211db-82f3-4760-99e4-6b40db86f34a`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b17.avif'],
+    idPost: `${blackcats_commonProps.userId}-db0e78a6-5a1c-49a9-bf4e-6747685bb193`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b18.avif'],
+    idPost: `${blackcats_commonProps.userId}-88f1b23e-06b1-4b20-bd57-e52acff2d61e`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b19.avif'],
+    idPost: `${blackcats_commonProps.userId}-2e35d8d3-37a0-4607-ae67-567c624c4df3`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b20.avif'],
+    idPost: `${blackcats_commonProps.userId}-44f08b5d-c40a-4d47-984d-90a4d1aa0219`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b21.avif'],
+    idPost: `${blackcats_commonProps.userId}-89ab0fdb-4957-4db4-b35e-f17139f0c0ef`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b22.avif'],
+    idPost: `${blackcats_commonProps.userId}-82de013d-e8f5-4c88-9d20-792e54a0f9f7`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b23.avif'],
+    idPost: `${blackcats_commonProps.userId}-0d1ed914-f73b-4e0b-bd43-7c8f349bcf7c`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b24.avif'],
+    idPost: `${blackcats_commonProps.userId}-3743d441-6b29-448a-b4b9-1a1377ab23f8`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b25.avif'],
+    idPost: `${blackcats_commonProps.userId}-e6ca9c2f-51a1-4d27-b726-99a3ad7acb52`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b26.avif'],
+    idPost: `${blackcats_commonProps.userId}-6c30e659-3500-4d07-8fdd-30695b7d7c5f`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b27.avif'],
+    idPost: `${blackcats_commonProps.userId}-740c87f0-1d31-4b89-9d6c-8a27d15f8393`
+  },
+  {
+    type: 'image',
+    arrayImages: ['b28.avif'],
+    idPost: `${blackcats_commonProps.userId}-2a0e8ec7-41aa-4e37-8466-2c5a174b379f`
   }
 ];
 
