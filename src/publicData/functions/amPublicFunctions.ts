@@ -1,6 +1,7 @@
 import { getRandomNumber, generateRandomISODate } from '@/utils/functions';
 import type { postProps } from '@/components/pages/SliderPosts/types';
 
+
 export function generateRandomCommonProps({
   userId,
   username,
@@ -144,7 +145,13 @@ export function generateArrayPosts({
 }): postProps[] {
   return ARRAY_CONTENT.map(content => {
     if (content.type === 'image') {
-      const { arrayImages = [], description, tags, idPost, isLiked = false } = content;
+      const {
+        arrayImages = [],
+        description,
+        tags,
+        idPost,
+        isLiked = false
+      } = content;
       return generatePostImage({
         arrayImages: arrayImages.map(image => `${PREFIX}${image}`),
         description: description,
