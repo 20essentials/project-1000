@@ -1,6 +1,6 @@
 import { getRandomNumber, generateRandomISODate } from '@/utils/functions';
 import type { postProps } from '@/components/pages/SliderPosts/types';
-
+import { UUID } from '@/utils/array/uuid/arrayDeIdentificadoresUnicos';
 
 export function generateRandomCommonProps({
   userId,
@@ -30,7 +30,7 @@ export function generateExactlyCommonProps({
   username,
   profileImageSrc,
   profileDescription,
-  following,
+  following = false,
   followers,
   totalLikes = 0,
   followed
@@ -39,7 +39,7 @@ export function generateExactlyCommonProps({
   username: string;
   profileImageSrc: string;
   profileDescription: string;
-  following: boolean;
+  following?: boolean;
   followers: number;
   totalLikes?: number;
   followed: number;
@@ -79,7 +79,7 @@ export function generatePostImage({
   tags?: string[];
   description?: string;
   idPost: string;
-  isLiked: boolean;
+  isLiked?: boolean;
 }) {
   return {
     arrayImages,
@@ -102,7 +102,7 @@ export function generatePostVideo({
   tags?: string[];
   description?: string;
   idPost: string;
-  isLiked: boolean;
+  isLiked?: boolean;
 }) {
   return {
     videoSrc,
@@ -136,6 +136,7 @@ type ImageAndVideoCommon = {
 type Content = (ContentImage | ContentVideo) & ImageAndVideoCommon;
 export type ArrayContent = Content[];
 
+/******************MANUAL ***************** */
 export function generateArrayPosts({
   PREFIX,
   ARRAY_CONTENT
@@ -170,4 +171,68 @@ export function generateArrayPosts({
       isLiked
     });
   });
+}
+
+/******************AUTOMATIC ***************** */
+export function generateArrayPostsOfImages({
+  prefixUrl,
+  quantityOfImages,
+  userId,
+  prefixLetterImages,
+  arrayDescriptionOfImages
+}: {
+  prefixUrl: string;
+  quantityOfImages: number;
+  userId: string;
+  prefixLetterImages: string;
+  arrayDescriptionOfImages?: string[];
+}): postProps[] {
+  if (quantityOfImages === 0) return [];
+
+  if (arrayDescriptionOfImages) {
+    return arrayDescriptionOfImages.map((description, i) => {
+      return generatePostImage({
+        arrayImages: [`${prefixUrl}${prefixLetterImages}${i + 1}.avif`],
+        idPost: `${userId}-img-${UUID[i]}`,
+        description
+      });
+    });
+  }
+  return Array.from({ length: quantityOfImages }, (_, i) => {
+    return generatePostImage({
+      arrayImages: [`${prefixUrl}${prefixLetterImages}${i + 1}.avif`],
+      idPost: `${userId}-img-${UUID[i]}`
+    });
+  });
+}
+
+export function generateArrayPostsOfVideos({
+  prefixUrl,
+  quantityOfVideos,
+  userId,
+  prefixLetterVideos,
+  arrayDescriptionsOfVideos
+}: {
+  prefixUrl: string;
+  quantityOfVideos: number;
+  userId: string;
+  prefixLetterVideos: string;
+  arrayDescriptionsOfVideos?: string[];
+}): postProps[] {
+  if (quantityOfVideos === 0) return [];
+  if (arrayDescriptionsOfVideos) {
+    return arrayDescriptionsOfVideos.map((description, i) =>
+      generatePostVideo({
+        videoSrc: `${prefixUrl}${prefixLetterVideos}${i + 1}.mp4`,
+        idPost: `${userId}-vid-${UUID[i]}`,
+        description
+      })
+    );
+  }
+  return Array.from({ length: quantityOfVideos }, (_, i) =>
+    generatePostVideo({
+      videoSrc: `${prefixUrl}${prefixLetterVideos}${i + 1}.mp4`,
+      idPost: `${userId}-vid-${UUID[i]}`
+    })
+  );
 }
