@@ -7,16 +7,16 @@ import {
 //falta userId, profilesrc, prefix, profileDescription
 
 export const blackcats_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: '7ed81a17-7c9d-4e89-8c4b-6a85bae08c68',
   username: 'blackcats',
-  profileImageSrc: '',
+  profileImageSrc: 'https://dominicnikolai.github.io/project-236/assets/bl4ckc4ts/p3rfil.avif',
   following: false,
   followers: 9_720_520,
   followed: 150,
   profileDescription: 'Cats 👑🐈‍⬛'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-236/assets/bl4ckc4ts/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {

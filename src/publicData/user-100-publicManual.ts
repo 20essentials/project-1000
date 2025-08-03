@@ -4,19 +4,22 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-//falta userId, profilesrc, prefix, profileDescription
+const username = 'user100';
+const userId = '';
+const PREFIX = '';
+const profileDescription = '';
+const followers = 100_000;
+const followed = 50;
+const profileImageSrc = `${PREFIX}/p3rfil.avif`;
 
 export const user100_commonProps = generateExactlyCommonProps({
-  userId: '',
-  username: 'user100',
-  profileImageSrc: '',
-  following: false,
-  followers: 238_320,
-  followed: 50,
-  profileDescription: ''
+  userId,
+  username,
+  profileImageSrc,
+  followers,
+  followed,
+  profileDescription
 });
-
-const PREFIX = '';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
@@ -138,7 +141,7 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v20.mp4',
     description: ``,
     idPost: `${user100_commonProps.userId}-b8dee4fb-3715-4c10-a916-419d81ea91f4`
-  },
+  }
 ];
 
 export const user100_array_of_posts = generateArrayPosts({

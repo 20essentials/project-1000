@@ -4,19 +4,18 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-//falta userId, profilesrc, prefix, profileDescription
-
 export const ligthspeed_commonProps = generateExactlyCommonProps({
-  userId: '',
+  userId: 'b868575d-2f39-4105-b77f-53a33be02032 ',
   username: 'ligthspeed',
-  profileImageSrc: '',
+  profileImageSrc:
+    'https://dominicnikolai.github.io/project-237/assets/lightsp3ed/p3rfil.avif',
   following: false,
   followers: 255_000,
   followed: 132,
   profileDescription: 'Stage 2 Ninja H2 GSXR-1000'
 });
 
-const PREFIX = '';
+const PREFIX = 'https://dominicnikolai.github.io/project-237/assets/lightsp3ed/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
