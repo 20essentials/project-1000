@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ghxz_edits';
-const userId = '';
-const prefixUrl = '';
+const userId = '9a1c81fd-a826-4061-b977-599f966dd9c8';
+const prefixUrl = 'https://dominicnikolai.github.io/project-239/assets/ghxz-edit/';
 const followers = 1_720_532;
 const followed = 432;
 const profileDescription = 'Paid Edits & 𝗤𝘂𝗮𝗹𝗶𝘁𝘆 Enhancing';

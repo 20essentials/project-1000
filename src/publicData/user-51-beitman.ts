@@ -4,9 +4,9 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'amUserPrivate';
-const userId = '';
-const prefixUrl = '';
+const username = 'beitman';
+const userId = 'c18e2baf-ccfa-4251-8971-a5dabe453f9f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-238/assets/beitman/';
 const followers = 69_100;
 const followed = 49;
 const profileDescription = 'ALL MY EDITS ARE HERE';
@@ -33,7 +33,7 @@ const arrayDescriptionsOfVideos = [
 ];
 const arrayDescriptionOfImages = []
 
-export const amUserPrivate_commonProps = generateExactlyCommonProps({
+export const beitman_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -42,7 +42,7 @@ export const amUserPrivate_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const amUserPrivate_videos = generateArrayPostsOfVideos({
+const beitman_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -50,14 +50,14 @@ const amUserPrivate_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const amUserPrivate_images = generateArrayPostsOfImages({
+const beitman_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages
 });
 
-export const amUserPrivate_array_of_posts = [
-  ...amUserPrivate_images,
-  ...amUserPrivate_videos
+export const beitman_array_of_posts = [
+  ...beitman_images,
+  ...beitman_videos
 ];
