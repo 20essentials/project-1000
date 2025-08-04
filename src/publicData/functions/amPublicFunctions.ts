@@ -190,7 +190,7 @@ export function generateArrayPostsOfImages({
   if (quantityOfImages === 0) return [];
 
   if (arrayDescriptionOfImages) {
-    return arrayDescriptionOfImages.map((description, i) => {
+    return arrayDescriptionOfImages.map((description = '', i) => {
       return generatePostImage({
         arrayImages: [`${prefixUrl}${prefixLetterImages}${i + 1}.avif`],
         idPost: `${userId}-img-${UUID[i]}`,
@@ -221,7 +221,7 @@ export function generateArrayPostsOfVideos({
 }): postProps[] {
   if (quantityOfVideos === 0) return [];
   if (arrayDescriptionsOfVideos) {
-    return arrayDescriptionsOfVideos.map((description, i) =>
+    return arrayDescriptionsOfVideos.map((description = '', i) =>
       generatePostVideo({
         videoSrc: `${prefixUrl}${prefixLetterVideos}${i + 1}.mp4`,
         idPost: `${userId}-vid-${UUID[i]}`,
