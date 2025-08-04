@@ -7,8 +7,12 @@ import { useLimitOfPost } from '@/store/useLimitOfPosts';
 import { useMemo } from 'react';
 import { useGlobalArrayPosts } from '@/store/useGlobalArrayPosts';
 import { useSwipeVerticalScroll } from '@/hooks/useSwipeVerticalScroll';
+import { usetGetDataParamPostVideoOrImages } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
+import type { FullPost } from './types';
 
 export function SliderPosts() {
+  
+  const dataFromUrl = usetGetDataParamPostVideoOrImages();
   const isForYou = useFollowedOrForYou(state => state.isForYou);
   const FOLLOWED = useGlobalArrayPosts(state => state.FOLLOWED);
   const FOR_YOU = useGlobalArrayPosts(state => state.FOR_YOU);
@@ -28,8 +32,9 @@ export function SliderPosts() {
     );
 
     const shuffled = uniquePosts.toSorted(() => Math.random() - 0.5);
+    const result = dataFromUrl ? [dataFromUrl, ...shuffled] : shuffled
 
-    return shuffled;
+    return result;
   }, [ALL_POSTS, reRenderFollowed, reRenderForYou]);
 
   useEffect(() => {
@@ -45,10 +50,12 @@ export function SliderPosts() {
   const postsToShow = flattenedPosts.slice(0, limit);
 
   useEffect(() => {
+
     return () => {
       resetLimit();
     };
   }, []);
+
 
   useSwipeVerticalScroll(sliderRef);
 

@@ -54,6 +54,10 @@ export function getPostpropsFromProps(
   ) as postProps;
 }
 
+export function sleep(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 export function modEspecial(left: number, right: number) {
   return left < right ? left % right : right;
 }

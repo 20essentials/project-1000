@@ -20,6 +20,7 @@ import { ShareContainer } from '@/components/pages/SliderPosts/AsideRight/ShareC
 import { useIsScrolling } from '@/store/useIsScrolling';
 import { ContainerBottomOfComments } from '../AsideRight/ContainerBottomOfComments';
 import { AsideBottomOfShare } from '../AsideRight/AsideBottomOfShare';
+import { useUpdateUrlParamsPostVideoOrImage } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 
 export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const {
@@ -131,6 +132,10 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          // useUpdateUrlParamsPostVideoOrImage({
+          //   postId: idPost,
+          //   userId: userId
+          // });
           if (thisPostWillRenderMorePost && !thisPostHasBeenRendered.current) {
             thisPostHasBeenRendered.current = true;
             setLimit(prev => prev + offsetOfPosts);
@@ -151,7 +156,11 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
     observer.observe(element);
     return () => {
       if (element) observer.unobserve(element);
+
       observer.disconnect();
+      // useUpdateUrlParamsPostVideoOrImage({
+      //   cleanUrl: true
+      // });
     };
   }, []);
 
