@@ -28,6 +28,7 @@ export function SliderPostsOfSingleUser() {
     : [[commonProps, arrayOfPosts]];
   const sliderRef = useRef<HTMLDivElement>(null);
   const limit = useLimitOfPost(state => state.limit);
+  const resetLimit = useLimitOfPost(state => state.resetLimit);
   let flattenedPosts = ALL_POSTS.flatMap(([userCommonProps, userPosts]) =>
     userPosts.map(post => ({ ...post, ...userCommonProps }))
   );
@@ -57,6 +58,12 @@ export function SliderPostsOfSingleUser() {
   const postsToShow = flattenedPosts.slice(0, indexOfPost + limit);
 
   useSwipeVerticalScroll(sliderRef);
+
+  useEffect(() => {
+    return () => {
+      resetLimit();
+    };
+  }, []);
 
   return (
     <article className='slider-posts'>

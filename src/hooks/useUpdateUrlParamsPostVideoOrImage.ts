@@ -1,10 +1,17 @@
 export function useUpdateUrlParamsPostVideoOrImage({
-  postId,
-  userId
+  postId = '',
+  userId = '',
+  cleanUrl = false
 }: {
-  postId: string;
-  userId: string;
+  postId?: string;
+  userId?: string;
+  cleanUrl?: boolean;
 }) {
+  if (cleanUrl) {
+    const newUrl = `${window.location.pathname}`;
+    window.history.replaceState(null, '', newUrl);
+    return;
+  }
   // const [userId, postId] = [
   //   'userId',
   //   'postId',

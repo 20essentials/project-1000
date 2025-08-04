@@ -18,7 +18,7 @@ const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 const NUM_OF_ROW_THAT_RENDER_MORE_ROWS = 9;
 const urlFirework = baseUrl('/assets/firework.gif');
-const MAXIMUM_FOLLOWERS_OR_FOLLOWED = 20_000;
+const MAXIMUM_FOLLOWERS_OR_FOLLOWED = 10_000;
 
 export function FollowedAndFollow() {
   const commonProps = useUserCreator(state => state.commonProps);
@@ -69,7 +69,7 @@ export function FollowedAndFollow() {
   const flattenedArrayOfAllPostsCommonProps = ALL_POSTS.map(el => el[0]).filter(
     el => el.userId !== commonProps.userId
   );
-  
+
   let arrayOfRandomRandomFollowed: postComonProps[] = Array.from(
     { length: totalFollowedOfTheUser },
     (_, i) => {

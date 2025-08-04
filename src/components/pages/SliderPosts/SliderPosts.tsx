@@ -15,6 +15,7 @@ export function SliderPosts() {
   const ALL_POSTS = isForYou ? FOR_YOU : FOLLOWED;
   const sliderRef = useRef<HTMLDivElement>(null);
   const limit = useLimitOfPost(state => state.limit);
+  const resetLimit = useLimitOfPost(state => state.resetLimit);
   const reRenderFollowed = useFollowedOrForYou(state => state.reRenderFollowed);
   const reRenderForYou = useFollowedOrForYou(state => state.reRenderForYou);
   const flattenedPosts = useMemo(() => {
@@ -38,6 +39,12 @@ export function SliderPosts() {
   }, [isForYou]);
 
   const postsToShow = flattenedPosts.slice(0, limit);
+
+  useEffect(() => {
+    return () => {
+      resetLimit();
+    }
+  }, [])
 
   useSwipeVerticalScroll(sliderRef);
 

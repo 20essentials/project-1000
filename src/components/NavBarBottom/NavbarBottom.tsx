@@ -7,23 +7,13 @@ import { InboxButton } from '@/components/NavBarBottom/InboxButton';
 import { ProfileButton } from '@/components/NavBarBottom/ProfileButton';
 import { useCurrentPage } from '@/store/useCurrentPage';
 import { IS_ACTIVE_BUTTON } from '@/store/useCurrentPage';
-import { useLimitOfPost } from '@/store/useLimitOfPosts';
 
 export function NavbarBottom() {
   const currenPage = useCurrentPage(state => state.currenPage);
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
-  const limit = useLimitOfPost(state => state.limit);
-  const resetLimit = useLimitOfPost(state => state.resetLimit);
 
   function handleCurrentPage(currenPage: number) {
     setCurrentPage(currenPage);
-  }
-
-  function hanleGoToHome() {
-    setCurrentPage(IS_ACTIVE_BUTTON.HOME);
-    if (limit > 3) {
-      resetLimit();
-    }
   }
 
   function goToUserProfile() {

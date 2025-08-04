@@ -121,11 +121,11 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
       entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            //Agregarlo despues en image
             useUpdateUrlParamsPostVideoOrImage({
               postId: idPost,
               userId: userId
             });
+
             if (thisPostWillRenderMorePost && !thisPostHasBeenRendered.current) {
               thisPostHasBeenRendered.current = true;
               setLimit(prev => prev + offsetOfPosts);
@@ -155,6 +155,9 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
     return () => {
       if (postVideoRef.current) observer.unobserve(postVideoRef.current);
       observer.disconnect();
+      useUpdateUrlParamsPostVideoOrImage({
+        cleanUrl: true
+      });
     };
   }, []);
 

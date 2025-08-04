@@ -4,14 +4,12 @@ import { useLastPagedVisited } from '@/store/userLastPageVisited';
 
 export function CloseX({ className }: { className: string }) {
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
-  const resetLimit = useLimitOfPost(state => state.resetLimit);
   const getPenultimatePage = useLastPagedVisited(
     state => state.getPenultimatePage
   );
 
   function goToHome() {
     setCurrentPage(getPenultimatePage());
-    resetLimit();
   }
 
   return (
