@@ -1,4 +1,5 @@
 import { useFollowedOrForYou } from '@/store/useFollowedOrForYou';
+import { useLimitOfPost } from '@/store/useLimitOfPosts';
 
 export function NavbarTop() {
   const isForYou = useFollowedOrForYou(state => state.isForYou);
@@ -11,14 +12,17 @@ export function NavbarTop() {
   const setReRenderForYou = useFollowedOrForYou(state => state.setReRenderForYou);
   const reRenderFollowed = useFollowedOrForYou(state => state.reRenderFollowed);
   const reRenderForYou = useFollowedOrForYou(state => state.reRenderForYou);
+  // const resetLimit = useLimitOfPost(state => state.resetLimit);
 
   function renderFollowed() {
     setForYou({ isForYou: false });
     setReRenderFollowed({ reRenderFollowed: !reRenderFollowed });
+    // resetLimit();
   }
   function renderForYou() {
     setForYou({ isForYou: true });
     setReRenderForYou({ reRenderForYou: !reRenderForYou });
+    // resetLimit();
   }
 
   return (

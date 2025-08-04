@@ -332,6 +332,7 @@
       left: 0px;
       width: 70px;
       height: 70px;
+      /* background-color: red; */
       background-color: transparent;
       z-index: 80;
       pointer-events: none;

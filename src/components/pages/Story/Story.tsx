@@ -6,6 +6,7 @@ import { usePostsOftheStory } from '@/store/usePostsOfTheStory';
 import { useSwipeScroll } from '@/hooks/useSwipeScroll';
 import { useUserCreator } from '@/store/useUserCreator';
 import { useIsScrolling } from '@/store/useIsScrolling';
+import { useLimitOfPost } from '@/store/useLimitOfPosts';
 
 export function Story() {
   const arrayOfStoryPosts = usePostsOftheStory(state => state.arrayOfStoryPosts);
@@ -13,6 +14,7 @@ export function Story() {
   const indexOfPost = useUserCreator(state => state.indexOfPost);
   const setIsScrolling = useIsScrolling(state => state.setIsScrolling);
   useSwipeScroll(sliderRef);
+  const resetLimit = useLimitOfPost(state => state.resetLimit);
 
   useEffect(() => {
     if (sliderRef.current) {
@@ -26,6 +28,12 @@ export function Story() {
       }, 300);
     }
   }, [indexOfPost]);
+
+  useEffect(() => {
+    return () => {
+      resetLimit();
+    };
+  }, []);
 
   return (
     <article className='story-container'>

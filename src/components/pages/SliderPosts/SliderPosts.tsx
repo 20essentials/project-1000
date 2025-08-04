@@ -36,6 +36,10 @@ export function SliderPosts() {
     if (sliderRef.current) {
       sliderRef.current.scrollTop = 0;
     }
+
+    return () => {
+      resetLimit();
+    };
   }, [isForYou]);
 
   const postsToShow = flattenedPosts.slice(0, limit);
@@ -43,12 +47,11 @@ export function SliderPosts() {
   useEffect(() => {
     return () => {
       resetLimit();
-    }
-  }, [])
+    };
+  }, []);
 
   useSwipeVerticalScroll(sliderRef);
 
-  
   return (
     <article className='slider-posts'>
       <aside className='slider' ref={sliderRef}>

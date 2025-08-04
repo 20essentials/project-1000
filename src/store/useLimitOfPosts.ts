@@ -19,10 +19,10 @@ export const useLimitOfPost = create(
       
       setTimeout(() => {
         console.log('limit', get().limit)
-      }, 500)
+      }, 1)
     },
     resetLimit: () => {
-      set({ limit: 3 });
+      set({ limit: 6 });
     }
   }))
 );

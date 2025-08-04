@@ -7,9 +7,11 @@ export function CloseX({ className }: { className: string }) {
   const getPenultimatePage = useLastPagedVisited(
     state => state.getPenultimatePage
   );
+  const resetLimit = useLimitOfPost(st => st.resetLimit)
 
   function goToHome() {
     setCurrentPage(getPenultimatePage());
+    resetLimit();
   }
 
   return (
