@@ -121,10 +121,10 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
       entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // useUpdateUrlParamsPostVideoOrImage({
-            //   postId: idPost,
-            //   userId: userId
-            // });
+            useUpdateUrlParamsPostVideoOrImage({
+              postId: idPost,
+              userId: userId
+            });
 
             if (thisPostWillRenderMorePost && !thisPostHasBeenRendered.current) {
               thisPostHasBeenRendered.current = true;
@@ -155,9 +155,9 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
     return () => {
       if (postVideoRef.current) observer.unobserve(postVideoRef.current);
       observer.disconnect();
-      // useUpdateUrlParamsPostVideoOrImage({
-      //   cleanUrl: true
-      // });
+      useUpdateUrlParamsPostVideoOrImage({
+        cleanUrl: true
+      });
     };
   }, []);
 

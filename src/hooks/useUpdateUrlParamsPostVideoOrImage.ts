@@ -1,5 +1,4 @@
 import { useGlobalArrayPosts } from '@/store/useGlobalArrayPosts';
-import { sleep } from '@/utils/functions';
 
 export function useUpdateUrlParamsPostVideoOrImage({
   postId = '',
@@ -25,7 +24,7 @@ export function useUpdateUrlParamsPostVideoOrImage({
   ];
 
   values.forEach(([key, value]) => {
-    if (value && value.length > 0) {
+    if (value && value.length > 0 && value != null && value !== '') {
       params.set(key, value);
     }
   });
@@ -38,20 +37,40 @@ import type { FullPost } from '@/components/pages/SliderPosts/types';
 
 /* Url de midu para practicar */
 // http://localhost:4321/?userId=21a87f69-c341-492f-a156-47588fd606dd6&postId=21a87f69-c341-492f-a156-47588fd606dd6-3f7bd846-868a-48ad-a93c-c2b5fbf8fb49
-export function usetGetDataParamPostVideoOrImages(): FullPost | undefined {
-  // const allPostsForYou = useGlobalArrayPosts(state => state.FOR_YOU);
+export function usetGetDataParamPostVideoOrImages(): {
+  weMustRenderAUserProfile: boolean;
+  dataFromUrl: FullPost | undefined;
+  userId: string | null;
+} {
   const getCommnonPropsAndPostOfAUser = useGlobalArrayPosts(
     state => state.getCommnonPropsAndPostOfAUser
   );
+  const thisUserExists = useGlobalArrayPosts(s => s.thisUserExists);
   const currentUrl = new URL(window.location.href);
   const [userId, postId] = ['userId', 'postId'].map(id =>
     currentUrl.searchParams.get(id)
   );
 
   let data;
-  if (userId && postId) {
-    data = getCommnonPropsAndPostOfAUser({ userId, postId }) as FullPost | undefined;
+  if (!postId) {
+    const user = thisUserExists({ userId: userId ?? '' });
+
+    return {
+      weMustRenderAUserProfile: Boolean(user),
+      dataFromUrl: undefined,
+      userId
+    };
   }
 
-  return data;
+  if (userId && postId) {
+    data = getCommnonPropsAndPostOfAUser({ userId, postId }) as
+      | FullPost
+      | undefined;
+  }
+
+  return {
+    weMustRenderAUserProfile: false,
+    dataFromUrl: data,
+    userId
+  };
 }

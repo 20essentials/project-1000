@@ -9,6 +9,7 @@ import { GridOfUserSavedPosts } from '@/components/pages/Profile/GridOfUserSaved
 import { NumFollowed } from '@/components/pages/ProfileCreator/ProfileAndProfileCreatorCommonComponents/NumFollowed';
 import { useFollowedAccount } from '@/store/useFollowedAccount';
 import { NumFollowers } from '@/components/pages/ProfileCreator/ProfileAndProfileCreatorCommonComponents/NumFollowers';
+import { useEffect } from 'react';
 
 export function Profile() {
   //This is the same User
@@ -25,6 +26,7 @@ export function Profile() {
   );
 
   const { profileImageSrc, username, followers } = commonProps;
+
 
   return (
     <article className='profile-user-original'>

@@ -16,6 +16,11 @@ export const useGlobalArrayPosts = create(
   combine(initialState, (set, get) => ({
     setFollowed: ({ FOLLOWED }: { FOLLOWED: arrayOfPosts }) => set({ FOLLOWED }),
     setForYou: ({ FOR_YOU }: { FOR_YOU: arrayOfPosts }) => set({ FOR_YOU }),
+    thisUserExists: ({ userId }: { userId: string }) => {
+      const { FOR_YOU } = get();
+      const user = FOR_YOU.find(el => el[0].userId === userId);
+      return user;
+    },
     getCommnonPropsAndRandomPostOfAUser: ({ userId }: { userId: string }) => {
       const { FOR_YOU } = get();
       const user = FOR_YOU.find(el => el[0].userId === userId);
@@ -47,7 +52,8 @@ export const useGlobalArrayPosts = create(
       if (user) {
         const [commonProps, arrayOfPosts] = user;
         const post = arrayOfPosts.find(el => el.idPost === postId);
-        return { ...commonProps, ...post }
+        if (!post) return false;
+        return { ...commonProps, ...post };
       }
 
       const { FOLLOWED } = get();
@@ -55,8 +61,11 @@ export const useGlobalArrayPosts = create(
       if (userOfFollowed) {
         const [commonProps, arrayOfPosts] = userOfFollowed;
         const post = arrayOfPosts.find(el => el.idPost === postId);
-        return { ...commonProps, ...post }
+        if (!post) return false;
+        return { ...commonProps, ...post };
       }
+
+      return false;
     }
   }))
 );

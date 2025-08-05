@@ -6,6 +6,9 @@ import { GridPosts } from '@/components/pages/ProfileCreator/GridPosts';
 import { ArrowLeft } from '@/components/pages/ProfileCreator/ArrowLeft';
 import { NumFollowed } from '@/components/pages/ProfileCreator/ProfileAndProfileCreatorCommonComponents/NumFollowed';
 import { NumFollowers } from '@/components/pages/ProfileCreator/ProfileAndProfileCreatorCommonComponents/NumFollowers';
+import { useCleanUrlIfThisComponentsIsUnmount } from '@/hooks/useCleanUrlIfThisComponentsIsUnmount';
+import { useUpdateUrlParamsPostVideoOrImage } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
+import { useEffect } from 'react';
 
 export function ProfileCreator() {
   const commonProps = useUserCreator(state => state.commonProps);
@@ -15,6 +18,12 @@ export function ProfileCreator() {
     0
   );
 
+  useEffect(() => {
+    useUpdateUrlParamsPostVideoOrImage({
+      userId: userId
+    });
+  }, []);
+
   const {
     profileImageSrc,
     username,
@@ -23,6 +32,8 @@ export function ProfileCreator() {
     profileDescription,
     userId
   } = commonProps;
+
+  useCleanUrlIfThisComponentsIsUnmount();
 
   return (
     <article className='profile-creator'>
@@ -42,7 +53,9 @@ export function ProfileCreator() {
           </article>
         </aside>
         <FollowButton userId={userId} />
-        { profileDescription && <p className='description'>{profileDescription}</p> }
+        {profileDescription && (
+          <p className='description'>{profileDescription}</p>
+        )}
         <ArrowLeft className='arrow-left' />
       </aside>
 

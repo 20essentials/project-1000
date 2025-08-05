@@ -132,10 +132,10 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // useUpdateUrlParamsPostVideoOrImage({
-          //   postId: idPost,
-          //   userId: userId
-          // });
+          useUpdateUrlParamsPostVideoOrImage({
+            postId: idPost,
+            userId: userId
+          });
           if (thisPostWillRenderMorePost && !thisPostHasBeenRendered.current) {
             thisPostHasBeenRendered.current = true;
             setLimit(prev => prev + offsetOfPosts);
@@ -158,9 +158,9 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
       if (element) observer.unobserve(element);
 
       observer.disconnect();
-      // useUpdateUrlParamsPostVideoOrImage({
-      //   cleanUrl: true
-      // });
+      useUpdateUrlParamsPostVideoOrImage({
+        cleanUrl: true
+      });
     };
   }, []);
 
