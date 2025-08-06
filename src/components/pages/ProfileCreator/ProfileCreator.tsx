@@ -9,6 +9,9 @@ import { NumFollowers } from '@/components/pages/ProfileCreator/ProfileAndProfil
 import { useCleanUrlIfThisComponentsIsUnmount } from '@/hooks/useCleanUrlIfThisComponentsIsUnmount';
 import { useUpdateUrlParamsPostVideoOrImage } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 import { useEffect } from 'react';
+import { ShareLinkOfProfile } from './ShareLinkOfProfile';
+import { CircleCopy } from './CircleCopy';
+import { ShareLinkAndCircle } from './ShareLinkAndCircle';
 
 export function ProfileCreator() {
   const commonProps = useUserCreator(state => state.commonProps);
@@ -57,6 +60,9 @@ export function ProfileCreator() {
           <p className='description'>{profileDescription}</p>
         )}
         <ArrowLeft className='arrow-left' />
+        {/* <ShareLinkOfProfile className='share-link' />
+        <CircleCopy /> */}
+        <ShareLinkAndCircle />
       </aside>
 
       <GridPosts arrayOfPosts={arrayOfPosts} commonProps={commonProps} />

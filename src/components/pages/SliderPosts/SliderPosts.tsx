@@ -14,6 +14,9 @@ import { useUserHasSeenPostOrProfileFromUrl } from '@/store/useUserHasSeenPostOr
 import { useGoToTheProfileIfOnlyTheUserIdExists } from '@/hooks/useGoToTheProfileIfOnlyTheUserIdExists';
 
 export function SliderPosts() {
+  const setCurrentPage = useCurrentPage(s => s.setCurrentPage);
+  const setArrayOfPosts = useUserCreator(state => state.setArrayOfPosts);
+  const setCommonProps = useUserCreator(state => state.setCommonProps);
   const getValueIfUserHasSeenPostOrProfileFromUrl =
     useUserHasSeenPostOrProfileFromUrl(
       state => state.getValueIfUserHasSeenPostOrProfileFromUrl
@@ -21,20 +24,40 @@ export function SliderPosts() {
   const setUserHasSeenPostOrProfileFromUrl = useUserHasSeenPostOrProfileFromUrl(
     state => state.setUserHasSeenPostOrProfileFromUrl
   );
+  const userHasSeenPostOrProfileFromUrl = useUserHasSeenPostOrProfileFromUrl(
+    state => state.userHasSeenPostOrProfileFromUrl
+  );
 
   const { dataFromUrl, weMustRenderAUserProfile, userId } =
     usetGetDataParamPostVideoOrImages();
+
+  // console.log({ dataFromUrl, weMustRenderAUserProfile, userId });
 
   const isForYou = useFollowedOrForYou(state => state.isForYou);
   const FOLLOWED = useGlobalArrayPosts(state => state.FOLLOWED);
   const FOR_YOU = useGlobalArrayPosts(state => state.FOR_YOU);
   const ALL_POSTS = isForYou ? FOR_YOU : FOLLOWED;
 
-  useGoToTheProfileIfOnlyTheUserIdExists({
-    ALL_POSTS,
-    userId,
-    weMustRenderAUserProfile
-  });
+  // useGoToTheProfileIfOnlyTheUserIdExists({
+  //   ALL_POSTS,
+  //   userId,
+  //   weMustRenderAUserProfile
+  // });
+
+  useEffect(() => {
+    if (weMustRenderAUserProfile && userId && !userHasSeenPostOrProfileFromUrl) {
+      setUserHasSeenPostOrProfileFromUrl({
+        userHasSeenPostOrProfileFromUrl: true
+      });
+      const currentUser = ALL_POSTS.find(user => user[0].userId === userId);
+      if (currentUser) {
+        const [commonPropsUser, arrayPosts] = currentUser || ALL_POSTS[0];
+        setCommonProps(commonPropsUser);
+        setArrayOfPosts(arrayPosts);
+        setCurrentPage(IS_ACTIVE_BUTTON.PROFILE_CREATOR);
+      }
+    }
+  }, [userHasSeenPostOrProfileFromUrl]);
 
   const sliderRef = useRef<HTMLDivElement>(null);
   const limit = useLimitOfPost(state => state.limit);
@@ -51,7 +74,7 @@ export function SliderPosts() {
     );
 
     const shuffled = uniquePosts.toSorted(() => Math.random() - 0.5);
-    if (!getValueIfUserHasSeenPostOrProfileFromUrl()) {
+    if (!userHasSeenPostOrProfileFromUrl) {
       setUserHasSeenPostOrProfileFromUrl({
         userHasSeenPostOrProfileFromUrl: true
       });
@@ -71,7 +94,10 @@ export function SliderPosts() {
     };
   }, [isForYou]);
 
-  const postsToShow = useMemo(() => flattenedPosts.slice(0, limit), [limit, flattenedPosts]);
+  const postsToShow = useMemo(
+    () => flattenedPosts.slice(0, limit),
+    [limit, flattenedPosts]
+  );
 
   useEffect(() => {
     return () => {

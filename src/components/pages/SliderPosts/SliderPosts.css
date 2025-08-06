@@ -658,8 +658,14 @@
           display: flex;
           flex-direction: column;
           gap: 8px;
-          /* background-color: #e6e60d; */
           align-items: center;
+          cursor: pointer;
+
+          &:active {
+            .circle-gradient {
+              opacity: 0.5;
+            }
+          }
 
           .circle-gradient {
             aspect-ratio: 1;

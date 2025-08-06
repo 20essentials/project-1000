@@ -6,7 +6,7 @@ type ItemType = {
   id: string;
   gradient: string;
   svg: JSX.Element;
-  onclick?: (...args: any[]) => void; 
+  onclick?: (...args: any[]) => void;
 };
 
 const ARRAY_OF_SHARE: ItemType[] = [
@@ -109,8 +109,22 @@ const ARRAY_OF_SHARE: ItemType[] = [
         </defs>
       </svg>
     ),
-    onclick: () => {
-      alert('copy')
+    onclick: ({
+      refButton
+    }: {
+      refButton: React.RefObject<HTMLButtonElement | null>;
+    }) => {
+      const $buttonSystem = refButton?.current;
+      if ($buttonSystem instanceof HTMLButtonElement) {
+        $buttonSystem.classList.remove('btn-hidden');
+        $buttonSystem.innerHTML = 'Link copied';
+        navigator.clipboard.writeText(window.location.href);
+
+        let timer = setTimeout(() => {
+          $buttonSystem.classList.add('btn-hidden');
+          window.clearTimeout(timer);
+        }, 1234);
+      }
     }
   },
   {
@@ -341,21 +355,32 @@ const ARRAY_OF_SHARE: ItemType[] = [
 
 const MODE_SHARE = {
   SAVE_VIDEO_OR_IMAGE: 0,
-  COPY_LINK: 1,
+  COPY_LINK: 1
 };
 
 export function AsideBottomOfShare({
   updateIsContainerShareOpen,
   videoSrc,
   arrayImages,
-  username
+  username,
+  containerRef,
+  isContainerShareOpen = false
 }: {
   updateIsContainerShareOpen: () => void;
+  isContainerShareOpen?: boolean;
   videoSrc?: string;
   arrayImages?: string[];
   username: string;
+  containerRef: React.RefObject<HTMLElement | null>;
 }) {
   const systembtn = useRef<null | HTMLButtonElement>(null);
+
+  if (containerRef.current) {
+    containerRef.current?.classList.toggle(
+      'showBackgroundBlackInText',
+      isContainerShareOpen
+    );
+  }
 
   return (
     <article className='aside-bottom-of-share'>
@@ -403,7 +428,9 @@ export function AsideBottomOfShare({
                       updateIsContainerShareOpen
                     });
                   } else if (index === MODE_SHARE.COPY_LINK) {
-                    onclick();
+                    onclick({
+                      refButton: systembtn
+                    });
                   }
                 }}
               >
