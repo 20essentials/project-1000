@@ -186,6 +186,8 @@ import { blackcats_array_of_posts, blackcats_commonProps } from './user-49-black
 import { ligthspeed_array_of_posts, ligthspeed_commonProps } from './user-48-ligth-speed';
 import { beitman_array_of_posts, beitman_commonProps } from './user-51-beitman';
 import { ghxz_edits_array_of_posts, ghxz_edits_commonProps } from './user-50-ghxz-edit';
+import { gafurovedit_array_of_posts, gafurovedit_commonProps } from './user-52-gafurovedit';
+import { improve_array_of_posts, improve_commonProps } from './user-53-improve';
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
@@ -201,6 +203,8 @@ export const PUBLIC_DATA: arrayOfPosts = [
   // [justtrip_commonProps, justtrip_array_of_posts],
   // [mycelium_mirrors_commonProps, mycelium_mirrors_array_of_posts],
   [beitman_commonProps, beitman_array_of_posts],
+  // [gafurovedit_commonProps, gafurovedit_array_of_posts],
+  // [improve_commonProps, improve_array_of_posts],
   [ligthspeed_commonProps, ligthspeed_array_of_posts],
   [ghxz_edits_commonProps, ghxz_edits_array_of_posts],
   [blackcats_commonProps, blackcats_array_of_posts],

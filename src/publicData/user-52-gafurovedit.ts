@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'gafurovedit';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd5a44878-3399-47b7-a04a-4d63dc41ef2e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-242//assets/gafurovedit/';
 const followers = 1_720_320;
 const followed = 320;
 const profileDescription = 'Edits';

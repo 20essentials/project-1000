@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'improve';
-const userId = '';
-const prefixUrl = '';
+const userId = '87e183c6-25ca-4d1a-8b98-145337a4f3c0';
+const prefixUrl = 'https://dominicnikolai.github.io/project-241/assets/improve/';
 const followers = 27_320;
 const followed = 79;
 const profileDescription = '1% mejor cada día.';
