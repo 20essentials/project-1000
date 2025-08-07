@@ -12,6 +12,7 @@
     "@astrojs/react": "4.3.0",
     "@astrojs/vercel": "8.2.0",
     "@clerk/astro": "2.10.2",
+    "@lottiefiles/dotlottie-react": "^0.14.4",
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "astro": "5.8.0",

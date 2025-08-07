@@ -7,6 +7,7 @@ export function GridOfUserRepostPosts() {
     state => state.arrayOfSavedPostOfTheUser
   );
 
+
   return (
     <GridOfPosts
       arrayOfPosts={arrayOfRepublishPosts}

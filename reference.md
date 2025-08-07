@@ -1,2 +1,2 @@
 - **Reference / Inspiration ⬇️**
-  - [text](link)
+  - [LottieFiles Ghost Animation](https://app.lottiefiles.com/animation/c68ecb5b-d064-4018-87d6-48d2985caccb?channel=web&from=download&panel=download&source=public-animation)

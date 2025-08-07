@@ -2,6 +2,8 @@ import type {
   postProps,
   arrayOfPosts
 } from '@/components/pages/SliderPosts/types.d';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 import {
   MODE_GRID,
@@ -11,6 +13,9 @@ import {
 import { useEffect, useState, useRef } from 'react';
 import { TotalViews } from '@/components/pages/ProfileCreator/TotalViews';
 import { SqureSubSquare } from '../ProfileCreator/SqureSubSquare';
+import { baseUrl } from '@/utils/functions';
+const tikTokLoader = baseUrl('/assets/empty-ghost.gif');
+const ghostLottie = baseUrl('/assets/empty-ghost.lottie');
 
 export function GridOfPosts({
   arrayOfPosts,
@@ -59,6 +64,25 @@ export function GridOfPosts({
       };
     }
   }, [visibleCount, flatPostsWithProps.length]);
+
+  if (arrayOfPosts.length === 0) {
+    return (
+      <aside
+        className='profile-creator-bottom'
+        style={{
+          overflow: 'hidden'
+        }}
+        ref={containerRef}
+      >
+        {/* <img
+          draggable='false'
+          className='am-loader-tiktok-video'
+          src={tikTokLoader}
+        /> */}
+        <DotLottieReact src={ghostLottie} loop autoplay className='am-loader-tiktok-video' />
+      </aside>
+    );
+  }
 
   return (
     <aside className='profile-creator-bottom scroll-y' ref={containerRef}>
