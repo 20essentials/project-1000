@@ -113,7 +113,7 @@
       position: absolute;
       left: 50%;
       top: 50%;
-      transform: translate(-50%, -50%) scale(2.5);
+      transform: translate(-50%, -50%) scale(4.8);
       z-index: 5;
       border-radius: 50%;
     }
@@ -186,7 +186,6 @@
       &.aside-nav-active {
         svg {
           color: #fff;
-          border-color: #fff;
         }
       }
     }

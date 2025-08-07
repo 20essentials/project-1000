@@ -7,8 +7,11 @@ import { NumFollowed } from '@/components/pages/ProfileCreator/ProfileAndProfile
 import { useFollowedAccount } from '@/store/useFollowedAccount';
 import { NumFollowers } from '@/components/pages/ProfileCreator/ProfileAndProfileCreatorCommonComponents/NumFollowers';
 
-export function ProfileTop() {
-  
+export function ProfileTop({
+  slideHorizontalRef,
+}: {
+  slideHorizontalRef: React.RefObject<HTMLElement | null>;
+}) {
   const commonProps = useUserCreator(state => state.commonProps);
   const { profileImageSrc, username, followers } = commonProps;
   const arrayOfPosts = useUserCreator(state => state.arrayOfPosts);
@@ -34,7 +37,10 @@ export function ProfileTop() {
       </aside>
       <ArrowLeft className='arrow-left' />
       <Logout />
-      <NavVideosOrSaved />
+
+      <NavVideosOrSaved
+        slideHorizontalRef={slideHorizontalRef}
+      />
     </aside>
   );
 }

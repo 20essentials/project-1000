@@ -14,7 +14,6 @@ import { useEffect, useState, useRef } from 'react';
 import { TotalViews } from '@/components/pages/ProfileCreator/TotalViews';
 import { SqureSubSquare } from '../ProfileCreator/SqureSubSquare';
 import { baseUrl } from '@/utils/functions';
-const tikTokLoader = baseUrl('/assets/empty-ghost.gif');
 const ghostLottie = baseUrl('/assets/empty-ghost.lottie');
 
 export function GridOfPosts({
@@ -74,12 +73,12 @@ export function GridOfPosts({
         }}
         ref={containerRef}
       >
-        {/* <img
-          draggable='false'
+        <DotLottieReact
+          src={ghostLottie}
+          loop
+          autoplay
           className='am-loader-tiktok-video'
-          src={tikTokLoader}
-        /> */}
-        <DotLottieReact src={ghostLottie} loop autoplay className='am-loader-tiktok-video' />
+        />
       </aside>
     );
   }
