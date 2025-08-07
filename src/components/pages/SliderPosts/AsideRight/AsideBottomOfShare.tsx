@@ -176,7 +176,30 @@ const ARRAY_OF_SHARE: ItemType[] = [
           </clipPath>
         </defs>
       </svg>
-    )
+    ),
+    onclick: ({
+      refButton,
+      username
+    }: {
+      refButton: React.RefObject<HTMLButtonElement | null>;
+      username: string;
+    }) => {
+      const $buttonSystem = refButton?.current;
+      if ($buttonSystem instanceof HTMLButtonElement) {
+        $buttonSystem.classList.remove('btn-hidden');
+        $buttonSystem.innerHTML = 'Link copied';
+        navigator.clipboard.writeText(window.location.href);
+
+        let timer = setTimeout(() => {
+          $buttonSystem.classList.add('btn-hidden');
+          window.clearTimeout(timer);
+        }, 1234);
+      }
+      const intent = 'https://twitter.com/intent/tweet';
+      const text = `Post from @${username} in TikTok Lite → ${window.location.href}`;
+      window.open(`${intent}?text=${encodeURIComponent(text)}`);
+      return;
+    }
   },
   {
     title: 'Instagram',
@@ -361,7 +384,8 @@ const ARRAY_OF_SHARE: ItemType[] = [
 const MODE_SHARE = {
   SAVE_VIDEO_OR_IMAGE: 0,
   COPY_LINK: 1,
-  REPOST: 2
+  REPOST: 2,
+  X: 3
 };
 
 export function AsideBottomOfShare({
@@ -450,6 +474,11 @@ export function AsideBottomOfShare({
                     });
                   } else if (index === MODE_SHARE.COPY_LINK) {
                     onclick({
+                      refButton: systembtn
+                    });
+                  } else if (index === MODE_SHARE.X) {
+                    onclick({
+                      username,
                       refButton: systembtn
                     });
                   }

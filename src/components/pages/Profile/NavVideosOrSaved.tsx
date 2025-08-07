@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const arrayOfSvgs = [
   <svg fill='currentColor' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'>
@@ -21,9 +21,13 @@ export function NavVideosOrSaved({
   slideHorizontalRef: React.RefObject<HTMLElement | null>;
 }) {
   const [indexOfSectionActive, setIndexOfSectionActive] = useState(0);
+  const hasclicked = useRef(false);
 
   function showSection(indexSection: number) {
-    return () => setIndexOfSectionActive(indexSection);
+    return () => {
+      hasclicked.current = true;
+      setIndexOfSectionActive(indexSection);
+    };
   }
 
   useEffect(() => {
@@ -32,6 +36,10 @@ export function NavVideosOrSaved({
       behavior: 'smooth',
       inline: 'center'
     });
+    let timer = setTimeout(() => {
+      hasclicked.current = false;
+      clearTimeout(timer);
+    }, 1000);
   }, [indexOfSectionActive]);
 
   useEffect(() => {
@@ -44,6 +52,7 @@ export function NavVideosOrSaved({
       entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
+            if (hasclicked.current) return;
             const index = children.indexOf(entry.target as Element);
             if (index !== -1) {
               setIndexOfSectionActive(index);
@@ -53,8 +62,7 @@ export function NavVideosOrSaved({
       },
       {
         root: container,
-        threshold: 0.95,
-        
+        threshold: 0.95
       }
     );
 
