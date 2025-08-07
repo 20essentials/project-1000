@@ -13,7 +13,7 @@ import {
   midudev_commonProps,
   midudev_array_of_posts
 } from '@/publicData/user-1-midudev';
-import { lucia_sora_array_of_posts } from '@/publicData/user-13-luciasora';
+import { goated_ai_art_array_of_posts } from '@/publicData/user-2-goated-ai-art';
 import {
   qbitlab_array_of_posts,
   qbitlab_commonProps
@@ -74,7 +74,7 @@ export function getUser({
       }))
   );
 
-  const user_array_of_posts = lucia_sora_array_of_posts.slice(0,6);
+  const user_array_of_posts = goated_ai_art_array_of_posts.slice(0,9);
 
   return {
     user_commonProps,

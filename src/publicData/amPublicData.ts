@@ -62,7 +62,7 @@ import {
 import {
   cata_array_of_posts,
   cata_commonProps
-} from '@/publicData/user-16-cata copy';
+} from '@/publicData/user-16-cata';
 import {
   whoisangenr_array_of_posts,
   whoisangenr_commonProps
@@ -194,6 +194,7 @@ export const PUBLIC_DATA: arrayOfPosts = [
   //testing
   [midudev_commonProps, midudev_array_of_posts], //esto no existe abajo
   [qbitlab_commonProps, qbitlab_array_of_posts], //esto no existe abajo
+  [goated_ai_art_commonProps, goated_ai_art_array_of_posts],
   [gregorian_commonProps, [gregorian_array_of_posts[0]]], //esto si existe abajo
   //testing
 
@@ -240,7 +241,7 @@ export const PUBLIC_DATA: arrayOfPosts = [
   // [marshall_jassan_commonProps, marshall_jassan_array_of_posts],
   // [edaserkanbolat_edits_commonProps, edaserkanbolat_edits_array_of_posts]
   // [jorgepomarg_commonProps, jorgepomarg_array_of_posts],
-  // [goated_ai_art_commonProps, goated_ai_art_array_of_posts],
+  
   // [ars_notoria_commonProps, ars_notoria_array_of_posts],
   // [mr_lamborghini_commonProps, mr_lamborghini_array_of_posts],
   // [vid_favorites_commonProps, vid_favorites_array_of_posts],

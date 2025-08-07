@@ -1,34 +1,46 @@
 import type {
   postProps,
-  postComonProps
+  arrayOfPosts
 } from '@/components/pages/SliderPosts/types.d';
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
-import { useUserCreator } from '@/store/useUserCreator';
-import { useEffect, useState, useRef, useMemo } from 'react';
+import {
+  MODE_GRID,
+  useUserCreator,
+  type valueOfMODE_GRID
+} from '@/store/useUserCreator';
+import { useEffect, useState, useRef } from 'react';
 import { TotalViews } from '@/components/pages/ProfileCreator/TotalViews';
-import { SqureSubSquare } from '@/components/pages/ProfileCreator/SqureSubSquare';
+import { SqureSubSquare } from '../ProfileCreator/SqureSubSquare';
 
-export function GridPosts({
+export function GridOfPosts({
   arrayOfPosts,
-  commonProps
+  modeGrid = MODE_GRID.userCreatedPosts
 }: {
-  arrayOfPosts: postProps[];
-  commonProps: postComonProps;
+  arrayOfPosts: [] | arrayOfPosts;
+  modeGrid: valueOfMODE_GRID;
 }) {
   const [visibleCount, setVisibleCount] = useState(9);
+
+  const flatPostsWithProps = arrayOfPosts.flatMap(([commonProps, posts]) =>
+    posts.map(post => ({
+      post,
+      commonProps
+    }))
+  );
+
   const containerRef = useRef<HTMLDivElement>(null);
   const lastThreeRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const onIntersect: IntersectionObserverCallback = entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        setVisibleCount(prev => Math.min(prev + 9, arrayOfPosts.length));
+        setVisibleCount(prev => Math.min(prev + 9, flatPostsWithProps.length));
       }
     });
   };
 
   useEffect(() => {
-    if (visibleCount < arrayOfPosts.length) {
+    if (visibleCount < flatPostsWithProps.length) {
       const observer = new IntersectionObserver(onIntersect, {
         root: null,
         rootMargin: '0px',
@@ -46,11 +58,11 @@ export function GridPosts({
         observer.disconnect();
       };
     }
-  }, [visibleCount, arrayOfPosts.length]);
+  }, [visibleCount, flatPostsWithProps.length]);
 
   return (
     <aside className='profile-creator-bottom scroll-y' ref={containerRef}>
-      {arrayOfPosts.slice(0, visibleCount).map((post, index) => (
+      {flatPostsWithProps.slice(0, visibleCount).map(({ post }, index) => (
         <div
           key={post.idPost}
           ref={el => {
@@ -59,9 +71,7 @@ export function GridPosts({
             }
           }}
         >
-          <PostVideoOrImage
-            post={post}
-          />
+          <PostVideoOrImage post={post} modeGrid={modeGrid} />
         </div>
       ))}
     </aside>
@@ -70,8 +80,10 @@ export function GridPosts({
 
 function PostVideoOrImage({
   post,
+  modeGrid = MODE_GRID.userCreatedPosts
 }: {
   post: postProps;
+  modeGrid: valueOfMODE_GRID;
 }) {
   const { videoSrc, arrayImages, totalViewsOfThePost } = post;
   const [poster, setPoster] = useState<string | null>(null);
@@ -79,6 +91,7 @@ function PostVideoOrImage({
   const [isVisible, setIsVisible] = useState(false);
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
   const setIndexOfPost = useUserCreator(state => state.setIndexOfPost);
+  const setModeOfGrid = useUserCreator(state => state.setModeOfGrid);
 
   useEffect(() => {
     if (!videoSrc) return;
@@ -87,7 +100,7 @@ function PostVideoOrImage({
       ([entry], obs) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          if (containerRef.current) obs.unobserve(containerRef.current); 
+          if (containerRef.current) obs.unobserve(containerRef.current);
         }
       },
       {
@@ -146,6 +159,7 @@ function PostVideoOrImage({
     const indexStart = [...parent.children].indexOf(firstParent);
     setCurrentPage(IS_ACTIVE_BUTTON.CREATOR_POSTS);
     setIndexOfPost(indexStart);
+    setModeOfGrid(modeGrid);
   }
 
   return (

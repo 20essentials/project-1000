@@ -27,7 +27,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 25px;
+    padding-block: 25px;
     color: var(--white);
     gap: 8px;
     font-size: 12.5px;
@@ -89,10 +89,25 @@
     }
   }
 
+  .slider-of-grid-of-posts-bottom {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 100%;
+    /* background-color: red; */
+    transform: scaleY(-1);
+  }
+
   .profile-creator-bottom {
-    display: grid;
+    scroll-snap-align: center;
     grid-template-columns: repeat(3, 1fr);
+    min-width: 100%;
+    display: grid;
     border-top: 1px solid #444;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transform: scaleY(-1);
 
     .content-post {
       background-color: black;
@@ -101,7 +116,8 @@
       position: relative;
       display: flex;
       align-content: center;
-      aspect-ratio: 9 / 16;
+      max-height: 160px;
+      /* aspect-ratio: 9 / 16; */
 
       .square-subsquare-top {
         position: absolute;
@@ -149,10 +165,12 @@
 
   .nav-videos-or-saved {
     display: flex;
+    width: 80%;
     width: 100%;
+    padding: 4px;
 
     .aside-nav {
-      width: 50%;
+      flex-grow: 1;
       display: flex;
       justify-content: center;
 
@@ -166,10 +184,8 @@
 
     svg {
       color: #888;
-      width: 28px;
-      height: 28px;
-      /* padding: 5px; */
-      padding-bottom: 5px;
+      width: 20px;
+      height: 20px;
       border-bottom: 2px solid transparent;
     }
   }

@@ -4,27 +4,41 @@ import { PostVideo } from '@/components/pages/SliderPosts/PostVideo/PostVideo';
 import { useRef, useEffect } from 'react';
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
 import type { arrayOfPosts } from '@/components/pages/SliderPosts//types';
-import { useUserCreator } from '@/store/useUserCreator';
+import { useUserCreator, MODE_GRID } from '@/store/useUserCreator';
 import { useUserSavedPosts } from '@/store/useUserSavedPosts';
 import { useCurrentUser } from '@/store/useCurrentUser';
 import { useSwipeVerticalScroll } from '@/hooks/useSwipeVerticalScroll';
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 import { useIsScrolling } from '@/store/useIsScrolling';
+import { userUserLikedPosts } from '@/store/useUserLikedPosts';
 
 export function SliderPostsOfSingleUser() {
   const user = useCurrentUser(state => state.user);
   const usernameOfTheUser = user?.username ?? '';
   const commonProps = useUserCreator(state => state.commonProps);
+  const modeGrid = useUserCreator(state => state.modeGrid);
   const arrayOfPosts = useUserCreator(state => state.arrayOfPosts);
-  const showSavedPosts = useUserCreator(state => state.showSavedPosts);
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
   const arrayOfSavedPostOfTheUser = useUserSavedPosts(
     state => state.arrayOfSavedPostOfTheUser
   );
+  const arrayOfLikedPostsOfTheUser = userUserLikedPosts(
+    state => state.arrayOfSavedPostOfTheUser
+  );
   const isTheSameuser = commonProps.username === usernameOfTheUser;
-  const showSavedPostOfTheCurrentUser = showSavedPosts && isTheSameuser;
-  const ALL_POSTS: arrayOfPosts = showSavedPostOfTheCurrentUser
-    ? arrayOfSavedPostOfTheUser
+  const ALL_POSTS: arrayOfPosts = isTheSameuser
+    ? (() => {
+        if (modeGrid === MODE_GRID.userCreatedPosts) {
+          return [[commonProps, arrayOfPosts]];
+        } else if (modeGrid === MODE_GRID.userSavedPosts) {
+          return arrayOfSavedPostOfTheUser;
+        } else if (modeGrid === MODE_GRID.userLikedPosts) {
+          return arrayOfLikedPostsOfTheUser;
+        } else if (modeGrid === MODE_GRID.userRepublishPosts) {
+          return [[commonProps, arrayOfPosts]];
+        }
+        return [[commonProps, arrayOfPosts]];
+      })()
     : [[commonProps, arrayOfPosts]];
   const sliderRef = useRef<HTMLDivElement>(null);
   const limit = useLimitOfPost(state => state.limit);

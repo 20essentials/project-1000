@@ -17,7 +17,13 @@ export function Search() {
   })).toSorted(() => Math.random() - 0.5);
   const filteredArray =
     searchText !== ''
-      ? arrayUserNameAndId.filter(({ username }) => username.toLowerCase().includes(searchText.toLowerCase()))
+      ? arrayUserNameAndId
+          .filter(({ username }) => {
+            let theSearchText = searchText.toLowerCase().replace(/\s/g, '_');
+            let theUsername = username.toLowerCase();
+            return theUsername.includes(theSearchText);
+          })
+          .map(el => ({ ...el, username: el.username.replace('_', ' ') }))
       : arrayUserNameAndId;
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
   const setArrayOfPosts = useUserCreator(state => state.setArrayOfPosts);
