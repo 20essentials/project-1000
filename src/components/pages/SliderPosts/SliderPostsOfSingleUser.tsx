@@ -11,6 +11,7 @@ import { useSwipeVerticalScroll } from '@/hooks/useSwipeVerticalScroll';
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 import { useIsScrolling } from '@/store/useIsScrolling';
 import { userUserLikedPosts } from '@/store/useUserLikedPosts';
+import { useUserRepublishPosts } from '@/store/useUserRepublishPosts';
 
 export function SliderPostsOfSingleUser() {
   const user = useCurrentUser(state => state.user);
@@ -25,6 +26,9 @@ export function SliderPostsOfSingleUser() {
   const arrayOfLikedPostsOfTheUser = userUserLikedPosts(
     state => state.arrayOfSavedPostOfTheUser
   );
+  const arrayOfRepostsPosts = useUserRepublishPosts(
+    state => state.arrayOfSavedPostOfTheUser
+  );
   const isTheSameuser = commonProps.username === usernameOfTheUser;
   const ALL_POSTS: arrayOfPosts = isTheSameuser
     ? (() => {
@@ -35,7 +39,7 @@ export function SliderPostsOfSingleUser() {
         } else if (modeGrid === MODE_GRID.userLikedPosts) {
           return arrayOfLikedPostsOfTheUser;
         } else if (modeGrid === MODE_GRID.userRepublishPosts) {
-          return [[commonProps, arrayOfPosts]];
+          return arrayOfRepostsPosts;
         }
         return [[commonProps, arrayOfPosts]];
       })()

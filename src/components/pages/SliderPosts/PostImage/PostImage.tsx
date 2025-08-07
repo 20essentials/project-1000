@@ -253,6 +253,7 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
 
         {isContainerShareOpen && (
           <AsideBottomOfShare
+            post={props}
             arrayImages={arrayImages}
             username={username}
             containerRef={postImageRef}

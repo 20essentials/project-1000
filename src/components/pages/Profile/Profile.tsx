@@ -4,6 +4,7 @@ import { GridOfUserSavedPosts } from '@/components/pages/Profile/GridOfUserSaved
 import { GridOfUserLikedPosts } from './GridOfUserLikedPosts';
 import { GridOfUserCreatedPosts } from './GridOfUserCreatedPosts';
 import { ProfileTop } from './ProfileTop';
+import { GridOfUserRepostPosts } from './GridOfUserRepostPosts';
 
 export function Profile() {
   return (
@@ -13,7 +14,7 @@ export function Profile() {
         <GridOfUserCreatedPosts />
         <GridOfUserSavedPosts />
         <GridOfUserLikedPosts />
-        <GridOfUserCreatedPosts />
+        <GridOfUserRepostPosts />
       </section>
     </article>
   );

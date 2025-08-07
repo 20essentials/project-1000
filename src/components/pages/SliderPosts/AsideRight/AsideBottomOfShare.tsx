@@ -1,5 +1,10 @@
 import { useRef, type JSX } from 'react';
 import { CloseContainer } from './CloseContainer';
+import { RepublishItemShare } from './RepublishItemShare';
+import type {
+  postProps,
+  postComonProps
+} from '@/components/pages/SliderPosts/types.d.ts';
 
 type ItemType = {
   title: string;
@@ -128,7 +133,7 @@ const ARRAY_OF_SHARE: ItemType[] = [
     }
   },
   {
-    title: 'Republish',
+    title: 'Repost',
     id: 'a1b2c3d4-e5f6-7a8b-9c0d-1e2f3g4h5i6k',
     gradient: 'linear-gradient(to bottom, #e5e515, #ffa500)',
     svg: (
@@ -355,7 +360,8 @@ const ARRAY_OF_SHARE: ItemType[] = [
 
 const MODE_SHARE = {
   SAVE_VIDEO_OR_IMAGE: 0,
-  COPY_LINK: 1
+  COPY_LINK: 1,
+  REPOST: 2
 };
 
 export function AsideBottomOfShare({
@@ -364,7 +370,8 @@ export function AsideBottomOfShare({
   arrayImages,
   username,
   containerRef,
-  isContainerShareOpen = false
+  isContainerShareOpen = false,
+  post
 }: {
   updateIsContainerShareOpen: () => void;
   isContainerShareOpen?: boolean;
@@ -372,6 +379,7 @@ export function AsideBottomOfShare({
   arrayImages?: string[];
   username: string;
   containerRef: React.RefObject<HTMLElement | null>;
+  post: postProps & postComonProps;
 }) {
   const systembtn = useRef<null | HTMLButtonElement>(null);
 
@@ -414,6 +422,19 @@ export function AsideBottomOfShare({
                   ? 'Save Video'
                   : `Save Photo${(arrayImages?.length ?? 0) > 1 ? 's' : ''}`
                 : title;
+
+            if (index === MODE_SHARE.REPOST) {
+              return (
+                <RepublishItemShare
+                  amTitle={amTitle}
+                  gradient={gradient}
+                  id={id}
+                  post={post}
+                  svg={svg}
+                  key={id}
+                />
+              );
+            }
 
             return (
               <aside
