@@ -2,7 +2,10 @@
 import '@/styles/global.css';
 import { baseUrl } from '@/utils/functions';
 const favicon = baseUrl('/assets/favicon.webp');
-const previewImg = baseUrl('/preview/preview.avif');
+const previewImg = baseUrl('/preview/preview-og.avif');
+const title = 'Tik Tok Clon';
+const description = '(>‿◠)✌';
+const url = Astro.site;
 ---
 
 <!doctype html>
@@ -14,7 +17,16 @@ const previewImg = baseUrl('/preview/preview.avif');
     <meta name='google' content='notranslate' />
     <meta property='og:image' content={previewImg} />
     <meta name='twitter:card' content='summary_large_image' />
-    <title>Tik Tok Clon</title>
+    <meta name='description' content={description} />
+    <meta property='og:type' content='website' />
+    <meta property='og:title' content={title} />
+    <meta property='og:url' content={url} />
+    <meta property='og:description' content={description} />
+    <meta property='twitter:title' content={title} />
+    <meta property='twitter:url' content={url} />
+    <meta property='twitter:image' content={previewImg} />
+    <meta property='twitter:description' content={description} />
+    <title>{title}</title>
   </head>
   <body>
     <slot />

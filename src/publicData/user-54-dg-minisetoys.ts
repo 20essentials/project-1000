@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'dg_minisetoys';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd69c574d-eb36-4419-8341-23fad4fd44d1';
+const prefixUrl = 'https://dominicnikolai.github.io/project-243/assets/dg-minisetoys/';
 const followers = 180_720;
 const followed = 500;
 const profileDescription =

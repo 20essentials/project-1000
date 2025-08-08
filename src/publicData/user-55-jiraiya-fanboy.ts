@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'jiraiya_fanboy';
-const userId = '';
-const prefixUrl = '';
+const userId = '79576132-e3e1-4a8f-8636-a4379e2f6ed8';
+const prefixUrl = 'https://dominicnikolai.github.io/project-244/assets/jiraiya-f4nboy/';
 const followers = 78_720;
 const followed = 108;
 const profileDescription = 'Edits';
@@ -47,7 +47,8 @@ const jiraiya_fanboy_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
-  userId
+  userId,
+  arrayDescriptionsOfVideos
 });
 
 const jiraiya_fanboy_images = generateArrayPostsOfImages({

@@ -188,6 +188,9 @@ import { beitman_array_of_posts, beitman_commonProps } from './user-51-beitman';
 import { ghxz_edits_array_of_posts, ghxz_edits_commonProps } from './user-50-ghxz-edit';
 import { gafurovedit_array_of_posts, gafurovedit_commonProps } from './user-52-gafurovedit';
 import { improve_array_of_posts, improve_commonProps } from './user-53-improve';
+import { dg_minisetoys_array_of_posts, dg_minisetoys_commonProps } from './user-54-dg-minisetoys';
+import { jiraiya_fanboy_array_of_posts, jiraiya_fanboy_commonProps } from './user-55-jiraiya-fanboy';
+import { eric_sierra_array_of_posts, eric_sierra_commonProps } from './user-57-eric-sierra';
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
@@ -203,8 +206,11 @@ export const PUBLIC_DATA: arrayOfPosts = [
   // [justtrip_commonProps, justtrip_array_of_posts],
   // [mycelium_mirrors_commonProps, mycelium_mirrors_array_of_posts],
   [beitman_commonProps, beitman_array_of_posts],
+  [eric_sierra_commonProps, eric_sierra_array_of_posts],
   // [gafurovedit_commonProps, gafurovedit_array_of_posts],
   // [improve_commonProps, improve_array_of_posts],
+  [jiraiya_fanboy_commonProps, jiraiya_fanboy_array_of_posts],
+  [dg_minisetoys_commonProps, dg_minisetoys_array_of_posts],
   [ligthspeed_commonProps, ligthspeed_array_of_posts],
   [ghxz_edits_commonProps, ghxz_edits_array_of_posts],
   [blackcats_commonProps, blackcats_array_of_posts],
