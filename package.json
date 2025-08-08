@@ -19,6 +19,7 @@
     "pnpm": "10.12.4",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "react-webcam": "^7.2.0",
     "typescript": "5.8.3",
     "vercel": "44.2.9",
     "zustand": "5.0.5"

@@ -1,10 +1,10 @@
 import '@/components/pages/Profile/Profile.css';
 
 import { GridOfUserSavedPosts } from '@/components/pages/Profile/GridOfUserSavedPosts';
-import { GridOfUserLikedPosts } from './GridOfUserLikedPosts';
-import { GridOfUserCreatedPosts } from './GridOfUserCreatedPosts';
-import { ProfileTop } from './ProfileTop';
-import { GridOfUserRepostPosts } from './GridOfUserRepostPosts';
+import { GridOfUserLikedPosts } from '@/components/pages/Profile/GridOfUserLikedPosts';
+import { GridOfUserCreatedPosts } from '@/components/pages/Profile/GridOfUserCreatedPosts';
+import { ProfileTop } from '@/components/pages/Profile/ProfileTop';
+import { GridOfUserRepostPosts } from '@/components/pages/Profile/GridOfUserRepostPosts';
 import { useRef } from 'react';
 
 export function Profile() {

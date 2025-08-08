@@ -1,4 +1,148 @@
 .upload {
   height: 90%;
-  background-color: skyblue;
+  background-color: transparent;
+  position: relative;
+  background-color: #222;
+
+  .container-of-upload-and-create {
+    height: 100%;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    .create-section,
+    .upload-section {
+      min-width: 100%;
+      height: calc(100% - 30px);
+      scroll-snap-align: center;
+      position: relative;
+    }
+
+    .create-section {
+      background-color: #222;
+
+      .am-webcam {
+        width: 100%;
+        position: absolute;
+        inset: 0;
+        height: 100%;
+      }
+
+      .nav-of-type-of-capture {
+        font-size: 16px;
+        position: absolute;
+        padding: 20px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        --photo-a: #644dff;
+        --photo-b: #3c2ca0;
+        --photo-c: color-mix(in srgb, var(--photo-b) 22%, transparent);
+        --photo-d: color-mix(in srgb, var(--photo-b) 75%, transparent);
+        --video-a: #d13030; /* rojo base */
+        --video-b: #5c1616; /* rojo oscuro */
+        --video-c: color-mix(in srgb, var(--video-b) 25%, transparent);
+        --video-d: color-mix(in srgb, var(--video-b) 70%, transparent);
+
+        .container-type-capture {
+          position: relative;
+          width: 4.5em;
+          height: 4em;
+          zoom: 0.4;
+          overflow: hidden;
+          border-radius: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          scale: 2;
+          transition: all 0.1s ease;
+
+          &.type-camera {
+            background-color: var(--photo-a);
+            box-shadow: 0 8px var(--photo-b);
+            filter: drop-shadow(0 6px 2px var(--photo-c));
+            border: 1px solid var(--photo-b);
+
+            button {
+              background-color: var(--photo-a);
+            }
+          }
+
+          &.type-video {
+            background-color: var(--video-a);
+            box-shadow: 0 8px var(--video-b);
+            filter: drop-shadow(0 6px 2px var(--video-c));
+            border: 1px solid var(--video-b);
+
+            button {
+              background-color: var(--video-a);
+            }
+          }
+        }
+
+        .button {
+          font-weight: 800;
+          cursor: pointer;
+          position: absolute;
+          text-transform: uppercase;
+          height: 110%;
+          width: 110%;
+
+          color: white;
+        }
+
+        .container-type-capture:has(.button:active),
+        .container-type-capture.active-button {
+          box-shadow: none;
+          /* margin-top: 2em; */
+          transform: translateY(0.75em);
+          filter: drop-shadow(0 3px 1px #4836bbbe);
+        }
+      }
+
+      .circle-of-capture {
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
+        aspect-ratio: 1;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 70px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        flex-wrap: wrap;
+        place-content: center;
+        padding: 3px;
+
+        .circle-inner {
+          background-color: #fff;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          border-radius: inherit;
+        }
+      }
+    }
+
+    .upload-section {
+      background-color: #222;
+    }
+  }
+
+  .footer-upload {
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    display: flex;
+    z-index: 50;
+    background-color: transparent;
+
+    button {
+      width: 50%;
+      padding: 6px;
+      color: #e9e9e9;
+    }
+  }
 }
