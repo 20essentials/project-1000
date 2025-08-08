@@ -18,12 +18,19 @@ import { useIsScrolling } from '@/store/useIsScrolling';
 import { ContainerBottomOfComments } from '../AsideRight/ContainerBottomOfComments';
 import { AsideBottomOfShare } from '../AsideRight/AsideBottomOfShare';
 import { useUpdateUrlParamsPostVideoOrImage } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
+import { useCurrentUser } from '@/store/useCurrentUser';
 
-export function PostVideo(props: postProps & postComonProps & { idx: number }) {
+export function PostVideo(
+  props: postProps & postComonProps & { idx: number } 
+) {
   const hasInteracted = userHasInteracted(state => state.hasInteracted);
   const setUserHasInteracted = userHasInteracted(
     state => state.setUserHasInteracted
   );
+    const user = useCurrentUser(state => state.user);
+    const usernameOfTheUser = user?.username ?? '';
+    const isTheSameuser = props.username === usernameOfTheUser;
+
   const setLimit = useLimitOfPost(state => state.setLimit);
   const offsetOfPosts = useLimitOfPost(state => state.offsetOfPosts);
   const isScrolling = useIsScrolling(state => state.isScrolling);
@@ -121,10 +128,12 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
       entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            useUpdateUrlParamsPostVideoOrImage({
-              postId: idPost,
-              userId: userId
-            });
+            if (!isTheSameuser) {
+              useUpdateUrlParamsPostVideoOrImage({
+                postId: idPost,
+                userId: userId
+              });
+            }
 
             if (thisPostWillRenderMorePost && !thisPostHasBeenRendered.current) {
               thisPostHasBeenRendered.current = true;

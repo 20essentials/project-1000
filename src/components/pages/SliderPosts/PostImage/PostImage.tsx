@@ -21,14 +21,13 @@ import { useIsScrolling } from '@/store/useIsScrolling';
 import { ContainerBottomOfComments } from '../AsideRight/ContainerBottomOfComments';
 import { AsideBottomOfShare } from '../AsideRight/AsideBottomOfShare';
 import { useUpdateUrlParamsPostVideoOrImage } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
+import { useCurrentUser } from '@/store/useCurrentUser';
 
 export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const {
     arrayImages,
     description,
     tags,
-    dateOfPublication,
-    totalViewsOfThePost,
     hearts,
     comments,
     saved,
@@ -50,6 +49,12 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const thisPostHasBeenRendered = useRef(false);
   const isScrolling = useIsScrolling(state => state.isScrolling);
   const [randomSong, setRandomSong] = useState<string | null>(null);
+
+  const user = useCurrentUser(state => state.user);
+  const usernameOfTheUser = user?.username ?? '';
+  const isTheSameuser =
+    props.username === usernameOfTheUser ||
+    (user?.id != null && props.idPost?.includes(user.id));
 
   const [isContainerBottomOpen, setIsContainerBottomOpen] = useState(false);
 
@@ -132,10 +137,13 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          useUpdateUrlParamsPostVideoOrImage({
-            postId: idPost,
-            userId: userId
-          });
+          if (!isTheSameuser) {
+            useUpdateUrlParamsPostVideoOrImage({
+              postId: idPost,
+              userId: userId
+            });
+          }
+
           if (thisPostWillRenderMorePost && !thisPostHasBeenRendered.current) {
             thisPostHasBeenRendered.current = true;
             setLimit(prev => prev + offsetOfPosts);

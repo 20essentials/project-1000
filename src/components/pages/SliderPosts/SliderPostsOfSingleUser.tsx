@@ -90,9 +90,17 @@ export function SliderPostsOfSingleUser() {
           const key = `post-${idx}-${idx}`;
 
           return post.videoSrc ? (
-            <PostVideo idx={idx + 1} key={key} {...post} />
+            <PostVideo
+              idx={idx + 1}
+              key={key}
+              {...post}
+            />
           ) : (
-            <PostImage idx={idx + 1} key={key} {...post} />
+            <PostImage
+              idx={idx + 1}
+              key={key}
+              {...post}
+            />
           );
         })}
       </aside>

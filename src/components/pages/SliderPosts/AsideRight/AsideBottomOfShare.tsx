@@ -393,7 +393,7 @@ const ARRAY_OF_SHARE: ItemType[] = [
     onclick: ({
       refButton,
       url,
-      description = 'Check out this Post'
+      description = 'Check out this'
     }: {
       refButton: React.RefObject<HTMLButtonElement | null>;
       url: string;
@@ -450,7 +450,7 @@ const ARRAY_OF_SHARE: ItemType[] = [
     onclick: ({
       refButton,
       url,
-      description = 'Check out this Post'
+      description = 'Check out this'
     }: {
       refButton: React.RefObject<HTMLButtonElement | null>;
       url: string;
@@ -492,7 +492,7 @@ const ARRAY_OF_SHARE: ItemType[] = [
     onclick: ({
       refButton,
       url,
-      description = 'Check out this post'
+      description = 'Check out this '
     }: {
       refButton: React.RefObject<HTMLButtonElement | null>;
       url: string;
@@ -557,7 +557,7 @@ const ARRAY_OF_SHARE: ItemType[] = [
     onclick: ({
       refButton,
       url,
-      description = 'Check out this post'
+      description = 'Check out this '
     }: {
       refButton: React.RefObject<HTMLButtonElement | null>;
       url: string;

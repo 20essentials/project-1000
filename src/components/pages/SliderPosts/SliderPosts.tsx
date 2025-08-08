@@ -11,16 +11,12 @@ import { usetGetDataParamPostVideoOrImages } from '@/hooks/useUpdateUrlParamsPos
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 import { useUserCreator } from '@/store/useUserCreator';
 import { useUserHasSeenPostOrProfileFromUrl } from '@/store/useUserHasSeenPostOrProfileFromUrl';
-import { useGoToTheProfileIfOnlyTheUserIdExists } from '@/hooks/useGoToTheProfileIfOnlyTheUserIdExists';
 
 export function SliderPosts() {
   const setCurrentPage = useCurrentPage(s => s.setCurrentPage);
   const setArrayOfPosts = useUserCreator(state => state.setArrayOfPosts);
   const setCommonProps = useUserCreator(state => state.setCommonProps);
-  const getValueIfUserHasSeenPostOrProfileFromUrl =
-    useUserHasSeenPostOrProfileFromUrl(
-      state => state.getValueIfUserHasSeenPostOrProfileFromUrl
-    );
+
   const setUserHasSeenPostOrProfileFromUrl = useUserHasSeenPostOrProfileFromUrl(
     state => state.setUserHasSeenPostOrProfileFromUrl
   );
@@ -31,18 +27,10 @@ export function SliderPosts() {
   const { dataFromUrl, weMustRenderAUserProfile, userId } =
     usetGetDataParamPostVideoOrImages();
 
-  // console.log({ dataFromUrl, weMustRenderAUserProfile, userId });
-
   const isForYou = useFollowedOrForYou(state => state.isForYou);
   const FOLLOWED = useGlobalArrayPosts(state => state.FOLLOWED);
   const FOR_YOU = useGlobalArrayPosts(state => state.FOR_YOU);
   const ALL_POSTS = isForYou ? FOR_YOU : FOLLOWED;
-
-  // useGoToTheProfileIfOnlyTheUserIdExists({
-  //   ALL_POSTS,
-  //   userId,
-  //   weMustRenderAUserProfile
-  // });
 
   useEffect(() => {
     if (weMustRenderAUserProfile && userId && !userHasSeenPostOrProfileFromUrl) {
