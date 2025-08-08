@@ -7,6 +7,8 @@ export function baseUrl(path: string) {
   return new URL(path.replace(/^\/+/, ''), import.meta.env.SITE).toString();
 }
 
+
+
 const commonPropsKeys: (keyof postComonProps)[] = [
   'followed',
   'followers',

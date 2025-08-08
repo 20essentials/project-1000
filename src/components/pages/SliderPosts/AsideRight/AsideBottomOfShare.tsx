@@ -5,6 +5,7 @@ import type {
   postProps,
   postComonProps
 } from '@/components/pages/SliderPosts/types.d.ts';
+import { URL_PHOTO_MISSING_IMAGE } from '@/utils/conts';
 
 type ItemType = {
   title: string;
@@ -202,29 +203,62 @@ const ARRAY_OF_SHARE: ItemType[] = [
     }
   },
   {
-    title: 'Instagram',
+    title: 'Pinterest',
     id: 'c3d4e5f6-7a8b-9a0b-1c2d-3e4f5g6h7i8j',
     gradient: `radial-gradient(
               circle at 30% 107%,
-              #fdf497 0%,
-              #fdf497 5%,
               #fd5949 45%,
-              #d6249f 60%,
-              #285aeb 90%
+              #d6249f 60%
             )`,
     svg: (
-      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
+      <svg
+        viewBox='0 0 48 48'
+        fill='currentColor'
+        className='are-pure-svg'
+        xmlns='http://www.w3.org/2000/svg'
+      >
+        <circle cx='24' cy='24' r='24' fill='#D22D29'></circle>
         <path
-          fill='currentColor'
-          d='M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3'
-        />
+          d='M24.02 12a11.97 11.97 0 0 0-4.37 23.13c-.1-.94-.2-2.4.04-3.44l1.4-5.95s-.35-.72-.35-1.77c0-1.67.96-2.9 2.16-2.9 1.03 0 1.52.76 1.52 1.68 0 1.02-.65 2.56-1 3.99-.28 1.19.6 2.17 1.78 2.17 2.13 0 3.76-2.25 3.76-5.48 0-2.87-2.06-4.87-5-4.87-3.41 0-5.41 2.55-5.41 5.2 0 1.02.4 2.12.89 2.72.1.12.1.23.07.35-.08.37-.3 1.19-.33 1.36-.05.21-.18.26-.4.15-1.48-.7-2.4-2.9-2.4-4.65 0-3.77 2.73-7.24 7.9-7.24 4.15 0 7.38 2.96 7.38 6.92 0 4.13-2.6 7.45-6.2 7.45-1.22 0-2.36-.63-2.74-1.38l-.75 2.85c-.27 1.04-1 2.34-1.49 3.14A11.97 11.97 0 1 0 24.02 12Z'
+          fill='#fff'
+        ></path>
       </svg>
-    )
+    ),
+    onclick: ({
+      refButton,
+      url,
+      media,
+      description
+    }: {
+      refButton: React.RefObject<HTMLButtonElement | null>;
+      url: string;
+      media: string;
+      description: string;
+    }) => {
+      const $buttonSystem = refButton?.current;
+      if ($buttonSystem instanceof HTMLButtonElement) {
+        $buttonSystem.classList.remove('btn-hidden');
+        $buttonSystem.innerHTML = 'Link copied';
+        navigator.clipboard.writeText(url);
+        setTimeout(() => {
+          $buttonSystem.classList.add('btn-hidden');
+        }, 1200);
+      }
+
+      const pinterestUrl =
+        `https://www.pinterest.com/pin/create/button/?` +
+        `url=${encodeURIComponent(url)}` +
+        `&media=${encodeURIComponent(media)}` +
+        `&description=${encodeURIComponent(description)}`;
+
+      window.open(pinterestUrl, '_blank');
+      return;
+    }
   },
   {
     title: 'Reddit',
     id: 'd1e2f3g4-5h6i-7j8k-9l0m-1n2o3pASDFAS',
-    gradient: 'linear-gradient(135deg, rgb(4, 154, 4), green)',
+    gradient: 'linear-gradient(135deg, transparent, transparent)',
     svg: (
       <svg
         viewBox='0 0 48 48'
@@ -238,7 +272,34 @@ const ARRAY_OF_SHARE: ItemType[] = [
           fill='#fff'
         ></path>
       </svg>
-    )
+    ),
+    onclick: ({
+      refButton,
+      url,
+      description = 'Post of TikTok Lite'
+    }: {
+      refButton: React.RefObject<HTMLButtonElement | null>;
+      url: string;
+      description: string; 
+    }) => {
+      const $buttonSystem = refButton?.current;
+      if ($buttonSystem instanceof HTMLButtonElement) {
+        $buttonSystem.classList.remove('btn-hidden');
+        $buttonSystem.innerHTML = 'Link copied';
+        navigator.clipboard.writeText(url);
+        setTimeout(() => {
+          $buttonSystem.classList.add('btn-hidden');
+        }, 1200);
+      }
+
+      const redditUrl =
+        `https://www.reddit.com/submit?` +
+        `url=${encodeURIComponent(url)}` +
+        `&title=${encodeURIComponent(description)}`;
+
+      window.open(redditUrl, '_blank');
+      return;
+    }
   },
   {
     title: 'Facebook',
@@ -385,7 +446,9 @@ const MODE_SHARE = {
   SAVE_VIDEO_OR_IMAGE: 0,
   COPY_LINK: 1,
   REPOST: 2,
-  X: 3
+  X: 3,
+  PINTEREST: 4,
+  REDDIT: 5
 };
 
 export function AsideBottomOfShare({
@@ -406,6 +469,9 @@ export function AsideBottomOfShare({
   post: postProps & postComonProps;
 }) {
   const systembtn = useRef<null | HTMLButtonElement>(null);
+  const posterOfPoster = post.arrayImages
+    ? post.arrayImages[0]
+    : URL_PHOTO_MISSING_IMAGE;
 
   if (containerRef.current) {
     containerRef.current?.classList.toggle(
@@ -480,6 +546,19 @@ export function AsideBottomOfShare({
                     onclick({
                       username,
                       refButton: systembtn
+                    });
+                  } else if (index === MODE_SHARE.PINTEREST) {
+                    onclick({
+                      refButton: systembtn,
+                      url: window.location.href,
+                      media: posterOfPoster,
+                      description: post.description
+                    });
+                  } else if (index === MODE_SHARE.REDDIT) {
+                    onclick({
+                      refButton: systembtn,
+                      url: window.location.href,
+                      description: post.description
                     });
                   }
                 }}
