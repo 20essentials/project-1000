@@ -62,7 +62,7 @@
           &.type-camera {
             background-color: var(--photo-a);
             box-shadow: 0 8px var(--photo-b);
-            filter: drop-shadow(0 6px 2px var(--photo-c));
+            /* filter: drop-shadow(0 6px 2px var(--photo-c)); */
             border: 1px solid var(--photo-b);
 
             button {
@@ -73,7 +73,7 @@
           &.type-video {
             background-color: var(--video-a);
             box-shadow: 0 8px var(--video-b);
-            filter: drop-shadow(0 6px 2px var(--video-c));
+            /* filter: drop-shadow(0 6px 2px var(--video-c)); */
             border: 1px solid var(--video-b);
 
             button {
