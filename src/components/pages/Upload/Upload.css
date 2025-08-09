@@ -339,7 +339,6 @@
     display: flex;
     z-index: 50;
     background-color: transparent;
-    background-color: dodgerblue;
 
     button {
       width: 50%;

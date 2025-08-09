@@ -1,90 +1,103 @@
-import { useEffect } from 'react';
-import { $, $$ } from '@/utils/functions';
+import { useState, useRef, type DragEvent, type ChangeEvent } from 'react';
 
 export function SectionUpload() {
-  useEffect(() => {
-    const $input = $('input[type=file]') as HTMLInputElement;
-    const $containerImgs = $('.container-of-files');
-    const $minimodal = $('.minimodal');
+  const [images, setImages] = useState<string[]>([]);
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
-    function createImg(file) {
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
+  const createImgsFromFiles = (files: FileList) => {
+    const readers = Array.from(files).map(
+      file =>
+        new Promise<string>(resolve => {
+          const reader = new FileReader();
+          reader.onload = e => resolve(e.target?.result as string);
+          reader.readAsDataURL(file);
+        })
+    );
 
-      reader.addEventListener('load', e => {
-        const src = e.target.result;
-        $containerImgs.insertAdjacentHTML(
-          'beforeend',
-          `<article class="parent-img">
-        <img src="${src}" alt="general img" dragabble="false">
-        <button class='button-remove-element'">
-          ❌
-        </button>
-      </article>`
-        );
-      });
+    Promise.all(readers).then(newImgs =>
+      setImages(prev => [...prev, ...newImgs])
+    );
+  };
+
+  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      createImgsFromFiles(e.target.files);
     }
+  };
 
-    $input.addEventListener('change', e => {
-      const files = e.target.files;
-      if (files) {
-        [...files].forEach(file => createImg(file));
-        const $opaco = $('.opaco');
-        if (!$opaco) {
-          $$('.thisWouldBeOpaco').forEach(el => el.classList.add('opaco'));
-        }
-      }
-    });
+  const handleDrop = (e: DragEvent<HTMLLabelElement>) => {
+    e.preventDefault();
+    if (e.dataTransfer.files) {
+      createImgsFromFiles(e.dataTransfer.files);
+    }
+  };
 
-    $containerImgs.addEventListener('drop', e => {
-      e.preventDefault();
-      const { dataTransfer } = e;
-      const { files } = dataTransfer;
-      [...files].forEach(file => createImg(file));
-    });
+  const handleDragOver = (e: DragEvent<HTMLLabelElement>) => {
+    e.preventDefault();
+  };
 
-    $containerImgs.addEventListener('dragover', e => {
-      e.preventDefault();
-    });
+  const removeImage = (index: number) => {
+    setImages(prev => prev.filter((_, i) => i !== index));
+  };
 
-    document.addEventListener('click', e => {
-      if (e.target.matches('.button-remove-element')) {
-        const closestParentElementVideoORImage = e.target.closest('.parent-img');
-        closestParentElementVideoORImage.remove();
-        e.preventDefault();
-      }
-    });
-  }, []);
+  console.log(images)
 
   return (
     <section className='upload-section'>
-      <label className='container-of-files scroll-y' id='files'>
-        <svg
-          className='thisWouldBeOpaco'
-          xmlns='http://www.w3.org/2000/svg'
-          width='24'
-          height='24'
-          viewBox='0 0 24 24'
-          fill='none'
-          stroke='currentColor'
-          strokeWidth='2'
-          strokeLinecap='round'
-          strokeLinejoin='round'
-        >
-          <path d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'></path>
-          <polyline points='17 8 12 3 7 8'></polyline>
-          <line x1='12' x2='12' y1='3' y2='15'></line>
-        </svg>
-        <h2 className='thisWouldBeOpaco text-description'>Drop images here</h2>
-        <input type='file' multiple name='files' accept='image/*' hidden />
-        {/* <article className='parent-img'>
-          <img
-            draggable='false'
-            src='/preview/preview-og.avif'
-            alt='general img'
-          />
-          <button className='button-remove-element'>❌</button>
-        </article> */}
+      <label
+        className={`container-of-files scroll-y ${
+          images.length > 0 ? 'opaco' : ''
+        }`}
+        id='files'
+        onDrop={handleDrop}
+        onDragOver={handleDragOver}
+      >
+        {images.length === 0 && (
+          <>
+            <svg
+              className='thisWouldBeOpaco'
+              xmlns='http://www.w3.org/2000/svg'
+              width='24'
+              height='24'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              strokeWidth='2'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+            >
+              <path d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'></path>
+              <polyline points='17 8 12 3 7 8'></polyline>
+              <line x1='12' x2='12' y1='3' y2='15'></line>
+            </svg>
+            <h2 className='thisWouldBeOpaco text-description'>
+              Drop images here
+            </h2>
+          </>
+        )}
+
+        <input
+          type='file'
+          multiple
+          name='files'
+          accept='image/*'
+          hidden
+          ref={inputRef}
+          onChange={handleFileChange}
+        />
+
+        {images.map((src, index) => (
+          <article key={index} className='parent-img'>
+            <img src={src} alt='general img' draggable='false' />
+            <button
+              className='button-remove-element'
+              type='button'
+              onClick={() => removeImage(index)}
+            >
+              ❌
+            </button>
+          </article>
+        ))}
       </label>
 
       <aside className='container-description'>
@@ -99,9 +112,9 @@ export function SectionUpload() {
           Publish
           <svg fill='none' viewBox='0 0 24 24' className='enter-icon'>
             <path
-              stroke-linejoin='round'
-              stroke-linecap='round'
-              stroke-width='2'
+              strokeLinejoin='round'
+              strokeLinecap='round'
+              strokeWidth='2'
               stroke='white'
               d='M3 12L9 18M3 12L9 6M3 12H21'
             ></path>
