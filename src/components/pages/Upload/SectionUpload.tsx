@@ -2,9 +2,9 @@ import { useUploadVideoOrImages } from '@/store/useUploadVideoOrImages';
 import { useState, useRef, type DragEvent, type ChangeEvent } from 'react';
 
 export function SectionUpload({ modePhoto }: { modePhoto: boolean }) {
-  // const [images, setImages] = useState<string[]>([]);
   const images = useUploadVideoOrImages(s => s.arrayImages);
   const setImages = useUploadVideoOrImages(s => s.setArrayImages);
+  const srcVideo = useUploadVideoOrImages(s => s.srcVideo);
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const createImgsFromFiles = (files: FileList) => {
@@ -78,28 +78,36 @@ export function SectionUpload({ modePhoto }: { modePhoto: boolean }) {
           </>
         )}
 
-        <input
-          type='file'
-          multiple
-          name='files'
-          accept='image/*'
-          hidden
-          ref={inputRef}
-          onChange={handleFileChange}
-        />
+        {srcVideo && (
+          <video src={srcVideo} controls muted autoPlay className='am-video' />
+        )}
 
-        {images.map((src, index) => (
-          <article key={index} className='parent-img'>
-            <img src={src} alt='general img' draggable='false' />
-            <button
-              className='button-remove-element'
-              type='button'
-              onClick={e => removeImage(e, index)}
-            >
-              ❌
-            </button>
-          </article>
-        ))}
+        {images.length > 0 && (
+          <>
+            <input
+              type='file'
+              multiple
+              name='files'
+              accept='image/*'
+              hidden
+              ref={inputRef}
+              onChange={handleFileChange}
+            />
+
+            {images.map((src, index) => (
+              <article key={index} className='parent-img'>
+                <img src={src} alt='general img' draggable='false' />
+                <button
+                  className='button-remove-element'
+                  type='button'
+                  onClick={e => removeImage(e, index)}
+                >
+                  ❌
+                </button>
+              </article>
+            ))}
+          </>
+        )}
       </label>
 
       <aside className='container-description'>

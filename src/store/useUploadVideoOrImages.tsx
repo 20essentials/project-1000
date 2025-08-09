@@ -14,7 +14,7 @@ type Actions = {
 
 const initialState: State = {
   arrayImages: [],
-  srcVideo: ""
+  srcVideo: null
 };
 
 export const useUploadVideoOrImages = create<State & Actions>((set) => ({

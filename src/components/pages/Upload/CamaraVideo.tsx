@@ -1,7 +1,9 @@
-import React, { useRef, useState, useCallback } from 'react';
+import { useRef, useState, useCallback, useEffect } from 'react';
 import Webcam from 'react-webcam';
 import { SECTION_TYPE } from './FooterUpload';
 import { useUploadVideoOrImages } from '@/store/useUploadVideoOrImages';
+import { CurrentVideoDuration } from './VideoDuration';
+import { MAX_TIME_OF_SECONDS } from './VideoDuration';
 
 export default function CamaraVideo({
   updateIndex,
@@ -14,11 +16,13 @@ export default function CamaraVideo({
 }) {
   const webcamRef = useRef<Webcam>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+  const timerRef = useRef<null | NodeJS.Timeout>(null);
   const [capturaFoto, setCapturaFoto] = useState<string | null>(null);
   const [grabando, setGrabando] = useState(false);
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
   const setArrayImages = useUploadVideoOrImages(st => st.setArrayImages);
   const setSrcVideo = useUploadVideoOrImages(st => st.setSrcVideo);
+  const [duration, setDuration] = useState(0);
 
   // Array local para guardar chunks
   const chunksRef = useRef<Blob[]>([]);
@@ -37,6 +41,15 @@ export default function CamaraVideo({
       console.error('La cámara no está lista');
       return;
     }
+    
+    timerRef.current = setInterval(() => {
+      setDuration(prev => {
+        if (prev + 1 >= MAX_TIME_OF_SECONDS) {
+          paraGrabacion(); 
+        }
+        return prev + 1;
+      });
+    }, 1000);
 
     chunksRef.current = []; // resetear chunks
     setGrabando(true);
@@ -60,6 +73,11 @@ export default function CamaraVideo({
       const blob = new Blob(chunksRef.current, { type: 'video/webm' });
       const url = URL.createObjectURL(blob);
       setVideoUrl(url);
+      setDuration(0);
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+        timerRef.current = null;
+      }
     };
 
     mediaRecorderRef.current.start();
@@ -72,13 +90,21 @@ export default function CamaraVideo({
     ) {
       mediaRecorderRef.current.stop();
     }
-    setGrabando(false);
   }, []);
+
+  useEffect(() => {
+    if (videoUrl) {
+      setSrcVideo({ srcVideo: videoUrl });
+      updateIndex(SECTION_TYPE.UPLOAD);
+      setGrabando(false);
+    }
+  }, [videoUrl]);
 
   const activeModePhoto = () => {
     isModePhoto(true)();
     setSrcVideo({ srcVideo: null });
   };
+
   const activeModeVideo = () => {
     isModePhoto(false)();
     setArrayImages([]);
@@ -123,13 +149,46 @@ export default function CamaraVideo({
         </div>
       </nav>
 
+      {!modePhoto && grabando && <CurrentVideoDuration duration={duration} />}
       {modePhoto ? (
         <aside className='circle-of-capture' onClick={capturaImagen}>
           <aside className='circle-inner'></aside>
         </aside>
-      ) : (
-        <aside className='circle-of-capture'>
+      ) : !grabando ? (
+        <aside className='circle-of-capture' onClick={iniciaGrabacion}>
           <aside className='circle-inner circle-inner-red'></aside>
+        </aside>
+      ) : (
+        <aside
+          className='circle-of-capture circle-of-capture-video-start'
+          onClick={paraGrabacion}
+        >
+          <aside className='circle-inner circle-inner-blue-testing'></aside>
+          <svg width='70' height='70' viewBox='0 0 120 120' className='am-border'>
+            <circle
+              cx='60'
+              cy='60'
+              r='54'
+              fill='none'
+              stroke='#ddd'
+              strokeWidth='7'
+            />
+            <circle
+              cx='60'
+              cy='60'
+              r='54'
+              fill='none'
+              stroke='#ff2b54'
+              strokeWidth='7'
+              strokeLinecap='round'
+              strokeDasharray='339.292'
+              strokeDashoffset='339.292'
+              className='circle-dashed'
+              style={{
+                animationDuration: `${MAX_TIME_OF_SECONDS}s`
+              }}
+            />
+          </svg>
         </aside>
       )}
 
