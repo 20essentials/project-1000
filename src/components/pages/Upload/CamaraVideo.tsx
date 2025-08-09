@@ -1,21 +1,24 @@
 import React, { useRef, useState, useCallback } from 'react';
 import Webcam from 'react-webcam';
 import { SECTION_TYPE } from './FooterUpload';
+import { useUploadVideoOrImages } from '@/store/useUploadVideoOrImages';
 
 export default function CamaraVideo({
-  updateIndex
+  updateIndex,
+  modePhoto,
+  isModePhoto
 }: {
   updateIndex: (index: number) => void;
+  modePhoto: boolean;
+  isModePhoto: (mode: boolean) => () => void;
 }) {
   const webcamRef = useRef<Webcam>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const [capturaFoto, setCapturaFoto] = useState<string | null>(null);
   const [grabando, setGrabando] = useState(false);
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
-
-  const [modePhoto, setModePhoto] = useState(true);
-
-  const isModePhoto = (mode: boolean) => () => setModePhoto(mode);
+  const setArrayImages = useUploadVideoOrImages(st => st.setArrayImages);
+  const setSrcVideo = useUploadVideoOrImages(st => st.setSrcVideo);
 
   // Array local para guardar chunks
   const chunksRef = useRef<Blob[]>([]);
@@ -24,6 +27,9 @@ export default function CamaraVideo({
     const imagenSrc = webcamRef.current?.getScreenshot() || null;
     setCapturaFoto(imagenSrc);
     updateIndex(SECTION_TYPE.UPLOAD);
+    if (imagenSrc) {
+      setArrayImages(prev => [...prev, imagenSrc]);
+    }
   }, []);
 
   const iniciaGrabacion = useCallback(() => {
@@ -69,6 +75,15 @@ export default function CamaraVideo({
     setGrabando(false);
   }, []);
 
+  const activeModePhoto = () => {
+    isModePhoto(true)();
+    setSrcVideo({ srcVideo: null });
+  };
+  const activeModeVideo = () => {
+    isModePhoto(false)();
+    setArrayImages([]);
+  };
+
   return (
     <div className='create-section'>
       <Webcam
@@ -94,7 +109,7 @@ export default function CamaraVideo({
           className={`container-type-capture type-camera ${
             modePhoto ? 'active-button' : ''
           }`}
-          onClick={isModePhoto(true)}
+          onClick={activeModePhoto}
         >
           <button className='button'>Photo</button>
         </div>
@@ -102,7 +117,7 @@ export default function CamaraVideo({
           className={`container-type-capture type-video ${
             modePhoto ? '' : 'active-button'
           }`}
-          onClick={isModePhoto(false)}
+          onClick={activeModeVideo}
         >
           <button className='button'>Video</button>
         </div>

@@ -220,7 +220,7 @@
         overflow: hidden;
         overflow-y: auto;
         border-radius: 17px;
-        border: 3px dashed #ddd;
+        border: 3px dashed #09f;
         position: relative;
         display: flex;
         flex-wrap: wrap;
@@ -232,6 +232,7 @@
 
         .thisWouldBeOpaco {
           margin-inline: auto;
+          color: #09f;
           pointer-events: none;
           transition: color 0.5s ease-in-out;
           position: absolute;
@@ -248,13 +249,13 @@
           text-align: center;
           width: 80%;
           font-size: 14px;
-          color: #ddd;
+          color: #09f;
           user-select: none;
         }
 
         svg {
           top: 45%;
-          color: #ddd;
+          color: #09f;
           width: 28px;
         }
 
@@ -263,13 +264,6 @@
           top: 55%;
         }
 
-        &:hover {
-          border-color: #09f;
-
-          .thisWouldBeOpaco {
-            color: #09f;
-          }
-        }
 
         .parent-img {
           position: relative;

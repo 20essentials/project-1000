@@ -8,6 +8,7 @@ export function FooterUpload({
 }: {
   updateIndex: (index: number) => void;
 }) {
+
   return (
     <footer className='footer-upload'>
       <button

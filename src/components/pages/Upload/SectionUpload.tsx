@@ -1,7 +1,10 @@
+import { useUploadVideoOrImages } from '@/store/useUploadVideoOrImages';
 import { useState, useRef, type DragEvent, type ChangeEvent } from 'react';
 
-export function SectionUpload() {
-  const [images, setImages] = useState<string[]>([]);
+export function SectionUpload({ modePhoto }: { modePhoto: boolean }) {
+  // const [images, setImages] = useState<string[]>([]);
+  const images = useUploadVideoOrImages(s => s.arrayImages);
+  const setImages = useUploadVideoOrImages(s => s.setArrayImages);
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const createImgsFromFiles = (files: FileList) => {
@@ -36,11 +39,10 @@ export function SectionUpload() {
     e.preventDefault();
   };
 
-  const removeImage = (index: number) => {
+  const removeImage = (e: React.MouseEvent, index: number) => {
     setImages(prev => prev.filter((_, i) => i !== index));
+    e.preventDefault();
   };
-
-  console.log(images)
 
   return (
     <section className='upload-section'>
@@ -71,7 +73,7 @@ export function SectionUpload() {
               <line x1='12' x2='12' y1='3' y2='15'></line>
             </svg>
             <h2 className='thisWouldBeOpaco text-description'>
-              Drop images here
+              Drop your {modePhoto ? 'images' : 'video'} here
             </h2>
           </>
         )}
@@ -92,7 +94,7 @@ export function SectionUpload() {
             <button
               className='button-remove-element'
               type='button'
-              onClick={() => removeImage(index)}
+              onClick={e => removeImage(e, index)}
             >
               ❌
             </button>
@@ -103,7 +105,7 @@ export function SectionUpload() {
       <aside className='container-description'>
         <textarea
           className='scroll-y-textarea'
-          placeholder={`I'm the best post #yes #fyp #no`}
+          placeholder={`Here is the description of your Post #yes #fyp #forYou`}
         ></textarea>
       </aside>
 
