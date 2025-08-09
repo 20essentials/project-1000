@@ -1,28 +1,25 @@
-import { useEffect, useState } from 'react';
+export const SECTION_TYPE = {
+  CREATE: 0,
+  UPLOAD: 1
+};
 
 export function FooterUpload({
-  sliderRef
+  updateIndex
 }: {
-  sliderRef: React.RefObject<HTMLElement | null>;
+  updateIndex: (index: number) => void;
 }) {
-  const [index, setIndex] = useState(0);
-  
-  useEffect(() => {
-    if (sliderRef.current) {
-      sliderRef.current.children[index].scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [index]);
-
-  const updateIndex = (index: number) => () => {
-    setIndex(index);
-  };
-
   return (
     <footer className='footer-upload'>
-      <button className='footer-button-create' onClick={updateIndex(0)}>
+      <button
+        className='footer-button-create'
+        onClick={() => updateIndex(SECTION_TYPE.CREATE)}
+      >
         Create
       </button>
-      <button className='footer-button-upload' onClick={updateIndex(1)}>
+      <button
+        className='footer-button-upload'
+        onClick={() => updateIndex(SECTION_TYPE.UPLOAD)}
+      >
         Upload
       </button>
     </footer>

@@ -1,12 +1,21 @@
 import React, { useRef, useState, useCallback } from 'react';
 import Webcam from 'react-webcam';
+import { SECTION_TYPE } from './FooterUpload';
 
-export default function CamaraVideo() {
+export default function CamaraVideo({
+  updateIndex
+}: {
+  updateIndex: (index: number) => void;
+}) {
   const webcamRef = useRef<Webcam>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const [capturaFoto, setCapturaFoto] = useState<string | null>(null);
   const [grabando, setGrabando] = useState(false);
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
+
+  const [modePhoto, setModePhoto] = useState(true);
+
+  const isModePhoto = (mode: boolean) => () => setModePhoto(mode);
 
   // Array local para guardar chunks
   const chunksRef = useRef<Blob[]>([]);
@@ -14,6 +23,7 @@ export default function CamaraVideo() {
   const capturaImagen = useCallback(() => {
     const imagenSrc = webcamRef.current?.getScreenshot() || null;
     setCapturaFoto(imagenSrc);
+    updateIndex(SECTION_TYPE.UPLOAD);
   }, []);
 
   const iniciaGrabacion = useCallback(() => {
@@ -80,19 +90,33 @@ export default function CamaraVideo() {
       </div> */}
 
       <nav className='nav-of-type-of-capture'>
-        {/* <button className='type-camera'>Photo</button> */}
-        <div className='container-type-capture type-camera active-button'>
+        <div
+          className={`container-type-capture type-camera ${
+            modePhoto ? 'active-button' : ''
+          }`}
+          onClick={isModePhoto(true)}
+        >
           <button className='button'>Photo</button>
         </div>
-        <div className='container-type-capture type-video'>
+        <div
+          className={`container-type-capture type-video ${
+            modePhoto ? '' : 'active-button'
+          }`}
+          onClick={isModePhoto(false)}
+        >
           <button className='button'>Video</button>
         </div>
-        {/* <button className='type-video'>Video</button> */}
       </nav>
 
-      <aside className='circle-of-capture'>
-        <aside className='circle-inner'></aside>
-      </aside>
+      {modePhoto ? (
+        <aside className='circle-of-capture' onClick={capturaImagen}>
+          <aside className='circle-inner'></aside>
+        </aside>
+      ) : (
+        <aside className='circle-of-capture'>
+          <aside className='circle-inner circle-inner-red'></aside>
+        </aside>
+      )}
 
       {/* {capturaFoto && (
         <div>
