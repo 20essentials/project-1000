@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ximu_cat';
-const userId = '';
-const prefixUrl = '';
+const userId = '2056d029-1139-49aa-b7df-21a2ced48176';
+const prefixUrl = 'https://dominicnikolai.github.io/project-246/assets/ximu-cat/';
 const followers = 461_720;
 const followed = 920;
 const profileDescription = 'Record a beautiful moment📸';

@@ -191,6 +191,7 @@ import { improve_array_of_posts, improve_commonProps } from './user-53-improve';
 import { dg_minisetoys_array_of_posts, dg_minisetoys_commonProps } from './user-54-dg-minisetoys';
 import { jiraiya_fanboy_array_of_posts, jiraiya_fanboy_commonProps } from './user-55-jiraiya-fanboy';
 import { eric_sierra_array_of_posts, eric_sierra_commonProps } from './user-57-eric-sierra';
+import { ximu_cat_array_of_posts, ximu_cat_commonProps } from './user-56-ximu-cat';
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
@@ -205,6 +206,7 @@ export const PUBLIC_DATA: arrayOfPosts = [
 
   // [justtrip_commonProps, justtrip_array_of_posts],
   // [mycelium_mirrors_commonProps, mycelium_mirrors_array_of_posts],
+  [ximu_cat_commonProps, ximu_cat_array_of_posts],
   [beitman_commonProps, beitman_array_of_posts],
   [eric_sierra_commonProps, eric_sierra_array_of_posts],
   // [gafurovedit_commonProps, gafurovedit_array_of_posts],

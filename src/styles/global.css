@@ -8,6 +8,7 @@
     BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
     'Helvetica Neue';
   -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 a,
