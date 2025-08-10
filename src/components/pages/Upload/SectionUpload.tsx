@@ -1,11 +1,18 @@
 import { useUploadVideoOrImages } from '@/store/useUploadVideoOrImages';
-import { useState, useRef, type DragEvent, type ChangeEvent } from 'react';
+import {
+  useState,
+  useRef,
+  type DragEvent,
+  type ChangeEvent,
+  useEffect
+} from 'react';
 
 export function SectionUpload({ modePhoto }: { modePhoto: boolean }) {
   const images = useUploadVideoOrImages(s => s.arrayImages);
   const setImages = useUploadVideoOrImages(s => s.setArrayImages);
   const srcVideo = useUploadVideoOrImages(s => s.srcVideo);
   const inputRef = useRef<HTMLInputElement | null>(null);
+  const containerRef = useRef<HTMLLabelElement | null>(null);
 
   const createImgsFromFiles = (files: FileList) => {
     const readers = Array.from(files).map(
@@ -44,6 +51,15 @@ export function SectionUpload({ modePhoto }: { modePhoto: boolean }) {
     e.preventDefault();
   };
 
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      if (containerRef.current) {
+        containerRef.current.scrollTop = containerRef.current.scrollHeight;
+        clearTimeout(timer)
+      }
+    }, 20);
+  }, [images]);
+
   return (
     <section className='upload-section'>
       <label
@@ -53,6 +69,7 @@ export function SectionUpload({ modePhoto }: { modePhoto: boolean }) {
         id='files'
         onDrop={handleDrop}
         onDragOver={handleDragOver}
+        ref={containerRef}
       >
         {images.length === 0 && (
           <>

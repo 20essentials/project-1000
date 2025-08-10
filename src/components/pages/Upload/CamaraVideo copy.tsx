@@ -16,11 +16,13 @@ export default function CamaraVideo({
 }) {
   const webcamRef = useRef<Webcam>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+  const timerRef = useRef<null | NodeJS.Timeout>(null);
   const [capturaFoto, setCapturaFoto] = useState<string | null>(null);
   const [grabando, setGrabando] = useState(false);
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
   const setArrayImages = useUploadVideoOrImages(st => st.setArrayImages);
   const setSrcVideo = useUploadVideoOrImages(st => st.setSrcVideo);
+  const [duration, setDuration] = useState(0);
 
   // Array local para guardar chunks
   const chunksRef = useRef<Blob[]>([]);
@@ -40,6 +42,14 @@ export default function CamaraVideo({
       return;
     }
     
+    timerRef.current = setInterval(() => {
+      setDuration(prev => {
+        if (prev + 1 >= MAX_TIME_OF_SECONDS) {
+          paraGrabacion(); 
+        }
+        return prev + 1;
+      });
+    }, 1000);
 
     chunksRef.current = []; // resetear chunks
     setGrabando(true);
@@ -63,6 +73,11 @@ export default function CamaraVideo({
       const blob = new Blob(chunksRef.current, { type: 'video/webm' });
       const url = URL.createObjectURL(blob);
       setVideoUrl(url);
+      setDuration(0);
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+        timerRef.current = null;
+      }
     };
 
     mediaRecorderRef.current.start();
@@ -134,7 +149,7 @@ export default function CamaraVideo({
         </div>
       </nav>
 
-      {!modePhoto && grabando && <CurrentVideoDuration paraGrabacion={paraGrabacion} grabando={grabando} />}
+      {!modePhoto && grabando && <CurrentVideoDuration duration={duration} />}
       {modePhoto ? (
         <aside className='circle-of-capture' onClick={capturaImagen}>
           <aside className='circle-inner'></aside>
