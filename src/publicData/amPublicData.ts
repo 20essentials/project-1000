@@ -192,6 +192,10 @@ import { dg_minisetoys_array_of_posts, dg_minisetoys_commonProps } from './user-
 import { jiraiya_fanboy_array_of_posts, jiraiya_fanboy_commonProps } from './user-55-jiraiya-fanboy';
 import { eric_sierra_array_of_posts, eric_sierra_commonProps } from './user-57-eric-sierra';
 import { ximu_cat_array_of_posts, ximu_cat_commonProps } from './user-56-ximu-cat';
+import { turnsignalthecat_array_of_posts, turnsignalthecat_commonProps } from './user-61-turnsignalthecat';
+import { lggbb_array_of_posts, lggbb_commonProps } from './user-58-lggbb';
+import { dreamfall_array_of_posts, dreamfall_commonProps } from './user-62-dreamfall';
+import { mr_rizzer_array_of_posts, mr_rizzer_commonProps } from './user-59-mr-rizzer';
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
@@ -207,10 +211,14 @@ export const PUBLIC_DATA: arrayOfPosts = [
   // [justtrip_commonProps, justtrip_array_of_posts],
   // [mycelium_mirrors_commonProps, mycelium_mirrors_array_of_posts],
   [ximu_cat_commonProps, ximu_cat_array_of_posts],
+  [mr_rizzer_commonProps, mr_rizzer_array_of_posts],
   [beitman_commonProps, beitman_array_of_posts],
   [eric_sierra_commonProps, eric_sierra_array_of_posts],
+  [turnsignalthecat_commonProps, turnsignalthecat_array_of_posts],
   // [gafurovedit_commonProps, gafurovedit_array_of_posts],
+  [dreamfall_commonProps, dreamfall_array_of_posts],
   // [improve_commonProps, improve_array_of_posts],
+  // [lggbb_commonProps, lggbb_array_of_posts],
   [jiraiya_fanboy_commonProps, jiraiya_fanboy_array_of_posts],
   [dg_minisetoys_commonProps, dg_minisetoys_array_of_posts],
   [ligthspeed_commonProps, ligthspeed_array_of_posts],

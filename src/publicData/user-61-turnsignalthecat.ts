@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'turnsignalthecat';
-const userId = '';
-const prefixUrl = '';
+const userId = '752277c7-1450-4347-a4cf-609a4b9322f9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-247/assets/turnsignalthecat/';
 const followers = 246_000;
 const followed = 43;
 const profileDescription = '🐈‍⬛';

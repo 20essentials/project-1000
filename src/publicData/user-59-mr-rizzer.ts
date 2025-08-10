@@ -4,9 +4,9 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'amUserPrivate';
-const userId = '';
-const prefixUrl = '';
+const username = 'mr_rizzer';
+const userId = 'a9187551-ec5c-46f2-b660-6274123c35eb';
+const prefixUrl = 'https://dominicnikolai.github.io/project-250/assets/mr-rizzer/';
 const followers = 94_100;
 const followed = 328;
 const profileDescription = 'Try not to smile 😏';
@@ -19,7 +19,7 @@ const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 const arrayDescriptionsOfVideos = [];
 const arrayDescriptionOfImages = []
 
-export const amUserPrivate_commonProps = generateExactlyCommonProps({
+export const mr_rizzer_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -28,21 +28,21 @@ export const amUserPrivate_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const amUserPrivate_videos = generateArrayPostsOfVideos({
+const mr_rizzer_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
   userId
 });
 
-const amUserPrivate_images = generateArrayPostsOfImages({
+const mr_rizzer_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages
 });
 
-export const amUserPrivate_array_of_posts = [
-  ...amUserPrivate_images,
-  ...amUserPrivate_videos
+export const mr_rizzer_array_of_posts = [
+  ...mr_rizzer_images,
+  ...mr_rizzer_videos
 ];

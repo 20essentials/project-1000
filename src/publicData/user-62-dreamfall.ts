@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'dreamfall';
-const userId = '';
-const prefixUrl = '';
+const userId = '4a64946b-f768-4d96-b173-4bb8fb3e6467';
+const prefixUrl = 'https://dominicnikolai.github.io/project-249/assets/dreamfall/';
 const followers = 241_720;
 const followed = 72;
 const profileDescription = 'AI Art';

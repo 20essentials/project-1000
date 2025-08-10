@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'lggbb';
-const userId = '';
-const prefixUrl = '';
+const userId = '2b89d8d4-29b8-493b-a6c2-89f9cacec3de';
+const prefixUrl = 'https://dominicnikolai.github.io/project-248/assets/lggbb/';
 const followers = 287_720;
 const followed = 720;
 const profileDescription = '만나서 반가워요🥳우리 친구하자😍';
