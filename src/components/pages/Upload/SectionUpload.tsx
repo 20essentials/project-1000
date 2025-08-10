@@ -8,6 +8,7 @@ import {
   useEffect
 } from 'react';
 import { PublishKeyCap } from './PublishKeyCap';
+import { validateVideoDuration } from '@/utils/functions';
 import { TextareaDescriptionPost } from './TextareaDescriptionPost';
 
 const srcCross = baseUrl('/assets/cross.png');
@@ -19,9 +20,11 @@ export function SectionUpload({ modePhoto }: { modePhoto: boolean }) {
   const setSrcVideo = useUploadVideoOrImages(s => s.setSrcVideo);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const containerRef = useRef<HTMLLabelElement | null>(null);
+  const [message, setMessage] = useState<string | null>(null);
 
-  function deleteVideo() {
+  function deleteVideo(e: React.MouseEvent) {
     setSrcVideo({ srcVideo: null });
+    e.preventDefault();
   }
 
   const createImgsFromFiles = (files: FileList) => {
@@ -39,16 +42,45 @@ export function SectionUpload({ modePhoto }: { modePhoto: boolean }) {
     );
   };
 
-  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      if (modePhoto) createImgsFromFiles(e.target.files);
+  const handleFileChange = async (e: ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      if (modePhoto) {
+        createImgsFromFiles(e.target.files);
+      } else {
+        const file = e.target.files[0];
+        const isValid = await validateVideoDuration(file);
+        if (!isValid) {
+          setMessage(`The video must not be longer than 10 minutes.`);
+          return;
+        }
+        setMessage(null); // limpiar mensaje si pasa validación
+        const reader = new FileReader();
+        reader.onload = e => {
+          setSrcVideo({ srcVideo: e.target?.result as string });
+        };
+        reader.readAsDataURL(file);
+      }
     }
   };
 
-  const handleDrop = (e: DragEvent<HTMLLabelElement>) => {
+  const handleDrop = async (e: DragEvent<HTMLLabelElement>) => {
     e.preventDefault();
-    if (e.dataTransfer.files) {
-      if (modePhoto) createImgsFromFiles(e.dataTransfer.files);
+    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+      if (modePhoto) {
+        createImgsFromFiles(e.dataTransfer.files);
+      } else {
+        const file = e.dataTransfer.files[0];
+        const isValid = await validateVideoDuration(file);
+        if (!isValid) {
+          alert('El video no debe durar más de 10 minutos.');
+          return;
+        }
+        const reader = new FileReader();
+        reader.onload = e => {
+          setSrcVideo({ srcVideo: e.target?.result as string });
+        };
+        reader.readAsDataURL(file);
+      }
     }
   };
 
@@ -101,6 +133,13 @@ export function SectionUpload({ modePhoto }: { modePhoto: boolean }) {
             </svg>
             <h2 className='thisWouldBeOpaco text-description'>
               Drop your {modePhoto ? 'images' : 'video'} here
+              {(message && !modePhoto) && (
+                <p
+                 className='message-error'
+                >
+                  {message}
+                </p>
+              )}
             </h2>
           </>
         )}
@@ -111,7 +150,7 @@ export function SectionUpload({ modePhoto }: { modePhoto: boolean }) {
             <button
               className='button-remove-element'
               type='button'
-              onClick={() => deleteVideo()}
+              onClick={e => deleteVideo(e)}
             >
               <img className='cross-img' src={srcCross} alt='cross-img' />
             </button>

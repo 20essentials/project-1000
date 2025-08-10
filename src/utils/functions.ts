@@ -7,7 +7,23 @@ export function baseUrl(path: string) {
   return new URL(path.replace(/^\/+/, ''), import.meta.env.SITE).toString();
 }
 
-
+const MAX_DURATION_OF_VIDEO = 10 * 60; // 10 minutos en segundos
+export const validateVideoDuration = (file: File): Promise<boolean> => {
+  return new Promise((resolve) => {
+    const url = URL.createObjectURL(file);
+    const video = document.createElement('video');
+    video.preload = 'metadata';
+    video.src = url;
+    video.onloadedmetadata = () => {
+      URL.revokeObjectURL(url);
+      resolve(video.duration <= MAX_DURATION_OF_VIDEO);
+    };
+    video.onerror = () => {
+      URL.revokeObjectURL(url);
+      resolve(false); // no válido si no se puede cargar el video
+    };
+  });
+};
 
 const commonPropsKeys: (keyof postComonProps)[] = [
   'followed',

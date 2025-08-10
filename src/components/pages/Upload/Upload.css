@@ -295,6 +295,15 @@
           user-select: none;
         }
 
+        .message-error {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          color: #f00a;
+          top: 30px;
+          width: 100%;
+        }
+
         svg {
           top: 45%;
           color: #09f;
@@ -323,8 +332,8 @@
           width: var(--size);
           height: var(--size);
           position: absolute;
-          right: 10px;
-          top: 10px;
+          right: 6px;
+          top: 6px;
           border: none;
           outline: none;
           display: flex;
