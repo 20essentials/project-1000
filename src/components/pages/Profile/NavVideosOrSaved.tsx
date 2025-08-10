@@ -39,7 +39,7 @@ export function NavVideosOrSaved({
     let timer = setTimeout(() => {
       hasclicked.current = false;
       clearTimeout(timer);
-    }, 1000);
+    }, 2000);
   }, [indexOfSectionActive]);
 
   useEffect(() => {

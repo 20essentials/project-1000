@@ -77,13 +77,6 @@ export function NavbarBottom() {
         <span>Inbox</span>
       </aside>
       <ProfileButton className={profileClass} onClick={goToUserProfile} />
-      {/* <aside className='wrapper-logo wrapper-profile-user'>
-        <ProfileButton
-          className={profileClass}
-          onClick={goToUserProfile}
-        />
-        <span>Profile</span>
-      </aside> */}
     </article>
   );
 }

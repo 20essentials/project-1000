@@ -39,14 +39,13 @@ export default function CamaraVideo({
       console.error('La cámara no está lista');
       return;
     }
-    
 
     chunksRef.current = []; // resetear chunks
     setGrabando(true);
 
     try {
       mediaRecorderRef.current = new MediaRecorder(webcamRef.current.stream, {
-        mimeType: 'video/webm'
+        mimeType: 'video/mp4'
       });
     } catch (error) {
       console.error('Error creando MediaRecorder:', error);
@@ -59,10 +58,21 @@ export default function CamaraVideo({
       }
     };
 
+    // mediaRecorderRef.current.onstop = () => {
+    //   const blob = new Blob(chunksRef.current, { type: 'video/webm' });
+    //   const url = URL.createObjectURL(blob);
+    //   setVideoUrl(url);
+    // };
+
     mediaRecorderRef.current.onstop = () => {
       const blob = new Blob(chunksRef.current, { type: 'video/webm' });
-      const url = URL.createObjectURL(blob);
-      setVideoUrl(url);
+
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const base64data = reader.result as string;
+        setVideoUrl(base64data);
+      };
+      reader.readAsDataURL(blob);
     };
 
     mediaRecorderRef.current.start();
@@ -134,7 +144,9 @@ export default function CamaraVideo({
         </div>
       </nav>
 
-      {!modePhoto && grabando && <CurrentVideoDuration paraGrabacion={paraGrabacion} grabando={grabando} />}
+      {!modePhoto && grabando && (
+        <CurrentVideoDuration paraGrabacion={paraGrabacion} grabando={grabando} />
+      )}
       {modePhoto ? (
         <aside className='circle-of-capture' onClick={capturaImagen}>
           <aside className='circle-inner'></aside>

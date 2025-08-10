@@ -12,13 +12,14 @@ import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 import { useIsScrolling } from '@/store/useIsScrolling';
 import { userUserLikedPosts } from '@/store/useUserLikedPosts';
 import { useUserRepublishPosts } from '@/store/useUserRepublishPosts';
+import { useUserCreatedPosts } from '@/store/useUserCreatedPosts';
 
 export function SliderPostsOfSingleUser() {
   const user = useCurrentUser(state => state.user);
   const usernameOfTheUser = user?.username ?? '';
   const commonProps = useUserCreator(state => state.commonProps);
   const modeGrid = useUserCreator(state => state.modeGrid);
-  const arrayOfPosts = useUserCreator(state => state.arrayOfPosts);
+  const arrayOfPosts = useUserCreatedPosts(s => s.arrayOfCreatedPostOfTheUser);
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
   const arrayOfSavedPostOfTheUser = useUserSavedPosts(
     state => state.arrayOfSavedPostOfTheUser

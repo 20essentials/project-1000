@@ -59,7 +59,7 @@ export function generateExactlyCommonProps({
 function generaPostData() {
   return {
     dateOfPublication: generateRandomISODate(),
-    totalViewsOfThePost: getRandomNumber(5000, 500_000),
+    totalViewsOfThePost: getRandomNumber(5000, 920_000),
     hearts: getRandomNumber(1000, 500_000),
     comments: getRandomNumber(3, 999),
     saved: getRandomNumber(80, 5000),
