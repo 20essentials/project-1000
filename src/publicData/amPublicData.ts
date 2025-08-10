@@ -196,6 +196,7 @@ import { turnsignalthecat_array_of_posts, turnsignalthecat_commonProps } from '.
 import { lggbb_array_of_posts, lggbb_commonProps } from './user-58-lggbb';
 import { dreamfall_array_of_posts, dreamfall_commonProps } from './user-62-dreamfall';
 import { mr_rizzer_array_of_posts, mr_rizzer_commonProps } from './user-59-mr-rizzer';
+import { soyveyrox_array_of_posts, soyveyrox_commonProps } from './user-60-soyveyrox';
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
@@ -208,6 +209,7 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [gregorian_commonProps, [gregorian_array_of_posts[0]]], //esto si existe abajo
   //testing
 
+  [soyveyrox_commonProps, soyveyrox_array_of_posts],
   // [justtrip_commonProps, justtrip_array_of_posts],
   // [mycelium_mirrors_commonProps, mycelium_mirrors_array_of_posts],
   [ximu_cat_commonProps, ximu_cat_array_of_posts],

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'soyveyrox';
-const userId = '';
-const prefixUrl = '';
+const userId = 'e4295ace-cd0d-47cc-b42e-3b32dae984c6';
+const prefixUrl = 'https://dominicnikolai.github.io/project-251/assets/soyveyrox/';
 const followers = 137_720;
 const followed = 23;
 const profileDescription = 'Nothing ✅';
