@@ -310,37 +310,37 @@
           position: relative;
           z-index: 5;
 
-          img {
+          .am-img-of-parent-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center;
           }
+        }
 
-          .button-remove-element {
-            --size: 20px;
-            width: var(--size);
-            height: var(--size);
-            position: absolute;
-            right: 5px;
-            top: 5px;
-            border: none;
-            outline: none;
-            display: flex;
-            flex-wrap: wrap;
-            place-content: center;
-            opacity: 1;
-            transition: opacity 0.1s ease-in-out;
+        .button-remove-element {
+          --size: 20px;
+          width: var(--size);
+          height: var(--size);
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          border: none;
+          outline: none;
+          display: flex;
+          flex-wrap: wrap;
+          place-content: center;
+          opacity: 1;
+          transition: opacity 0.1s ease-in-out;
 
-            &:active {
-              opacity: 0.5;
-            }
+          &:active {
+            opacity: 0.5;
+          }
 
-            img {
-              width: 75%;
-              height: 75%;
-              pointer-events: none;
-            }
+          .cross-img {
+            height: 70%;
+            object-fit: contain;
+            pointer-events: none;
           }
         }
       }
