@@ -19,6 +19,7 @@ export function SliderPostsOfSingleUser() {
   const usernameOfTheUser = user?.username ?? '';
   const commonProps = useUserCreator(state => state.commonProps);
   const modeGrid = useUserCreator(state => state.modeGrid);
+  const arrayOfPostsOftheCurrentProfile = useUserCreator(s => s.arrayOfPosts);
   const arrayOfPosts = useUserCreatedPosts(s => s.arrayOfCreatedPostOfTheUser);
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
   const arrayOfSavedPostOfTheUser = useUserSavedPosts(
@@ -30,7 +31,15 @@ export function SliderPostsOfSingleUser() {
   const arrayOfRepostsPosts = useUserRepublishPosts(
     state => state.arrayOfSavedPostOfTheUser
   );
+
   const isTheSameuser = commonProps.username === usernameOfTheUser;
+
+  //   console.log({
+  //  arrayOfPostsOftheCurrentProfile,
+  //  commonProps,
+  //  modeGrid,
+  //  isTheSameuser
+  // })
   const ALL_POSTS: arrayOfPosts = isTheSameuser
     ? (() => {
         if (modeGrid === MODE_GRID.userCreatedPosts) {
@@ -42,9 +51,9 @@ export function SliderPostsOfSingleUser() {
         } else if (modeGrid === MODE_GRID.userRepublishPosts) {
           return arrayOfRepostsPosts;
         }
-        return [[commonProps, arrayOfPosts]];
+        return [[commonProps, arrayOfPostsOftheCurrentProfile]];
       })()
-    : [[commonProps, arrayOfPosts]];
+    : [[commonProps, arrayOfPostsOftheCurrentProfile]];
   const sliderRef = useRef<HTMLDivElement>(null);
   const limit = useLimitOfPost(state => state.limit);
   const resetLimit = useLimitOfPost(state => state.resetLimit);
@@ -91,17 +100,9 @@ export function SliderPostsOfSingleUser() {
           const key = `post-${idx}-${idx}`;
 
           return post.videoSrc ? (
-            <PostVideo
-              idx={idx + 1}
-              key={key}
-              {...post}
-            />
+            <PostVideo idx={idx + 1} key={key} {...post} />
           ) : (
-            <PostImage
-              idx={idx + 1}
-              key={key}
-              {...post}
-            />
+            <PostImage idx={idx + 1} key={key} {...post} />
           );
         })}
       </aside>
