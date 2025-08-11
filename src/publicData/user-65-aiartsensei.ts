@@ -4,15 +4,15 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'amUserPrivate';
+const username = 'aiaartsensei';
 const userId = '';
 const prefixUrl = '';
-const followers = 100_000;
-const followed = 50;
-const profileDescription = 'Hello';
+const followers = 35_600;
+const followed = 211;
+const profileDescription = '🎨 AI-Generated Art & Wallpapers ✨';
 const prefixLetterVideos = 'v';
 const prefixLetterImages = 'n';
-const quantityOfVideos = 20;
+const quantityOfVideos = 0;
 const quantityOfImages = 20;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
@@ -64,7 +64,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const amUserPrivate_commonProps = generateExactlyCommonProps({
+export const aiaartsensei_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -73,21 +73,22 @@ export const amUserPrivate_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const amUserPrivate_videos = generateArrayPostsOfVideos({
+const aiaartsensei_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
   userId
 });
 
-const amUserPrivate_images = generateArrayPostsOfImages({
+const aiaartsensei_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
+  arrayDescriptionOfImages
 });
 
-export const amUserPrivate_array_of_posts = [
-  ...amUserPrivate_images,
-  ...amUserPrivate_videos
+export const aiaartsensei_array_of_posts = [
+  ...aiaartsensei_images,
+  ...aiaartsensei_videos
 ];
