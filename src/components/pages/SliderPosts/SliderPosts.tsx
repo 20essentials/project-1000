@@ -11,6 +11,10 @@ import { usetGetDataParamPostVideoOrImages } from '@/hooks/useUpdateUrlParamsPos
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 import { useUserCreator } from '@/store/useUserCreator';
 import { useUserHasSeenPostOrProfileFromUrl } from '@/store/useUserHasSeenPostOrProfileFromUrl';
+import { useFollowedAccount } from '@/store/useFollowedAccount';
+import type { arrayOfPosts } from './types';
+import { useGetArrayOfFollowedAccounts } from '@/hooks/useGetArrayOfFollowedAccounts';
+import { ModalAlert } from './ModalAlert';
 
 export function SliderPosts() {
   const setCurrentPage = useCurrentPage(s => s.setCurrentPage);
@@ -28,8 +32,10 @@ export function SliderPosts() {
     usetGetDataParamPostVideoOrImages();
 
   const isForYou = useFollowedOrForYou(state => state.isForYou);
-  const FOLLOWED = useGlobalArrayPosts(state => state.FOLLOWED);
   const FOR_YOU = useGlobalArrayPosts(state => state.FOR_YOU);
+  const { FOLLOWED, showModalThatTheUserDontHaveFollowed } =
+    useGetArrayOfFollowedAccounts({ FOR_YOU });
+
   const ALL_POSTS = isForYou ? FOR_YOU : FOLLOWED;
 
   useEffect(() => {
@@ -98,6 +104,7 @@ export function SliderPosts() {
   return (
     <article className='slider-posts'>
       <aside className='slider' ref={sliderRef}>
+        {(showModalThatTheUserDontHaveFollowed && !isForYou) && <ModalAlert />}
         {postsToShow.map((post, idx) => {
           const key = `post-${idx}`;
 

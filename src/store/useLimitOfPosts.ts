@@ -17,9 +17,9 @@ export const useLimitOfPost = create(
         set({ limit: newLimit });
       }
       
-      setTimeout(() => {
-        console.log('limit', get().limit)
-      }, 1)
+      // setTimeout(() => {
+      //   console.log('limit', get().limit)
+      // }, 1)
     },
     resetLimit: () => {
       set({ limit: 6 });

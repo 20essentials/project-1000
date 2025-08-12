@@ -1,0 +1,89 @@
+.modal-alert {
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 800;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
+  height: 60px;
+  pointer-events: none;
+
+  .BtnModal {
+    position: relative;
+    width: 180px;
+    height: 55px;
+    border-radius: 45px;
+    border: none;
+    background-color: rgb(151, 95, 255);
+    color: white;
+    box-shadow: 0px 10px 10px rgb(210, 187, 253) inset,
+      0px 5px 10px rgba(5, 5, 5, 0.212), 0px -10px 10px rgb(124, 54, 255) inset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: jello-horizontal 0.9s both, desaparecerModal 1s ease both;
+    animation-delay: 0.3s, 3s;
+    zoom: 0.8;
+  }
+
+  .BtnModal::before {
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    background-color: rgba(250, 250, 250, 0.678);
+    content: '';
+    filter: blur(1px);
+    top: 7px;
+    border-radius: 50%;
+  }
+
+  .BtnModal::after {
+    width: 70%;
+    height: 2px;
+    position: absolute;
+    background-color: rgba(250, 250, 250, 0.137);
+    content: '';
+    filter: blur(1px);
+    bottom: 7px;
+    border-radius: 50%;
+  }
+}
+
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes desaparecerModal {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
