@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'gian_piccin';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd6968d8c-7bd5-418c-aa83-a6d392b80b85';
+const prefixUrl = 'https://dominicnikolai.github.io/project-253/assets/gian-piccin/';
 const followers = 441_000;
 const followed = 720;
 const profileDescription = 'Faço mágica em lugares inusitados';

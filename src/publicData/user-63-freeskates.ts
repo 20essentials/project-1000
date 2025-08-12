@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'freeskates';
-const userId = '';
-const prefixUrl = '';
+const userId = '7826d356-d87a-452e-a3e6-ba99a3151df9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-252/assets/freeskates/';
 const followers = 195_720;
 const followed = 132;
 const profileDescription = '🎒 Portable skates that turn heads';

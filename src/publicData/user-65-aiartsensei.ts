@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'aiaartsensei';
-const userId = '';
-const prefixUrl = '';
+const userId = '4f7dbbbd-78d2-4bc2-9ccf-690f85d00a4eas';
+const prefixUrl = 'https://dominicnikolai.github.io/project-254/assets/aiaartsensei/';
 const followers = 35_600;
 const followed = 211;
 const profileDescription = '🎨 AI-Generated Art & Wallpapers ✨';
 const prefixLetterVideos = 'v';
-const prefixLetterImages = 'n';
+const prefixLetterImages = 'a';
 const quantityOfVideos = 0;
 const quantityOfImages = 20;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
@@ -85,7 +85,6 @@ const aiaartsensei_images = generateArrayPostsOfImages({
   prefixUrl,
   userId,
   quantityOfImages,
-  arrayDescriptionOfImages
 });
 
 export const aiaartsensei_array_of_posts = [

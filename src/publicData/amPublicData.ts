@@ -197,6 +197,9 @@ import { lggbb_array_of_posts, lggbb_commonProps } from './user-58-lggbb';
 import { dreamfall_array_of_posts, dreamfall_commonProps } from './user-62-dreamfall';
 import { mr_rizzer_array_of_posts, mr_rizzer_commonProps } from './user-59-mr-rizzer';
 import { soyveyrox_array_of_posts, soyveyrox_commonProps } from './user-60-soyveyrox';
+import { freeskates_array_of_posts, freeskates_commonProps } from './user-63-freeskates';
+import { gian_piccin_array_of_posts, gian_piccin_commonProps } from './user-64-gian-piccin';
+import { aiaartsensei_array_of_posts, aiaartsensei_commonProps } from './user-65-aiartsensei';
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
@@ -210,6 +213,7 @@ export const PUBLIC_DATA: arrayOfPosts = [
   //testing
 
   [soyveyrox_commonProps, soyveyrox_array_of_posts],
+  [freeskates_commonProps, freeskates_array_of_posts],
   // [justtrip_commonProps, justtrip_array_of_posts],
   // [mycelium_mirrors_commonProps, mycelium_mirrors_array_of_posts],
   [ximu_cat_commonProps, ximu_cat_array_of_posts],
@@ -221,9 +225,11 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [dreamfall_commonProps, dreamfall_array_of_posts],
   // [improve_commonProps, improve_array_of_posts],
   // [lggbb_commonProps, lggbb_array_of_posts],
-  [jiraiya_fanboy_commonProps, jiraiya_fanboy_array_of_posts],
-  [dg_minisetoys_commonProps, dg_minisetoys_array_of_posts],
-  [ligthspeed_commonProps, ligthspeed_array_of_posts],
+  // [jiraiya_fanboy_commonProps, jiraiya_fanboy_array_of_posts],
+  // [dg_minisetoys_commonProps, dg_minisetoys_array_of_posts],
+  // [ligthspeed_commonProps, ligthspeed_array_of_posts],
+  // [gian_piccin_commonProps, gian_piccin_array_of_posts],
+  [aiaartsensei_commonProps, aiaartsensei_array_of_posts],
   [ghxz_edits_commonProps, ghxz_edits_array_of_posts],
   [blackcats_commonProps, blackcats_array_of_posts],
   // [presocratico_commonProps, presocratico_array_of_posts],
