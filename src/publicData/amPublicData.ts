@@ -184,7 +184,6 @@ import {
   mycelium_mirrors_array_of_posts,
   mycelium_mirrors_commonProps
 } from './user-47-mycelium-mirrors';
-import { michelle_navarro_array_of_posts } from '@/privateData/user-3-mich3lle-nav4rro';
 import {
   blackcats_array_of_posts,
   blackcats_commonProps
@@ -248,10 +247,6 @@ import {
   aiaartsensei_array_of_posts,
   aiaartsensei_commonProps
 } from './user-65-aiartsensei';
-import { PRIVATE_DATA } from '@/privateData/amPrivateData';
-// const nodeEnv = 'PRODUCTION';
-// const safePrivateData = nodeEnv === 'PRODUCTION' ? [] : PRIVATE_DATA;
-const safePrivateData = PRIVATE_DATA ?? [];
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
@@ -283,7 +278,7 @@ export const PUBLIC_DATA: arrayOfPosts = [
   // [gian_piccin_commonProps, gian_piccin_array_of_posts],
   [aiaartsensei_commonProps, aiaartsensei_array_of_posts],
   [ghxz_edits_commonProps, ghxz_edits_array_of_posts],
-  [blackcats_commonProps, blackcats_array_of_posts],
+  [blackcats_commonProps, blackcats_array_of_posts]
   // [presocratico_commonProps, presocratico_array_of_posts],
   // [eddy_beef_commonProps, eddy_beef_array_of_posts],
   // [lalobri_commonProps, lalobri_array_of_posts],
@@ -326,6 +321,4 @@ export const PUBLIC_DATA: arrayOfPosts = [
   // [mr_lamborghini_commonProps, mr_lamborghini_array_of_posts],
   // [vid_favorites_commonProps, vid_favorites_array_of_posts],
   // [siti_favolosi_commonProps, siti_favolosi_array_of_posts]
-
-  ...safePrivateData
 ];

@@ -1,8 +1,16 @@
+import { SHOW_PRIVATE_DATA } from 'astro:env/client';
 import type { arrayOfPosts } from '@/components/pages/SliderPosts/types';
 import { PUBLIC_DATA } from '@/publicData/amPublicData';
-import { PRIVATE_DATA } from '@/privateData/amPrivateData';
-const safePrivateData = PRIVATE_DATA ?? [];
 
-export const FOLLOWED: arrayOfPosts = [...safePrivateData];
+let privateData: arrayOfPosts = [];
 
-export const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
+if (SHOW_PRIVATE_DATA) {
+  // const module = await import('@/privateData/amPrivateData');
+  // privateData = module.PRIVATE_DATA;
+  privateData = []
+}
+
+export const FOLLOWED: arrayOfPosts = [];
+export const FOR_YOU: arrayOfPosts = SHOW_PRIVATE_DATA
+  ? [...PUBLIC_DATA, ...privateData]
+  : [...PUBLIC_DATA];
