@@ -2,15 +2,11 @@ import { useEffect, useMemo, useRef } from 'react';
 import { FollowButton } from '../ProfileCreator/FollowButton';
 import { useUserCreator } from '@/store/useUserCreator';
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
-import { PRIVATE_DATA } from '@/privateData/amPrivateData';
-import { PUBLIC_DATA } from '@/publicData/amPublicData';
-import type { arrayOfPosts } from '../SliderPosts/types';
 import { $, getRandomNumber } from '@/utils/functions';
 import type { userId } from '@/store/useFollowedAccount';
 import { UserCircleStory } from '@/components/pages/SliderPosts/AsideRight/UserCircleStory';
 import { UserProfile } from '@/components/pages/SliderPosts/AsideRight//UserProfile';
-const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
-const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
+import { FOLLOWED, FOR_YOU } from '@/publicData/functions/getData';
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 const LIMIT_CHARS_USERNAME = 20;
 

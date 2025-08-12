@@ -1,10 +1,6 @@
-import type { arrayOfPosts } from '@/components/pages/SliderPosts/types.d.ts';
-import { PRIVATE_DATA } from '@/privateData/amPrivateData';
-import { PUBLIC_DATA } from '@/publicData/amPublicData';
 import { useUserCreator } from '@/store/useUserCreator';
 import { CloseContainer } from '@/components/pages/SliderPosts/AsideRight/CloseContainer';
-const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
-const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
+import { FOLLOWED, FOR_YOU } from '@/publicData/functions/getData';
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 import { ARRAY_OF_COMMENTS } from '@/utils/array/comments/arrayOfComments';
 import { useMemo, useState } from 'react';

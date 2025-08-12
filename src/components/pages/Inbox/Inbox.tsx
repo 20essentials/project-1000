@@ -1,8 +1,5 @@
 import '@/components/pages/Inbox/Inbox.css';
-import type {
-  arrayOfPosts,
-  postComonProps
-} from '@/components/pages/SliderPosts/types.d.ts';
+import type { postComonProps } from '@/components/pages/SliderPosts/types.d.ts';
 import '@/components/pages/FollowedAndFollow/FollowedAndFollow.css';
 import { ArrowLeft } from '@/components/pages/ProfileCreator/ArrowLeft';
 import { useCurrentUser } from '@/store/useCurrentUser';
@@ -12,10 +9,7 @@ import { useFollowedAccount } from '@/store/useFollowedAccount';
 import { useMemo, useRef, useState } from 'react';
 import { ArrayOfNavbarStories } from '@/components/pages/Inbox/ArrayOfNavbarStories';
 import { ListOfUsers } from '@/components/pages/FollowedAndFollow/ListOfUser';
-import { PRIVATE_DATA } from '@/privateData/amPrivateData';
-import { PUBLIC_DATA } from '@/publicData/amPublicData';
-const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
-const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
+import { FOLLOWED, FOR_YOU } from '@/publicData/functions/getData';
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 const NUM_OF_ROW_THAT_RENDER_MORE_ROWS = 9;
 const urlFirework = baseUrl('/assets/tik-tok-animated-logo.gif');

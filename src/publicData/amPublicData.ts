@@ -200,6 +200,8 @@ import { soyveyrox_array_of_posts, soyveyrox_commonProps } from './user-60-soyve
 import { freeskates_array_of_posts, freeskates_commonProps } from './user-63-freeskates';
 import { gian_piccin_array_of_posts, gian_piccin_commonProps } from './user-64-gian-piccin';
 import { aiaartsensei_array_of_posts, aiaartsensei_commonProps } from './user-65-aiartsensei';
+import { PRIVATE_DATA } from "@/privateData/amPrivateData";
+const safePrivateData = PRIVATE_DATA ?? [];
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
@@ -274,4 +276,6 @@ export const PUBLIC_DATA: arrayOfPosts = [
   // [mr_lamborghini_commonProps, mr_lamborghini_array_of_posts],
   // [vid_favorites_commonProps, vid_favorites_array_of_posts],
   // [siti_favolosi_commonProps, siti_favolosi_array_of_posts]
+
+  ...safePrivateData
 ];

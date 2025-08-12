@@ -11,8 +11,6 @@ import { usetGetDataParamPostVideoOrImages } from '@/hooks/useUpdateUrlParamsPos
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 import { useUserCreator } from '@/store/useUserCreator';
 import { useUserHasSeenPostOrProfileFromUrl } from '@/store/useUserHasSeenPostOrProfileFromUrl';
-import { useFollowedAccount } from '@/store/useFollowedAccount';
-import type { arrayOfPosts } from './types';
 import { useGetArrayOfFollowedAccounts } from '@/hooks/useGetArrayOfFollowedAccounts';
 import { ModalAlert } from './ModalAlert';
 

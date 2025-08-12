@@ -12,7 +12,7 @@ export function useGetArrayOfFollowedAccounts({
   );
 
   return {
-    FOLLOWED: arrayOfPosts.length > 0 ? arrayOfPosts : FOR_YOU.toReversed(),
+    FOLLOWED: arrayOfPosts.length > 0 ? arrayOfPosts : FOR_YOU,
     showModalThatTheUserDontHaveFollowed: arrayOfUsersId.length === 0
   };
 }

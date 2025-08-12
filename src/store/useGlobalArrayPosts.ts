@@ -1,11 +1,8 @@
 import { create } from 'zustand';
 import { combine } from 'zustand/middleware';
 import type { arrayOfPosts } from '@/components/pages/SliderPosts/types.d.ts';
-import { PUBLIC_DATA } from '@/publicData/amPublicData';
-import { PRIVATE_DATA } from '@/privateData/amPrivateData';
 import { getRandomNumber } from '@/utils/functions';
-const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
-const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
+import { FOLLOWED, FOR_YOU } from '@/publicData/functions/getData';
 
 const initialState = {
   FOLLOWED,

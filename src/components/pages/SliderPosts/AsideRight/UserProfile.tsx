@@ -1,10 +1,6 @@
 import { useCurrentPage, IS_ACTIVE_BUTTON } from '@/store/useCurrentPage';
-import { PRIVATE_DATA } from '@/privateData/amPrivateData';
 import { useUserCreator } from '@/store/useUserCreator';
-import { PUBLIC_DATA } from '@/publicData/amPublicData';
-import type { arrayOfPosts } from '@/components/pages/SliderPosts/types.d.ts';
-const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
-const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
+import { FOLLOWED, FOR_YOU } from '@/publicData/functions/getData';
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 
 import { useCurrentUser } from '@/store/useCurrentUser';
@@ -24,11 +20,10 @@ export function UserProfile({
   const setArrayOfPosts = useUserCreator(state => state.setArrayOfPosts);
   const setCommonProps = useUserCreator(state => state.setCommonProps);
 
-  
   const user = useCurrentUser(state => state.user);
   if (user == null) return null;
   const theUserId = user.id;
-  const theCreatorOfThisPostIsTheSameUser = userId === theUserId
+  const theCreatorOfThisPostIsTheSameUser = userId === theUserId;
 
   function nextToProfileCreator() {
     if (theCreatorOfThisPostIsTheSameUser) {
@@ -52,7 +47,10 @@ export function UserProfile({
         onClick={nextToProfileCreator}
         alt='User Profile'
       />
-      <FollowCircleButton userId={userId} theCreatorOfThisPostIsTheSameUser={theCreatorOfThisPostIsTheSameUser}/>
+      <FollowCircleButton
+        userId={userId}
+        theCreatorOfThisPostIsTheSameUser={theCreatorOfThisPostIsTheSameUser}
+      />
     </>
   );
 }

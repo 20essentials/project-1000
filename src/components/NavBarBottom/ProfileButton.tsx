@@ -1,13 +1,6 @@
 import { useCurrentPage, IS_ACTIVE_BUTTON } from '@/store/useCurrentPage';
-import { PUBLIC_DATA } from '@/publicData/amPublicData';
-import { PRIVATE_DATA } from '@/privateData/amPrivateData';
-import type { arrayOfPosts } from '@/components/pages/SliderPosts/types.d.ts';
 import { useUserCreator } from '@/store/useUserCreator';
 import { useCurrentUser } from '@/store/useCurrentUser';
-import { use } from 'react';
-const FOLLOWED: arrayOfPosts = [...PRIVATE_DATA];
-const FOR_YOU: arrayOfPosts = [...PUBLIC_DATA];
-const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 import { getUser } from '@/db/User.ts';
 import { useUserSavedPosts } from '@/store/useUserSavedPosts';
 
