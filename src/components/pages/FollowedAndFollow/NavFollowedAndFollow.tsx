@@ -1,5 +1,5 @@
 import { useNavFollowedOrFollowers } from '@/store/useNavFollowedOrFollowers';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 export function NavFollowedAndFollow({
   followedSection,
@@ -16,12 +16,33 @@ export function NavFollowedAndFollow({
   };
 
   const isNavFollowed = useNavFollowedOrFollowers(state => state.isNavFollowed);
-
+  const tabFollowerRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     if (isNavFollowed) showFollowed();
     if (!isNavFollowed) showFollowers();
   }, [isNavFollowed]);
+
+  useEffect(() => {
+    if (!followedSection.current || !tabFollowerRef.current) return;
+    const followedSectionElement = followedSection.current;
+    const tabFollowerElement = tabFollowerRef.current;
+    const sectionBottomWithScrollX = followedSectionElement.closest(
+      '.section-bottom'
+    ) as HTMLElement;
+
+    function handleScrollX(e: Event) {
+      const target = e.target as HTMLElement;
+      const scrollLeft = target.scrollLeft;
+      tabFollowerElement.style.left = `${Math.floor(scrollLeft / 2)}px`;
+    }
+
+    sectionBottomWithScrollX.addEventListener('scroll', handleScrollX);
+
+    return () => {
+      sectionBottomWithScrollX.removeEventListener('scroll', handleScrollX);
+    };
+  }, []);
 
   return (
     <section className='section-nav'>
@@ -31,6 +52,7 @@ export function NavFollowedAndFollow({
       <button onClick={showFollowers} className={`follower navi`}>
         Followers
       </button>
+      <aside className='tab-follower' ref={tabFollowerRef}></aside>
     </section>
   );
 }

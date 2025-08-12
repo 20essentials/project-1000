@@ -62,12 +62,27 @@
     bottom: 2px;
     background-color: var(--black-bg);
 
+    .tab-follower {
+      background: linear-gradient(45deg, #4473eb, #04befe);
+      background: linear-gradient(45deg, #ff4081, #ffc107);
+
+      position: absolute;
+      width: 50%;
+      height: 80%;
+      border-radius: 20px;
+      pointer-events: none;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
     .navi {
       width: 50%;
       color: #e9e9e9;
       padding: 8px;
       opacity: 1;
       font-size: 12px;
+      position: relative;
+      z-index: 1;
     }
   }
 

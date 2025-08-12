@@ -1,6 +1,4 @@
-import type {
-  postComonProps
-} from '@/components/pages/SliderPosts/types.d.ts';
+import type { postComonProps } from '@/components/pages/SliderPosts/types.d.ts';
 import '@/components/pages/FollowedAndFollow/FollowedAndFollow.css';
 import { ArrowLeft } from '../ProfileCreator/ArrowLeft';
 import { useCurrentUser } from '@/store/useCurrentUser';
@@ -10,8 +8,8 @@ import { useFollowedAccount, type userId } from '@/store/useFollowedAccount';
 import { useRef, useState } from 'react';
 import { NavFollowedAndFollow } from '@/components/pages/FollowedAndFollow/NavFollowedAndFollow';
 import { ListOfUsers } from '@/components/pages/FollowedAndFollow/ListOfUser';
-import { FOLLOWED, FOR_YOU } from '@/publicData/functions/getData';
-const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
+import {  FOR_YOU } from '@/publicData/functions/getData';
+const ALL_POSTS = [...FOR_YOU];
 const NUM_OF_ROW_THAT_RENDER_MORE_ROWS = 9;
 const urlFirework = baseUrl('/assets/firework.gif');
 const MAXIMUM_FOLLOWERS_OR_FOLLOWED = 10_000;
