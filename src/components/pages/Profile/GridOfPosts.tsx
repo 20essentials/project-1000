@@ -64,7 +64,8 @@ export function GridOfPosts({
     }
   }, [visibleCount, flatPostsWithProps.length]);
 
-  if (arrayOfPosts.length === 0) {
+  const thereIsUserButNotPosts = arrayOfPosts[0]?.[1].length === 0
+  if (arrayOfPosts.length === 0 || thereIsUserButNotPosts) {
     return (
       <aside
         className='profile-creator-bottom'

@@ -59,10 +59,7 @@ import {
   mr_rombus_array_of_posts,
   mr_rombus_commonProps
 } from '@/publicData/user-15-mr-rombus';
-import {
-  cata_array_of_posts,
-  cata_commonProps
-} from '@/publicData/user-16-cata';
+import { cata_array_of_posts, cata_commonProps } from '@/publicData/user-16-cata';
 import {
   whoisangenr_array_of_posts,
   whoisangenr_commonProps
@@ -179,28 +176,81 @@ import {
   chico_collection_array_of_posts,
   chico_collection_commonProps
 } from '@/publicData/user-45-chico-collection';
-import { justtrip_array_of_posts, justtrip_commonProps } from './user-46-justtrip';
-import { mycelium_mirrors_array_of_posts, mycelium_mirrors_commonProps } from './user-47-mycelium-mirrors';
+import {
+  justtrip_array_of_posts,
+  justtrip_commonProps
+} from './user-46-justtrip';
+import {
+  mycelium_mirrors_array_of_posts,
+  mycelium_mirrors_commonProps
+} from './user-47-mycelium-mirrors';
 import { michelle_navarro_array_of_posts } from '@/privateData/user-3-mich3lle-nav4rro';
-import { blackcats_array_of_posts, blackcats_commonProps } from './user-49-blackcats';
-import { ligthspeed_array_of_posts, ligthspeed_commonProps } from './user-48-ligth-speed';
+import {
+  blackcats_array_of_posts,
+  blackcats_commonProps
+} from './user-49-blackcats';
+import {
+  ligthspeed_array_of_posts,
+  ligthspeed_commonProps
+} from './user-48-ligth-speed';
 import { beitman_array_of_posts, beitman_commonProps } from './user-51-beitman';
-import { ghxz_edits_array_of_posts, ghxz_edits_commonProps } from './user-50-ghxz-edit';
-import { gafurovedit_array_of_posts, gafurovedit_commonProps } from './user-52-gafurovedit';
+import {
+  ghxz_edits_array_of_posts,
+  ghxz_edits_commonProps
+} from './user-50-ghxz-edit';
+import {
+  gafurovedit_array_of_posts,
+  gafurovedit_commonProps
+} from './user-52-gafurovedit';
 import { improve_array_of_posts, improve_commonProps } from './user-53-improve';
-import { dg_minisetoys_array_of_posts, dg_minisetoys_commonProps } from './user-54-dg-minisetoys';
-import { jiraiya_fanboy_array_of_posts, jiraiya_fanboy_commonProps } from './user-55-jiraiya-fanboy';
-import { eric_sierra_array_of_posts, eric_sierra_commonProps } from './user-57-eric-sierra';
-import { ximu_cat_array_of_posts, ximu_cat_commonProps } from './user-56-ximu-cat';
-import { turnsignalthecat_array_of_posts, turnsignalthecat_commonProps } from './user-61-turnsignalthecat';
+import {
+  dg_minisetoys_array_of_posts,
+  dg_minisetoys_commonProps
+} from './user-54-dg-minisetoys';
+import {
+  jiraiya_fanboy_array_of_posts,
+  jiraiya_fanboy_commonProps
+} from './user-55-jiraiya-fanboy';
+import {
+  eric_sierra_array_of_posts,
+  eric_sierra_commonProps
+} from './user-57-eric-sierra';
+import {
+  ximu_cat_array_of_posts,
+  ximu_cat_commonProps
+} from './user-56-ximu-cat';
+import {
+  turnsignalthecat_array_of_posts,
+  turnsignalthecat_commonProps
+} from './user-61-turnsignalthecat';
 import { lggbb_array_of_posts, lggbb_commonProps } from './user-58-lggbb';
-import { dreamfall_array_of_posts, dreamfall_commonProps } from './user-62-dreamfall';
-import { mr_rizzer_array_of_posts, mr_rizzer_commonProps } from './user-59-mr-rizzer';
-import { soyveyrox_array_of_posts, soyveyrox_commonProps } from './user-60-soyveyrox';
-import { freeskates_array_of_posts, freeskates_commonProps } from './user-63-freeskates';
-import { gian_piccin_array_of_posts, gian_piccin_commonProps } from './user-64-gian-piccin';
-import { aiaartsensei_array_of_posts, aiaartsensei_commonProps } from './user-65-aiartsensei';
-import { PRIVATE_DATA } from "@/privateData/amPrivateData";
+import {
+  dreamfall_array_of_posts,
+  dreamfall_commonProps
+} from './user-62-dreamfall';
+import {
+  mr_rizzer_array_of_posts,
+  mr_rizzer_commonProps
+} from './user-59-mr-rizzer';
+import {
+  soyveyrox_array_of_posts,
+  soyveyrox_commonProps
+} from './user-60-soyveyrox';
+import {
+  freeskates_array_of_posts,
+  freeskates_commonProps
+} from './user-63-freeskates';
+import {
+  gian_piccin_array_of_posts,
+  gian_piccin_commonProps
+} from './user-64-gian-piccin';
+import {
+  aiaartsensei_array_of_posts,
+  aiaartsensei_commonProps
+} from './user-65-aiartsensei';
+import { PRIVATE_DATA } from '@/privateData/amPrivateData';
+// const nodeEnv = 'PRODUCTION';
+// const safePrivateData = nodeEnv === 'PRODUCTION' ? [] : PRIVATE_DATA;
 const safePrivateData = PRIVATE_DATA ?? [];
 
 //Este ya no lo quiero:
@@ -271,7 +321,7 @@ export const PUBLIC_DATA: arrayOfPosts = [
   // [marshall_jassan_commonProps, marshall_jassan_array_of_posts],
   // [edaserkanbolat_edits_commonProps, edaserkanbolat_edits_array_of_posts]
   // [jorgepomarg_commonProps, jorgepomarg_array_of_posts],
-  
+
   // [ars_notoria_commonProps, ars_notoria_array_of_posts],
   // [mr_lamborghini_commonProps, mr_lamborghini_array_of_posts],
   // [vid_favorites_commonProps, vid_favorites_array_of_posts],

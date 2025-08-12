@@ -11,6 +11,7 @@ export function GridOfUserCreatedPosts() {
   const arrayOfCreatedPosts: arrayOfPosts = [
     [commonProps, arrayOfCreatedPostOfTheUser]
   ];
+
   return (
     <GridOfPosts
       arrayOfPosts={arrayOfCreatedPosts}
