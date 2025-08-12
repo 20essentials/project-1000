@@ -21,11 +21,17 @@ export default function CamaraVideo({
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
   const setArrayImages = useUploadVideoOrImages(st => st.setArrayImages);
   const setSrcVideo = useUploadVideoOrImages(st => st.setSrcVideo);
+  const [cameraIsAllowing, setIsCameraAllowing] = useState(false)
 
   // Array local para guardar chunks
   const chunksRef = useRef<Blob[]>([]);
 
   const capturaImagen = useCallback(() => {
+    if (!webcamRef.current || !webcamRef.current.stream) {
+      setIsCameraAllowing(false)
+      return;
+    }
+    setIsCameraAllowing(true)
     const imagenSrc = webcamRef.current?.getScreenshot() || null;
     setCapturaFoto(imagenSrc);
     updateIndex(SECTION_TYPE.UPLOAD);
@@ -37,10 +43,11 @@ export default function CamaraVideo({
   const iniciaGrabacion = useCallback(() => {
     if (!webcamRef.current || !webcamRef.current.stream) {
       console.error('La cámara no está lista');
+      setIsCameraAllowing(false)
       return;
     }
-
-    chunksRef.current = []; // resetear chunks
+    setIsCameraAllowing(true)
+    chunksRef.current = [];
     setGrabando(true);
 
     try {
@@ -57,12 +64,6 @@ export default function CamaraVideo({
         chunksRef.current.push(event.data);
       }
     };
-
-    // mediaRecorderRef.current.onstop = () => {
-    //   const blob = new Blob(chunksRef.current, { type: 'video/webm' });
-    //   const url = URL.createObjectURL(blob);
-    //   setVideoUrl(url);
-    // };
 
     mediaRecorderRef.current.onstop = () => {
       const blob = new Blob(chunksRef.current, { type: 'video/webm' });
@@ -115,15 +116,12 @@ export default function CamaraVideo({
         className='am-webcam'
       />
 
-      {/* <div style={{ marginTop: 10 }}>
-        <button onClick={capturaImagen}>Tomar Foto</button>
-
-        {!grabando ? (
-          <button onClick={iniciaGrabacion}>Iniciar Grabación</button>
-        ) : (
-          <button onClick={paraGrabacion}>Detener Grabación</button>
-        )}
-      </div> */}
+      {(!cameraIsAllowing ) && (
+        <p className='message-error'>
+          Camera access is disabled. To continue, allow camera access from your
+          browser’s site settings
+        </p>
+      )}
 
       <nav className='nav-of-type-of-capture'>
         <div
