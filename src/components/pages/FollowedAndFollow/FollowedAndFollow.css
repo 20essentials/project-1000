@@ -64,15 +64,18 @@
 
     .tab-follower {
       background: linear-gradient(45deg, #4473eb, #04befe);
-      background: linear-gradient(45deg, #ff4081, #ffc107);
 
       position: absolute;
       width: 50%;
-      height: 80%;
+      height: 76%;
       border-radius: 20px;
       pointer-events: none;
       top: 50%;
       transform: translateY(-50%);
+
+      &.colorinTab {
+        background: linear-gradient(45deg, #ff4081, #ffc107);
+      }
     }
 
     .navi {
@@ -96,9 +99,9 @@
     overflow-y: hidden;
 
     &::-webkit-scrollbar {
-      height: 1px;
-      width: 1px;
+      height: 0px;
     }
+
     &::-webkit-scrollbar-thumb {
       background-color: #e9e9e9;
       opacity: 0.3;

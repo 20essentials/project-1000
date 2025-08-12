@@ -34,7 +34,9 @@ export function NavFollowedAndFollow({
     function handleScrollX(e: Event) {
       const target = e.target as HTMLElement;
       const scrollLeft = target.scrollLeft;
+      const percentOfScroll = Math.ceil((scrollLeft / target.scrollWidth) * 100);
       tabFollowerElement.style.left = `${Math.floor(scrollLeft / 2)}px`;
+      tabFollowerElement.classList.toggle('colorinTab', percentOfScroll >= 25);
     }
 
     sectionBottomWithScrollX.addEventListener('scroll', handleScrollX);
