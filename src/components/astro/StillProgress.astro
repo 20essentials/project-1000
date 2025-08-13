@@ -1,0 +1,249 @@
+<section class='am-still-progress-section hidden'>
+  <section class='container'>
+    <div class='file'>
+      <div class='work-5'></div>
+      <div class='work-4'></div>
+      <div class='work-3'></div>
+      <div class='work-2'></div>
+      <div class='work-1'></div>
+    </div>
+    <p class='label'>Stil in progress...</p>
+  </section>
+  <aside data-info='1' class='am-still-in-progress-cube am-still-progress-1'>
+  </aside>
+  <aside data-info='2' class='am-still-in-progress-cube am-still-progress-2'>
+  </aside>
+  <aside data-info='3' class='am-still-in-progress-cube am-still-progress-3'>
+  </aside>
+  <aside data-info='4' class='am-still-in-progress-cube am-still-progress-4'>
+  </aside>
+  <aside data-info='5' class='am-still-in-progress-cube am-still-progress-5'>
+  </aside>
+</section>
+
+<style>
+  .am-still-progress-section {
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+    height: 100vh;
+    background: linear-gradient(to left, #fc00ff, #00dbde);
+
+    &.hidden {
+      transform: scale(0);
+      display: none;
+    }
+  }
+
+  .am-still-in-progress-cube {
+    position: absolute;
+    width: 15vmax;
+    height: 15vmax;
+    z-index: 50;
+    opacity: 0;
+
+    &.am-still-progress-1 {
+      top: 0;
+      left: 0;
+    }
+
+    &.am-still-progress-2 {
+      top: 0;
+      right: 0;
+    }
+
+    &.am-still-progress-3 {
+      bottom: 0;
+      left: 0;
+    }
+
+    &.am-still-progress-4 {
+      bottom: 0;
+      right: 0;
+    }
+
+    &.am-still-progress-5 {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  /* ----- Contenedor principal ----- */
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ----- Archivo ----- */
+  .file {
+    position: relative;
+    width: 15rem; /* 60 tailwind */
+    height: 10rem; /* 40 tailwind */
+    cursor: pointer;
+    transform-origin: bottom;
+    perspective: 1500px;
+    z-index: 50;
+  }
+
+  /* ----- work-5 (fondo base del folder) ----- */
+  .work-5 {
+    background-color: #d97706; /* amber-600 */
+    width: 100%;
+    height: 100%;
+    transform-origin: top;
+    border-radius: 1rem;
+    border-top-left-radius: 0;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .work-5::after {
+    content: '';
+    position: absolute;
+    bottom: 99%;
+    left: 0;
+    width: 5rem; /* 20 tailwind */
+    height: 1rem; /* 4 tailwind */
+    background-color: #d97706;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  .work-5::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 75.5px;
+    width: 1rem; /* 4 tailwind */
+    height: 1rem;
+    background-color: #d97706;
+    clip-path: polygon(0 35%, 0% 100%, 50% 100%);
+  }
+
+  /* ----- work-4 ----- */
+  .work-4 {
+    position: absolute;
+    inset: 0.25rem; /* 1 tailwind */
+    background-color: #a1a1aa; /* zinc-400 */
+    border-radius: 1rem;
+    transform-origin: bottom;
+    transition: all 0.3s ease;
+    user-select: none;
+  }
+
+  /* ----- work-3 ----- */
+  .work-3 {
+    position: absolute;
+    inset: 0.25rem;
+    background-color: #d4d4d8; /* zinc-300 */
+    border-radius: 1rem;
+    transform-origin: bottom;
+    transition: all 0.3s ease;
+  }
+
+  /* ----- work-2 ----- */
+  .work-2 {
+    position: absolute;
+    inset: 0.25rem;
+    background-color: #e4e4e7; /* zinc-200 */
+    border-radius: 1rem;
+    transform-origin: bottom;
+    transition: all 0.3s ease;
+  }
+
+  /* ----- work-1 (parte frontal) ----- */
+  .work-1 {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to top, #f59e0b, #fbbf24);
+    width: 100%;
+    height: 156px;
+    border-radius: 1rem;
+    border-top-right-radius: 0;
+    transition: all 0.3s ease;
+    transform-origin: bottom;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .work-1::after {
+    content: '';
+    position: absolute;
+    bottom: 99%;
+    right: 0;
+    width: 146px;
+    height: 16px;
+    background-color: #fbbf24;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  .work-1::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 142px;
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #fbbf24;
+    clip-path: polygon(100% 14%, 50% 100%, 100% 100%);
+  }
+
+  /* ----- Texto ----- */
+  .label {
+    font-size: 1.875rem; /* text-3xl */
+    padding-top: 1rem;
+    opacity: 0.3;
+  }
+
+  /* ----- Hover: animaciones ----- */
+  .file:hover .work-5 {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .file:hover .work-4 {
+    transform: rotateX(-20deg);
+  }
+
+  .file:hover .work-3 {
+    transform: rotateX(-30deg);
+  }
+
+  .file:hover .work-2 {
+    transform: rotateX(-38deg);
+  }
+
+  .file:hover .work-1 {
+    box-shadow:
+      inset 0 20px 40px #fbbf24,
+      inset 0 -20px 40px #d97706;
+    transform: rotateX(-46deg) translateY(1px);
+  }
+</style>
+
+<script>
+import{$}from"@/utils/functions";
+const c=$(".am-still-progress-section")as HTMLElement;
+if(!localStorage.getItem("yAl")){
+c.classList.remove("hidden");
+const s:string[]=[];
+document.addEventListener("click",e=>{
+const t=e.target as HTMLElement;
+if(t.matches(".am-still-in-progress-cube")){
+const i=t.dataset.info??"";
+s.push(i);
+if(["1","2","3","4","1","2","3","4","5"]
+.every((v,n)=>s[n]===v)){
+localStorage.setItem("yAl","true");
+c.classList.add("hidden");
+}
+}
+});
+}
+</script>

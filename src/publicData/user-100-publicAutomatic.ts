@@ -11,8 +11,8 @@ const followers = 100_000;
 const followed = 50;
 const profileDescription = 'Hello';
 const prefixLetterVideos = 'v';
-const prefixLetterImages = 'n';
 const quantityOfVideos = 20;
+const prefixLetterImages = 'n';
 const quantityOfImages = 20;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 

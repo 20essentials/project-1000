@@ -2,6 +2,7 @@ import '@/styles/phone.css';
 import { Layer1 } from '@/components/Layer1';
 import { Layer0 } from '@/components/Layer0';
 import type { User } from '@clerk/astro/server';
+
 import { useCurrentUser } from '@/store/useCurrentUser';
 import { useEffect } from 'react';
 import { useCurrentPage, IS_ACTIVE_BUTTON } from '@/store/useCurrentPage';

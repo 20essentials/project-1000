@@ -155,7 +155,7 @@ body {
     zoom: 0.2;
   }
 
-  @media (width <= 350px) and (orientation: portrait) and (hover: hover) {
+  @media (width <= 600px) and (orientation: portrait) and (hover: hover) {
     zoom: 0.2;
   }
 
@@ -167,7 +167,7 @@ body {
     zoom: 0.1;
   }
 
-  @media (width <= 450px) and (orientation: portrait) and (hover: none) {
-    zoom: 0.3;
+  @media (width <= 700px) and (orientation: portrait) and (hover: none) {
+    zoom: 0.8;
   }
 }

@@ -7,7 +7,7 @@ const tikTokLogo = baseUrl('/assets/tiktok-logo.avif');
 import gsap from 'gsap';
 import Draggable from 'gsap/Draggable';
 import { useGSAP } from '@gsap/react';
-gsap.registerPlugin(useGSAP, Draggable);
+gsap.registerPlugin(Draggable);
 
 export function Container1() {
   const containerRef = useRef<HTMLElement | null>(null);
@@ -16,7 +16,9 @@ export function Container1() {
   const lastPosRef = useRef<{ x: number; y: number } | null>(null);
 
   const showContainewNum = useNcontainer(state => state.showContainewNum);
-  const setTransformOrigin = useTransformOrigin(state => state.setTransformOrigin);
+  const setTransformOrigin = useTransformOrigin(
+    state => state.setTransformOrigin
+  );
   const amX = useTransformOrigin(st => st.x);
   const amY = useTransformOrigin(st => st.y);
 
@@ -46,13 +48,16 @@ export function Container1() {
       // calculamos límites en coordenadas relativas al container (left/top)
       const minLeft = margin;
       const minTop = margin;
-      const maxLeft = Math.max(0, container.clientWidth - iconRect.width - margin);
+      const maxLeft = Math.max(
+        0,
+        container.clientWidth - iconRect.width - margin
+      );
       const maxTop = Math.max(0, container.clientHeight - iconRect.height - 30);
 
       // crear draggable sobre el elemento (no selector)
       const [instance] = Draggable.create(icon, {
-        type: 'left,top',    // importante: manipulamos left/top
-        inertia: true,       // si quieres inercia
+        type: 'left,top', // importante: manipulamos left/top
+        inertia: true, // si quieres inercia
         // bounds como objeto min/max (GSAP acepta esta forma)
         bounds: { minX: minLeft, maxX: maxLeft, minY: minTop, maxY: maxTop },
 
@@ -92,7 +97,9 @@ export function Container1() {
         } catch (err) {
           console.warn('Error guardando coords en unmount', err);
         } finally {
-          try { inst && inst.kill(); } catch (e) {}
+          try {
+            inst && inst.kill();
+          } catch (e) {}
           draggableRef.current = null;
         }
       };
