@@ -112,11 +112,12 @@ export function Container1() {
       className='inner-content'
       ref={containerRef}
       style={{ overflow: 'hidden' }}
+      onClick={showIntroTikTok}
     >
       <article
         className='social-top elegido tik-tok-logo'
         ref={iconRef}
-        onClick={showIntroTikTok}
+        
         style={{
           position: 'absolute',
           left: `${amX}px`,
