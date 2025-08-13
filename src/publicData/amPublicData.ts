@@ -1,7 +1,4 @@
-import {
-  midudev_array_of_posts,
-  midudev_commonProps
-} from '@/publicData/user-1-midudev';
+
 import {
   goated_ai_art_array_of_posts,
   goated_ai_art_commonProps
@@ -254,15 +251,21 @@ import {
 } from './user-68-spirograph';
 import { magi_skill_array_of_posts, magi_skill_commonProps } from './user-5-magiskill';
 import { molly_zombie_array_of_posts, molly_zombie_commonProps } from './user-67-mollyzombie';
+import { midudev_array_of_posts, midudev_commonProps } from './user-1-midudev';
 
 export const PUBLIC_DATA: arrayOfPosts = [
   //testing
-  [midudev_commonProps, midudev_array_of_posts], //esto no existe abajo
   [qbitlab_commonProps, qbitlab_array_of_posts], //esto no existe abajo
   [goated_ai_art_commonProps, goated_ai_art_array_of_posts],
   [gregorian_commonProps, [gregorian_array_of_posts[0]]], //esto si existe abajo
   //testing
 
+
+  [midudev_commonProps, midudev_array_of_posts], /* 1 */
+
+
+
+  
   [soyveyrox_commonProps, soyveyrox_array_of_posts],
   [freeskates_commonProps, freeskates_array_of_posts],
   [molly_zombie_commonProps, molly_zombie_array_of_posts],
