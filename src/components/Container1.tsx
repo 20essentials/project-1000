@@ -22,8 +22,9 @@ export function Container1() {
   const amX = useTransformOrigin(st => st.x);
   const amY = useTransformOrigin(st => st.y);
 
-  function showIntroTikTok() {
+  function showIntroTikTok(e: React.MouseEvent) {
     showContainewNum(CONTAINER_IS.INTRO_PAGE);
+    e.preventDefault();
   }
 
   useGSAP(
@@ -112,11 +113,11 @@ export function Container1() {
       className='inner-content'
       ref={containerRef}
       style={{ overflow: 'hidden' }}
-      onClick={showIntroTikTok}
     >
       <article
         className='social-top elegido tik-tok-logo'
         ref={iconRef}
+        onClick={showIntroTikTok}
         style={{
           position: 'absolute',
           left: `${amX}px`,
@@ -124,7 +125,12 @@ export function Container1() {
           cursor: 'grab'
         }}
       >
-        <img draggable='false' src={tikTokLogo} className='titk-tok-logo' />
+        <img
+          onClick={showIntroTikTok}
+          draggable='false'
+          src={tikTokLogo}
+          className='titk-tok-logo'
+        />
       </article>
     </section>
   );
