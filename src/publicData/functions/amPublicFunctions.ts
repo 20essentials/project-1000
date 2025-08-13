@@ -190,13 +190,15 @@ export function generateArrayPostsOfImages({
   if (quantityOfImages === 0) return [];
 
   if (arrayDescriptionOfImages) {
-    return arrayDescriptionOfImages.map((description = '', i) => {
-      return generatePostImage({
-        arrayImages: [`${prefixUrl}${prefixLetterImages}${i + 1}.avif`],
-        idPost: `${userId}-img-${UUID[i]}`,
-        description
+    return arrayDescriptionOfImages
+      .slice(0, quantityOfImages)
+      .map((description = '', i) => {
+        return generatePostImage({
+          arrayImages: [`${prefixUrl}${prefixLetterImages}${i + 1}.avif`],
+          idPost: `${userId}-img-${UUID[i]}`,
+          description
+        });
       });
-    });
   }
   return Array.from({ length: quantityOfImages }, (_, i) => {
     return generatePostImage({
@@ -221,13 +223,15 @@ export function generateArrayPostsOfVideos({
 }): postProps[] {
   if (quantityOfVideos === 0) return [];
   if (arrayDescriptionsOfVideos) {
-    return arrayDescriptionsOfVideos.map((description = '', i) =>
-      generatePostVideo({
-        videoSrc: `${prefixUrl}${prefixLetterVideos}${i + 1}.mp4`,
-        idPost: `${userId}-vid-${UUID[i]}`,
-        description
-      })
-    );
+    return arrayDescriptionsOfVideos
+      .slice(0, quantityOfVideos)
+      .map((description = '', i) =>
+        generatePostVideo({
+          videoSrc: `${prefixUrl}${prefixLetterVideos}${i + 1}.mp4`,
+          idPost: `${userId}-vid-${UUID[i]}`,
+          description
+        })
+      );
   }
   return Array.from({ length: quantityOfVideos }, (_, i) =>
     generatePostVideo({
