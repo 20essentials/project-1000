@@ -29,7 +29,7 @@ export default defineConfig({
   // site: 'https://20essentials.github.io/project-1000/'
 
   //Localhost
-  site: 'http://localhost:4321/',
+  // site: 'http://localhost:4321/',
   // server: {
   //   port: 4321,
   // },
