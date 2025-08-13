@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'molly_zombie';
-const userId = '';
-const prefixUrl = '';
+const userId = '3c6220f6-7112-4aab-83c1-d8e3fa2ae160';
+const prefixUrl = 'https://dominicnikolai.github.io/project-258/assets/moll1y-zomb1e/';
 const followers = 104_700;
 const followed = 523;
 const profileDescription = 'Scaring one soul at a time🧟‍♀️ Tampa Florida. Social media influencer For Vfxcreates.com';

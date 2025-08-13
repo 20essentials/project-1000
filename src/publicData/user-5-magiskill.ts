@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'magi_skill';
-const userId = '';
-const prefixUrl = '';
+const userId = '3f5a6e40-04e1-4387-a0d9-7dc3fd33d7c1';
+const prefixUrl = 'https://dominicnikolai.github.io/project-257/assets/magiskill/';
 const followers = 97_720;
 const followed = 52;
 const profileDescription = 'Interactive 3D Magic Tutorials';

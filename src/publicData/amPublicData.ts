@@ -15,10 +15,7 @@ import {
   ars_notoria_array_of_posts,
   ars_notoria_commonProps
 } from '@/publicData/user-3-ars-notoria';
-import {
-  beats_array_of_posts,
-  beats_commonProps
-} from '@/publicData/user-5-beats';
+
 import {
   mr_lamborghini_array_of_posts,
   mr_lamborghini_commonProps
@@ -247,10 +244,16 @@ import {
   aiaartsensei_array_of_posts,
   aiaartsensei_commonProps
 } from './user-65-aiartsensei';
-import { mateomassoni_array_of_posts, mateomassoni_commonProps } from './user-66-mateomassoni';
-
-//Este ya no lo quiero:
-// [beats_commonProps, beats_array_of_posts],
+import {
+  mateomassoni_array_of_posts,
+  mateomassoni_commonProps
+} from './user-66-mateomassoni';
+import {
+  spirograph_array_of_posts,
+  spirograph_commonProps
+} from './user-68-spirograph';
+import { magi_skill_array_of_posts, magi_skill_commonProps } from './user-5-magiskill';
+import { molly_zombie_array_of_posts, molly_zombie_commonProps } from './user-67-mollyzombie';
 
 export const PUBLIC_DATA: arrayOfPosts = [
   //testing
@@ -262,14 +265,17 @@ export const PUBLIC_DATA: arrayOfPosts = [
 
   [soyveyrox_commonProps, soyveyrox_array_of_posts],
   [freeskates_commonProps, freeskates_array_of_posts],
+  [molly_zombie_commonProps, molly_zombie_array_of_posts],
   // [justtrip_commonProps, justtrip_array_of_posts],
   // [mycelium_mirrors_commonProps, mycelium_mirrors_array_of_posts],
+  [magi_skill_commonProps, magi_skill_array_of_posts],
   [ximu_cat_commonProps, ximu_cat_array_of_posts],
   [mr_rizzer_commonProps, mr_rizzer_array_of_posts],
   [beitman_commonProps, beitman_array_of_posts],
   [eric_sierra_commonProps, eric_sierra_array_of_posts],
   [turnsignalthecat_commonProps, turnsignalthecat_array_of_posts],
   // [gafurovedit_commonProps, gafurovedit_array_of_posts],
+  [spirograph_commonProps, spirograph_array_of_posts],
   [mateomassoni_commonProps, mateomassoni_array_of_posts],
   [dreamfall_commonProps, dreamfall_array_of_posts],
   // [improve_commonProps, improve_array_of_posts],

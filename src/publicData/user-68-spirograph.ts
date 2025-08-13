@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'spirograph';
-const userId = '';
-const prefixUrl = '';
+const userId = '86a0c21e-97e2-40fb-9608-b9e92a0ce1f2';
+const prefixUrl = 'https://dominicnikolai.github.io/project-256/assets/spirograph/spirograph/';
 const followers = 497_000;
 const followed = 322;
 const profileDescription = '🌀Spirograph Satisfaction🌀';
