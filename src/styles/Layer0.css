@@ -1,7 +1,8 @@
 .layer0 {
   z-index: -1;
   background-image: url('/assets/spritesheet.avif');
-  animation: mover 16s steps(8) infinite;
+  animation: mover calc(var(--time-change-bg) * 16s) steps(8) infinite;
+  
   border-radius: var(--border-r);
   transform: scale(0.97);
   border-radius: 40px;

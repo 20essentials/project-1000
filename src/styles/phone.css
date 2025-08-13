@@ -45,13 +45,17 @@
   }
 }
 
+:root {
+  --time-change-bg: 8;
+}
+
 body {
   height: 100dvh;
   display: flex;
   flex-wrap: wrap;
   place-content: center;
-  animation: changeBg 16s steps(8) infinite both;
-  animation-delay: 1s;
+  animation: changeBg calc(var(--time-change-bg) * 16s) steps(8) infinite both;
+  animation-delay: calc(var(--time-change-bg) * 1s);
   background-image: linear-gradient(to bottom, var(--top), var(--bottom));
 }
 
