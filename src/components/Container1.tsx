@@ -7,7 +7,7 @@ const tikTokLogo = baseUrl('/assets/tiktok-logo.avif');
 import gsap from 'gsap';
 import Draggable from 'gsap/Draggable';
 import { useGSAP } from '@gsap/react';
-gsap.registerPlugin(Draggable);
+gsap.registerPlugin(Draggable, useGSAP);
 
 export function Container1() {
   const containerRef = useRef<HTMLElement | null>(null);
