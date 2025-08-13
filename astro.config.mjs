@@ -30,6 +30,8 @@ export default defineConfig({
 
   //Localhost
   // site: 'http://localhost:4321/',
+  site: 'https://project-1000-t1k-tok-minimalist.vercel.app/',
+
   // server: {
   //   port: 4321,
   // },
