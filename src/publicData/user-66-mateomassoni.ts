@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'mateomassoni';
-const userId = '';
-const prefixUrl = '';
+const userId = '5a5ca642-9134-4e8c-a072-6e55d631dc61';
+const prefixUrl = 'https://dominicnikolai.github.io/project-255/assets/mateomassoni/';
 const followers = 370_720;
 const followed = 322;
 const profileDescription = '🦹🏻Sky Athlete🇫🇷';

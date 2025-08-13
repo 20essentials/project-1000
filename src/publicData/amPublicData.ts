@@ -247,6 +247,7 @@ import {
   aiaartsensei_array_of_posts,
   aiaartsensei_commonProps
 } from './user-65-aiartsensei';
+import { mateomassoni_array_of_posts, mateomassoni_commonProps } from './user-66-mateomassoni';
 
 //Este ya no lo quiero:
 // [beats_commonProps, beats_array_of_posts],
@@ -269,6 +270,7 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [eric_sierra_commonProps, eric_sierra_array_of_posts],
   [turnsignalthecat_commonProps, turnsignalthecat_array_of_posts],
   // [gafurovedit_commonProps, gafurovedit_array_of_posts],
+  [mateomassoni_commonProps, mateomassoni_array_of_posts],
   [dreamfall_commonProps, dreamfall_array_of_posts],
   // [improve_commonProps, improve_array_of_posts],
   // [lggbb_commonProps, lggbb_array_of_posts],
