@@ -1,4 +1,3 @@
-
 import {
   goated_ai_art_array_of_posts,
   goated_ai_art_commonProps
@@ -8,15 +7,8 @@ import {
   qbitlab_array_of_posts,
   qbitlab_commonProps
 } from '@/publicData/user-6-qbitlab';
-import {
-  ars_notoria_array_of_posts,
-  ars_notoria_commonProps
-} from '@/publicData/user-3-ars-notoria';
 
-import {
-  mr_lamborghini_array_of_posts,
-  mr_lamborghini_commonProps
-} from '@/publicData/user-4-mr-lamborghini';
+
 import {
   vid_favorites_array_of_posts,
   vid_favorites_commonProps
@@ -249,23 +241,30 @@ import {
   spirograph_array_of_posts,
   spirograph_commonProps
 } from './user-68-spirograph';
-import { magi_skill_array_of_posts, magi_skill_commonProps } from './user-5-magiskill';
-import { molly_zombie_array_of_posts, molly_zombie_commonProps } from './user-67-mollyzombie';
+import {
+  magi_skill_array_of_posts,
+  magi_skill_commonProps
+} from './user-5-magiskill';
+import {
+  molly_zombie_array_of_posts,
+  molly_zombie_commonProps
+} from './user-67-mollyzombie';
 import { midudev_array_of_posts, midudev_commonProps } from './user-1-midudev';
+import { arsnotoria_array_of_posts, arsnotoria_commonProps } from './user-3-arsnotoria';
+import { mr_lamborghini_array_of_posts, mr_lamborghini_commonProps } from './user-4-mrlamborghini';
 
 export const PUBLIC_DATA: arrayOfPosts = [
   //testing
   [qbitlab_commonProps, qbitlab_array_of_posts], //esto no existe abajo
-  [goated_ai_art_commonProps, goated_ai_art_array_of_posts],
+
   [gregorian_commonProps, [gregorian_array_of_posts[0]]], //esto si existe abajo
   //testing
 
+  [midudev_commonProps, midudev_array_of_posts] /* 1 */,
+  [goated_ai_art_commonProps, goated_ai_art_array_of_posts] /* 2 */,
+  [arsnotoria_commonProps, arsnotoria_array_of_posts] /* 3 */,
+  [mr_lamborghini_commonProps, mr_lamborghini_array_of_posts] /* 4 */,
 
-  [midudev_commonProps, midudev_array_of_posts], /* 1 */
-
-
-
-  
   [soyveyrox_commonProps, soyveyrox_array_of_posts],
   [freeskates_commonProps, freeskates_array_of_posts],
   [molly_zombie_commonProps, molly_zombie_array_of_posts],
@@ -328,7 +327,6 @@ export const PUBLIC_DATA: arrayOfPosts = [
   // [edaserkanbolat_edits_commonProps, edaserkanbolat_edits_array_of_posts]
   // [jorgepomarg_commonProps, jorgepomarg_array_of_posts],
 
-  // [ars_notoria_commonProps, ars_notoria_array_of_posts],
   // [mr_lamborghini_commonProps, mr_lamborghini_array_of_posts],
   // [vid_favorites_commonProps, vid_favorites_array_of_posts],
   // [siti_favolosi_commonProps, siti_favolosi_array_of_posts]
