@@ -3,11 +3,6 @@ import {
   goated_ai_art_commonProps
 } from '@/publicData/user-2-goated-ai-art';
 import type { arrayOfPosts } from '@/components/pages/SliderPosts/types.d.ts';
-import {
-  qbitlab_array_of_posts,
-  qbitlab_commonProps
-} from '@/publicData/user-6-qbitlab';
-
 
 import {
   vid_favorites_array_of_posts,
@@ -250,12 +245,18 @@ import {
   molly_zombie_commonProps
 } from './user-67-mollyzombie';
 import { midudev_array_of_posts, midudev_commonProps } from './user-1-midudev';
-import { arsnotoria_array_of_posts, arsnotoria_commonProps } from './user-3-arsnotoria';
-import { mr_lamborghini_array_of_posts, mr_lamborghini_commonProps } from './user-4-mrlamborghini';
+import {
+  arsnotoria_array_of_posts,
+  arsnotoria_commonProps
+} from './user-3-arsnotoria';
+import {
+  mr_lamborghini_array_of_posts,
+  mr_lamborghini_commonProps
+} from './user-4-mrlamborghini';
+import { qbitlab_array_of_posts, qbitlab_commonProps } from './user-6-qbitl4b';
 
 export const PUBLIC_DATA: arrayOfPosts = [
   //testing
-  [qbitlab_commonProps, qbitlab_array_of_posts], //esto no existe abajo
 
   [gregorian_commonProps, [gregorian_array_of_posts[0]]], //esto si existe abajo
   //testing
@@ -264,13 +265,15 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [goated_ai_art_commonProps, goated_ai_art_array_of_posts] /* 2 */,
   [arsnotoria_commonProps, arsnotoria_array_of_posts] /* 3 */,
   [mr_lamborghini_commonProps, mr_lamborghini_array_of_posts] /* 4 */,
+  [magi_skill_commonProps, magi_skill_array_of_posts] /* 5 */,
+  [qbitlab_commonProps, qbitlab_array_of_posts] /* 6 */,
 
   [soyveyrox_commonProps, soyveyrox_array_of_posts],
   [freeskates_commonProps, freeskates_array_of_posts],
   [molly_zombie_commonProps, molly_zombie_array_of_posts],
   // [justtrip_commonProps, justtrip_array_of_posts],
   // [mycelium_mirrors_commonProps, mycelium_mirrors_array_of_posts],
-  [magi_skill_commonProps, magi_skill_array_of_posts],
+
   [ximu_cat_commonProps, ximu_cat_array_of_posts],
   [mr_rizzer_commonProps, mr_rizzer_array_of_posts],
   [beitman_commonProps, beitman_array_of_posts],

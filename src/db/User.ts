@@ -3,39 +3,16 @@ import type {
   postProps,
   arrayOfPosts
 } from '@/components/pages/SliderPosts/types';
-import {
-  generateExactlyCommonProps,
-  generateArrayPosts,
-  type ArrayContent
-} from '@/publicData/functions/amPublicFunctions';
-/***** just for testing */
-import {
-  midudev_commonProps,
-  midudev_array_of_posts
-} from '@/publicData/user-1-midudev';
-import { goated_ai_art_array_of_posts } from '@/publicData/user-2-goated-ai-art';
-import {
-  qbitlab_array_of_posts,
-  qbitlab_commonProps
-} from '@/publicData/user-6-qbitlab';
+import { generateExactlyCommonProps } from '@/publicData/functions/amPublicFunctions';
 import { getRandomNumber } from '@/utils/functions';
 
-/***** just for testing */
-
 export const user_array_of_saved_posts: arrayOfPosts = [
-  // [midudev_commonProps, [midudev_array_of_posts[0]]],
-  [midudev_commonProps, [midudev_array_of_posts[0], midudev_array_of_posts[1]]],
-  [qbitlab_commonProps, [qbitlab_array_of_posts[0]]]
+  // [midudev_commonProps, [midudev_array_of_posts[0], midudev_array_of_posts[1]]],
 ];
 
 export const user_array_of_liked_posts: arrayOfPosts = [
-  [midudev_commonProps, [midudev_array_of_posts[0]]]
+  // [midudev_commonProps, [midudev_array_of_posts[0]]]
 ];
-
-// export const user_array_of_saved_posts = generateArrayPosts({
-//   PREFIX,
-//   ARRAY_CONTENT
-// }).toReversed();
 
 const randomNumOfFollowersFirstTime = getRandomNumber(1000, 100_000);
 
@@ -72,7 +49,6 @@ export function getUser({
         ...commonProps
       }))
   );
-
 
   return {
     user_commonProps,
