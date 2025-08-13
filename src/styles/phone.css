@@ -120,7 +120,7 @@ body {
   }
 
   @media (width <= 1095px) and (orientation: landscape) and (hover: none) {
-    zoom: 0.7;
+    zoom: 0.5;
   }
 
   @media (width <= 1095px) and (orientation: landscape) and (hover: hover) {
@@ -168,6 +168,6 @@ body {
   }
 
   @media (width <= 700px) and (orientation: portrait) and (hover: none) {
-    zoom: 0.8;
+    zoom: 0.9;
   }
 }
