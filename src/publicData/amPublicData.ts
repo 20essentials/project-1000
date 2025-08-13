@@ -5,14 +5,6 @@ import {
 import type { arrayOfPosts } from '@/components/pages/SliderPosts/types.d.ts';
 
 import {
-  vid_favorites_array_of_posts,
-  vid_favorites_commonProps
-} from '@/publicData/user-7-vidfavorites';
-import {
-  siti_favolosi_array_of_posts,
-  siti_favolosi_commonProps
-} from '@/publicData/user-8-siti-favolosi';
-import {
   luxury_array_of_posts,
   luxury_commonProps
 } from '@/publicData/user-9-luxury';
@@ -254,6 +246,8 @@ import {
   mr_lamborghini_commonProps
 } from './user-4-mrlamborghini';
 import { qbitlab_array_of_posts, qbitlab_commonProps } from './user-6-qbitl4b';
+import { vid_favorites_array_of_posts, vid_favorites_commonProps } from './user-7-vidsfavorites';
+import { siti_favolosi_array_of_posts, siti_favolosi_commonProps } from './user-8-sitifavolosi';
 
 export const PUBLIC_DATA: arrayOfPosts = [
   //testing
@@ -267,6 +261,8 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [mr_lamborghini_commonProps, mr_lamborghini_array_of_posts] /* 4 */,
   [magi_skill_commonProps, magi_skill_array_of_posts] /* 5 */,
   [qbitlab_commonProps, qbitlab_array_of_posts] /* 6 */,
+  [vid_favorites_commonProps, vid_favorites_array_of_posts] /* 7 */,
+  [siti_favolosi_commonProps, siti_favolosi_array_of_posts] /* 8*/,
 
   [soyveyrox_commonProps, soyveyrox_array_of_posts],
   [freeskates_commonProps, freeskates_array_of_posts],
@@ -329,8 +325,5 @@ export const PUBLIC_DATA: arrayOfPosts = [
   // [marshall_jassan_commonProps, marshall_jassan_array_of_posts],
   // [edaserkanbolat_edits_commonProps, edaserkanbolat_edits_array_of_posts]
   // [jorgepomarg_commonProps, jorgepomarg_array_of_posts],
-
   // [mr_lamborghini_commonProps, mr_lamborghini_array_of_posts],
-  // [vid_favorites_commonProps, vid_favorites_array_of_posts],
-  // [siti_favolosi_commonProps, siti_favolosi_array_of_posts]
 ];
