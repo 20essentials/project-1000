@@ -117,7 +117,6 @@ export function Container1() {
       <article
         className='social-top elegido tik-tok-logo'
         ref={iconRef}
-        
         style={{
           position: 'absolute',
           left: `${amX}px`,
