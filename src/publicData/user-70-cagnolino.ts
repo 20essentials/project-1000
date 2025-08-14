@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'cagnolino';
-const userId = '';
-const prefixUrl = '';
+const userId = '6e6f00b1-4e89-4004-9929-e6f2f49aa9cb';
+const prefixUrl = 'https://dominicnikolai.github.io/project-259/assets/cagnolino/';
 const followers = 327_720;
 const followed = 123;
 const profileDescription = '🐶';
@@ -14,7 +14,7 @@ const prefixLetterVideos = 'v';
 const prefixLetterImages = 'n';
 const quantityOfVideos = 9;
 const quantityOfImages = 0;
-const profileImageSrc = `${prefixUrl}p3rfil.avif`;
+const profileImageSrc = `https://20essentials.github.io/project-000-940/assets/j7.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [

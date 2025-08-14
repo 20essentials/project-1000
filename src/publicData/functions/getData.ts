@@ -12,5 +12,6 @@ if (SHOW_PRIVATE_DATA) {
 
 export const FOLLOWED: arrayOfPosts = [];
 export const FOR_YOU: arrayOfPosts = SHOW_PRIVATE_DATA
-  ? [...privateData, ...PUBLIC_DATA].slice(0,4)
+  ? [...privateData, ...PUBLIC_DATA]
+  // ? [...privateData, ...PUBLIC_DATA].slice(0,4)
   : [...PUBLIC_DATA];

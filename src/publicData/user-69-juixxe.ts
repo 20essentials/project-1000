@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'juixxe';
-const userId = '';
-const prefixUrl = '';
+const userId = '68e8ad14-092f-4927-a115-72240fa4170a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-260/assets/juixxe/';
 const followers = 2_173_322;
 const followed = 321;
 const profileDescription = 'Echándole Ganas Foundation ';

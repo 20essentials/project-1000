@@ -244,6 +244,8 @@ import { vid_favorites_array_of_posts, vid_favorites_commonProps } from './user-
 import { siti_favolosi_array_of_posts, siti_favolosi_commonProps } from './user-8-sitifavolosi';
 import { luxury_array_of_posts, luxury_commonProps } from './user-9-theluxury';
 import { marshall_jassan_array_of_posts, marshall_jassan_commonProps } from './user-10-marshall';
+import { cagnolino_array_of_posts, cagnolino_commonProps } from './user-70-cagnolino';
+import { juixxe_array_of_posts, juixxe_commonProps } from './user-69-juixxe';
 
 export const PUBLIC_DATA: arrayOfPosts = [
   //testing
@@ -261,6 +263,9 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [siti_favolosi_commonProps, siti_favolosi_array_of_posts] /* 8*/,
   [luxury_commonProps, luxury_array_of_posts] /* 9 */,
   [marshall_jassan_commonProps, marshall_jassan_array_of_posts] /* 10 */,
+
+  [juixxe_commonProps, juixxe_array_of_posts] /* 69 */,
+  [cagnolino_commonProps, cagnolino_array_of_posts] /* 70 */,
 
   [soyveyrox_commonProps, soyveyrox_array_of_posts],
   [freeskates_commonProps, freeskates_array_of_posts],
