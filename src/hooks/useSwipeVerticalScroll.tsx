@@ -12,7 +12,6 @@ export const useSwipeVerticalScroll = (ref: RefObject<HTMLElement | null>) => {
     let startY = 0;
     let startScrollTop = 0;
 
-    // Posición relativa al padre
     const getRelativeYToParent = (e: MouseEvent) => {
       const parentRect = parent.getBoundingClientRect();
       return e.clientY - parentRect.top;
