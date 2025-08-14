@@ -1,12 +1,15 @@
 import {
   generateExactlyCommonProps,
   generateArrayPostsOfImages,
-  generateArrayPostsOfVideos
+  generateArrayPostsOfVideos,
+  generateArrayPosts,
+  type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'aiaartsensei';
 const userId = '4f7dbbbd-78d2-4bc2-9ccf-690f85d00a4eas';
-const prefixUrl = 'https://dominicnikolai.github.io/project-254/assets/aiaartsensei/';
+const prefixUrl =
+  'https://dominicnikolai.github.io/project-254/assets/aiaartsensei/';
 const followers = 35_600;
 const followed = 211;
 const profileDescription = '🎨 AI-Generated Art & Wallpapers ✨';
@@ -84,10 +87,25 @@ const aiaartsensei_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
-  quantityOfImages,
+  quantityOfImages
+});
+
+const amArrayContent: ArrayContent = [
+  {
+    type: 'image',
+    arrayImages: ['a1.avif', 'a2.avif', 'a3.avif', 'a4.avif', 'a5.avif'],
+    description: `Recap`,
+    idPost: `${aiaartsensei_commonProps.userId}-2a04dc1e-8c3e-324950-92d2-470487e3f8e132`
+  }
+];
+
+export const galery_testing = generateArrayPosts({
+  PREFIX: prefixUrl,
+  ARRAY_CONTENT: amArrayContent
 });
 
 export const aiaartsensei_array_of_posts = [
-  ...aiaartsensei_images,
+  ...galery_testing,
+  ...aiaartsensei_images.slice(1),
   ...aiaartsensei_videos
 ];
