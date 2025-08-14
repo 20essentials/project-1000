@@ -56,7 +56,7 @@ export function HeartContainer({ hearts, post, otherClassName }: Props) {
   }, [arrayOfSavedPostOfTheUser]);
 
   return (
-    <section className={className} onClick={savePost}>
+    <section className={className} onClick={savePost} data-clickable="true">
       <Heart />
       <span className='count'>{generateNumOfAsideRight(hearts)}</span>
     </section>

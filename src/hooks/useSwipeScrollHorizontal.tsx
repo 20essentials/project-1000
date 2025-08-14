@@ -64,7 +64,7 @@ export function useSwipeScrollHorizontal({
         onDrag: updateProgress,
         onThrowUpdate: updateProgress,
         snap: { x: snapX },
-        allowNativeTouchScrolling: true
+        dragClickables: true,
       });
 
       resize();
