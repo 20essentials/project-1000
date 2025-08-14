@@ -11,12 +11,12 @@ export function useSwipeScrollHorizontal({
 }: {
   containerOfImagesRef: React.RefObject<HTMLElement | null>;
   classNameOfTrigger: string;
-  classNameOfSlides?: string
+  classNameOfSlides?: string;
 }) {
   useGSAP(
     () => {
       if (!containerOfImagesRef.current) return;
-      const containerOfSlide = containerOfImagesRef.current as HTMLElement
+      const containerOfSlide = containerOfImagesRef.current as HTMLElement;
       const slides = [...containerOfSlide.querySelectorAll(classNameOfSlides)];
       const numSlides = slides.length;
       if (numSlides === 1) return;
@@ -64,7 +64,13 @@ export function useSwipeScrollHorizontal({
         onDrag: updateProgress,
         onThrowUpdate: updateProgress,
         snap: { x: snapX },
-        dragClickables: true,
+        dragClickables: false,
+        clickableTest: (el: Element) => {
+          // True = es clickeable y NO se arrastra
+          return !!el.closest(
+            'a,button,input,textarea,select,[data-clickable="true"]'
+          );
+        }
       });
 
       resize();
