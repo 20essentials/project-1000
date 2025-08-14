@@ -19,7 +19,7 @@ interface Props {
 
 export function HeartContainer({ hearts, post, otherClassName }: Props) {
   const [thisPostIsSave, setThisPostIsSaved] = useState(post.isSaved);
-  const className = `button-container btn-container-liked ${otherClassName} ${
+  const className = `button-container btn-container-liked isClickableInDrag ${otherClassName} ${
     thisPostIsSave ? 'this-post-is-liked' : ''
   }`;
   const deletePostSaved = userUserLikedPosts(state => state.deletePostSaved);
@@ -56,9 +56,9 @@ export function HeartContainer({ hearts, post, otherClassName }: Props) {
   }, [arrayOfSavedPostOfTheUser]);
 
   return (
-    <section className={className} onClick={savePost} data-clickable="true">
+    <section className={className} onClick={savePost} >
       <Heart />
-      <span className='count'>{generateNumOfAsideRight(hearts)}</span>
+      <span className='count '>{generateNumOfAsideRight(hearts)}</span>
     </section>
   );
 }

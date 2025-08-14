@@ -128,9 +128,9 @@ export function StoryPostVideo(
   }, []);
 
   return (
-    <aside className='post-video showBackgroundBlackInText' ref={postVideoRef}>
+    <aside className='post-video showBackgroundBlackInText ' ref={postVideoRef}>
       <video
-        className='am-video-of-post'
+        className='am-video-of-post '
         src={videoSrc}
         ref={videoRef}
         loop
@@ -140,7 +140,7 @@ export function StoryPostVideo(
       {thisPostWillRenderMorePost && <div className='post-image-overlay'></div>}
 
       <article className='navbar-user-story'>
-        <section className='button-container btn-container-user-profile'>
+        <section className='button-container btn-container-user-profile isClickableInDrag'>
           <UserProfile
             profileImageSrc={profileImageSrc}
             userId={userId}

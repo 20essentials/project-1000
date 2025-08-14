@@ -11,7 +11,6 @@ export function useSwipeScrollHorizontalStory({
   containerOfImagesRef: React.RefObject<HTMLElement | null>;
   classNameOfTrigger: string;
 }) {
-
   useGSAP(
     () => {
       if (!containerOfImagesRef.current) return;
@@ -23,7 +22,7 @@ export function useSwipeScrollHorizontalStory({
       const numSlides = slides.length;
       if (numSlides === 1) return;
 
-      const slideDelay = 18000 //5 hours;
+      const slideDelay = 18000; //5 hours;
       const slideDuration = 0.3;
       const wrap = true;
 
@@ -64,6 +63,13 @@ export function useSwipeScrollHorizontalStory({
         onPress: updateDraggable,
         onDrag: updateProgress,
         onThrowUpdate: updateProgress,
+        dragClickables: false,
+        clickableTest: (el: Element) => {
+          return (
+            el.classList.contains('isClickableInDrag') ||
+            el.closest('.isClickableInDrag')
+          );
+        },
         snap: { x: snapX }
       });
 

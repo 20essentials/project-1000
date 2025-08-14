@@ -63,14 +63,8 @@ export function useSwipeScrollHorizontal({
         onPress: updateDraggable,
         onDrag: updateProgress,
         onThrowUpdate: updateProgress,
-        snap: { x: snapX },
-        dragClickables: false,
-        clickableTest: (el: Element) => {
-          // True = es clickeable y NO se arrastra
-          return !!el.closest(
-            'a,button,input,textarea,select,[data-clickable="true"]'
-          );
-        }
+
+        snap: { x: snapX }
       });
 
       resize();

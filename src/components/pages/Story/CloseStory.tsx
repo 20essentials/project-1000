@@ -13,7 +13,7 @@ export function CloseStory({ className }: { className: string }) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      className={className}
+      className={`${className} isClickableInDrag`}
       onClick={goToHome}
       viewBox='0 0 24 24'
       fill='none'

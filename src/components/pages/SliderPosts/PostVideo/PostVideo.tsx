@@ -183,7 +183,7 @@ export function PostVideo(
       {thisPostWillRenderMorePost && <div className='post-image-overlay'></div>}
 
       <article className='aside-right-buttons aside-right-buttons-postvideo'>
-        <section className='button-container btn-container-user-profile'>
+        <section className='button-container btn-container-user-profile isClickableInDrag'>
           <UserProfile profileImageSrc={profileImageSrc} userId={userId} />
         </section>
         <HeartContainer hearts={hearts} post={props} />

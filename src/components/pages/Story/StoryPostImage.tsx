@@ -161,7 +161,7 @@ export function StoryPostImage(
         <audio ref={audioRef} src={randomSong} loop preload='auto' />
       )}
 
-      <section className='layer-1-post-image' ref={layerOfImagesRef}>
+      <section className='layer-1-post-image ' ref={layerOfImagesRef}>
         <aside className='layer-1-post-image-inner'>
           {arrayImages?.slice(0)?.map((src, i) => (
             <img
@@ -190,7 +190,7 @@ export function StoryPostImage(
         {thisPostWillRenderMorePost && <div className='post-image-overlay'></div>}
 
         <article className='navbar-user-story'>
-          <section className='button-container btn-container-user-profile'>
+          <section className='button-container btn-container-user-profile isClickableInDrag'>
             <UserProfile
               profileImageSrc={profileImageSrc}
               userId={userId}
