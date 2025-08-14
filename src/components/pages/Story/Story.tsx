@@ -40,7 +40,7 @@ export function Story() {
 
   useSwipeScrollHorizontalStory({
     containerOfImagesRef: sliderRef,
-    classNameOfTrigger: '.slider-inner'
+    classNameOfTrigger: '.slider-inner',
   });
 
   return (

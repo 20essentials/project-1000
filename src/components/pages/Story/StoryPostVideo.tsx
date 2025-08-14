@@ -11,7 +11,7 @@ import { UserProfile } from '@/components/pages/SliderPosts/AsideRight/UserProfi
 import { HeartContainer } from '@/components/pages/SliderPosts/AsideRight/HeartContainer';
 import { InputRange } from '@/components/pages/SliderPosts/PostVideo/inputRange';
 import { useIsScrolling } from '@/store/useIsScrolling';
-import { CloseX } from '@/components/pages/Story//CloseX';
+import { CloseStory } from './CloseStory';
 
 export function StoryPostVideo(
   props: postProps & postComonProps & { idx: number }
@@ -151,7 +151,7 @@ export function StoryPostVideo(
           {username} ·{' '}
           <output className='am-time'>{randomNumOfHours} hours ago</output>
         </h2>
-        <CloseX className='am-x-story-container' />
+        <CloseStory className='am-x-story-container' />
       </article>
 
       <HeartContainer

@@ -2,6 +2,11 @@ import gsap from 'gsap';
 import Draggable from 'gsap/Draggable';
 import InertiaPlugin from 'gsap/InertiaPlugin';
 import { useGSAP } from '@gsap/react';
+import {
+  DURATION_OF_POST_INITIAL,
+  useStoryDuration
+} from '@/store/useStoryDuration';
+import { useMemo } from 'react';
 gsap.registerPlugin(Draggable, InertiaPlugin, useGSAP);
 
 export function useSwipeScrollHorizontalStory({
@@ -11,6 +16,7 @@ export function useSwipeScrollHorizontalStory({
   containerOfImagesRef: React.RefObject<HTMLElement | null>;
   classNameOfTrigger: string;
 }) {
+
   useGSAP(
     () => {
       if (!containerOfImagesRef.current) return;
@@ -19,14 +25,12 @@ export function useSwipeScrollHorizontalStory({
         '.slider-inner'
       ) as HTMLElement;
       const slides = [...sliderInner.children];
-      console.log(slides);
       const numSlides = slides.length;
       if (numSlides === 1) return;
 
-      // const slideDelay = 10;
-      const slideDelay = 10; /* testing */
+      const slideDelay = 18000 //5 hours;
       const slideDuration = 0.3;
-      const wrap = false;
+      const wrap = true;
 
       const progressWrap = gsap.utils.wrap(0, 1);
 

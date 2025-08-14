@@ -25,7 +25,8 @@ export function InputRange({
     if (!video) return;
 
     const handleLoadedMetadata = () => {
-      setTotalDuration(Math.floor(video.duration));
+      const duration = Math.floor(video.duration);
+      setTotalDuration(duration);
     };
 
     const handleTimeUpdate = () => {

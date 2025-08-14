@@ -1,5 +1,7 @@
 import '@/components/pages/SliderPosts/PostVideo/inputRange.css';
+import { useStoryDuration } from '@/store/useStoryDuration';
 import { formatTimeHH_MM_SS } from '@/utils/functions';
+import { useEffect } from 'react';
 
 export function InputRangeAudio({
   audioRef,
@@ -24,16 +26,16 @@ export function InputRangeAudio({
       <aside className={`container-input-range ${otherClassName}`}>
         <input
           onChange={handleDuration}
-          className="am-input-range"
-          type="range"
+          className='am-input-range'
+          type='range'
           min={0}
           max={totalDuration}
           value={currentDuration}
         />
       </aside>
-      <aside className="am-timer-input-range">
+      <aside className='am-timer-input-range'>
         {formatTimeHH_MM_SS(currentDuration)} /&nbsp;
-        <span className="total-time">{formatTimeHH_MM_SS(totalDuration)}</span>
+        <span className='total-time'>{formatTimeHH_MM_SS(totalDuration)}</span>
       </aside>
     </>
   );

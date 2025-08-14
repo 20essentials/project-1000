@@ -15,6 +15,8 @@ import { useTrackVisibleImage } from '@/hooks/useTrackVisibleImage';
 import { useIsScrolling } from '@/store/useIsScrolling';
 import { CloseX } from '@/components/pages/Story/CloseX';
 import { InputRangeAudio } from '@/components/pages/Story/InputRangeAudio';
+import { CloseStory } from './CloseStory';
+import { DURATION_OF_POST_INITIAL } from '@/store/useStoryDuration';
 
 export function StoryPostImage(
   props: postProps & postComonProps & { idx: number }
@@ -34,8 +36,8 @@ export function StoryPostImage(
   const isScrolling = useIsScrolling(state => state.isScrolling);
   const [randomSong, setRandomSong] = useState<string | null>(null);
 
-  const [totalDuration, setTotalDuration] = useState(0);
   const [currentDuration, setCurrentDuration] = useState(0);
+  const [totalDuration, setTotalDuration] = useState(0);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -201,7 +203,7 @@ export function StoryPostImage(
             {username} ·{' '}
             <output className='am-time'>{randomNumOfHours} hours ago</output>
           </h2>
-          <CloseX className='am-x-story-container' />
+          <CloseStory className='am-x-story-container' />
         </article>
 
         <HeartContainer
