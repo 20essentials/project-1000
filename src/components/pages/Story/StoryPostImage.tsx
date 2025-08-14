@@ -10,7 +10,6 @@ import { userHasInteracted } from '@/store/userHasInteracted';
 import { PlayButton } from '@/components/pages/SliderPosts/PostVideo/PlayButton';
 import { UserProfile } from '@/components/pages/SliderPosts/AsideRight/UserProfile';
 import { HeartContainer } from '@/components/pages/SliderPosts/AsideRight/HeartContainer';
-import { useSwipeScroll } from '@/hooks/useSwipeScroll';
 import { NumOfPost } from '@/components/pages/SliderPosts/PostImage/NumOfPost';
 import { useTrackVisibleImage } from '@/hooks/useTrackVisibleImage';
 import { useIsScrolling } from '@/store/useIsScrolling';
@@ -20,17 +19,11 @@ import { InputRangeAudio } from '@/components/pages/Story/InputRangeAudio';
 export function StoryPostImage(
   props: postProps & postComonProps & { idx: number }
 ) {
-  const {
-    arrayImages,
-    hearts,
-    username,
-    profileImageSrc,
-    idx,
-    userId,
-    idPost
-  } = props;
+  const { arrayImages, hearts, username, profileImageSrc, idx, userId, idPost } =
+    props;
 
-  const arrayImagesLength = arrayImages?.length ?? 0;
+  // const arrayImagesLength = arrayImages?.length ?? 0;
+  const arrayImagesLength = 1;
   const thisPostWillRenderMorePost = idx % 3 === 0;
   const setLimit = useLimitOfPost(state => state.setLimit);
   const offsetOfPosts = useLimitOfPost(state => state.offsetOfPosts);
@@ -162,8 +155,6 @@ export function StoryPostImage(
     return getRandomNumber(1, 23);
   }, []);
 
-  useSwipeScroll(layerOfImagesRef);
-
   return (
     <article className='post-image' ref={postImageRef}>
       {randomSong && (
@@ -171,16 +162,18 @@ export function StoryPostImage(
       )}
 
       <section className='layer-1-post-image' ref={layerOfImagesRef}>
-        {arrayImages?.map((src, i) => (
-          <img
-            key={`${idPost}-${i}`}
-            src={src}
-            className='layer-img-inner'
-            alt='image'
-            draggable='false'
-            onClick={handleAudioToggle}
-          />
-        ))}
+        <aside className='layer-1-post-image-inner'>
+          {arrayImages?.slice(0)?.map((src, i) => (
+            <img
+              key={`${idPost}-${i}`}
+              src={src}
+              className='layer-img-inner'
+              alt='image'
+              draggable='false'
+              onClick={handleAudioToggle}
+            />
+          ))}
+        </aside>
       </section>
 
       <aside className='layer-2-post-image'>

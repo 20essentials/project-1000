@@ -22,7 +22,7 @@ export function ArrayOfNavbarStories({
     ...el,
     ...el.story
   })) as ArrayOfNavBarHistories;
-  
+
   const setArrayOfStoryPosts = usePostsOftheStory(
     state => state.setArrayOfStoryPosts
   );
@@ -35,16 +35,17 @@ export function ArrayOfNavbarStories({
       '.navbar-of-histories'
     ) as HTMLElement;
     const indexStart = [...parent.children].indexOf(currentHistoryCircle);
-    setCurrentPage(IS_ACTIVE_BUTTON.STORY);
     setIndexOfPost(indexStart);
+    setCurrentPage(IS_ACTIVE_BUTTON.STORY);
   }
 
   useEffect(() => {
     setArrayOfStoryPosts({ arrayOfStoryPosts: arrayOfPostsOfTheStory });
   }, [arrayOfPostsOfTheStory]);
 
-  return arrayOfNavBarHistories.map(
-    ({ profileImageSrc, userId, username }, i) => {
+  return arrayOfNavBarHistories
+    .slice(0, -1)
+    .map(({ profileImageSrc, userId, username }, i) => {
       return (
         <aside className='history-container' key={i} onClick={goToHistory}>
           <article className='history-container-circle'>
@@ -60,6 +61,5 @@ export function ArrayOfNavbarStories({
           </aside>
         </aside>
       );
-    }
-  );
+    });
 }

@@ -12,7 +12,6 @@ import { UserProfile } from '@/components/pages/SliderPosts/AsideRight/UserProfi
 import { AsideText } from '@/components/pages/SliderPosts/AsideText';
 import { SaveContainer } from '@/components/pages/SliderPosts/AsideRight/SaveContainer';
 import { HeartContainer } from '@/components/pages/SliderPosts/AsideRight/HeartContainer';
-import { useSwipeScroll } from '@/hooks/useSwipeScroll';
 import { NumOfPost } from '@/components/pages/SliderPosts/PostImage/NumOfPost';
 import { useTrackVisibleImage } from '@/hooks/useTrackVisibleImage';
 import { CommentsContainer } from '@/components/pages/SliderPosts/AsideRight/CommentsContainer';
@@ -22,6 +21,7 @@ import { ContainerBottomOfComments } from '../AsideRight/ContainerBottomOfCommen
 import { AsideBottomOfShare } from '../AsideRight/AsideBottomOfShare';
 import { useUpdateUrlParamsPostVideoOrImage } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 import { useCurrentUser } from '@/store/useCurrentUser';
+import { useSwipeScrollHorizontal } from '@/hooks/useSwipeScrollHorizontal';
 
 export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const {
@@ -172,7 +172,10 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
     };
   }, []);
 
-  useSwipeScroll(layerOfImagesRef);
+  useSwipeScrollHorizontal({
+    containerOfImagesRef: layerOfImagesRef,
+    classNameOfTrigger: '.layer-1-post-image-inner'
+  });
 
   return (
     <article className='post-image' ref={postImageRef}>
@@ -181,16 +184,18 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
       )}
 
       <section className='layer-1-post-image' ref={layerOfImagesRef}>
-        {arrayImages?.map((src, i) => (
-          <img
-            key={`${idPost}-${i}`}
-            src={src}
-            className='layer-img-inner'
-            alt='image'
-            draggable='false'
-            onClick={handleAudioToggle}
-          />
-        ))}
+        <aside className='layer-1-post-image-inner'>
+          {arrayImages?.map((src, i) => (
+            <img
+              key={`${idPost}-${i}`}
+              src={src}
+              className='layer-img-inner'
+              alt='image'
+              draggable='false'
+              onClick={handleAudioToggle}
+            />
+          ))}
+        </aside>
       </section>
 
       <aside className='layer-2-post-image'>
