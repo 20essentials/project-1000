@@ -2,11 +2,6 @@ import gsap from 'gsap';
 import Draggable from 'gsap/Draggable';
 import InertiaPlugin from 'gsap/InertiaPlugin';
 import { useGSAP } from '@gsap/react';
-import {
-  DURATION_OF_POST_INITIAL,
-  useStoryDuration
-} from '@/store/useStoryDuration';
-import { useMemo } from 'react';
 gsap.registerPlugin(Draggable, InertiaPlugin, useGSAP);
 
 export function useSwipeScrollHorizontalStory({

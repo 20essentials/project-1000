@@ -36,6 +36,10 @@
     overflow: hidden;
     height: 5px;
 
+    @media (width <= 1111px) {
+      opacity: 0.5;
+    }
+
     & + .am-timer-input-range {
       opacity: 0;
       pointer-events: none;

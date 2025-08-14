@@ -13,10 +13,8 @@ import { HeartContainer } from '@/components/pages/SliderPosts/AsideRight/HeartC
 import { NumOfPost } from '@/components/pages/SliderPosts/PostImage/NumOfPost';
 import { useTrackVisibleImage } from '@/hooks/useTrackVisibleImage';
 import { useIsScrolling } from '@/store/useIsScrolling';
-import { CloseX } from '@/components/pages/Story/CloseX';
 import { InputRangeAudio } from '@/components/pages/Story/InputRangeAudio';
 import { CloseStory } from './CloseStory';
-import { DURATION_OF_POST_INITIAL } from '@/store/useStoryDuration';
 
 export function StoryPostImage(
   props: postProps & postComonProps & { idx: number }

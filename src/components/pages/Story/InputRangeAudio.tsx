@@ -1,7 +1,5 @@
 import '@/components/pages/SliderPosts/PostVideo/inputRange.css';
-import { useStoryDuration } from '@/store/useStoryDuration';
 import { formatTimeHH_MM_SS } from '@/utils/functions';
-import { useEffect } from 'react';
 
 export function InputRangeAudio({
   audioRef,
