@@ -22,9 +22,8 @@ export function Container1() {
   const amX = useTransformOrigin(st => st.x);
   const amY = useTransformOrigin(st => st.y);
 
-  function showIntroTikTok(e: React.MouseEvent) {
+  function showIntroTikTok() {
     showContainewNum(CONTAINER_IS.INTRO_PAGE);
-    e.preventDefault();
   }
 
   useGSAP(
@@ -74,6 +73,9 @@ export function Container1() {
           const left = parseInt(getComputedStyle(icon).left || '0', 10);
           const top = parseInt(getComputedStyle(icon).top || '0', 10);
           lastPosRef.current = { x: left, y: top };
+        },
+        onClick: () => {
+          showIntroTikTok()
         }
       });
 
@@ -117,7 +119,7 @@ export function Container1() {
       <article
         className='social-top elegido tik-tok-logo'
         ref={iconRef}
-        onClick={showIntroTikTok}
+        // onClick={showIntroTikTok}
         style={{
           position: 'absolute',
           left: `${amX}px`,
@@ -126,7 +128,6 @@ export function Container1() {
         }}
       >
         <img
-          onClick={showIntroTikTok}
           draggable='false'
           src={tikTokLogo}
           className='titk-tok-logo'
