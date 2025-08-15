@@ -20,16 +20,15 @@ import { AsideBottomOfShare } from '../AsideRight/AsideBottomOfShare';
 import { useUpdateUrlParamsPostVideoOrImage } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 import { useCurrentUser } from '@/store/useCurrentUser';
 
-export function PostVideo(
-  props: postProps & postComonProps & { idx: number } 
-) {
+export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   const hasInteracted = userHasInteracted(state => state.hasInteracted);
   const setUserHasInteracted = userHasInteracted(
     state => state.setUserHasInteracted
   );
-    const user = useCurrentUser(state => state.user);
-    const usernameOfTheUser = user?.username ?? '';
-    const isTheSameuser = props.username === usernameOfTheUser;
+  const user = useCurrentUser(state => state.user);
+  const usernameOfTheUser = user?.username ?? '';
+  const isTheSameuser =
+    props.username === usernameOfTheUser && props.userId === user?.id;
 
   const setLimit = useLimitOfPost(state => state.setLimit);
   const offsetOfPosts = useLimitOfPost(state => state.offsetOfPosts);
@@ -232,6 +231,7 @@ export function PostVideo(
 
       {isContainerShareOpen && (
         <AsideBottomOfShare
+          isTheSameuser={isTheSameuser}
           post={props}
           videoSrc={videoSrc}
           username={username}

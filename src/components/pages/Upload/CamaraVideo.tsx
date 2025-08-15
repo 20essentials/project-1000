@@ -106,15 +106,41 @@ export default function CamaraVideo({
     setArrayImages([]);
   };
 
+  useEffect(() => {
+    async function requestCameraAccess() {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: { facingMode: 'user' },
+          audio: true
+        });
+
+        // Si llega aquí, el usuario aceptó
+        setIsCameraAllowing(true);
+
+        // Opcional: asignar manualmente el stream al webcamRef
+        if (webcamRef.current) {
+          webcamRef.current.stream = stream;
+        }
+      } catch (error) {
+        console.error('El usuario no permitió acceso a la cámara:', error);
+        setIsCameraAllowing(false);
+      }
+    }
+
+    requestCameraAccess();
+  }, []);
+
   return (
     <div className='create-section'>
-      {/* <Webcam
-        audio={true}
-        ref={webcamRef}
-        screenshotFormat='image/jpeg'
-        videoConstraints={{ facingMode: 'user' }}
-        className='am-webcam'
-      /> */}
+      {/* {
+        <Webcam
+          audio={true}
+          ref={webcamRef}
+          screenshotFormat='image/jpeg'
+          videoConstraints={{ facingMode: 'user' }}
+          className='am-webcam'
+        />
+      } */}
 
       <Webcam
         audio={true}
@@ -132,11 +158,38 @@ export default function CamaraVideo({
       />
 
       {!cameraIsAllowing && (
-        <p className='message-error'>
+        <p
+          className='message-error'
+          onClick={async () => {
+            alert('h')
+            try {
+              const stream = await navigator.mediaDevices.getUserMedia({
+                video: { facingMode: 'user' },
+                audio: true
+              });
+
+              setIsCameraAllowing(true);
+
+              // Si quieres asignar el stream manualmente a react-webcam
+              if (webcamRef.current) {
+                webcamRef.current.stream = stream;
+              }
+            } catch (error) {
+              console.error('Acceso a cámara denegado:', error);
+              setIsCameraAllowing(false);
+            }
+          }}
+        >
           Camera access is disabled. To continue, allow camera access from your
           browser’s site settings
         </p>
       )}
+      {/* {!cameraIsAllowing && (
+        <p className='message-error'>
+          Camera access is disabled. To continue, allow camera access from your
+          browser’s site settings
+        </p>
+      )} */}
 
       <nav className='nav-of-type-of-capture'>
         <div

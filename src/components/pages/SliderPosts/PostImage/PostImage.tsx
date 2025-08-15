@@ -53,8 +53,7 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const user = useCurrentUser(state => state.user);
   const usernameOfTheUser = user?.username ?? '';
   const isTheSameuser =
-    props.username === usernameOfTheUser ||
-    (user?.id != null && props.idPost?.includes(user.id));
+    props.username === usernameOfTheUser && props.userId === user?.id;
 
   const [isContainerBottomOpen, setIsContainerBottomOpen] = useState(false);
 
@@ -269,6 +268,7 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
             post={props}
             arrayImages={arrayImages}
             username={username}
+            isTheSameuser={isTheSameuser}
             containerRef={postImageRef}
             isContainerShareOpen={isContainerShareOpen}
             updateIsContainerShareOpen={updateIsContainerShareOpen}

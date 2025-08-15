@@ -63,10 +63,13 @@ export function SliderPostsOfSingleUser() {
   const indexOfPost = useUserCreator(state => state.indexOfPost);
 
   useEffect(() => {
-    if (isTheSameuser && ALL_POSTS.length === 0) {
+    if (
+      isTheSameuser &&
+      (ALL_POSTS.length === 0 || ALL_POSTS?.[0]?.[1]?.length === 0)
+    ) {
       setCurrentPage(IS_ACTIVE_BUTTON.PROFILE);
     }
-  }, [isTheSameuser, ALL_POSTS.length]);
+  }, [isTheSameuser, ALL_POSTS]);
 
   const setIsScrolling = useIsScrolling(state => state.setIsScrolling);
 

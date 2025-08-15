@@ -1,4 +1,4 @@
-import { useRef, type JSX } from 'react';
+import { Fragment, useRef, type JSX } from 'react';
 import { CloseContainer } from './CloseContainer';
 import { RepublishItemShare } from './RepublishItemShare';
 import type {
@@ -7,6 +7,7 @@ import type {
 } from '@/components/pages/SliderPosts/types.d.ts';
 import { URL_PHOTO_MISSING_IMAGE } from '@/utils/conts';
 import { useSwipeXShareAsideBottom } from '@/hooks/useSwipeXShareAsideBottom';
+import { DeletePostItemShare } from './DeletePostItemShare';
 
 type ItemType = {
   title: string;
@@ -609,7 +610,8 @@ export function AsideBottomOfShare({
   username,
   containerRef,
   isContainerShareOpen = false,
-  post
+  post,
+  isTheSameuser = false
 }: {
   updateIsContainerShareOpen: () => void;
   isContainerShareOpen?: boolean;
@@ -618,6 +620,7 @@ export function AsideBottomOfShare({
   username: string;
   containerRef: React.RefObject<HTMLElement | null>;
   post: postProps & postComonProps;
+  isTheSameuser: boolean;
 }) {
   const systembtn = useRef<null | HTMLButtonElement>(null);
   const posterOfPoster = post.arrayImages
@@ -675,14 +678,22 @@ export function AsideBottomOfShare({
 
               if (index === MODE_SHARE.REPOST) {
                 return (
-                  <RepublishItemShare
-                    amTitle={amTitle}
-                    gradient={gradient}
-                    id={id}
-                    post={post}
-                    svg={svg}
-                    key={id}
-                  />
+                  <Fragment key={id}>
+                    <RepublishItemShare
+                      amTitle={amTitle}
+                      gradient={gradient}
+                      id={id}
+                      post={post}
+                      svg={svg}
+                    />
+
+                    {isTheSameuser && (
+                      <DeletePostItemShare
+                        id={id}
+                        post={post}
+                      />
+                    )}
+                  </Fragment>
                 );
               }
 
