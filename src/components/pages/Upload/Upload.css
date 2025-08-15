@@ -22,11 +22,8 @@
       background-color: #222;
 
       .am-webcam {
-      
         width: 100%;
         height: 100%;
-          width: 320px;
-        height: 380px;
         position: absolute;
         inset: 0;
         z-index: 5;
@@ -39,8 +36,7 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        /* color: lime; */
-        color: blue;
+        color: lime;
         opacity: 0.7;
         width: 74%;
         text-wrap: balance;
