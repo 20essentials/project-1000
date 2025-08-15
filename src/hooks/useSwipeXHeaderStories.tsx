@@ -56,7 +56,7 @@ export function useSwipeXHeaderStories({
       let slideWidth = 0;
       let wrapWidth = 0;
 
-      const draggable = new Draggable(proxy, {
+      /*       const draggable = new Draggable(proxy, {
         trigger: classNameOfTrigger,
         inertia: true,
         onPress: updateDraggable,
@@ -71,10 +71,54 @@ export function useSwipeXHeaderStories({
         },
         snap: { x: snapX }
       });
+ */
 
       let moved = false;
 
- /*      const draggable = new Draggable(proxy, {
+      const draggable = new Draggable(proxy, {
+        trigger: classNameOfTrigger,
+        inertia: true,
+        onPress() {
+          moved = false;
+          //@ts-ignore
+          updateDraggable.call(this);
+        },
+        onDrag() {
+          moved = true;
+          updateProgress();
+        },
+        onThrowUpdate: updateProgress,
+        onRelease() {
+          const target = this.pointerEvent.target as HTMLElement;
+          const targetIsClickable =
+            target.classList.contains('isClickableInDrag');
+          const parentIsClickable = target.closest(
+            '.isClickableInDrag'
+          ) as HTMLElement;
+
+          if (moved) {
+            // Si hubo arrastre y el objetivo es clickeable, disparamos click manual
+            if (targetIsClickable) {
+              target.click();
+            } else if (parentIsClickable) {
+              parentIsClickable.click();
+            }
+          } else {
+            // Si NO hubo arrastre, dejamos que ocurra el click natural
+            // Pero opcionalmente, podrías forzar el click para asegurar compatibilidad
+            if (targetIsClickable) {
+              target.click();
+            } else if (parentIsClickable) {
+              parentIsClickable.click();
+            }
+          }
+        },
+        dragClickables: false,
+        snap: { x: snapX }
+      });
+
+      /*     let moved = false;
+    const draggable = new Draggable(proxy, {
         trigger: classNameOfTrigger,
         inertia: true,
         onPress() {
