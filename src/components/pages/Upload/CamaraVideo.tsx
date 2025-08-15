@@ -50,7 +50,7 @@ export default function CamaraVideo({
 
     try {
       mediaRecorderRef.current = new MediaRecorder(webcamRef.current.stream, {
-        mimeType: 'video/mp4'
+        mimeType: 'video/webm;codecs=vp8,opus'
       });
     } catch (error) {
       console.error('Error creando MediaRecorder:', error);
@@ -99,8 +99,8 @@ export default function CamaraVideo({
     async function requestCameraAccess() {
       try {
         const stream = await navigator.mediaDevices.getUserMedia({
-          video: { facingMode: 'user' },
-          audio: false
+          video: { facingMode: 'user', width: { ideal: 1280 }, height: { ideal: 720 } },
+          audio: true
         });
         setIsCameraAllowing(true);
         if (webcamRef.current) webcamRef.current.stream = stream;
