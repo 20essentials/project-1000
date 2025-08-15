@@ -170,7 +170,7 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   }, []);
 
   return (
-    <aside className='post-video' ref={postVideoRef}>
+    <aside className='post-video am-post-video-or-image' ref={postVideoRef}>
       <video
         className='am-video-of-post'
         src={videoSrc}

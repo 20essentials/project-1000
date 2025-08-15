@@ -177,7 +177,7 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
   });
 
   return (
-    <article className='post-image' ref={postImageRef}>
+    <article className='post-image am-post-video-or-image' ref={postImageRef}>
       {randomSong && (
         <audio ref={audioRef} src={randomSong} loop preload='auto' />
       )}

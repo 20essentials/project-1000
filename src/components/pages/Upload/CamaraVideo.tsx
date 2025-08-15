@@ -66,7 +66,7 @@ export default function CamaraVideo({
     };
 
     mediaRecorderRef.current.onstop = () => {
-      const blob = new Blob(chunksRef.current, { type: 'video/webm' });
+      const blob = new Blob(chunksRef.current, { type: 'video/mp4' });
 
       const reader = new FileReader();
       reader.onloadend = () => {
@@ -106,29 +106,29 @@ export default function CamaraVideo({
     setArrayImages([]);
   };
 
-  useEffect(() => {
-    async function requestCameraAccess() {
-      try {
-        const stream = await navigator.mediaDevices.getUserMedia({
-          video: { facingMode: 'user' },
-          audio: true
-        });
+  // useEffect(() => {
+  //   async function requestCameraAccess() {
+  //     try {
+  //       const stream = await navigator.mediaDevices.getUserMedia({
+  //         video: { facingMode: 'user' },
+  //         audio: true
+  //       });
 
-        // Si llega aquí, el usuario aceptó
-        setIsCameraAllowing(true);
+  //       // Si llega aquí, el usuario aceptó
+  //       setIsCameraAllowing(true);
 
-        // Opcional: asignar manualmente el stream al webcamRef
-        if (webcamRef.current) {
-          webcamRef.current.stream = stream;
-        }
-      } catch (error) {
-        console.error('El usuario no permitió acceso a la cámara:', error);
-        setIsCameraAllowing(false);
-      }
-    }
+  //       // Opcional: asignar manualmente el stream al webcamRef
+  //       if (webcamRef.current) {
+  //         webcamRef.current.stream = stream;
+  //       }
+  //     } catch (error) {
+  //       console.error('El usuario no permitió acceso a la cámara:', error);
+  //       setIsCameraAllowing(false);
+  //     }
+  //   }
 
-    requestCameraAccess();
-  }, []);
+  //   requestCameraAccess();
+  // }, []);
 
   return (
     <div className='create-section'>

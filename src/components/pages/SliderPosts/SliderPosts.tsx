@@ -15,10 +15,10 @@ import { useGetArrayOfFollowedAccounts } from '@/hooks/useGetArrayOfFollowedAcco
 import { ModalAlert } from './ModalAlert';
 
 export function SliderPosts() {
+  const sliderRef = useRef<HTMLElement | null>(null);
   const setCurrentPage = useCurrentPage(s => s.setCurrentPage);
   const setArrayOfPosts = useUserCreator(state => state.setArrayOfPosts);
   const setCommonProps = useUserCreator(state => state.setCommonProps);
-
   const setUserHasSeenPostOrProfileFromUrl = useUserHasSeenPostOrProfileFromUrl(
     state => state.setUserHasSeenPostOrProfileFromUrl
   );
@@ -51,7 +51,6 @@ export function SliderPosts() {
     }
   }, [userHasSeenPostOrProfileFromUrl]);
 
-  const sliderRef = useRef<HTMLDivElement>(null);
   const limit = useLimitOfPost(state => state.limit);
   const resetLimit = useLimitOfPost(state => state.resetLimit);
   const reRenderFollowed = useFollowedOrForYou(state => state.reRenderFollowed);
@@ -102,7 +101,7 @@ export function SliderPosts() {
   return (
     <article className='slider-posts'>
       <aside className='slider' ref={sliderRef}>
-        {(showModalThatTheUserDontHaveFollowed && !isForYou) && <ModalAlert />}
+        {showModalThatTheUserDontHaveFollowed && !isForYou && <ModalAlert />}
         {postsToShow.map((post, idx) => {
           const key = `post-${idx}`;
 
