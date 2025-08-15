@@ -6,7 +6,6 @@ import type {
   postComonProps
 } from '@/components/pages/SliderPosts/types.d.ts';
 import { URL_PHOTO_MISSING_IMAGE } from '@/utils/conts';
-import { useSwipeXShareAsideBottom } from '@/hooks/useSwipeXShareAsideBottom';
 
 type ItemType = {
   title: string;
@@ -631,14 +630,6 @@ export function AsideBottomOfShare({
     );
   }
 
-  const footerOfTheShareRef = useRef<HTMLElement | null>(null);
-
-  useSwipeXShareAsideBottom({
-    classNameOfTrigger: '.am-footer-of-the-share-inner',
-    containerOfImagesRef: footerOfTheShareRef,
-    classNameOfSlides: '.item-share'
-  });
-
   return (
     <article className='aside-bottom-of-share'>
       <header className='am-header-of-share'>
@@ -653,95 +644,93 @@ export function AsideBottomOfShare({
           </button>
         </div>
       </header>
-      <section className='am-footer-of-the-share' ref={footerOfTheShareRef}>
-        <aside className='am-footer-of-the-share-inner'>
-          {ARRAY_OF_SHARE.map(
-            (
-              {
-                id,
-                title,
-                gradient,
-                svg,
-                onclick = () => console.log('Without Function')
-              },
-              index
-            ) => {
-              let amTitle =
-                index === MODE_SHARE.SAVE_VIDEO_OR_IMAGE
-                  ? videoSrc
-                    ? 'Save Video'
-                    : `Save Photo${(arrayImages?.length ?? 0) > 1 ? 's' : ''}`
-                  : title;
+      <section className='am-footer-of-the-share'>
+        {ARRAY_OF_SHARE.map(
+          (
+            {
+              id,
+              title,
+              gradient,
+              svg,
+              onclick = () => console.log('Without Function')
+            },
+            index
+          ) => {
+            let amTitle =
+              index === MODE_SHARE.SAVE_VIDEO_OR_IMAGE
+                ? videoSrc
+                  ? 'Save Video'
+                  : `Save Photo${(arrayImages?.length ?? 0) > 1 ? 's' : ''}`
+                : title;
 
-              if (index === MODE_SHARE.REPOST) {
-                return (
-                  <RepublishItemShare
-                    amTitle={amTitle}
-                    gradient={gradient}
-                    id={id}
-                    post={post}
-                    svg={svg}
-                    key={id}
-                  />
-                );
-              }
-
+            if (index === MODE_SHARE.REPOST) {
               return (
-                <aside
-                  className='item-share isClickableInDrag'
+                <RepublishItemShare
+                  amTitle={amTitle}
+                  gradient={gradient}
+                  id={id}
+                  post={post}
+                  svg={svg}
                   key={id}
-                  onClick={() => {
-                    if (index === MODE_SHARE.SAVE_VIDEO_OR_IMAGE) {
-                      onclick({
-                        refButton: systembtn,
-                        nombreArchivo: username,
-                        urls: videoSrc ? [videoSrc] : arrayImages ?? [],
-                        updateIsContainerShareOpen
-                      });
-                    } else if (index === MODE_SHARE.COPY_LINK) {
-                      onclick({
-                        refButton: systembtn
-                      });
-                    } else if (index === MODE_SHARE.X) {
-                      onclick({
-                        username,
-                        refButton: systembtn
-                      });
-                    } else if (index === MODE_SHARE.PINTEREST) {
-                      onclick({
-                        refButton: systembtn,
-                        url: window.location.href,
-                        media: posterOfPoster,
-                        description: post.description
-                      });
-                    } else if (
-                      index === MODE_SHARE.REDDIT ||
-                      index === MODE_SHARE.FACEBOOK ||
-                      index === MODE_SHARE.WHATSAPP ||
-                      index === MODE_SHARE.EMAIL ||
-                      index === MODE_SHARE.DISCORD ||
-                      index === MODE_SHARE.TELEGRAM
-                    ) {
-                      onclick({
-                        refButton: systembtn,
-                        url: window.location.href,
-                        description: post.description
-                      });
-                    }
-                  }}
-                >
-                  <article
-                    className='circle-gradient'
-                    style={{ backgroundImage: gradient }}
-                  >
-                    {svg}
-                  </article>
-                  <h4 className='title-share'>{amTitle}</h4>
-                </aside>
+                />
               );
             }
-          )}
-        </aside>
+
+            return (
+              <aside
+                className='item-share'
+                key={id}
+                onClick={() => {
+                  if (index === MODE_SHARE.SAVE_VIDEO_OR_IMAGE) {
+                    onclick({
+                      refButton: systembtn,
+                      nombreArchivo: username,
+                      urls: videoSrc ? [videoSrc] : arrayImages ?? [],
+                      updateIsContainerShareOpen
+                    });
+                  } else if (index === MODE_SHARE.COPY_LINK) {
+                    onclick({
+                      refButton: systembtn
+                    });
+                  } else if (index === MODE_SHARE.X) {
+                    onclick({
+                      username,
+                      refButton: systembtn
+                    });
+                  } else if (index === MODE_SHARE.PINTEREST) {
+                    onclick({
+                      refButton: systembtn,
+                      url: window.location.href,
+                      media: posterOfPoster,
+                      description: post.description
+                    });
+                  } else if (
+                    index === MODE_SHARE.REDDIT ||
+                    index === MODE_SHARE.FACEBOOK ||
+                    index === MODE_SHARE.WHATSAPP ||
+                    index === MODE_SHARE.EMAIL ||
+                    index === MODE_SHARE.DISCORD ||
+                    index === MODE_SHARE.TELEGRAM
+                  ) {
+                    onclick({
+                      refButton: systembtn,
+                      url: window.location.href,
+                      description: post.description
+                    });
+                  }
+                }}
+              >
+                <article
+                  className='circle-gradient'
+                  style={{ backgroundImage: gradient }}
+                >
+                  {svg}
+                </article>
+                <h4 className='title-share'>{amTitle}</h4>
+              </aside>
+            );
+          }
+        )}
       </section>
     </article>
   );

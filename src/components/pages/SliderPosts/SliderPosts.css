@@ -640,22 +640,21 @@
         padding: 5px;
         padding-block: 10px;
         flex-grow: 1;
-        overflow-x: scroll;
+        /* overflow-x: scroll; */
+        overflow: hidden;
         overscroll-behavior: contain;
         display: flex;
         gap: 2px;
+        width: 100%;
+        display: flex;
+        position: relative;
+        height: 74px;
 
-        &::-webkit-scrollbar {
-          height: 2px;
-        }
-
-        &::-webkit-scrollbar-thumb {
-          background-color: #fff;
-          opacity: 0.5;
-        }
-
-        &::-webkit-scrollbar-track {
-          background: transparent;
+        .am-footer-of-the-share-inner {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          overflow: hidden;
         }
 
         .item-share {
@@ -665,11 +664,12 @@
           flex-direction: column;
           gap: 8px;
           align-items: center;
+          position: absolute;
           cursor: pointer;
 
           &:active {
             .circle-gradient {
-              opacity: 0.5;
+              opacity: 0.8;
             }
           }
 

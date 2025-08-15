@@ -76,7 +76,7 @@ export function RepublishItemShare({
   }, [arrayOfSavedPostOfTheUser]);
 
   return (
-    <aside className='item-share' key={id} onClick={savePost}>
+    <aside className='item-share isClickableInDrag' key={id} onClick={savePost}>
       <article className='circle-gradient' style={{ backgroundImage: gradient }}>
         {svgToRender}
       </article>

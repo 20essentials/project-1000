@@ -27,8 +27,8 @@ export default defineConfig({
   // site: 'https://20essentials.github.io/project-1000/'
 
   //Localhost
-  site: 'http://localhost:4321/',
-  // site: 'https://project-1000-t1k-tok-minimalist.vercel.app/',
+  // site: 'http://localhost:4321/',
+  site: 'https://project-1000-t1k-tok-minimalist.vercel.app/',
 
   // server: {
   //   port: 4321,
