@@ -4,7 +4,7 @@ import InertiaPlugin from 'gsap/InertiaPlugin';
 import { useGSAP } from '@gsap/react';
 gsap.registerPlugin(Draggable, InertiaPlugin, useGSAP);
 
-export function useSwipeScrollHorizontal({
+export function useSwipeXHeaderStories({
   containerOfImagesRef,
   classNameOfTrigger,
   classNameOfSlides = 'img'
@@ -21,11 +21,12 @@ export function useSwipeScrollHorizontal({
       const numSlides = slides.length;
       if (numSlides === 1) return;
 
-      const slideDelay = 10;
+      const slideDelay = 18000; //5 hours;
       const slideDuration = 0.3;
       const wrap = true;
 
       const progressWrap = gsap.utils.wrap(0, 1);
+
 
       gsap.set(slides, {
         xPercent: (i: number) => i * 100
@@ -56,13 +57,51 @@ export function useSwipeScrollHorizontal({
       let slideWidth = 0;
       let wrapWidth = 0;
 
+      // const draggable = new Draggable(proxy, {
+      //   trigger: classNameOfTrigger,
+      //   inertia: true,
+      //   onPress: updateDraggable,
+      //   onDrag: updateProgress,
+      //   onThrowUpdate: updateProgress,
+      //   dragClickables: false,
+      //   clickableTest: (el: Element) => {
+      //     return (
+      //       el.classList.contains('isClickableInDrag') ||
+      //       el.closest('.isClickableInDrag')
+      //     );
+      //   },
+      //   snap: { x: snapX }
+      // });
+
+      let moved = false;
+
       const draggable = new Draggable(proxy, {
         trigger: classNameOfTrigger,
         inertia: true,
-        onPress: updateDraggable,
-        onDrag: updateProgress,
+        onPress() {
+          moved = false;
+          //@ts-ignore
+          updateDraggable.call(this);
+        },
+        onDrag() {
+          moved = true;
+          updateProgress();
+        },
         onThrowUpdate: updateProgress,
-
+        onRelease() {
+          if (moved) {
+            // Si hubo arrastre, prevenir el click normal
+            const target = this.pointerEvent.target as HTMLElement;
+            if (
+              target.classList.contains('isClickableInDrag') ||
+              target.closest('.isClickableInDrag')
+            ) {
+              target.addEventListener('click', e => e.preventDefault(), {
+                once: true
+              });
+            }
+          }
+        },
         snap: { x: snapX }
       });
 

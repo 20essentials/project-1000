@@ -21,6 +21,7 @@ export function Story() {
       const sliderInner = sliderRef.current.querySelector(
         '.slider-inner'
       ) as HTMLElement;
+      if (indexOfPost === -1) return
       setIsScrolling({ isScrolling: true });
       sliderInner.children[indexOfPost].scrollIntoView({
         behavior: 'smooth'

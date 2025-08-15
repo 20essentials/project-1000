@@ -205,7 +205,7 @@ export function StoryPostImage(
         </article>
 
         <HeartContainer
-          otherClassName={'am-heart-from-story'}
+          otherClassName={'am-heart-from-story '}
           hearts={hearts}
           post={props}
         />
@@ -218,7 +218,7 @@ export function StoryPostImage(
         )}
 
         <InputRangeAudio
-          otherClassName='story-input-range'
+          otherClassName='story-input-range '
           audioRef={audioRef}
           totalDuration={totalDuration}
           currentDuration={currentDuration}

@@ -273,6 +273,7 @@ export const PUBLIC_DATA: arrayOfPosts = [
   // [justtrip_commonProps, justtrip_array_of_posts],
   // [mycelium_mirrors_commonProps, mycelium_mirrors_array_of_posts],
 
+  [mateomassoni_commonProps, mateomassoni_array_of_posts],
   [ximu_cat_commonProps, ximu_cat_array_of_posts],
   [mr_rizzer_commonProps, mr_rizzer_array_of_posts],
   [beitman_commonProps, beitman_array_of_posts],
@@ -280,7 +281,6 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [turnsignalthecat_commonProps, turnsignalthecat_array_of_posts],
   // [gafurovedit_commonProps, gafurovedit_array_of_posts],
   [spirograph_commonProps, spirograph_array_of_posts],
-  [mateomassoni_commonProps, mateomassoni_array_of_posts],
   [dreamfall_commonProps, dreamfall_array_of_posts],
   // [improve_commonProps, improve_array_of_posts],
   // [lggbb_commonProps, lggbb_array_of_posts],

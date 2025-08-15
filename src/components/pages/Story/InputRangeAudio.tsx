@@ -21,10 +21,12 @@ export function InputRangeAudio({
 
   return (
     <>
-      <aside className={`container-input-range ${otherClassName}`}>
+      <aside
+        className={`container-input-range isClickableInDrag ${otherClassName}`}
+      >
         <input
           onChange={handleDuration}
-          className='am-input-range'
+          className='am-input-range '
           type='range'
           min={0}
           max={totalDuration}

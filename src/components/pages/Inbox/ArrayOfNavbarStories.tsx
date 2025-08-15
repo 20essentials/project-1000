@@ -7,7 +7,7 @@ import {
 } from '@/store/usePostsOfTheStory';
 import { useEffect } from 'react';
 import { useUserCreator } from '@/store/useUserCreator';
-const MAX_LENGTH_OF_USERNAME = 10;
+const MAX_LENGTH_OF_USERNAME = 8;
 export type TypeArrayOfNavBarHistories = (postComonProps & {
   story?: postProps;
 })[];
@@ -30,11 +30,12 @@ export function ArrayOfNavbarStories({
 
   function goToHistory(e: React.MouseEvent) {
     e.preventDefault();
-    const currentHistoryCircle = e.target as HTMLElement;
-    const parent = currentHistoryCircle.closest(
-      '.navbar-of-histories'
+    const historyContainer = (e.target as HTMLElement)
+      .parentElement as HTMLElement;
+    const parent = historyContainer.closest(
+      '.navbar-of-histories-inner'
     ) as HTMLElement;
-    const indexStart = [...parent.children].indexOf(currentHistoryCircle);
+    const indexStart = [...parent.children].indexOf(historyContainer);
     setIndexOfPost(indexStart);
     setCurrentPage(IS_ACTIVE_BUTTON.STORY);
   }
@@ -44,11 +45,14 @@ export function ArrayOfNavbarStories({
   }, [arrayOfPostsOfTheStory]);
 
   return arrayOfNavBarHistories
-    .slice(0, -1)
+    // .slice(0, -)
     .map(({ profileImageSrc, userId, username }, i) => {
       return (
-        <aside className='history-container' key={i} onClick={goToHistory}>
-          <article className='history-container-circle'>
+        <aside className='history-container' key={i}>
+          <article
+            className='history-container-circle isClickableInDrag'
+            onClick={goToHistory}
+          >
             <img
               className='history-container-circle-inner'
               src={profileImageSrc}

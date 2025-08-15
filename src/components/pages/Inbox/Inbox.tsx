@@ -10,6 +10,7 @@ import { useMemo, useRef, useState } from 'react';
 import { ArrayOfNavbarStories } from '@/components/pages/Inbox/ArrayOfNavbarStories';
 import { ListOfUsers } from '@/components/pages/FollowedAndFollow/ListOfUser';
 import { FOLLOWED, FOR_YOU } from '@/publicData/functions/getData';
+import { useSwipeXHeaderStories } from '@/hooks/useSwipeXHeaderStories';
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 const NUM_OF_ROW_THAT_RENDER_MORE_ROWS = 9;
 const urlFirework = baseUrl('/assets/tik-tok-animated-logo.gif');
@@ -70,6 +71,14 @@ export function Inbox() {
       });
   }, []);
 
+  const navBarOFStories = useRef<HTMLElement | null>(null);
+
+  useSwipeXHeaderStories({
+    classNameOfSlides: '.history-container',
+    classNameOfTrigger: '.navbar-of-histories-inner',
+    containerOfImagesRef: navBarOFStories
+  });
+
   return (
     <article className='inbox-container'>
       <header className='section-top'>
@@ -79,8 +88,12 @@ export function Inbox() {
       </header>
 
       <section className='section-bottom'>
-        <aside className='navbar-of-histories'>
-          <ArrayOfNavbarStories arrayOfNavBarHistories={arrayOfNavBarHistories} />
+        <aside className='navbar-of-histories' ref={navBarOFStories}>
+          <aside className='navbar-of-histories-inner'>
+            <ArrayOfNavbarStories
+              arrayOfNavBarHistories={arrayOfNavBarHistories}
+            />
+          </aside>
         </aside>
 
         <aside className='recommended-accounts'>
