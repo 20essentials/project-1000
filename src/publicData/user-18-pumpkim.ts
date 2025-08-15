@@ -4,12 +4,11 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-//falta userId, profilesrc, prefix,
-
 export const pumpkim_commonProps = generateExactlyCommonProps({
   userId: '3250bb8e-af5b-4e72-9a8e-7e4737f0c138',
   username: 'pumpkim',
-  profileImageSrc: 'https://dominicnikolai.github.io/project-205/assets/pumpkim/p3rfil.avif',
+  profileImageSrc:
+    'https://dominicnikolai.github.io/project-205/assets/pumpkim/p3rfil.avif',
   following: false,
   followers: 2350,
   totalLikes: 192_320,

@@ -281,6 +281,11 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [lucia_sora_commonProps, lucia_sora_array_of_posts] /* 13 */,
   [elcodigobravo_commonProps, elcodigobravo_array_of_posts] /* 14*/,
   [mr_rombus_commonProps, mr_rombus_array_of_posts] /* 15*/,
+  [cata_commonProps, cata_array_of_posts] /* 16*/,
+  [whoisangenr_commonProps, whoisangenr_array_of_posts] /* 17*/,
+  [pumpkim_commonProps, pumpkim_array_of_posts] /* 18*/,
+  [gregorian_commonProps, gregorian_array_of_posts] /* 19*/,
+  [milan_cars_commonProps, milan_cars_array_of_posts] /* 20*/,
 
   [juixxe_commonProps, juixxe_array_of_posts] /* 69 */,
   [cagnolino_commonProps, cagnolino_array_of_posts] /* 70 */,
@@ -334,12 +339,6 @@ export const PUBLIC_DATA: arrayOfPosts = [
   // [ariel_commonProps, ariel_array_of_posts],
   // [javier_santaolalla_commonProps, javier_santaolalla_array_of_posts],
   // [francesco_viaggi_commonProps, francesco_viaggi_array_of_posts],
-  // [milan_cars_commonProps, milan_cars_array_of_posts],
-  // [gregorian_commonProps, gregorian_array_of_posts],
-  // [pumpkim_commonProps, pumpkim_array_of_posts],
-  // [whoisangenr_commonProps, whoisangenr_array_of_posts],
-
-  // [cata_commonProps, cata_array_of_posts],
 
   // [mr_lamborghini_commonProps, mr_lamborghini_array_of_posts],
 ];
