@@ -21,17 +21,17 @@ export default function CamaraVideo({
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
   const setArrayImages = useUploadVideoOrImages(st => st.setArrayImages);
   const setSrcVideo = useUploadVideoOrImages(st => st.setSrcVideo);
-  const [cameraIsAllowing, setIsCameraAllowing] = useState(false)
+  const [cameraIsAllowing, setIsCameraAllowing] = useState(false);
 
   // Array local para guardar chunks
   const chunksRef = useRef<Blob[]>([]);
 
   const capturaImagen = useCallback(() => {
     if (!webcamRef.current || !webcamRef.current.stream) {
-      setIsCameraAllowing(false)
+      setIsCameraAllowing(false);
       return;
     }
-    setIsCameraAllowing(true)
+    setIsCameraAllowing(true);
     const imagenSrc = webcamRef.current?.getScreenshot() || null;
     setCapturaFoto(imagenSrc);
     updateIndex(SECTION_TYPE.UPLOAD);
@@ -43,10 +43,10 @@ export default function CamaraVideo({
   const iniciaGrabacion = useCallback(() => {
     if (!webcamRef.current || !webcamRef.current.stream) {
       console.error('La cámara no está lista');
-      setIsCameraAllowing(false)
+      setIsCameraAllowing(false);
       return;
     }
-    setIsCameraAllowing(true)
+    setIsCameraAllowing(true);
     chunksRef.current = [];
     setGrabando(true);
 
@@ -108,15 +108,30 @@ export default function CamaraVideo({
 
   return (
     <div className='create-section'>
-      <Webcam
+      {/* <Webcam
         audio={true}
         ref={webcamRef}
         screenshotFormat='image/jpeg'
         videoConstraints={{ facingMode: 'user' }}
         className='am-webcam'
+      /> */}
+
+      <Webcam
+        audio={true}
+        ref={webcamRef}
+        screenshotFormat='image/jpeg'
+        videoConstraints={{
+          facingMode: 'user',
+          width: { ideal: 1280 },
+          height: { ideal: 720 }
+        }}
+        className='am-webcam'
+        mirrored={true}
+        muted
+        playsInline
       />
 
-      {(!cameraIsAllowing ) && (
+      {!cameraIsAllowing && (
         <p className='message-error'>
           Camera access is disabled. To continue, allow camera access from your
           browser’s site settings
@@ -186,20 +201,6 @@ export default function CamaraVideo({
           </svg>
         </aside>
       )}
-
-      {/* {capturaFoto && (
-        <div>
-          <h3>Foto Capturada:</h3>
-          <img src={capturaFoto} alt="captura" style={{ width: 200 }} />
-        </div>
-      )} */}
-
-      {/* {videoUrl && (
-        <div>
-          <h3>Video Grabado:</h3>
-          <video src={videoUrl} controls style={{ width: 320 }} />
-        </div>
-      )} */}
     </div>
   );
 }
