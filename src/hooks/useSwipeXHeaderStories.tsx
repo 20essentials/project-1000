@@ -27,7 +27,6 @@ export function useSwipeXHeaderStories({
 
       const progressWrap = gsap.utils.wrap(0, 1);
 
-
       gsap.set(slides, {
         xPercent: (i: number) => i * 100
       });
@@ -92,13 +91,15 @@ export function useSwipeXHeaderStories({
           if (moved) {
             // Si hubo arrastre, prevenir el click normal
             const target = this.pointerEvent.target as HTMLElement;
-            if (
-              target.classList.contains('isClickableInDrag') ||
-              target.closest('.isClickableInDrag')
-            ) {
-              target.addEventListener('click', e => e.preventDefault(), {
-                once: true
-              });
+            const targetIsClickacle =
+              target.classList.contains('isClickableInDrag');
+            const parentIsCliclable = target.closest(
+              '.isClickableInDrag'
+            ) as HTMLElement;
+            if (targetIsClickacle) {
+              target.click();
+            } else if (parentIsCliclable) {
+              parentIsCliclable.click();
             }
           }
         },
