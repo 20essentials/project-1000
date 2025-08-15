@@ -4,8 +4,6 @@ import {
 } from '@/publicData/user-2-goated-ai-art';
 import type { arrayOfPosts } from '@/components/pages/SliderPosts/types.d.ts';
 
-
-
 import {
   edaserkanbolat_edits_array_of_posts,
   edaserkanbolat_edits_commonProps
@@ -240,11 +238,23 @@ import {
   mr_lamborghini_commonProps
 } from './user-4-mrlamborghini';
 import { qbitlab_array_of_posts, qbitlab_commonProps } from './user-6-qbitl4b';
-import { vid_favorites_array_of_posts, vid_favorites_commonProps } from './user-7-vidsfavorites';
-import { siti_favolosi_array_of_posts, siti_favolosi_commonProps } from './user-8-sitifavolosi';
+import {
+  vid_favorites_array_of_posts,
+  vid_favorites_commonProps
+} from './user-7-vidsfavorites';
+import {
+  siti_favolosi_array_of_posts,
+  siti_favolosi_commonProps
+} from './user-8-sitifavolosi';
 import { luxury_array_of_posts, luxury_commonProps } from './user-9-theluxury';
-import { marshall_jassan_array_of_posts, marshall_jassan_commonProps } from './user-10-marshall';
-import { cagnolino_array_of_posts, cagnolino_commonProps } from './user-70-cagnolino';
+import {
+  marshall_jassan_array_of_posts,
+  marshall_jassan_commonProps
+} from './user-10-marshall';
+import {
+  cagnolino_array_of_posts,
+  cagnolino_commonProps
+} from './user-70-cagnolino';
 import { juixxe_array_of_posts, juixxe_commonProps } from './user-69-juixxe';
 
 export const PUBLIC_DATA: arrayOfPosts = [
@@ -263,7 +273,11 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [siti_favolosi_commonProps, siti_favolosi_array_of_posts] /* 8*/,
   [luxury_commonProps, luxury_array_of_posts] /* 9 */,
   [marshall_jassan_commonProps, marshall_jassan_array_of_posts] /* 10 */,
-  [edaserkanbolat_edits_commonProps, edaserkanbolat_edits_array_of_posts] /* 11 */,
+  [
+    edaserkanbolat_edits_commonProps,
+    edaserkanbolat_edits_array_of_posts
+  ] /* 11 */,
+  [jorgepomarg_commonProps, jorgepomarg_array_of_posts] /* 12 */,
 
   [juixxe_commonProps, juixxe_array_of_posts] /* 69 */,
   [cagnolino_commonProps, cagnolino_array_of_posts] /* 70 */,
@@ -325,7 +339,6 @@ export const PUBLIC_DATA: arrayOfPosts = [
   // [cata_commonProps, cata_array_of_posts],
   // [elcodigobravo_commonProps, elcodigobravo_array_of_posts],
   // [lucia_sora_commonProps, lucia_sora_array_of_posts]
-  
-  // [jorgepomarg_commonProps, jorgepomarg_array_of_posts],
+
   // [mr_lamborghini_commonProps, mr_lamborghini_array_of_posts],
 ];
