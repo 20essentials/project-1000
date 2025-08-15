@@ -56,25 +56,25 @@ export function useSwipeXHeaderStories({
       let slideWidth = 0;
       let wrapWidth = 0;
 
-      // const draggable = new Draggable(proxy, {
-      //   trigger: classNameOfTrigger,
-      //   inertia: true,
-      //   onPress: updateDraggable,
-      //   onDrag: updateProgress,
-      //   onThrowUpdate: updateProgress,
-      //   dragClickables: false,
-      //   clickableTest: (el: Element) => {
-      //     return (
-      //       el.classList.contains('isClickableInDrag') ||
-      //       el.closest('.isClickableInDrag')
-      //     );
-      //   },
-      //   snap: { x: snapX }
-      // });
+      const draggable = new Draggable(proxy, {
+        trigger: classNameOfTrigger,
+        inertia: true,
+        onPress: updateDraggable,
+        onDrag: updateProgress,
+        onThrowUpdate: updateProgress,
+        dragClickables: false,
+        clickableTest: (el: Element) => {
+          return (
+            el.classList.contains('isClickableInDrag') ||
+            el.closest('.isClickableInDrag')
+          );
+        },
+        snap: { x: snapX }
+      });
 
       let moved = false;
 
-      const draggable = new Draggable(proxy, {
+ /*      const draggable = new Draggable(proxy, {
         trigger: classNameOfTrigger,
         inertia: true,
         onPress() {
@@ -105,7 +105,7 @@ export function useSwipeXHeaderStories({
         },
         snap: { x: snapX }
       });
-
+ */
       resize();
       window.addEventListener('resize', resize);
 
