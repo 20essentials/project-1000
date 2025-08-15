@@ -4,12 +4,11 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-//falta userId, profilesrc, prefix
-
 export const elcodigobravo_commonProps = generateExactlyCommonProps({
   userId: '7ed13043-f16e-4bb8-a797-591654fe0574',
   username: 'elcodigobravo',
-  profileImageSrc: 'https://dominicnikolai.github.io/project-201/assets/elcodigobravo/foto-de-p3rfil.avif',
+  profileImageSrc:
+    'https://dominicnikolai.github.io/project-201/assets/elcodigobravo/foto-de-p3rfil.avif',
   following: false,
   followers: 53_520,
   totalLikes: 470_891,
@@ -17,7 +16,8 @@ export const elcodigobravo_commonProps = generateExactlyCommonProps({
   profileDescription: 'Hacks para la Web'
 });
 
-const PREFIX = 'https://dominicnikolai.github.io/project-201/assets/elcodigobravo/';
+const PREFIX =
+  'https://dominicnikolai.github.io/project-201/assets/elcodigobravo/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {

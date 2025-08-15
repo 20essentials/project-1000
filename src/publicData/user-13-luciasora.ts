@@ -23,7 +23,6 @@ const ARRAY_CONTENT: ArrayContent = [
     type: 'video',
     videoSrc: 'v1.mp4',
     tags: ['aesthetic', 'people', 'for you'],
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-9fd97a84-c39d-4c2e-872f-53eb5fbdfe4e`
   },
   {
@@ -31,7 +30,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v2.mp4',
     tags: ['parati', 'human', 'being'],
     description: `dos siempre es mejor ⭐`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-2a04dc1e-8c3e-4950-92d2-470487e3f8e1`
   },
   {
@@ -39,7 +37,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v3.mp4',
     tags: ['people', 'life'],
     description: `una noche cualquiera en Madrid`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-cfba6620-d11c-4baf-8546-91d426127ede`
   },
   {
@@ -47,7 +44,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v4.mp4',
     tags: ['camera', 'cotidiano'],
     description: `pedacitos de enero`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-d59c3b2f-f3b3-4df0-bd30-ec9c11d27f30`
   },
   {
@@ -55,7 +51,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v5.mp4',
     tags: ['fyp', 'fire'],
     description: `y millones de historias`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-e706089d-69a2-4f89-85c3-70912b2cfc84`
   },
   {
@@ -63,7 +58,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v6.mp4',
     tags: ['agra', 'india'],
     description: `no podía parar de mirarlo`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-3e9b2094-ffb3-4cf4-aebc-7db3a9e8b9e4`
   },
   {
@@ -71,7 +65,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v7.mp4',
     tags: ['instanbul', 'turkey'],
     description: `frames de Turquía ❤️‍🩹`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-6bcd548d-6371-409b-b7c9-63ee02aae38f`
   },
   {
@@ -79,7 +72,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v8.mp4',
     tags: ['cats', 'turkey'],
     description: `tu ciudad si te gustan los gatos 🥹`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-6d0e1d04-2dac-4f7f-8e47-4c1ecc61d614`
   },
   {
@@ -87,7 +79,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v9.mp4',
     tags: ['amigos', 'friends'],
     description: `lucky 🫂 `,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-397c28c9-7cfc-4503-a6e1-fa7b20ce0eef`
   },
   {
@@ -95,7 +86,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v10.mp4',
     tags: ['observe', 'humanbeing'],
     description: `mi pasatiempos favorito 🥹❤️‍🩹`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-613257bd-2429-489a-9694-4e4e68827333`
   },
   {
@@ -103,7 +93,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v11.mp4',
     tags: ['for you', 'others'],
     description: `the story of an intersection 👁️`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-276da371-8abb-41f5-ba4a-b5042786c748`
   },
   {
@@ -111,7 +100,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v12.mp4',
     tags: ['ikea', 'decoration'],
     description: `mis favoritas 🪔`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-b467d312-cb8d-4554-bec0-590590565d77`
   },
   {
@@ -119,7 +107,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v13.mp4',
     tags: ['age', 'future'],
     description: `pov: yo cuando sea mayor 🤳🏾`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-a6a20e67-0771-4112-a915-d4db596daef6`
   },
   {
@@ -127,7 +114,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v14.mp4',
     tags: ['for you', 'photography'],
     description: `un paseo por la playa `,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-43973d48-d59b-4dc7-aaa1-c5e69ea055f7`
   },
   {
@@ -135,7 +121,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v15.mp4',
     tags: ['littlemoments', 'gallery'],
     description: `life lately: 🫂✨🎨🕯️🌚💐`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-9f278864-6362-4e81-a406-fc99443828a1`
   },
   {
@@ -143,7 +128,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v16.mp4',
     tags: ['trend', 'egypt'],
     description: `un sueño 🥹🇪🇬`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-06e0d09a-ce99-462f-a68f-c001c807e579`
   },
   {
@@ -151,7 +135,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v17.mp4',
     tags: ['people', 'budapest'],
     description: `life in Budapest ❤️‍🩹`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-7a0d13d8-517d-4ff7-9372-142bf1ae6045`
   },
   {
@@ -159,7 +142,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v18.mp4',
     tags: ['surf', 'sunset'],
     description: `este momento >>>`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-cec8a88b-91f0-46a0-ab5a-094da972304a`
   },
 
@@ -168,7 +150,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v19.mp4',
     tags: ['couple', 'humans'],
     description: ``,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-3e29fab2-7ec8-4571-a15d-06cbef44a4bf`
   },
   {
@@ -176,7 +157,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v20.mp4',
     tags: ['paris', 'chill'],
     description: `Night in Paris ✨`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-826f773e-7982-40ec-966d-cda889d3a435`
   },
   {
@@ -184,7 +164,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v21.mp4',
     tags: ['paris', 'seemless'],
     description: `Tell me you are in Paris without telling me you are in Paris 🥐`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-89ba10c1-efdf-4af5-9431-450405567e1d`
   },
   {
@@ -192,7 +171,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v22.mp4',
     tags: ['Madrid', 'books'],
     description: `Nice`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-aa5ac775-62cb-437d-9101-1e9e4586ff86`
   },
   {
@@ -200,7 +178,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v23.mp4',
     tags: ['album', 'cover'],
     description: `Los míos 🌚`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-4fc0d25d-a498-49db-b61c-07e85b893de8`
   },
   {
@@ -208,7 +185,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v24.mp4',
     tags: ['sunday', 'bek'],
     description: `lazy sunday 😴`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-e63f8604-a798-464e-8851-1770fba3e414`
   },
   {
@@ -216,7 +192,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v25.mp4',
     tags: ['travels', 'friends'],
     description: `Granada siempre es buena idea 🤍🫂🎨`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-2eaa49a1-15f1-4b56-9e71-9e9e93d63399`
   },
   {
@@ -224,7 +199,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v26.mp4',
     tags: ['azores', 'camp'],
     description: ``,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-121093a3-fb07-4d72-8c21-99e07fdf723b`
   },
   {
@@ -232,7 +206,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v27.mp4',
     tags: ['fauna', 'flora'],
     description: `Llueve en San Miguel 💚 `,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-dd729e6f-54c0-4d7b-9fdf-d6a0589d187d`
   },
   {
@@ -240,7 +213,6 @@ const ARRAY_CONTENT: ArrayContent = [
     videoSrc: 'v28.mp4',
     tags: ['another', 'day'],
     description: `Nothing`,
-    isLiked: false,
     idPost: `${lucia_sora_commonProps.userId}-7173e305-7c68-4bf1-890c-82a933cff866`
   },
 ];
