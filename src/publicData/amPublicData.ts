@@ -263,6 +263,7 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [siti_favolosi_commonProps, siti_favolosi_array_of_posts] /* 8*/,
   [luxury_commonProps, luxury_array_of_posts] /* 9 */,
   [marshall_jassan_commonProps, marshall_jassan_array_of_posts] /* 10 */,
+  [edaserkanbolat_edits_commonProps, edaserkanbolat_edits_array_of_posts] /* 11 */,
 
   [juixxe_commonProps, juixxe_array_of_posts] /* 69 */,
   [cagnolino_commonProps, cagnolino_array_of_posts] /* 70 */,
@@ -324,7 +325,7 @@ export const PUBLIC_DATA: arrayOfPosts = [
   // [cata_commonProps, cata_array_of_posts],
   // [elcodigobravo_commonProps, elcodigobravo_array_of_posts],
   // [lucia_sora_commonProps, lucia_sora_array_of_posts]
-  // [edaserkanbolat_edits_commonProps, edaserkanbolat_edits_array_of_posts]
+  
   // [jorgepomarg_commonProps, jorgepomarg_array_of_posts],
   // [mr_lamborghini_commonProps, mr_lamborghini_array_of_posts],
 ];
