@@ -36,8 +36,8 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        color: lime;
-        color: orange;
+        /* color: lime; */
+        color: yellow;
         opacity: 0.7;
         width: 74%;
         text-wrap: balance;
