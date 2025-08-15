@@ -100,7 +100,7 @@ export default function CamaraVideo({
       try {
         const stream = await navigator.mediaDevices.getUserMedia({
           video: { facingMode: 'user' },
-          audio: true
+          audio: false
         });
         setIsCameraAllowing(true);
         if (webcamRef.current) webcamRef.current.stream = stream;
