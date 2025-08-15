@@ -1,14 +1,14 @@
-import { useRef, useState, useCallback, useEffect } from 'react';
-import Webcam from 'react-webcam';
-import { SECTION_TYPE } from './FooterUpload';
-import { useUploadVideoOrImages } from '@/store/useUploadVideoOrImages';
-import { CurrentVideoDuration } from './VideoDuration';
-import { MAX_TIME_OF_SECONDS } from './VideoDuration';
+import { useRef, useState, useCallback, useEffect } from "react";
+import Webcam from "react-webcam";
+import { SECTION_TYPE } from "./FooterUpload";
+import { useUploadVideoOrImages } from "@/store/useUploadVideoOrImages";
+import { CurrentVideoDuration } from "./VideoDuration";
+import { MAX_TIME_OF_SECONDS } from "./VideoDuration";
 
 export default function CamaraVideo({
   updateIndex,
   modePhoto,
-  isModePhoto
+  isModePhoto,
 }: {
   updateIndex: (index: number) => void;
   modePhoto: boolean;
@@ -19,30 +19,29 @@ export default function CamaraVideo({
   const [capturaFoto, setCapturaFoto] = useState<string | null>(null);
   const [grabando, setGrabando] = useState(false);
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
-  const setArrayImages = useUploadVideoOrImages(st => st.setArrayImages);
-  const setSrcVideo = useUploadVideoOrImages(st => st.setSrcVideo);
   const [cameraIsAllowing, setIsCameraAllowing] = useState(false);
 
-  // Array local para guardar chunks
+  const setArrayImages = useUploadVideoOrImages((st) => st.setArrayImages);
+  const setSrcVideo = useUploadVideoOrImages((st) => st.setSrcVideo);
+
   const chunksRef = useRef<Blob[]>([]);
 
   const capturaImagen = useCallback(() => {
-    if (!webcamRef.current || !webcamRef.current.stream) {
+    if (!webcamRef.current) {
       setIsCameraAllowing(false);
       return;
     }
     setIsCameraAllowing(true);
-    const imagenSrc = webcamRef.current?.getScreenshot() || null;
-    setCapturaFoto(imagenSrc);
+    const imagenSrc = webcamRef.current.getScreenshot();
+    setCapturaFoto(imagenSrc || null);
     updateIndex(SECTION_TYPE.UPLOAD);
     if (imagenSrc) {
-      setArrayImages(prev => [...prev, imagenSrc]);
+      setArrayImages((prev) => [...prev, imagenSrc]);
     }
-  }, []);
+  }, [setArrayImages, updateIndex]);
 
   const iniciaGrabacion = useCallback(() => {
-    if (!webcamRef.current || !webcamRef.current.stream) {
-      console.error('La cámara no está lista');
+    if (!webcamRef.current?.stream) {
       setIsCameraAllowing(false);
       return;
     }
@@ -52,10 +51,10 @@ export default function CamaraVideo({
 
     try {
       mediaRecorderRef.current = new MediaRecorder(webcamRef.current.stream, {
-        mimeType: 'video/mp4'
+        mimeType: "video/webm",
       });
     } catch (error) {
-      console.error('Error creando MediaRecorder:', error);
+      console.error("Error creando MediaRecorder:", error);
       return;
     }
 
@@ -66,12 +65,10 @@ export default function CamaraVideo({
     };
 
     mediaRecorderRef.current.onstop = () => {
-      const blob = new Blob(chunksRef.current, { type: 'video/webm' });
-
+      const blob = new Blob(chunksRef.current, { type: "video/webm" });
       const reader = new FileReader();
       reader.onloadend = () => {
-        const base64data = reader.result as string;
-        setVideoUrl(base64data);
+        setVideoUrl(reader.result as string);
       };
       reader.readAsDataURL(blob);
     };
@@ -82,7 +79,7 @@ export default function CamaraVideo({
   const paraGrabacion = useCallback(() => {
     if (
       mediaRecorderRef.current &&
-      mediaRecorderRef.current.state !== 'inactive'
+      mediaRecorderRef.current.state !== "inactive"
     ) {
       mediaRecorderRef.current.stop();
     }
@@ -94,7 +91,7 @@ export default function CamaraVideo({
       updateIndex(SECTION_TYPE.UPLOAD);
       setGrabando(false);
     }
-  }, [videoUrl]);
+  }, [videoUrl, setSrcVideo, updateIndex]);
 
   const activeModePhoto = () => {
     isModePhoto(true)();
@@ -106,149 +103,114 @@ export default function CamaraVideo({
     setArrayImages([]);
   };
 
-  useEffect(() => {
-    async function requestCameraAccess() {
-      try {
-        const stream = await navigator.mediaDevices.getUserMedia({
-          video: { facingMode: 'user' },
-          audio: true
-        });
-
-        // Si llega aquí, el usuario aceptó
-        setIsCameraAllowing(true);
-
-        // Opcional: asignar manualmente el stream al webcamRef
-        if (webcamRef.current) {
-          webcamRef.current.stream = stream;
-        }
-      } catch (error) {
-        console.error('El usuario no permitió acceso a la cámara:', error);
-        setIsCameraAllowing(false);
-      }
+  // Pide acceso a la cámara al hacer click en el mensaje de error
+  const requestCameraAccess = async () => {
+    try {
+      await navigator.mediaDevices.getUserMedia({
+        video: { facingMode: "user" },
+        audio: true,
+      });
+      setIsCameraAllowing(true);
+    } catch (error) {
+      console.error("Acceso a cámara denegado:", error);
+      setIsCameraAllowing(false);
+      alert(
+        "No se pudo acceder a la cámara. Activa el permiso desde la configuración del navegador."
+      );
     }
-
-    requestCameraAccess();
-  }, []);
+  };
 
   return (
-    <div className='create-section'>
-      {/* {
-        <Webcam
-          audio={true}
-          ref={webcamRef}
-          screenshotFormat='image/jpeg'
-          videoConstraints={{ facingMode: 'user' }}
-          className='am-webcam'
-        />
-      } */}
-
+    <div className="create-section">
       <Webcam
-        audio={true}
+        audio
         ref={webcamRef}
-        screenshotFormat='image/jpeg'
+        screenshotFormat="image/jpeg"
         videoConstraints={{
-          facingMode: 'user',
+          facingMode: "user",
           width: { ideal: 1280 },
-          height: { ideal: 720 }
+          height: { ideal: 720 },
         }}
-        className='am-webcam'
-        mirrored={true}
+        className="am-webcam"
+        mirrored
         muted
         playsInline
       />
 
       {!cameraIsAllowing && (
-        <p
-          className='message-error'
-          onClick={async () => {
-            alert('h')
-            try {
-              const stream = await navigator.mediaDevices.getUserMedia({
-                video: { facingMode: 'user' },
-                audio: true
-              });
-
-              setIsCameraAllowing(true);
-
-              // Si quieres asignar el stream manualmente a react-webcam
-              if (webcamRef.current) {
-                webcamRef.current.stream = stream;
-              }
-            } catch (error) {
-              console.error('Acceso a cámara denegado:', error);
-              setIsCameraAllowing(false);
-            }
-          }}
-        >
+        <p className="message-error" onClick={requestCameraAccess}>
           Camera access is disabled. To continue, allow camera access from your
           browser’s site settings
         </p>
       )}
-      {/* {!cameraIsAllowing && (
-        <p className='message-error'>
-          Camera access is disabled. To continue, allow camera access from your
-          browser’s site settings
-        </p>
-      )} */}
 
-      <nav className='nav-of-type-of-capture'>
+      <nav className="nav-of-type-of-capture">
         <div
           className={`container-type-capture type-camera ${
-            modePhoto ? 'active-button' : ''
+            modePhoto ? "active-button" : ""
           }`}
           onClick={activeModePhoto}
         >
-          <button className='button'>Photo</button>
+          <button className="button">Photo</button>
         </div>
         <div
           className={`container-type-capture type-video ${
-            modePhoto ? '' : 'active-button'
+            modePhoto ? "" : "active-button"
           }`}
           onClick={activeModeVideo}
         >
-          <button className='button'>Video</button>
+          <button className="button">Video</button>
         </div>
       </nav>
 
       {!modePhoto && grabando && (
-        <CurrentVideoDuration paraGrabacion={paraGrabacion} grabando={grabando} />
+        <CurrentVideoDuration
+          paraGrabacion={paraGrabacion}
+          grabando={grabando}
+        />
       )}
+
       {modePhoto ? (
-        <aside className='circle-of-capture' onClick={capturaImagen}>
-          <aside className='circle-inner'></aside>
+        <aside className="circle-of-capture" onClick={capturaImagen}>
+          <aside className="circle-inner"></aside>
         </aside>
       ) : !grabando ? (
-        <aside className='circle-of-capture' onClick={iniciaGrabacion}>
-          <aside className='circle-inner circle-inner-red'></aside>
+        <aside className="circle-of-capture" onClick={iniciaGrabacion}>
+          <aside className="circle-inner circle-inner-red"></aside>
         </aside>
       ) : (
         <aside
-          className='circle-of-capture circle-of-capture-video-start'
+          className="circle-of-capture circle-of-capture-video-start"
           onClick={paraGrabacion}
         >
-          <aside className='circle-inner circle-inner-blue-testing'></aside>
-          <svg width='70' height='70' viewBox='0 0 120 120' className='am-border'>
+          <aside className="circle-inner circle-inner-blue-testing"></aside>
+          <svg
+            width="70"
+            height="70"
+            viewBox="0 0 120 120"
+            className="am-border"
+          >
             <circle
-              cx='60'
-              cy='60'
-              r='54'
-              fill='none'
-              stroke='#ddd'
-              strokeWidth='7'
+              cx="60"
+              cy="60"
+              r="54"
+              fill="none"
+              stroke="#ddd"
+              strokeWidth="7"
             />
             <circle
-              cx='60'
-              cy='60'
-              r='54'
-              fill='none'
-              stroke='#ff2b54'
-              strokeWidth='7'
-              strokeLinecap='round'
-              strokeDasharray='339.292'
-              strokeDashoffset='339.292'
-              className='circle-dashed'
+              cx="60"
+              cy="60"
+              r="54"
+              fill="none"
+              stroke="#ff2b54"
+              strokeWidth="7"
+              strokeLinecap="round"
+              strokeDasharray="339.292"
+              strokeDashoffset="339.292"
+              className="circle-dashed"
               style={{
-                animationDuration: `${MAX_TIME_OF_SECONDS}s`
+                animationDuration: `${MAX_TIME_OF_SECONDS}s`,
               }}
             />
           </svg>
