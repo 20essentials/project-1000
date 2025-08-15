@@ -56,22 +56,6 @@ export function useSwipeXShareAsideBottom({
       let slideWidth = 0;
       let wrapWidth = 0;
 
-      // const draggable = new Draggable(proxy, {
-      //   trigger: classNameOfTrigger,
-      //   inertia: true,
-      //   onPress: updateDraggable,
-      //   onDrag: updateProgress,
-      //   onThrowUpdate: updateProgress,
-      //   dragClickables: false,
-      //   clickableTest: (el: Element) => {
-      //     return (
-      //       el.classList.contains('isClickableInDrag') ||
-      //       el.closest('.isClickableInDrag')
-      //     );
-      //   },
-      //   snap: { x: snapX }
-      // });
-
       let moved = false;
 
       const draggable = new Draggable(proxy, {
@@ -88,21 +72,31 @@ export function useSwipeXShareAsideBottom({
         },
         onThrowUpdate: updateProgress,
         onRelease() {
+          const target = this.pointerEvent.target as HTMLElement;
+          const targetIsClickable =
+            target.classList.contains('isClickableInDrag');
+          const parentIsClickable = target.closest(
+            '.isClickableInDrag'
+          ) as HTMLElement;
+
           if (moved) {
-            // Si hubo arrastre, prevenir el click normal
-            const target = this.pointerEvent.target as HTMLElement;
-            const targetIsClickacle =
-              target.classList.contains('isClickableInDrag');
-            const parentIsCliclable = target.closest(
-              '.isClickableInDrag'
-            ) as HTMLElement;
-            if (targetIsClickacle) {
+            // Si hubo arrastre y el objetivo es clickeable, disparamos click manual
+            if (targetIsClickable) {
               target.click();
-            } else if (parentIsCliclable) {
-              parentIsCliclable.click();
+            } else if (parentIsClickable) {
+              parentIsClickable.click();
+            }
+          } else {
+            // Si NO hubo arrastre, dejamos que ocurra el click natural
+            // Pero opcionalmente, podrías forzar el click para asegurar compatibilidad
+            if (targetIsClickable) {
+              target.click();
+            } else if (parentIsClickable) {
+              parentIsClickable.click();
             }
           }
         },
+        dragClickables: false,
         snap: { x: snapX }
       });
 

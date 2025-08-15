@@ -56,23 +56,6 @@ export function useSwipeXHeaderStories({
       let slideWidth = 0;
       let wrapWidth = 0;
 
-      /*       const draggable = new Draggable(proxy, {
-        trigger: classNameOfTrigger,
-        inertia: true,
-        onPress: updateDraggable,
-        onDrag: updateProgress,
-        onThrowUpdate: updateProgress,
-        dragClickables: false,
-        clickableTest: (el: Element) => {
-          return (
-            el.classList.contains('isClickableInDrag') ||
-            el.closest('.isClickableInDrag')
-          );
-        },
-        snap: { x: snapX }
-      });
- */
-
       let moved = false;
 
       const draggable = new Draggable(proxy, {
@@ -117,39 +100,6 @@ export function useSwipeXHeaderStories({
         snap: { x: snapX }
       });
 
-      /*     let moved = false;
-    const draggable = new Draggable(proxy, {
-        trigger: classNameOfTrigger,
-        inertia: true,
-        onPress() {
-          moved = false;
-          //@ts-ignore
-          updateDraggable.call(this);
-        },
-        onDrag() {
-          moved = true;
-          updateProgress();
-        },
-        onThrowUpdate: updateProgress,
-        onRelease() {
-          if (moved) {
-            // Si hubo arrastre, prevenir el click normal
-            const target = this.pointerEvent.target as HTMLElement;
-            const targetIsClickacle =
-              target.classList.contains('isClickableInDrag');
-            const parentIsCliclable = target.closest(
-              '.isClickableInDrag'
-            ) as HTMLElement;
-            if (targetIsClickacle) {
-              target.click();
-            } else if (parentIsCliclable) {
-              parentIsCliclable.click();
-            }
-          }
-        },
-        snap: { x: snapX }
-      });
- */
       resize();
       window.addEventListener('resize', resize);
 
