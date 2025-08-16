@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'nagy_visuals';
-const userId = '';
-const prefixUrl = '';
+const userId = '81da4066-73d9-4097-acb9-e00ccec058d6';
+const prefixUrl = 'https://dominicnikolai.github.io/project-264/assets/nagy-visuals/';
 const followers = 723_820;
 const followed = 32;
 const profileDescription = 'Krisztina | 3D Artist';

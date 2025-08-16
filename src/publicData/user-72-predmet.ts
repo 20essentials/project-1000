@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'predmet_ia';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c72b740c-8572-4cc2-bb81-a8deebb23753';
+const prefixUrl = 'https://dominicnikolai.github.io/project-261/assets/predmet/';
 const followers = 312_720;
 const followed = 97;
 const profileDescription = 'AI Content Creator | Surrealism';

@@ -256,13 +256,12 @@ import {
   cagnolino_commonProps
 } from './user-70-cagnolino';
 import { juixxe_array_of_posts, juixxe_commonProps } from './user-69-juixxe';
+import { predmet_ia_array_of_posts, predmet_ia_commonProps } from './user-72-predmet';
+import { slinky_josh_array_of_posts, slinky_josh_commonProps } from './user-71-slinkyjosh';
+import { mr_spary_array_of_posts, mr_spary_commonProps } from './user-73-mrspary';
+import { nagy_visuals_array_of_posts, nagy_visuals_commonProps } from './user-74-nagy-visuals';
 
 export const PUBLIC_DATA: arrayOfPosts = [
-  //testing
-
-  [gregorian_commonProps, [gregorian_array_of_posts[0]]], //esto si existe abajo
-  //testing
-
   [midudev_commonProps, midudev_array_of_posts] /* 1 */,
   [goated_ai_art_commonProps, goated_ai_art_array_of_posts] /* 2 */,
   [arsnotoria_commonProps, arsnotoria_array_of_posts] /* 3 */,
@@ -289,6 +288,10 @@ export const PUBLIC_DATA: arrayOfPosts = [
 
   [juixxe_commonProps, juixxe_array_of_posts] /* 69 */,
   [cagnolino_commonProps, cagnolino_array_of_posts] /* 70 */,
+  [slinky_josh_commonProps, slinky_josh_array_of_posts] /* 71 */,
+  [predmet_ia_commonProps, predmet_ia_array_of_posts] /* 72 */,
+  [mr_spary_commonProps, mr_spary_array_of_posts] /* 73 */,
+  [nagy_visuals_commonProps, nagy_visuals_array_of_posts] /* 74 */,
 
   [soyveyrox_commonProps, soyveyrox_array_of_posts],
   [freeskates_commonProps, freeskates_array_of_posts],
