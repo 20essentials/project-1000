@@ -264,6 +264,7 @@ import { rocodelaportilla_array_of_posts, rocodelaportilla_commonProps } from '.
 import { gazzaladradesign_array_of_posts, gazzaladradesign_commonProps } from './user-76-gazzaladradesign';
 import { morpheussosia_array_of_posts, morpheussosia_commonProps } from './user-75-morpheussosia';
 import { johan_wahlgren_array_of_posts, johan_wahlgren_commonProps } from './user-77-johan-wahlgren';
+import { polymico_array_of_posts, polymico_commonProps } from './user-79-polymico';
 
 export const PUBLIC_DATA: arrayOfPosts = [
   [midudev_commonProps, midudev_array_of_posts] /* 1 */,
@@ -300,6 +301,7 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [gazzaladradesign_commonProps, gazzaladradesign_array_of_posts] /* 76 */,
   [johan_wahlgren_commonProps, johan_wahlgren_array_of_posts] /* 77 */,
   [rocodelaportilla_commonProps, rocodelaportilla_array_of_posts] /* 78 */,
+  [polymico_commonProps, polymico_array_of_posts] /* 79 */,
 
   [soyveyrox_commonProps, soyveyrox_array_of_posts],
   [freeskates_commonProps, freeskates_array_of_posts],

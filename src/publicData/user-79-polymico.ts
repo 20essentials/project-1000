@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'polymico';
-const userId = '';
-const prefixUrl = '';
+const userId = '00f53a1c-61b0-47bc-a881-259f7c6c3709';
+const prefixUrl = 'https://dominicnikolai.github.io/project-269/assets/polymico/';
 const followers = 232_720;
 const followed = 323;
 const profileDescription = 'Branquinha- AL 📍';
