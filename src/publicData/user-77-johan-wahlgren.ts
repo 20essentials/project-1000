@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'johan_wahlgren';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ca4a797e-742f-41a2-ad5d-3e93da688baf';
+const prefixUrl = 'https://dominicnikolai.github.io/project-268/assets/johan-wahlgren/';
 const followers = 78_720;
 const followed = 78;
 const profileDescription = 'Im gonna go get the papers, get the papers';
@@ -77,7 +77,8 @@ const johan_wahlgren_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
-  userId
+  userId,
+  arrayDescriptionsOfVideos
 });
 
 const johan_wahlgren_images = generateArrayPostsOfImages({

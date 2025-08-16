@@ -23,7 +23,7 @@ export function Search() {
             let theUsername = username.toLowerCase();
             return theUsername.includes(theSearchText);
           })
-          .map(el => ({ ...el, username: el.username.replace('_', ' ') }))
+          .map(el => ({ ...el, username: el.username.replaceAll('_', ' ') }))
       : arrayUserNameAndId;
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
   const setArrayOfPosts = useUserCreator(state => state.setArrayOfPosts);

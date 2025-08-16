@@ -260,6 +260,10 @@ import { predmet_ia_array_of_posts, predmet_ia_commonProps } from './user-72-pre
 import { slinky_josh_array_of_posts, slinky_josh_commonProps } from './user-71-slinkyjosh';
 import { mr_spary_array_of_posts, mr_spary_commonProps } from './user-73-mrspary';
 import { nagy_visuals_array_of_posts, nagy_visuals_commonProps } from './user-74-nagy-visuals';
+import { rocodelaportilla_array_of_posts, rocodelaportilla_commonProps } from './user-78-rocodelaportilla';
+import { gazzaladradesign_array_of_posts, gazzaladradesign_commonProps } from './user-76-gazzaladradesign';
+import { morpheussosia_array_of_posts, morpheussosia_commonProps } from './user-75-morpheussosia';
+import { johan_wahlgren_array_of_posts, johan_wahlgren_commonProps } from './user-77-johan-wahlgren';
 
 export const PUBLIC_DATA: arrayOfPosts = [
   [midudev_commonProps, midudev_array_of_posts] /* 1 */,
@@ -292,6 +296,10 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [predmet_ia_commonProps, predmet_ia_array_of_posts] /* 72 */,
   [mr_spary_commonProps, mr_spary_array_of_posts] /* 73 */,
   [nagy_visuals_commonProps, nagy_visuals_array_of_posts] /* 74 */,
+  [morpheussosia_commonProps, morpheussosia_array_of_posts] /* 75 */,
+  [gazzaladradesign_commonProps, gazzaladradesign_array_of_posts] /* 76 */,
+  [johan_wahlgren_commonProps, johan_wahlgren_array_of_posts] /* 77 */,
+  [rocodelaportilla_commonProps, rocodelaportilla_array_of_posts] /* 78 */,
 
   [soyveyrox_commonProps, soyveyrox_array_of_posts],
   [freeskates_commonProps, freeskates_array_of_posts],

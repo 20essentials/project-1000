@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'gazzaladradesign';
-const userId = '';
-const prefixUrl = '';
+const userId = '090524b1-6c59-4886-9820-e6fc60d3dff1';
+const prefixUrl = 'https://dominicnikolai.github.io/project-266/assets/gazzaladradesign/';
 const followers = 173_720;
 const followed = 622;
 const profileDescription = 'I design useful and enjoyable products for 3D-printing';

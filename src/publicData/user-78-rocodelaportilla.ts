@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'rocodelaportilla';
-const userId = '';
-const prefixUrl = '';
+const userId = '92d73823-d060-4e08-ac4f-c4051b51c252';
+const prefixUrl = 'https://dominicnikolai.github.io/project-265/assets/rocodelaportilla/';
 const followers = 1_720_320;
 const followed = 322;
 const profileDescription = 'Cursos de IA y PS🔥';

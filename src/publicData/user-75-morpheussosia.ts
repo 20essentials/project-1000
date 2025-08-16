@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'morpheussosia';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c2735390-8261-4996-a74d-492ac7bf1090';
+const prefixUrl = 'https://dominicnikolai.github.io/project-267/assets/morpheussosia/';
 const followers = 207_720;
 const followed = 322;
 const profileDescription = 'Do universo de Matrix para sua tela!! 🔵🤲🏾🔴';
