@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'pala3d';
-const userId = '';
-const prefixUrl = '';
+const userId = '581d34b1-ecb5-481b-8cdc-7c43b7deb062';
+const prefixUrl = 'https://dominicnikolai.github.io/project-270/assets/pala3d/';
 const followers = 32_720;
 const followed = 322;
 const profileDescription = '3D | VFX Artist';

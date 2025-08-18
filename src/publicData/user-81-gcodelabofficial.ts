@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'gcodelabofficial';
-const userId = '';
-const prefixUrl = '';
+const userId = '583f806d-7dec-47dd-9742-70d06dbc0dd0';
+const prefixUrl = 'https://dominicnikolai.github.io/project-271/assets/gcodelabofficial/';
 const followers = 111_720;
 const followed = 50;
 const profileDescription = 'Printing cool stuff in 3D!';
