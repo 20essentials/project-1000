@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ok_toaster';
-const userId = '';
-const prefixUrl = '';
+const userId = 'f7ef6728-af24-438b-b0b6-54b3072870e8';
+const prefixUrl = 'https://dominicnikolai.github.io/project-272/assets/ok-toaster/';
 const followers = 820_720;
 const followed = 322;
 const profileDescription = 'I make epic battles ⚔️';
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 10;
+const quantityOfVideos = 9;
 const prefixLetterImages = 'n';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
@@ -23,8 +23,7 @@ const arrayDescriptionsOfVideos = [
   `Where love leads, fear disappears. #epic #battle #brainrot #meme #funny #gaming
 
 `, /*2*/
-  `Can a MILLION civilians beat the US Army ? #epic #battle #gaming #funny #meme #usa
-
+  `Bro had enough at the end 😂 #epic #battle #brainrot #bombardirocrocodilo #funny #meme
 `, /*3*/
   `The last archer 💀 #epic #battle #gaming #funny #meme #brainrot`, /*4*/
   `U.S Army VS 1 MILLION Zombies 😱 #battle #gaming #epic #usa #usarmy #army #military`, /*5*/
@@ -32,7 +31,7 @@ const arrayDescriptionsOfVideos = [
   `Please don't ask any plot related questions 🙏🥀  #epic #battle #ishowspeed #ashtonhall #meme #funny`, /*7*/
   `Can a MILLION Gorillas defeat One Punch Man ? #epic #battle #gorilla #meme #funny #anime`, /*8*/
   `U.S Army vs 200,000 Gorillas ! Who wins ?! #gorilla #epic #battle #usa #usarmy #gorillavsmen`, /*9*/ 
-  `Bro had enough at the end 😂 #epic #battle #brainrot #bombardirocrocodilo #funny #meme`, /*10*/
+  ``, /*10*/
   ``, /*11*/
   ``, /*12*/
   ``, /*13*/
