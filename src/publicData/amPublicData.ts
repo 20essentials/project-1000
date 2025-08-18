@@ -268,6 +268,8 @@ import { polymico_array_of_posts, polymico_commonProps } from './user-79-polymic
 import { pala3d_array_of_posts, pala3d_commonProps } from './user-80-pala3d';
 import { gcodelabofficial_array_of_posts, gcodelabofficial_commonProps } from './user-81-gcodelabofficial';
 import { ok_toaster_array_of_posts, ok_toaster_commonProps } from './user-83-ok-toaster';
+import { creation_ross_array_of_posts, creation_ross_commonProps } from './user-82-creationross';
+
 
 export const PUBLIC_DATA: arrayOfPosts = [
   [midudev_commonProps, midudev_array_of_posts] /* 1 */,
@@ -307,7 +309,7 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [polymico_commonProps, polymico_array_of_posts] /* 79 */,
   [pala3d_commonProps, pala3d_array_of_posts] /* 80 */,
   [gcodelabofficial_commonProps, gcodelabofficial_array_of_posts] /* 81 */,
-
+  [creation_ross_commonProps, creation_ross_array_of_posts] /* 82 */,
   [ok_toaster_commonProps, ok_toaster_array_of_posts] /* 83 */,
 
   [soyveyrox_commonProps, soyveyrox_array_of_posts],

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'creation_ross';
-const userId = '';
-const prefixUrl = '';
+const userId = 'aff493cf-aec9-41be-b54a-113e618377aa';
+const prefixUrl = 'https://dominicnikolai.github.io/project-273/assets/creationross/';
 const followers = 1_720_322;
 const followed = 21;
 const profileDescription = 'good meme ';
