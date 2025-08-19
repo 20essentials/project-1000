@@ -348,9 +348,25 @@ export const PUBLIC_DATA: arrayOfPosts = [
     salary_transparent_street_commonProps,
     salary_transparent_street_array_of_posts
   ] /* 38 */,
-  [gianco123_commonProps, gianco123_array_of_posts]  /* 39 */,
+  [gianco123_commonProps, gianco123_array_of_posts] /* 39 */,
   [holvek_commonProps, holvek_array_of_posts] /* 40 */,
+  [laVidaDeTomas_commonProps, laVidaDeTomas_array_of_posts] /* 41 */,
+  [geridoo_commonProps, geridoo_array_of_posts] /* 42 */,
+  [riccardosegna_commonProps, riccardosegna_array_of_posts] /* 43 */,
+  [manuel_villa_commonProps, manuel_villa_array_of_posts] /* 44 */,
+  [chico_collection_commonProps, chico_collection_array_of_posts] /* 45 */,
+  [justtrip_commonProps, justtrip_array_of_posts] /* 46 */,
+  [mycelium_mirrors_commonProps, mycelium_mirrors_array_of_posts] /* 47 */,
+  [ligthspeed_commonProps, ligthspeed_array_of_posts] /* 48 */,
+  [blackcats_commonProps, blackcats_array_of_posts] /* 49 */,
+  [ghxz_edits_commonProps, ghxz_edits_array_of_posts] /* 50 */,
+  // [mr_lamborghini_commonProps, mr_lamborghini_array_of_posts],
 
+  // [improve_commonProps, improve_array_of_posts],
+  // [lggbb_commonProps, lggbb_array_of_posts],
+  // [jiraiya_fanboy_commonProps, jiraiya_fanboy_array_of_posts],
+  // [dg_minisetoys_commonProps, dg_minisetoys_array_of_posts],
+  // [gian_piccin_commonProps, gian_piccin_array_of_posts],
   /*
    *
    *
@@ -386,8 +402,6 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [soyveyrox_commonProps, soyveyrox_array_of_posts],
   [freeskates_commonProps, freeskates_array_of_posts],
   [molly_zombie_commonProps, molly_zombie_array_of_posts],
-  // [justtrip_commonProps, justtrip_array_of_posts],
-  // [mycelium_mirrors_commonProps, mycelium_mirrors_array_of_posts],
 
   [mateomassoni_commonProps, mateomassoni_array_of_posts],
   [ximu_cat_commonProps, ximu_cat_array_of_posts],
@@ -398,24 +412,6 @@ export const PUBLIC_DATA: arrayOfPosts = [
   // [gafurovedit_commonProps, gafurovedit_array_of_posts],
   [spirograph_commonProps, spirograph_array_of_posts],
   [dreamfall_commonProps, dreamfall_array_of_posts],
-  // [improve_commonProps, improve_array_of_posts],
-  // [lggbb_commonProps, lggbb_array_of_posts],
-  // [jiraiya_fanboy_commonProps, jiraiya_fanboy_array_of_posts],
-  // [dg_minisetoys_commonProps, dg_minisetoys_array_of_posts],
-  // [ligthspeed_commonProps, ligthspeed_array_of_posts],
-  // [gian_piccin_commonProps, gian_piccin_array_of_posts],
-  [aiaartsensei_commonProps, aiaartsensei_array_of_posts],
-  [ghxz_edits_commonProps, ghxz_edits_array_of_posts],
-  [blackcats_commonProps, blackcats_array_of_posts]
 
-  
-  // [manuel_villa_commonProps, manuel_villa_array_of_posts],
-  // [geridoo_commonProps, geridoo_array_of_posts],
-  
-  // [laVidaDeTomas_commonProps, laVidaDeTomas_array_of_posts],
-
-  // [chico_collection_commonProps, chico_collection_array_of_posts],
-  // [riccardosegna_commonProps, riccardosegna_array_of_posts]
-
-  // [mr_lamborghini_commonProps, mr_lamborghini_array_of_posts],
+  [aiaartsensei_commonProps, aiaartsensei_array_of_posts]
 ];
