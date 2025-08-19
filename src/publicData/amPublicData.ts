@@ -1,9 +1,8 @@
+import type { arrayOfPosts } from '@/components/pages/SliderPosts/types.d.ts';
 import {
   goated_ai_art_array_of_posts,
   goated_ai_art_commonProps
 } from '@/publicData/user-2-goated-ai-art';
-import type { arrayOfPosts } from '@/components/pages/SliderPosts/types.d.ts';
-
 import {
   edaserkanbolat_edits_array_of_posts,
   edaserkanbolat_edits_commonProps
@@ -360,29 +359,24 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [ligthspeed_commonProps, ligthspeed_array_of_posts] /* 48 */,
   [blackcats_commonProps, blackcats_array_of_posts] /* 49 */,
   [ghxz_edits_commonProps, ghxz_edits_array_of_posts] /* 50 */,
-  // [mr_lamborghini_commonProps, mr_lamborghini_array_of_posts],
-
-  // [improve_commonProps, improve_array_of_posts],
-  // [lggbb_commonProps, lggbb_array_of_posts],
-  // [jiraiya_fanboy_commonProps, jiraiya_fanboy_array_of_posts],
-  // [dg_minisetoys_commonProps, dg_minisetoys_array_of_posts],
-  // [gian_piccin_commonProps, gian_piccin_array_of_posts],
-  /*
-   *
-   *
-   * *
-   * *
-   * *
-   * *
-   * * *
-   * * *
-   * * *
-   * * *
-   * * *
-   * * *
-   * * *
-   */
-
+  [beitman_commonProps, beitman_array_of_posts] /* 51 */,
+  [gafurovedit_commonProps, gafurovedit_array_of_posts] /* 52 */,
+  [improve_commonProps, improve_array_of_posts] /* 53 */,
+  [dg_minisetoys_commonProps, dg_minisetoys_array_of_posts] /* 54 */,
+  [jiraiya_fanboy_commonProps, jiraiya_fanboy_array_of_posts] /* 55 */,
+  [ximu_cat_commonProps, ximu_cat_array_of_posts] /* 56 */,
+  [eric_sierra_commonProps, eric_sierra_array_of_posts] /* 57 */,
+  [lggbb_commonProps, lggbb_array_of_posts] /* 58 */,
+  [mr_rizzer_commonProps, mr_rizzer_array_of_posts] /* 59 */,
+  [soyveyrox_commonProps, soyveyrox_array_of_posts] /* 60 */,
+  [turnsignalthecat_commonProps, turnsignalthecat_array_of_posts] /* 61 */,
+  [dreamfall_commonProps, dreamfall_array_of_posts] /* 62 */,
+  [freeskates_commonProps, freeskates_array_of_posts] /* 63 */,
+  [gian_piccin_commonProps, gian_piccin_array_of_posts] /* 64 */,
+  [aiaartsensei_commonProps, aiaartsensei_array_of_posts] /* 65 */,
+  [mateomassoni_commonProps, mateomassoni_array_of_posts] /* 66 */,
+  [molly_zombie_commonProps, molly_zombie_array_of_posts] /* 67 */,
+  [spirograph_commonProps, spirograph_array_of_posts] /* 68 */,
   [juixxe_commonProps, juixxe_array_of_posts] /* 69 */,
   [cagnolino_commonProps, cagnolino_array_of_posts] /* 70 */,
   [slinky_josh_commonProps, slinky_josh_array_of_posts] /* 71 */,
@@ -397,21 +391,5 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [pala3d_commonProps, pala3d_array_of_posts] /* 80 */,
   [gcodelabofficial_commonProps, gcodelabofficial_array_of_posts] /* 81 */,
   [creation_ross_commonProps, creation_ross_array_of_posts] /* 82 */,
-  [ok_toaster_commonProps, ok_toaster_array_of_posts] /* 83 */,
-
-  [soyveyrox_commonProps, soyveyrox_array_of_posts],
-  [freeskates_commonProps, freeskates_array_of_posts],
-  [molly_zombie_commonProps, molly_zombie_array_of_posts],
-
-  [mateomassoni_commonProps, mateomassoni_array_of_posts],
-  [ximu_cat_commonProps, ximu_cat_array_of_posts],
-  [mr_rizzer_commonProps, mr_rizzer_array_of_posts],
-  [beitman_commonProps, beitman_array_of_posts],
-  [eric_sierra_commonProps, eric_sierra_array_of_posts],
-  [turnsignalthecat_commonProps, turnsignalthecat_array_of_posts],
-  // [gafurovedit_commonProps, gafurovedit_array_of_posts],
-  [spirograph_commonProps, spirograph_array_of_posts],
-  [dreamfall_commonProps, dreamfall_array_of_posts],
-
-  [aiaartsensei_commonProps, aiaartsensei_array_of_posts]
+  [ok_toaster_commonProps, ok_toaster_array_of_posts] /* 83 */
 ];
