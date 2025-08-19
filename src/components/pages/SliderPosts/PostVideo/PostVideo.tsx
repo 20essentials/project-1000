@@ -147,7 +147,7 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
             
             videoAddMediaSessionEvents({
               videoRef: videoRef,
-              postVideoRef: postVideoRef
+              postVideoRef: postVideoRef,
             });
 
             if (thisPostWillRenderMorePost && !thisPostHasBeenRendered.current) {

@@ -12,9 +12,15 @@ import { HeartContainer } from '@/components/pages/SliderPosts/AsideRight/HeartC
 import { InputRange } from '@/components/pages/SliderPosts/PostVideo/inputRange';
 import { useIsScrolling } from '@/store/useIsScrolling';
 import { CloseStory } from './CloseStory';
+import type { TypeAnimateSliderRef } from '@/hooks/useSwipeScrollHorizontalStory';
+import {
+  updateMetadata,
+  videoAddMediaSessionEvents
+} from '@/services/MediaSessionApi';
 
 export function StoryPostVideo(
-  props: postProps & postComonProps & { idx: number }
+  props: postProps &
+    postComonProps & { idx: number } & { animateSlider: TypeAnimateSliderRef }
 ) {
   const hasInteracted = userHasInteracted(state => state.hasInteracted);
   const setUserHasInteracted = userHasInteracted(
@@ -24,7 +30,16 @@ export function StoryPostVideo(
   const offsetOfPosts = useLimitOfPost(state => state.offsetOfPosts);
   const isScrolling = useIsScrolling(state => state.isScrolling);
 
-  const { videoSrc, hearts, profileImageSrc, username, idx, userId } = props;
+  const {
+    videoSrc,
+    hearts,
+    profileImageSrc,
+    username,
+    idx,
+    userId,
+    description,
+    animateSlider
+  } = props;
   const thisPostWillRenderMorePost = idx % 3 === 0;
 
   const [isPaused, setIsPaused] = useState(true);
@@ -97,6 +112,24 @@ export function StoryPostVideo(
               thisPostHasBeenRendered.current = true;
               setLimit(prev => prev + offsetOfPosts);
             }
+
+            updateMetadata({
+              artist: description ?? `Video post from @${username}`,
+              title: `@${username}`,
+              urlPoster: profileImageSrc
+            });
+
+            videoAddMediaSessionEvents({
+              videoRef: videoRef,
+              postVideoRef: postVideoRef,
+              callbackNextTrack: () => {
+                animateSlider.current && animateSlider.current(-1);
+              },
+              callBackPreviousTrack: () => {
+                animateSlider.current && animateSlider.current(1);
+              }
+            });
+
             if (!hasInteractedRef.current || isScrolling) return;
             entry.target.classList.add('visible');
             if (isPausedRef.current) {

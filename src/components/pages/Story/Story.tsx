@@ -6,7 +6,6 @@ import { usePostsOftheStory } from '@/store/usePostsOfTheStory';
 import { useUserCreator } from '@/store/useUserCreator';
 import { useIsScrolling } from '@/store/useIsScrolling';
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
-import { useSwipeScrollHorizontal } from '@/hooks/useSwipeScrollHorizontal';
 import { useSwipeScrollHorizontalStory } from '@/hooks/useSwipeScrollHorizontalStory';
 
 export function Story() {
@@ -21,7 +20,7 @@ export function Story() {
       const sliderInner = sliderRef.current.querySelector(
         '.slider-inner'
       ) as HTMLElement;
-      if (indexOfPost === -1) return
+      if (indexOfPost === -1) return;
       setIsScrolling({ isScrolling: true });
       sliderInner.children[indexOfPost].scrollIntoView({
         behavior: 'smooth'
@@ -39,11 +38,10 @@ export function Story() {
     };
   }, []);
 
-  useSwipeScrollHorizontalStory({
+  const { animateSlider } = useSwipeScrollHorizontalStory({
     containerOfImagesRef: sliderRef,
-    classNameOfTrigger: '.slider-inner',
+    classNameOfTrigger: '.slider-inner'
   });
-
   return (
     <article className='story-container'>
       <aside className='slider' ref={sliderRef}>
@@ -52,9 +50,14 @@ export function Story() {
             const key = `post-${idx}`;
 
             return post.videoSrc ? (
-              <StoryPostVideo idx={idx + 1} key={key} {...post} />
+              <StoryPostVideo
+                animateSlider={animateSlider}
+                idx={idx + 1}
+                key={key}
+                {...post}
+              />
             ) : (
-              <StoryPostImage idx={idx + 1} key={key} {...post} />
+              <StoryPostImage animateSlider={animateSlider} idx={idx + 1} key={key} {...post} />
             );
           })}
         </aside>

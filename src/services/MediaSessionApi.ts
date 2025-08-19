@@ -68,10 +68,14 @@ export function updateMetadata({
 
 export function videoAddMediaSessionEvents({
   videoRef,
-  postVideoRef
+  postVideoRef,
+  callbackNextTrack,
+  callBackPreviousTrack
 }: {
   videoRef: React.RefObject<HTMLVideoElement | null>;
   postVideoRef: React.RefObject<HTMLElement | null>;
+  callbackNextTrack?: (...args: any[]) => void;
+  callBackPreviousTrack?: (...args: any[]) => void;
 }) {
   if (!videoRef.current) return;
   const $videoElement = videoRef.current;
@@ -107,12 +111,14 @@ export function videoAddMediaSessionEvents({
 
   navigator.mediaSession.setActionHandler('nexttrack', () => {
     if (!postVideoRef.current) return;
+    if (callbackNextTrack) return callbackNextTrack();
     const nextElement = postVideoRef.current.nextElementSibling;
     nextElement && nextElement.scrollIntoView({ behavior: 'smooth' });
   });
 
   navigator.mediaSession.setActionHandler('previoustrack', () => {
     if (!postVideoRef.current) return;
+    if (callBackPreviousTrack) return callBackPreviousTrack();
     const prevElement = postVideoRef.current.previousElementSibling;
     prevElement && prevElement.scrollIntoView({ behavior: 'smooth' });
   });
@@ -120,52 +126,58 @@ export function videoAddMediaSessionEvents({
 
 export function audioAddMediaSessionEvents({
   audioRef,
-  postImageRef
+  postImageRef,
+  callbackNextTrack,
+  callBackPreviousTrack
 }: {
   audioRef: React.RefObject<HTMLAudioElement | null>;
   postImageRef: React.RefObject<HTMLElement | null>;
+  callbackNextTrack?: (...args: any[]) => void;
+  callBackPreviousTrack?: (...args: any[]) => void;
 }) {
   if (!audioRef.current) return;
   const $audioElement = audioRef.current;
 
-  navigator.mediaSession.setActionHandler("play", () => {
+  navigator.mediaSession.setActionHandler('play', () => {
     $audioElement.play();
-    navigator.mediaSession.playbackState = "playing";
+    navigator.mediaSession.playbackState = 'playing';
   });
 
-  navigator.mediaSession.setActionHandler("pause", () => {
+  navigator.mediaSession.setActionHandler('pause', () => {
     $audioElement.pause();
-    navigator.mediaSession.playbackState = "paused";
+    navigator.mediaSession.playbackState = 'paused';
   });
 
-  navigator.mediaSession.setActionHandler("seekbackward", () => {
+  navigator.mediaSession.setActionHandler('seekbackward', () => {
     $audioElement.currentTime = Math.max($audioElement.currentTime - 10, 0);
   });
 
-  navigator.mediaSession.setActionHandler("seekforward", () => {
+  navigator.mediaSession.setActionHandler('seekforward', () => {
     $audioElement.currentTime = Math.min(
       $audioElement.currentTime + 10,
       $audioElement.duration
     );
   });
 
-  navigator.mediaSession.setActionHandler("seekto", details => {
-    if (details.fastSeek && "fastSeek" in $audioElement) {
+  navigator.mediaSession.setActionHandler('seekto', details => {
+    if (details.fastSeek && 'fastSeek' in $audioElement) {
       $audioElement.fastSeek(details.seekTime as number);
     } else {
       $audioElement.currentTime = details.seekTime as number;
     }
   });
 
-  navigator.mediaSession.setActionHandler("nexttrack", () => {
+  navigator.mediaSession.setActionHandler('nexttrack', () => {
     if (!postImageRef.current) return;
+    if (callbackNextTrack) return callbackNextTrack();
     const nextElement = postImageRef.current.nextElementSibling;
-    nextElement && nextElement.scrollIntoView({ behavior: "smooth" });
+    nextElement && nextElement.scrollIntoView({ behavior: 'smooth' });
   });
 
-  navigator.mediaSession.setActionHandler("previoustrack", () => {
+  navigator.mediaSession.setActionHandler('previoustrack', () => {
     if (!postImageRef.current) return;
+    if (callBackPreviousTrack) return callBackPreviousTrack();
     const prevElement = postImageRef.current.previousElementSibling;
-    prevElement && prevElement.scrollIntoView({ behavior: "smooth" });
+    prevElement && prevElement.scrollIntoView({ behavior: 'smooth' });
   });
 }

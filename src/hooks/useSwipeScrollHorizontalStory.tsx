@@ -2,8 +2,11 @@ import gsap from 'gsap';
 import Draggable from 'gsap/Draggable';
 import InertiaPlugin from 'gsap/InertiaPlugin';
 import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
 gsap.registerPlugin(Draggable, InertiaPlugin, useGSAP);
 
+export type TypeAnimateSlider = (direction: number) => void | undefined;
+export type TypeAnimateSliderRef = React.RefObject<TypeAnimateSlider | undefined>;
 export function useSwipeScrollHorizontalStory({
   containerOfImagesRef,
   classNameOfTrigger
@@ -11,6 +14,7 @@ export function useSwipeScrollHorizontalStory({
   containerOfImagesRef: React.RefObject<HTMLElement | null>;
   classNameOfTrigger: string;
 }) {
+  const animateSlider = useRef<TypeAnimateSlider>(undefined);
   useGSAP(
     () => {
       if (!containerOfImagesRef.current) return;
@@ -95,6 +99,8 @@ export function useSwipeScrollHorizontalStory({
         });
       }
 
+      animateSlider.current = animateSlides;
+
       function snapX(value: number) {
         const snapped = gsap.utils.snap(slideWidth, value);
         return wrap
@@ -127,4 +133,6 @@ export function useSwipeScrollHorizontalStory({
     },
     { scope: containerOfImagesRef }
   );
+
+  return { animateSlider };
 }

@@ -15,12 +15,27 @@ import { useTrackVisibleImage } from '@/hooks/useTrackVisibleImage';
 import { useIsScrolling } from '@/store/useIsScrolling';
 import { InputRangeAudio } from '@/components/pages/Story/InputRangeAudio';
 import { CloseStory } from './CloseStory';
+import type { TypeAnimateSliderRef } from '@/hooks/useSwipeScrollHorizontalStory';
+import {
+  audioAddMediaSessionEvents,
+  updateMetadata
+} from '@/services/MediaSessionApi';
 
 export function StoryPostImage(
-  props: postProps & postComonProps & { idx: number }
+  props: postProps &
+    postComonProps & { idx: number } & { animateSlider: TypeAnimateSliderRef }
 ) {
-  const { arrayImages, hearts, username, profileImageSrc, idx, userId, idPost } =
-    props;
+  const {
+    arrayImages,
+    hearts,
+    username,
+    profileImageSrc,
+    idx,
+    userId,
+    idPost,
+    description,
+    animateSlider
+  } = props;
 
   // const arrayImagesLength = arrayImages?.length ?? 0;
   const arrayImagesLength = 1;
@@ -33,7 +48,6 @@ export function StoryPostImage(
   const thisPostHasBeenRendered = useRef(false);
   const isScrolling = useIsScrolling(state => state.isScrolling);
   const [randomSong, setRandomSong] = useState<string | null>(null);
-
   const [currentDuration, setCurrentDuration] = useState(0);
   const [totalDuration, setTotalDuration] = useState(0);
 
@@ -131,6 +145,23 @@ export function StoryPostImage(
             thisPostHasBeenRendered.current = true;
             setLimit(prev => prev + offsetOfPosts);
           }
+
+          updateMetadata({
+            artist: description ?? `Image post from @${username}`,
+            title: `@${username}`,
+            urlPoster: profileImageSrc
+          });
+
+          audioAddMediaSessionEvents({
+            audioRef: audioRef,
+            postImageRef: postImageRef,
+            callbackNextTrack: () => {
+              animateSlider.current && animateSlider.current(-1);
+            },
+            callBackPreviousTrack: () => {
+              animateSlider.current && animateSlider.current(1);
+            }
+          });
 
           if (!hasInteractedRef.current || isScrolling) return;
           entry.target.classList.add('visible');
