@@ -4,12 +4,11 @@ import {
   type ArrayContent
 } from '@/publicData/functions/amPublicFunctions';
 
-//falta userId, profilesrc, prefix, profileDescription
-
 export const francesco_viaggi_commonProps = generateExactlyCommonProps({
   userId: '81460ace-7d45-4eed-a3dc-df29ec1d0643',
   username: 'francesco_viaggi',
-  profileImageSrc: 'https://dominicnikolai.github.io/project-209/assets/fr4nc3sco-vi4ggi/p3rfil.avif',
+  profileImageSrc:
+    'https://dominicnikolai.github.io/project-209/assets/fr4nc3sco-vi4ggi/p3rfil.avif',
   following: false,
   followers: 122_720,
   totalLikes: 5_320_712,
@@ -17,7 +16,8 @@ export const francesco_viaggi_commonProps = generateExactlyCommonProps({
   profileDescription: 'Viaggiare'
 });
 
-const PREFIX = 'https://dominicnikolai.github.io/project-209/assets/fr4nc3sco-vi4ggi/';
+const PREFIX =
+  'https://dominicnikolai.github.io/project-209/assets/fr4nc3sco-vi4ggi/';
 
 const ARRAY_CONTENT: ArrayContent = [
   {
