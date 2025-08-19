@@ -4,26 +4,26 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'amUserPrivate';
+const username = 'kengam';
 const userId = '';
 const prefixUrl = '';
-const followers = 100_000;
-const followed = 50;
-const profileDescription = 'Hello';
+const followers = 434_720;
+const followed = 79;
+const profileDescription = 'Coming Soon';
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 20;
+const quantityOfVideos = 6;
 const prefixLetterImages = 'n';
-const quantityOfImages = 20;
+const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
-  ``, /*1*/
-  ``, /*2*/
-  ``, /*3*/
-  ``, /*4*/
-  ``, /*5*/
-  ``, /*6*/
+  `Uff`, /*1*/
+  `Winnie catches the OPPS!!`, /*2*/
+  `Winnie has big problems with pandas`, /*3*/
+  `😍🍉🛫🌴`, /*4*/
+  `Cartoon Street Workout`, /*5*/
+  `Mickey The Woo`, /*6*/
   ``, /*7*/
   ``, /*8*/
   ``, /*9*/ 
@@ -64,7 +64,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const amUserPrivate_commonProps = generateExactlyCommonProps({
+export const kengam_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -73,7 +73,7 @@ export const amUserPrivate_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const amUserPrivate_videos = generateArrayPostsOfVideos({
+const kengam_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -81,14 +81,14 @@ const amUserPrivate_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const amUserPrivate_images = generateArrayPostsOfImages({
+const kengam_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const amUserPrivate_array_of_posts = [
-  ...amUserPrivate_images,
-  ...amUserPrivate_videos
+export const kengam_array_of_posts = [
+  ...kengam_images,
+  ...kengam_videos
 ];

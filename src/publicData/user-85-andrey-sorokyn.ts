@@ -4,26 +4,26 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'amUserPrivate';
+const username = 'andrey_sorokyn';
 const userId = '';
 const prefixUrl = '';
-const followers = 100_000;
-const followed = 50;
-const profileDescription = 'Hello';
+const followers = 77_720;
+const followed = 89;
+const profileDescription = 'Моя 🛒👇';
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 20;
+const quantityOfVideos = 6;
 const prefixLetterImages = 'n';
-const quantityOfImages = 20;
+const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
-  ``, /*1*/
-  ``, /*2*/
-  ``, /*3*/
-  ``, /*4*/
-  ``, /*5*/
-  ``, /*6*/
+  `Охота 4.0 😂`, /*1*/
+  `⚡️`, /*2*/
+  `Pay parking☠️`, /*3*/
+  `Qr-code`, /*4*/
+  `🦍🖕 Заказать футболку в telegram - malert`, /*5*/
+  `Wife free`, /*6*/
   ``, /*7*/
   ``, /*8*/
   ``, /*9*/ 
@@ -64,7 +64,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const amUserPrivate_commonProps = generateExactlyCommonProps({
+export const andrey_sorokyn_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -73,7 +73,7 @@ export const amUserPrivate_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const amUserPrivate_videos = generateArrayPostsOfVideos({
+const andrey_sorokyn_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -81,14 +81,14 @@ const amUserPrivate_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const amUserPrivate_images = generateArrayPostsOfImages({
+const andrey_sorokyn_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const amUserPrivate_array_of_posts = [
-  ...amUserPrivate_images,
-  ...amUserPrivate_videos
+export const andrey_sorokyn_array_of_posts = [
+  ...andrey_sorokyn_images,
+  ...andrey_sorokyn_videos
 ];

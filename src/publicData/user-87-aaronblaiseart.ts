@@ -4,26 +4,26 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'amUserPrivate';
+const username = 'aaronblaiseart';
 const userId = '';
 const prefixUrl = '';
-const followers = 100_000;
+const followers = 572_720;
 const followed = 50;
-const profileDescription = 'Hello';
+const profileDescription = 'Animation Feature Film Director, character designer, concept & Wildlife Artist.';
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 20;
+const quantityOfVideos = 6;
 const prefixLetterImages = 'n';
-const quantityOfImages = 20;
+const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
-  ``, /*1*/
-  ``, /*2*/
-  ``, /*3*/
-  ``, /*4*/
-  ``, /*5*/
-  ``, /*6*/
+  `Check out my website to learn more! #animation #2danimation #aladdin #disney`, /*1*/
+  `See my new film, Snow Bear this Saturday, August, 23rd. Become a lifetime member at CreatureArtTeacher.com #aaronblaise #animation #2danimation #artschool #arteducation #snowbearfilm`, /*2*/
+  `College is expensive. I’m not. #Artschool #animation #2danimation #arteducation #handdrawnanimation`, /*3*/
+  `CreatureArtTeacher.com #aladdin #animation #2danimation #creatureartteacher #traditionalanimation animation`, /*4*/
+  `Today I animated on paper live this little bunny hop. #aaronblaise #animation #2danimation #drawing #paperanimation #traditionalanimation`, /*5*/
+  `Hawk`, /*6*/
   ``, /*7*/
   ``, /*8*/
   ``, /*9*/ 
