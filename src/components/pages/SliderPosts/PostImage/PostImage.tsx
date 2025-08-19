@@ -22,6 +22,11 @@ import { AsideBottomOfShare } from '../AsideRight/AsideBottomOfShare';
 import { useUpdateUrlParamsPostVideoOrImage } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 import { useCurrentUser } from '@/store/useCurrentUser';
 import { useSwipeScrollHorizontal } from '@/hooks/useSwipeScrollHorizontal';
+import {
+  audioAddMediaSessionEvents,
+  updateMetadata,
+  videoAddMediaSessionEvents
+} from '@/services/MediaSessionApi';
 
 export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const {
@@ -142,6 +147,17 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
               userId: userId
             });
           }
+
+          updateMetadata({
+            artist: description ?? `Image post from @${username}`,
+            title: `@${username}`,
+            urlPoster: profileImageSrc
+          });
+
+          audioAddMediaSessionEvents({
+            audioRef: audioRef,
+            postImageRef: postImageRef
+          });
 
           if (thisPostWillRenderMorePost && !thisPostHasBeenRendered.current) {
             thisPostHasBeenRendered.current = true;

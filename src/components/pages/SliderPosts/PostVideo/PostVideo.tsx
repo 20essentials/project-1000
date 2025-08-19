@@ -19,6 +19,11 @@ import { ContainerBottomOfComments } from '../AsideRight/ContainerBottomOfCommen
 import { AsideBottomOfShare } from '../AsideRight/AsideBottomOfShare';
 import { useUpdateUrlParamsPostVideoOrImage } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 import { useCurrentUser } from '@/store/useCurrentUser';
+import {
+  audioAddMediaSessionEvents,
+  videoAddMediaSessionEvents,
+  updateMetadata
+} from '@/services/MediaSessionApi';
 
 export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   const hasInteracted = userHasInteracted(state => state.hasInteracted);
@@ -134,13 +139,26 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
               });
             }
 
+            updateMetadata({
+              artist: description ?? `Video post from @${username}`,
+              title: `@${username}`,
+              urlPoster: profileImageSrc
+            });
+            
+            videoAddMediaSessionEvents({
+              videoRef: videoRef,
+              postVideoRef: postVideoRef
+            });
+
             if (thisPostWillRenderMorePost && !thisPostHasBeenRendered.current) {
               thisPostHasBeenRendered.current = true;
               setLimit(prev => prev + offsetOfPosts);
             }
+
             if (!hasInteractedRef.current || isScrolling) return;
 
             entry.target.classList.add('visible');
+
             if (isPausedRef.current) {
               playVideo();
             }
