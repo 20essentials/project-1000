@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'roller_bearding';
-const userId = '';
-const prefixUrl = '';
+const userId = 'deab2c04-a058-430c-824d-bdc7e5d7f891';
+const prefixUrl = 'https://dominicnikolai.github.io/project-276/assets/roll3rbe4rding/';
 const followers = 287_720;
 const followed = 432;
 const profileDescription = 'Certified skating instructor';

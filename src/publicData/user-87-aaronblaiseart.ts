@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'aaronblaiseart';
-const userId = '';
-const prefixUrl = '';
+const userId = '9efaa1bb-c6cb-4918-9300-e7ea6f3cee14';
+const prefixUrl = 'https://dominicnikolai.github.io/project-274/assets/aaronbl4iseart/';
 const followers = 572_720;
 const followed = 50;
 const profileDescription = 'Animation Feature Film Director, character designer, concept & Wildlife Artist.';
@@ -64,7 +64,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const amUserPrivate_commonProps = generateExactlyCommonProps({
+export const aaronblaiseart_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -73,7 +73,7 @@ export const amUserPrivate_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const amUserPrivate_videos = generateArrayPostsOfVideos({
+const aaronblaiseart_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -81,14 +81,14 @@ const amUserPrivate_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const amUserPrivate_images = generateArrayPostsOfImages({
+const aaronblaiseart_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const amUserPrivate_array_of_posts = [
-  ...amUserPrivate_images,
-  ...amUserPrivate_videos
+export const aaronblaiseart_array_of_posts = [
+  ...aaronblaiseart_images,
+  ...aaronblaiseart_videos
 ];

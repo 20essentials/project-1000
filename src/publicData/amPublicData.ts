@@ -301,6 +301,10 @@ import {
   creation_ross_array_of_posts,
   creation_ross_commonProps
 } from './user-82-creationross';
+import { aaronblaiseart_array_of_posts, aaronblaiseart_commonProps } from './user-87-aaronblaiseart';
+import { kengam_array_of_posts, kengam_commonProps } from './user-84-kengam';
+import { roller_bearding_array_of_posts, roller_bearding_commonProps } from './user-86-rollerbearding';
+import { ringwitdahoodie_array_of_posts, ringwitdahoodie_commonProps } from './user-88-ringwitdahoodie';
 
 export const PUBLIC_DATA: arrayOfPosts = [
   [midudev_commonProps, midudev_array_of_posts] /* 1 */,
@@ -391,5 +395,10 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [pala3d_commonProps, pala3d_array_of_posts] /* 80 */,
   [gcodelabofficial_commonProps, gcodelabofficial_array_of_posts] /* 81 */,
   [creation_ross_commonProps, creation_ross_array_of_posts] /* 82 */,
-  [ok_toaster_commonProps, ok_toaster_array_of_posts] /* 83 */
+  [ok_toaster_commonProps, ok_toaster_array_of_posts], /* 83 */
+  [kengam_commonProps, kengam_array_of_posts], /* 83 */
+
+  [roller_bearding_commonProps, roller_bearding_array_of_posts], /* 86 */
+  [aaronblaiseart_commonProps, aaronblaiseart_array_of_posts], /* 87 */
+  [ringwitdahoodie_commonProps, ringwitdahoodie_array_of_posts], /* 88 */
 ];

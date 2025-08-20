@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'kengam';
-const userId = '';
-const prefixUrl = '';
+const userId = '19b83075-1386-4cbb-95fa-ffbb5b8df0d9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-275/assets/k3ngam/';
 const followers = 434_720;
 const followed = 79;
 const profileDescription = 'Coming Soon';

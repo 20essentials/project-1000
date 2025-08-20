@@ -5,15 +5,15 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ringwitdahoodie';
-const userId = '';
-const prefixUrl = '';
+const userId = 'bc6184e8-f288-41c1-b8bb-83c8d718774d';
+const prefixUrl = 'https://dominicnikolai.github.io/project-277/assets/ringw1tdahoodie/';
 const followers = 1_720_322;
 const followed = 123;
 const profileDescription = 'Greatest Quality Possible🗣️.';
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 20;
+const quantityOfVideos = 9;
 const prefixLetterImages = 'n';
-const quantityOfImages = 20;
+const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
