@@ -2,8 +2,8 @@ import { useRef, useState, useCallback, useEffect } from 'react';
 import Webcam from 'react-webcam';
 import { SECTION_TYPE } from './FooterUpload';
 import { useUploadVideoOrImages } from '@/store/useUploadVideoOrImages';
-import { CurrentVideoDuration } from './VideoDuration';
 import { CircleOfCapture } from './CircleOfCapture';
+import { TypeCaptureNavBottom } from './TypeCaptureNavBottom';
 
 export default function CamaraVideo({
   updateIndex,
@@ -134,35 +134,17 @@ export default function CamaraVideo({
       />
 
       {!cameraIsAllowing && (
-        <p
-          className='message-error'
-          onClick={async () => {
-            alert('h');
-          }}
-        >
+        <p className='message-error'>
           Camera access is disabled. To continue, allow CAMERA and AUDIO access
           from your browser’s site settings
         </p>
       )}
 
-      <nav className='nav-of-type-of-capture'>
-        <div
-          className={`container-type-capture type-camera ${
-            modePhoto ? 'active-button' : ''
-          }`}
-          onClick={activeModePhoto}
-        >
-          <button className='button'>Photo</button>
-        </div>
-        <div
-          className={`container-type-capture type-video ${
-            modePhoto ? '' : 'active-button'
-          }`}
-          onClick={activeModeVideo}
-        >
-          <button className='button'>Video</button>
-        </div>
-      </nav>
+      <TypeCaptureNavBottom
+        modePhoto={modePhoto}
+        activeModePhoto={activeModePhoto}
+        activeModeVideo={activeModeVideo}
+      />
 
       <CircleOfCapture
         modePhoto={modePhoto}
