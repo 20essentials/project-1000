@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'andrey_sorokyn';
-const userId = '';
-const prefixUrl = '';
+const userId = '4ebb53b2-cf3e-41a2-94a7-d9adedeb65bd';
+const prefixUrl = 'https://dominicnikolai.github.io/project-278/assets/andr3y-sor0kyn/';
 const followers = 77_720;
 const followed = 89;
 const profileDescription = 'Моя 🛒👇';
