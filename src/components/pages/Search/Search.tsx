@@ -3,10 +3,15 @@ import { WatchIcon } from '@/components/pages/Search/WatchIcon';
 import { useGlobalArrayPosts } from '@/store/useGlobalArrayPosts';
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 import { useUserCreator } from '@/store/useUserCreator';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { wrapValue } from '@/utils/gsap/gsapFunction';
+const ROW_ACTIVE_CLASSNAME = 'active-search-item';
 
 export function Search() {
   const [searchText, setSearchText] = useState('');
+  const arrayOfRows = useRef<HTMLElement[]>([]);
+  const currentIndexOfRow = useRef(-1);
+  const lastRowWActive = useRef<HTMLElement | null>(null);
   const FOLLOWED = useGlobalArrayPosts(state => state.FOLLOWED);
   const FOR_YOU = useGlobalArrayPosts(state => state.FOR_YOU);
   const ALL_POSTS = [...FOR_YOU, ...FOLLOWED];
@@ -28,6 +33,10 @@ export function Search() {
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
   const setArrayOfPosts = useUserCreator(state => state.setArrayOfPosts);
   const setCommonProps = useUserCreator(state => state.setCommonProps);
+  const wrapCustom = useMemo(() => {
+    currentIndexOfRow.current = -1;
+    return wrapValue(0, filteredArray.length);
+  }, [filteredArray]);
 
   function nextToProfileCreator({ userId }: { userId: string }) {
     setCurrentPage(IS_ACTIVE_BUTTON.PROFILE_CREATOR);
@@ -45,12 +54,39 @@ export function Search() {
 
   useEffect(() => {
     function handlekeydown(event: KeyboardEvent) {
-      if (event.key === 'Enter') {
+      const { key } = event;
+      if (key === 'Enter') {
         const firstElement = searchBottomRef.current
           ?.firstElementChild as HTMLElement | null;
-        if (firstElement) {
+        if (firstElement && currentIndexOfRow.current === -1) {
           firstElement.click();
+          return;
         }
+
+        const currentRow = lastRowWActive.current;
+        currentRow && currentRow.click();
+      }
+
+      if (key === 'ArrowDown') {
+        const lastRowActived = lastRowWActive.current;
+        if (lastRowActived) lastRowActived.classList.remove(ROW_ACTIVE_CLASSNAME);
+        const nextValue = wrapCustom(currentIndexOfRow.current + 1);
+        currentIndexOfRow.current = nextValue;
+        const currentRow = arrayOfRows.current[currentIndexOfRow.current];
+        currentRow.classList.add(ROW_ACTIVE_CLASSNAME);
+        currentRow.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        lastRowWActive.current = currentRow;
+      }
+      if (key === 'ArrowUp') {
+        if (currentIndexOfRow.current === -1) currentIndexOfRow.current = 0;
+        const lastRowActived = lastRowWActive.current;
+        if (lastRowActived) lastRowActived.classList.remove(ROW_ACTIVE_CLASSNAME);
+        const nextValue = wrapCustom(currentIndexOfRow.current - 1);
+        currentIndexOfRow.current = nextValue;
+        const currentRow = arrayOfRows.current[currentIndexOfRow.current];
+        currentRow.classList.add(ROW_ACTIVE_CLASSNAME);
+        currentRow.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        lastRowWActive.current = currentRow;
       }
     }
 
@@ -58,8 +94,10 @@ export function Search() {
 
     return () => {
       document.removeEventListener('keydown', handlekeydown);
+      const lastRowActived = lastRowWActive.current;
+      if (lastRowActived) lastRowActived.classList.remove(ROW_ACTIVE_CLASSNAME);
     };
-  }, []);
+  }, [wrapCustom]);
 
   return (
     <article className='search'>
@@ -79,11 +117,14 @@ export function Search() {
       </aside>
       <section className='search-bottom' ref={searchBottomRef}>
         {filteredArray.length > 0 ? (
-          filteredArray.map(({ userId, username }) => (
+          filteredArray.map(({ userId, username }, index) => (
             <article
               className='user-search'
               key={userId}
               onClick={() => nextToProfileCreator({ userId })}
+              ref={el => {
+                el && (arrayOfRows.current[index] = el);
+              }}
             >
               <div className='user-search-left'>
                 <WatchIcon className='watch' />

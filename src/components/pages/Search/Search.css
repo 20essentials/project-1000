@@ -71,14 +71,27 @@
       padding-inline: 0;
       cursor: pointer;
 
-      .watch,
-      .delete-icon {
-        width: 17px;
-        height: 17px;
-        color: #ccc;
+      &.active-search-item {
+        --current-color: lime;
+        .watch {
+          color: var(--current-color);
+        }
+
+        .user-search-left {
+          h5 {
+            color: var(--current-color);
+          }
+
+          .line {
+            border-bottom-color: var(--current-color);
+          }
+        }
       }
 
       .watch {
+        width: 17px;
+        height: 17px;
+        color: #ccc;
         scale: 0.9;
       }
 
@@ -87,7 +100,6 @@
         align-items: center;
         gap: 3px;
         width: 100%;
-        /* background-color: red; */
 
         h5 {
           color: #eee;
