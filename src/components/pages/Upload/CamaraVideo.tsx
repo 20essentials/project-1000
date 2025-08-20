@@ -3,7 +3,7 @@ import Webcam from 'react-webcam';
 import { SECTION_TYPE } from './FooterUpload';
 import { useUploadVideoOrImages } from '@/store/useUploadVideoOrImages';
 import { CurrentVideoDuration } from './VideoDuration';
-import { MAX_TIME_OF_SECONDS } from './VideoDuration';
+import { CircleOfCapture } from './CircleOfCapture';
 
 export default function CamaraVideo({
   updateIndex,
@@ -106,30 +106,6 @@ export default function CamaraVideo({
     setArrayImages([]);
   };
 
-  // useEffect(() => {
-  //   async function requestCameraAccess() {
-  //     try {
-  //       const stream = await navigator.mediaDevices.getUserMedia({
-  //         video: { facingMode: 'user' },
-  //         audio: true
-  //       });
-
-  //       // Si llega aquí, el usuario aceptó
-  //       setIsCameraAllowing(true);
-
-  //       // Opcional: asignar manualmente el stream al webcamRef
-  //       if (webcamRef.current) {
-  //         webcamRef.current.stream = stream;
-  //       }
-  //     } catch (error) {
-  //       console.error('El usuario no permitió acceso a la cámara:', error);
-  //       setIsCameraAllowing(false);
-  //     }
-  //   }
-
-  //   requestCameraAccess();
-  // }, []);
-
   return (
     <div className='create-section'>
       {/* {
@@ -164,16 +140,10 @@ export default function CamaraVideo({
             alert('h');
           }}
         >
-          Camera access is disabled. To continue, allow camera access from your
-          browser’s site settings
+          Camera access is disabled. To continue, allow CAMERA and AUDIO access
+          from your browser’s site settings
         </p>
       )}
-      {/* {!cameraIsAllowing && (
-        <p className='message-error'>
-          Camera access is disabled. To continue, allow camera access from your
-          browser’s site settings
-        </p>
-      )} */}
 
       <nav className='nav-of-type-of-capture'>
         <div
@@ -194,50 +164,13 @@ export default function CamaraVideo({
         </div>
       </nav>
 
-      {!modePhoto && grabando && (
-        <CurrentVideoDuration paraGrabacion={paraGrabacion} grabando={grabando} />
-      )}
-      {modePhoto ? (
-        <aside className='circle-of-capture' onClick={capturaImagen}>
-          <aside className='circle-inner'></aside>
-        </aside>
-      ) : !grabando ? (
-        <aside className='circle-of-capture' onClick={iniciaGrabacion}>
-          <aside className='circle-inner circle-inner-red'></aside>
-        </aside>
-      ) : (
-        <aside
-          className='circle-of-capture circle-of-capture-video-start'
-          onClick={paraGrabacion}
-        >
-          <aside className='circle-inner circle-inner-blue-testing'></aside>
-          <svg width='70' height='70' viewBox='0 0 120 120' className='am-border'>
-            <circle
-              cx='60'
-              cy='60'
-              r='54'
-              fill='none'
-              stroke='#ddd'
-              strokeWidth='7'
-            />
-            <circle
-              cx='60'
-              cy='60'
-              r='54'
-              fill='none'
-              stroke='#ff2b54'
-              strokeWidth='7'
-              strokeLinecap='round'
-              strokeDasharray='339.292'
-              strokeDashoffset='339.292'
-              className='circle-dashed'
-              style={{
-                animationDuration: `${MAX_TIME_OF_SECONDS}s`
-              }}
-            />
-          </svg>
-        </aside>
-      )}
+      <CircleOfCapture
+        modePhoto={modePhoto}
+        grabando={grabando}
+        capturaImagen={capturaImagen}
+        iniciaGrabacion={iniciaGrabacion}
+        paraGrabacion={paraGrabacion}
+      />
     </div>
   );
 }
