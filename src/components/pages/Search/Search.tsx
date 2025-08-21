@@ -96,6 +96,7 @@ export function Search() {
       document.removeEventListener('keydown', handlekeydown);
       const lastRowActived = lastRowWActive.current;
       if (lastRowActived) lastRowActived.classList.remove(ROW_ACTIVE_CLASSNAME);
+      lastRowWActive.current = null;
     };
   }, [wrapCustom]);
 
