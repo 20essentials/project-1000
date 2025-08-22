@@ -106,7 +106,7 @@ export default function CamaraVideo({
     setArrayImages([]);
   };
 
-  const isMobile = window.innerWidth <= 1500; // puedes ajustar el breakpoint
+  const isMobile = window.innerWidth <= 1500; 
 
   const videoConstraints = {
     facingMode: 'user',
