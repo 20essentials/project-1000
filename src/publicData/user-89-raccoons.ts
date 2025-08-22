@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'raccoons';
-const userId = '';
-const prefixUrl = '';
+const userId = 'cc7332f8-caf2-4c1b-892c-73c540620383';
+const prefixUrl = 'https://dominicnikolai.github.io/project-280/assets/raccoons/';
 const followers = 348_720;
 const followed = 653;
 const profileDescription = '🦝';

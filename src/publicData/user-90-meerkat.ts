@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'meerkat';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ed069533-7bee-4736-94ec-f8399625d05a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-279/assets/meerkat/';
 const followers = 789_720;
 const followed = 132;
 const profileDescription = 'Chill';

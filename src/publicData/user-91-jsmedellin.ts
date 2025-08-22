@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'jsmedellin';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c4bdf442-e00a-4c32-a4b2-b84a3b523725';
+const prefixUrl = 'https://dominicnikolai.github.io/project-281/assets/jsmedellin/';
 const followers = 279_720;
 const followed = 71;
 const profileDescription = '🌐 ES | EN | PT | Learning Chinese';

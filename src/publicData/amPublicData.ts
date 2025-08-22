@@ -306,6 +306,10 @@ import { kengam_array_of_posts, kengam_commonProps } from './user-84-kengam';
 import { roller_bearding_array_of_posts, roller_bearding_commonProps } from './user-86-rollerbearding';
 import { ringwitdahoodie_array_of_posts, ringwitdahoodie_commonProps } from './user-88-ringwitdahoodie';
 import { andrey_sorokyn_array_of_posts, andrey_sorokyn_commonProps } from './user-85-andrey-sorokyn';
+import { meerkat_array_of_posts, meerkat_commonProps } from './user-90-meerkat';
+import { raccoons_array_of_posts, raccoons_commonProps } from './user-89-raccoons';
+import { jsmedellin_array_of_posts, jsmedellin_commonProps } from './user-91-jsmedellin';
+import { childhood_2000s_array_of_posts, childhood_2000s_commonProps } from './user-92-childhood-2000';
 
 export const PUBLIC_DATA: arrayOfPosts = [
   [midudev_commonProps, midudev_array_of_posts] /* 1 */,
@@ -402,4 +406,8 @@ export const PUBLIC_DATA: arrayOfPosts = [
   [roller_bearding_commonProps, roller_bearding_array_of_posts], /* 86 */
   [aaronblaiseart_commonProps, aaronblaiseart_array_of_posts], /* 87 */
   [ringwitdahoodie_commonProps, ringwitdahoodie_array_of_posts], /* 88 */
+  [raccoons_commonProps,raccoons_array_of_posts], /* 89 */
+  [meerkat_commonProps, meerkat_array_of_posts], /* 90 */
+  [jsmedellin_commonProps, jsmedellin_array_of_posts], /* 91 */
+  [childhood_2000s_commonProps, childhood_2000s_array_of_posts], /* 92 */
 ];

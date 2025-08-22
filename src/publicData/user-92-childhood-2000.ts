@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'childhood_2000s';
-const userId = '';
-const prefixUrl = '';
+const userId = '3f555d0e-49fc-4372-90cc-0bd8da81802e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-282/assets/ch1ldh0od-2000/';
 const followers = 832_231;
 const followed = 32;
 const profileDescription = 'Los 2000 no han muerto ¡estaban dormidos! 🛌😴 Revive con nosotros los tazos, las pegotas… y toda la magia de tu infancia... ';
