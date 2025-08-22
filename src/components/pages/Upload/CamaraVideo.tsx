@@ -135,8 +135,8 @@ export default function CamaraVideo({
 
       {!cameraIsAllowing && (
         <p className='message-error'>
-          Camera access is disabled. To continue, allow CAMERA and AUDIO access
-          from your browser’s site settings
+          To proceed, enable CAMERA and MICROPHONE access via your browser’s
+          settings.
         </p>
       )}
 
