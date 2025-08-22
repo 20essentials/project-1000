@@ -59,7 +59,7 @@ body {
   background-image: linear-gradient(to bottom, var(--top), var(--bottom));
 }
 
-/* .phone {
+.phone {
   width: 280px;
   height: 580px;
   background-size: contain;
@@ -174,42 +174,5 @@ body {
   @media (width <= 700px) and (orientation: portrait) and (hover: none) {
     zoom: 0.9;
   }
-} */
-
-.phone {
-  width: 280px;
-  height: 580px;
-  background-size: contain;
-  background-image: url('/assets/iphone-15.png');
-  position: relative;
-  background-repeat: no-repeat;
-
-  @media (width >= 1500px) { transform: scale(1.1); }
-  @media (width >= 1700px) { transform: scale(1.3); }
-  @media (width >= 2000px) { transform: scale(1.5); }
-  @media (width >= 2300px) { transform: scale(1.7); }
-  @media (width >= 2700px) { transform: scale(2); }
-  @media (width >= 3000px) { transform: scale(2.2); }
-  @media (width >= 3500px) { transform: scale(2.7); }
-  @media (width >= 4000px) { transform: scale(3); }
-  @media (width >= 4300px) { transform: scale(3.3); }
-  @media (width >= 5000px) { transform: scale(3.8); }
-  @media (width >= 5500px) { transform: scale(4); }
-  @media (width >= 6000px) { transform: scale(4.5); }
-
-  @media (width <= 1250px) and (orientation: landscape) and (hover: none) { transform: scale(0.75); }
-  @media (width <= 1250px) and (orientation: landscape) and (hover: hover) { transform: scale(0.9); }
-  @media (width <= 1095px) and (orientation: landscape) and (hover: none) { transform: scale(0.5); }
-  @media (width <= 1095px) and (orientation: landscape) and (hover: hover) { transform: scale(0.7); }
-  @media (width <= 650px) and (orientation: landscape) and (hover: none) { transform: scale(0.3); }
-  @media (width <= 900px) and (orientation: landscape) and (hover: hover) { transform: scale(0.6); }
-  @media (width <= 770px) and (orientation: landscape) and (hover: hover) { transform: scale(0.55); }
-  @media (width <= 650px) and (orientation: landscape) and (hover: hover) { transform: scale(0.4); }
-  @media (width <= 520px) and (orientation: landscape) and (hover: hover) { transform: scale(0.35); }
-  @media (width <= 390px) and (orientation: landscape) and (hover: hover) { transform: scale(0.25); }
-  @media (width <= 320px) and (orientation: landscape) and (hover: hover) { transform: scale(0.2); }
-  @media (width <= 600px) and (orientation: portrait) and (hover: hover) { transform: scale(0.3); }
-  @media (width <= 400px) and (orientation: landscape) and (hover: none) { transform: scale(0.2); }
-  @media (height <= 450px) and (width <= 450px) and (hover: none) and (orientation: landscape) { transform: scale(0.1); }
-  @media (width <= 700px) and (orientation: portrait) and (hover: none) { transform: scale(0.9); }
 }
+
