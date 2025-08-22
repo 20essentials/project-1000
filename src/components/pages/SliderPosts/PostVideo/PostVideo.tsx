@@ -20,10 +20,10 @@ import { AsideBottomOfShare } from '../AsideRight/AsideBottomOfShare';
 import { useUpdateUrlParamsPostVideoOrImage } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 import { useCurrentUser } from '@/store/useCurrentUser';
 import {
-  audioAddMediaSessionEvents,
   videoAddMediaSessionEvents,
   updateMetadata
 } from '@/services/MediaSessionApi';
+import { useDbclickHeart } from '@/hooks/useDbclickHeart';
 
 export function PostVideo(props: postProps & postComonProps & { idx: number }) {
   const hasInteracted = userHasInteracted(state => state.hasInteracted);
@@ -144,10 +144,10 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
               title: `@${username}`,
               urlPoster: profileImageSrc
             });
-            
+
             videoAddMediaSessionEvents({
               videoRef: videoRef,
-              postVideoRef: postVideoRef,
+              postVideoRef: postVideoRef
             });
 
             if (thisPostWillRenderMorePost && !thisPostHasBeenRendered.current) {
@@ -186,6 +186,11 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
       });
     };
   }, []);
+
+  useDbclickHeart({
+    containerRef: postVideoRef,
+    childrenClass: '.am-video-of-post'
+  });
 
   return (
     <aside className='post-video am-post-video-or-image' ref={postVideoRef}>

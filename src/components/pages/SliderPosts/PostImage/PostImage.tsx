@@ -27,6 +27,7 @@ import {
   updateMetadata,
   videoAddMediaSessionEvents
 } from '@/services/MediaSessionApi';
+import { useDbclickHeart } from '@/hooks/useDbclickHeart';
 
 export function PostImage(props: postProps & postComonProps & { idx: number }) {
   const {
@@ -191,6 +192,11 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
     containerOfImagesRef: layerOfImagesRef,
     classNameOfTrigger: '.layer-1-post-image-inner'
   });
+
+  useDbclickHeart({
+    childrenClass: '.layer-1-post-image-inner',
+    containerRef: postImageRef
+  })
 
   return (
     <article className='post-image am-post-video-or-image' ref={postImageRef}>
