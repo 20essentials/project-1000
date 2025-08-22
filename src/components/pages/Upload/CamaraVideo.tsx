@@ -110,8 +110,8 @@ export default function CamaraVideo({
 
   const videoConstraints = {
     facingMode: 'user',
-    width: { ideal: isMobile ? 720 : 1920 },
-    height: { ideal: isMobile ? 1280 : 1080 }
+    width: { ideal: !isMobile ? 720 : 1920 },
+    height: { ideal: !isMobile ? 1280 : 1080 }
   };
 
   return (
