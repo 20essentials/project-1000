@@ -1,17 +1,11 @@
-import { useState, useEffect } from 'react';
-
 export function useSliderIndex(sliderRef: React.RefObject<HTMLElement | null>) {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    if (sliderRef.current) {
-      sliderRef.current.children[index]?.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [index, sliderRef]);
-
   const updateIndex = (newIndex: number) => {
-    setIndex(newIndex);
+    if (sliderRef.current) {
+      sliderRef.current.children[newIndex]?.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
   };
 
-  return { index, updateIndex };
+  return { updateIndex };
 }
