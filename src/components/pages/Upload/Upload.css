@@ -80,6 +80,7 @@
           align-items: center;
           scale: 2;
           transition: all 0.1s ease;
+          z-index: 12;
 
           &.type-camera {
             background-color: var(--photo-a);

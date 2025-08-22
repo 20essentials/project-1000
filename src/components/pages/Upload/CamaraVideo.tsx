@@ -124,8 +124,8 @@ export default function CamaraVideo({
         screenshotFormat='image/jpeg'
         videoConstraints={{
           facingMode: 'user',
-          width: { ideal: 1280 },
-          height: { ideal: 720 }
+          // width: { ideal: 1280 },
+          // height: { ideal: 720 }
         }}
         className='am-webcam'
         mirrored={true}
