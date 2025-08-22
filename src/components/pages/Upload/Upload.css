@@ -56,7 +56,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 10;
+        z-index: 20;
         display: flex;
         justify-content: space-between;
         --photo-a: #644dff;
@@ -147,6 +147,7 @@
         place-content: center;
         padding: 3px;
         transition: background-color 0.4s ease, border-color 0.4s ease;
+        z-index: 20;
 
         svg.am-border {
           position: absolute;

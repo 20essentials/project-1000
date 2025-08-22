@@ -106,6 +106,14 @@ export default function CamaraVideo({
     setArrayImages([]);
   };
 
+  const isMobile = window.innerWidth <= 1000; // puedes ajustar el breakpoint
+
+  const videoConstraints = {
+    facingMode: 'user',
+    width: { ideal: isMobile ? 720 : 1920 },
+    height: { ideal: isMobile ? 1280 : 1080 }
+  };
+
   return (
     <div className='create-section'>
       {/* {
@@ -122,11 +130,7 @@ export default function CamaraVideo({
         audio={true}
         ref={webcamRef}
         screenshotFormat='image/jpeg'
-        videoConstraints={{
-          facingMode: 'user',
-          // width: { ideal: 1280 },
-          // height: { ideal: 720 }
-        }}
+        videoConstraints={videoConstraints}
         className='am-webcam'
         mirrored={true}
         muted
