@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'parijanofficial';
-const userId = '';
-const prefixUrl = '';
+const userId = 'e3478253-c533-4f54-9d67-7e03697915ae';
+const prefixUrl = 'https://dominicnikolai.github.io/project-286/assets/parijanofficial/';
 const followers = 327_720;
 const followed = 50;
 const profileDescription = 'Designed in Paris, Delivered Worldwide 🌍';

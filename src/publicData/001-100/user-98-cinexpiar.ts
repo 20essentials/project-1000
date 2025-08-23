@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'cinexpiar';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd1aab615-1661-4bd2-9acd-ab67cbeca3c5';
+const prefixUrl = 'https://dominicnikolai.github.io/project-286/assets/cinexpiar/';
 const followers = 92_720;
 const followed = 118;
 const profileDescription = 'Amo el cine carajo';

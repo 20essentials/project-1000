@@ -317,6 +317,8 @@ import { hunainn_array_of_posts, hunainn_commonProps } from './user-94-hunainn';
 import { clickwright_array_of_posts, clickwright_commonProps } from './user-95-clickwright';
 import { insidehistory_array_of_posts, insidehistory_commonProps } from './user-99-insidehistory';
 import { kenjeong_array_of_posts, kenjeong_commonProps } from './user-97-kenjeong';
+import { cinexpiar_array_of_posts, cinexpiar_commonProps } from './user-98-cinexpiar';
+import { parijanofficial_array_of_posts, parijanofficial_commonProps } from './user-96-parijanofficial';
 
 export const PUBLIC_001_100: arrayOfPosts = [
   [midudev_commonProps, midudev_array_of_posts] /* 1 */,
@@ -420,8 +422,8 @@ export const PUBLIC_001_100: arrayOfPosts = [
   [shrek_commonProps, shrek_array_of_posts], /* 93 */
   [hunainn_commonProps, hunainn_array_of_posts], /* 94 */
   [clickwright_commonProps, clickwright_array_of_posts], /* 95 */
-
+  [parijanofficial_commonProps, parijanofficial_array_of_posts], /* 96 */
   [kenjeong_commonProps, kenjeong_array_of_posts], /* 97 */
-  
+  [cinexpiar_commonProps, cinexpiar_array_of_posts], /* 98 */
   [insidehistory_commonProps, insidehistory_array_of_posts], /* 99 */
 ];
