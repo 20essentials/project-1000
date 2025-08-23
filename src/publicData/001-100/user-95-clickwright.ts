@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'clickwright';
-const userId = '';
-const prefixUrl = '';
+const userId = '7cbd3550-680a-4822-b557-ef670ff1a7d1';
+const prefixUrl = 'https://dominicnikolai.github.io/project-285/assets/click-wright/';
 const followers = 520_720;
 const followed = 122;
 const profileDescription = '🎬 Daily Car Boot Videos';

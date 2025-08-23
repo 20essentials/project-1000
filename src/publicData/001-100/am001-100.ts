@@ -314,6 +314,8 @@ import { jsmedellin_array_of_posts, jsmedellin_commonProps } from './user-91-jsm
 import { childhood_2000s_array_of_posts, childhood_2000s_commonProps } from './user-92-childhood-2000';
 import { shrek_array_of_posts, shrek_commonProps } from './user-93-shrek';
 import { hunainn_array_of_posts, hunainn_commonProps } from './user-94-hunainn';
+import { clickwright_array_of_posts, clickwright_commonProps } from './user-95-clickwright';
+import { insidehistory_array_of_posts, insidehistory_commonProps } from './user-99-insidehistory';
 
 export const PUBLIC_001_100: arrayOfPosts = [
   [midudev_commonProps, midudev_array_of_posts] /* 1 */,
@@ -416,4 +418,7 @@ export const PUBLIC_001_100: arrayOfPosts = [
   [childhood_2000s_commonProps, childhood_2000s_array_of_posts], /* 92 */
   [shrek_commonProps, shrek_array_of_posts], /* 93 */
   [hunainn_commonProps, hunainn_array_of_posts], /* 94 */
+  [clickwright_commonProps, clickwright_array_of_posts], /* 95 */
+  
+  [insidehistory_commonProps, insidehistory_array_of_posts], /* 99 */
 ];

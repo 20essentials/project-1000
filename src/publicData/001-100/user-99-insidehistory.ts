@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'insidehistory';
-const userId = '';
-const prefixUrl = '';
+const userId = '7f9dfbed-5c9d-4278-9f20-df58495f286e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-285/assets/insidehistory/';
 const followers = 100_000;
 const followed = 50;
 const profileDescription = 'Hello';
