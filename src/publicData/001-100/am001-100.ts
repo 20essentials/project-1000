@@ -11,10 +11,12 @@ import {
   jorgepomarg_array_of_posts,
   jorgepomarg_commonProps
 } from './user-12-jorgepomarg';
+
 import {
   lucia_sora_array_of_posts,
   lucia_sora_commonProps
 } from './user-13-luciasora';
+
 import {
   elcodigobravo_array_of_posts,
   elcodigobravo_commonProps
@@ -310,6 +312,8 @@ import { meerkat_array_of_posts, meerkat_commonProps } from './user-90-meerkat';
 import { raccoons_array_of_posts, raccoons_commonProps } from './user-89-raccoons';
 import { jsmedellin_array_of_posts, jsmedellin_commonProps } from './user-91-jsmedellin';
 import { childhood_2000s_array_of_posts, childhood_2000s_commonProps } from './user-92-childhood-2000';
+import { shrek_array_of_posts, shrek_commonProps } from './user-93-shrek';
+import { hunainn_array_of_posts, hunainn_commonProps } from './user-94-hunainn';
 
 export const PUBLIC_001_100: arrayOfPosts = [
   [midudev_commonProps, midudev_array_of_posts] /* 1 */,
@@ -410,4 +414,6 @@ export const PUBLIC_001_100: arrayOfPosts = [
   [meerkat_commonProps, meerkat_array_of_posts], /* 90 */
   [jsmedellin_commonProps, jsmedellin_array_of_posts], /* 91 */
   [childhood_2000s_commonProps, childhood_2000s_array_of_posts], /* 92 */
+  [shrek_commonProps, shrek_array_of_posts], /* 93 */
+  [hunainn_commonProps, hunainn_array_of_posts], /* 94 */
 ];

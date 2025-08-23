@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'shrek';
-const userId = '';
-const prefixUrl = '';
+const userId = '15cb439b-c64d-40ba-a8da-79d19da103fc';
+const prefixUrl = 'https://dominicnikolai.github.io/project-283/assets/shr3k/';
 const followers = 97_720;
 const followed = 132;
 const profileDescription = '🟢 Shrek clips 🟢';

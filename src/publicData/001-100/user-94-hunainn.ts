@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'hunainn';
-const userId = '';
-const prefixUrl = '';
+const userId = '9d3710a7-d9ca-4658-8142-2bc24573c32b';
+const prefixUrl = 'https://dominicnikolai.github.io/project-284/assets/hunainn/';
 const followers = 137_720;
 const followed = 50;
 const profileDescription = 'Just a guy who loves Dinosaurs and Kaiju';
