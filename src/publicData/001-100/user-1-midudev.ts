@@ -8,7 +8,8 @@ const username = 'midudev';
 const userId = '21a87f69-c341-492f-a156-47588fd606dd6';
 const prefixUrl =
   'https://dominicnikolai.github.io/project-208/assets/m1dudev/';
-const followers = 8_720_322;
+// const followers = 8_720_322;
+const followers = 520;
 const followed = 122;
 const profileDescription =
   '👨‍💻 Programación Web con JavaScript Cursos, Tutoriales, Trucos y Consejos';

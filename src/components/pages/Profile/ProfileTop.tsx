@@ -29,7 +29,7 @@ export function ProfileTop({
       <p className='name-of-the-user'>@{username}</p>
       <aside className='container-data-user'>
         <NumFollowed followedCount={generateTotalNum(numOfFollowed)} />
-        <NumFollowers followersCount={generateTotalNum(followers)} />
+        <NumFollowers followersCount={followers} />
         <article className='tab-data'>
           <p className='num'>{generateTotalNum(theTotalLikes)}</p>
           <p className='desc'>Likes</p>

@@ -1,12 +1,16 @@
 import { create } from 'zustand';
-import type {
-  postComonProps
-} from '@/components/pages/SliderPosts/types.d.ts';
+import type { postComonProps } from '@/components/pages/SliderPosts/types.d.ts';
 import { persist } from 'zustand/middleware';
 
 export type userId = postComonProps['userId'];
 
 interface UserLikedPostsState {
+  profileCreatorNumOfFollowers: number;
+  updateNumOfFollowersOfProfileCreator: ({
+    profileCreatorNumOfFollowers
+  }: {
+    profileCreatorNumOfFollowers: number | ((prev: number) => number);
+  }) => void;
   arrayOfFollowedAccounts: userId[];
   addFollowed: ({ userId }: { userId: userId }) => void;
   getArrayOfFollowedAccounts: () => userId[];
@@ -22,14 +26,28 @@ interface UserLikedPostsState {
 export const useFollowedAccount = create<UserLikedPostsState>()(
   persist(
     (set, get) => ({
+      profileCreatorNumOfFollowers: 0,
+      updateNumOfFollowersOfProfileCreator: ({
+        profileCreatorNumOfFollowers
+      }: {
+        profileCreatorNumOfFollowers: number | ((prev: number) => number);
+      }) => {
+        if (typeof profileCreatorNumOfFollowers === 'number') {
+          set({ profileCreatorNumOfFollowers });
+        } else if (typeof profileCreatorNumOfFollowers === 'function') {
+          set({
+            profileCreatorNumOfFollowers: profileCreatorNumOfFollowers(
+              get().profileCreatorNumOfFollowers
+            )
+          });
+        }
+      },
       arrayOfFollowedAccounts: [],
       setArrayOfFollowedAccounts: ({ arrayOfFollowedAccounts }) => {
         set({ arrayOfFollowedAccounts });
       },
       getArrayOfFollowedAccounts: () => {
-          const {
-          arrayOfFollowedAccounts
-        } = get();
+        const { arrayOfFollowedAccounts } = get();
 
         return window.structuredClone(arrayOfFollowedAccounts);
       },

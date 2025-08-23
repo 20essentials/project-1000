@@ -1,5 +1,8 @@
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
+import { useFollowedAccount } from '@/store/useFollowedAccount';
 import { useNavFollowedOrFollowers } from '@/store/useNavFollowedOrFollowers';
+import { generateTotalNum } from '@/utils/functions';
+import { useEffect } from 'react';
 
 export function NumFollowers({
   followersCount = 0
@@ -16,9 +19,22 @@ export function NumFollowers({
     setIsFollowedNav({ isNavFollowed: false });
   }
 
+  const updateNumOfFollowersOfProfileCreator = useFollowedAccount(
+    s => s.updateNumOfFollowersOfProfileCreator
+  );
+  const profileCreatorNumOfFollowers = useFollowedAccount(
+    s => s.profileCreatorNumOfFollowers
+  );
+
+  useEffect(() => {
+    updateNumOfFollowersOfProfileCreator({
+      profileCreatorNumOfFollowers: Number(followersCount)
+    });
+  }, []);
+
   return (
     <article className='tab-data' onClick={openFollowersContainer}>
-      <p className='num'>{followersCount}</p>
+      <p className='num'>{generateTotalNum(profileCreatorNumOfFollowers)}</p>
       <p className='desc'>Followers</p>
     </article>
   );

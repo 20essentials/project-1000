@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from "react";
-import { useFollowedAccount } from "@/store/useFollowedAccount";
+import { useEffect, useMemo, useState } from 'react';
+import { useFollowedAccount } from '@/store/useFollowedAccount';
 
 interface UseFollowButtonLogicParams {
   userId: string | undefined;
@@ -19,11 +19,13 @@ export function useFollowButtonLogic({
 
   const className = useMemo(() => {
     return `badge ${
-      theCreatorOfThisPostIsTheSameUser || thisUserIsFollowed
-        ? "hiddenBadge"
-        : ""
+      theCreatorOfThisPostIsTheSameUser || thisUserIsFollowed ? 'hiddenBadge' : ''
     }`;
   }, [theCreatorOfThisPostIsTheSameUser, thisUserIsFollowed]);
+
+  const updateNumOfFollowersOfProfileCreator = useFollowedAccount(
+    s => s.updateNumOfFollowersOfProfileCreator
+  );
 
   const followThisUser = () => {
     if (!userId) return;
@@ -31,9 +33,15 @@ export function useFollowButtonLogic({
     if (thisUserIsFollowed) {
       setThisUserIsFollowed(false);
       deleteFollowed({ userId });
+      updateNumOfFollowersOfProfileCreator({
+        profileCreatorNumOfFollowers: prev => prev - 1
+      });
     } else {
       setThisUserIsFollowed(true);
       addFollowed({ userId });
+         updateNumOfFollowersOfProfileCreator({
+        profileCreatorNumOfFollowers: prev => prev + 1
+      });
     }
   };
 

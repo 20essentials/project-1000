@@ -22,6 +22,7 @@ export function FollowButton({
     userId,
     theCreatorOfThisPostIsTheSameUser
   });
+  
   function followOrNOt() {
     followThisUser()
     if (updateFollowedAccountsIds) {

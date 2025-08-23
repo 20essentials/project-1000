@@ -9,8 +9,6 @@ import { NumFollowers } from '@/components/pages/ProfileCreator/ProfileAndProfil
 import { useCleanUrlIfThisComponentsIsUnmount } from '@/hooks/useCleanUrlIfThisComponentsIsUnmount';
 import { useUpdateUrlParamsPostVideoOrImage } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 import { useEffect } from 'react';
-import { ShareLinkOfProfile } from './ShareLinkOfProfile';
-import { CircleCopy } from './CircleCopy';
 import { ShareLinkAndCircle } from './ShareLinkAndCircle';
 
 export function ProfileCreator() {
@@ -49,7 +47,7 @@ export function ProfileCreator() {
         <p className='name-of-the-user'>@{username}</p>
         <aside className='container-data-user'>
           <NumFollowed followedCount={generateTotalNum(followed)} />
-          <NumFollowers followersCount={generateTotalNum(followers)} />
+          <NumFollowers followersCount={followers} />
           <article className='tab-data'>
             <p className='num'>{generateTotalNum(theTotalLikes)}</p>
             <p className='desc'>Likes</p>
@@ -60,8 +58,7 @@ export function ProfileCreator() {
           <p className='description'>{profileDescription}</p>
         )}
         <ArrowLeft className='arrow-left' />
-        {/* <ShareLinkOfProfile className='share-link' />
-        <CircleCopy /> */}
+
         <ShareLinkAndCircle />
       </aside>
 
