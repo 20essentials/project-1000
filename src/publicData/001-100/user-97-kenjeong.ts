@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'kenjeong';
-const userId = '';
-const prefixUrl = '';
+const userId = '12485a4c-5dda-4f74-9dfd-0ae0e48bf382';
+const prefixUrl = 'https://dominicnikolai.github.io/project-285/assets/kenjeong/';
 const followers = 5_720_322;
 const followed = 432;
 const profileDescription = '99 To Beat Series Premiere';
