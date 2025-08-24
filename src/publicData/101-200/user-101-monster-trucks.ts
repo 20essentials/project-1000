@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'monster_trucks';
-const userId = '';
-const prefixUrl = '';
+const userId = 'f132a805-4fbd-4dc4-b449-7d09a8563a81';
+const prefixUrl = 'https://dominicnikolai.github.io/project-288/assets/m0nster-trucks/';
 const followers = 2_700_720;
 const followed = 32;
 const profileDescription = 'Hello';
