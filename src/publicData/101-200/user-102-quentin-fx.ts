@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'quentin_fx';
-const userId = '';
-const prefixUrl = '';
+const userId = '32c91e95-5b90-4553-8edf-58ec6bfb7395';
+const prefixUrl = 'https://dominicnikolai.github.io/project-287/assets/qu3ntin-fx/';
 const followers = 172_720;
 const followed = 342;
 const profileDescription = '✍🏻 The White gloves editor';

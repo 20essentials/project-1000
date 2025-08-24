@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'diego_poncelet';
-const userId = '';
-const prefixUrl = '';
+const userId = '92672560-018d-4fca-abfe-f966559431f0';
+const prefixUrl = 'https://dominicnikolai.github.io/project-288/assets/di3go-ponc3lete/';
 const followers = 467_720;
 const followed = 236;
 const profileDescription = '2x World Champion & Filmmaker';
