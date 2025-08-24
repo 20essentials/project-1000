@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'abhayaiart';
-const userId = '';
-const prefixUrl = '';
+const userId = 'eb53214e-1d66-487e-8313-c04bdb048d8c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-287/assets/abh4yaiart/';
 const followers = 823_892;
 const followed = 95;
 const profileDescription = '🎨 AI Art Creator I 📱 4K Wallpapers';
