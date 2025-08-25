@@ -9,7 +9,7 @@ export function baseUrl(path: string) {
 
 const MAX_DURATION_OF_VIDEO = 10 * 60; // 10 minutos en segundos
 export const validateVideoDuration = (file: File): Promise<boolean> => {
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     const url = URL.createObjectURL(file);
     const video = document.createElement('video');
     video.preload = 'metadata';
@@ -70,10 +70,6 @@ export function getPostpropsFromProps(
       postPropsKeys.includes(key as keyof postProps)
     )
   ) as postProps;
-}
-
-export function sleep(ms: number) {
-  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 export function modEspecial(left: number, right: number) {

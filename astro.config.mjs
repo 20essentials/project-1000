@@ -22,6 +22,7 @@ export default defineConfig({
     }
   },
 
+
   //Deploy normal project
   // base: '/project-1000/',
   // site: 'https://20essentials.github.io/project-1000/'
