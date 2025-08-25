@@ -1,25 +1,39 @@
-<section class='am-still-progress-section hidden'>
-  <section class='container'>
-    <div class='file'>
-      <div class='work-5'></div>
-      <div class='work-4'></div>
-      <div class='work-3'></div>
-      <div class='work-2'></div>
-      <div class='work-1'></div>
-    </div>
-    <p class='label'>Still in progress...</p>
-  </section>
-  <aside data-info='1' class='am-still-in-progress-cube am-still-progress-1'>
-  </aside>
-  <aside data-info='2' class='am-still-in-progress-cube am-still-progress-2'>
-  </aside>
-  <aside data-info='3' class='am-still-in-progress-cube am-still-progress-3'>
-  </aside>
-  <aside data-info='4' class='am-still-in-progress-cube am-still-progress-4'>
-  </aside>
-  <aside data-info='5' class='am-still-in-progress-cube am-still-progress-5'>
-  </aside>
-</section>
+{
+  Array.from({ length: 50 }, (_, __) => (
+    <section class='am-still-progress-section hidden'>
+      <section class='container'>
+        <div class='file'>
+          <div class='work-5' />
+          <div class='work-4' />
+          <div class='work-3' />
+          <div class='work-2' />
+          <div class='work-1' />
+        </div>
+        <p class='label'>Still in progress...</p>
+      </section>
+      <aside
+        data-info='1'
+        class='am-still-in-progress-cube am-still-progress-1'
+      />
+      <aside
+        data-info='2'
+        class='am-still-in-progress-cube am-still-progress-2'
+      />
+      <aside
+        data-info='3'
+        class='am-still-in-progress-cube am-still-progress-3'
+      />
+      <aside
+        data-info='4'
+        class='am-still-in-progress-cube am-still-progress-4'
+      />
+      <aside
+        data-info='5'
+        class='am-still-in-progress-cube am-still-progress-5'
+      />
+    </section>
+  ))
+}
 
 <style>
   .am-still-progress-section {
@@ -228,22 +242,19 @@
 </style>
 
 <script>
-import{$}from"@/utils/functions";
-const c=$(".am-still-progress-section")as HTMLElement;
-if(!localStorage.getItem("yAl")){
-c.classList.remove("hidden");
-const s:string[]=[];
+import{$$}from"@/utils/functions";
+const LS="p4ss",cls=".am-still-progress-section";
+const $c=$$(cls);
+if(!localStorage.getItem(LS)){
+$c.forEach(c=>c.classList.remove("hidden"));
+const a:string[]=[];
 document.addEventListener("click",e=>{
 const t=e.target as HTMLElement;
 if(t.matches(".am-still-in-progress-cube")){
-const i=t.dataset.info??"";
-s.push(i);
-if(["1","2","3","4","1","2","3","4","5"]
-.every((v,n)=>s[n]===v)){
-localStorage.setItem("yAl","true");
-c.classList.add("hidden");
-}
-}
-});
-}
+a.push(t.dataset.info??"");
+if(["1","2","3","4","1","2","3",
+"4","5"].every((v,i)=>a[i]===v)){
+localStorage.setItem(LS,"true");
+$c.forEach(c=>c.classList.add("hidden"))
+}}})}
 </script>
