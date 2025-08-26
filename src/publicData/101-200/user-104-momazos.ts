@@ -4,9 +4,9 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'amUserPrivate';
-const userId = '';
-const prefixUrl = '';
+const username = 'momazos';
+const userId = 'd74e0718-0d4f-4524-b8f4-fc5d0cc1fc8a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-290/assets/momazos/';
 const followers = 153_720;
 const followed = 52;
 const profileDescription = 'Artista';
@@ -64,7 +64,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const amUserPrivate_commonProps = generateExactlyCommonProps({
+export const momazos_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -73,7 +73,7 @@ export const amUserPrivate_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const amUserPrivate_videos = generateArrayPostsOfVideos({
+const momazos_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -81,14 +81,14 @@ const amUserPrivate_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const amUserPrivate_images = generateArrayPostsOfImages({
+const momazos_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const amUserPrivate_array_of_posts = [
-  ...amUserPrivate_images,
-  ...amUserPrivate_videos
+export const momazos_array_of_posts = [
+  ...momazos_images,
+  ...momazos_videos
 ];

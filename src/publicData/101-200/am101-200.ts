@@ -25,12 +25,13 @@ import {
 } from './user-107-flip-happygallery';
 import { gmorfx_array_of_posts, gmorfx_commonProps } from './user-108-gmorfx';
 import { jay_tracing_array_of_posts, jay_tracing_commonProps } from './user-106-jaytracing';
+import { momazos_array_of_posts, momazos_commonProps } from './user-104-momazos';
 
 export const PUBLIC_101_200: arrayOfPosts = [
   [monster_trucks_commonProps, monster_trucks_array_of_posts] /* 101 */,
   [quentin_fx_commonProps, quentin_fx_array_of_posts] /* 102 */,
   [abhayaiart_commonProps, abhayaiart_array_of_posts] /* 103 */,
-
+  [momazos_commonProps, momazos_array_of_posts] /* 104 */,
   [budderscopes_commonProps, budderscopes_array_of_posts] /* 105 */,
   [jay_tracing_commonProps, jay_tracing_array_of_posts] /* 106 */,
   [flip_happygallery_commonProps, flip_happygallery_array_of_posts] /* 107 */,
