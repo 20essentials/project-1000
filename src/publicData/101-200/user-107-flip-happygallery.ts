@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'flip_happygallery';
-const userId = '';
-const prefixUrl = '';
+const userId = '34d88e1e-d2ed-4fa0-b0a4-8d2177470951';
+const prefixUrl = 'https://dominicnikolai.github.io/project-289/assets/fl1p-happygallery/';
 const followers = 178_790;
 const followed = 120;
 const profileDescription = 'Hello';

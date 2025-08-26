@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'gmorfx';
-const userId = '';
-const prefixUrl = '';
+const userId = 'f7abc4f7-4648-4f8f-bd62-79b94dc823ce';
+const prefixUrl = 'https://dominicnikolai.github.io/project-290/assets/gmorfx/';
 const followers = 55_720;
 const followed = 243;
 const profileDescription = '3D Visual Narratives ';
