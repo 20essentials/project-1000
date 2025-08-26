@@ -4,7 +4,7 @@ import type {
   arrayOfPosts
 } from '@/components/pages/SliderPosts/types';
 import { generateExactlyCommonProps } from '@/publicData/functions/amPublicFunctions';
-import { getRandomNumber } from '@/utils/functions';
+import { generateRandomNumber } from '@/utils/functions/generateRandomNumber';
 
 export const user_array_of_saved_posts: arrayOfPosts = [
   // [midudev_commonProps, [midudev_array_of_posts[0], midudev_array_of_posts[1]]],
@@ -14,7 +14,7 @@ export const user_array_of_liked_posts: arrayOfPosts = [
   // [midudev_commonProps, [midudev_array_of_posts[0]]]
 ];
 
-const randomNumOfFollowersFirstTime = getRandomNumber(1000, 100_000);
+const randomNumOfFollowersFirstTime = generateRandomNumber(1000, 100_000);
 
 export function getUser({
   userId,

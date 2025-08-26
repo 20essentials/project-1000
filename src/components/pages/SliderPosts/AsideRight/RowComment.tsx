@@ -3,7 +3,7 @@ import { HeartAndDislikeFooter } from '@/components/pages/SliderPosts/AsideRight
 
 import { UserCircleStory } from '@/components/pages/SliderPosts/AsideRight/UserCircleStory';
 import { UserProfile } from '@/components/pages/SliderPosts/AsideRight//UserProfile';
-import { getRandomNumber } from '@/utils/functions';
+import { generateRandomNumber } from "@/utils/functions/generateRandomNumber";
 
 export function RowComment({
   indexOfComment,
@@ -44,7 +44,7 @@ export function RowComment({
     };
   }, []);
 
-  const thisCommentHasStory = useMemo(() => getRandomNumber(0, 100) > 92, []);
+  const thisCommentHasStory = useMemo(() => generateRandomNumber(0, 100) > 92, []);
 
   return (
     <aside

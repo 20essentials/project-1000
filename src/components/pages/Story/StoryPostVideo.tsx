@@ -2,7 +2,7 @@ import type {
   postProps,
   postComonProps
 } from '@/components/pages/SliderPosts/types.d.ts';
-import { getRandomNumber } from '@/utils/functions';
+import { generateRandomNumber } from "@/utils/functions/generateRandomNumber";
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { PlayButton } from '@/components/pages/SliderPosts/PostVideo/PlayButton';
 import { userHasInteracted } from '@/store/userHasInteracted';
@@ -157,7 +157,7 @@ export function StoryPostVideo(
   }, []);
 
   const randomNumOfHours = useMemo(() => {
-    return getRandomNumber(1, 23);
+    return generateRandomNumber(1, 23);
   }, []);
 
   return (

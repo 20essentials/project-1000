@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { combine } from 'zustand/middleware';
 import type { arrayOfPosts } from '@/components/pages/SliderPosts/types.d.ts';
-import { getRandomNumber } from '@/utils/functions';
+import { generateRandomNumber } from '@/utils/functions/generateRandomNumber';
 import { FOLLOWED, FOR_YOU } from '@/publicData/functions/getData';
 
 const initialState = {
@@ -24,7 +24,7 @@ export const useGlobalArrayPosts = create(
       if (user) {
         const [commonProps, arrayOfPosts] = user;
         const randomPost =
-          arrayOfPosts[getRandomNumber(0, arrayOfPosts.length - 1)];
+          arrayOfPosts[generateRandomNumber(0, arrayOfPosts.length - 1)];
         return [{ ...commonProps, ...randomPost }];
       }
 
@@ -33,7 +33,7 @@ export const useGlobalArrayPosts = create(
       if (userOfFollowed) {
         const [commonProps, arrayOfPosts] = userOfFollowed;
         const randomPost =
-          arrayOfPosts[getRandomNumber(0, arrayOfPosts.length - 1)];
+          arrayOfPosts[generateRandomNumber(0, arrayOfPosts.length - 1)];
         return [{ ...commonProps, ...randomPost }];
       }
     },

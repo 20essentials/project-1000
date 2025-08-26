@@ -2,7 +2,8 @@ import { useEffect, useMemo, useRef } from 'react';
 import { FollowButton } from '../ProfileCreator/FollowButton';
 import { useUserCreator } from '@/store/useUserCreator';
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
-import { $, getRandomNumber } from '@/utils/functions';
+import { $ } from '@/utils/functions';
+import { generateRandomNumber } from "@/utils/functions/generateRandomNumber";
 import type { userId } from '@/store/useFollowedAccount';
 import { UserCircleStory } from '@/components/pages/SliderPosts/AsideRight/UserCircleStory';
 import { UserProfile } from '@/components/pages/SliderPosts/AsideRight//UserProfile';
@@ -78,7 +79,7 @@ export function RowUser({
     };
   }, []);
 
-  const thisRowHasStory = useMemo(() => getRandomNumber(0, 100) > 92, []);
+  const thisRowHasStory = useMemo(() => generateRandomNumber(0, 100) > 92, []);
 
   return (
     <div key={index} className='followed-account-row' ref={rowRef}>

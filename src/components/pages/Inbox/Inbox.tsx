@@ -3,7 +3,8 @@ import type { postComonProps } from '@/components/pages/SliderPosts/types.d.ts';
 import '@/components/pages/FollowedAndFollow/FollowedAndFollow.css';
 import { ArrowLeft } from '@/components/pages/ProfileCreator/ArrowLeft';
 import { useCurrentUser } from '@/store/useCurrentUser';
-import { baseUrl, getRandomNumber } from '@/utils/functions';
+import { baseUrl } from '@/utils/functions';
+import { generateRandomNumber } from "@/utils/functions/generateRandomNumber";
 import { useUserCreator } from '@/store/useUserCreator';
 import { useFollowedAccount } from '@/store/useFollowedAccount';
 import { useMemo, useRef, useState } from 'react';
@@ -60,7 +61,7 @@ export function Inbox() {
         const user = ALL_POSTS.find(el => el[0].userId === currentUser.userId);
         if (user) {
           const posts = user[1];
-          const randomIndex = getRandomNumber(0, posts.length - 1);
+          const randomIndex = generateRandomNumber(0, posts.length - 1);
           return {
             ...currentUser,
             story: posts[randomIndex]

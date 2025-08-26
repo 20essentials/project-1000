@@ -1,7 +1,9 @@
 import { useUploadVideoOrImages } from '@/store/useUploadVideoOrImages';
 import { useUserCreatedPosts } from '@/store/useUserCreatedPosts';
 import type { postProps } from '../SliderPosts/types';
-import { $, generateRandomISODate, getRandomNumber } from '@/utils/functions';
+import { $, generateRandomISODate } from '@/utils/functions';
+import { generateRandomNumber } from "@/utils/functions/generateRandomNumber";
+
 
 export function PublishKeyCap() {
   const srcVideo = useUploadVideoOrImages(s => s.srcVideo);
@@ -17,12 +19,12 @@ export function PublishKeyCap() {
       description: descriptionPost ?? undefined,
       tags: undefined,
       dateOfPublication: generateRandomISODate(),
-      totalViewsOfThePost: getRandomNumber(58_000, 930_000),
-      hearts: getRandomNumber(1000, 500_000),
-      comments: getRandomNumber(3, 999),
-      saved: getRandomNumber(80, 5000),
+      totalViewsOfThePost: generateRandomNumber(58_000, 930_000),
+      hearts: generateRandomNumber(1000, 500_000),
+      comments: generateRandomNumber(3, 999),
+      saved: generateRandomNumber(80, 5000),
       isSaved: false,
-      shared: getRandomNumber(200, 9000),
+      shared: generateRandomNumber(200, 9000),
       isLiked: false,
       idPost: crypto.randomUUID()
     };

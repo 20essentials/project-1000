@@ -86,10 +86,6 @@ export function formatUsername(rawUsername: string, maxLength: number): string {
 export const $ = (el: string) => document.querySelector(el);
 export const $$ = (el: string) => document.querySelectorAll(el);
 
-export function getRandomNumber(min: number, max: number): number {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
 export function generateRandomISODate(
   from: Date = new Date(2000, 0, 1),
   to: Date = new Date()
@@ -144,9 +140,4 @@ export function formatTimeHH_MM_SS(seconds: number) {
   } else {
     return `${padded(mins)}:${padded(secs)}`;
   }
-}
-
-export function clickIn(className: string) {
-  const $el = $(className) as HTMLElement;
-  $el.click();
 }

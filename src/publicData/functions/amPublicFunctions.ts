@@ -1,5 +1,6 @@
-import { getRandomNumber, generateRandomISODate } from '@/utils/functions';
+import { generateRandomISODate } from '@/utils/functions';
 import type { postProps } from '@/components/pages/SliderPosts/types';
+import { generateRandomNumber } from '@/utils/functions/generateRandomNumber';
 import { UUID } from '@/utils/array/uuid/arrayDeIdentificadoresUnicos';
 
 export function generateRandomCommonProps({
@@ -19,9 +20,9 @@ export function generateRandomCommonProps({
     profileImageSrc,
     profileDescription,
     following: false,
-    followers: getRandomNumber(1000, 750_000),
-    totalLikes: getRandomNumber(1000, 20_000_000),
-    followed: getRandomNumber(0, 1000)
+    followers: generateRandomNumber(1000, 750_000),
+    totalLikes: generateRandomNumber(1000, 20_000_000),
+    followed: generateRandomNumber(0, 1000)
   };
 }
 
@@ -59,12 +60,12 @@ export function generateExactlyCommonProps({
 function generaPostData() {
   return {
     dateOfPublication: generateRandomISODate(),
-    totalViewsOfThePost: getRandomNumber(5000, 920_000),
-    hearts: getRandomNumber(1000, 500_000),
-    comments: getRandomNumber(3, 999),
-    saved: getRandomNumber(80, 5000),
+    totalViewsOfThePost: generateRandomNumber(5000, 920_000),
+    hearts: generateRandomNumber(1000, 500_000),
+    comments: generateRandomNumber(3, 999),
+    saved: generateRandomNumber(80, 5000),
     isSaved: false,
-    shared: getRandomNumber(200, 4000)
+    shared: generateRandomNumber(200, 4000)
   };
 }
 
@@ -72,7 +73,7 @@ export function generatePostImage({
   arrayImages,
   tags,
   description,
-  idPost = `${crypto.randomUUID()}-${getRandomNumber(1000, 9999)}`,
+  idPost = `${crypto.randomUUID()}-${generateRandomNumber(1000, 9999)}`,
   isLiked = false
 }: {
   arrayImages: string[];
@@ -95,7 +96,7 @@ export function generatePostVideo({
   videoSrc,
   tags,
   description,
-  idPost = `${crypto.randomUUID()}-${getRandomNumber(1000, 9999)}`,
+  idPost = `${crypto.randomUUID()}-${generateRandomNumber(1000, 9999)}`,
   isLiked = false
 }: {
   videoSrc: string;

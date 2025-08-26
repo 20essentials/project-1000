@@ -2,7 +2,7 @@ import type {
   postProps,
   postComonProps
 } from '@/components/pages/SliderPosts/types.d.ts';
-import { getRandomNumber } from '@/utils/functions';
+import { generateRandomNumber } from "@/utils/functions/generateRandomNumber";
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { ARRAY_OF_SONGS } from '@/utils/arrayOfSongs';
@@ -183,7 +183,7 @@ export function StoryPostImage(
   }, []);
 
   const randomNumOfHours = useMemo(() => {
-    return getRandomNumber(1, 23);
+    return generateRandomNumber(1, 23);
   }, []);
 
   return (
