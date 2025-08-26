@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'budderscopes';
-const userId = '';
-const prefixUrl = '';
+const userId = 'a063fb09-877e-4a67-9701-418c15e764cc';
+const prefixUrl = 'https://dominicnikolai.github.io/project-289/assets/budd3rscopes/';
 const followers = 512_892;
 const followed = 50;
 const profileDescription = 'Kaleidoscope Wizard 💎';

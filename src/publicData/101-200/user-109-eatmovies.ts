@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'eatmovies';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ff779dde-049f-4cb3-b2d4-3e6c2d159f69';
+const prefixUrl = 'https://dominicnikolai.github.io/project-289/assets/3atmov1es/';
 const followers = 823_765;
 const followed = 344;
 const profileDescription = 'What to watch, what to stream🍿';
