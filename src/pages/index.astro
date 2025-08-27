@@ -8,7 +8,7 @@ const user = await Astro.locals.currentUser();
 
 <Layout>
   <Phone client:only='react' user={user} />
-  <StillProgress />
+  <!-- <StillProgress /> -->
 
 
   <aside class='signin-modal'>
