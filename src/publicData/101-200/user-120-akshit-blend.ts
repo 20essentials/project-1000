@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'akshit_blend';
-const userId = '';
-const prefixUrl = '';
+const userId = '42cc2c12-60b6-4d28-91a9-60b03f70bda5';
+const prefixUrl = 'https://dominicnikolai.github.io/project-293/assets/akshit-blend/';
 const followers = 86_720;
 const followed = 323;
 const profileDescription = '3d Artist';

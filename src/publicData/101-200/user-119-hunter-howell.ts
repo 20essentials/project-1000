@@ -5,15 +5,15 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'hunter_howell';
-const userId = '';
-const prefixUrl = '';
+const userId = '94c0b890-9e41-4474-8396-09be9b31b186';
+const prefixUrl = 'https://dominicnikolai.github.io/project-293/assets/hunter-howell/';
 const followers = 107_720;
 const followed = 72;
 const profileDescription = 'One Wheel Guy';
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 20;
+const quantityOfVideos = 6;
 const prefixLetterImages = 'n';
-const quantityOfImages = 20;
+const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */

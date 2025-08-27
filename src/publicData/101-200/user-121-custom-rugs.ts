@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'custom_rugs';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd0e0030e-81d9-4b5f-9f40-b3c8ce28f353';
+const prefixUrl = 'https://dominicnikolai.github.io/project-293/assets/custom-rugs/';
 const followers = 241_720;
 const followed = 123;
 const profileDescription = '😉';

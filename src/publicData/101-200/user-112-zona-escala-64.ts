@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'zona_escala_64';
-const userId = '';
-const prefixUrl = '';
+const userId = '6d4a9d55-86a8-489f-8456-cef296297c6c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-292/assets/zona-escala-64/';
 const followers = 728_823;
 const followed = 50;
 const profileDescription = '✨️Coleccionista de Autos a Escala✨️';
