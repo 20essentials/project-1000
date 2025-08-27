@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'mr_rider';
-const userId = '';
-const prefixUrl = '';
+const userId = 'de1a98d3-de1e-4f13-bdd7-9b9896b59906';
+const prefixUrl = 'https://dominicnikolai.github.io/project-291/assets/mr-rider/';
 const followers = 532_709;
 const followed = 234;
 const profileDescription = 'Ride your bike';

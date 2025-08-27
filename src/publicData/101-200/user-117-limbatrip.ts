@@ -5,11 +5,11 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'limbatrip';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd054a8b6-1456-4eb9-af7c-c8f8f435dfb5';
+const prefixUrl = 'https://dominicnikolai.github.io/project-291/assets/limbatrip/';
 const followers = 1_200_720;
 const followed = 50;
-const profileDescription = 'Hello';
+const profileDescription = 'Trucazos';
 const prefixLetterVideos = 'v';
 const quantityOfVideos = 6;
 const prefixLetterImages = 'n';

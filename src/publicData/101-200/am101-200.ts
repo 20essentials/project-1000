@@ -26,6 +26,12 @@ import {
 import { gmorfx_array_of_posts, gmorfx_commonProps } from './user-108-gmorfx';
 import { jay_tracing_array_of_posts, jay_tracing_commonProps } from './user-106-jaytracing';
 import { momazos_array_of_posts, momazos_commonProps } from './user-104-momazos';
+import { automotive_array_of_posts, automotive_commonProps } from './user-116-automotive';
+import { bromas_array_of_posts, bromas_commonProps } from './user-111-bromas';
+import { limbatrip_array_of_posts, limbatrip_commonProps } from './user-117-limbatrip';
+import { mr_rider_array_of_posts, mr_rider_commonProps } from './user-115-mr-rider';
+import { pokejota_array_of_posts, pokejota_commonProps } from './user-114-pokejota';
+import { traveltribe_array_of_posts, traveltribe_commonProps } from './user-113-traveltribe';
 
 export const PUBLIC_101_200: arrayOfPosts = [
   [monster_trucks_commonProps, monster_trucks_array_of_posts] /* 101 */,
@@ -36,5 +42,14 @@ export const PUBLIC_101_200: arrayOfPosts = [
   [jay_tracing_commonProps, jay_tracing_array_of_posts] /* 106 */,
   [flip_happygallery_commonProps, flip_happygallery_array_of_posts] /* 107 */,
   [gmorfx_commonProps, gmorfx_array_of_posts] /* 108 */,
-  [eatmovies_commonProps, eatmovies_array_of_posts] /* 109 */
+  [eatmovies_commonProps, eatmovies_array_of_posts] /* 109 */,
+
+  [bromas_commonProps, bromas_array_of_posts] /* 111 */,
+
+  [traveltribe_commonProps, traveltribe_array_of_posts] /* 113*/,
+
+  [pokejota_commonProps, pokejota_array_of_posts] /* 115 */,
+  [mr_rider_commonProps, mr_rider_array_of_posts] /* 115 */,
+  [automotive_commonProps, automotive_array_of_posts] /* 116 */,
+  [limbatrip_commonProps, limbatrip_array_of_posts] /* 117 */,
 ];

@@ -5,11 +5,11 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'pokejota';
-const userId = '';
-const prefixUrl = '';
-const followers = 100_000;
+const userId = '20d78cd5-e7b3-4307-a898-2cb24c18102b';
+const prefixUrl = 'https://dominicnikolai.github.io/project-292/assets/pokejota/';
+const followers = 172_832;
 const followed = 50;
-const profileDescription = 'Hello';
+const profileDescription = 'Feel it';
 const prefixLetterVideos = 'v';
 const quantityOfVideos = 0;
 const prefixLetterImages = 'p';

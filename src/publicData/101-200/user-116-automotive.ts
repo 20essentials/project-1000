@@ -5,11 +5,11 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'automotive';
-const userId = '';
-const prefixUrl = '';
+const userId = '533ef583-cea7-4244-b3dd-5fcfb5ae1b2c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-291/assets/aut0motive/';
 const followers = 100_000;
 const followed = 50;
-const profileDescription = 'Hello';
+const profileDescription = 'ufff';
 const prefixLetterVideos = 'v';
 const quantityOfVideos = 6;
 const prefixLetterImages = 'n';

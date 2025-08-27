@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'traveltribe';
-const userId = '';
-const prefixUrl = '';
+const userId = '6dd46aa3-149b-4052-98ac-77e57a5572ca';
+const prefixUrl = 'https://dominicnikolai.github.io/project-292/assets/traveltribe/';
 const followers = 391_989;
 const followed = 42;
 const profileDescription = 'Thailand | J&K | UP | Delhi | Goa';

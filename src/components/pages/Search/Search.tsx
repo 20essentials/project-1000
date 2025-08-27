@@ -23,12 +23,25 @@ export function Search() {
   const filteredArray =
     searchText !== ''
       ? arrayUserNameAndId
-          .filter(({ username }) => {
+          .toSorted(({ username: a }, { username: b }) => {
             let theSearchText = searchText.toLowerCase().replace(/\s/g, '_');
-            let theUsername = username.toLowerCase();
-            return theUsername.includes(theSearchText);
+            let userA = a.toLowerCase();
+            let userB = b.toLowerCase();
+
+            let matchA = userA.includes(theSearchText);
+            let matchB = userB.includes(theSearchText);
+
+            // Coincidentes arriba, no coincidentes abajo
+            if (matchA && !matchB) return -1;
+            if (!matchA && matchB) return 1;
+
+            // Si ambos coinciden o ambos no coinciden, mantener orden original
+            return 0;
           })
-          .map(el => ({ ...el, username: el.username.replaceAll('_', ' ') }))
+          .map(el => ({
+            ...el,
+            username: el.username.replaceAll('_', ' ')
+          }))
       : arrayUserNameAndId;
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
   const setArrayOfPosts = useUserCreator(state => state.setArrayOfPosts);
