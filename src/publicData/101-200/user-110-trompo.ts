@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'trompo';
-const userId = '';
-const prefixUrl = '';
+const userId = 'bbd0c296-231e-47fa-b03c-036ef45c1ba0';
+const prefixUrl = 'https://dominicnikolai.github.io/project-292/assets/trompo/';
 const followers = 728_720;
 const followed = 50;
 const profileDescription = 'Hacks!';

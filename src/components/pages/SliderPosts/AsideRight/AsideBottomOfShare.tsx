@@ -9,6 +9,8 @@ import { URL_PHOTO_MISSING_IMAGE } from '@/utils/conts';
 import { useSwipeXShareAsideBottom } from '@/hooks/useSwipeXShareAsideBottom';
 import { DeletePostItemShare } from './DeletePostItemShare';
 
+let isDownloading = false; // 👈 flag global al scope del módulo
+
 type ItemType = {
   title: string;
   id: string;
@@ -42,6 +44,11 @@ const ARRAY_OF_SHARE: ItemType[] = [
       updateIsContainerShareOpen: () => void;
     }) => {
       if (urls.length === 0) return;
+
+      // 🚫 si ya se está descargando, salimos
+      if (isDownloading) return;
+      isDownloading = true;
+
       const $buttonSystem = refButton?.current;
       if ($buttonSystem instanceof HTMLButtonElement) {
         $buttonSystem.classList.remove('btn-hidden');
@@ -80,6 +87,7 @@ const ARRAY_OF_SHARE: ItemType[] = [
           $buttonSystem.classList.add('btn-hidden');
           updateIsContainerShareOpen();
         }
+        isDownloading = false; // ✅ liberamos el flag al terminar
       });
     }
   },
@@ -687,12 +695,7 @@ export function AsideBottomOfShare({
                       svg={svg}
                     />
 
-                    {isTheSameuser && (
-                      <DeletePostItemShare
-                        id={id}
-                        post={post}
-                      />
-                    )}
+                    {isTheSameuser && <DeletePostItemShare id={id} post={post} />}
                   </Fragment>
                 );
               }
@@ -701,7 +704,8 @@ export function AsideBottomOfShare({
                 <aside
                   className='item-share isClickableInDrag'
                   key={id}
-                  onClick={() => {
+                  onClick={e => {
+                    e.stopPropagation();
                     if (index === MODE_SHARE.SAVE_VIDEO_OR_IMAGE) {
                       onclick({
                         refButton: systembtn,
