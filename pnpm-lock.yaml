@@ -10,13 +10,13 @@ importers:
     dependencies:
       '@astrojs/react':
         specifier: 4.3.0
-        version: 4.3.0(@types/node@16.18.11)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 4.3.0(@types/node@24.3.0)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@astrojs/vercel':
         specifier: 8.2.0
-        version: 8.2.0(astro@5.8.0(@types/node@16.18.11)(@vercel/blob@1.0.2)(rollup@4.41.1)(typescript@5.8.3))(react@19.1.0)(rollup@4.41.1)
+        version: 8.2.0(astro@5.8.0(@types/node@24.3.0)(@vercel/blob@1.0.2)(rollup@4.41.1)(typescript@5.8.3))(react@19.1.0)(rollup@4.41.1)
       '@clerk/astro':
         specifier: 2.10.2
-        version: 2.10.2(astro@5.8.0(@types/node@16.18.11)(@vercel/blob@1.0.2)(rollup@4.41.1)(typescript@5.8.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 2.10.2(astro@5.8.0(@types/node@24.3.0)(@vercel/blob@1.0.2)(rollup@4.41.1)(typescript@5.8.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@gsap/react':
         specifier: 2.1.2
         version: 2.1.2(gsap@3.13.0)(react@19.1.0)
@@ -31,7 +31,7 @@ importers:
         version: 19.1.6(@types/react@19.1.8)
       astro:
         specifier: 5.8.0
-        version: 5.8.0(@types/node@16.18.11)(@vercel/blob@1.0.2)(rollup@4.41.1)(typescript@5.8.3)
+        version: 5.8.0(@types/node@24.3.0)(@vercel/blob@1.0.2)(rollup@4.41.1)(typescript@5.8.3)
       gsap:
         specifier: 3.13.0
         version: 3.13.0
@@ -57,9 +57,15 @@ importers:
         specifier: 5.0.5
         version: 5.0.5(@types/react@19.1.8)(react@19.1.0)(use-sync-external-store@1.5.0(react@19.1.0))
     devDependencies:
+      '@playwright/test':
+        specifier: ^1.55.0
+        version: 1.55.0
       '@testing-library/react':
         specifier: 16.3.0
         version: 16.3.0(@testing-library/dom@10.4.1)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@types/node':
+        specifier: ^24.3.0
+        version: 24.3.0
       gh-pages:
         specifier: 6.3.0
         version: 6.3.0
@@ -68,7 +74,7 @@ importers:
         version: 18.0.1
       vitest:
         specifier: 3.2.4
-        version: 3.2.4(@edge-runtime/vm@3.2.0)(@types/debug@4.1.12)(@types/node@16.18.11)(happy-dom@18.0.1)
+        version: 3.2.4(@edge-runtime/vm@3.2.0)(@types/debug@4.1.12)(@types/node@24.3.0)(happy-dom@18.0.1)
 
 packages:
 
@@ -584,6 +590,11 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
 
+  '@playwright/test@1.55.0':
+    resolution: {integrity: sha512-04IXzPwHrW69XusN/SIdDdKZBzMfOT9UNT/YiJit/xpy2VuAoB8NHc8Aplb96zsWDddLnbkPL3TsmrS04ZU2xQ==}
+    engines: {node: '>=18'}
+    hasBin: true
+
   '@rolldown/pluginutils@1.0.0-beta.11':
     resolution: {integrity: sha512-L/gAA/hyCSuzTF1ftlzUSI/IKr2POHsv1Dd78GfqkR83KMNuswWD61JxGV2L7nRwBBBSDr6R1gCkdTmoN7W4ag==}
 
@@ -815,8 +826,8 @@ packages:
   '@types/node@20.19.11':
     resolution: {integrity: sha512-uug3FEEGv0r+jrecvUUpbY8lLisvIjg6AAic6a2bSP5OEOLeJsDSnvhCDov7ipFFMXS3orMpzlmi0ZcuGkBbow==}
 
-  '@types/node@22.15.21':
-    resolution: {integrity: sha512-EV/37Td6c+MgKAbkcLG6vqZ2zEYHD7bvSrzqqs2RIhbA6w3x+Dqz8MZM3sP6kGTeLrdoOgKZe+Xja7tUB2DNkQ==}
+  '@types/node@24.3.0':
+    resolution: {integrity: sha512-aPTXCrfwnDLj4VvXrm+UUCQjNEvJgNA8s5F1cvwQU+3KNltTOkBm1j30uNLyqqPNe7gE3KFzImYoZEfLhp4Yow==}
 
   '@types/react-dom@19.1.6':
     resolution: {integrity: sha512-4hOiT/dwO8Ko0gV1m/TJZYk3y0KBnY9vzDh7W+DH17b2HFSOGgdj33dhihPeuy3l0q23+4e+hoXHV6hCC4dCXw==}
@@ -1626,6 +1637,11 @@ packages:
     resolution: {integrity: sha512-V/JgOLFCS+R6Vcq0slCuaeWEdNC3ouDlJMNIsacH2VtALiu9mV4LPrHc5cDl8k5aw6J8jwgWWpiTo5RYhmIzvg==}
     engines: {node: '>= 8'}
 
+  fsevents@2.3.2:
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+
   fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
@@ -2288,6 +2304,16 @@ packages:
     resolution: {integrity: sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==}
     engines: {node: '>=8'}
 
+  playwright-core@1.55.0:
+    resolution: {integrity: sha512-GvZs4vU3U5ro2nZpeiwyb0zuFaqb9sUiAJuyrWpcGouD8y9/HLgGbNRjIph7zU9D3hnPaisMl9zG9CgFi/biIg==}
+    engines: {node: '>=18'}
+    hasBin: true
+
+  playwright@1.55.0:
+    resolution: {integrity: sha512-sdCWStblvV1YU909Xqx0DhOjPZE4/5lJsIS84IfN9dAZfcl/CIZ5O8l3o0j7hPMjDvqoTF8ZUcc+i/GL5erstA==}
+    engines: {node: '>=18'}
+    hasBin: true
+
   pnpm@10.12.4:
     resolution: {integrity: sha512-Xqiw3u2U7WhpHJutTJVUknBcXuuKh++GvGLHSiawN7CP+VcPEIsuTb0d0akYb+qSXlJ/FBxkjoWvRWMQdGgBhA==}
     engines: {node: '>=18.12'}
@@ -2700,6 +2726,9 @@ packages:
   undici-types@6.21.0:
     resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
+  undici-types@7.10.0:
+    resolution: {integrity: sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag==}
+
   undici@5.28.4:
     resolution: {integrity: sha512-72RFADWFqKmUb2hmmvNODKL3p9hcB6Gt2DOQMis1SEBaV6a4MH8soBvzg+95CYhCKPFedut2JY9bMfrDl9D23g==}
     engines: {node: '>=14.0'}
@@ -3103,15 +3132,15 @@ snapshots:
     dependencies:
       prismjs: 1.30.0
 
-  '@astrojs/react@4.3.0(@types/node@16.18.11)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@astrojs/react@4.3.0(@types/node@24.3.0)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@types/react': 19.1.8
       '@types/react-dom': 19.1.6(@types/react@19.1.8)
-      '@vitejs/plugin-react': 4.5.2(vite@6.3.5(@types/node@16.18.11))
+      '@vitejs/plugin-react': 4.5.2(vite@6.3.5(@types/node@24.3.0))
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
       ultrahtml: 1.6.0
-      vite: 6.3.5(@types/node@16.18.11)
+      vite: 6.3.5(@types/node@24.3.0)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -3140,7 +3169,7 @@ snapshots:
 
   '@astrojs/underscore-redirects@1.0.0': {}
 
-  '@astrojs/vercel@8.2.0(astro@5.8.0(@types/node@16.18.11)(@vercel/blob@1.0.2)(rollup@4.41.1)(typescript@5.8.3))(react@19.1.0)(rollup@4.41.1)':
+  '@astrojs/vercel@8.2.0(astro@5.8.0(@types/node@24.3.0)(@vercel/blob@1.0.2)(rollup@4.41.1)(typescript@5.8.3))(react@19.1.0)(rollup@4.41.1)':
     dependencies:
       '@astrojs/internal-helpers': 0.6.1
       '@astrojs/underscore-redirects': 1.0.0
@@ -3148,7 +3177,7 @@ snapshots:
       '@vercel/edge': 1.2.2
       '@vercel/nft': 0.29.2(rollup@4.41.1)
       '@vercel/routing-utils': 5.1.0
-      astro: 5.8.0(@types/node@16.18.11)(@vercel/blob@1.0.2)(rollup@4.41.1)(typescript@5.8.3)
+      astro: 5.8.0(@types/node@24.3.0)(@vercel/blob@1.0.2)(rollup@4.41.1)(typescript@5.8.3)
       esbuild: 0.25.5
       tinyglobby: 0.2.14
     transitivePeerDependencies:
@@ -3292,12 +3321,12 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@clerk/astro@2.10.2(astro@5.8.0(@types/node@16.18.11)(@vercel/blob@1.0.2)(rollup@4.41.1)(typescript@5.8.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@clerk/astro@2.10.2(astro@5.8.0(@types/node@24.3.0)(@vercel/blob@1.0.2)(rollup@4.41.1)(typescript@5.8.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@clerk/backend': 2.4.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@clerk/shared': 3.10.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@clerk/types': 4.63.0
-      astro: 5.8.0(@types/node@16.18.11)(@vercel/blob@1.0.2)(rollup@4.41.1)(typescript@5.8.3)
+      astro: 5.8.0(@types/node@24.3.0)(@vercel/blob@1.0.2)(rollup@4.41.1)(typescript@5.8.3)
       nanoid: 5.0.9
       nanostores: 0.11.3
     transitivePeerDependencies:
@@ -3582,6 +3611,10 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
+  '@playwright/test@1.55.0':
+    dependencies:
+      playwright: 1.55.0
+
   '@rolldown/pluginutils@1.0.0-beta.11': {}
 
   '@rollup/pluginutils@5.1.4(rollup@4.41.1)':
@@ -3768,7 +3801,7 @@ snapshots:
 
   '@types/fontkit@2.0.8':
     dependencies:
-      '@types/node': 22.15.21
+      '@types/node': 24.3.0
 
   '@types/hast@3.0.4':
     dependencies:
@@ -3792,9 +3825,9 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
-  '@types/node@22.15.21':
+  '@types/node@24.3.0':
     dependencies:
-      undici-types: 6.21.0
+      undici-types: 7.10.0
 
   '@types/react-dom@19.1.6(@types/react@19.1.8)':
     dependencies:
@@ -3976,7 +4009,7 @@ snapshots:
       json-schema-to-ts: 1.6.4
       ts-morph: 12.0.0
 
-  '@vitejs/plugin-react@4.5.2(vite@6.3.5(@types/node@16.18.11))':
+  '@vitejs/plugin-react@4.5.2(vite@6.3.5(@types/node@24.3.0))':
     dependencies:
       '@babel/core': 7.27.4
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.27.4)
@@ -3984,7 +4017,7 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-beta.11
       '@types/babel__core': 7.20.5
       react-refresh: 0.17.0
-      vite: 6.3.5(@types/node@16.18.11)
+      vite: 6.3.5(@types/node@24.3.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -3996,13 +4029,13 @@ snapshots:
       chai: 5.3.3
       tinyrainbow: 2.0.0
 
-  '@vitest/mocker@3.2.4(vite@6.3.5(@types/node@16.18.11))':
+  '@vitest/mocker@3.2.4(vite@6.3.5(@types/node@24.3.0))':
     dependencies:
       '@vitest/spy': 3.2.4
       estree-walker: 3.0.3
       magic-string: 0.30.17
     optionalDependencies:
-      vite: 6.3.5(@types/node@16.18.11)
+      vite: 6.3.5(@types/node@24.3.0)
 
   '@vitest/pretty-format@3.2.4':
     dependencies:
@@ -4100,7 +4133,7 @@ snapshots:
 
   assertion-error@2.0.1: {}
 
-  astro@5.8.0(@types/node@16.18.11)(@vercel/blob@1.0.2)(rollup@4.41.1)(typescript@5.8.3):
+  astro@5.8.0(@types/node@24.3.0)(@vercel/blob@1.0.2)(rollup@4.41.1)(typescript@5.8.3):
     dependencies:
       '@astrojs/compiler': 2.12.0
       '@astrojs/internal-helpers': 0.6.1
@@ -4155,8 +4188,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.16.0(@vercel/blob@1.0.2)
       vfile: 6.0.3
-      vite: 6.3.5(@types/node@16.18.11)
-      vitefu: 1.0.6(vite@6.3.5(@types/node@16.18.11))
+      vite: 6.3.5(@types/node@24.3.0)
+      vitefu: 1.0.6(vite@6.3.5(@types/node@24.3.0))
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.3
@@ -4699,6 +4732,9 @@ snapshots:
   fs-minipass@2.1.0:
     dependencies:
       minipass: 3.3.6
+
+  fsevents@2.3.2:
+    optional: true
 
   fsevents@2.3.3:
     optional: true
@@ -5531,6 +5567,14 @@ snapshots:
     dependencies:
       find-up: 4.1.0
 
+  playwright-core@1.55.0: {}
+
+  playwright@1.55.0:
+    dependencies:
+      playwright-core: 1.55.0
+    optionalDependencies:
+      fsevents: 2.3.2
+
   pnpm@10.12.4: {}
 
   postcss@8.5.3:
@@ -5998,6 +6042,8 @@ snapshots:
 
   undici-types@6.21.0: {}
 
+  undici-types@7.10.0: {}
+
   undici@5.28.4:
     dependencies:
       '@fastify/busboy': 2.1.1
@@ -6144,13 +6190,13 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite-node@3.2.4(@types/node@16.18.11):
+  vite-node@3.2.4(@types/node@24.3.0):
     dependencies:
       cac: 6.7.14
       debug: 4.4.1
       es-module-lexer: 1.7.0
       pathe: 2.0.3
-      vite: 6.3.5(@types/node@16.18.11)
+      vite: 6.3.5(@types/node@24.3.0)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -6165,7 +6211,7 @@ snapshots:
       - tsx
       - yaml
 
-  vite@6.3.5(@types/node@16.18.11):
+  vite@6.3.5(@types/node@24.3.0):
     dependencies:
       esbuild: 0.25.5
       fdir: 6.4.4(picomatch@4.0.2)
@@ -6174,18 +6220,18 @@ snapshots:
       rollup: 4.41.1
       tinyglobby: 0.2.14
     optionalDependencies:
-      '@types/node': 16.18.11
+      '@types/node': 24.3.0
       fsevents: 2.3.3
 
-  vitefu@1.0.6(vite@6.3.5(@types/node@16.18.11)):
+  vitefu@1.0.6(vite@6.3.5(@types/node@24.3.0)):
     optionalDependencies:
-      vite: 6.3.5(@types/node@16.18.11)
+      vite: 6.3.5(@types/node@24.3.0)
 
-  vitest@3.2.4(@edge-runtime/vm@3.2.0)(@types/debug@4.1.12)(@types/node@16.18.11)(happy-dom@18.0.1):
+  vitest@3.2.4(@edge-runtime/vm@3.2.0)(@types/debug@4.1.12)(@types/node@24.3.0)(happy-dom@18.0.1):
     dependencies:
       '@types/chai': 5.2.2
       '@vitest/expect': 3.2.4
-      '@vitest/mocker': 3.2.4(vite@6.3.5(@types/node@16.18.11))
+      '@vitest/mocker': 3.2.4(vite@6.3.5(@types/node@24.3.0))
       '@vitest/pretty-format': 3.2.4
       '@vitest/runner': 3.2.4
       '@vitest/snapshot': 3.2.4
@@ -6203,13 +6249,13 @@ snapshots:
       tinyglobby: 0.2.14
       tinypool: 1.1.1
       tinyrainbow: 2.0.0
-      vite: 6.3.5(@types/node@16.18.11)
-      vite-node: 3.2.4(@types/node@16.18.11)
+      vite: 6.3.5(@types/node@24.3.0)
+      vite-node: 3.2.4(@types/node@24.3.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@edge-runtime/vm': 3.2.0
       '@types/debug': 4.1.12
-      '@types/node': 16.18.11
+      '@types/node': 24.3.0
       happy-dom: 18.0.1
     transitivePeerDependencies:
       - jiti
