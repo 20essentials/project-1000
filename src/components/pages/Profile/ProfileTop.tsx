@@ -6,20 +6,24 @@ import { NavVideosOrSaved } from '@/components/pages/Profile/NavVideosOrSaved';
 import { NumFollowed } from '@/components/pages/ProfileCreator/ProfileAndProfileCreatorCommonComponents/NumFollowed';
 import { useFollowedAccount } from '@/store/useFollowedAccount';
 import { NumFollowers } from '@/components/pages/ProfileCreator/ProfileAndProfileCreatorCommonComponents/NumFollowers';
+import { useUserCreatedPosts } from '@/store/useUserCreatedPosts';
 
 export function ProfileTop({
-  slideHorizontalRef,
+  slideHorizontalRef
 }: {
   slideHorizontalRef: React.RefObject<HTMLElement | null>;
 }) {
   const commonProps = useUserCreator(state => state.commonProps);
   const { profileImageSrc, username, followers } = commonProps;
-  const arrayOfPosts = useUserCreator(state => state.arrayOfPosts);
   const arrayOfFollowedAccounts = useFollowedAccount(
     state => state.arrayOfFollowedAccounts
   );
   const { length: numOfFollowed } = arrayOfFollowedAccounts;
-  const theTotalLikes = arrayOfPosts.reduce(
+
+  const arrayOfCreatedPostOfTheUser = useUserCreatedPosts(
+    state => state.arrayOfCreatedPostOfTheUser
+  );
+  const theTotalLikes = arrayOfCreatedPostOfTheUser.reduce(
     (total, obj) => total + obj.hearts,
     0
   );
@@ -38,9 +42,7 @@ export function ProfileTop({
       <ArrowLeft className='arrow-left' />
       <Logout />
 
-      <NavVideosOrSaved
-        slideHorizontalRef={slideHorizontalRef}
-      />
+      <NavVideosOrSaved slideHorizontalRef={slideHorizontalRef} />
     </aside>
   );
 }
