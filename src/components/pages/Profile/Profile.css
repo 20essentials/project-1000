@@ -183,11 +183,15 @@
       display: flex;
       justify-content: center;
 
-      &.aside-nav-active {
+      svg {
+        color: #ddd;
+      }
+
+     /*  &.aside-nav-active {
         svg {
           color: #fff;
         }
-      }
+      } */
     }
 
     svg {

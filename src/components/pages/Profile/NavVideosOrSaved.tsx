@@ -21,11 +21,9 @@ export function NavVideosOrSaved({
   slideHorizontalRef: React.RefObject<HTMLElement | null>;
 }) {
   const [indexOfSectionActive, setIndexOfSectionActive] = useState(0);
-  const hasclicked = useRef(false);
 
   function showSection(indexSection: number) {
     return () => {
-      hasclicked.current = true;
       setIndexOfSectionActive(indexSection);
     };
   }
@@ -36,42 +34,8 @@ export function NavVideosOrSaved({
       behavior: 'smooth',
       inline: 'center'
     });
-    let timer = setTimeout(() => {
-      hasclicked.current = false;
-      clearTimeout(timer);
-    }, 2000);
   }, [indexOfSectionActive]);
 
-  useEffect(() => {
-    if (!slideHorizontalRef.current) return;
-
-    const container = slideHorizontalRef.current;
-    const children = Array.from(container.children);
-
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            if (hasclicked.current) return;
-            const index = children.indexOf(entry.target as Element);
-            if (index !== -1) {
-              setIndexOfSectionActive(index);
-            }
-          }
-        });
-      },
-      {
-        root: container,
-        threshold: 0.95
-      }
-    );
-
-    children.forEach(child => observer.observe(child));
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [slideHorizontalRef]);
 
   return (
     <article className='nav-videos-or-saved'>
