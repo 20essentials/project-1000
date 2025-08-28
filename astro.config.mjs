@@ -18,23 +18,17 @@ export default defineConfig({
         context: 'server',
         access: 'secret'
       }),
-      SHOW_PRIVATE_DATA: envField.boolean({ context: 'client', access: 'public' }),
-      THERE_IS_E2E: envField.boolean({ context: 'client', access: 'public' }),
+      SHOW_PRIVATE_DATA: envField.boolean({
+        context: 'client',
+        access: 'public'
+      }),
+      THERE_IS_E2E: envField.boolean({ context: 'client', access: 'public' })
     }
   },
-
-
-  //Deploy normal project
-  // base: '/project-1000/',
-  // site: 'https://20essentials.github.io/project-1000/'
 
   //Localhost
   // site: 'http://localhost:4321/',
   site: 'https://project-1000-t1k-tok-minimalist.vercel.app/',
-
-  // server: {
-  //   port: 4321,
-  // },
   output: 'server',
   adapter: vercel(),
   integrations: [react(), clerk()]
