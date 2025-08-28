@@ -20,6 +20,8 @@ function openTwitch() {
 }
 
 export function Login() {
+
+
   return (
     <article className='login'>
       <h2>Login For TikTok</h2>
@@ -35,6 +37,7 @@ export function Login() {
       <button onClick={() => openGithub()}>
         <GitHub className='logito github' /> Continue With GitHub
       </button>
+
       <footer>
         By continuing, you agree to TikTok's <output>Terms of Use</output> and
         confirm that you have TikTok's <output>Privacy Policy</output>

@@ -18,7 +18,8 @@ export default defineConfig({
         context: 'server',
         access: 'secret'
       }),
-      SHOW_PRIVATE_DATA: envField.boolean({ context: 'client', access: 'public' })
+      SHOW_PRIVATE_DATA: envField.boolean({ context: 'client', access: 'public' }),
+      THERE_IS_E2E: envField.boolean({ context: 'client', access: 'public' }),
     }
   },
 
