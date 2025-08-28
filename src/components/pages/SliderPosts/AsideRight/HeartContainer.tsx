@@ -31,6 +31,8 @@ export function HeartContainer({ hearts, post, otherClassName }: Props) {
     state => state.getFlattenedSavedPosts
   );
 
+  const currentHearts = thisPostIsSave ? hearts + 1 : hearts;
+
   function savePost() {
     if (thisPostIsSave) {
       setThisPostIsSaved(false);
@@ -58,7 +60,7 @@ export function HeartContainer({ hearts, post, otherClassName }: Props) {
   return (
     <section className={className} onClick={savePost} >
       <Heart />
-      <span className='count '>{generateNumOfAsideRight(hearts)}</span>
+      <span className='count '>{generateNumOfAsideRight(currentHearts)}</span>
     </section>
   );
 }

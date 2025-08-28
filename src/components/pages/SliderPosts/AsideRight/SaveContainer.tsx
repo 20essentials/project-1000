@@ -23,10 +23,14 @@ export function SaveContainer({ saved, post }: Props) {
   }`;
   const deletePostSaved = useUserSavedPosts(state => state.deletePostSaved);
   const addPostInSaved = useUserSavedPosts(state => state.addPostInSaved);
-  const arrayOfSavedPostOfTheUser = useUserSavedPosts(state => state.arrayOfSavedPostOfTheUser)
+  const arrayOfSavedPostOfTheUser = useUserSavedPosts(
+    state => state.arrayOfSavedPostOfTheUser
+  );
   const getFlattenedSavedPosts = useUserSavedPosts(
     state => state.getFlattenedSavedPosts
   );
+
+  const savedCount = thisPostIsSave ? saved + 1 : saved;
 
   function savePost() {
     if (thisPostIsSave) {
@@ -39,7 +43,7 @@ export function SaveContainer({ saved, post }: Props) {
     addPostInSaved({
       commonProps: getCommonpropsFromProps(post),
       postProps: getPostpropsFromProps(post),
-      userIdOfCreatorOfThePost:  post.userId,
+      userIdOfCreatorOfThePost: post.userId
     });
   }
 
@@ -55,7 +59,7 @@ export function SaveContainer({ saved, post }: Props) {
   return (
     <section className={className} onClick={savePost}>
       <Save />
-      <span className='count'>{generateNumOfAsideRight(saved)}</span>
+      <span className='count'>{generateNumOfAsideRight(savedCount)}</span>
     </section>
   );
 }
