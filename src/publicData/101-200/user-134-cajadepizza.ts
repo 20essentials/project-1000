@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'cajadepizza';
-const userId = '';
-const prefixUrl = '';
+const userId = '7314acd7-9d0f-4a31-82c7-266d69e67f70';
+const prefixUrl = 'https://dominicnikolai.github.io/project-297/assets/cajadepizza/';
 const followers = 872_720;
 const followed = 322;
 const profileDescription = '💬 Noticias que fomentan la curiosidad';

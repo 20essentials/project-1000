@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ruihuang_art';
-const userId = '';
-const prefixUrl = '';
+const userId = '8fbacba6-4709-4dde-a2fd-b3757d7c96fe';
+const prefixUrl = 'https://dominicnikolai.github.io/project-298/assets/ruihuang-art/';
 const followers = 742_720;
 const followed = 35;
 const profileDescription = 'Scifi Artist丨Inquire📫';

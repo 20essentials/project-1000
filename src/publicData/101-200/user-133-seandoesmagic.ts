@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'seandoesmagic';
-const userId = '';
-const prefixUrl = '';
+const userId = 'a576fa16-a1fb-45cf-b28e-4a3131ab711e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-298/assets/seandoesmagic/';
 const followers = 3_872_832;
 const followed = 50;
 const profileDescription = 'Just chill';

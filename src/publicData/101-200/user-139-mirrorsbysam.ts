@@ -5,15 +5,15 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'mirrorsbysam';
-const userId = '';
-const prefixUrl = '';
+const userId = '7d7cb0db-a5c1-4cc3-b0c1-39719d08e01c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-297/assets/mirrorsbysam/';
 const followers = 152_720;
 const followed = 50;
 const profileDescription = 'Espejos hechos a la medida';
 const prefixLetterVideos = 'v';
 const quantityOfVideos = 5;
 const prefixLetterImages = 'n';
-const quantityOfImages = 20;
+const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */

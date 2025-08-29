@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'mr_poster_design';
-const userId = '';
-const prefixUrl = '';
+const userId = 'a43e3bda-624b-444c-9479-136237b8831e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-297/assets/mr-poster-design/';
 const followers = 99_720;
 const followed = 79;
 const profileDescription = 'graphic designer (freelancer)';

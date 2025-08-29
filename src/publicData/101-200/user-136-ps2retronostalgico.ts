@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ps2retronostalgico';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c89bdb1a-5590-4e05-9170-09390ecd74ce';
+const prefixUrl = 'https://dominicnikolai.github.io/project-298/assets/ps2retronostalgico/';
 const followers = 63_400;
 const followed = 126;
 const profileDescription = 'Aquí verás tu infancia resumida 🫶🏻';

@@ -4,9 +4,9 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'amUserPrivate';
-const userId = '';
-const prefixUrl = '';
+const username = 'navanimator';
+const userId = 'e3e7ed8c-59f8-47f9-ac5e-a877517aaf15';
+const prefixUrl = 'https://dominicnikolai.github.io/project-298/assets/navanimator/';
 const followers = 47_892;
 const followed = 50;
 const profileDescription = 'Professor and Animator';
@@ -66,7 +66,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const amUserPrivate_commonProps = generateExactlyCommonProps({
+export const navanimator_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -75,7 +75,7 @@ export const amUserPrivate_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const amUserPrivate_videos = generateArrayPostsOfVideos({
+const navanimator_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -83,14 +83,14 @@ const amUserPrivate_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const amUserPrivate_images = generateArrayPostsOfImages({
+const navanimator_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const amUserPrivate_array_of_posts = [
-  ...amUserPrivate_images,
-  ...amUserPrivate_videos
+export const navanimator_array_of_posts = [
+  ...navanimator_images,
+  ...navanimator_videos
 ];

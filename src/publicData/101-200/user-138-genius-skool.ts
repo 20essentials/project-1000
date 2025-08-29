@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'genius_skool';
-const userId = '';
-const prefixUrl = '';
+const userId = '75b7fd50-2bfb-4fb3-a3fc-fc79e552d845';
+const prefixUrl = 'https://dominicnikolai.github.io/project-297/assets/genius-skool/';
 const followers = 279_720;
 const followed = 50;
 const profileDescription = ' Canva Pro';
