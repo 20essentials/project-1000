@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'one_minute_magazine';
-const userId = '';
-const prefixUrl = '';
+const userId = 'f40de87c-1ca1-4f2f-b789-a033970be45b';
+const prefixUrl = 'https://dominicnikolai.github.io/project-295/assets/1mm/';
 const followers = 323_789;
 const followed = 38;
 const profileDescription = '1mmm';

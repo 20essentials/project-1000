@@ -5,15 +5,15 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'coding_elf';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd819c4d2-0097-4f45-9e08-02520b91d49a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-295/assets/coding-elf/';
 const followers = 109_234;
 const followed = 243;
 const profileDescription = 'AI, Tech & Your Career: What’s Next? 🤖';
 const prefixLetterVideos = 'v';
 const quantityOfVideos = 6;
 const prefixLetterImages = 'n';
-const quantityOfImages = 20;
+const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */

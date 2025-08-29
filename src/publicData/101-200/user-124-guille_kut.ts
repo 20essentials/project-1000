@@ -4,9 +4,9 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'guille_Kut';
-const userId = '';
-const prefixUrl = '';
+const username = 'guille_kut';
+const userId = 'abbf0dc7-abb3-47bd-8124-4edeb46f8678';
+const prefixUrl = 'https://dominicnikolai.github.io/project-295/assets/guill3_kut/';
 const followers = 172_998;
 const followed = 194;
 const profileDescription = '🤓☝🏻 Hablo sobre cine, series y videojuegos, y la gente dice que aprende y se lo pasa bien';

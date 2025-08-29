@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'olivervisualfx';
-const userId = '';
-const prefixUrl = '';
+const userId = '7a41b3d4-85cc-4406-b054-d0a47f996985';
+const prefixUrl = 'https://dominicnikolai.github.io/project-294/assets/olivervisualfx/';
 const followers = 142_720;
 const followed = 322;
 const profileDescription = '🎬 Hollywood VFX Artist | CGI Artist | Creative Director🪐';

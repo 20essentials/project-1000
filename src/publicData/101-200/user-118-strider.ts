@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'strider';
-const userId = '';
-const prefixUrl = '';
+const userId = '705c83a7-07d0-42f9-ae80-e233cef495c6';
+const prefixUrl = 'https://dominicnikolai.github.io/project-294/assets/strider/';
 const followers = 777_890;
 const followed = 50;
 const profileDescription = 'Only copies have died””';

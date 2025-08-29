@@ -4,12 +4,12 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'amUserPrivate';
-const userId = '';
-const prefixUrl = '';
+const username = 'searchgoodmovies';
+const userId = 'fa973c8d-cc43-4198-8f2a-33056c093eeb';
+const prefixUrl = 'https://dominicnikolai.github.io/project-294/assets/searchgoodmovies/';
 const followers = 446_720;
 const followed = 232;
-const profileDescription = 'Movies';
+const profileDescription = 'Cine and more';
 const prefixLetterVideos = 'v';
 const quantityOfVideos = 12;
 const prefixLetterImages = 'n';
@@ -66,7 +66,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const amUserPrivate_commonProps = generateExactlyCommonProps({
+export const searchgoodmovies_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -75,7 +75,7 @@ export const amUserPrivate_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const amUserPrivate_videos = generateArrayPostsOfVideos({
+const searchgoodmovies_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -83,14 +83,14 @@ const amUserPrivate_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const amUserPrivate_images = generateArrayPostsOfImages({
+const searchgoodmovies_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const amUserPrivate_array_of_posts = [
-  ...amUserPrivate_images,
-  ...amUserPrivate_videos
+export const searchgoodmovies_array_of_posts = [
+  ...searchgoodmovies_images,
+  ...searchgoodmovies_videos
 ];
