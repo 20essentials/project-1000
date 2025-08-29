@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'raulmoran';
-const userId = '';
-const prefixUrl = '';
+const userId = '0630680a-1169-4ecf-8b34-4267e76eeebc';
+const prefixUrl = 'https://dominicnikolai.github.io/project-296/assets/raulmoran/';
 const followers = 78_720;
 const followed = 50;
 const profileDescription = 'Creador de experiencias visuales únicas';

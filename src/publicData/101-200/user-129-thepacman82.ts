@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'the_pacman_82';
-const userId = '';
-const prefixUrl = '';
+const userId = '78471d0c-6975-4079-97d6-ba21f92099d6';
+const prefixUrl = 'https://dominicnikolai.github.io/project-296/assets/thep4cman82/';
 const followers = 949_720;
 const followed = 664;
 const profileDescription = 'Creative Director. Some VFX, some fashion, & some fun.';

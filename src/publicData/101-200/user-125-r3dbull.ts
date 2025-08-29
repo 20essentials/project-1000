@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'redbull';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd9607ddc-8109-4cb6-bc2b-ead8d3bf89d0';
+const prefixUrl = 'https://dominicnikolai.github.io/project-296/assets/r3dbull/';
 const followers = 17_720_820;
 const followed = 122;
 const profileDescription = 'watch the World Of Red Bull';

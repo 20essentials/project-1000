@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'hectorfvx';
-const userId = '';
-const prefixUrl = '';
+const userId = '49f4bbd5-4587-4e50-a571-ac18739cbb4b';
+const prefixUrl = 'https://dominicnikolai.github.io/project-296/assets/hectorvfx/';
 const followers = 350_720;
 const followed = 523;
 const profileDescription = 'Artista CGI';

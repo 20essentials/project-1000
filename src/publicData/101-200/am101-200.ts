@@ -44,6 +44,10 @@ import { one_minute_magazine_array_of_posts, one_minute_magazine_commonProps } f
 import { coding_elf_array_of_posts, coding_elf_commonProps } from './user-128-coding-elf';
 import { daily_cardistry_array_of_posts, daily_cardistry_commonProps } from './user-131-daily-cardistry';
 import { guille_Kut_array_of_posts, guille_Kut_commonProps } from './user-124-guille_kut';
+import { hectorfvx_array_of_posts, hectorfvx_commonProps } from './user-127-hectorvfx';
+import { redbull_array_of_posts, redbull_commonProps } from './user-125-r3dbull';
+import { raulmoran_array_of_posts, raulmoran_commonProps } from './user-126-raulmoran';
+import { the_pacman_82_array_of_posts, the_pacman_82_commonProps } from './user-129-thepacman82';
 
 export const PUBLIC_101_200: arrayOfPosts = [
   [monster_trucks_commonProps, monster_trucks_array_of_posts] /* 101 */,
@@ -70,9 +74,11 @@ export const PUBLIC_101_200: arrayOfPosts = [
   [searchgoodmovies_commonProps, searchgoodmovies_array_of_posts] /* 122 */,
   [olivervisualfx_commonProps, olivervisualfx_array_of_posts] /* 123 */,
   [guille_Kut_commonProps, guille_Kut_array_of_posts] /* 124 */,
-
+  [redbull_commonProps, redbull_array_of_posts] /* 125 */,
+  [raulmoran_commonProps, raulmoran_array_of_posts] /* 126 */,
+  [hectorfvx_commonProps, hectorfvx_array_of_posts] /* 127 */,
   [coding_elf_commonProps, coding_elf_array_of_posts] /* 128 */,
-
+  [the_pacman_82_commonProps, the_pacman_82_array_of_posts] /* 129 */,
   [one_minute_magazine_commonProps, one_minute_magazine_array_of_posts] /* 130 */,
   [daily_cardistry_commonProps, daily_cardistry_array_of_posts] /* 131 */,
 ];
