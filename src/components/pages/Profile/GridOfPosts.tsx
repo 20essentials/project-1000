@@ -30,7 +30,7 @@ export function GridOfPosts({
       post,
       commonProps
     }))
-  );
+  ).toReversed()
 
   const containerRef = useRef<HTMLDivElement>(null);
   const lastThreeRefs = useRef<(HTMLDivElement | null)[]>([]);

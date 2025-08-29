@@ -33,7 +33,6 @@ export function SliderPostsOfSingleUser() {
   );
 
   const isTheSameuser = commonProps.username === usernameOfTheUser;
-
   //   console.log({
   //  arrayOfPostsOftheCurrentProfile,
   //  commonProps,
@@ -59,7 +58,10 @@ export function SliderPostsOfSingleUser() {
   const resetLimit = useLimitOfPost(state => state.resetLimit);
   let flattenedPosts = ALL_POSTS.flatMap(([userCommonProps, userPosts]) =>
     userPosts.map(post => ({ ...post, ...userCommonProps }))
-  );
+  )
+  if (isTheSameuser) {
+    flattenedPosts = flattenedPosts.toReversed();
+  }
   const indexOfPost = useUserCreator(state => state.indexOfPost);
 
   useEffect(() => {
