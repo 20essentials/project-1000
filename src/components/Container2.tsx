@@ -1,8 +1,8 @@
 import { useTransformOrigin } from '@/store/useTransformOrigin';
 import '@/styles/Container2.css';
-import { baseUrl } from '@/utils/functions';
-const tikTokLogo = baseUrl('/assets/tiktok-logo.avif');
-const tikTokLogoText = baseUrl('/assets/tiktok-logo-text.webp');
+import { baseURL } from '@/utils/functions/baseURL';
+const tikTokLogo = baseURL('/assets/tiktok-logo.avif');
+const tikTokLogoText = baseURL('/assets/tiktok-logo-text.webp');
 import { useNcontainer, CONTAINER_IS } from '@/store/useNcontainer';
 import { useEffect } from 'react';
 

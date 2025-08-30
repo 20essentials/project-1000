@@ -2,7 +2,7 @@ import type {
   postProps,
   postComonProps
 } from '@/components/pages/SliderPosts/types.d.ts';
-import { baseUrl } from '@/utils/functions';
+import { baseURL } from '@/utils/functions/baseURL';
 import { useEffect, useRef, useState } from 'react';
 import { PlayButton } from '@/components/pages/SliderPosts/PostVideo/PlayButton';
 import { userHasInteracted } from '@/store/userHasInteracted';
@@ -221,7 +221,7 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
           post={props}
         />
         <section className='button-container btn-container-vinyl'>
-          <img className='vinyl' src={baseUrl('/assets/vinyl.png')} alt='Vinyl' />
+          <img className='vinyl' src={baseURL('/assets/vinyl.png')} alt='Vinyl' />
           <img
             className='user-profile-vinyl'
             draggable='false'

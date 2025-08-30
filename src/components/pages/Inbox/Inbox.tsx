@@ -3,7 +3,7 @@ import type { postComonProps } from '@/components/pages/SliderPosts/types.d.ts';
 import '@/components/pages/FollowedAndFollow/FollowedAndFollow.css';
 import { ArrowLeft } from '@/components/pages/ProfileCreator/ArrowLeft';
 import { useCurrentUser } from '@/store/useCurrentUser';
-import { baseUrl } from '@/utils/functions';
+import { baseURL } from '@/utils/functions/baseURL';
 import { generateRandomNumber } from "@/utils/functions/generateRandomNumber";
 import { useUserCreator } from '@/store/useUserCreator';
 import { useFollowedAccount } from '@/store/useFollowedAccount';
@@ -14,8 +14,8 @@ import { FOLLOWED, FOR_YOU } from '@/publicData/functions/getData';
 import { useSwipeXHeaderStories } from '@/hooks/useSwipeXHeaderStories';
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 const NUM_OF_ROW_THAT_RENDER_MORE_ROWS = 9;
-const urlFirework = baseUrl('/assets/tik-tok-animated-logo.gif');
-const infoImg = baseUrl('/assets/info.svg');
+const urlFirework = baseURL('/assets/tik-tok-animated-logo.gif');
+const infoImg = baseURL('/assets/info.svg');
 
 export function Inbox() {
   const commonProps = useUserCreator(state => state.commonProps);

@@ -3,9 +3,7 @@ import type {
   postComonProps
 } from '@/components/pages/SliderPosts/types.d.ts';
 
-export function baseUrl(path: string) {
-  return new URL(path.replace(/^\/+/, ''), import.meta.env.SITE).toString();
-}
+
 
 const MAX_DURATION_OF_VIDEO = 10 * 60; // 10 minutos en segundos
 export const validateVideoDuration = (file: File): Promise<boolean> => {

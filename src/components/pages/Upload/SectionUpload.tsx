@@ -1,5 +1,5 @@
 import { useUploadVideoOrImages } from '@/store/useUploadVideoOrImages';
-import { baseUrl } from '@/utils/functions';
+import { baseURL } from '@/utils/functions/baseURL';
 import {
   useState,
   useRef,
@@ -11,7 +11,7 @@ import { PublishKeyCap } from './PublishKeyCap';
 import { validateVideoDuration } from '@/utils/functions';
 import { TextareaDescriptionPost } from './TextareaDescriptionPost';
 
-const srcCross = baseUrl('/assets/cross.png');
+const srcCross = baseURL('/assets/cross.png');
 
 export function SectionUpload({ modePhoto }: { modePhoto: boolean }) {
   const images = useUploadVideoOrImages(s => s.arrayImages);

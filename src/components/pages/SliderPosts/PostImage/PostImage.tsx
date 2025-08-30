@@ -2,7 +2,7 @@ import type {
   postProps,
   postComonProps
 } from '@/components/pages/SliderPosts/types.d.ts';
-import { baseUrl } from '@/utils/functions';
+import { baseURL } from '@/utils/functions/baseURL';
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
 import { useEffect, useRef, useState } from 'react';
 import { ARRAY_OF_SONGS } from '@/utils/arrayOfSongs';
@@ -17,15 +17,14 @@ import { useTrackVisibleImage } from '@/hooks/useTrackVisibleImage';
 import { CommentsContainer } from '@/components/pages/SliderPosts/AsideRight/CommentsContainer';
 import { ShareContainer } from '@/components/pages/SliderPosts/AsideRight/ShareContainer';
 import { useIsScrolling } from '@/store/useIsScrolling';
-import { ContainerBottomOfComments } from '../AsideRight/ContainerBottomOfComments';
-import { AsideBottomOfShare } from '../AsideRight/AsideBottomOfShare';
+import { ContainerBottomOfComments } from '@/components/pages/SliderPosts/AsideRight/ContainerBottomOfComments';
+import { AsideBottomOfShare } from '@/components/pages/SliderPosts/AsideRight/AsideBottomOfShare';
 import { useUpdateUrlParamsPostVideoOrImage } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 import { useCurrentUser } from '@/store/useCurrentUser';
 import { useSwipeScrollHorizontal } from '@/hooks/useSwipeScrollHorizontal';
 import {
   audioAddMediaSessionEvents,
-  updateMetadata,
-  videoAddMediaSessionEvents
+  updateMetadata
 } from '@/services/MediaSessionApi';
 import { useDbclickHeart } from '@/hooks/useDbclickHeart';
 
@@ -196,7 +195,7 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
   useDbclickHeart({
     childrenClass: '.layer-1-post-image-inner',
     containerRef: postImageRef
-  })
+  });
 
   return (
     <article className='post-image am-post-video-or-image' ref={postImageRef}>
@@ -259,7 +258,7 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
           <section className='button-container btn-container-vinyl'>
             <img
               className='vinyl'
-              src={baseUrl('/assets/vinyl.png')}
+              src={baseURL('/assets/vinyl.png')}
               alt='Vinyl'
             />
             <img

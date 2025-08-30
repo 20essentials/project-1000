@@ -12,9 +12,9 @@ import {
 } from '@/store/useUserCreator';
 import { useEffect, useState, useRef } from 'react';
 import { TotalViews } from '@/components/pages/ProfileCreator/TotalViews';
-import { SqureSubSquare } from '../ProfileCreator/SqureSubSquare';
-import { baseUrl } from '@/utils/functions';
-const ghostLottie = baseUrl('/assets/empty-ghost.lottie');
+import { SqureSubSquare } from '@/components/pages/ProfileCreator/SqureSubSquare';
+import { baseURL } from '@/utils/functions/baseURL';
+const ghostLottie = baseURL('/assets/empty-ghost.lottie');
 
 export function GridOfPosts({
   arrayOfPosts,
