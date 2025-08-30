@@ -86,26 +86,6 @@ export function formatUsername(rawUsername: string, maxLength: number): string {
 export const $ = (el: string) => document.querySelector(el);
 export const $$ = (el: string) => document.querySelectorAll(el);
 
-export function generateRandomISODate(
-  from: Date = new Date(2000, 0, 1),
-  to: Date = new Date()
-): string {
-  const pad = (n: number) => n.toString().padStart(2, '0');
-
-  const randomDate = new Date(
-    from.getTime() + Math.random() * (to.getTime() - from.getTime())
-  );
-
-  const year = randomDate.getFullYear();
-  const month = pad(randomDate.getMonth() + 1);
-  const day = pad(randomDate.getDate());
-  const hours = pad(randomDate.getHours());
-  const minutes = pad(randomDate.getMinutes());
-  const seconds = pad(randomDate.getSeconds());
-
-  return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}`;
-}
-
 export function generateTotalNum(num: number) {
   if (num < 99_999) return num;
   if (num >= 100_000 && num <= 999_999) return num.toLocaleString('es-ES');

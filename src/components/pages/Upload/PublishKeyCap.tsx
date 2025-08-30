@@ -1,7 +1,8 @@
 import { useUploadVideoOrImages } from '@/store/useUploadVideoOrImages';
 import { useUserCreatedPosts } from '@/store/useUserCreatedPosts';
-import type { postProps } from '../SliderPosts/types';
-import { $, generateRandomISODate } from '@/utils/functions';
+import type { postProps } from '@/components/pages/SliderPosts/types';
+import { $ } from '@/utils/functions';
+import { generateRandomISODate } from '@/utils/functions/generateRandomISODate'
 import { generateRandomNumber } from "@/utils/functions/generateRandomNumber";
 
 

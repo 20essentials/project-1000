@@ -1,4 +1,4 @@
-import { generateRandomISODate } from '@/utils/functions';
+import { generateRandomISODate } from '@/utils/functions/generateRandomISODate'
 import type { postProps } from '@/components/pages/SliderPosts/types';
 import { generateRandomNumber } from '@/utils/functions/generateRandomNumber';
 import { UUID } from '@/utils/array/uuid/arrayDeIdentificadoresUnicos';
