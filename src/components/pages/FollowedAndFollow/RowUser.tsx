@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef } from 'react';
 import { FollowButton } from '../ProfileCreator/FollowButton';
 import { useUserCreator } from '@/store/useUserCreator';
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
-import { $ } from '@/utils/functions';
+import { $ } from "@/utils/functions/dom";
 import { generateRandomNumber } from "@/utils/functions/generateRandomNumber";
 import type { userId } from '@/store/useFollowedAccount';
 import { UserCircleStory } from '@/components/pages/SliderPosts/AsideRight/UserCircleStory';

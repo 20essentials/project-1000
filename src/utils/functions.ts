@@ -83,9 +83,6 @@ export function formatUsername(rawUsername: string, maxLength: number): string {
     : username;
 }
 
-export const $ = (el: string) => document.querySelector(el);
-export const $$ = (el: string) => document.querySelectorAll(el);
-
 export function generateTotalNum(num: number) {
   if (num < 99_999) return num;
   if (num >= 100_000 && num <= 999_999) return num.toLocaleString('es-ES');

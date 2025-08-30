@@ -1,5 +1,5 @@
 import '@/components/pages/Login/Login.css';
-import { $ } from '@/utils/functions';
+import { $ } from "@/utils/functions/dom";
 import { Google } from '@/components/pages/Login/Google';
 import { Twitch } from '@/components/pages/Login/Twitch';
 import { GitHub } from '@/components/pages/Login/GitHub';
@@ -20,8 +20,6 @@ function openTwitch() {
 }
 
 export function Login() {
-
-
   return (
     <article className='login'>
       <h2>Login For TikTok</h2>

@@ -1,11 +1,10 @@
 import { useCurrentPage, IS_ACTIVE_BUTTON } from '@/store/useCurrentPage';
 import { useUserCreator } from '@/store/useUserCreator';
 import { FOLLOWED, FOR_YOU } from '@/publicData/functions/getData';
-const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
-
 import { useCurrentUser } from '@/store/useCurrentUser';
-import { $ } from '@/utils/functions';
+import { $ } from "@/utils/functions/dom";
 import { FollowCircleButton } from '@/components/pages/SliderPosts/AsideRight/FollowCircleButton';
+const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 
 export function UserProfile({
   profileImageSrc,

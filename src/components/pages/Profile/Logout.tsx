@@ -1,4 +1,4 @@
-import { $ } from '@/utils/functions';
+import { $ } from "@/utils/functions/dom";
 
 export function Logout() {
   function handleLogout() {
