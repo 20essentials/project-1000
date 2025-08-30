@@ -1,0 +1,1 @@
+All functions inside the @/utils folder are covered by unit tests, which can be found in the src/tests/unit directory. This ensures that all utility logic works as expected and helps prevent regressions.

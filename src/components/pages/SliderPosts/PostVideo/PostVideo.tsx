@@ -15,8 +15,8 @@ import { InputRange } from '@/components/pages/SliderPosts/PostVideo/inputRange'
 import { CommentsContainer } from '@/components/pages/SliderPosts/AsideRight/CommentsContainer';
 import { ShareContainer } from '@/components/pages/SliderPosts/AsideRight/ShareContainer';
 import { useIsScrolling } from '@/store/useIsScrolling';
-import { ContainerBottomOfComments } from '../AsideRight/ContainerBottomOfComments';
-import { AsideBottomOfShare } from '../AsideRight/AsideBottomOfShare';
+import { ContainerBottomOfComments } from '@/components/pages/SliderPosts/AsideRight/ContainerBottomOfComments';
+import { AsideBottomOfShare } from '@/components/pages/SliderPosts/AsideRight/AsideBottomOfShare';
 import { useUpdateUrlParamsPostVideoOrImage } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 import { useCurrentUser } from '@/store/useCurrentUser';
 import {
