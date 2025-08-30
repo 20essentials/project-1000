@@ -3,8 +3,8 @@ import { WatchIcon } from '@/components/pages/Search/WatchIcon';
 import { useGlobalArrayPosts } from '@/store/useGlobalArrayPosts';
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 import { useUserCreator } from '@/store/useUserCreator';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { wrapValue } from '@/utils/gsap/gsapFunction';
+import {  useEffect, useMemo, useRef, useState } from 'react';
+import { wrapValue } from '@/utils/gsap/gsapFunctions';
 const ROW_ACTIVE_CLASSNAME = 'active-search-item';
 
 export function Search() {
