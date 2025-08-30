@@ -1,4 +1,4 @@
-import { formatUsername } from '@/utils/functions';
+import { normalizeUsername } from "@/utils/functions/normalizeUsername";
 import type { postComonProps, postProps } from '../SliderPosts/types';
 import { useCurrentPage, IS_ACTIVE_BUTTON } from '@/store/useCurrentPage';
 import {
@@ -61,7 +61,7 @@ export function ArrayOfNavbarStories({
             />
           </article>
           <aside className='history-container-description'>
-            <h5>{formatUsername(username, MAX_LENGTH_OF_USERNAME)}</h5>
+            <h5>{normalizeUsername(username, MAX_LENGTH_OF_USERNAME)}</h5>
           </aside>
         </aside>
       );
