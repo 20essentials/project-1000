@@ -1,4 +1,4 @@
-import { generateNumOfAsideRight } from "@/utils/functions";
+import { formatNumberForDisplay } from "@/utils/functions/formatNumberForDisplay";
 
 export function TotalViews({ totalViews }: { totalViews: number }) {
   return (
@@ -17,7 +17,7 @@ export function TotalViews({ totalViews }: { totalViews: number }) {
         <path stroke='none' d='M0 0h24v24H0z' fill='none' />
         <path d='M7 4v16l13 -8z' />
       </svg>
-      <p className="total-p">{generateNumOfAsideRight(totalViews)}</p>
+      <p className="total-p">{formatNumberForDisplay(totalViews)}</p>
     </article>
   );
 }

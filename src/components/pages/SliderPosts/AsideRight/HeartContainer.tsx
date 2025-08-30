@@ -6,10 +6,10 @@ import type {
 } from '@/components/pages/SliderPosts/types.d.ts';
 import { userUserLikedPosts } from '@/store/useUserLikedPosts';
 import {
-  generateNumOfAsideRight,
   getCommonpropsFromProps,
   getPostpropsFromProps
 } from '@/utils/functions';
+import { formatNumberForDisplay } from "@/utils/functions/formatNumberForDisplay";
 
 interface Props {
   post: postProps & postComonProps;
@@ -60,7 +60,7 @@ export function HeartContainer({ hearts, post, otherClassName }: Props) {
   return (
     <section className={className} onClick={savePost} >
       <Heart />
-      <span className='count '>{generateNumOfAsideRight(currentHearts)}</span>
+      <span className='count '>{formatNumberForDisplay(currentHearts)}</span>
     </section>
   );
 }

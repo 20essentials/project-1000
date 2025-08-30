@@ -6,10 +6,10 @@ import type {
 } from '@/components/pages/SliderPosts/types.d.ts';
 import { useUserSavedPosts } from '@/store/useUserSavedPosts';
 import {
-  generateNumOfAsideRight,
   getCommonpropsFromProps,
   getPostpropsFromProps
 } from '@/utils/functions';
+import { formatNumberForDisplay } from "@/utils/functions/formatNumberForDisplay";
 
 interface Props {
   post: postProps & postComonProps;
@@ -59,7 +59,7 @@ export function SaveContainer({ saved, post }: Props) {
   return (
     <section className={className} onClick={savePost}>
       <Save />
-      <span className='count'>{generateNumOfAsideRight(savedCount)}</span>
+      <span className='count'>{formatNumberForDisplay(savedCount)}</span>
     </section>
   );
 }

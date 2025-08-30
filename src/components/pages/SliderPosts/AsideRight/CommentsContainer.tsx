@@ -2,7 +2,7 @@ import type {
   postComonProps,
   postProps
 } from '@/components/pages/SliderPosts/types';
-import { generateNumOfAsideRight } from '@/utils/functions';
+import { formatNumberForDisplay } from "@/utils/functions/formatNumberForDisplay";
 import { Comments } from '@/components/pages/SliderPosts/AsideRight/Comments';
 
 interface Props {
@@ -19,7 +19,7 @@ export function CommentsContainer({
   return (
     <section className='button-container' onClick={updateIsContainerBottomOpen}>
       <Comments />
-      <span className='count'>{generateNumOfAsideRight(comments)}</span>
+      <span className='count'>{formatNumberForDisplay(comments)}</span>
     </section>
   );
 }

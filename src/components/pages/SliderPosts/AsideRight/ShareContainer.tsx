@@ -2,7 +2,7 @@ import type {
   postComonProps,
   postProps
 } from '@/components/pages/SliderPosts/types';
-import { generateNumOfAsideRight } from '@/utils/functions';
+import { formatNumberForDisplay } from "@/utils/functions/formatNumberForDisplay";
 import { Share } from '@/components/pages/SliderPosts/AsideRight/Share';
 
 interface Props {
@@ -19,7 +19,7 @@ export function ShareContainer({
   return (
     <section className='button-container' onClick={updateIsContainerShareOpen}>
       <Share />
-      <span className='count'>{generateNumOfAsideRight(shared)}</span>
+      <span className='count'>{formatNumberForDisplay(shared)}</span>
     </section>
   );
 }

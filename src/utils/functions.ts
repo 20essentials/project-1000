@@ -117,17 +117,6 @@ export function generateTotalNum(num: number) {
   return 0;
 }
 
-export function generateNumOfAsideRight(num: number) {
-  if (num < 10_000) return num;
-  if (num >= 10_000 && num <= 999_999) return num.toLocaleString('es-ES');
-  if (num >= 1_000_000)
-    return `${(num / 1_000_000).toLocaleString('es-ES', {
-      minimumFractionDigits: 1,
-      maximumFractionDigits: 1
-    })} Mln`;
-  return 0;
-}
-
 export function formatTimeHH_MM_SS(seconds: number) {
   const hrs = Math.floor(seconds / 3600);
   const mins = Math.floor((seconds % 3600) / 60);
