@@ -1,7 +1,7 @@
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 import { useFollowedAccount } from '@/store/useFollowedAccount';
 import { useNavFollowedOrFollowers } from '@/store/useNavFollowedOrFollowers';
-import { generateTotalNum } from '@/utils/functions';
+import { formatTotalNum } from '@/utils/functions/formatTotalNum';
 import { useEffect } from 'react';
 
 export function NumFollowers({
@@ -34,7 +34,7 @@ export function NumFollowers({
 
   return (
     <article className='tab-data' onClick={openFollowersContainer}>
-      <p className='num'>{generateTotalNum(profileCreatorNumOfFollowers)}</p>
+      <p className='num'>{formatTotalNum(profileCreatorNumOfFollowers)}</p>
       <p className='desc'>Followers</p>
     </article>
   );

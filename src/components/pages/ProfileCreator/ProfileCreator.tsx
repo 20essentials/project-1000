@@ -1,7 +1,7 @@
 import '@/components/pages/ProfileCreator/ProfileCreator.css';
 import { useUserCreator } from '@/store/useUserCreator';
 import { FollowButton } from '@/components/pages/ProfileCreator/FollowButton';
-import { generateTotalNum } from '@/utils/functions';
+import { formatTotalNum } from '@/utils/functions/formatTotalNum';
 import { GridPosts } from '@/components/pages/ProfileCreator/GridPosts';
 import { ArrowLeft } from '@/components/pages/ProfileCreator/ArrowLeft';
 import { NumFollowed } from '@/components/pages/ProfileCreator/ProfileAndProfileCreatorCommonComponents/NumFollowed';
@@ -46,10 +46,10 @@ export function ProfileCreator() {
         />
         <p className='name-of-the-user'>@{username}</p>
         <aside className='container-data-user'>
-          <NumFollowed followedCount={generateTotalNum(followed)} />
+          <NumFollowed followedCount={formatTotalNum(followed)} />
           <NumFollowers followersCount={followers} />
           <article className='tab-data'>
-            <p className='num'>{generateTotalNum(theTotalLikes)}</p>
+            <p className='num'>{formatTotalNum(theTotalLikes)}</p>
             <p className='desc'>Likes</p>
           </article>
         </aside>

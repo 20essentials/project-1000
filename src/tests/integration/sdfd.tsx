@@ -7,6 +7,7 @@ import {
 } from "@/publicData/001-100/user-100-diego-poncelet";
 import type { arrayOfPosts } from "@/components/pages/SliderPosts/types";
 
+
 const firstPostMock = {
   ...diego_poncelet_commonProps,
   ...diego_poncelet_array_of_posts[0]
@@ -14,6 +15,7 @@ const firstPostMock = {
 
 describe("<HeartContainer /> integración con Zustand", () => {
   beforeEach(() => {
+    // resetear el store antes de cada test
     userUserLikedPosts.setState({
       arrayOfSavedPostOfTheUser: [] as arrayOfPosts,
     });
@@ -21,22 +23,22 @@ describe("<HeartContainer /> integración con Zustand", () => {
 
   it("renderiza un post real y muestra hearts", () => {
     render(<HeartContainer hearts={123} post={firstPostMock} />);
-    const section = screen.getByText(/123/).closest("section")!;
-    expect(section).toBeDefined();
+    expect(screen.getByText("123")).toBeDefined();
   });
 
   it("añade post a guardados al click si no estaba guardado", () => {
     render(<HeartContainer hearts={10} post={firstPostMock} />);
-    const section = screen.getByText(/10/).closest("section")!;
+    const section = screen.getByText("10").closest("section")!;
     fireEvent.click(section);
 
     const savedPosts = userUserLikedPosts.getState().arrayOfSavedPostOfTheUser;
     expect(savedPosts.length).toBe(1);
-    expect(savedPosts[0][0].userId).toBe(firstPostMock.userId);
-    expect(savedPosts[0][1][0].idPost).toBe(firstPostMock.idPost);
+    expect(savedPosts[0][0].userId).toBe(firstPostMock.userId); 
+    expect(savedPosts[0][1][0].idPost).toBe(firstPostMock.idPost); 
   });
 
   it("elimina post de guardados si ya estaba guardado", () => {
+    // pre-cargar estado con estructura real: [commonProps, [postProps]]
     userUserLikedPosts.setState({
       arrayOfSavedPostOfTheUser: [
         [diego_poncelet_commonProps, [firstPostMock]],
@@ -44,7 +46,7 @@ describe("<HeartContainer /> integración con Zustand", () => {
     });
 
     render(<HeartContainer hearts={50} post={firstPostMock} />);
-    const section = screen.getByText(/5[01]/).closest("section")!;
+    const section = screen.getByText("50").closest("section")!;
     fireEvent.click(section);
 
     const savedPosts = userUserLikedPosts.getState().arrayOfSavedPostOfTheUser;
@@ -58,8 +60,8 @@ describe("<HeartContainer /> integración con Zustand", () => {
       ] as arrayOfPosts,
     });
 
-    render(<HeartContainer hearts={1} post={firstPostMock} />);
-    const section = screen.getByText(/2/).closest("section")!;
+    render(<HeartContainer hearts={1} post={firstPostMock } />);
+    const section = screen.getByText("1").closest("section")!;
     expect(section.classList).toContain("this-post-is-liked");
   });
 });

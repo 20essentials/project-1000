@@ -17,7 +17,7 @@ interface Props {
   otherClassName?: string;
 }
 
-export function HeartContainer({ hearts, post, otherClassName }: Props) {
+export function HeartContainer({ hearts, post, otherClassName = '' }: Props) {
   const [thisPostIsSave, setThisPostIsSaved] = useState(post.isSaved);
   const className = `button-container btn-container-liked isClickableInDrag ${otherClassName} ${
     thisPostIsSave ? 'this-post-is-liked' : ''

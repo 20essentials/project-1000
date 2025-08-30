@@ -1,5 +1,5 @@
 import { useUserCreator } from '@/store/useUserCreator';
-import { generateTotalNum } from '@/utils/functions';
+import { formatTotalNum } from '@/utils/functions/formatTotalNum';
 import { ArrowLeft } from '@/components/pages/ProfileCreator/ArrowLeft';
 import { Logout } from '@/components/pages/Profile/Logout';
 import { NavVideosOrSaved } from '@/components/pages/Profile/NavVideosOrSaved';
@@ -32,10 +32,10 @@ export function ProfileTop({
       <img className='profile-of-the-user' src={profileImageSrc} alt={username} />
       <p className='name-of-the-user'>@{username}</p>
       <aside className='container-data-user'>
-        <NumFollowed followedCount={generateTotalNum(numOfFollowed)} />
+        <NumFollowed followedCount={formatTotalNum(numOfFollowed)} />
         <NumFollowers followersCount={followers} />
         <article className='tab-data'>
-          <p className='num'>{generateTotalNum(theTotalLikes)}</p>
+          <p className='num'>{formatTotalNum(theTotalLikes)}</p>
           <p className='desc'>Likes</p>
         </article>
       </aside>

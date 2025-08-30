@@ -1,4 +1,4 @@
-export function generateTotalNum(num: number) {
+export function formatTotalNum(num: number) {
   if (num < 99_999) return num;
   if (num >= 100_000 && num <= 999_999) return num.toLocaleString('es-ES');
   if (num >= 1_000_000)
