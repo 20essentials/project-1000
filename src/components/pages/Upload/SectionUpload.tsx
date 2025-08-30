@@ -7,9 +7,9 @@ import {
   type ChangeEvent,
   useEffect
 } from 'react';
-import { PublishKeyCap } from './PublishKeyCap';
-import { validateVideoDuration } from '@/utils/functions';
-import { TextareaDescriptionPost } from './TextareaDescriptionPost';
+import { PublishKeyCap } from '@/components/pages/Upload/PublishKeyCap';
+import { videoDurationValidator } from '@/utils/functions/videoDurationValidator';
+import { TextareaDescriptionPost } from '@/components/pages/Upload/TextareaDescriptionPost';
 
 const srcCross = baseURL('/assets/cross.png');
 
@@ -48,7 +48,7 @@ export function SectionUpload({ modePhoto }: { modePhoto: boolean }) {
         createImgsFromFiles(e.target.files);
       } else {
         const file = e.target.files[0];
-        const isValid = await validateVideoDuration(file);
+        const isValid = await videoDurationValidator(file);
         if (!isValid) {
           setMessage(`The video must not be longer than 10 minutes.`);
           return;
@@ -70,7 +70,7 @@ export function SectionUpload({ modePhoto }: { modePhoto: boolean }) {
         createImgsFromFiles(e.dataTransfer.files);
       } else {
         const file = e.dataTransfer.files[0];
-        const isValid = await validateVideoDuration(file);
+        const isValid = await videoDurationValidator(file);
         if (!isValid) {
           alert('El video no debe durar más de 10 minutos.');
           return;
@@ -133,12 +133,8 @@ export function SectionUpload({ modePhoto }: { modePhoto: boolean }) {
             </svg>
             <h2 className='thisWouldBeOpaco text-description'>
               Drop your {modePhoto ? 'images' : 'video'} here
-              {(message && !modePhoto) && (
-                <p
-                 className='message-error'
-                >
-                  {message}
-                </p>
+              {message && !modePhoto && (
+                <p className='message-error'>{message}</p>
               )}
             </h2>
           </>
