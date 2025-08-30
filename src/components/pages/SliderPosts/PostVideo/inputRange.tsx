@@ -1,5 +1,5 @@
 import '@/components/pages/SliderPosts/PostVideo/inputRange.css';
-import { formatTimeHH_MM_SS } from '@/utils/functions';
+import { formatToHHMMSS } from "@/utils/functions/formatToHHMMSS";
 import { useEffect, useState } from 'react';
 
 export function InputRange({
@@ -55,8 +55,8 @@ export function InputRange({
         />
       </aside>
       <aside className='am-timer-input-range'>
-        {formatTimeHH_MM_SS(currentDuration)} /&nbsp;
-        <span className='total-time'>{formatTimeHH_MM_SS(totalDuration)}</span>
+        {formatToHHMMSS(currentDuration)} /&nbsp;
+        <span className='total-time'>{formatToHHMMSS(totalDuration)}</span>
       </aside>
     </>
   );

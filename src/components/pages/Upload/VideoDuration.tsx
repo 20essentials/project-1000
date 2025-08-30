@@ -1,4 +1,4 @@
-import { formatTimeHH_MM_SS } from '@/utils/functions';
+import { formatToHHMMSS } from "@/utils/functions/formatToHHMMSS";
 import { useEffect, useRef, useState } from 'react';
 export const MAX_TIME_OF_SECONDS = 180; //3 minutes
 
@@ -33,7 +33,7 @@ export function CurrentVideoDuration({
   return (
     <>
       <aside className='current-video-duration'>
-        {formatTimeHH_MM_SS(duration)}
+        {formatToHHMMSS(duration)}
       </aside>
     </>
   );
