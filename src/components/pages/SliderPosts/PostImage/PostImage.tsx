@@ -5,7 +5,7 @@ import type {
 import { baseURL } from '@/utils/functions/baseURL';
 import { useLimitOfPost } from '@/store/useLimitOfPosts';
 import { useEffect, useRef, useState } from 'react';
-import { ARRAY_OF_SONGS } from '@/utils/arrayOfSongs';
+import { ARRAY_OF_SONGS } from '@/utils/array/songs/arrayOfSongs';
 import { userHasInteracted } from '@/store/userHasInteracted';
 import { PlayButton } from '@/components/pages/SliderPosts/PostVideo/PlayButton';
 import { UserProfile } from '@/components/pages/SliderPosts/AsideRight/UserProfile';

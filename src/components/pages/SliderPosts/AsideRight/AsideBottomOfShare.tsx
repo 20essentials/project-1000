@@ -5,7 +5,7 @@ import type {
   postProps,
   postComonProps
 } from '@/components/pages/SliderPosts/types.d.ts';
-import { URL_PHOTO_MISSING_IMAGE } from '@/utils/conts';
+import { URL_PHOTO_MISSING_IMAGE } from '@/utils/consts/urls';
 import { useSwipeXShareAsideBottom } from '@/hooks/useSwipeXShareAsideBottom';
 import { DeletePostItemShare } from './DeletePostItemShare';
 
