@@ -6,8 +6,8 @@ import type {
 import { useUserRepublishPosts } from '@/store/useUserRepublishPosts';
 import {
   getCommonpropsFromProps,
-  getPostpropsFromProps
-} from '@/utils/functions';
+  getPostpropsFromProps,
+} from '@/utils/functions/extractProps';
 
 export function RepublishItemShare({
   id,

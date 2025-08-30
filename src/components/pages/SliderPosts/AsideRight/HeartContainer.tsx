@@ -7,8 +7,8 @@ import type {
 import { userUserLikedPosts } from '@/store/useUserLikedPosts';
 import {
   getCommonpropsFromProps,
-  getPostpropsFromProps
-} from '@/utils/functions';
+  getPostpropsFromProps,
+} from '@/utils/functions/extractProps';
 import { formatNumberForDisplay } from "@/utils/functions/formatNumberForDisplay";
 
 interface Props {
