@@ -72,9 +72,6 @@ export function getPostpropsFromProps(
   ) as postProps;
 }
 
-export function modEspecial(left: number, right: number) {
-  return left < right ? left % right : right;
-}
 
 
 export function generateTotalNum(num: number) {

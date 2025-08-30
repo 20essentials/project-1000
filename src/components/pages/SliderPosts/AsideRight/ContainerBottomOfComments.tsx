@@ -5,7 +5,7 @@ const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 import { ARRAY_OF_COMMENTS } from '@/utils/array/comments/arrayOfComments';
 import { useMemo, useState } from 'react';
 import { RowComment } from '@/components/pages/SliderPosts/AsideRight/RowComment';
-import { modEspecial } from '@/utils/functions';
+import { modClamp } from "@/utils/functions/modClamp";
 const NUM_OF_COMMENT_THAT_RENDER_MORE_COMMENTS = 9;
 
 export function ContainerBottomOfComments({
@@ -32,7 +32,7 @@ export function ContainerBottomOfComments({
 
   const flattenedArrayOfAllPostsCommonProps = useMemo(() => {
     return Array.from(
-      { length: modEspecial(limit, totalNumberOfComments) },
+      { length: modClamp(limit, totalNumberOfComments) },
       (_, i) => {
         const index = i % flattenedArrayOfAllPosts.length;
         return flattenedArrayOfAllPosts[index];
@@ -47,7 +47,7 @@ export function ContainerBottomOfComments({
 
   const randomComments = useMemo(() => {
     return Array.from(
-      { length: modEspecial(limit, totalNumberOfComments) },
+      { length: modClamp(limit, totalNumberOfComments) },
       (_, i) => {
         const index = i % arrayOfRandomComments.length;
         return arrayOfRandomComments[index];
