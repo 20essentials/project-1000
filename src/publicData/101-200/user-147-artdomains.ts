@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'artdomains';
-const userId = '';
-const prefixUrl = '';
+const userId = '7ba9ef54-f8d3-41c5-9aa9-4e3f95d5fb54';
+const prefixUrl = 'https://dominicnikolai.github.io/project-299/assets/artdomains/';
 const followers = 172_232;
 const followed = 77;
 const profileDescription = 'The domain for 300,000+ creatives worldwide.';

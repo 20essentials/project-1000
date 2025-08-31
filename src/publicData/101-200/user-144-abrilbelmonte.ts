@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'abrilbelmonte';
-const userId = '';
-const prefixUrl = '';
+const userId = '7bc383a9-15f0-4bfe-b813-51bfabd29a71';
+const prefixUrl = 'https://dominicnikolai.github.io/project-299/assets/abrilbelmonte/';
 const followers = 157_239;
 const followed = 79;
 const profileDescription = 'Diseñadora Gráfica';

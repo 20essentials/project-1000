@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'netflixnmovies';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ee256e18-5038-43d2-974c-56c69b4e5969';
+const prefixUrl = 'https://dominicnikolai.github.io/project-300/assets/n3tflixnmovies/';
 const followers = 11_820_322;
 const followed = 32;
 const profileDescription = 'memes and movies account';

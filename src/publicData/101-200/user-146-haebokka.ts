@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'haebokka';
-const userId = '';
-const prefixUrl = '';
+const userId = '71de761c-4ab0-4a73-bf24-20915cdf3870';
+const prefixUrl = 'https://dominicnikolai.github.io/project-299/assets/haebokka/';
 const followers = 358_720;
 const followed = 50;
 const profileDescription = '비즈니스 문의';

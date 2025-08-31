@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'mundo_streamer';
-const userId = '';
-const prefixUrl = '';
+const userId = 'a50a3cde-c9a2-4199-8b34-6f752509bb22';
+const prefixUrl = 'https://dominicnikolai.github.io/project-300/assets/mundo-streamer/';
 const followers = 127_720;
 const followed = 322;
 const profileDescription = '🌏 | Los mejores clips / Best clips';

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'threedsav';
-const userId = '';
-const prefixUrl = '';
+const userId = '6ccf43a9-2e07-40bf-a039-bf57c1260467';
+const prefixUrl = 'https://dominicnikolai.github.io/project-299/assets/3dxav/';
 const followers = 232_720;
 const followed = 78;
 const profileDescription = ' Mechanical Engineer';
