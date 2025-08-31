@@ -2,6 +2,7 @@ import { useUserCreator } from '@/store/useUserCreator';
 import { formatTotalNum } from '@/utils/functions/formatTotalNum';
 import { ArrowLeft } from '@/components/pages/ProfileCreator/ArrowLeft';
 import { Logout } from '@/components/pages/Profile/Logout';
+import { THERE_IS_E2E } from 'astro:env/client';
 import { NavVideosOrSaved } from '@/components/pages/Profile/NavVideosOrSaved';
 import { NumFollowed } from '@/components/pages/ProfileCreator/ProfileAndProfileCreatorCommonComponents/NumFollowed';
 import { useFollowedAccount } from '@/store/useFollowedAccount';
@@ -40,7 +41,8 @@ export function ProfileTop({
         </article>
       </aside>
       <ArrowLeft className='arrow-left' />
-      <Logout />
+
+      { !THERE_IS_E2E && <Logout />}
 
       <NavVideosOrSaved slideHorizontalRef={slideHorizontalRef} />
     </aside>
