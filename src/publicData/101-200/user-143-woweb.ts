@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'wowweb_store';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ded8581c-7dc8-4473-bd23-abb41ce58f38';
+const prefixUrl = 'https://dominicnikolai.github.io/project-300/assets/woweb/';
 const followers = 37_720;
 const followed = 32;
 const profileDescription = 'Wowweb Group';

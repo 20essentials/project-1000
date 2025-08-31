@@ -63,6 +63,7 @@ import { haebokka_array_of_posts, haebokka_commonProps } from './user-146-haebok
 import { mundo_streamer_array_of_posts, mundo_streamer_commonProps } from './user-142-mundostreamer';
 import { netflixnmovies_array_of_posts, netflixnmovies_commonProps } from './user-140-netflixnmovi3s';
 import { wild_drishti_array_of_posts, wild_drishti_commonProps } from './user-141-wild-drishti';
+import { woweb_store_array_of_posts, woweb_store_commonProps } from './user-143-woweb';
 
 export const PUBLIC_101_200: arrayOfPosts = [
   [monster_trucks_commonProps, monster_trucks_array_of_posts] /* 101 */,
@@ -107,7 +108,7 @@ export const PUBLIC_101_200: arrayOfPosts = [
   [netflixnmovies_commonProps, netflixnmovies_array_of_posts] /* 140 */,
   [wild_drishti_commonProps, wild_drishti_array_of_posts] /* 141 */,
   [mundo_streamer_commonProps, mundo_streamer_array_of_posts] /* 142 */,
-
+  [woweb_store_commonProps, woweb_store_array_of_posts] /* 143 */,
   [abrilbelmonte_commonProps, abrilbelmonte_array_of_posts] /* 144 */,
   [threedsav_commonProps, threedsav_array_of_posts] /* 145 */,
   [haebokka_commonProps, haebokka_array_of_posts] /* 146 */,
