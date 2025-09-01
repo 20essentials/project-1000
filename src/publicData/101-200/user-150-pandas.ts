@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'pandas';
-const userId = '';
-const prefixUrl = '';
+const userId = '468f8dcd-de18-41f7-b979-20fe5b9c739f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-302/assets/pandas/';
 const followers = 8_720_832;
 const followed = 50;
 const profileDescription = '🐼 Relax';
