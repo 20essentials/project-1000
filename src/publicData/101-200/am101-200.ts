@@ -186,6 +186,14 @@ import { pandas_array_of_posts, pandas_commonProps } from './user-150-pandas';
 import { thefigurehideout_array_of_posts, thefigurehideout_commonProps } from './user-154-thefigurehideout';
 import { thefilmthusiasts_array_of_posts, thefilmthusiasts_commonProps } from './user-151-thefilmthusiasts';
 import { todd_array_of_posts, todd_commonProps } from './user-152-todd';
+import { artviral_array_of_posts, artviral_commonProps } from './user-160-artviral';
+import { chiheliguy_array_of_posts, chiheliguy_commonProps } from './user-158-chiheliguy';
+import { internetboy_array_of_posts, internetboy_commonProps } from './user-161-internetboy';
+import { juanmartinez_array_of_posts, juanmartinez_commonProps } from './user-156-juanmartinez';
+import { lalinpgp_array_of_posts, lalinpgp_commonProps } from './user-159-lalinpgp';
+import { neuromark_array_of_posts, neuromark_commonProps } from './user-163-neuromark';
+import { theoldibiza_array_of_posts, theoldibiza_commonProps } from './user-162-theoldibiza';
+import { yantastic_array_of_posts, yantastic_commonProps } from './user-157-yantastic';
 
 
 export const PUBLIC_101_200: arrayOfPosts = [
@@ -243,5 +251,13 @@ export const PUBLIC_101_200: arrayOfPosts = [
   [todd_commonProps, todd_array_of_posts] /* 152 */,
   [daniel_loredo_commonProps, daniel_loredo_array_of_posts] /* 153 */,
   [thefigurehideout_commonProps, thefigurehideout_array_of_posts] /* 154 */,
-  [liselaboratory_commonProps, liselaboratory_array_of_posts] /* 155 */
+  [liselaboratory_commonProps, liselaboratory_array_of_posts], /* 155 */
+  [juanmartinez_commonProps, juanmartinez_array_of_posts], /* 156 */
+  [yantastic_commonProps, yantastic_array_of_posts], /* 157 */
+  [chiheliguy_commonProps, chiheliguy_array_of_posts], /* 158 */
+  [lalinpgp_commonProps, lalinpgp_array_of_posts], /* 159 */
+  [artviral_commonProps, artviral_array_of_posts], /* 160 */
+  [internetboy_commonProps, internetboy_array_of_posts], /* 161 */
+  [theoldibiza_commonProps, theoldibiza_array_of_posts], /* 162 */
+  [neuromark_commonProps, neuromark_array_of_posts], /* 163 */
 ];

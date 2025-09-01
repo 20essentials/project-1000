@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'artviral';
-const userId = '';
-const prefixUrl = '';
+const userId = 'b4666bb9-44f7-4465-b114-e2be4c0c77d9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-303/assets/art-viral/';
 const followers = 5_720_830;
 const followed = 50;
 const profileDescription = '🎨 ';

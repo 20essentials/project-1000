@@ -5,15 +5,15 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'juanmartinez';
-const userId = '';
-const prefixUrl = '';
+const userId = '063ee6d9-2d25-46ba-8526-1adff403b9e2';
+const prefixUrl = 'https://dominicnikolai.github.io/project-303/assets/juanm4rtinez/';
 const followers = 172_720;
 const followed = 32;
 const profileDescription = '¡Así es!';
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 20;
+const quantityOfVideos = 6;
 const prefixLetterImages = 'n';
-const quantityOfImages = 20;
+const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */

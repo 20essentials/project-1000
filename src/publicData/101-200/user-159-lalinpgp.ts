@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'lalinpgp';
-const userId = '';
-const prefixUrl = '';
+const userId = '67cb0865-f2de-4ceb-a4aa-3293d8a89298';
+const prefixUrl = 'https://dominicnikolai.github.io/project-304/assets/lalinpgp/';
 const followers = 792_720;
 const followed = 312;
 const profileDescription = '8K | Film & Television photography';

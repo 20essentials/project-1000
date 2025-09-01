@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'yantastic';
-const userId = '';
-const prefixUrl = '';
+const userId = '4c4a3432-3a25-4410-aae6-6f9a63e35f73';
+const prefixUrl = 'https://dominicnikolai.github.io/project-304/assets/yantastic/';
 const followers = 741_720;
 const followed = 136;
 const profileDescription = 'Shop Presets';

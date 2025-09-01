@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'theoldibiza';
-const userId = '';
-const prefixUrl = '';
+const userId = '8d6bd3d9-b933-460d-b633-c2764b14a838';
+const prefixUrl = 'https://dominicnikolai.github.io/project-304/assets/theoldibiza/';
 const followers = 172_720;
 const followed = 221;
 const profileDescription = 'Info&tips about IBIZA day&night 🏝✨️';

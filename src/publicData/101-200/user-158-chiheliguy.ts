@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'chiheliguy';
-const userId = '';
-const prefixUrl = '';
+const userId = '20cb22a7-dbdc-4adb-87a7-397c940a5389';
+const prefixUrl = 'https://dominicnikolai.github.io/project-303/assets/chiheliguy/';
 const followers = 555_720;
 const followed = 166;
 const profileDescription = 'helicopter camera operator 🚁🎥';

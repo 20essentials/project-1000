@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'internetboy';
-const userId = '';
-const prefixUrl = '';
+const userId = '2caf94f6-35d7-45cc-b23e-6f45b49adeea';
+const prefixUrl = 'https://dominicnikolai.github.io/project-303/assets/internetboy/';
 const followers = 379_234;
 const followed = 50;
 const profileDescription = 'mp3/fbx/png allat (＞。☆)';

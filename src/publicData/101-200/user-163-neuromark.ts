@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'neuromark';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c0e1c201-8cc1-4852-a1e2-e7e6b5c9d9f6';
+const prefixUrl = 'https://dominicnikolai.github.io/project-304/assets/neuromark/';
 const followers = 536_720;
 const followed = 98;
 const profileDescription = 'marketing';
