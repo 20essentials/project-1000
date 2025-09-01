@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'thefigurehideout';
-const userId = '';
-const prefixUrl = '';
+const userId = '91a01421-b803-492c-bf84-2bd36e969ccd';
+const prefixUrl = 'https://dominicnikolai.github.io/project-302/assets/thefigurehideout/';
 const followers = 1_200_720;
 const followed = 50;
 const profileDescription = 'Play with a STYLE👌';
