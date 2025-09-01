@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'experimento_24';
-const userId = '';
-const prefixUrl = '';
+const userId = '92239b02-462a-4743-ac9d-ab3f56966b69';
+const prefixUrl = 'https://dominicnikolai.github.io/project-301/assets/experimento-24/';
 const followers = 80_922;
 const followed = 144;
 const profileDescription = '🦊 The ̶T̶̶r̶̶u̶̶t̶̶h̶ is in here';

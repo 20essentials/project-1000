@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'daniel_loredo';
-const userId = '';
-const prefixUrl = '';
+const userId = 'a4f58521-4dcc-446e-b44a-f3341f76287a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-301/assets/daniel-loredo/';
 const followers = 212_720;
 const followed = 50;
 const profileDescription = ' Impresión 3D';

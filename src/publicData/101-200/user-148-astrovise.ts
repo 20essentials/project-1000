@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'astrovise';
-const userId = '';
-const prefixUrl = '';
+const userId = '3b586bb5-f422-48bc-a0e3-ea42af4e398f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-301/assets/astrovise/';
 const followers = 47_720;
 const followed = 393;
 const profileDescription = 'Space | universe | knowledge';
