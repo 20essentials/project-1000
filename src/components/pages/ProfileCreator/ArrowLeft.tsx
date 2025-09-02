@@ -1,5 +1,4 @@
 import { useCurrentPage } from '@/store/useCurrentPage';
-import { useLimitOfPost } from '@/store/useLimitOfPosts';
 import { useLastPagedVisited } from '@/store/userLastPageVisited';
 
 export function ArrowLeft({ className }: { className: string }) {

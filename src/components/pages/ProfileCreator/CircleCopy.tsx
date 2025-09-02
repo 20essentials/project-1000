@@ -7,7 +7,6 @@ export function CircleCopy() {
       <span className='loader-letter'>i</span>
       <span className='loader-letter'>e</span>
       <span className='loader-letter'>d</span>
-
       <div className='loader'></div>
     </div>
   );
