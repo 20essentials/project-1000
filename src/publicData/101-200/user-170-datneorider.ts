@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'datneorider';
-const userId = '';
-const prefixUrl = '';
+const userId = 'e7d44641-c13c-401d-8f31-9f8887b53d73';
+const prefixUrl = 'https://dominicnikolai.github.io/project-305/assets/datneorider/';
 const followers = 322_720;
 const followed = 50;
 const profileDescription = 'NRX Creator | SoCal Based ☀️';

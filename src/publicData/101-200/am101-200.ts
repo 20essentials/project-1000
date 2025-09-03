@@ -194,6 +194,8 @@ import { lalinpgp_array_of_posts, lalinpgp_commonProps } from './user-159-lalinp
 import { neuromark_array_of_posts, neuromark_commonProps } from './user-163-neuromark';
 import { theoldibiza_array_of_posts, theoldibiza_commonProps } from './user-162-theoldibiza';
 import { yantastic_array_of_posts, yantastic_commonProps } from './user-157-yantastic';
+import { bauifyy_array_of_posts, bauifyy_commonProps } from './user-166-bauifyy';
+import { datneorider_array_of_posts, datneorider_commonProps } from './user-170-datneorider';
 
 
 export const PUBLIC_101_200: arrayOfPosts = [
@@ -260,4 +262,8 @@ export const PUBLIC_101_200: arrayOfPosts = [
   [internetboy_commonProps, internetboy_array_of_posts], /* 161 */
   [theoldibiza_commonProps, theoldibiza_array_of_posts], /* 162 */
   [neuromark_commonProps, neuromark_array_of_posts], /* 163 */
+
+  [bauifyy_commonProps, bauifyy_array_of_posts], /* 166 */
+
+  [datneorider_commonProps, datneorider_array_of_posts], /* 170 */
 ];

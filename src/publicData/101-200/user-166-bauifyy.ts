@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'bauifyy';
-const userId = '';
-const prefixUrl = '';
+const userId = '29754db7-0cf9-4176-b47d-f2aecebb5be1';
+const prefixUrl = 'https://dominicnikolai.github.io/project-305/assets/bauifyy/';
 const followers = 81_720;
 const followed = 28;
 const profileDescription = 'Last Time';
