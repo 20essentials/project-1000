@@ -4,9 +4,9 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'amUserPrivate';
-const userId = '';
-const prefixUrl = '';
+const username = 'nails';
+const userId = 'ba2ec37d-f49b-4305-a5c4-0ba58466c37d';
+const prefixUrl = 'https://dominicnikolai.github.io/project-308/assets/nails/';
 const followers = 323_720;
 const followed = 79;
 const profileDescription = 'Nail Art';
@@ -64,7 +64,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const amUserPrivate_commonProps = generateExactlyCommonProps({
+export const nails_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -73,7 +73,7 @@ export const amUserPrivate_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const amUserPrivate_videos = generateArrayPostsOfVideos({
+const nails_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -81,14 +81,14 @@ const amUserPrivate_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const amUserPrivate_images = generateArrayPostsOfImages({
+const nails_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const amUserPrivate_array_of_posts = [
-  ...amUserPrivate_images,
-  ...amUserPrivate_videos
+export const nails_array_of_posts = [
+  ...nails_images,
+  ...nails_videos
 ];

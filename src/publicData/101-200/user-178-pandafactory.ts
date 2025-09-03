@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'pandafactory';
-const userId = '';
-const prefixUrl = '';
+const userId = 'a16fc873-5422-4442-a0b5-93f7c138d2ec';
+const prefixUrl = 'https://dominicnikolai.github.io/project-308/assets/pandafactory/';
 const followers = 136_720;
 const followed = 392;
 const profileDescription = '🐼 Ultra-Realistic 1:1 Handmade Panda Plushies 🐾';

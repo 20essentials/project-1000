@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'prairie_dog';
-const userId = '';
-const prefixUrl = '';
+const userId = '64821866-8b02-42e9-a7ce-c4ffa08b12fa';
+const prefixUrl = 'https://dominicnikolai.github.io/project-308/assets/prairie-dog/';
 const followers = 566_720;
 const followed = 50;
 const profileDescription = '🧨';
