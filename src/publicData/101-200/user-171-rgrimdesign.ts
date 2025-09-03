@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'rgrimdesign';
-const userId = '';
-const prefixUrl = '';
+const userId = '82310330-c5ed-4626-90cf-95e11f85ffcc';
+const prefixUrl = 'https://dominicnikolai.github.io/project-306/assets/rgrimdesign/';
 const followers = 229_720;
 const followed = 50;
 const profileDescription = 'Tips & Tricks⚡️ #ux #ui';

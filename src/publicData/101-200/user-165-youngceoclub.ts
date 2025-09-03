@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'youngceoclub';
-const userId = '';
-const prefixUrl = '';
+const userId = 'aa7d3090-d217-4744-b514-c236f9c7cd78';
+const prefixUrl = 'https://dominicnikolai.github.io/project-306/assets/youngceoclub/';
 const followers = 172_720;
 const followed = 342;
 const profileDescription = 'a journey of self improvement';
