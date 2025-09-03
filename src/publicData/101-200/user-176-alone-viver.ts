@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'alone_viver';
-const userId = '';
-const prefixUrl = '';
+const userId = '6eb5a540-447c-4d76-938f-1ef8e153fda0';
+const prefixUrl = 'https://dominicnikolai.github.io/project-307/assets/alone-viver/';
 const followers = 378_720;
 const followed = 50;
 const profileDescription = '🌿 Reflexões para despertar sua melhor versão';

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'kammerflagekreations';
-const userId = '';
-const prefixUrl = '';
+const userId = '6c7d7b73-fb48-4f3e-98fc-12e548b19cbb';
+const prefixUrl = 'https://dominicnikolai.github.io/project-307/assets/kammerflagekreations/';
 const followers = 226_720;
 const followed = 72;
 const profileDescription = '🦎Panther Chameleons';

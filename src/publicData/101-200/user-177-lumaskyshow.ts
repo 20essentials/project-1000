@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'lumaskyshow';
-const userId = '';
-const prefixUrl = '';
+const userId = '514e0ab8-7b2b-4114-8218-6ee1427ca8fc32';
+const prefixUrl = 'https://dominicnikolai.github.io/project-308/assets/lumaskyshow/';
 const followers = 222_720;
 const followed = 132;
 const profileDescription = 'Drone light shows for event professionals';

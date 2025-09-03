@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'artistoids';
-const userId = '';
-const prefixUrl = '';
+const userId = 'a4eb65f3-5cb6-4fc8-9563-6f1f846b6a0c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-307/assets/artistoids/';
 const followers = 171_720;
 const followed = 50;
 const profileDescription = 'Animation 🖥️';

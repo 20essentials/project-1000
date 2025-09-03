@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'capibara';
-const userId = '';
-const prefixUrl = '';
+const userId = '321f301d-a400-48b5-b53f-6a73cc86d103';
+const prefixUrl = 'https://dominicnikolai.github.io/project-307/assets/cap1bara/';
 const followers = 32_720_323;
 const followed = 50;
 const profileDescription = 'UwU';
