@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'hamitocano';
-const userId = '';
-const prefixUrl = '';
+const userId = '5acdc7dd-bfa5-4478-b00c-9d5e312434c1';
+const prefixUrl = 'https://dominicnikolai.github.io/project-305/assets/hamitocano/';
 const followers = 822_720;
 const followed = 50;
 const profileDescription = 'Comparto escenas de películas.';

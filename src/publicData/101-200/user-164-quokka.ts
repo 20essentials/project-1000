@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'quokka';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd89811c5-7c41-469a-b1fc-14726bb44649';
+const prefixUrl = 'https://dominicnikolai.github.io/project-306/assets/quokka/';
 const followers = 722_720;
 const followed = 23;
 const profileDescription = '🏝️';

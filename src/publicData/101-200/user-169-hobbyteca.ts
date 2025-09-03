@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'hobbyteca';
-const userId = '';
-const prefixUrl = '';
+const userId = '5233a2ae-c599-4f87-a0b3-56f031b72257';
+const prefixUrl = 'https://dominicnikolai.github.io/project-305/assets/hobbyteca/';
 const followers = 52_720;
 const followed = 314;
 const profileDescription = 'Miniaturas para armar🔮';

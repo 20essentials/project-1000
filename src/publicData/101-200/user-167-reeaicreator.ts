@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'reeaicreator';
-const userId = '';
-const prefixUrl = '';
+const userId = '84ecb6cf-a54c-4342-8e26-c3142bd2967c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-306/assets/reeaicreator/';
 const followers = 231_720;
 const followed = 50;
 const profileDescription = 'ミッドジャーニーV7で';
