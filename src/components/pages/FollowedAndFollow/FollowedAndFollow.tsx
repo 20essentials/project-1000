@@ -1,6 +1,6 @@
 import type { postComonProps } from '@/components/pages/SliderPosts/types.d.ts';
 import '@/components/pages/FollowedAndFollow/FollowedAndFollow.css';
-import { ArrowLeft } from '../ProfileCreator/ArrowLeft';
+import { ArrowLeft } from '@/components/pages/ProfileCreator/ArrowLeft';
 import { useCurrentUser } from '@/store/useCurrentUser';
 import { baseURL } from '@/utils/functions/baseURL';
 import { useUserCreator } from '@/store/useUserCreator';
