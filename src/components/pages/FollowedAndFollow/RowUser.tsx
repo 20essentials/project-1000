@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef } from 'react';
-import { FollowButton } from '../ProfileCreator/FollowButton';
+import { FollowButton } from '@/components/pages/ProfileCreator/FollowButton';
 import { useUserCreator } from '@/store/useUserCreator';
 import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 import { $ } from "@/utils/functions/dom";
