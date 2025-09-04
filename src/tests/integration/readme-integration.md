@@ -1,3 +1,3 @@
 components/
   NavBarBottom ✅
-  FollowedAndFollow
+  FollowedAndFollow ✅
