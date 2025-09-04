@@ -45,7 +45,6 @@ export function ArrayOfNavbarStories({
   }, [arrayOfPostsOfTheStory]);
 
   return arrayOfNavBarHistories
-    // .slice(0, -)
     .map(({ profileImageSrc, userId, username }, i) => {
       return (
         <aside className='history-container' key={i}>
