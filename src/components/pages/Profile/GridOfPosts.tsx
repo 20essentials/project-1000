@@ -16,6 +16,11 @@ import { SqureSubSquare } from '@/components/pages/ProfileCreator/SqureSubSquare
 import { baseURL } from '@/utils/functions/baseURL';
 const ghostLottie = baseURL('/assets/empty-ghost.lottie');
 
+// 🔹 Config
+const INITIAL_VISIBLE = 18;
+const INCREMENT = 18;
+const ROOT_MARGIN = '400px'; // empieza a cargar mucho antes
+
 export function GridOfPosts({
   arrayOfPosts,
   modeGrid = MODE_GRID.userCreatedPosts
@@ -23,14 +28,16 @@ export function GridOfPosts({
   arrayOfPosts: [] | arrayOfPosts;
   modeGrid: valueOfMODE_GRID;
 }) {
-  const [visibleCount, setVisibleCount] = useState(9);
+  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
 
-  const flatPostsWithProps = arrayOfPosts.flatMap(([commonProps, posts]) =>
-    posts.map(post => ({
-      post,
-      commonProps
-    }))
-  ).toReversed()
+  const flatPostsWithProps = arrayOfPosts
+    .flatMap(([commonProps, posts]) =>
+      posts.map(post => ({
+        post,
+        commonProps
+      }))
+    )
+    .toReversed();
 
   const containerRef = useRef<HTMLDivElement>(null);
   const lastThreeRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -38,7 +45,9 @@ export function GridOfPosts({
   const onIntersect: IntersectionObserverCallback = entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        setVisibleCount(prev => Math.min(prev + 9, flatPostsWithProps.length));
+        setVisibleCount(prev =>
+          Math.min(prev + INCREMENT, flatPostsWithProps.length)
+        );
       }
     });
   };
@@ -47,7 +56,7 @@ export function GridOfPosts({
     if (visibleCount < flatPostsWithProps.length) {
       const observer = new IntersectionObserver(onIntersect, {
         root: null,
-        rootMargin: '0px',
+        rootMargin: ROOT_MARGIN,
         threshold: 0.1
       });
 
@@ -64,7 +73,7 @@ export function GridOfPosts({
     }
   }, [visibleCount, flatPostsWithProps.length]);
 
-  const thereIsUserButNotPosts = arrayOfPosts[0]?.[1].length === 0
+  const thereIsUserButNotPosts = arrayOfPosts[0]?.[1].length === 0;
   if (arrayOfPosts.length === 0 || thereIsUserButNotPosts) {
     return (
       <aside
