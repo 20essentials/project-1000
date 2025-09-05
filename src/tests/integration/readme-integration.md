@@ -3,3 +3,4 @@ components/
   FollowedAndFollow/ ✅
   Login/ ✅
   Profile/ ✅
+  ProfileCreator/ ✅
