@@ -9,7 +9,7 @@ import { URL_PHOTO_MISSING_IMAGE } from '@/utils/consts/urls';
 import { useSwipeXShareAsideBottom } from '@/hooks/useSwipeXShareAsideBottom';
 import { DeletePostItemShare } from './DeletePostItemShare';
 
-let isDownloading = false; // 👈 flag global al scope del módulo
+let isDownloading = false; 
 
 type ItemType = {
   title: string;

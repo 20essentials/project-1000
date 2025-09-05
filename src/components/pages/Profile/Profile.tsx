@@ -7,6 +7,7 @@ import { ProfileTop } from '@/components/pages/Profile/ProfileTop';
 import { GridOfUserRepostPosts } from '@/components/pages/Profile/GridOfUserRepostPosts';
 import { useRef } from 'react';
 
+/* This is the same User */
 export function Profile() {
   const slideHorizontalRef = useRef<HTMLElement | null>(null);
 

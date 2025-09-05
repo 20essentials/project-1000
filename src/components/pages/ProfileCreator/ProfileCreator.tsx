@@ -62,7 +62,7 @@ export function ProfileCreator() {
         <ShareLinkAndCircle />
       </aside>
 
-      <GridPosts arrayOfPosts={arrayOfPosts} commonProps={commonProps} />
+      <GridPosts arrayOfPosts={arrayOfPosts} />
     </article>
   );
 }
