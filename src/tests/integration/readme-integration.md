@@ -1,6 +1,5 @@
 components/
   NavBarBottom ✅
-  FollowedAndFollow ✅
-  Login ✅
-
-  last tested: Inbox.tsx
+  FollowedAndFollow/ ✅
+  Login/ ✅
+  Profile/ ✅
