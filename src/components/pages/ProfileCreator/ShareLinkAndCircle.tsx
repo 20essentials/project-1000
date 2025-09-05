@@ -1,5 +1,5 @@
-import { ShareLinkOfProfile } from './ShareLinkOfProfile';
-import { CircleCopy } from './CircleCopy';
+import { ShareLinkOfProfile } from '@/components/pages/ProfileCreator/ShareLinkOfProfile';
+import { CircleCopy } from '@/components/pages/ProfileCreator/CircleCopy';
 import { useState } from 'react';
 
 export function ShareLinkAndCircle() {

@@ -1,5 +1,5 @@
 import { render, fireEvent } from '@testing-library/react';
-import React, { createRef } from 'react';
+import  { createRef } from 'react';
 import { NavVideosOrSaved } from '@/components/pages/Profile/NavVideosOrSaved';
 
 describe('NavVideosOrSaved', () => {
