@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'traveler';
-const userId = '';
-const prefixUrl = '';
+const userId = '741d6b96-807b-4dd8-af94-878858fd17b4';
+const prefixUrl = 'https://dominicnikolai.github.io/project-310/assets/traveler/';
 const followers = 2_720_723;
 const followed = 50;
 const profileDescription = 'Discover extraordinary places and unforgettable stays.';

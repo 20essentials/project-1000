@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'suricatas';
-const userId = '';
-const prefixUrl = '';
+const userId = '8c998306-1cf9-415e-8819-0941ffd175eb';
+const prefixUrl = 'https://dominicnikolai.github.io/project-310/assets/suricatas/';
 const followers = 4_720_822;
 const followed = 50;
 const profileDescription = '🍡';

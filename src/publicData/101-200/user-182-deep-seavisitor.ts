@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'deep_seavisitor';
-const userId = '';
-const prefixUrl = '';
+const userId = '433ade54-0439-4fa1-a6db-9103bcec595c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-309/assets/deep-seavisitor/';
 const followers = 332_720;
 const followed = 176;
 const profileDescription = 'Exploring the underwater world';

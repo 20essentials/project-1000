@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'criaderodebettasjavierr1';
-const userId = '';
-const prefixUrl = '';
+const userId = '4a1c497a-94c4-4135-b476-75f567c5461e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-309/assets/criaderodebettasjavierr1/';
 const followers = 720_183;
 const followed = 50;
 const profileDescription = 'Solo soy un simple criador de peces';

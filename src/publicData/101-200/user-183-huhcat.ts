@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'huhcat';
-const userId = '';
-const prefixUrl = '';
+const userId = '501c72bb-144e-4823-a9d2-3149cd0245c3';
+const prefixUrl = 'https://dominicnikolai.github.io/project-309/assets/huhcat/';
 const followers = 946_720;
 const followed = 170;
 const profileDescription = 'Hi, I’m a Cat that owns a Human. ';

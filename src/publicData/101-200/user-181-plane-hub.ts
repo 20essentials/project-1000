@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'plane_hub';
-const userId = '';
-const prefixUrl = '';
+const userId = '50a9a230-7b3b-4cce-93fe-a7f68c486809';
+const prefixUrl = 'https://dominicnikolai.github.io/project-310/assets/planehub/';
 const followers = 82_720;
 const followed = 50;
 const profileDescription = 'Plane world';

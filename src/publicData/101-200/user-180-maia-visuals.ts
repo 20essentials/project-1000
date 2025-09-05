@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'maia_visuals';
-const userId = '';
-const prefixUrl = '';
+const userId = 'f143374f-0cda-42e9-8b06-14c1e80a51fd';
+const prefixUrl = 'https://dominicnikolai.github.io/project-310/assets/maia-visuals/';
 const followers = 461_720;
 const followed = 50;
 const profileDescription = '🎥 Filmmaker & Photographer';

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'fresero';
-const userId = '';
-const prefixUrl = '';
+const userId = 'f75c2f24-a51c-41e0-af87-4fa46c56b8cd';
+const prefixUrl = 'https://dominicnikolai.github.io/project-309/assets/fresero/';
 const followers = 172_720;
 const followed = 89;
 const profileDescription = '🍓';
