@@ -25,5 +25,6 @@ export type postProps = {
   idPost: string;
 };
 
-export type arrayOfPosts = [postComonProps, postProps[]][];
+export type arrayOfPostProps = postProps[];
+export type arrayOfPosts = [postComonProps, arrayOfPostProps][];
 export type FullPost = postComonProps & postProps;
