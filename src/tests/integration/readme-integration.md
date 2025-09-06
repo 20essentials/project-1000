@@ -4,3 +4,4 @@ components/
   Login/ ✅
   Profile/ ✅
   ProfileCreator/ ✅
+  Search/ ✅
