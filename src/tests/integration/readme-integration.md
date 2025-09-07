@@ -6,4 +6,5 @@ components/
   ProfileCreator/ ✅
   Search/ ✅
   SliderPosts/ ✅
-  Story/ 
+  Story/ ✅
+  Upload/ ✅

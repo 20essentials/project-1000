@@ -2,7 +2,7 @@ import '@/components/pages/Upload/Upload.css';
 import CamaraVideo from './CamaraVideo';
 import { FooterUpload } from './FooterUpload';
 import { useRef } from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { SectionUpload } from './SectionUpload';
 import { useSliderIndex } from './uploadHooks/useSectionType';
 import { useModePhoto } from './uploadHooks/useModePhoto';
