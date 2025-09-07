@@ -32,7 +32,8 @@ export default defineConfig({
   site: 'https://project-1000-t1k-tok-minimalist.vercel.app/',
   output: 'server',
   server: {
-    open: `/?userId=${id_user_testing}`
+    // open: `/?userId=${id_user_testing}`,
+    open: `/?search=papi`,
   },
   adapter: vercel(),
   integrations: [react(), clerk()]

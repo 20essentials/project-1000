@@ -1,12 +1,17 @@
 import { useEffect } from 'react';
-import { useUpdateUrlParamsPostVideoOrImage } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
+import {
+  deleteParamsOfUrl,
+  type queryParamsArray
+} from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 
-export function useCleanUrlIfThisComponentsIsUnmount() {
+export function useCleanUrlIfThisComponentsIsUnmount({
+  arrayOfQueryParamsToDelete
+}: {
+  arrayOfQueryParamsToDelete: queryParamsArray;
+}) {
   useEffect(() => {
     return () => {
-      useUpdateUrlParamsPostVideoOrImage({
-        cleanUrl: true
-      });
+      deleteParamsOfUrl({ arrayOfQueryParamsToDelete });
     };
   }, []);
 }

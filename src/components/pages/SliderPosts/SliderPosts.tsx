@@ -26,7 +26,7 @@ export function SliderPosts() {
     state => state.userHasSeenPostOrProfileFromUrl
   );
 
-  const { dataFromUrl, weMustRenderAUserProfile, userId } =
+  const { dataFromUrl, weMustRenderAUserProfile, userId, renderSearchSection } =
     usetGetDataParamPostVideoOrImages();
 
   const isForYou = useFollowedOrForYou(state => state.isForYou);
@@ -48,6 +48,8 @@ export function SliderPosts() {
         setArrayOfPosts(arrayPosts);
         setCurrentPage(IS_ACTIVE_BUTTON.PROFILE_CREATOR);
       }
+    } else if (renderSearchSection) {
+      setCurrentPage(IS_ACTIVE_BUTTON.SEARCH);
     }
   }, [userHasSeenPostOrProfileFromUrl]);
 

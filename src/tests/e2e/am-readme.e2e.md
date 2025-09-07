@@ -1,4 +1,4 @@
 // ?search=texto
-// ?view=upload
-// ?view=inbox
-// ?view=profile
+// ?upload=view
+// ?inbox=view
+// ?profile=view

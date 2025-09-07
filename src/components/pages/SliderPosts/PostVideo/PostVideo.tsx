@@ -17,7 +17,7 @@ import { ShareContainer } from '@/components/pages/SliderPosts/AsideRight/ShareC
 import { useIsScrolling } from '@/store/useIsScrolling';
 import { ContainerBottomOfComments } from '@/components/pages/SliderPosts/AsideRight/ContainerBottomOfComments';
 import { AsideBottomOfShare } from '@/components/pages/SliderPosts/AsideRight/AsideBottomOfShare';
-import { useUpdateUrlParamsPostVideoOrImage } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
+import { deleteParamsOfUrl, useUpdateUrlParamsPostVideoOrImage } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 import { useCurrentUser } from '@/store/useCurrentUser';
 import {
   videoAddMediaSessionEvents,
@@ -181,9 +181,7 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
     return () => {
       if (postVideoRef.current) observer.unobserve(postVideoRef.current);
       observer.disconnect();
-      useUpdateUrlParamsPostVideoOrImage({
-        cleanUrl: true
-      });
+      deleteParamsOfUrl({ arrayOfQueryParamsToDelete: ['postId', 'userId'] });
     };
   }, []);
 

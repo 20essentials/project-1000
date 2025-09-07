@@ -34,7 +34,9 @@ export function ProfileCreator() {
     userId
   } = commonProps;
 
-  useCleanUrlIfThisComponentsIsUnmount();
+  useCleanUrlIfThisComponentsIsUnmount({
+    arrayOfQueryParamsToDelete: ['userId']
+  });
 
   return (
     <article className='profile-creator'>

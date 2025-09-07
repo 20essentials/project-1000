@@ -19,7 +19,10 @@ import { ShareContainer } from '@/components/pages/SliderPosts/AsideRight/ShareC
 import { useIsScrolling } from '@/store/useIsScrolling';
 import { ContainerBottomOfComments } from '@/components/pages/SliderPosts/AsideRight/ContainerBottomOfComments';
 import { AsideBottomOfShare } from '@/components/pages/SliderPosts/AsideRight/AsideBottomOfShare';
-import { useUpdateUrlParamsPostVideoOrImage } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
+import {
+  deleteParamsOfUrl,
+  useUpdateUrlParamsPostVideoOrImage
+} from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 import { useCurrentUser } from '@/store/useCurrentUser';
 import { useSwipeScrollHorizontal } from '@/hooks/useSwipeScrollHorizontal';
 import {
@@ -181,9 +184,7 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
       if (element) observer.unobserve(element);
 
       observer.disconnect();
-      useUpdateUrlParamsPostVideoOrImage({
-        cleanUrl: true
-      });
+      deleteParamsOfUrl({ arrayOfQueryParamsToDelete: ['postId', 'userId'] });
     };
   }, []);
 
