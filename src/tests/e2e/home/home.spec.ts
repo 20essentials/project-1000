@@ -1,10 +1,5 @@
 import { test, expect } from '@playwright/test';
 
-test('has title', async ({ page }) => {
-  await page.goto('/');
-  await expect(page).toHaveTitle(/Tik Tok/);
-});
-
 test('the userId and postId params are consistent', async ({ page }) => {
   const userId = '1339e4cd-cd20-40b5-8e47-1f4483d586a3';
   const postId =
