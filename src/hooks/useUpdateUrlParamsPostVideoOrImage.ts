@@ -1,5 +1,6 @@
 import { useGlobalArrayPosts } from '@/store/useGlobalArrayPosts';
 import type { FullPost } from '@/components/pages/SliderPosts/types';
+import { render } from '@testing-library/react';
 export const queryParam = {
   userId: 'userId',
   postId: 'postId',
@@ -12,10 +13,29 @@ export const queryParam = {
 export type queryParamType = (typeof queryParam)[keyof typeof queryParam];
 export type queryParamsArray = queryParamType[];
 
-export function deleteParamsOfUrl({
-  arrayOfQueryParamsToDelete = [queryParam.userId, queryParam.postId]
+export function existTheseQueryParams({
+  arrayOfQueryParams = []
 }: {
-  arrayOfQueryParamsToDelete: queryParamsArray;
+  arrayOfQueryParams: queryParamsArray;
+}) {
+  const currentUrl = new URL(window.location.href);
+  const params = currentUrl.searchParams;
+  return arrayOfQueryParams.every(key => {
+    return params.has(key);
+  });
+}
+
+export function deleteParamsOfUrl({
+  arrayOfQueryParamsToDelete = [
+    'inbox',
+    'postId',
+    'profile',
+    'search',
+    'upload',
+    'userId'
+  ]
+}: {
+  arrayOfQueryParamsToDelete?: queryParamsArray;
 }) {
   const currentUrl = new URL(window.location.href);
   const params = currentUrl.searchParams;
@@ -30,7 +50,20 @@ export function deleteParamsOfUrl({
   window.history.replaceState(null, '', newUrl);
 }
 
-export function useUpdateUrlParams({
+export function removeAllParamsOfUrl() {
+  deleteParamsOfUrl({
+    arrayOfQueryParamsToDelete: [
+      'inbox',
+      'postId',
+      'profile',
+      'search',
+      'upload',
+      'userId'
+    ]
+  });
+}
+
+export function updateURLsearchParams({
   arrayOfQueryParamsToSet = [[queryParam.userId, queryParam.postId]]
 }: {
   arrayOfQueryParamsToSet: [queryParamType, string][];
@@ -48,7 +81,7 @@ export function useUpdateUrlParams({
   window.history.replaceState(null, '', newUrl);
 }
 
-export function useUpdateUrlParamsPostVideoOrImage({
+/* export function useUpdateUrlParamsPostVideoOrImage({
   postId = '',
   userId = ''
 }: {
@@ -71,6 +104,16 @@ export function useUpdateUrlParamsPostVideoOrImage({
 
   const newUrl = `${window.location.pathname}?${params.toString()}`;
   window.history.replaceState(null, '', newUrl);
+} */
+
+export function getQueryParamValue({
+  queryParam
+}: {
+  queryParam: queryParamType;
+}): string | null {
+  const currentUrl = new URL(window.location.href);
+  const params = currentUrl.searchParams;
+  return params.get(queryParam);
 }
 
 export function usetGetDataParamPostVideoOrImages(): {
@@ -78,25 +121,42 @@ export function usetGetDataParamPostVideoOrImages(): {
   dataFromUrl: FullPost | undefined;
   userId: string | null;
   renderSearchSection: boolean;
+  renderUploadSection?: boolean;
+  renderInboxSection?: boolean;
+  renderProfileSection?: boolean;
 } {
   const getCommnonPropsAndPostOfAUser = useGlobalArrayPosts(
     state => state.getCommnonPropsAndPostOfAUser
   );
   const thisUserExists = useGlobalArrayPosts(s => s.thisUserExists);
   const currentUrl = new URL(window.location.href);
-  const [userId, postId, search] = ['userId', 'postId', 'search'].map(id =>
+  const arrayOfParams: queryParamsArray = [
+    'userId',
+    'postId',
+    'search',
+    'upload',
+    'inbox',
+    'profile'
+  ];
+  const [userId, postId, search, upload, inbox, profile] = arrayOfParams.map(id =>
     currentUrl.searchParams.get(id)
   );
 
   const defaultObject = {
     weMustRenderAUserProfile: false,
     renderSearchSection: false,
+    renderUploadSection: false,
+    renderInboxSection: false,
+    renderProfileSection: false,
     dataFromUrl: undefined,
     userId
   };
   const renderPostOfHome = userId && postId;
   const renderAnUserProfile = !postId && userId;
   const renderSearch = search;
+  const renderUpload = upload;
+  const renderInbox = inbox;
+  const renderProfile = profile;
 
   if (renderAnUserProfile) {
     const user = thisUserExists({ userId: userId ?? '' });
@@ -123,6 +183,27 @@ export function usetGetDataParamPostVideoOrImages(): {
     return {
       ...defaultObject,
       renderSearchSection: true
+    };
+  }
+
+  if (renderUpload) {
+    return {
+      ...defaultObject,
+      renderUploadSection: true
+    };
+  }
+
+  if (renderInbox) {
+    return {
+      ...defaultObject,
+      renderInboxSection: true
+    };
+  }
+
+  if (renderProfile) {
+    return {
+      ...defaultObject,
+      renderProfileSection: true
     };
   }
 

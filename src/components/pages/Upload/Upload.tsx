@@ -7,6 +7,7 @@ import { SectionUpload } from './SectionUpload';
 import { useSliderIndex } from './uploadHooks/useSectionType';
 import { useModePhoto } from './uploadHooks/useModePhoto';
 import { useUploadVideoOrImages } from '@/store/useUploadVideoOrImages';
+import { existTheseQueryParams, updateURLsearchParams } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 
 export function Upload() {
   const sliderRef = useRef<HTMLElement | null>(null);
@@ -20,6 +21,15 @@ export function Upload() {
       setArrayImages([]);
       setSrcVideo({ srcVideo: null });
     };
+  }, []);
+
+  useEffect(() => {
+    const notExistSearchQueryParam = !existTheseQueryParams({
+      arrayOfQueryParams: ['upload']
+    });
+    if (notExistSearchQueryParam) {
+      updateURLsearchParams({ arrayOfQueryParamsToSet: [['upload', 'view']] });
+    }
   }, []);
 
   return (

@@ -5,10 +5,31 @@ import { IS_ACTIVE_BUTTON, useCurrentPage } from '@/store/useCurrentPage';
 import { useUserCreator } from '@/store/useUserCreator';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { wrapValue } from '@/utils/gsap/gsapFunctions';
+import {
+  existTheseQueryParams,
+  getQueryParamValue,
+  removeAllParamsOfUrl,
+  updateURLsearchParams
+} from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 const ROW_ACTIVE_CLASSNAME = 'active-search-item';
 
 export function Search() {
-  const [searchText, setSearchText] = useState('');
+  // const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = useState(() => {
+    const inputValueDefault = 'Hello';
+    const notExistSearchQueryParam = !existTheseQueryParams({
+      arrayOfQueryParams: ['search']
+    });
+    if (notExistSearchQueryParam) {
+      updateURLsearchParams({
+        arrayOfQueryParamsToSet: [['search', inputValueDefault]]
+      });
+
+      return inputValueDefault;
+    }
+
+    return getQueryParamValue({ queryParam: 'search' }) ?? inputValueDefault;
+  });
   const arrayOfRows = useRef<HTMLElement[]>([]);
   const currentIndexOfRow = useRef(-1);
   const lastRowWActive = useRef<HTMLElement | null>(null);
@@ -63,6 +84,7 @@ export function Search() {
     const inputElement = e.target as HTMLInputElement;
     const { value } = inputElement;
     setSearchText(value);
+    updateURLsearchParams({ arrayOfQueryParamsToSet: [['search', value]] });
   }
 
   useEffect(() => {
@@ -113,6 +135,15 @@ export function Search() {
     };
   }, [wrapCustom]);
 
+  /*  useEffect(() => {
+    const notExistSearchQueryParam = !existTheseQueryParams({
+      arrayOfQueryParams: ['search']
+    });
+    if (notExistSearchQueryParam) {
+      updateURLsearchParams({ arrayOfQueryParamsToSet: [['search', 'Hello']] });
+    }
+  }, []); */
+
   return (
     <article className='search'>
       <aside className='search-top'>
@@ -121,6 +152,7 @@ export function Search() {
           type='text'
           placeholder='Search some user...'
           autoFocus={true}
+          value={searchText}
         />
         <img
           src='/assets/search-gif.gif'
@@ -135,7 +167,10 @@ export function Search() {
             <article
               className='user-search'
               key={userId}
-              onClick={() => nextToProfileCreator({ userId })}
+              onClick={() => {
+                removeAllParamsOfUrl();
+                nextToProfileCreator({ userId })
+              }}
               ref={el => {
                 el && (arrayOfRows.current[index] = el);
               }}

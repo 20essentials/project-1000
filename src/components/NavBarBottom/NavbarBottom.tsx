@@ -7,12 +7,14 @@ import { InboxButton } from '@/components/NavBarBottom/InboxButton';
 import { ProfileButton } from '@/components/NavBarBottom/ProfileButton';
 import { useCurrentPage } from '@/store/useCurrentPage';
 import { IS_ACTIVE_BUTTON } from '@/store/useCurrentPage';
+import { removeAllParamsOfUrl } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 
 export function NavbarBottom() {
   const currenPage = useCurrentPage(state => state.currenPage);
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
 
   function handleCurrentPage(currenPage: number) {
+    removeAllParamsOfUrl();
     setCurrentPage(currenPage);
   }
 

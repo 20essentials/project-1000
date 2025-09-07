@@ -21,7 +21,7 @@ import { ContainerBottomOfComments } from '@/components/pages/SliderPosts/AsideR
 import { AsideBottomOfShare } from '@/components/pages/SliderPosts/AsideRight/AsideBottomOfShare';
 import {
   deleteParamsOfUrl,
-  useUpdateUrlParamsPostVideoOrImage
+  updateURLsearchParams
 } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 import { useCurrentUser } from '@/store/useCurrentUser';
 import { useSwipeScrollHorizontal } from '@/hooks/useSwipeScrollHorizontal';
@@ -145,9 +145,10 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
       ([entry]) => {
         if (entry.isIntersecting) {
           if (!isTheSameuser) {
-            useUpdateUrlParamsPostVideoOrImage({
-              postId: idPost,
-              userId: userId
+  
+
+            updateURLsearchParams({
+              arrayOfQueryParamsToSet: [['userId', userId], ['postId', idPost]]
             });
           }
 

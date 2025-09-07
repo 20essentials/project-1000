@@ -7,7 +7,7 @@ import { ArrowLeft } from '@/components/pages/ProfileCreator/ArrowLeft';
 import { NumFollowed } from '@/components/pages/ProfileCreator/ProfileAndProfileCreatorCommonComponents/NumFollowed';
 import { NumFollowers } from '@/components/pages/ProfileCreator/ProfileAndProfileCreatorCommonComponents/NumFollowers';
 import { useCleanUrlIfThisComponentsIsUnmount } from '@/hooks/useCleanUrlIfThisComponentsIsUnmount';
-import { useUpdateUrlParamsPostVideoOrImage } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
+import { updateURLsearchParams } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 import { useEffect } from 'react';
 import { ShareLinkAndCircle } from './ShareLinkAndCircle';
 
@@ -20,9 +20,7 @@ export function ProfileCreator() {
   );
 
   useEffect(() => {
-    useUpdateUrlParamsPostVideoOrImage({
-      userId: userId
-    });
+    updateURLsearchParams({ arrayOfQueryParamsToSet: [['userId', userId]] });
   }, []);
 
   const {

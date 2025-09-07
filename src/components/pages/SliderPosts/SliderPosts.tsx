@@ -26,8 +26,15 @@ export function SliderPosts() {
     state => state.userHasSeenPostOrProfileFromUrl
   );
 
-  const { dataFromUrl, weMustRenderAUserProfile, userId, renderSearchSection } =
-    usetGetDataParamPostVideoOrImages();
+  const {
+    dataFromUrl,
+    weMustRenderAUserProfile,
+    userId,
+    renderSearchSection,
+    renderUploadSection,
+    renderInboxSection,
+    renderProfileSection
+  } = usetGetDataParamPostVideoOrImages();
 
   const isForYou = useFollowedOrForYou(state => state.isForYou);
   const FOR_YOU = useGlobalArrayPosts(state => state.FOR_YOU);
@@ -50,6 +57,12 @@ export function SliderPosts() {
       }
     } else if (renderSearchSection) {
       setCurrentPage(IS_ACTIVE_BUTTON.SEARCH);
+    } else if (renderUploadSection) {
+      setCurrentPage(IS_ACTIVE_BUTTON.UPLOAD);
+    } else if (renderInboxSection) {
+      setCurrentPage(IS_ACTIVE_BUTTON.INBOX);
+    } else if (renderProfileSection) {
+      setCurrentPage(IS_ACTIVE_BUTTON.PROFILE);
     }
   }, [userHasSeenPostOrProfileFromUrl]);
 

@@ -17,7 +17,10 @@ import { ShareContainer } from '@/components/pages/SliderPosts/AsideRight/ShareC
 import { useIsScrolling } from '@/store/useIsScrolling';
 import { ContainerBottomOfComments } from '@/components/pages/SliderPosts/AsideRight/ContainerBottomOfComments';
 import { AsideBottomOfShare } from '@/components/pages/SliderPosts/AsideRight/AsideBottomOfShare';
-import { deleteParamsOfUrl, useUpdateUrlParamsPostVideoOrImage } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
+import {
+  deleteParamsOfUrl,
+  updateURLsearchParams
+} from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 import { useCurrentUser } from '@/store/useCurrentUser';
 import {
   videoAddMediaSessionEvents,
@@ -133,9 +136,11 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             if (!isTheSameuser) {
-              useUpdateUrlParamsPostVideoOrImage({
-                postId: idPost,
-                userId: userId
+              updateURLsearchParams({
+                arrayOfQueryParamsToSet: [
+                  ['userId', userId],
+                  ['postId', idPost]
+                ]
               });
             }
 

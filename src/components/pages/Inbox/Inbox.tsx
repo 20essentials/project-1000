@@ -4,14 +4,15 @@ import '@/components/pages/FollowedAndFollow/FollowedAndFollow.css';
 import { ArrowLeft } from '@/components/pages/ProfileCreator/ArrowLeft';
 import { useCurrentUser } from '@/store/useCurrentUser';
 import { baseURL } from '@/utils/functions/baseURL';
-import { generateRandomNumber } from "@/utils/functions/generateRandomNumber";
+import { generateRandomNumber } from '@/utils/functions/generateRandomNumber';
 import { useUserCreator } from '@/store/useUserCreator';
 import { useFollowedAccount } from '@/store/useFollowedAccount';
-import { useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { ArrayOfNavbarStories } from '@/components/pages/Inbox/ArrayOfNavbarStories';
 import { ListOfUsers } from '@/components/pages/FollowedAndFollow/ListOfUser';
 import { FOLLOWED, FOR_YOU } from '@/publicData/functions/getData';
 import { useSwipeXHeaderStories } from '@/hooks/useSwipeXHeaderStories';
+import { existTheseQueryParams, updateURLsearchParams } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 const NUM_OF_ROW_THAT_RENDER_MORE_ROWS = 9;
 const urlFirework = baseURL('/assets/tik-tok-animated-logo.gif');
@@ -79,6 +80,15 @@ export function Inbox() {
     classNameOfTrigger: '.navbar-of-histories-inner',
     containerOfImagesRef: navBarOFStories
   });
+
+  useEffect(() => {
+    const notExistSearchQueryParam = !existTheseQueryParams({
+      arrayOfQueryParams: ['inbox']
+    });
+    if (notExistSearchQueryParam) {
+      updateURLsearchParams({ arrayOfQueryParamsToSet: [['inbox', 'view']] });
+    }
+  }, []);
 
   return (
     <article className='inbox-container'>

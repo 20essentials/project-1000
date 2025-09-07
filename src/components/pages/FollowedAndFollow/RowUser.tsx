@@ -8,6 +8,7 @@ import type { userId } from '@/store/useFollowedAccount';
 import { UserCircleStory } from '@/components/pages/SliderPosts/AsideRight/UserCircleStory';
 import { UserProfile } from '@/components/pages/SliderPosts/AsideRight//UserProfile';
 import { FOLLOWED, FOR_YOU } from '@/publicData/functions/getData';
+import { removeAllParamsOfUrl } from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 const ALL_POSTS = [...FOLLOWED, ...FOR_YOU];
 const LIMIT_CHARS_USERNAME = 20;
 
@@ -45,6 +46,7 @@ export function RowUser({
   const setCurrentPage = useCurrentPage(state => state.setCurrentPage);
 
   function nextToProfileCreator() {
+    removeAllParamsOfUrl();
     if (theIdOfTheUserThaisYou === userId) {
       const $profileUserbutton = $('.wrapper-profile-user') as HTMLElement;
       $profileUserbutton.click();

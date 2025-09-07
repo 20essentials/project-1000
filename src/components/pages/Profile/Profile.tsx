@@ -5,17 +5,28 @@ import { GridOfUserLikedPosts } from '@/components/pages/Profile/GridOfUserLiked
 import { GridOfUserCreatedPosts } from '@/components/pages/Profile/GridOfUserCreatedPosts';
 import { ProfileTop } from '@/components/pages/Profile/ProfileTop';
 import { GridOfUserRepostPosts } from '@/components/pages/Profile/GridOfUserRepostPosts';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
+import {
+  existTheseQueryParams,
+  updateURLsearchParams
+} from '@/hooks/useUpdateUrlParamsPostVideoOrImage';
 
 /* This is the same User */
 export function Profile() {
   const slideHorizontalRef = useRef<HTMLElement | null>(null);
 
+  useEffect(() => {
+    const notExistSearchQueryParam = !existTheseQueryParams({
+      arrayOfQueryParams: ['profile']
+    });
+    if (notExistSearchQueryParam) {
+      updateURLsearchParams({ arrayOfQueryParamsToSet: [['profile', 'view']] });
+    }
+  }, []);
+
   return (
     <article className='profile-user-original'>
-      <ProfileTop
-        slideHorizontalRef={slideHorizontalRef}
-      />
+      <ProfileTop slideHorizontalRef={slideHorizontalRef} />
       <section
         className='slider-of-grid-of-posts-bottom scroll-x'
         ref={slideHorizontalRef}
