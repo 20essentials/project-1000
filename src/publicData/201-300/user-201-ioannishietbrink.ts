@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ioannishietbrink';
-const userId = '';
-const prefixUrl = '';
+const userId = '68396a83-840a-4238-bd52-2571d63467ab';
+const prefixUrl = 'https://dominicnikolai.github.io/project-313/assets/ioannishietbrink/';
 const followers = 127_720;
 const followed = 55;
 const profileDescription = '🎓Helping 3D Freelancers go Full-Time';

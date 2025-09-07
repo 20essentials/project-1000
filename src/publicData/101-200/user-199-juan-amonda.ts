@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'juan_amonda';
-const userId = '';
-const prefixUrl = '';
+const userId = '8c466892-992d-494d-b171-8c8764f3c276';
+const prefixUrl = 'https://dominicnikolai.github.io/project-314/assets/juan-amonda/';
 const followers = 603_720;
 const followed = 214;
 const profileDescription = 'Recomiendo las películas que me gustan 🎥';
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 9;
+const quantityOfVideos = 8;
 const prefixLetterImages = 'n';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
@@ -26,7 +26,7 @@ const arrayDescriptionsOfVideos = [
   `Perfect Blue (1997) – Satoshi Kon. Una joya del anime psicológico, perturbadora y brillante. Cuando una idol deja la música para convertirse en actriz, su identidad comienza a fracturarse hasta que ya no distingue la realidad de la ficción. Espejos, símbolos, paranoia y una crítica feroz a la industria del entretenimiento. Una obra maestra que influenció a películas como Cisne Negro y Requiem for a Dream. Disponible para alquilar en YouTube. #PerfectBlue #SatoshiKon #Anime #Thriller #Películas #Recomendaciones #CineJaponés #Peliculas #Reseñas`, /*6*/
   `Ex Machina (2014) – Un joven programador es elegido para participar en un experimento con una inteligencia artificial llamada Ava, en la casa secreta de su jefe, un CEO brillante y perturbador. Lo que empieza como un test se convierte en un juego de manipulación, deseo y control. Escrita y dirigida por Alex Garland, Ex Machina es un thriller contenido, elegante y profundamente inquietante. Un análisis sobre el poder, la conciencia y la fragilidad humana frente a la tecnología. Disponible en Netflix, Max, Apple TV y Claro Video. #ExMachina #AlexGarland #CienciaFicción #ThrillerPsicológico #Películas #CaminoAlMillón #Peliculas #Reseñas #Recomendaciones`, /*7*/
   `La vida de Pi (2012) – Un joven naufraga y queda a la deriva con un tigre de Bengala. Una fábula sobre la fe, el instinto y el poder de las historias. Disponible en Mercado Play (AR) y Disney+ (ES). #LifeOfPi #LaVidaDePi #AngLee #RichardParker #CineEspiritual #CinePoético #Supervivencia #CaminoAlMillón #ReelDeCine #Reseñas #Recomendaciones #Películas #Peliculas`, /*8*/
-  `Amigos intocables (2011) – Una amistad improbable que cambió la vida de dos personas. Basada en una historia real. Disponible en Prime Video, Movistar y Amazon Video. #AmigosIntocables #TheIntouchables #CineFrancés #OmarSy #FrançoisCluzet #LudovicoEinaudi #HistoriaReal #CineQueInspira #CaminoAlMillón #ReelDeCine #Películas #Peliculas #Reseñas #Recomendaciones`, /*9*/ 
+  ``, /*9*/ 
   ``, /*10*/
   ``, /*11*/
   ``, /*12*/

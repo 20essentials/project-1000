@@ -228,6 +228,7 @@ import { superfast_italian_array_of_posts, superfast_italian_commonProps } from 
 import { thomas_vanz_array_of_posts, thomas_vanz_commonProps } from './user-193-thomas-vanz';
 import { elninja17_array_of_posts, elninja17_commonProps } from './user-198-elninja17';
 import { elrinconhawaiano_array_of_posts, elrinconhawaiano_commonProps } from './user-196-elrinconhawaiano';
+import { juan_amonda_array_of_posts, juan_amonda_commonProps } from './user-199-juan-amonda';
 
 
 export const PUBLIC_101_200: arrayOfPosts = [
@@ -329,4 +330,5 @@ export const PUBLIC_101_200: arrayOfPosts = [
   [elrinconhawaiano_commonProps, elrinconhawaiano_array_of_posts], /* 196 */
 
   [elninja17_commonProps, elninja17_array_of_posts], /* 198 */
+  [juan_amonda_commonProps, juan_amonda_array_of_posts], /* 199 */
 ];
