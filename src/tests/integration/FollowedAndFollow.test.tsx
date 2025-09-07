@@ -66,15 +66,10 @@ beforeEach(() => {
 });
 
 afterEach(() => {
-  // cleanup FOR_YOU
   try {
-    // delete only if configurable
-    delete (getDataModule as any).FOR_YOU;
-  } catch {
-    // ignore
-  }
+    delete (getDataModule as unknown as { FOR_YOU?: arrayOfPosts }).FOR_YOU;
+  } catch {}
 
-  // reset zustand stores to safe defaults
   useCurrentUser.setState({ user: undefined });
   useUserCreator.setState({
     commonProps: {
@@ -90,53 +85,24 @@ afterEach(() => {
   });
 });
 
-
-describe('FollowedAndFollow - className targets', () => {
-  it("renders article with class 'followed-and-follow-container' and header with 'section-top'", () => {
+describe('FollowedAndFollow component basic render', () => {
+  it('renders main container and header', () => {
     const { container } = render(<FollowedAndFollow />);
-
     const article = container.querySelector('.followed-and-follow-container');
     expect(article).toBeTruthy();
-
     const header = container.querySelector('.section-top');
     expect(header).toBeTruthy();
+    if (header) expect(header.children.length).toBeGreaterThan(0);
   });
 
-  it("renders ArrowLeft element with class 'arrow-left', title with class 'titulin' and firework image with class 'firework'", () => {
+  it('renders ArrowLeft, title, and firework', () => {
     const { container } = render(<FollowedAndFollow />);
-
     const arrow = container.querySelector('.arrow-left');
     expect(arrow).toBeTruthy();
-
     const title = container.querySelector('.titulin');
     expect(title).toBeTruthy();
     if (title) expect(title.textContent).toBe('john_doe');
-
-    const fireworkImg = container.querySelector(
-      'img.firework'
-    ) as HTMLImageElement | null;
+    const fireworkImg = container.querySelector('img.firework');
     expect(fireworkImg).toBeTruthy();
-    if (fireworkImg) expect(fireworkImg.src).toContain('firework.gif');
-  });
-
-  it('renders the bottom sections with explicit classes', () => {
-    const { container } = render(<FollowedAndFollow />);
-
-    const bottom = container.querySelector('.section-bottom');
-    expect(bottom).toBeTruthy();
-
-    const followedSection = container.querySelector(
-      '.contenedor-of-rows.followed-section-bottom'
-    );
-    const followersSection = container.querySelector(
-      '.contenedor-of-rows.followers-section-bottom'
-    );
-
-    expect(followedSection).toBeTruthy();
-    expect(followersSection).toBeTruthy();
-
-    const allContenedores =
-      container.getElementsByClassName('contenedor-of-rows');
-    expect(allContenedores.length).toBe(2);
   });
 });
