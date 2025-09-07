@@ -3,6 +3,7 @@ import react from '@astrojs/react';
 import vercel from '@astrojs/vercel';
 import clerk from '@clerk/astro';
 import { envField } from 'astro/config';
+import { id_user_testing } from './src/utils/consts/userIdTesting.js';
 
 export default defineConfig({
   build: {
@@ -29,8 +30,10 @@ export default defineConfig({
   //Localhost
   // site: 'http://localhost:4321/',
   site: 'https://project-1000-t1k-tok-minimalist.vercel.app/',
-  // site: 'http://localhost:4321/?userId=81460ace-7d45-4eed-a3dc-df29ec1d0643&postId=81460ace-7d45-4eed-a3dc-df29ec1d0643-9fd97a84-c39d-4c2e-872f-53eb5fbdfe4e',
   output: 'server',
+  server: {
+    open: `/?userId=${id_user_testing}`
+  },
   adapter: vercel(),
   integrations: [react(), clerk()]
 });
