@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'robbieromanticc';
-const userId = '';
-const prefixUrl = '';
+const userId = 'a7639a9b-2bc5-4701-80b5-49c45a5e80a4';
+const prefixUrl = 'https://dominicnikolai.github.io/project-314/assets/robbieromanticc/';
 const followers = 31_320;
 const followed = 50;
 const profileDescription = '🙂';
