@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'klsrav';
-const userId = '';
-const prefixUrl = '';
+const userId = 'e5efede8-0877-4319-b24c-5285b7f96379';
+const prefixUrl = 'https://dominicnikolai.github.io/project-314/assets/klsr-av/';
 const followers = 215_720;
 const followed = 50;
 const profileDescription = '📧';

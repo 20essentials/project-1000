@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'julienricojr';
-const userId = '';
-const prefixUrl = '';
+const userId = 'aad8283f-8ee6-44b2-9db2-5a0a44e66af3';
+const prefixUrl = 'https://dominicnikolai.github.io/project-314/assets/julienricojr/';
 const followers = 128_720;
 const followed = 142;
 const profileDescription = 'Art Director | Illustrator | Poster Artist🎨';
