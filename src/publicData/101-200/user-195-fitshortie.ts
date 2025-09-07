@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'fitshortie';
-const userId = '';
-const prefixUrl = '';
+const userId = '66f3b913-9351-49dd-aaa6-1888fe1d5b17';
+const prefixUrl = 'https://dominicnikolai.github.io/project-311/assets/fitshortie/';
 const followers = 9_720_822;
 const followed = 50;
 const profileDescription = '🔥 Join The Bali Fruit Retreat 2026';

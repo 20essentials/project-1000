@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'stormypyeatte';
-const userId = '';
-const prefixUrl = '';
+const userId = '98cf7ef8-8f54-4a9f-b8a0-61538fe35a22';
+const prefixUrl = 'https://dominicnikolai.github.io/project-312/assets/stormypyeatte/';
 const followers = 123_720;
 const followed = 50;
 const profileDescription = '🌸Flowers 📹Cameras 📽️Projectors';

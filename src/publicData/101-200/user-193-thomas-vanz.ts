@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'thomas_vanz';
-const userId = '';
-const prefixUrl = '';
+const userId = '1eb6d6a3-be9d-458c-a781-44e349d306ca';
+const prefixUrl = 'https://dominicnikolai.github.io/project-312/assets/thomas-vanz/';
 const followers = 64_800;
 const followed = 50;
 const profileDescription = 'Pianist / Macro Artist / Cosmic Director / Desert explorer 🎥 ✨🌒☄️🎹 🦂';

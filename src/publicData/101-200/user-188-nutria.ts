@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'nutria';
-const userId = '';
-const prefixUrl = '';
+const userId = '6dda5464-ba1c-4106-ae5a-d5d3217e4c1c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-311/assets/nutria/';
 const followers = 1_720_723;
 const followed = 50;
 const profileDescription = 'Safari🙈🦘🦦';

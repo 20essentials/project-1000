@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'girlchill_naturelovers';
-const userId = '';
-const prefixUrl = '';
+const userId = '86beb7ee-23e1-45e3-ad60-7f41faa25a92';
+const prefixUrl = 'https://dominicnikolai.github.io/project-313/assets/girlchill-naturelovers/';
 const followers = 374_720;
 const followed = 50;
 const profileDescription = 'Enjoy beautiful moments of nature';

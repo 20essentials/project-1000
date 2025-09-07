@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'superfast_italian';
-const userId = '';
-const prefixUrl = '';
+const userId = 'fb8f77f7-0d59-4621-a0c8-e938a59431f6';
+const prefixUrl = 'https://dominicnikolai.github.io/project-312/assets/superfast-italian/';
 const followers = 31_720;
 const followed = 72;
 const profileDescription = '📥';

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'elrinconhawaiano';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd652e67c-0c8f-4253-b906-35f9625d7656';
+const prefixUrl = 'https://dominicnikolai.github.io/project-313/assets/elrinconhawaiano/';
 const followers = 60_720;
 const followed = 102;
 const profileDescription = '📹 El rincón donde los 90s nunca se fueron';

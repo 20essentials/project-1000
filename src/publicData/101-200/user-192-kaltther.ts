@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'kaltther';
-const userId = '';
-const prefixUrl = '';
+const userId = '04cbe8aa-3f0b-4f65-b327-a5bf00f196f7';
+const prefixUrl = 'https://dominicnikolai.github.io/project-311/assets/kaltther/';
 const followers = 29_720;
 const followed = 50;
 const profileDescription = 'はじめまして！🐸';

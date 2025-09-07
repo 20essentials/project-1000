@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'elninja17';
-const userId = '';
-const prefixUrl = '';
+const userId = '3ca3cca1-b01c-4e71-8c67-c599f3b320a7';
+const prefixUrl = 'https://dominicnikolai.github.io/project-313/assets/elninja17/';
 const followers = 1_720_234;
 const followed = 735;
 const profileDescription = '🍍 fruta fresca';

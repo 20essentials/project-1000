@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'park_planners';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c14cf362-da38-47d4-a36f-38f7d2f3cbc9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-312/assets/parkplanners/';
 const followers = 732_821;
 const followed = 50;
 const profileDescription = '🗺️ Experiencias VIP en parques y cruceros';

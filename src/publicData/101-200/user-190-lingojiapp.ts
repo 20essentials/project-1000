@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'lingojiapp';
-const userId = '';
-const prefixUrl = '';
+const userId = '0472bd46-389f-4ad2-9c45-1e3e35c9a31b';
+const prefixUrl = 'https://dominicnikolai.github.io/project-311/assets/lingojiapp/';
 const followers = 232_720;
 const followed = 50;
 const profileDescription = 'English learning';
