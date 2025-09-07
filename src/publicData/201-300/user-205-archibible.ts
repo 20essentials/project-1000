@@ -4,12 +4,12 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'amUserPrivate';
+const username = 'archibible';
 const userId = '';
 const prefixUrl = '';
-const followers = 100_000;
-const followed = 50;
-const profileDescription = `Hello`;
+const followers = 218_720;
+const followed = 435;
+const profileDescription = 'Gen AI | 3D / Arch. Designer';
 const prefixLetterVideos = 'v';
 const quantityOfVideos = 6;
 const prefixLetterImages = 'n';
@@ -18,12 +18,12 @@ const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
-  ``, /*1*/
-  ``, /*2*/
-  ``, /*3*/
-  ``, /*4*/
-  ``, /*5*/
-  ``, /*6*/
+  `#snow`, /*1*/
+  `#lumaai`, /*2*/
+  `#midjourneyarchitecture `, /*3*/
+  `#explorepage `, /*4*/
+  `#fantasy `, /*5*/
+  `#dreammachine`, /*6*/
   ``, /*7*/
   ``, /*8*/
   ``, /*9*/ 
@@ -64,7 +64,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const amUserPrivate_commonProps = generateExactlyCommonProps({
+export const archibible_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -73,7 +73,7 @@ export const amUserPrivate_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const amUserPrivate_videos = generateArrayPostsOfVideos({
+const archibible_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -81,14 +81,14 @@ const amUserPrivate_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const amUserPrivate_images = generateArrayPostsOfImages({
+const archibible_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const amUserPrivate_array_of_posts = [
-  ...amUserPrivate_images,
-  ...amUserPrivate_videos
+export const archibible_array_of_posts = [
+  ...archibible_images,
+  ...archibible_videos
 ];

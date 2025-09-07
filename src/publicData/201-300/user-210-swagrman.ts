@@ -4,24 +4,24 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'amUserPrivate';
+const username = 'swagrman';
 const userId = '';
 const prefixUrl = '';
-const followers = 100_000;
+const followers = 3_420_720;
 const followed = 50;
-const profileDescription = `Hello`;
+const profileDescription = `Official Instagram for Swaggy Wolfdog`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 6;
+const quantityOfVideos = 4;
 const prefixLetterImages = 'n';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
-  ``, /*1*/
-  ``, /*2*/
-  ``, /*3*/
-  ``, /*4*/
+  `This is how our Rolling loud ended !😂🤦🏽‍♂️ #rollingloud #miami #arrested`, /*1*/
+  `SWAGGY IS INNOCENT!😭 THEY GOT THE WRONG DOG! PART 2! 😭 #dodgers #mlb #losangeles #worldseries #police`, /*2*/
+  `DROVE MY TOY CAR TO THE RICHEST TOWN IN ALABAMA AND COPS DONT PLAY 😳 #police #mexico #alabama #birmingham #hoover #tesla`, /*3*/
+  `#tennessee #costco #toycar #tesla #mexico #security #police`, /*4*/
   ``, /*5*/
   ``, /*6*/
   ``, /*7*/
@@ -64,7 +64,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const amUserPrivate_commonProps = generateExactlyCommonProps({
+export const swagrman_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -73,7 +73,7 @@ export const amUserPrivate_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const amUserPrivate_videos = generateArrayPostsOfVideos({
+const swagrman_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -81,14 +81,14 @@ const amUserPrivate_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const amUserPrivate_images = generateArrayPostsOfImages({
+const swagrman_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const amUserPrivate_array_of_posts = [
-  ...amUserPrivate_images,
-  ...amUserPrivate_videos
+export const swagrman_array_of_posts = [
+  ...swagrman_images,
+  ...swagrman_videos
 ];

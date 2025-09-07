@@ -4,12 +4,12 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'amUserPrivate';
+const username = 'hazedisplay';
 const userId = '';
 const prefixUrl = '';
-const followers = 100_000;
+const followers = 10_720;
 const followed = 50;
-const profileDescription = `Hello`;
+const profileDescription = 'Located in Los Angeles, California';
 const prefixLetterVideos = 'v';
 const quantityOfVideos = 6;
 const prefixLetterImages = 'n';
@@ -18,12 +18,12 @@ const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
-  ``, /*1*/
-  ``, /*2*/
-  ``, /*3*/
-  ``, /*4*/
+  `Projecting hologram characters on a fog machine #hologram #holographic #projector #tech`, /*1*/
+  `Hologram Minions projected on a fog machine #minions #hologram #holographic #projector #technology #tech #halloween #despicableme`, /*2*/
+  `Neon skull projected on a fog machine #projector #tech #technology #hazedisplay #neon #skull #halloween`, /*3*/
+  `SpongeBob hologram characters projected on a fog machine #hologram #holographic #spongebob #cartoon #projector #technology #tech`, /*4*/
   ``, /*5*/
-  ``, /*6*/
+  `Pokemon holograms projected on a fog machine #pikachu #gengar #charizard #pokemon #hologram #holographic #projector #technology #tech #hazedisplay`, /*6*/
   ``, /*7*/
   ``, /*8*/
   ``, /*9*/ 
@@ -64,7 +64,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const amUserPrivate_commonProps = generateExactlyCommonProps({
+export const hazedisplay_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -73,7 +73,7 @@ export const amUserPrivate_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const amUserPrivate_videos = generateArrayPostsOfVideos({
+const hazedisplay_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -81,14 +81,14 @@ const amUserPrivate_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const amUserPrivate_images = generateArrayPostsOfImages({
+const hazedisplay_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const amUserPrivate_array_of_posts = [
-  ...amUserPrivate_images,
-  ...amUserPrivate_videos
+export const hazedisplay_array_of_posts = [
+  ...hazedisplay_images,
+  ...hazedisplay_videos
 ];

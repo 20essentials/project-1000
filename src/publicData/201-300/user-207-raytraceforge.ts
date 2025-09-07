@@ -4,25 +4,25 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'amUserPrivate';
+const username = 'raytraceforge';
 const userId = '';
 const prefixUrl = '';
-const followers = 100_000;
+const followers = 243_890;
 const followed = 50;
-const profileDescription = `Hello`;
+const profileDescription = `Explore at World's End`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 6;
+const quantityOfVideos = 5;
 const prefixLetterImages = 'n';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
-  ``, /*1*/
-  ``, /*2*/
-  ``, /*3*/
-  ``, /*4*/
-  ``, /*5*/
+  `You Waited 21 Hours for World Generation`, /*1*/
+  `Bro got RTX5090 early access`, /*2*/
+  `How Much Peace Do You Want `, /*3*/
+  `Descending 2000 Blocks in 1m🤯`, /*4*/
+  `Ultra Realistic Terrain in Minecraft⛰ Map: https://www.planetminecraft.com/project/thalassira-conquest-reforged-9k-x-7k/ #minecraft #120fps #8k`, /*5*/
   ``, /*6*/
   ``, /*7*/
   ``, /*8*/
@@ -64,7 +64,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const amUserPrivate_commonProps = generateExactlyCommonProps({
+export const raytraceforge_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -73,7 +73,7 @@ export const amUserPrivate_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const amUserPrivate_videos = generateArrayPostsOfVideos({
+const raytraceforge_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -81,14 +81,14 @@ const amUserPrivate_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const amUserPrivate_images = generateArrayPostsOfImages({
+const raytraceforge_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const amUserPrivate_array_of_posts = [
-  ...amUserPrivate_images,
-  ...amUserPrivate_videos
+export const raytraceforge_array_of_posts = [
+  ...raytraceforge_images,
+  ...raytraceforge_videos
 ];
