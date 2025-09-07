@@ -5,3 +5,5 @@ components/
   Profile/ ✅
   ProfileCreator/ ✅
   Search/ ✅
+  SliderPosts/ ✅
+  Story/ 
