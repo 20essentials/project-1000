@@ -3,7 +3,7 @@ import react from '@astrojs/react';
 import vercel from '@astrojs/vercel';
 import clerk from '@clerk/astro';
 import { envField } from 'astro/config';
-import { id_user_testing } from './src/utils/consts/userIdTesting.js';
+
 
 export default defineConfig({
   build: {

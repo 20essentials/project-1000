@@ -1,6 +1,5 @@
 import { useGlobalArrayPosts } from '@/store/useGlobalArrayPosts';
 import type { FullPost } from '@/components/pages/SliderPosts/types';
-import { render } from '@testing-library/react';
 export const queryParam = {
   userId: 'userId',
   postId: 'postId',
