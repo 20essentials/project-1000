@@ -33,7 +33,7 @@ export default defineConfig({
   output: 'server',
   server: {
     // open: `/?userId=${id_user_testing}`,
-    open: `/?search=papi`,
+    open: `/?search=hello`,
   },
   adapter: vercel(),
   integrations: [react(), clerk()]
