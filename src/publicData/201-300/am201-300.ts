@@ -19,6 +19,8 @@ import {
   hazedisplay_array_of_posts,
   hazedisplay_commonProps
 } from './user-208-hazedisplay';
+import { hellopersonality_array_of_posts, hellopersonality_commonProps } from './user-204-hellopersonality';
+import { julias_wildlife_array_of_posts, julias_wildlife_commonProps } from './user-211-julias-wildlife';
 
 export const PUBLIC_201_300: arrayOfPosts = [
   [ioannishietbrink_commonProps, ioannishietbrink_array_of_posts] /* 201 */,
@@ -27,8 +29,10 @@ export const PUBLIC_201_300: arrayOfPosts = [
     girlchill_naturelovers_array_of_posts
   ] /* 202 */,
   [julienricojr_commonProps, julienricojr_array_of_posts] /* 203 */,
-
+  [hellopersonality_commonProps, hellopersonality_array_of_posts] /* 203 */,
   [archibible_commonProps, archibible_array_of_posts] /* 205 */,
 
-  [hazedisplay_commonProps, hazedisplay_array_of_posts] /* 208 */
+  [hazedisplay_commonProps, hazedisplay_array_of_posts] /* 208 */,
+
+  [julias_wildlife_commonProps, julias_wildlife_array_of_posts] /* 211 */,
 ];

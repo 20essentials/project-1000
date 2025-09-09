@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'julias_wildlife';
-const userId = '';
-const prefixUrl = '';
+const userId = '54ca5e34-5407-4274-98de-22678ef3f8a0';
+const prefixUrl = 'https://dominicnikolai.github.io/project-315/assets/julias-w1ldlife/';
 const followers = 367_720;
 const followed = 50;
 const profileDescription = `Wildlife Advocate`;

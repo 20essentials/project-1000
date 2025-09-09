@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'hellopersonality';
-const userId = '';
-const prefixUrl = '';
+const userId = '547c63ed-7291-411f-951d-ce5d74eb9fe3';
+const prefixUrl = 'https://dominicnikolai.github.io/project-315/assets/hellopersonality/';
 const followers = 1_720_532;
 const followed = 392;
 const profileDescription = 'AI ANIMATIONS';
