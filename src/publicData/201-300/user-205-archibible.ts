@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'archibible';
-const userId = '';
-const prefixUrl = '';
+const userId = '810a2b15-1490-4ea6-993c-e45f87214072sdfs';
+const prefixUrl = 'https://dominicnikolai.github.io/project-315/assets/archibible/';
 const followers = 218_720;
 const followed = 435;
 const profileDescription = 'Gen AI | 3D / Arch. Designer';

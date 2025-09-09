@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'hazedisplay';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c7482976-fe4f-4727-a466-eb66c020864f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-315/assets/hazedisplay/';
 const followers = 10_720;
 const followed = 50;
 const profileDescription = 'Located in Los Angeles, California';
