@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'raytraceforge';
-const userId = '';
-const prefixUrl = '';
+const userId = '79d9d938-e39f-4bd3-88fb-30455f1222d5';
+const prefixUrl = 'https://dominicnikolai.github.io/project-316/assets/raytraceforge/';
 const followers = 243_890;
 const followed = 50;
 const profileDescription = `Explore at World's End`;

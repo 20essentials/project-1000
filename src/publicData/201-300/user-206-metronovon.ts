@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'metronovon';
-const userId = '';
-const prefixUrl = '';
+const userId = '9cc9c24b-b9ff-498c-a6ab-3f5e492c73bc';
+const prefixUrl = 'https://dominicnikolai.github.io/project-316/assets/metronovon/';
 const followers = 79_720;
 const followed = 523;
 const profileDescription = 'Japan-born AI sci-fi artist crafting AI';
