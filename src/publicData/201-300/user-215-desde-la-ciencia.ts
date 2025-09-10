@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'desde_la_ciencia';
-const userId = '';
-const prefixUrl = '';
+const userId = '6d149185-a584-4bbb-a1ef-fc3736a09759';
+const prefixUrl = 'https://dominicnikolai.github.io/project-317/assets/desde-la-ciencia/';
 const followers = 1_202_322;
 const followed = 731;
 const profileDescription = `Donde la naturaleza cuenta su historia y la ciencia la explica.`;

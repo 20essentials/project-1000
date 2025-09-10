@@ -5,11 +5,11 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'lililile3343';
-const userId = '';
-const prefixUrl = '';
+const userId = '7171d479-a33c-4a92-ba97-cd5cdee652c2';
+const prefixUrl = 'https://dominicnikolai.github.io/project-317/assets/lililile-3343/';
 const followers = 666_720;
 const followed = 16;
-const profileDescription = `六年插畫師在線分享procreate 繪畫教程百科`;
+const profileDescription = `六年插畫師在線分享`;
 const prefixLetterVideos = 'v';
 const quantityOfVideos = 4;
 const prefixLetterImages = 'n';

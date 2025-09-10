@@ -14,9 +14,8 @@ import {
 const ROW_ACTIVE_CLASSNAME = 'active-search-item';
 
 export function Search() {
-  // const [searchText, setSearchText] = useState('');
   const [searchText, setSearchText] = useState(() => {
-    const inputValueDefault = 'Hello';
+    const inputValueDefault = '';
     const notExistSearchQueryParam = !existTheseQueryParams({
       arrayOfQueryParams: ['search']
     });
@@ -135,14 +134,7 @@ export function Search() {
     };
   }, [wrapCustom]);
 
-  /*  useEffect(() => {
-    const notExistSearchQueryParam = !existTheseQueryParams({
-      arrayOfQueryParams: ['search']
-    });
-    if (notExistSearchQueryParam) {
-      updateURLsearchParams({ arrayOfQueryParamsToSet: [['search', 'Hello']] });
-    }
-  }, []); */
+  
 
   return (
     <article className='search'>

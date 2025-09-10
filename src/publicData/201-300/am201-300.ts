@@ -25,6 +25,12 @@ import { metronovon_array_of_posts, metronovon_commonProps } from './user-206-me
 import { raytraceforge_array_of_posts, raytraceforge_commonProps } from './user-207-raytraceforge';
 import { swagrman_array_of_posts, swagrman_commonProps } from './user-210-swagrman';
 import { uon_visuals_array_of_posts, uon_visuals_commonProps } from './user-209-uon-visuals';
+import { desde_la_ciencia_array_of_posts, desde_la_ciencia_commonProps } from './user-215-desde-la-ciencia';
+import { evormax_array_of_posts, evormax_commonProps } from './user-216-evormax';
+import { lililile3343_array_of_posts, lililile3343_commonProps } from './user-212-lililile-3343';
+import { paracaidismo_array_of_posts, paracaidismo_commonProps } from './user-219-paracaidismo';
+import { anubis_dimitri_array_of_posts, anubis_dimitri_commonProps } from './user-214-anubis-dimitri';
+import { astrospaceq_array_of_posts, astrospaceq_commonProps } from './user-218-astrospaceq';
 
 export const PUBLIC_201_300: arrayOfPosts = [
   [ioannishietbrink_commonProps, ioannishietbrink_array_of_posts] /* 201 */,
@@ -41,4 +47,12 @@ export const PUBLIC_201_300: arrayOfPosts = [
   [uon_visuals_commonProps, uon_visuals_array_of_posts] /* 209 */,
   [swagrman_commonProps, swagrman_array_of_posts] /* 210 */,
   [julias_wildlife_commonProps, julias_wildlife_array_of_posts] /* 211 */,
+  [lililile3343_commonProps, lililile3343_array_of_posts] /* 212 */,
+
+  [anubis_dimitri_commonProps, anubis_dimitri_array_of_posts] /* 214 */,
+  [desde_la_ciencia_commonProps, desde_la_ciencia_array_of_posts] /* 215 */,
+  [evormax_commonProps, evormax_array_of_posts] /* 216 */,
+
+  [astrospaceq_commonProps, astrospaceq_array_of_posts] /* 218 */,
+  [paracaidismo_commonProps, paracaidismo_array_of_posts] /* 219 */,
 ];

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'astrospaceq';
-const userId = '';
-const prefixUrl = '';
+const userId = '9b6c039b-e3fd-4fd0-8f3f-7c2ae0ea302a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-318/assets/astrospaceq/';
 const followers = 173_720;
 const followed = 167;
 const profileDescription = `Space Content 🪐`;

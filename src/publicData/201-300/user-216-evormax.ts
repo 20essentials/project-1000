@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'evormax';
-const userId = '';
-const prefixUrl = '';
+const userId = '9438d9d3-755f-4625-8ad3-38581a7c0017';
+const prefixUrl = 'https://dominicnikolai.github.io/project-317/assets/evormax/';
 const followers = 222_893;
 const followed = 50;
 const profileDescription = `madrid`;

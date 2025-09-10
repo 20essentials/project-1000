@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'anubis_dimitri';
-const userId = '';
-const prefixUrl = '';
+const userId = 'debe04eb-5f76-4360-9bf5-407222810ddf';
+const prefixUrl = 'https://dominicnikolai.github.io/project-318/assets/anubis-dimitri/';
 const followers = 536_720;
 const followed = 50;
 const profileDescription = `NATURALEZA 🍃`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 6;
+const quantityOfVideos = 4;
 const prefixLetterImages = 'n';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
