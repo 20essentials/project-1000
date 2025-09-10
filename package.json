@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "codegen": "pnpm playwright codegen https://project-1000-t1k-tok-minimalist.vercel.app/",
     "astro": "astro",
     "test": "vitest",
     "test:unit": "vitest run tests/unit",
