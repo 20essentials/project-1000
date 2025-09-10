@@ -1,4 +1,5 @@
 export const USER_TEST = {
+  url: `/?userId=21a87f69-c341-492f-a156-47588fd606dd6`,
   username: 'midudev',
   userId: '21a87f69-c341-492f-a156-47588fd606dd6',
   prefixUrl: 'https://dominicnikolai.github.io/project-208/assets/m1dudev/',
