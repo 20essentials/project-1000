@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'swagrman';
-const userId = '';
-const prefixUrl = '';
+const userId = '3091421e-296b-4164-8b9d-85d39162ba22';
+const prefixUrl = 'https://dominicnikolai.github.io/project-316/assets/swagrman/';
 const followers = 3_420_720;
 const followed = 50;
 const profileDescription = `Official Instagram for Swaggy Wolfdog`;

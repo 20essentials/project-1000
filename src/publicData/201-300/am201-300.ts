@@ -23,6 +23,8 @@ import { hellopersonality_array_of_posts, hellopersonality_commonProps } from '.
 import { julias_wildlife_array_of_posts, julias_wildlife_commonProps } from './user-211-julias-wildlife';
 import { metronovon_array_of_posts, metronovon_commonProps } from './user-206-metronovon';
 import { raytraceforge_array_of_posts, raytraceforge_commonProps } from './user-207-raytraceforge';
+import { swagrman_array_of_posts, swagrman_commonProps } from './user-210-swagrman';
+import { uon_visuals_array_of_posts, uon_visuals_commonProps } from './user-209-uon-visuals';
 
 export const PUBLIC_201_300: arrayOfPosts = [
   [ioannishietbrink_commonProps, ioannishietbrink_array_of_posts] /* 201 */,
@@ -36,6 +38,7 @@ export const PUBLIC_201_300: arrayOfPosts = [
   [metronovon_commonProps, metronovon_array_of_posts] /* 206 */,
   [raytraceforge_commonProps, raytraceforge_array_of_posts] /* 207 */,
   [hazedisplay_commonProps, hazedisplay_array_of_posts] /* 208 */,
-
+  [uon_visuals_commonProps, uon_visuals_array_of_posts] /* 209 */,
+  [swagrman_commonProps, swagrman_array_of_posts] /* 210 */,
   [julias_wildlife_commonProps, julias_wildlife_array_of_posts] /* 211 */,
 ];

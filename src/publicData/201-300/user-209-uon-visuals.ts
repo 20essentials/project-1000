@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'uon_visuals';
-const userId = '';
-const prefixUrl = '';
+const userId = 'aece93db-d76f-411a-b769-acc39bcf28b3';
+const prefixUrl = 'https://dominicnikolai.github.io/project-316/assets/uon-visuals/';
 const followers = 1_270_832;
 const followed = 365;
 const profileDescription = `I'm pushing the limits of technology`;
