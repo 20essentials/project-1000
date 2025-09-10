@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'aurora_boreal';
-const userId = '';
-const prefixUrl = '';
+const userId = 'e39b399a-a5f2-4d2f-8fb1-24cf87b739f2';
+const prefixUrl = 'https://dominicnikolai.github.io/project-318/assets/aurora-boreal/';
 const followers = 495_720;
 const followed = 224;
 const profileDescription = `#AuroraBoreal`;

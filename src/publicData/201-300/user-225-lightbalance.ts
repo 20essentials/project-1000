@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'lightbalance';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd2843236-62c1-4288-9643-1e243988e94d';
+const prefixUrl = 'https://dominicnikolai.github.io/project-320/assets/lightbalance/';
 const followers = 7_202_323;
 const followed = 50;
 const profileDescription = `Neon show Light Balance`;

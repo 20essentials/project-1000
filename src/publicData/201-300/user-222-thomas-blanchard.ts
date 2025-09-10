@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'thomas_blanchard';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c9faacee-698d-4308-b301-13f367975376';
+const prefixUrl = 'https://dominicnikolai.github.io/project-320/assets/thomas-blanchard/';
 const followers = 108_720;
 const followed = 50;
 const profileDescription = `Crystallizations, pigments, Inks, moving worlds`;

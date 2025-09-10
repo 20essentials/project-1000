@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'brain_racked';
-const userId = '';
-const prefixUrl = '';
+const userId = '5c0f7e17-eb6e-41e0-9019-2f30f1da24bb';
+const prefixUrl = 'https://dominicnikolai.github.io/project-319/assets/brain-racked/';
 const followers = 187_720;
 const followed = 226;
 const profileDescription = `Ryan McCoy | Sci-fi Ai art`;

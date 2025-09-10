@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'lotion3d';
-const userId = '';
-const prefixUrl = '';
+const userId = '23e44059-7078-485e-8bcc-cadd0c133fdc';
+const prefixUrl = 'https://dominicnikolai.github.io/project-320/assets/lotion3d/';
 const followers = 37_920;
 const followed = 50;
 const profileDescription = `I make 3D art using Blender`;

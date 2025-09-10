@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'filmsmoviescine';
-const userId = '';
-const prefixUrl = '';
+const userId = '37147c40-ead3-4b8e-9ae4-512ca92dd71c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-319/assets/filmsmoviescine/';
 const followers = 642_234;
 const followed = 50;
 const profileDescription = `Amantes del Cine`;

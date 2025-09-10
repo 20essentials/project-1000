@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'decinttt';
-const userId = '';
-const prefixUrl = '';
+const userId = '2df0cd47-73a3-4dea-8f91-7afa82397003';
+const prefixUrl = 'https://dominicnikolai.github.io/project-318/assets/decinttt/';
 const followers = 92_720;
 const followed = 35;
 const profileDescription = `Animator😼`;

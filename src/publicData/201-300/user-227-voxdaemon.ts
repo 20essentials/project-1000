@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'voxdaemon';
-const userId = '';
-const prefixUrl = '';
+const userId = 'eee13355-b13f-4bd8-9062-f4d2ff97f8e0';
+const prefixUrl = 'https://dominicnikolai.github.io/project-320/assets/voxdaemon/';
 const followers = 505_720;
 const followed = 50;
 const profileDescription = `May Induce Momentary Synesthesia`;

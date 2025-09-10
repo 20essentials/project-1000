@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'hanszimmer';
-const userId = '';
-const prefixUrl = '';
+const userId = '817dad1b-eca1-421b-8cb6-69362f21da0a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-319/assets/hansz1mmer/';
 const followers = 2_720_322;
 const followed = 463;
 const profileDescription = `I can’t wait for you`;
