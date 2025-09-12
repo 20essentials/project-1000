@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'vandermediaa';
-const userId = '';
-const prefixUrl = '';
+const userId = 'fdc09489-97f5-4345-91d9-c7257b182bdb';
+const prefixUrl = 'https://dominicnikolai.github.io/project-322/assets/vandermediaa/';
 const followers = 30_720;
 const followed = 65;
 const profileDescription = `Luke`;
