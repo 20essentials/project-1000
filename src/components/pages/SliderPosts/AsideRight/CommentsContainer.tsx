@@ -17,7 +17,7 @@ export function CommentsContainer({
   updateIsContainerBottomOpen
 }: Props) {
   return (
-    <section className='button-container' onClick={updateIsContainerBottomOpen}>
+    <section className='button-container button-container-of-comments' onClick={updateIsContainerBottomOpen}>
       <Comments />
       <span className='count'>{formatNumberForDisplay(comments)}</span>
     </section>
