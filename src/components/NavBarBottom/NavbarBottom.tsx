@@ -65,7 +65,7 @@ export function NavbarBottom() {
         />
         <span>Search</span>
       </aside>
-      <aside className='wrapper-logo'>
+      <aside className='wrapper-logo wrapper-upload-logo'>
         <UploadButton
           className={uploadClass}
           onClick={() => handleCurrentPage(IS_ACTIVE_BUTTON.UPLOAD)}
