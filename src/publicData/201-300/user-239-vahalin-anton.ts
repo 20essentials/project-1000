@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'vahalin_anton';
-const userId = '';
-const prefixUrl = '';
+const userId = '717d9c95-0b1c-4bba-bd49-970ba19121be';
+const prefixUrl = 'https://dominicnikolai.github.io/project-324/assets/vahalin-anton/';
 const followers = 186_720;
 const followed = 50;
 const profileDescription = `Custom VA/Tattoo VA`;

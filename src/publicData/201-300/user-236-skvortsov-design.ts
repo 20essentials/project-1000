@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'skvortsov_design';
-const userId = '';
-const prefixUrl = '';
+const userId = '02c83a6a-0cb5-443c-b55c-0749635a9108';
+const prefixUrl = 'https://dominicnikolai.github.io/project-324/assets/skvortsov-design/';
 const followers = 50_600;
 const followed = 50;
 const profileDescription = `Senior UI/UX designer`;

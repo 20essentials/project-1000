@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'friqtao';
-const userId = '';
-const prefixUrl = '';
+const userId = '996f0c7f-0a14-439a-ba93-ee6d64a7d5bc';
+const prefixUrl = 'https://dominicnikolai.github.io/project-323/assets/friqtao/';
 const followers = 638_720;
 const followed = 50;
 const profileDescription = `PRE-SAVE “Run away”`;

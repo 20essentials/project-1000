@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'cloud_i0';
-const userId = '';
-const prefixUrl = '';
+const userId = 'b91637a8-7e05-4270-9e81-ec978b5de268';
+const prefixUrl = 'https://dominicnikolai.github.io/project-323/assets/cloud-i0/';
 const followers = 153_720;
 const followed = 157;
 const profileDescription = `3D Wizard`;

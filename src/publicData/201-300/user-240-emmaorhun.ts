@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'emmaorhun';
-const userId = '';
-const prefixUrl = '';
+const userId = 'a5860587-8ee3-46ce-bff9-ac76474184c8';
+const prefixUrl = 'https://dominicnikolai.github.io/project-323/assets/emmaorhun/';
 const followers = 123_720;
 const followed = 367;
 const profileDescription = `creative technologist `;
