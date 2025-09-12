@@ -18,7 +18,7 @@ export function useFollowButtonLogic({
   );
 
   const className = useMemo(() => {
-    return `badge ${
+    return `badge bagde-of-follow-of-the-user ${
       theCreatorOfThisPostIsTheSameUser || thisUserIsFollowed ? 'hiddenBadge' : ''
     }`;
   }, [theCreatorOfThisPostIsTheSameUser, thisUserIsFollowed]);
