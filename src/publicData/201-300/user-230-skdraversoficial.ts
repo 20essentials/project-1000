@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'skdraversoficial';
-const userId = '';
-const prefixUrl = '';
+const userId = '672bd0bf-804d-4e82-acd2-02df2363359e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-322/assets/skdraversoficial/';
 const followers = 13_720;
 const followed = 50;
 const profileDescription = `HECHOS DE TI`;

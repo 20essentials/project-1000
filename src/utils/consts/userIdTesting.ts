@@ -1,1 +1,1 @@
-export const id_user_testing= '8e549bae-30ba-4ad8-b3dc-0e22c482ac2b';
+export const id_user_testing= '672bd0bf-804d-4e82-acd2-02df2363359e'

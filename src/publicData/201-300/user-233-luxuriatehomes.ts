@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'luxuriatehomes';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c0e0ede2-aa7d-4bc4-a65e-e1c9917e9e8d';
+const prefixUrl = 'https://dominicnikolai.github.io/project-321/assets/luxuriatehomes/';
 const followers = 392_720;
 const followed = 580;
 const profileDescription = `Interior | Decor | Hotels`;

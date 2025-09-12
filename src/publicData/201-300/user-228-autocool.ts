@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'autocool';
-const userId = '';
-const prefixUrl = '';
+const userId = '8ff8432a-649c-4d7a-897e-646315ade959';
+const prefixUrl = 'https://dominicnikolai.github.io/project-321/assets/autocool/';
 const followers = 929_720;
 const followed = 322;
 const profileDescription = `🚗`;

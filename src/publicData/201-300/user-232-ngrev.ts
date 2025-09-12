@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ngrev';
-const userId = '';
-const prefixUrl = '';
+const userId = '28bbdd25-9321-4a54-9516-7e7f5e16192d';
+const prefixUrl = 'https://dominicnikolai.github.io/project-322/assets/ngrev/';
 const followers = 384_720;
 const followed = 278;
 const profileDescription = `Multidisciplinary creator blending art.`;

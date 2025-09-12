@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'capturadoendirecto';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd75c470f-e68e-44a6-9731-3103dc9393ad';
+const prefixUrl = 'https://dominicnikolai.github.io/project-321/assets/capturadoendirecto/';
 const followers = 81_720;
 const followed = 39;
 const profileDescription = `🎥 Transmitiendo historias sin filtro. `;
