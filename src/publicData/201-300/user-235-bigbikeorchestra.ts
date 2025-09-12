@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'bigbikeorchestra';
-const userId = '';
-const prefixUrl = '';
+const userId = '94379cd0-0b30-44af-9f7e-97565fadcc8e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-323/assets/bigbikeorchestra/';
 const followers = 169_720;
 const followed = 50;
 const profileDescription = `🚲🪗🎻🔥crazy band from Poland🔥🎷🥁🚲`;

@@ -117,6 +117,7 @@ import { luxuriatehomes_array_of_posts, luxuriatehomes_commonProps } from './use
 import { ngrev_array_of_posts, ngrev_commonProps } from './user-232-ngrev';
 import { skdraversoficial_array_of_posts, skdraversoficial_commonProps } from './user-230-skdraversoficial';
 import { vandermediaa_array_of_posts, vandermediaa_commonProps } from './user-229-vandermediaa';
+import { bigbikeorchestra_array_of_posts, bigbikeorchestra_commonProps } from './user-235-bigbikeorchestra';
 
 export const PUBLIC_201_300: arrayOfPosts = [
   [ioannishietbrink_commonProps, ioannishietbrink_array_of_posts] /* 201 */,
@@ -156,4 +157,5 @@ export const PUBLIC_201_300: arrayOfPosts = [
   [ngrev_commonProps, ngrev_array_of_posts] /* 232 */,
   [luxuriatehomes_commonProps, luxuriatehomes_array_of_posts] /* 233 */,
   [lazaro45ive_commonProps, lazaro45ive_array_of_posts] /* 234 */,
+  [bigbikeorchestra_commonProps, bigbikeorchestra_array_of_posts] /* 235 */,
 ];
