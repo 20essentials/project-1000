@@ -209,7 +209,7 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
 
       <article className='aside-right-buttons aside-right-buttons-postvideo'>
         <section className='button-container btn-container-user-profile isClickableInDrag'>
-          <UserProfile profileImageSrc={profileImageSrc} userId={userId} />
+          <UserProfile profileImageSrc={profileImageSrc} userId={userId}  />
         </section>
         <HeartContainer hearts={hearts} post={props} />
         <CommentsContainer

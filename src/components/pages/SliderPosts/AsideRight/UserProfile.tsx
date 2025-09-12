@@ -40,7 +40,7 @@ export function UserProfile({
   return (
     <>
       <img
-        className={`user-profile ${otherClassName}`}
+        className={`user-profile user-profile-circle-img ${otherClassName}`}
         draggable='false'
         src={profileImageSrc}
         onClick={nextToProfileCreator}
