@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { homeURL, queryParam } from '@/tests/e2e/e2eUtils';
 
-test('When The User Do Click In The Comment Row', async ({ page }) => {
+test('When The User Do Click In The Comment Row The User Creator Section is rendered', async ({ page }) => {
   await page.goto(homeURL);
 
   await expect(page).toHaveURL(url => {
