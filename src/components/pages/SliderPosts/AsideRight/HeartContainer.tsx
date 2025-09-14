@@ -7,9 +7,9 @@ import type {
 import { userUserLikedPosts } from '@/store/useUserLikedPosts';
 import {
   getCommonpropsFromProps,
-  getPostpropsFromProps,
+  getPostpropsFromProps
 } from '@/utils/functions/extractProps';
-import { formatNumberForDisplay } from "@/utils/functions/formatNumberForDisplay";
+import { formatNumberForDisplay } from '@/utils/functions/formatNumberForDisplay';
 
 interface Props {
   post: postProps & postComonProps;
@@ -58,9 +58,11 @@ export function HeartContainer({ hearts, post, otherClassName = '' }: Props) {
   }, [arrayOfSavedPostOfTheUser]);
 
   return (
-    <section className={className} onClick={savePost} >
+    <section className={className} onClick={savePost}>
       <Heart />
-      <span className='count '>{formatNumberForDisplay(currentHearts)}</span>
+      <span className='count num-of-hearts-of-the-post' data-num-of-hearts={currentHearts}>
+        {formatNumberForDisplay(currentHearts)}
+      </span>
     </section>
   );
 }
