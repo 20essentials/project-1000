@@ -7,9 +7,9 @@ import type {
 import { useUserSavedPosts } from '@/store/useUserSavedPosts';
 import {
   getCommonpropsFromProps,
-  getPostpropsFromProps,
+  getPostpropsFromProps
 } from '@/utils/functions/extractProps';
-import { formatNumberForDisplay } from "@/utils/functions/formatNumberForDisplay";
+import { formatNumberForDisplay } from '@/utils/functions/formatNumberForDisplay';
 
 interface Props {
   post: postProps & postComonProps;
@@ -59,7 +59,9 @@ export function SaveContainer({ saved, post }: Props) {
   return (
     <section className={className} onClick={savePost}>
       <Save />
-      <span className='count'>{formatNumberForDisplay(savedCount)}</span>
+      <span className='count post-save-count' data-num-of-saves={savedCount}>
+        {formatNumberForDisplay(savedCount)}
+      </span>
     </section>
   );
 }
