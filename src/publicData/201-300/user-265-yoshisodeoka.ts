@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'yoshisodeoka';
-const userId = '';
-const prefixUrl = '';
+const userId = '8f9a2333-44cd-4cfb-bfa8-aa8b21b1cb70';
+const prefixUrl = 'https://dominicnikolai.github.io/project-330/assets/yoshisodeoka/';
 const followers = 32_720_322;
 const followed = 22;
 const profileDescription = `1:61 ━⬤━━━━ 8:03`;

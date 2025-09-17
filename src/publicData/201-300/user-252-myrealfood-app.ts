@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'myrealfood_app';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ef28712e-9084-4dae-98e3-88bf9489e4ee';
+const prefixUrl = 'https://dominicnikolai.github.io/project-328/assets/myrealfood-app/';
 const followers = 1_922_720;
 const followed = 50;
 const profileDescription = `Plan Nutricional`;

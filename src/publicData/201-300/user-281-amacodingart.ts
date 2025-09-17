@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'amacodingart';
-const userId = '';
-const prefixUrl = '';
+const userId = '81089997-2932-40e5-a843-177db9c8b457';
+const prefixUrl = 'https://dominicnikolai.github.io/project-333/assets/amacodingart/';
 const followers = 249_720;
 const followed = 84;
 const profileDescription = `Art is never finished, only abandoned`;

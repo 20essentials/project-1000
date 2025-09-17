@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'professorjuliolombaldo';
-const userId = '';
-const prefixUrl = '';
+const userId = 'cf36d570-7fcc-4260-933f-ea1fbadba8d7';
+const prefixUrl = 'https://dominicnikolai.github.io/project-334/assets/prof3ssorjuliolombaldo/';
 const followers = 7_298_323;
 const followed = 508;
 const profileDescription = `Professor PhD Matemátic`;

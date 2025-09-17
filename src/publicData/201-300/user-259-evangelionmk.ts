@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'evangelionmk';
-const userId = '';
-const prefixUrl = '';
+const userId = 'a085eb24-82f2-425a-a084-512bcdc0b506';
+const prefixUrl = 'https://dominicnikolai.github.io/project-329/assets/ev4ngelionmk/';
 const followers = 123_720;
 const followed = 128;
 const profileDescription = `𝗬𝗼𝘂𝗿 𝗱𝗮𝗶𝗹𝘆 𝗱𝗼𝘀𝗲 𝗼𝗳 𝗘𝘃𝗮𝗻𝗴𝗲𝗹𝗶𝗼𝗻`;

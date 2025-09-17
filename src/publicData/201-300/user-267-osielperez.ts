@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'osielperez';
-const userId = '';
-const prefixUrl = '';
+const userId = '7dbeaf9c-de8b-4200-b9a5-ba0f28d8243f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-332/assets/osielp3rez/';
 const followers = 58_720;
 const followed = 50;
 const profileDescription = `Full Stack Developer | Entrepreneur`;

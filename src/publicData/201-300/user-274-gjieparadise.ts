@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'gjieparadise';
-const userId = '';
-const prefixUrl = '';
+const userId = '1b9f7e51-3e0f-4e95-8f4d-8a86871f097e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-333/assets/gjieparadise/';
 const followers = 588_720;
 const followed = 104;
 const profileDescription = `Based in NYC📍`;

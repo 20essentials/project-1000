@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'soyalvaroperez';
-const userId = '';
-const prefixUrl = '';
+const userId = '829671dc-235b-42be-8d16-2a49d27edb7b';
+const prefixUrl = 'https://dominicnikolai.github.io/project-334/assets/soy4lvarop3rez/';
 const followers = 136_720;
 const followed = 72;
 const profileDescription = `Te enseño a crear diapositivas profesionales`;

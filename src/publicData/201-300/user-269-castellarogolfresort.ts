@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'castellarogolfresort';
-const userId = '';
-const prefixUrl = '';
+const userId = '56c12514-08b9-449b-8e6d-4d9679764467';
+const prefixUrl = 'https://dominicnikolai.github.io/project-331/assets/cast3llarogolfresort/';
 const followers = 898_720;
 const followed = 50;
 const profileDescription = `Golf, piscina & colline liguri • Resort`;

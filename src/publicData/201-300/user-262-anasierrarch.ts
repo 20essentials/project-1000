@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'anasierrarch';
-const userId = '';
-const prefixUrl = '';
+const userId = 'fc04728a-3130-4843-a56d-370d5222be80';
+const prefixUrl = 'https://dominicnikolai.github.io/project-329/assets/an4sierrarch/';
 const followers = 96_720;
 const followed = 322;
 const profileDescription = `Arquitecta`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 2;
+const quantityOfVideos = 5;
 const prefixLetterImages = 'n';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'math_epik1100';
-const userId = '';
-const prefixUrl = '';
+const userId = '26ecdff7-28d2-47be-8e9e-d1d17298b1b5';
+const prefixUrl = 'https://dominicnikolai.github.io/project-332/assets/math-epik1100/';
 const followers = 262_720;
 const followed = 53;
 const profileDescription = `Math concepts simplified using animations📐📊`;

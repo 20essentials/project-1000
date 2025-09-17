@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'bootroombible';
-const userId = '';
-const prefixUrl = '';
+const userId = '166fc7fb-a010-42ef-8502-499c80102d51';
+const prefixUrl = 'https://dominicnikolai.github.io/project-331/assets/bootroombible/';
 const followers = 153_720;
 const followed = 50;
 const profileDescription = `Checking out the latest football boots.`;

@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'johal_geometrics';
-const userId = '';
-const prefixUrl = '';
+const userId = '541db88a-0f10-4725-9b51-251e67318ad2';
+const prefixUrl = 'https://dominicnikolai.github.io/project-332/assets/johal-geometrics/';
 const followers = 141_720;
 const followed = 272;
 const profileDescription = `Chromesthetic geometric paintings inspired by music`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 6;
+const quantityOfVideos = 4;
 const prefixLetterImages = 'n';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;

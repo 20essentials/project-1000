@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'zmeika';
-const userId = '';
-const prefixUrl = '';
+const userId = 'e627c233-349f-43aa-a45b-f78f13e94343';
+const prefixUrl = 'https://dominicnikolai.github.io/project-326/assets/zmeika/';
 const followers = 131_720;
 const followed = 41;
 const profileDescription = `Inspired by Slavic Folklore`;

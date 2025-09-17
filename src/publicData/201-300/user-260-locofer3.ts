@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'locofer3';
-const userId = '';
-const prefixUrl = '';
+const userId = '898d8a68-976e-427d-b49f-c7cda34ade70';
+const prefixUrl = 'https://dominicnikolai.github.io/project-329/assets/locofer3/';
 const followers = 812_720;
 const followed = 432;
 const profileDescription = `historia`;

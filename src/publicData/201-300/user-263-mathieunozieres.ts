@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'mathieunozieres';
-const userId = '';
-const prefixUrl = '';
+const userId = '840f776f-4c67-4485-a2f5-a105d5793ed9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-332/assets/mathieunozieres/';
 const followers = 2_720_322;
 const followed = 50;
 const profileDescription = ` The journey of a modern fine artist`;

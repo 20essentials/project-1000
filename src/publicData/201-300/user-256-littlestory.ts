@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'littlestory';
-const userId = '';
-const prefixUrl = '';
+const userId = 'f7921274-e6e2-42a6-b6be-a683931b34f6';
+const prefixUrl = 'https://dominicnikolai.github.io/project-327/assets/littlestory/';
 const followers = 358_720;
 const followed = 50;
 const profileDescription = `📽️`;

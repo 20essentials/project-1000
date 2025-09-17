@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'mundo_curiosidad';
-const userId = '';
-const prefixUrl = '';
+const userId = 'b9192ad0-a76c-4dcc-bb64-f39e4c516a83';
+const prefixUrl = 'https://dominicnikolai.github.io/project-328/assets/mundo-curiosidad/';
 const followers = 437_720;
 const followed = 36;
 const profileDescription = `🐈 La curiosidad mató al gato pero no a mí`;

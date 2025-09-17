@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'kaligrafi_atolyesi';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ce3b80fe-9f75-4070-a750-91cc1a62d8e6';
+const prefixUrl = 'https://dominicnikolai.github.io/project-334/assets/kaligrafi-atolyesi/';
 const followers = 357_000;
 const followed = 733;
 const profileDescription = `Kaligraf & İmza Tasarım Uzmanı`;

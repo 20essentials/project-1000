@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'jzollerart';
-const userId = '';
-const prefixUrl = '';
+const userId = '0c485e51-1ce1-40a8-a1d8-05555282019e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-333/assets/jzollerart/';
 const followers = 63_270;
 const followed = 278;
 const profileDescription = `Artist living and painting in Miami`;

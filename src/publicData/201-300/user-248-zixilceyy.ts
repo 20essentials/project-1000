@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'zixilceyy';
-const userId = '';
-const prefixUrl = '';
+const userId = '90d7392d-f1c7-424f-b25c-bc5253ac63bc';
+const prefixUrl = 'https://dominicnikolai.github.io/project-326/assets/zixilceyy/';
 const followers = 62_720;
 const followed = 73;
 const profileDescription = `🎬 3D/CGI/VFX Artist`;

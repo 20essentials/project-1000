@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'prompt_soru';
-const userId = '';
-const prefixUrl = '';
+const userId = '1bff4cec-1c9d-4b57-8865-5d1af2907132';
+const prefixUrl = 'https://dominicnikolai.github.io/project-328/assets/prompt-soru/';
 const followers = 123_720;
 const followed = 202;
 const profileDescription = `🎯Soru Insights Lab⚡️`;

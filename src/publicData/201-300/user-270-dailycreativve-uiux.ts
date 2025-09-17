@@ -4,9 +4,9 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'dailycreativve_uiux';
-const userId = '';
-const prefixUrl = '';
+const username = 'dailycreative_uiux';
+const userId = '229a6b64-d87e-4d55-b000-24ef861767d6';
+const prefixUrl = 'https://dominicnikolai.github.io/project-331/assets/dailycreativve-uiux/';
 const followers = 79_432;
 const followed = 422;
 const profileDescription = `UI Design`;

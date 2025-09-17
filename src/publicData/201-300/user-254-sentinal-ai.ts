@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'sentinal_ai';
-const userId = '';
-const prefixUrl = '';
+const userId = '2f99d8d4-46b8-4c49-ab50-84d94c2417fa';
+const prefixUrl = 'https://dominicnikolai.github.io/project-328/assets/sentinal-ai/';
 const followers = 197_899;
 const followed = 54;
 const profileDescription = `𝐀𝐧𝐢𝐦𝐞 𝐑𝐞𝐞𝐥𝐬`;

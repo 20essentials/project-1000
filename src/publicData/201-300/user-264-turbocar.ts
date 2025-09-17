@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'turbocar';
-const userId = '';
-const prefixUrl = '';
+const userId = 'eb471ef0-d036-454b-8712-9cf7fe92fcd9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-330/assets/turbocar/';
 const followers = 579_720;
 const followed = 50;
 const profileDescription = `Luxury Vibe`;
@@ -64,7 +64,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const amUserPrivate_commonProps = generateExactlyCommonProps({
+export const turbocar_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -73,7 +73,7 @@ export const amUserPrivate_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const amUserPrivate_videos = generateArrayPostsOfVideos({
+const turbocar_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -81,14 +81,14 @@ const amUserPrivate_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const amUserPrivate_images = generateArrayPostsOfImages({
+const turbocar_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const amUserPrivate_array_of_posts = [
-  ...amUserPrivate_images,
-  ...amUserPrivate_videos
+export const turbocar_array_of_posts = [
+  ...turbocar_images,
+  ...turbocar_videos
 ];

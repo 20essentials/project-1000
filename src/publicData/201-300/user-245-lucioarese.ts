@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'lucioarese';
-const userId = '';
-const prefixUrl = '';
+const userId = '69361739-d82a-4209-82e4-c55eea985048';
+const prefixUrl = 'https://dominicnikolai.github.io/project-326/assets/lucioarese/';
 const followers = 177_720;
 const followed = 50;
 const profileDescription = ` Composer, guitarist, pianist, architect, visual artist, award winning filmmaker `;

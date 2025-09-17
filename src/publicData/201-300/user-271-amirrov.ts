@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'amirrov';
-const userId = '';
-const prefixUrl = '';
+const userId = '780fcee6-dd12-471c-b6d4-980d52f2316f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-331/assets/amirrov/';
 const followers = 76_720;
 const followed = 50;
 const profileDescription = `📍 Dubai`;

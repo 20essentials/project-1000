@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'project_comte';
-const userId = '';
-const prefixUrl = '';
+const userId = 'a26a260e-1976-480d-a6ed-344e2c08ec0d';
+const prefixUrl = 'https://dominicnikolai.github.io/project-326/assets/project-comte/';
 const followers = 248_720;
 const followed = 227;
 const profileDescription = `♱ making sick sh!t`;

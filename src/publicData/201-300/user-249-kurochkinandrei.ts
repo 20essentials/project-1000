@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'kurochkinandrei';
-const userId = '';
-const prefixUrl = '';
+const userId = '67ecba5d-c9a1-42f4-99cc-a1f23dc9d34a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-325/assets/kurochkinandrei/';
 const followers = 1_111_789;
 const followed = 50;
 const profileDescription = `Разрываю шаблоны и стереотипы`;

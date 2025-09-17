@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'infinity_math';
-const userId = '';
-const prefixUrl = '';
+const userId = '9b0fd5dc-ecb5-4f4a-aa02-33b1d42e7298';
+const prefixUrl = 'https://dominicnikolai.github.io/project-329/assets/infinity-math/';
 const followers = 372_720;
 const followed = 79;
 const profileDescription = `📚 Cursuri de Matematică pentru gimnaziu`;

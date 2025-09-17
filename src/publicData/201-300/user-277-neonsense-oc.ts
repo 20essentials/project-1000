@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'neonsense_oc';
-const userId = '';
-const prefixUrl = '';
+const userId = '25ea4775-354c-44d6-aaf4-258d9351c485';
+const prefixUrl = 'https://dominicnikolai.github.io/project-334/assets/neonsense-oc/';
 const followers = 387_922;
 const followed = 257;
 const profileDescription = `MI`;

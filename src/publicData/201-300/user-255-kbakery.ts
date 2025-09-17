@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'kbakery';
-const userId = '';
-const prefixUrl = '';
+const userId = '863095df-4c47-4f02-a14f-4491ca00f692';
+const prefixUrl = 'https://dominicnikolai.github.io/project-327/assets/kbakery/';
 const followers = 672_720;
 const followed = 50;
 const profileDescription = `Torte personalizzate`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'carmoody';
-const userId = '';
-const prefixUrl = '';
+const userId = 'f39bcace-9470-49a7-ba93-dcfbb68392cb';
+const prefixUrl = 'https://dominicnikolai.github.io/project-327/assets/carmoody/';
 const followers = 223_720;
 const followed = 96;
 const profileDescription = `Worldwide FREE Shipping`;

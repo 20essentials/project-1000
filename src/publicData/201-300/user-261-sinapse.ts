@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'sinapse';
-const userId = '';
-const prefixUrl = '';
+const userId = '2706865b-5f0e-43e3-a61a-21546cf5dcde';
+const prefixUrl = 'https://dominicnikolai.github.io/project-330/assets/sinapse/';
 const followers = 91_720;
 const followed = 50;
 const profileDescription = `Orgulho em ser professor`;

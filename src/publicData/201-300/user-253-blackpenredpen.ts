@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'blackpenredpen';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ecdea009-d702-4ead-af7d-af64144ed53a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-327/assets/blackpenredpen/';
 const followers = 586_720;
 const followed = 50;
 const profileDescription = `calculus`;
@@ -14,7 +14,8 @@ const prefixLetterVideos = 'v';
 const quantityOfVideos = 5;
 const prefixLetterImages = 'n';
 const quantityOfImages = 0;
-const profileImageSrc = `${prefixUrl}p3rfil.avif`;
+// const profileImageSrc = `${prefixUrl}p3rfil.avif`;
+const profileImageSrc = `https://20essentials.github.io/project-000-940/assets/j8.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
