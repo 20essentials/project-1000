@@ -4,24 +4,24 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'amUserPrivate';
+const username = 'gclassgang';
 const userId = '';
 const prefixUrl = '';
-const followers = 100_000;
-const followed = 50;
-const profileDescription = `Hello`;
+const followers = 761_720;
+const followed = 571;
+const profileDescription = `G63 | AMG | BRABUS`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 6;
-const prefixLetterImages = 'f';
+const quantityOfVideos = 4;
+const prefixLetterImages = 'n';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
-  ``, /*1*/
-  ``, /*2*/
-  ``, /*3*/
-  ``, /*4*/
+  `Luxury 🖤❤️‍🔥 `, /*1*/
+  `#topcar #topcardesign #topcarfamily #gclass #g63 #g63topcar #g63inferno #gwagen #tuning #tuningcar #carbon #carbonfiber`, /*2*/
+  `#caliwheels #californiawheels #brabus #pebblebeach #pebblebeachconcours`, /*3*/
+  `😮‍💨🧡`, /*4*/
   ``, /*5*/
   ``, /*6*/
   ``, /*7*/
@@ -64,7 +64,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const amUserPrivate_commonProps = generateExactlyCommonProps({
+export const gclassgang_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -73,7 +73,7 @@ export const amUserPrivate_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const amUserPrivate_videos = generateArrayPostsOfVideos({
+const gclassgang_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -81,14 +81,14 @@ const amUserPrivate_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const amUserPrivate_images = generateArrayPostsOfImages({
+const gclassgang_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const amUserPrivate_array_of_posts = [
-  ...amUserPrivate_images,
-  ...amUserPrivate_videos
+export const gclassgang_array_of_posts = [
+  ...gclassgang_images,
+  ...gclassgang_videos
 ];

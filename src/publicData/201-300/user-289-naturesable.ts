@@ -4,12 +4,12 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'amUserPrivate';
+const username = 'naturesable';
 const userId = '';
 const prefixUrl = '';
-const followers = 100_000;
-const followed = 50;
-const profileDescription = `Hello`;
+const followers = 3_922_322;
+const followed = 489;
+const profileDescription = `Let's Discover the World Together`;
 const prefixLetterVideos = 'v';
 const quantityOfVideos = 6;
 const prefixLetterImages = 'f';
@@ -18,12 +18,12 @@ const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
-  ``, /*1*/
-  ``, /*2*/
-  ``, /*3*/
-  ``, /*4*/
-  ``, /*5*/
-  ``, /*6*/
+  `#asmr #asmrcommunity #asmrsounds #asmrvideo #oddlysatisfying #oddlysatisfyingvideo #satisfy #satisfying #satisfyingasmr #satisfyingcontent #satisfyingpost #satisfyingposts #satisfyingslime #satisfyingsounds #satisfyingvid #satisfyingvideo#slimevideo#sosatisfying`, /*1*/
+  `#satisfyingslime #satisfyingsounds #satisfyingvid #satisfyingvideo#slimevideo#sosatisfying`, /*2*/
+  `satisfyingvideo #slimevideo#sosatisfying`, /*3*/
+  `#satisfyingsounds`, /*4*/
+  `#satisfy`, /*5*/
+  `#oddlysatisfying `, /*6*/
   ``, /*7*/
   ``, /*8*/
   ``, /*9*/ 
@@ -64,7 +64,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const amUserPrivate_commonProps = generateExactlyCommonProps({
+export const naturesable_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -73,7 +73,7 @@ export const amUserPrivate_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const amUserPrivate_videos = generateArrayPostsOfVideos({
+const naturesable_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -81,14 +81,14 @@ const amUserPrivate_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const amUserPrivate_images = generateArrayPostsOfImages({
+const naturesable_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const amUserPrivate_array_of_posts = [
-  ...amUserPrivate_images,
-  ...amUserPrivate_videos
+export const naturesable_array_of_posts = [
+  ...naturesable_images,
+  ...naturesable_videos
 ];

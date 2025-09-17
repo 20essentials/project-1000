@@ -4,26 +4,26 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'amUserPrivate';
+const username = 'python';
 const userId = '';
 const prefixUrl = '';
-const followers = 100_000;
+const followers = 2_720_832;
 const followed = 50;
-const profileDescription = `Hello`;
+const profileDescription = `🐍`;
 const prefixLetterVideos = 'v';
 const quantityOfVideos = 6;
-const prefixLetterImages = 'f';
+const prefixLetterImages = 'n';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
-  ``, /*1*/
-  ``, /*2*/
-  ``, /*3*/
-  ``, /*4*/
-  ``, /*5*/
-  ``, /*6*/
+  `#python #pythonprogramming #programacion #programming #turtle #graficos #tecnologia `, /*1*/
+  `#pythonprogramming`, /*2*/
+  `#pythonhub #pythonquiz #pythonlearning #pythonprogramming #pythondeveloper #python3 #programming #pythonprojects #pythonbeginner #coding #draw #drawing #turtle #graphicdesign #graphic #graphics #canva #reel #reels #reelsinstagram #code #coder #html #css #java #javascript #js #meme #memes`, /*3*/
+  `#code`, /*4*/
+  `#code`, /*5*/
+  `#code`, /*6*/
   ``, /*7*/
   ``, /*8*/
   ``, /*9*/ 
@@ -64,7 +64,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const amUserPrivate_commonProps = generateExactlyCommonProps({
+export const python_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -73,7 +73,7 @@ export const amUserPrivate_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const amUserPrivate_videos = generateArrayPostsOfVideos({
+const python_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -81,14 +81,14 @@ const amUserPrivate_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const amUserPrivate_images = generateArrayPostsOfImages({
+const python_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const amUserPrivate_array_of_posts = [
-  ...amUserPrivate_images,
-  ...amUserPrivate_videos
+export const python_array_of_posts = [
+  ...python_images,
+  ...python_videos
 ];
