@@ -17,7 +17,7 @@ export function ShareContainer({
   updateIsContainerShareOpen
 }: Props) {
   return (
-    <section className='button-container' onClick={updateIsContainerShareOpen}>
+    <section className='button-container button-share-post' onClick={updateIsContainerShareOpen}>
       <Share />
       <span className='count'>{formatNumberForDisplay(shared)}</span>
     </section>
