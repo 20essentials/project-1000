@@ -9,7 +9,7 @@ import { URL_PHOTO_MISSING_IMAGE } from '@/utils/consts/urls';
 import { useSwipeXShareAsideBottom } from '@/hooks/useSwipeXShareAsideBottom';
 import { DeletePostItemShare } from './DeletePostItemShare';
 
-let isDownloading = false; 
+let isDownloading = false;
 
 type ItemType = {
   title: string;
@@ -700,9 +700,13 @@ export function AsideBottomOfShare({
                 );
               }
 
+              const pinterestClassName =
+                index === MODE_SHARE.PINTEREST ? 'pinterest-button-share' : '';
+              const discordClassName =
+                index === MODE_SHARE.DISCORD ? 'discord-button-share' : '';
               return (
                 <aside
-                  className='item-share isClickableInDrag'
+                  className={`item-share isClickableInDrag ${discordClassName}  ${pinterestClassName}`}
                   key={id}
                   onClick={e => {
                     e.stopPropagation();
