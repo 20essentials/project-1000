@@ -27,7 +27,7 @@ export function AsideText({
 
   return (
     <section className={className} >
-      <p onClick={handleDescription}>@{username}</p>
+      <p onClick={handleDescription} className='username-title-paragraph'>@{username}</p>
       {showDescription && description && (
         <p onClick={handleDescription}>{description}</p>
       )}
