@@ -20,11 +20,11 @@ export function CircleOfCapture({
       )}
 
       {modePhoto ? (
-        <aside className='circle-of-capture' onClick={capturaImagen}>
+        <aside className='circle-of-capture circle-of-capture-photo' onClick={capturaImagen}>
           <aside className='circle-inner'></aside>
         </aside>
       ) : !grabando ? (
-        <aside className='circle-of-capture' onClick={iniciaGrabacion}>
+        <aside className='circle-of-capture circle-of-capture-video' onClick={iniciaGrabacion}>
           <aside className='circle-inner circle-inner-red'></aside>
         </aside>
       ) : (
