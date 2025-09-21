@@ -224,7 +224,7 @@ export function PostVideo(props: postProps & postComonProps & { idx: number }) {
           post={props}
         />
         <section className='button-container btn-container-vinyl'>
-          <img className='vinyl' src={baseURL('/assets/vinyl.png')} alt='Vinyl' />
+          <img className='vinyl' src={baseURL('/assets/vinyl.avif')} alt='Vinyl' />
           <img
             className='user-profile-vinyl'
             draggable='false'

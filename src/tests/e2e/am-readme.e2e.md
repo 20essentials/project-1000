@@ -1,4 +1,2 @@
-// ?search=texto
-// ?upload=view
-// ?inbox=view
-// ?profile=view
+// Home ✅ (Followed and follow falta probar)
+// Search ✅

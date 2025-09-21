@@ -157,6 +157,7 @@ export function SectionUpload({ modePhoto }: { modePhoto: boolean }) {
           <input
             type='file'
             multiple
+            data-testid="input-upload-photo"
             name='files'
             accept='image/*'
             hidden

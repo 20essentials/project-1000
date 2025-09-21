@@ -260,7 +260,7 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
           <section className='button-container btn-container-vinyl'>
             <img
               className='vinyl'
-              src={baseURL('/assets/vinyl.png')}
+              src={baseURL('/assets/vinyl.avif')}
               alt='Vinyl'
             />
             <img
