@@ -1,3 +1,3 @@
-// Home ✅ (Followed and follow falta probar)
+// Home ✅ 
 // Search ✅
-//Upload ✅
+// Upload ✅
