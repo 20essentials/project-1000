@@ -7,6 +7,7 @@ export function TextareaDescriptionPost() {
   return (
     <aside className='container-description'>
       <textarea
+        spellCheck='false'
         className='scroll-y-textarea'
         placeholder={`Here is the description of your Post #yes #fyp #forYou`}
         onChange={e => setDescriptionPost({ descriptionPost: e.target.value })}

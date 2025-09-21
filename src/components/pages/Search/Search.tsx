@@ -144,7 +144,9 @@ export function Search() {
           type='text'
           placeholder='Search some user...'
           autoFocus={true}
+          data-testid="input-search"
           value={searchText}
+          spellCheck="false"
         />
         <img
           src='/assets/search-gif.gif'
