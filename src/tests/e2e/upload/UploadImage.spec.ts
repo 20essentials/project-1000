@@ -14,4 +14,5 @@ test('the upload sections really upload an image', async ({ page }) => {
   );
   expect(fileCount).toBe(1);
   await page.locator('.keycap').click();
+  await expect(page.locator('.content-post')).toHaveCount(1);
 });

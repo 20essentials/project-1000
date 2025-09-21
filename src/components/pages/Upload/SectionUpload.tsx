@@ -169,6 +169,7 @@ export function SectionUpload({ modePhoto }: { modePhoto: boolean }) {
             type='file'
             name='files'
             accept='video/*'
+            data-testid="input-upload-video"
             hidden
             ref={inputRef}
             onChange={handleFileChange}
