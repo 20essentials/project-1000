@@ -9,4 +9,9 @@ test('the upload sections really upload an image', async ({ page }) => {
   const inputUploadPhoto = page.getByTestId('input-upload-photo');
   const filePath = path.resolve(import.meta.dirname, 'image-test.avif');
   await inputUploadPhoto.setInputFiles(filePath);
+  const fileCount = await inputUploadPhoto.evaluate(
+    (input: HTMLInputElement) => input.files?.length ?? 0
+  );
+  expect(fileCount).toBe(1);
+  await page.locator('.keycap').click();
 });
