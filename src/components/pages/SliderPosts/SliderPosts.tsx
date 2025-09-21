@@ -13,6 +13,7 @@ import { useUserCreator } from '@/store/useUserCreator';
 import { useUserHasSeenPostOrProfileFromUrl } from '@/store/useUserHasSeenPostOrProfileFromUrl';
 import { useGetArrayOfFollowedAccounts } from '@/hooks/useGetArrayOfFollowedAccounts';
 import { ModalAlert } from './ModalAlert';
+import { $ } from '@/utils/functions/dom';
 
 export function SliderPosts() {
   const sliderRef = useRef<HTMLElement | null>(null);
@@ -62,7 +63,8 @@ export function SliderPosts() {
     } else if (renderInboxSection) {
       setCurrentPage(IS_ACTIVE_BUTTON.INBOX);
     } else if (renderProfileSection) {
-      setCurrentPage(IS_ACTIVE_BUTTON.PROFILE);
+      const $wrapper = $('.wrapper-profile-user');
+      $wrapper?.click();
     }
   }, [userHasSeenPostOrProfileFromUrl]);
 
