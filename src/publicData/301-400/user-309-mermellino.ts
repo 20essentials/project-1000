@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'mermellino';
-const userId = '';
-const prefixUrl = '';
+const userId = '928e19ee-3cbd-418a-9e42-802111abab8c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-338/assets/memellino/';
 const followers = 339_899;
 const followed = 50;
 const profileDescription = `Medellín👛`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'infoapuntes';
-const userId = '';
-const prefixUrl = '';
+const userId = '2e744c2e-2ae9-4914-8d10-f7d7da257a3f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-338/assets/infoapuntes/';
 const followers = 109_987;
 const followed = 112;
 const profileDescription = `Informática y IT explicado de forma sencilla`;

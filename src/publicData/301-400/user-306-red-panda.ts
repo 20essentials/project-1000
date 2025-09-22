@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'red_panda';
-const userId = '';
-const prefixUrl = '';
+const userId = '6c2d4764-922d-4621-8cd8-5b5d9cd605ec';
+const prefixUrl = 'https://dominicnikolai.github.io/project-338/assets/red-panda/';
 const followers = 899_882;
 const followed = 452;
 const profileDescription = `🟥 Red Panda 🔴`;

@@ -9,6 +9,12 @@ import { soya_jp_array_of_posts, soya_jp_commonProps } from './user-305-soya-jp'
 import { visualbricks_array_of_posts, visualbricks_commonProps } from './user-304-visualbricks';
 import { angelina_taylor_array_of_posts, angelina_taylor_commonProps } from './user-308-angelina-taylor';
 import { design_genie_array_of_posts, design_genie_commonProps } from './user-311-design-genie';
+import { helnium_array_of_posts, helnium_commonProps } from './user-307-helnium';
+import { infoapuntes_array_of_posts, infoapuntes_commonProps } from './user-310-infoapuntes';
+import { kirill_gladkiy_array_of_posts, kirill_gladkiy_commonProps } from './user-312-kirill-gladkiy';
+import { mermellino_array_of_posts, mermellino_commonProps } from './user-309-mermellino';
+import { red_panda_array_of_posts, red_panda_commonProps } from './user-306-red-panda';
+import { tresdglasses_array_of_posts, tresdglasses_commonProps } from './user-313-tresdglasses';
 
 export const PUBLIC_301_400: arrayOfPosts = [
   [seanaiux_commonProps, seanaiux_array_of_posts] /* 301 */,
@@ -16,8 +22,12 @@ export const PUBLIC_301_400: arrayOfPosts = [
   [nercnews_commonProps, nercnews_array_of_posts] /* 303 */,
   [visualbricks_commonProps, visualbricks_array_of_posts] /* 304 */,
   [soya_jp_commonProps, soya_jp_array_of_posts] /* 305 */,
-
+  [red_panda_commonProps, red_panda_array_of_posts] /* 306 */,
+  [helnium_commonProps, helnium_array_of_posts] /* 307 */,
   [angelina_taylor_commonProps, angelina_taylor_array_of_posts] /* 308 */,
-
+  [mermellino_commonProps, mermellino_array_of_posts] /* 309 */,
+  [infoapuntes_commonProps, infoapuntes_array_of_posts] /* 310 */,
   [design_genie_commonProps, design_genie_array_of_posts] /* 311 */,
+  [kirill_gladkiy_commonProps, kirill_gladkiy_array_of_posts] /* 312 */,
+  [tresdglasses_commonProps, tresdglasses_array_of_posts] /* 313 */,
 ];

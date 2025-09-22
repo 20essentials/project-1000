@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'helnium';
-const userId = '';
-const prefixUrl = '';
+const userId = '6aae5c9a-4483-416e-9ac0-c85a2b79605c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-338/assets/helnium/';
 const followers = 392_899;
 const followed = 23;
 const profileDescription = `Geneva 🇨🇭| Protected Concept`;

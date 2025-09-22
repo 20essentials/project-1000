@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'tresdglasses';
-const userId = '';
-const prefixUrl = '';
+const userId = '4c99aa88-286a-40f8-9859-32d4aefd02b1';
+const prefixUrl = 'https://dominicnikolai.github.io/project-338/assets/tresdglasses/';
 const followers = 165_889;
 const followed = 50;
 const profileDescription = `Jugando en Blender`;

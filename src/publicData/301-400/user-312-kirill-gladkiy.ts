@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'kirill_gladkiy';
-const userId = '';
-const prefixUrl = '';
+const userId = 'a0190470-8bfc-423f-a104-2f9d0bc2405f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-338/assets/kirill-gladkiy/';
 const followers = 658_898;
 const followed = 63;
 const profileDescription = `cgi • motion design • animation`;
