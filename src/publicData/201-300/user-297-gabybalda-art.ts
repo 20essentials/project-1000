@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'gabybalda_art';
-const userId = '';
-const prefixUrl = '';
+const userId = '4be3bc57-bc4f-4618-bbc3-d4b7c520814a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-336/assets/gabybalda-art/';
 const followers = 486_898;
 const followed = 531;
 const profileDescription = `I love painting 👩🏻‍🎨`;

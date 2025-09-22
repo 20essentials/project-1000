@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'theappwizard2408';
-const userId = '';
-const prefixUrl = '';
+const userId = '2f22f5b1-9a03-4cae-ae04-2cab8ce753ee';
+const prefixUrl = 'https://dominicnikolai.github.io/project-335/assets/theappwizard2408/';
 const followers = 7_923_322;
 const followed = 444;
 const profileDescription = `📱 SwiftUI | Flutter | Python | AI🎨`;

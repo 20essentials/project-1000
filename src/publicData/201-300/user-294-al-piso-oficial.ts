@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'al_piso_oficial';
-const userId = '';
-const prefixUrl = '';
+const userId = '162a0b89-1948-437d-99dc-963bd484fa10';
+const prefixUrl = 'https://dominicnikolai.github.io/project-336/assets/al-piso-oficial/';
 const followers = 901_898;
 const followed = 832;
 const profileDescription = `Creador de contenido🎥`;

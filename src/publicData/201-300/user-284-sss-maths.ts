@@ -5,15 +5,15 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'sss_maths';
-const userId = '';
-const prefixUrl = '';
+const userId = 'b4459d06-8ac3-415e-b05e-a3977b4846da';
+const prefixUrl = 'https://dominicnikolai.github.io/project-335/assets/sss-maths/';
 const followers = 304_720;
 const followed = 50;
 const profileDescription = `Basic mathematics 💕`;
 const prefixLetterVideos = 'v';
 const quantityOfVideos = 0;
 const prefixLetterImages = 'f';
-const quantityOfImages = 6;
+const quantityOfImages = 4;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */

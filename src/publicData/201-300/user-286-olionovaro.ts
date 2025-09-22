@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'olionovaro';
-const userId = '';
-const prefixUrl = '';
+const userId = '02737fc9-5249-4053-8edc-3d1ac8b8b079';
+const prefixUrl = 'https://dominicnikolai.github.io/project-335/assets/olionovaro/';
 const followers = 98_720;
 const followed = 269;
 const profileDescription = `Since 1860, a tradition handed down from father to son.`;

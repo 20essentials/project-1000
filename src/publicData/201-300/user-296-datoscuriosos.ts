@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'datoscuriosos';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ddd27977-44fd-4538-a4e1-26d23c128e7b';
+const prefixUrl = 'https://dominicnikolai.github.io/project-336/assets/datoscuriosos/';
 const followers = 473_899;
 const followed = 989;
 const profileDescription = `𝘼𝙥𝙧𝙚𝙣𝙙𝙚 𝙖𝙡𝙜𝙤 𝙣𝙪𝙚𝙫𝙤 𝙩𝙤𝙙𝙤𝙨 𝙡𝙤𝙨 𝙙𝙞́𝙖𝙨`;

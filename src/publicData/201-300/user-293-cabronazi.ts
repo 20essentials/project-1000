@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'cabronazi';
-const userId = '';
-const prefixUrl = '';
+const userId = '3e440cf9-29b6-43c5-a1bb-9d316369fa3e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-336/assets/cabronazi/';
 const followers = 12_870_322;
 const followed = 61_728;
 const profileDescription = `Síguenos y no te pierdas los mejores memes y vídeos virales`;

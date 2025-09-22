@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'naturesable';
-const userId = '';
-const prefixUrl = '';
+const userId = '0560a289-8103-4a3b-b4d8-f882d12ac60f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-335/assets/naturesable/';
 const followers = 3_922_322;
 const followed = 489;
 const profileDescription = `Let's Discover the World Together`;
