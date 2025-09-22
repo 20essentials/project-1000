@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'visualbricks';
-const userId = '';
-const prefixUrl = '';
+const userId = '568de92d-7477-4712-b268-46271d174ffd';
+const prefixUrl = 'https://dominicnikolai.github.io/project-337/assets/visualbricks/';
 const followers = 127_899;
 const followed = 50;
 const profileDescription = `Te ayudamos a que tus proyectos cobren vida`;
