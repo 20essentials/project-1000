@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'design_genie';
-const userId = '';
-const prefixUrl = '';
+const userId = 'a4ad1689-4631-4adf-86e1-a75a9a8f3ff5';
+const prefixUrl = 'https://dominicnikolai.github.io/project-338/assets/design-genie/';
 const followers = 898_896;
 const followed = 50;
 const profileDescription = `Brand Identity Designer 🎨`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'angelina_taylor';
-const userId = '';
-const prefixUrl = '';
+const userId = 'a5325304-6123-4010-a268-31e6b89d8f69';
+const prefixUrl = 'https://dominicnikolai.github.io/project-338/assets/ang3lina-t4ylor/';
 const followers = 73_544;
 const followed = 171;
 const profileDescription = `🎨 3D designer`;
