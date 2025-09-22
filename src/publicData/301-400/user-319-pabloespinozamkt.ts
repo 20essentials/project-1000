@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'pabloespinozamkt';
-const userId = '';
-const prefixUrl = '';
+const userId = 'e4e4efd7-c0a2-4afa-8040-4cb0954df4c2';
+const prefixUrl = 'https://dominicnikolai.github.io/project-339/assets/pabloesp1nozamkt/';
 const followers = 328_866;
 const followed = 50;
 const profileDescription = `Ayudo a Negocios físicos a aumentar sus ventas`;

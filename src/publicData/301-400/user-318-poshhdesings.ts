@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'poshhdesings';
-const userId = '';
-const prefixUrl = '';
+const userId = 'cd7e3a05-6c79-43d3-a071-8a0fdf8fbefd';
+const prefixUrl = 'https://dominicnikolai.github.io/project-339/assets/poshhdesings/';
 const followers = 157_887;
 const followed = 50;
 const profileDescription = `Diseñador que ayuda a Crear Marcas Inolvidables y Experiencias`;

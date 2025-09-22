@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'mabiloft';
-const userId = '';
-const prefixUrl = '';
+const userId = 'dff69d0b-4433-4851-8a28-11ebaf5129bc';
+const prefixUrl = 'https://dominicnikolai.github.io/project-339/assets/mabiloft/';
 const followers = 322_832;
 const followed = 50;
 const profileDescription = ` Ogni grande idea ha bisogno di un team che la renda reale`;

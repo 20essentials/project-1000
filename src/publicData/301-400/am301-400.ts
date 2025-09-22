@@ -19,6 +19,10 @@ import { aipoool_array_of_posts, aipoool_commonProps } from './user-315-aipoool'
 import { bushbaby_array_of_posts, bushbaby_commonProps } from './user-314-bushbaby';
 import { chimera_studioss_array_of_posts, chimera_studioss_commonProps } from './user-317-chimera-studioss';
 import { designers_master_array_of_posts, designers_master_commonProps } from './user-316-designers-master';
+import { mabiloft_array_of_posts, mabiloft_commonProps } from './user-321-mabiloft';
+import { pabloespinozamkt_array_of_posts, pabloespinozamkt_commonProps } from './user-319-pabloespinozamkt';
+import { poshhdesings_array_of_posts, poshhdesings_commonProps } from './user-318-poshhdesings';
+import { soyfranramos_array_of_posts, soyfranramos_commonProps } from './user-320-soyfranramos';
 
 export const PUBLIC_301_400: arrayOfPosts = [
   [seanaiux_commonProps, seanaiux_array_of_posts] /* 301 */,
@@ -38,4 +42,9 @@ export const PUBLIC_301_400: arrayOfPosts = [
   [aipoool_commonProps, aipoool_array_of_posts] /* 315 */,
   [designers_master_commonProps, designers_master_array_of_posts] /* 316 */,
   [chimera_studioss_commonProps, chimera_studioss_array_of_posts] /* 317 */,
+  [poshhdesings_commonProps, poshhdesings_array_of_posts] /* 318 */,
+  [pabloespinozamkt_commonProps, pabloespinozamkt_array_of_posts] /* 319 */,
+
+  [soyfranramos_commonProps, soyfranramos_array_of_posts] /* 320 */,
+  [mabiloft_commonProps, mabiloft_array_of_posts] /* 321 */,
 ];

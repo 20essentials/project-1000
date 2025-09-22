@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'soyfranramos';
-const userId = '';
-const prefixUrl = '';
+const userId = 'aa366acb-a5ea-44a9-9283-8396887eb33d';
+const prefixUrl = 'https://dominicnikolai.github.io/project-339/assets/soyfranr4mos/';
 const followers = 72_867;
 const followed = 72;
 const profileDescription = `Director de Postproducción Audiovisual`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 6;
+const quantityOfVideos = 4;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
