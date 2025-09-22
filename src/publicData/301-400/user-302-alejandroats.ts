@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'alejandroats';
-const userId = '';
-const prefixUrl = '';
+const userId = 'eefd4036-2cd1-4204-8328-b1c52e728c6f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-337/assets/alejandroats/';
 const followers = 4_899_887;
 const followed = 50;
 const profileDescription = `Alejandro Taboada Sánchez - Programador`;

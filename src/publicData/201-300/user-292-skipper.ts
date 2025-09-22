@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'skipper';
-const userId = '';
-const prefixUrl = '';
+const userId = '7a65c61a-0a51-4330-9951-bf7acc4b459e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-336/assets/skipper/';
 const followers = 9_720_323;
 const followed = 50;
 const profileDescription = `🐧`;

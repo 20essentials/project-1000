@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'autotopnl';
-const userId = '';
-const prefixUrl = '';
+const userId = '4fd59a94-52fe-4a6f-b394-cc602da2fc8a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-337/assets/autotopnl/';
 const followers = 4_233_988;
 const followed = 50;
 const profileDescription = `Auto-Top is an honest and pure car filming and testing company`;

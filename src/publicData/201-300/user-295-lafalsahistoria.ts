@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'lafalsahistoria';
-const userId = '';
-const prefixUrl = '';
+const userId = '4d9a2c05-cfb4-416a-a97e-ec46489e31a8';
+const prefixUrl = 'https://dominicnikolai.github.io/project-336/assets/lafalsahistoria/';
 const followers = 166_899;
 const followed = 62;
 const profileDescription = `Viejo Orden Mundial`;

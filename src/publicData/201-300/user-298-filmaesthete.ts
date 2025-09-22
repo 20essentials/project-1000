@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'filmaesthete';
-const userId = '';
-const prefixUrl = '';
+const userId = 'de239814-23f1-4715-b7ac-153a578ec772';
+const prefixUrl = 'https://dominicnikolai.github.io/project-337/assets/filmaesthete/';
 const followers = 1_432_323;
 const followed = 109;
 const profileDescription = `a devotee of motion pictures.`;

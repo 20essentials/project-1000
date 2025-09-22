@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'smooth_zip';
-const userId = '';
-const prefixUrl = '';
+const userId = '2deb459d-49cc-4387-931d-0b0ac7582519';
+const prefixUrl = 'https://dominicnikolai.github.io/project-336/assets/smooth-zip/';
 const followers = 87_720;
 const followed = 50;
 const profileDescription = `Smooth`;
