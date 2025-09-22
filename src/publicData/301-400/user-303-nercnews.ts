@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'nercnews';
-const userId = '';
-const prefixUrl = '';
+const userId = '9fd9061e-5146-43ef-bda3-aef4c9406b6b';
+const prefixUrl = 'https://dominicnikolai.github.io/project-337/assets/nercnews/';
 const followers = 35_899;
 const followed = 50;
 const profileDescription = `The ICPC Northern Eurasia Regional Contests`;

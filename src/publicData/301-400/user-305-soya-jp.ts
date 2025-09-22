@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'soya_jp';
-const userId = '';
-const prefixUrl = '';
+const userId = '23a786af-3308-46ac-9982-6b7d588d83f9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-337/assets/soya-jp/';
 const followers = 789_899;
 const followed = 50;
 const profileDescription = `Dad & Travel company owner in Japan🇯🇵`;

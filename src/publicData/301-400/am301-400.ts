@@ -3,7 +3,14 @@ import {
   alejandroats_array_of_posts,
   alejandroats_commonProps
 } from './user-302-alejandroats';
+import { nercnews_array_of_posts, nercnews_commonProps } from './user-303-nercnews';
+import { seanaiux_array_of_posts, seanaiux_commonProps } from './user-301-seanaiux';
+import { soya_jp_array_of_posts, soya_jp_commonProps } from './user-305-soya-jp';
 
 export const PUBLIC_301_400: arrayOfPosts = [
-  [alejandroats_commonProps, alejandroats_array_of_posts] /* 302 */
+  [seanaiux_commonProps, seanaiux_array_of_posts] /* 301 */,
+  [alejandroats_commonProps, alejandroats_array_of_posts] /* 302 */,
+  [nercnews_commonProps, nercnews_array_of_posts] /* 303 */,
+
+  [soya_jp_commonProps, soya_jp_array_of_posts] /* 305 */,
 ];

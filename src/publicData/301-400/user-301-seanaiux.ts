@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'seanaiux';
-const userId = '';
-const prefixUrl = '';
+const userId = '737e5fab-93f9-422c-bdd2-9db55dca31e2';
+const prefixUrl = 'https://dominicnikolai.github.io/project-337/assets/seanaiux/';
 const followers = 74_899;
 const followed = 207;
 const profileDescription = `Sean – Web3 UX Designer`;
