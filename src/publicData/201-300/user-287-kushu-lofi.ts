@@ -5,14 +5,14 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'kushu_lofi';
-const userId = '';
-const prefixUrl = '';
+const userId = '6bb931cb-1410-4c74-8f19-e63e04b6352e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-335/assets/kushu-lofi/';
 const followers = 584_789;
 const followed = 321;
 const profileDescription = `Collage artist `;
 const prefixLetterVideos = 'v';
 const quantityOfVideos = 0;
-const prefixLetterImages = 'n';
+const prefixLetterImages = 'f';
 const quantityOfImages = 9;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 

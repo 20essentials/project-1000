@@ -302,6 +302,9 @@ import {
   soyalvaroperez_array_of_posts,
   soyalvaroperez_commonProps
 } from './user-280-soyalvaroperez';
+import { gclassgang_array_of_posts, gclassgang_commonProps } from './user-285-gclassgang';
+import { ingedarwin1_array_of_posts, ingedarwin1_commonProps } from './user-288-ingedarwin1';
+import { kushu_lofi_array_of_posts, kushu_lofi_commonProps } from './user-287-kushu-lofi';
 
 export const PUBLIC_201_300: arrayOfPosts = [
   [ioannishietbrink_commonProps, ioannishietbrink_array_of_posts] /* 201 */,
@@ -393,5 +396,10 @@ export const PUBLIC_201_300: arrayOfPosts = [
     professorjuliolombaldo_array_of_posts
   ] /* 279 */,
   [soyalvaroperez_commonProps, soyalvaroperez_array_of_posts] /* 280 */,
-  [amacodingart_commonProps, amacodingart_array_of_posts] /* 281 */
+  [amacodingart_commonProps, amacodingart_array_of_posts] /* 281 */,
+
+  [gclassgang_commonProps, gclassgang_array_of_posts] /* 285 */,
+
+  [kushu_lofi_commonProps, kushu_lofi_array_of_posts] /* 287 */,
+  [ingedarwin1_commonProps, ingedarwin1_array_of_posts] /* 288 */,
 ];

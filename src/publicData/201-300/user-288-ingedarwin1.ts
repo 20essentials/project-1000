@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ingedarwin1';
-const userId = '';
-const prefixUrl = '';
+const userId = '4a40faac-c8f6-40a8-af8c-0e98b5e2b7fb';
+const prefixUrl = 'https://dominicnikolai.github.io/project-335/assets/ing3darwin1/';
 const followers = 899_729;
 const followed = 146;
 const profileDescription = `Bienvenidos amigazos, es momento de aprender 🤓`;

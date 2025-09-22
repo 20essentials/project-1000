@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'gclassgang';
-const userId = '';
-const prefixUrl = '';
+const userId = '2dc84af5-41f5-4772-8571-d1284b2a6d7e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-335/assets/gclassgang/';
 const followers = 761_720;
 const followed = 571;
 const profileDescription = `G63 | AMG | BRABUS`;
