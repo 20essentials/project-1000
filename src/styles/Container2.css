@@ -1,6 +1,6 @@
 .container2 {
   background-color: #000;
-  transform-origin: var(--x) var(--y);
+  transform-origin: var(--x) var(--y);  
   animation: scalado 0.2s ease-in-out;
   display: flex;
   flex-direction: column;

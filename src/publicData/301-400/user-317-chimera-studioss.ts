@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'chimera_studioss';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ac1a4423-bc6e-402a-952c-e27eaa18e516';
+const prefixUrl = 'https://dominicnikolai.github.io/project-339/assets/chimera-studioss/';
 const followers = 328_886;
 const followed = 50;
 const profileDescription = `Uno spazio per dare forma e voce alle tue idee e ai tuoi sogni`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'aipoool';
-const userId = '';
-const prefixUrl = '';
+const userId = '81258591-b9e1-4739-b597-403d7f658cc0';
+const prefixUrl = 'https://dominicnikolai.github.io/project-339/assets/aipoool/';
 const followers = 48_899;
 const followed = 50;
 const profileDescription = `Your One-Stop AI Hub 🚀`;

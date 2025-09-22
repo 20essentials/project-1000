@@ -23,7 +23,8 @@ export function Container2() {
 
   return (
     <article
-      style={{ '--x': `${x}px`, '--y': `${y}px` } as React.CSSProperties}
+      // style={{ '--x': `${x}px`, '--y': `${y}px` } as React.CSSProperties}
+      style={{ '--x': `120px`, '--y': `180px` } as React.CSSProperties}
       className='container2 inner-content'
     >
       <img draggable='false' src={tikTokLogo} className='am-tik-tok-logo' />
