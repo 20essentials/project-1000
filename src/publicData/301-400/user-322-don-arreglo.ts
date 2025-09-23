@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'don_arreglo';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c8625b4c-c292-4d54-af08-27f1faf07a4f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-340/assets/don-arreglo/';
 const followers = 878_899;
 const followed = 342;
 const profileDescription = `Cómo reparar y entender cualquier cosa`;

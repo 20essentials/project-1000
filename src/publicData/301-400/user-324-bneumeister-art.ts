@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'bneumeister_art';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd50d7a2a-ad30-46e4-acb1-ac19053ee9e6';
+const prefixUrl = 'https://dominicnikolai.github.io/project-340/assets/bneumeister-art/';
 const followers = 98_899;
 const followed = 251;
 const profileDescription = `Ventanas, murales, cuadros, etc`;

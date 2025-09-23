@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'alcala_creativo';
-const userId = '';
-const prefixUrl = '';
+const userId = '0e9afcf0-29b0-46a4-94ac-c4aaee5a241f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-340/assets/alcala-creativo/';
 const followers = 2_183_322;
 const followed = 923;
 const profileDescription = `Truquero de tecnología tiempo completo 🪄`;

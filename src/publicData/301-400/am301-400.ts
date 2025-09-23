@@ -23,6 +23,11 @@ import { mabiloft_array_of_posts, mabiloft_commonProps } from './user-321-mabilo
 import { pabloespinozamkt_array_of_posts, pabloespinozamkt_commonProps } from './user-319-pabloespinozamkt';
 import { poshhdesings_array_of_posts, poshhdesings_commonProps } from './user-318-poshhdesings';
 import { soyfranramos_array_of_posts, soyfranramos_commonProps } from './user-320-soyfranramos';
+import { ahad_ahadanimates_array_of_posts, ahad_ahadanimates_commonProps } from './user-328-ahad-ahadanimates';
+import { alcala_creativo_array_of_posts, alcala_creativo_commonProps } from './user-323-alcala-creativo';
+import { bneumeister_art_array_of_posts, bneumeister_art_commonProps } from './user-324-bneumeister-art';
+import { diegomf3d_array_of_posts, diegomf3d_commonProps } from './user-329-diegomf3d';
+import { don_arreglo_array_of_posts, don_arreglo_commonProps } from './user-322-don-arreglo';
 
 export const PUBLIC_301_400: arrayOfPosts = [
   [seanaiux_commonProps, seanaiux_array_of_posts] /* 301 */,
@@ -47,4 +52,10 @@ export const PUBLIC_301_400: arrayOfPosts = [
 
   [soyfranramos_commonProps, soyfranramos_array_of_posts] /* 320 */,
   [mabiloft_commonProps, mabiloft_array_of_posts] /* 321 */,
+  [don_arreglo_commonProps, don_arreglo_array_of_posts] /* 322 */,
+  [alcala_creativo_commonProps, alcala_creativo_array_of_posts] /* 323 */,
+  [bneumeister_art_commonProps, bneumeister_art_array_of_posts] /* 324 */,
+
+  [ahad_ahadanimates_commonProps, ahad_ahadanimates_array_of_posts] /* 328 */,
+  [diegomf3d_commonProps, diegomf3d_array_of_posts] /* 329 */,
 ];

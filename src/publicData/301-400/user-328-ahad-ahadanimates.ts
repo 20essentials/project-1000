@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ahad_ahadanimates';
-const userId = '';
-const prefixUrl = '';
+const userId = 'e07487a7-6b16-46ab-af67-58e49fedce8e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-340/assets/ahad-ahadanimates/';
 const followers = 324_832;
 const followed = 50;
 const profileDescription = ` Youngest 3D Artist of Pakistan`;
