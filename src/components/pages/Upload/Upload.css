@@ -9,6 +9,7 @@
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    scrollbar-color: transparent transparent;
 
     .create-section,
     .upload-section {
@@ -405,10 +406,26 @@
     width: 100%;
     z-index: 300;
     pointer-events: auto;
-
     display: flex;
     z-index: 50;
     background-color: transparent;
+
+    .tab-follower {
+      background: linear-gradient(45deg, #1de43e, #04befe);
+      position: absolute;
+      width: 48%;
+      left: 2%;
+      height: 76%;
+      border-radius: 20px;
+      pointer-events: none;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: -1;
+
+      &.colorinTab {
+        background: linear-gradient(45deg, #ff4081, #ffc107);
+      }
+    }
 
     button {
       width: 50%;

@@ -34,7 +34,7 @@ export function Upload() {
 
   return (
     <article className='upload'>
-      <aside className='container-of-upload-and-create scroll-x' ref={sliderRef}>
+      <aside className='container-of-upload-and-create' ref={sliderRef}>
         <CamaraVideo
           updateIndex={updateIndex}
           isModePhoto={isModePhoto}
@@ -42,7 +42,7 @@ export function Upload() {
         />
         <SectionUpload modePhoto={modePhoto} />
       </aside>
-      <FooterUpload updateIndex={updateIndex} />
+      <FooterUpload updateIndex={updateIndex} sliderRef={sliderRef} />
     </article>
   );
 }
