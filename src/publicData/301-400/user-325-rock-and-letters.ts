@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'rock_and_letters';
-const userId = '';
-const prefixUrl = '';
+const userId = 'a15c26c0-09d8-45bd-bbe9-0b78823c4b67';
+const prefixUrl = 'https://dominicnikolai.github.io/project-340/assets/rock-and-letters/';
 const followers = 391_322;
 const followed = 245;
 const profileDescription = `𝔼𝕤𝕔𝕣𝕚𝕓𝕠 𝕤𝕠𝕓𝕣𝕖 𝕞ú𝕤𝕚𝕔𝕒 😎`;

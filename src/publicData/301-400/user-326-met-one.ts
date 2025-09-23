@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'met_one';
-const userId = '';
-const prefixUrl = '';
+const userId = '2f8b1954-b69f-4f24-91d9-25218177e4df';
+const prefixUrl = 'https://dominicnikolai.github.io/project-340/assets/met-one/';
 const followers = 198_898;
 const followed = 50;
 const profileDescription = `producción de música y divulgación estúpida`;

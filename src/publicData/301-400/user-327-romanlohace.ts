@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'romanlohace';
-const userId = '';
-const prefixUrl = '';
+const userId = '54e8e16d-2e0c-4441-b1e9-5bb16f45d3b8';
+const prefixUrl = 'https://dominicnikolai.github.io/project-340/assets/romanlohace/';
 const followers = 939_832;
 const followed = 50;
 const profileDescription = `Para más datos geniales sígueme!!!
