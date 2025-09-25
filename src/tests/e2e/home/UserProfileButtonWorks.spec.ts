@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { homeURL, queryParam, USER_TEST } from '@/tests/e2e/e2eUtils';
+import { homeURL, queryParam } from '@/tests/e2e/e2eUtils';
 
 test('navigate from home section to profile user creator section', async ({
   page

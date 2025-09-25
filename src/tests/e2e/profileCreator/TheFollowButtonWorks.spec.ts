@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { homeURL, queryParam } from '@/tests/e2e/e2eUtils';
+import { homeURL } from '@/tests/e2e/e2eUtils';
 
 test('The follows button works', async ({ page }) => {
   await page.goto(homeURL);
