@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'scrwsk';
-const userId = '';
-const prefixUrl = '';
+const userId = '9c66ab12-f7b0-4f7a-9e2b-00a21fb2b99f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-342/assets/scrwsk/';
 const followers = 767_832 ;
 const followed = 50;
 const profileDescription = `Promo&Product Videos`;

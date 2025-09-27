@@ -43,6 +43,9 @@ import { deeev_studio_array_of_posts, deeev_studio_commonProps } from './user-33
 import { galshirart_array_of_posts, galshirart_commonProps } from './user-342-galshirart';
 import { graphicdesignpark_array_of_posts, graphicdesignpark_commonProps } from './user-344-graphicdesignpark';
 import { madebyamar_array_of_posts, madebyamar_commonProps } from './user-340-madebyamar';
+import { michovlgs_array_of_posts, michovlgs_commonProps } from './user-345-michovlgs';
+import { sakuragirlsnft_array_of_posts, sakuragirlsnft_commonProps } from './user-343-sakuragirlsnft';
+import { scrwsk_array_of_posts, scrwsk_commonProps } from './user-341-scrwsk';
 
 export const PUBLIC_301_400: arrayOfPosts = [
   [seanaiux_commonProps, seanaiux_array_of_posts] /* 301 */,
@@ -85,8 +88,9 @@ export const PUBLIC_301_400: arrayOfPosts = [
 
   [deeev_studio_commonProps, deeev_studio_array_of_posts] /* 339 */,
   [madebyamar_commonProps, madebyamar_array_of_posts] /* 340 */,
-
+  [scrwsk_commonProps, scrwsk_array_of_posts] /* 341 */,
   [galshirart_commonProps, galshirart_array_of_posts] /* 342 */,
-
+  [sakuragirlsnft_commonProps, sakuragirlsnft_array_of_posts] /* 343 */,
   [graphicdesignpark_commonProps, graphicdesignpark_array_of_posts] /* 344 */,
+  [michovlgs_commonProps, michovlgs_array_of_posts] /* 345 */,
 ];

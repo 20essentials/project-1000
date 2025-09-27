@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'michovlgs';
-const userId = '';
-const prefixUrl = '';
+const userId = 'fa539533-0997-4101-8544-7a1d0f3ff6b4';
+const prefixUrl = 'https://dominicnikolai.github.io/project-342/assets/michovlgs/';
 const followers = 432_325;
 const followed = 50;
 const profileDescription = `Soy el Micho y subo videos al azar`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 6;
+const quantityOfVideos = 4;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;

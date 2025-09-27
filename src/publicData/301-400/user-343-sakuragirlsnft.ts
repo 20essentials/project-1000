@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'sakuragirlsnft';
-const userId = '';
-const prefixUrl = '';
+const userId = '15687979-9786-4e0a-a873-aeb94fc2cb4d';
+const prefixUrl = 'https://dominicnikolai.github.io/project-342/assets/sakuragirlsnft/';
 const followers = 323_832;
 const followed = 50;
 const profileDescription = `Japan AdobeCP Champion ‘24 🏆`;
