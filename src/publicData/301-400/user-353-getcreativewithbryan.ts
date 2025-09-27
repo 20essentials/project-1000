@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'getcreativewithbryan';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd37f63d1-33b4-47b2-b2f1-e9a9e4cb7b2d';
+const prefixUrl = 'https://dominicnikolai.github.io/project-343/assets/getcreativewithbryan/';
 const followers = 323_432;
 const followed = 99;
 const profileDescription = `Stand out in the scroll, sell more`;

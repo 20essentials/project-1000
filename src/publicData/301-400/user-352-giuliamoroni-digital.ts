@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'giuliamoroni_digital';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd9dfc852-eef6-4234-9e60-f2f5265d75c0';
+const prefixUrl = 'https://dominicnikolai.github.io/project-343/assets/giuli4moroni-digital/';
 const followers = 72_342;
 const followed = 50;
 const profileDescription = `Ti insegno a creare e vendere in modo semi-automatico prodotti digitali`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'halltec';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd602f139-e543-4369-9dad-bd0196c9b0d1';
+const prefixUrl = 'https://dominicnikolai.github.io/project-343/assets/halltec/';
 const followers = 732_342;
 const followed = 50;
 const profileDescription = `Desarrollo de software🖱️`;
