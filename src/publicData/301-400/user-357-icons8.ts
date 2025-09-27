@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'icons8';
-const userId = '';
-const prefixUrl = '';
+const userId = 'f0151d96-3ce3-4542-adce-08f15f0c4702';
+const prefixUrl = 'https://dominicnikolai.github.io/project-344/assets/icons8/';
 const followers = 89_832;
 const followed = 50;
 const profileDescription = `Everything you need for design!`;

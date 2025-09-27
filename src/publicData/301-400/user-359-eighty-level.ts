@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'eighty_level';
-const userId = '';
-const prefixUrl = '';
+const userId = '360a417f-aab2-4c6f-9bca-2cef30b74fb9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-344/assets/eighty-level/';
 const followers = 461_832;
 const followed = 737;
 const profileDescription = `80 Level® is the best place for game developers`;

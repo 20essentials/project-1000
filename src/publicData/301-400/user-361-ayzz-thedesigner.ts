@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ayzz_thedesigner';
-const userId = '';
-const prefixUrl = '';
+const userId = '62883e20-1d5b-4100-aefd-fa38c2f647a3';
+const prefixUrl = 'https://dominicnikolai.github.io/project-344/assets/ayzz-thedesigner/';
 const followers = 187_832;
 const followed = 50;
 const profileDescription = `I design websites & apps`;

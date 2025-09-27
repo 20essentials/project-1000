@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'kabarza';
-const userId = '';
-const prefixUrl = '';
+const userId = '17e4ce13-8266-4756-8fef-b99c5f7a335a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-344/assets/kabarza/';
 const followers = 72_322;
 const followed = 50;
 const profileDescription = `Building things on the internet`;

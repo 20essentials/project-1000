@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'koen_salo';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c475ac07-c69b-47f7-9606-47d96cb9d2b4';
+const prefixUrl = 'https://dominicnikolai.github.io/project-344/assets/koen-salo/';
 const followers = 461_832;
 const followed = 50;
 const profileDescription = ` Scaling an AI Venture Studio`;

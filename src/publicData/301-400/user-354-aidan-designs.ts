@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'aidan_designs';
-const userId = '';
-const prefixUrl = '';
+const userId = '8e28343e-1bba-4655-8ce0-22aa143724a9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-344/assets/aidan-designs/';
 const followers = 23_432;
 const followed = 50;
 const profileDescription = `Spreading the Gospel through design `;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 4;
+const quantityOfVideos = 3;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
