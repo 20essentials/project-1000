@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'blenderhub7';
-const userId = '';
-const prefixUrl = '';
+const userId = 'cbd78366-3962-4c43-8aed-8bc063b0808f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-341/assets/blenderhub7/';
 const followers = 243_322;
 const followed = 50;
 const profileDescription = `BlenderHub is for blender 3d artists`;

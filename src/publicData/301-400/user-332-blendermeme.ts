@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'blendermeme';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ffaa4340-3543-4dd6-9d48-7e8fbe50af56';
+const prefixUrl = 'https://dominicnikolai.github.io/project-341/assets/blendermeme/';
 const followers = 69_832;
 const followed = 50;
 const profileDescription = `Memes about Blender and Motion Graphics `;

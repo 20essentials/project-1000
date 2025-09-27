@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ambassador3d';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ccbc0606-fbb7-4836-b192-34dea5601880';
+const prefixUrl = 'https://dominicnikolai.github.io/project-341/assets/3dambassador/';
 const followers = 333_989;
 const followed = 160;
 const profileDescription = `#blender`;

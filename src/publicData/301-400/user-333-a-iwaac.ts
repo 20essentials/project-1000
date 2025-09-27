@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'aiwaac';
-const userId = '';
-const prefixUrl = '';
+const userId = 'dd80f163-dd83-4606-a243-f34298b95e68';
+const prefixUrl = 'https://dominicnikolai.github.io/project-341/assets/a-iwaac/';
 const followers = 42_3232;
 const followed = 50;
 const profileDescription = `Artist. Concept/visual developer`;

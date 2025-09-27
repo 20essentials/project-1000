@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ginyboi';
-const userId = '';
-const prefixUrl = '';
+const userId = '704d157e-5f56-4aba-b3d6-2967515fba73';
+const prefixUrl = 'https://dominicnikolai.github.io/project-341/assets/ginyboi/';
 const followers = 82_322;
 const followed = 632;
 const profileDescription = `I make commercial videos for brands`;

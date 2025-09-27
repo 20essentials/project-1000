@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'max_retoka';
-const userId = '';
-const prefixUrl = '';
+const userId = 'be5deff7-47d7-46c6-9f75-75416aaee43d';
+const prefixUrl = 'https://dominicnikolai.github.io/project-341/assets/max-retoka/';
 const followers = 322_432;
 const followed = 323;
 const profileDescription = `Эксперт-самоучка`;
