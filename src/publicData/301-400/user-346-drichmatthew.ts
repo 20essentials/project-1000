@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'drichmatthew';
-const userId = '';
-const prefixUrl = '';
+const userId = '6ea7d042-56e0-4bba-938c-664028eca2a0';
+const prefixUrl = 'https://dominicnikolai.github.io/project-343/assets/drichmatthew/';
 const followers = 322_324;
 const followed = 86;
 const profileDescription = `I design funnels that turn visitors into loyal customers`;

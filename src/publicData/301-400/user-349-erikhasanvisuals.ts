@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'erikhasanvisuals';
-const userId = '';
-const prefixUrl = '';
+const userId = '7912f542-17fb-4af8-b345-86b4245836c4';
+const prefixUrl = 'https://dominicnikolai.github.io/project-343/assets/erikhasanvisuals/';
 const followers = 133_342;
 const followed = 50;
 const profileDescription = `Hago tutoriales para Blender y Unreal Engine`;

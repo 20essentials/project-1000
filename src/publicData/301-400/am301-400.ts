@@ -46,6 +46,9 @@ import { madebyamar_array_of_posts, madebyamar_commonProps } from './user-340-ma
 import { michovlgs_array_of_posts, michovlgs_commonProps } from './user-345-michovlgs';
 import { sakuragirlsnft_array_of_posts, sakuragirlsnft_commonProps } from './user-343-sakuragirlsnft';
 import { scrwsk_array_of_posts, scrwsk_commonProps } from './user-341-scrwsk';
+import { stan_logo_array_of_posts, stan_logo_commonProps } from './user-338-stan-logo';
+import { drichmatthew_array_of_posts, drichmatthew_commonProps } from './user-346-drichmatthew';
+import { erikhasanvisuals_array_of_posts, erikhasanvisuals_commonProps } from './user-349-erikhasanvisuals';
 
 export const PUBLIC_301_400: arrayOfPosts = [
   [seanaiux_commonProps, seanaiux_array_of_posts] /* 301 */,
@@ -85,7 +88,7 @@ export const PUBLIC_301_400: arrayOfPosts = [
   [webma_kers_commonProps, webma_kers_array_of_posts] /* 335 */,
   [blenderhub7_commonProps, blenderhub7_array_of_posts] /* 336 */,
   [ginyboi_commonProps, ginyboi_array_of_posts] /* 337 */,
-
+  [stan_logo_commonProps, stan_logo_array_of_posts] /* 338 */,
   [deeev_studio_commonProps, deeev_studio_array_of_posts] /* 339 */,
   [madebyamar_commonProps, madebyamar_array_of_posts] /* 340 */,
   [scrwsk_commonProps, scrwsk_array_of_posts] /* 341 */,
@@ -93,4 +96,7 @@ export const PUBLIC_301_400: arrayOfPosts = [
   [sakuragirlsnft_commonProps, sakuragirlsnft_array_of_posts] /* 343 */,
   [graphicdesignpark_commonProps, graphicdesignpark_array_of_posts] /* 344 */,
   [michovlgs_commonProps, michovlgs_array_of_posts] /* 345 */,
+  [drichmatthew_commonProps, drichmatthew_array_of_posts] /* 346 */,
+
+  [erikhasanvisuals_commonProps, erikhasanvisuals_array_of_posts] /* 349 */,
 ];

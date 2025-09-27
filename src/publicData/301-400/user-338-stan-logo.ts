@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'stan_logo';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c6f42cf2-9eea-49f1-8dae-d92044e10087';
+const prefixUrl = 'https://dominicnikolai.github.io/project-342/assets/stan-logo/';
 const followers = 126_832;
 const followed = 50;
 const profileDescription = `⌛️ 4 Yrs Exp`;
