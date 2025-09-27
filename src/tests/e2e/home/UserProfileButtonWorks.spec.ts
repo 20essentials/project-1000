@@ -5,7 +5,7 @@ test('navigate from home section to profile user creator section', async ({
   page
 }) => {
   await page.goto(homeURL);
-
+  await page.waitForTimeout(2000);
   await expect(page).toHaveURL(url => {
     const currentSearchParams = new URL(url).searchParams;
     return Boolean(

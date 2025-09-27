@@ -6,6 +6,7 @@ test(`Followed section show the message when the user don't have followed accoun
 }) => {
   await page.goto(homeURL);
   const followedButton = page.getByRole('button', { name: 'Followed' });
+  await page.waitForTimeout(3000);
   await expect(followedButton).toBeVisible();
   await followedButton.click();
   await expect(page.locator('.modal-alert')).toBeVisible();

@@ -3,6 +3,7 @@ import { homeURL } from '@/tests/e2e/e2eUtils';
 
 test('navigate from home section to search', async ({ page }) => {
   await page.goto(homeURL);
+  await page.waitForTimeout(2000);
 
   const forYouButton = page.getByRole('button', { name: 'For You' });
   await expect(forYouButton).toBeVisible();

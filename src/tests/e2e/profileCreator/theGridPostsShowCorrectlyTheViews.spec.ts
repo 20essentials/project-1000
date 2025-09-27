@@ -7,5 +7,6 @@ test('the total views of the first post must be visible', async ({ page }) => {
     const searchParams = new URL(url).searchParams;
     return Boolean(searchParams.get(queryParam.userId));
   });
+  await page.waitForTimeout(2000);
   await expect(page.locator('.total-views').first()).toBeVisible();
 });

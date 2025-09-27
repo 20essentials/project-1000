@@ -3,6 +3,7 @@ import { homeURL, queryParam } from '@/tests/e2e/e2eUtils';
 
 test('When The User Do Click In The Comment Row The User Creator Section is rendered', async ({ page }) => {
   await page.goto(homeURL);
+  await page.waitForTimeout(2000);
 
   await expect(page).toHaveURL(url => {
     const currentSearchParams = new URL(url).searchParams;
