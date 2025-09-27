@@ -12,7 +12,7 @@ test('navigate from home section to profile user creator section', async ({
   });
 
   await page.goto(USER_TEST.url);
-
+  await page.waitForTimeout(3000);
   await expect(page.getByText('Followed')).toBeVisible();
   await expect(page.getByText('Followers')).toBeVisible();
   await expect(page.getByText('Likes')).toBeVisible();

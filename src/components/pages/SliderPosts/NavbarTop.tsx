@@ -4,8 +4,8 @@ import { useLimitOfPost } from '@/store/useLimitOfPosts';
 export function NavbarTop() {
   const isForYou = useFollowedOrForYou(state => state.isForYou);
   const setForYou = useFollowedOrForYou(state => state.setForYou);
-  const followedClass = `navbar-top-button ${isForYou ? '' : 'mode-btn-active'}`;
-  const forYouClass = `navbar-top-button ${isForYou ? 'mode-btn-active' : ''} `;
+  const followedClass = `navbar-top-button followed-button-top ${isForYou ? '' : 'mode-btn-active'}`;
+  const forYouClass = `navbar-top-button for-you-button-top ${isForYou ? 'mode-btn-active' : ''} `;
   const setReRenderFollowed = useFollowedOrForYou(
     state => state.setReRenderFollowed
   );
