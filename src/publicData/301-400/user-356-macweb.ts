@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'macweb';
-const userId = '';
-const prefixUrl = '';
+const userId = '0433dc8a-e2aa-44c6-bb04-11bb90756248';
+const prefixUrl = 'https://dominicnikolai.github.io/project-344/assets/macweb/';
 const followers = 10_832;
 const followed = 132;
 const profileDescription = `Diseñamos sitios web modernos 💰`;

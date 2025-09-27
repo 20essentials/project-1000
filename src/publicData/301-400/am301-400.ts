@@ -202,6 +202,8 @@ import {
 import { icons8_array_of_posts, icons8_commonProps } from './user-357-icons8';
 import { kabarza_array_of_posts, kabarza_commonProps } from './user-358-kabarza';
 import { koen_salo_array_of_posts, koen_salo_commonProps } from './user-360-koen-salo';
+import { macweb_array_of_posts, macweb_commonProps } from './user-356-macweb';
+import { z_artsync_array_of_posts, z_artsync_commonProps } from './user-355-z-artsync';
 
 export const PUBLIC_301_400: arrayOfPosts = [
   [seanaiux_commonProps, seanaiux_array_of_posts] /* 301 */,
@@ -264,7 +266,8 @@ export const PUBLIC_301_400: arrayOfPosts = [
     getcreativewithbryan_array_of_posts
   ] /* 353 */,
   [aidan_designs_commonProps, aidan_designs_array_of_posts] /* 354 */,
-
+  [z_artsync_commonProps, z_artsync_array_of_posts] /* 355 */,
+  [macweb_commonProps, macweb_array_of_posts] /* 356 */,
   [icons8_commonProps, icons8_array_of_posts] /* 357 */,
   [kabarza_commonProps, kabarza_array_of_posts] /* 358 */,
   [eighty_level_commonProps, eighty_level_array_of_posts] /* 359 */,

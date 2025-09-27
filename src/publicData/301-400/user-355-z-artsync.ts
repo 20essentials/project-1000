@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'z_artsync';
-const userId = '';
-const prefixUrl = '';
+const userId = '31b92a47-ca83-4a3b-969b-a4a66872c48d';
+const prefixUrl = 'https://dominicnikolai.github.io/project-344/assets/z-artsync/';
 const followers = 29_322;
 const followed = 108;
 const profileDescription = `Explainer Animations for SaaS & Startups`;
