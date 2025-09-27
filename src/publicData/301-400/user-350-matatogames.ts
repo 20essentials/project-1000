@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'matatogames';
-const userId = '';
-const prefixUrl = '';
+const userId = '32242d5b-f6e7-4114-86ea-03a7556aab83';
+const prefixUrl = 'https://dominicnikolai.github.io/project-343/assets/mat4togames/';
 const followers = 149_323;
 const followed = 50;
 const profileDescription = `I make weird videos and games!`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 6;
+const quantityOfVideos = 4;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'piercarlotozzi';
-const userId = '';
-const prefixUrl = '';
+const userId = '3d97f5af-1b45-40e8-830c-d45b4cb7723a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-343/assets/piercarlotozzi/';
 const followers = 106_832;
 const followed = 110;
 const profileDescription = ` Graphic Designer e Video Editor Freelance`;

@@ -52,6 +52,9 @@ import { erikhasanvisuals_array_of_posts, erikhasanvisuals_commonProps } from '.
 import { getcreativewithbryan_array_of_posts, getcreativewithbryan_commonProps } from './user-353-getcreativewithbryan';
 import { giuliamoroni_digital_array_of_posts, giuliamoroni_digital_commonProps } from './user-352-giuliamoroni-digital';
 import { halltec_array_of_posts, halltec_commonProps } from './user-347-halltec';
+import { matatogames_array_of_posts, matatogames_commonProps } from './user-350-matatogames';
+import { piercarlotozzi_array_of_posts, piercarlotozzi_commonProps } from './user-351-piercarlotozzi';
+import { sergioprompts_array_of_posts, sergioprompts_commonProps } from './user-348-sergioprompts';
 
 export const PUBLIC_301_400: arrayOfPosts = [
   [seanaiux_commonProps, seanaiux_array_of_posts] /* 301 */,
@@ -101,9 +104,10 @@ export const PUBLIC_301_400: arrayOfPosts = [
   [michovlgs_commonProps, michovlgs_array_of_posts] /* 345 */,
   [drichmatthew_commonProps, drichmatthew_array_of_posts] /* 346 */,
   [halltec_commonProps, halltec_array_of_posts] /* 347 */,
-
+  [sergioprompts_commonProps, sergioprompts_array_of_posts] /* 348 */,
   [erikhasanvisuals_commonProps, erikhasanvisuals_array_of_posts] /* 349 */,
-
+  [matatogames_commonProps, matatogames_array_of_posts] /* 350 */,
+  [piercarlotozzi_commonProps, piercarlotozzi_array_of_posts] /* 351 */,
   [giuliamoroni_digital_commonProps, giuliamoroni_digital_array_of_posts] /* 352 */,
   [getcreativewithbryan_commonProps, getcreativewithbryan_array_of_posts] /* 353 */,
 ];

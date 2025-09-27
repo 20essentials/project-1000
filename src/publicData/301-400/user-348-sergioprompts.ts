@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'sergioprompts';
-const userId = '';
-const prefixUrl = '';
+const userId = '8694c457-fa8b-4fd6-90e6-058fca6ca7c9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-343/assets/s3rgioprompts/';
 const followers = 109_342;
 const followed = 50;
 const profileDescription = `🧠 Dominamos el lenguaje de los prompts`;
