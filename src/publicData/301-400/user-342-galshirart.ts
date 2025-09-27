@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'galshirart';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd4eced3c-244c-4b58-a8ed-aee8114dfdf5';
+const prefixUrl = 'https://dominicnikolai.github.io/project-342/assets/galshirart/';
 const followers = 667_322;
 const followed = 50;
 const profileDescription = `Brand designer based in Tel Aviv`;

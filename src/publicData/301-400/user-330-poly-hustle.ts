@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'poly_hustle';
-const userId = '';
-const prefixUrl = '';
+const userId = '52e5b492-fe33-452a-a989-83a7029ea164';
+const prefixUrl = 'https://dominicnikolai.github.io/project-341/assets/poly-hustle/';
 const followers = 32_832;
 const followed = 654;
 const profileDescription = `Blender 😙`;

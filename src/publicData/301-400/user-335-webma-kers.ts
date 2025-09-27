@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'webma_kers';
-const userId = '';
-const prefixUrl = '';
+const userId = '7f3b8ed7-ba2c-43a5-b8a4-adc720b3e767';
+const prefixUrl = 'https://dominicnikolai.github.io/project-341/assets/webma-kers/';
 const followers = 142_832;
 const followed = 50;
 const profileDescription = `WebDesign Agency`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'deeev_studio';
-const userId = '';
-const prefixUrl = '';
+const userId = '65d82f0d-e531-4027-88da-0b8dfca60907';
+const prefixUrl = 'https://dominicnikolai.github.io/project-342/assets/deeev-studio/';
 const followers = 328_322;
 const followed = 50;
 const profileDescription = `Brand creation and development`;

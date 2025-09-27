@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'madebyamar';
-const userId = '';
-const prefixUrl = '';
+const userId = '25990756-3cec-4e49-9699-d8c4f8e2c5c8';
+const prefixUrl = 'https://dominicnikolai.github.io/project-342/assets/madebyamar/';
 const followers = 32_832;
 const followed = 50;
 const profileDescription = `🔥Helping businesses grow through purposeful design`;

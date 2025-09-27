@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'graphicdesignpark';
-const userId = '';
-const prefixUrl = '';
+const userId = 'fcef1b64-a921-45ee-a9de-fb78f5018657';
+const prefixUrl = 'https://dominicnikolai.github.io/project-342/assets/graphicdesignpark/';
 const followers = 1_334_325;
 const followed = 50;
 const profileDescription = `Logo designer | Visual identity`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 6;
+const quantityOfVideos = 4;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
