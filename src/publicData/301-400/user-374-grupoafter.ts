@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'grupoafter';
-const userId = '';
-const prefixUrl = '';
+const userId = 'a5af3ef9-e0ad-4e1d-8c9e-bfb31b5a6d6c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-346/assets/grupoafter/';
 const followers = 195_732;
 const followed = 93;
 const profileDescription = `Transformamos startups en marcas serias, profesionales y confiables`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'unicorp_design';
-const userId = '';
-const prefixUrl = '';
+const userId = '2d4b3dbd-4716-4e8c-b9c3-669a63479c86';
+const prefixUrl = 'https://dominicnikolai.github.io/project-345/assets/unicorp-design/';
 const followers = 342_435;
 const followed = 50;
 const profileDescription = `🚀 Empowering designers to build full websites
