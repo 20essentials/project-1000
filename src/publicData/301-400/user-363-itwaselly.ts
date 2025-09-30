@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'itwaselly';
-const userId = '';
-const prefixUrl = '';
+const userId = '39e6d1af-e1d8-4b59-b0eb-d5083c75ad78';
+const prefixUrl = 'https://dominicnikolai.github.io/project-345/assets/itwaselly/';
 const followers = 322_424;
 const followed = 318;
 const profileDescription = `Just a girl helping you learn 3D`;

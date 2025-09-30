@@ -204,6 +204,9 @@ import { kabarza_array_of_posts, kabarza_commonProps } from './user-358-kabarza'
 import { koen_salo_array_of_posts, koen_salo_commonProps } from './user-360-koen-salo';
 import { macweb_array_of_posts, macweb_commonProps } from './user-356-macweb';
 import { z_artsync_array_of_posts, z_artsync_commonProps } from './user-355-z-artsync';
+import { digitalartsensei_array_of_posts, digitalartsensei_commonProps } from './user-365-digitalartsensei';
+import { itwaselly_array_of_posts, itwaselly_commonProps } from './user-363-itwaselly';
+import { jorge_array_of_posts, jorge_commonProps } from './user-368-jorge';
 
 export const PUBLIC_301_400: arrayOfPosts = [
   [seanaiux_commonProps, seanaiux_array_of_posts] /* 301 */,
@@ -272,5 +275,11 @@ export const PUBLIC_301_400: arrayOfPosts = [
   [kabarza_commonProps, kabarza_array_of_posts] /* 358 */,
   [eighty_level_commonProps, eighty_level_array_of_posts] /* 359 */,
   [koen_salo_commonProps, koen_salo_array_of_posts] /* 360 */,
-  [ayzz_thedesigner_commonProps, ayzz_thedesigner_array_of_posts] /* 361 */
+  [ayzz_thedesigner_commonProps, ayzz_thedesigner_array_of_posts] /* 361 */,
+
+  [itwaselly_commonProps, itwaselly_array_of_posts] /* 363 */,
+
+  [digitalartsensei_commonProps, digitalartsensei_array_of_posts] /* 365 */,
+
+  [jorge_commonProps, jorge_array_of_posts] /* 368 */,
 ];

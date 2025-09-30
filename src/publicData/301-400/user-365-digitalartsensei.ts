@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'digitalartsensei';
-const userId = '';
-const prefixUrl = '';
+const userId = '1bb2f84e-01ff-4155-b781-24d03ab77e72';
+const prefixUrl = 'https://dominicnikolai.github.io/project-345/assets/digitalartsensei/';
 const followers = 973_324;
 const followed = 50;
 const profileDescription = `AI Art Creator `;
