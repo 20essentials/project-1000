@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'wisman_flicks';
-const userId = '';
-const prefixUrl = '';
+const userId = '22bfdd4a-e59e-4c27-8316-001eb2bb7827';
+const prefixUrl = 'https://dominicnikolai.github.io/project-347/assets/wisman-flicks/';
 const followers = 385_832;
 const followed = 50;
 const profileDescription = `DM to book a shoot`;

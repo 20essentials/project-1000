@@ -226,6 +226,8 @@ import { pragyamuthuraman_array_of_posts, pragyamuthuraman_commonProps } from '.
 import { salsadehumor_array_of_posts, salsadehumor_commonProps } from './user-382-salsadehumor';
 import { sogallery_array_of_posts, sogallery_commonProps } from './user-384-sogallery';
 import { tahir_dsgn_array_of_posts, tahir_dsgn_commonProps } from './user-383-tahir-dsgn';
+import { thesecondbrain_array_of_posts, thesecondbrain_commonProps } from './user-379-thesecondbrain';
+import { wisman_flicks_array_of_posts, wisman_flicks_commonProps } from './user-385-wisman-flicks';
 
 export const PUBLIC_301_400: arrayOfPosts = [
   [seanaiux_commonProps, seanaiux_array_of_posts] /* 301 */,
@@ -312,10 +314,11 @@ export const PUBLIC_301_400: arrayOfPosts = [
   [lacittaforgiatadallalava_commonProps, lacittaforgiatadallalava_array_of_posts] /* 376 */,
   [unghie_commonProps, unghie_array_of_posts] /* 377 */,
   [conocer_commonProps, conocer_array_of_posts] /* 378 */,
-
+  [thesecondbrain_commonProps, thesecondbrain_array_of_posts] /* 379 */,
   [kryos_studio_commonProps, kryos_studio_array_of_posts] /* 380 */,
   [pragyamuthuraman_commonProps, pragyamuthuraman_array_of_posts] /* 381 */,
   [salsadehumor_commonProps, salsadehumor_array_of_posts] /* 382 */,
   [tahir_dsgn_commonProps, tahir_dsgn_array_of_posts] /* 383 */,
   [sogallery_commonProps, sogallery_array_of_posts] /* 384 */,
+  [wisman_flicks_commonProps, wisman_flicks_array_of_posts] /* 385 */,
 ];

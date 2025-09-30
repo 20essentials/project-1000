@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'thesecondbrain';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c59739d1-93f7-4bd4-be98-1365aa7ff82c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-347/assets/thes3condbr4in/';
 const followers = 398_832;
 const followed = 322;
 const profileDescription = `Came for AI memes, stayed for the best AI tool`;
