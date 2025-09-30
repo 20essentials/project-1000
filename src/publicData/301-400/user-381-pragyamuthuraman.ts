@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'pragyamuthuraman';
-const userId = '';
-const prefixUrl = '';
+const userId = '4d0fdc60-76d3-44f9-a910-8b752e44ed29';
+const prefixUrl = 'https://dominicnikolai.github.io/project-347/assets/pragyamuthuraman/';
 const followers = 872_892;
 const followed = 191;
 const profileDescription = `Brand Strategist | Developer`;

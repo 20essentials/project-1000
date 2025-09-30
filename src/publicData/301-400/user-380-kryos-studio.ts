@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'kryos_studio';
-const userId = '';
-const prefixUrl = '';
+const userId = 'cae8d5c6-147e-4435-b973-04a6b9b9e86c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-347/assets/kryos-studio/';
 const followers = 56_832;
 const followed = 50;
 const profileDescription = `Obsesionados con crear experiencias digitales`;
