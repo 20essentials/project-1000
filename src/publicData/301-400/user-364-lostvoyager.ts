@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'lostvoyager';
-const userId = '';
-const prefixUrl = '';
+const userId = 'fdc03b07-092f-4414-bbd9-069f72428ef9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-345/assets/lostvoyager/';
 const followers = 38_832;
 const followed = 50;
 const profileDescription = `Lost? Maybe 🌌`;

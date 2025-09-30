@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'kunchevsky';
-const userId = '';
-const prefixUrl = '';
+const userId = 'f4b7398c-5679-46fd-b8ad-70fad624d513';
+const prefixUrl = 'https://dominicnikolai.github.io/project-345/assets/kunchevsky/';
 const followers = 1_125_838;
 const followed = 50;
 const profileDescription = ` Founder of Artist School`;

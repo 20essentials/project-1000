@@ -207,6 +207,9 @@ import { z_artsync_array_of_posts, z_artsync_commonProps } from './user-355-z-ar
 import { digitalartsensei_array_of_posts, digitalartsensei_commonProps } from './user-365-digitalartsensei';
 import { itwaselly_array_of_posts, itwaselly_commonProps } from './user-363-itwaselly';
 import { jorge_array_of_posts, jorge_commonProps } from './user-368-jorge';
+import { kunchevsky_array_of_posts, kunchevsky_commonProps } from './user-369-kunchevsky';
+import { legalbet_esp_array_of_posts, legalbet_esp_commonProps } from './user-362-legalbet-esp';
+import { lostvoyager_array_of_posts, lostvoyager_commonProps } from './user-364-lostvoyager';
 
 export const PUBLIC_301_400: arrayOfPosts = [
   [seanaiux_commonProps, seanaiux_array_of_posts] /* 301 */,
@@ -276,10 +279,11 @@ export const PUBLIC_301_400: arrayOfPosts = [
   [eighty_level_commonProps, eighty_level_array_of_posts] /* 359 */,
   [koen_salo_commonProps, koen_salo_array_of_posts] /* 360 */,
   [ayzz_thedesigner_commonProps, ayzz_thedesigner_array_of_posts] /* 361 */,
-
+  [legalbet_esp_commonProps, legalbet_esp_array_of_posts] /* 362 */,
   [itwaselly_commonProps, itwaselly_array_of_posts] /* 363 */,
-
+  [lostvoyager_commonProps, lostvoyager_array_of_posts] /* 364 */,
   [digitalartsensei_commonProps, digitalartsensei_array_of_posts] /* 365 */,
 
   [jorge_commonProps, jorge_array_of_posts] /* 368 */,
+  [kunchevsky_commonProps, kunchevsky_array_of_posts] /* 369 */,
 ];

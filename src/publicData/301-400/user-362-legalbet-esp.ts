@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'legalbet_esp';
-const userId = '';
-const prefixUrl = '';
+const userId = '3cdd652c-2076-4d4e-9a71-351d196f06aa';
+const prefixUrl = 'https://dominicnikolai.github.io/project-345/assets/legalbet-esp/';
 const followers = 38_323;
 const followed = 749;
 const profileDescription = `Portal de #apuestasdeportivas y pronósticos`;
