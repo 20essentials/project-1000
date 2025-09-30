@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'sentinel_lab_dev';
-const userId = '';
-const prefixUrl = '';
+const userId = '7d070c89-8a9a-46e0-b26c-bc85763ff882';
+const prefixUrl = 'https://dominicnikolai.github.io/project-346/assets/sentinel-lab-dev/';
 const followers = 478_720;
 const followed = 32;
 const profileDescription = `Code and ...`;

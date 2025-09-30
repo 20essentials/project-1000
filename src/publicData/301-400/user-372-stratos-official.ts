@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'stratos_official';
-const userId = '';
-const prefixUrl = '';
+const userId = 'f584ba49-7bd2-4015-96ca-242be388cefd';
+const prefixUrl = 'https://dominicnikolai.github.io/project-346/assets/stratos-official/';
 const followers = 31_922;
 const followed = 110;
 const profileDescription = `Stratos funds and supports indie studios`;

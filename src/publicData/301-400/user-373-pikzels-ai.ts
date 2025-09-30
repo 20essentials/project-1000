@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'pikzels_ai';
-const userId = '';
-const prefixUrl = '';
+const userId = 'f5865b2d-d0dc-4626-b4e1-8f89f4321e76';
+const prefixUrl = 'https://dominicnikolai.github.io/project-346/assets/pikzels-ai/';
 const followers = 114_720;
 const followed = 50;
 const profileDescription = `Viral Thumbnails & Titles in Seconds`;

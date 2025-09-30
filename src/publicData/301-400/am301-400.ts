@@ -216,6 +216,10 @@ import { grupoafter_array_of_posts, grupoafter_commonProps } from './user-374-gr
 import { highviplife_array_of_posts, highviplife_commonProps } from './user-371-highviplife';
 import { kolde_dsg_array_of_posts, kolde_dsg_commonProps } from './user-375-kolde-dsg';
 import { lacittaforgiatadallalava_array_of_posts, lacittaforgiatadallalava_commonProps } from './user-376-lacittaforgiatadallalava';
+import { pikzels_ai_array_of_posts, pikzels_ai_commonProps } from './user-373-pikzels-ai';
+import { sentinel_lab_dev_array_of_posts, sentinel_lab_dev_commonProps } from './user-370-sentinel-lab-dev';
+import { stratos_official_array_of_posts, stratos_official_commonProps } from './user-372-stratos-official';
+import { unghie_array_of_posts, unghie_commonProps } from './user-377-unghie';
 
 export const PUBLIC_301_400: arrayOfPosts = [
   [seanaiux_commonProps, seanaiux_array_of_posts] /* 301 */,
@@ -293,10 +297,12 @@ export const PUBLIC_301_400: arrayOfPosts = [
   [unicorp_design_commonProps, unicorp_design_array_of_posts] /* 367 */,
   [jorge_commonProps, jorge_array_of_posts] /* 368 */,
   [kunchevsky_commonProps, kunchevsky_array_of_posts] /* 369 */,
-
+  [sentinel_lab_dev_commonProps, sentinel_lab_dev_array_of_posts] /* 370 */,
   [highviplife_commonProps, highviplife_array_of_posts] /* 371 */,
-
+  [stratos_official_commonProps, stratos_official_array_of_posts] /* 372 */,
+  [pikzels_ai_commonProps, pikzels_ai_array_of_posts] /* 373 */,
   [grupoafter_commonProps, grupoafter_array_of_posts] /* 374 */,
   [kolde_dsg_commonProps, kolde_dsg_array_of_posts] /* 375 */,
   [lacittaforgiatadallalava_commonProps, lacittaforgiatadallalava_array_of_posts] /* 376 */,
+  [unghie_commonProps, unghie_array_of_posts] /* 377 */,
 ];
