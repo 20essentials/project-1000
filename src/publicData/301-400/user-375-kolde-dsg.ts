@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'kolde_dsg';
-const userId = '';
-const prefixUrl = '';
+const userId = 'e75e278d-7340-4157-9ea2-2f5c23e1179a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-346/assets/kolde-dsg/';
 const followers = 38_720;
 const followed = 54;
 const profileDescription = ` Diseñadora certificada `;

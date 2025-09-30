@@ -213,6 +213,9 @@ import { lostvoyager_array_of_posts, lostvoyager_commonProps } from './user-364-
 import { ramin_array_of_posts, ramin_commonProps } from './user-366-ramin';
 import { unicorp_design_array_of_posts, unicorp_design_commonProps } from './user-367-unicorp-design';
 import { grupoafter_array_of_posts, grupoafter_commonProps } from './user-374-grupoafter';
+import { highviplife_array_of_posts, highviplife_commonProps } from './user-371-highviplife';
+import { kolde_dsg_array_of_posts, kolde_dsg_commonProps } from './user-375-kolde-dsg';
+import { lacittaforgiatadallalava_array_of_posts, lacittaforgiatadallalava_commonProps } from './user-376-lacittaforgiatadallalava';
 
 export const PUBLIC_301_400: arrayOfPosts = [
   [seanaiux_commonProps, seanaiux_array_of_posts] /* 301 */,
@@ -291,5 +294,9 @@ export const PUBLIC_301_400: arrayOfPosts = [
   [jorge_commonProps, jorge_array_of_posts] /* 368 */,
   [kunchevsky_commonProps, kunchevsky_array_of_posts] /* 369 */,
 
+  [highviplife_commonProps, highviplife_array_of_posts] /* 371 */,
+
   [grupoafter_commonProps, grupoafter_array_of_posts] /* 374 */,
+  [kolde_dsg_commonProps, kolde_dsg_array_of_posts] /* 375 */,
+  [lacittaforgiatadallalava_commonProps, lacittaforgiatadallalava_array_of_posts] /* 376 */,
 ];

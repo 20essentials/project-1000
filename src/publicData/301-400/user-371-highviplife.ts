@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'highviplife';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c39c795b-274c-44af-852f-932629d69cb0';
+const prefixUrl = 'https://dominicnikolai.github.io/project-346/assets/highviplife/';
 const followers = 722_832;
 const followed = 50;
 const profileDescription = `Home of Gentlemen, a Legacy of Luxury`;

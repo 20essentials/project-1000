@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'lacittaforgiatadallalava';
-const userId = '';
-const prefixUrl = '';
+const userId = 'becd601e-2f1f-44af-b0f1-fbc566bd1e59';
+const prefixUrl = 'https://dominicnikolai.github.io/project-346/assets/lacittaforgiatadallalava/';
 const followers = 18_923;
 const followed = 50;
 const profileDescription = `Catania, L'araba Fenice Siciliana`;
