@@ -223,6 +223,9 @@ import { unghie_array_of_posts, unghie_commonProps } from './user-377-unghie';
 import { conocer_array_of_posts, conocer_commonProps } from './user-378-conocer';
 import { kryos_studio_array_of_posts, kryos_studio_commonProps } from './user-380-kryos-studio';
 import { pragyamuthuraman_array_of_posts, pragyamuthuraman_commonProps } from './user-381-pragyamuthuraman';
+import { salsadehumor_array_of_posts, salsadehumor_commonProps } from './user-382-salsadehumor';
+import { sogallery_array_of_posts, sogallery_commonProps } from './user-384-sogallery';
+import { tahir_dsgn_array_of_posts, tahir_dsgn_commonProps } from './user-383-tahir-dsgn';
 
 export const PUBLIC_301_400: arrayOfPosts = [
   [seanaiux_commonProps, seanaiux_array_of_posts] /* 301 */,
@@ -312,4 +315,7 @@ export const PUBLIC_301_400: arrayOfPosts = [
 
   [kryos_studio_commonProps, kryos_studio_array_of_posts] /* 380 */,
   [pragyamuthuraman_commonProps, pragyamuthuraman_array_of_posts] /* 381 */,
+  [salsadehumor_commonProps, salsadehumor_array_of_posts] /* 382 */,
+  [tahir_dsgn_commonProps, tahir_dsgn_array_of_posts] /* 383 */,
+  [sogallery_commonProps, sogallery_array_of_posts] /* 384 */,
 ];

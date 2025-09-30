@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'sogallery';
-const userId = '';
-const prefixUrl = '';
+const userId = '5a5bd292-bc39-4d6e-be66-443d551654aa';
+const prefixUrl = 'https://dominicnikolai.github.io/project-347/assets/sogallery/';
 const followers = 215_832;
 const followed = 50;
 const profileDescription = `Preserving the art, architecture, and memories`;

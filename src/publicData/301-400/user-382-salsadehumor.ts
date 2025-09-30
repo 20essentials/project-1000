@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'salsadehumor';
-const userId = '';
-const prefixUrl = '';
+const userId = '05da197c-5a8e-413d-a328-d5e914fef39b';
+const prefixUrl = 'https://dominicnikolai.github.io/project-347/assets/salsadehumor/';
 const followers = 720_832;
 const followed = 50;
 const profileDescription = `😜`;

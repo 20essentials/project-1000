@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'tahir_dsgn';
-const userId = '';
-const prefixUrl = '';
+const userId = 'cf14c2e1-7803-4931-8bd5-d52f6fe96321';
+const prefixUrl = 'https://dominicnikolai.github.io/project-347/assets/tahir-dsgn/';
 const followers = 133_832;
 const followed = 402;
 const profileDescription = `Premium Web & 3D Design for SaaS`;
