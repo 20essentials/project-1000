@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'vaal_snkrs';
-const userId = '';
-const prefixUrl = '';
+const userId = '686afffc-69bb-4d09-bec1-37549ef480d1';
+const prefixUrl = 'https://dominicnikolai.github.io/project-348/assets/vaal-snkrs/';
 const followers = 59_923;
 const followed = 34;
 const profileDescription = `📨`;

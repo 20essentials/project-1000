@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'via13agensoficial';
-const userId = '';
-const prefixUrl = '';
+const userId = '755f93f8-c5f8-4497-807c-c35c145da854';
+const prefixUrl = 'https://dominicnikolai.github.io/project-349/assets/13viagensoficial/';
 const followers = 27_003;
 const followed = 50;
 const profileDescription = `Experiências turísticas internacionais`;

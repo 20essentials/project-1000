@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'wehavethedata';
-const userId = '';
-const prefixUrl = '';
+const userId = '4eefaa09-0c82-41bb-bc11-2238696ee3d2';
+const prefixUrl = 'https://dominicnikolai.github.io/project-348/assets/wehavethedata/';
 const followers = 528_832;
 const followed = 545;
 const profileDescription = `wehavethedata`;

@@ -234,6 +234,9 @@ import { lenny_motion_array_of_posts, lenny_motion_commonProps } from './user-39
 import { lumosflamesit_array_of_posts, lumosflamesit_commonProps } from './user-387-lumosflamesit';
 import { mangabankai_shop_array_of_posts, mangabankai_shop_commonProps } from './user-391-mangabankai-shop';
 import { swooshdood_array_of_posts, swooshdood_commonProps } from './user-390-swooshdood';
+import { vaal_snkrs_array_of_posts, vaal_snkrs_commonProps } from './user-386-vaal-snkrs';
+import { wehavethedata_array_of_posts, wehavethedata_commonProps } from './user-388-wehavethedata';
+import { via13agensoficial_array_of_posts, via13agensoficial_commonProps } from './user-396-13viagensoficial';
 
 export const PUBLIC_301_400: arrayOfPosts = [
   [seanaiux_commonProps, seanaiux_array_of_posts] /* 301 */,
@@ -327,12 +330,14 @@ export const PUBLIC_301_400: arrayOfPosts = [
   [tahir_dsgn_commonProps, tahir_dsgn_array_of_posts] /* 383 */,
   [sogallery_commonProps, sogallery_array_of_posts] /* 384 */,
   [wisman_flicks_commonProps, wisman_flicks_array_of_posts] /* 385 */,
-
+  [vaal_snkrs_commonProps, vaal_snkrs_array_of_posts] /* 386 */,
   [lumosflamesit_commonProps, lumosflamesit_array_of_posts] /* 387 */,
-
+  [wehavethedata_commonProps, wehavethedata_array_of_posts] /* 388 */,
   [designanything_commonProps, designanything_array_of_posts] /* 389 */,
   [swooshdood_commonProps, swooshdood_array_of_posts] /* 390 */,
   [mangabankai_shop_commonProps, mangabankai_shop_array_of_posts] /* 391 */,
   [cienciainexplicable_commonProps, cienciainexplicable_array_of_posts] /* 392 */,
   [lenny_motion_commonProps, lenny_motion_array_of_posts] /* 393 */,
+
+  [via13agensoficial_commonProps, via13agensoficial_array_of_posts] /* 396*/,
 ];
