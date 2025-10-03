@@ -231,6 +231,9 @@ import { wisman_flicks_array_of_posts, wisman_flicks_commonProps } from './user-
 import { cienciainexplicable_array_of_posts, cienciainexplicable_commonProps } from './user-392-cienciainexplicable';
 import { designanything_array_of_posts, designanything_commonProps } from './user-389-designanything';
 import { lenny_motion_array_of_posts, lenny_motion_commonProps } from './user-393-lenny-motion';
+import { lumosflamesit_array_of_posts, lumosflamesit_commonProps } from './user-387-lumosflamesit';
+import { mangabankai_shop_array_of_posts, mangabankai_shop_commonProps } from './user-391-mangabankai-shop';
+import { swooshdood_array_of_posts, swooshdood_commonProps } from './user-390-swooshdood';
 
 export const PUBLIC_301_400: arrayOfPosts = [
   [seanaiux_commonProps, seanaiux_array_of_posts] /* 301 */,
@@ -325,8 +328,11 @@ export const PUBLIC_301_400: arrayOfPosts = [
   [sogallery_commonProps, sogallery_array_of_posts] /* 384 */,
   [wisman_flicks_commonProps, wisman_flicks_array_of_posts] /* 385 */,
 
-  [designanything_commonProps, designanything_array_of_posts] /* 389 */,
+  [lumosflamesit_commonProps, lumosflamesit_array_of_posts] /* 387 */,
 
+  [designanything_commonProps, designanything_array_of_posts] /* 389 */,
+  [swooshdood_commonProps, swooshdood_array_of_posts] /* 390 */,
+  [mangabankai_shop_commonProps, mangabankai_shop_array_of_posts] /* 391 */,
   [cienciainexplicable_commonProps, cienciainexplicable_array_of_posts] /* 392 */,
   [lenny_motion_commonProps, lenny_motion_array_of_posts] /* 393 */,
 ];

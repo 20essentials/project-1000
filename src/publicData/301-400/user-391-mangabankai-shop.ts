@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'mangabankai_shop';
-const userId = '';
-const prefixUrl = '';
+const userId = 'cce26945-8997-4028-bc1f-eee6ac7c9e70';
+const prefixUrl = 'https://dominicnikolai.github.io/project-348/assets/mangabankai-shop/';
 const followers = 45_832;
 const followed = 99;
 const profileDescription = `Light Box`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 6;
+const quantityOfVideos = 5;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
@@ -24,7 +24,7 @@ const arrayDescriptionsOfVideos = [
   `#animeitalia#mangaitalia#animebox#animeart#otakuitalia#animelover#lucianime#decorazioneanime#lampadaanime#animeitaliane#acquistianime#lightboxanime#stanzaotaku#animecollection#venditaanime`, /*3*/
   `#MajinVegeta #AnimeSetup #RoomGoals #DragonBallStyle #SaiyanOnly #BankaiDrop`, /*4*/
   `#anime #otaku #manga #weeb #animefan #animeedit #animeart #animeaesthetic #animeworld #animelover #onepiece #naruto #attackontitan #demonslayer #jujutsukaisen #chainsawman #dragonball #deathnote #hunterxhunter #berserk #spyxfamilia #bleach #myheroacademia`, /*5*/
-  `#Anime #AnimeArt #AnimeLovers #OtakuLife #Manga #AnimeMerch #AnimeCollection #AnimeRoom #AnimeDecor #OtakuStyle #WeebLife #LightBoxAnime #AnimeLightBox #OtakuVibes #RoomDecor #AnimeSetup #AnimeFan #AnimeAddict #OtakuAesthetic #AnimeGift`, /*6*/
+  ``, /*6*/
   ``, /*7*/
   ``, /*8*/
   ``, /*9*/ 

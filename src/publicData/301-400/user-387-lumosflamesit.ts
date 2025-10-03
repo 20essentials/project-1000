@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'lumosflamesit';
-const userId = '';
-const prefixUrl = '';
+const userId = '746d1a6f-4fea-402d-ac80-50cece77c1a1';
+const prefixUrl = 'https://dominicnikolai.github.io/project-348/assets/lumosflamesit/';
 const followers = 76_832;
 const followed = 50;
 const profileDescription = `✨Diventa un vero mago✨`;
