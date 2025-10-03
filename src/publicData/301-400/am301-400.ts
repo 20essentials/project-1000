@@ -228,6 +228,9 @@ import { sogallery_array_of_posts, sogallery_commonProps } from './user-384-soga
 import { tahir_dsgn_array_of_posts, tahir_dsgn_commonProps } from './user-383-tahir-dsgn';
 import { thesecondbrain_array_of_posts, thesecondbrain_commonProps } from './user-379-thesecondbrain';
 import { wisman_flicks_array_of_posts, wisman_flicks_commonProps } from './user-385-wisman-flicks';
+import { cienciainexplicable_array_of_posts, cienciainexplicable_commonProps } from './user-392-cienciainexplicable';
+import { designanything_array_of_posts, designanything_commonProps } from './user-389-designanything';
+import { lenny_motion_array_of_posts, lenny_motion_commonProps } from './user-393-lenny-motion';
 
 export const PUBLIC_301_400: arrayOfPosts = [
   [seanaiux_commonProps, seanaiux_array_of_posts] /* 301 */,
@@ -321,4 +324,9 @@ export const PUBLIC_301_400: arrayOfPosts = [
   [tahir_dsgn_commonProps, tahir_dsgn_array_of_posts] /* 383 */,
   [sogallery_commonProps, sogallery_array_of_posts] /* 384 */,
   [wisman_flicks_commonProps, wisman_flicks_array_of_posts] /* 385 */,
+
+  [designanything_commonProps, designanything_array_of_posts] /* 389 */,
+
+  [cienciainexplicable_commonProps, cienciainexplicable_array_of_posts] /* 392 */,
+  [lenny_motion_commonProps, lenny_motion_array_of_posts] /* 393 */,
 ];

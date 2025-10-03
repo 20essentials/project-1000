@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'lenny_motion';
-const userId = '';
-const prefixUrl = '';
+const userId = 'f1f311bc-2783-448f-83b1-506e20441e40';
+const prefixUrl = 'https://dominicnikolai.github.io/project-348/assets/lenny-motion/';
 const followers = 268_832;
 const followed = 362;
 const profileDescription = `motion`;

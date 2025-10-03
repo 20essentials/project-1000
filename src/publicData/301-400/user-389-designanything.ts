@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'designanything';
-const userId = '';
-const prefixUrl = '';
+const userId = '5bcbd5ed-620d-4f14-a24b-76a2bc4d3954';
+const prefixUrl = 'https://dominicnikolai.github.io/project-348/assets/designanything/';
 const followers = 695_832;
 const followed = 602;
 const profileDescription = `I share effortless design resources for designers`;
