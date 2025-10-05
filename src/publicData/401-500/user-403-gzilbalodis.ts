@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'gzilbalodis';
-const userId = '';
-const prefixUrl = '';
+const userId = 'b96bfbbd-e777-4949-ba0f-99d4c08bbf7b';
+const prefixUrl = 'https://dominicnikolai.github.io/project-350/assets/gzilbalodis/';
 const followers = 161_832;
 const followed = 467;
 const profileDescription = `Director of Flow(2024) and Away(2019)`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'nbaeurope';
-const userId = '';
-const prefixUrl = '';
+const userId = 'bca5555f-c547-452e-9897-ed8c1380aa89';
+const prefixUrl = 'https://dominicnikolai.github.io/project-350/assets/nbaeurope/';
 const followers = 1_234_345;
 const followed = 50;
 const profileDescription = `🏀💫`;
