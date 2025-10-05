@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'mundoinhospito';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ae581b28-8ac9-4425-85bd-04aab4d93d6a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-352/assets/mundoinhospito/';
 const followers = 627_832;
 const followed = 332;
 const profileDescription = `Eres más que una persona... Eres parte del Cambio`;

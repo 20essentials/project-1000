@@ -70,6 +70,8 @@ import { frx_web_array_of_posts, frx_web_commonProps } from './user-423-frx-web'
 import { jusinhel_life_array_of_posts, jusinhel_life_commonProps } from './user-424-jusinhel-life';
 import { libraries_array_of_posts, libraries_commonProps } from './user-419-libraries';
 import { mainfactory_studio_array_of_posts, mainfactory_studio_commonProps } from './user-425-mainfactory-studio';
+import { maxmmh_array_of_posts, maxmmh_commonProps } from './user-421-maxmmh';
+import { mundoinhospito_array_of_posts, mundoinhospito_commonProps } from './user-420-mundoinhospito';
 
 export const PUBLIC_401_500: arrayOfPosts = [
   [akcreationshd_commonProps, akcreationshd_array_of_posts] /* 401 */,
@@ -91,7 +93,8 @@ export const PUBLIC_401_500: arrayOfPosts = [
   [edmislove5_commonProps, edmislove5_array_of_posts] /* 417 */,
   [alaa_alaff_commonProps, alaa_alaff_array_of_posts] /* 418 */,
   [libraries_commonProps, libraries_array_of_posts] /* 419 */,
-
+  [mundoinhospito_commonProps, mundoinhospito_array_of_posts] /* 420 */,
+  [maxmmh_commonProps, maxmmh_array_of_posts] /* 421 */,
   [cleverpoly_commonProps, cleverpoly_array_of_posts] /* 422 */,
   [frx_web_commonProps, frx_web_array_of_posts] /* 423 */,
   [jusinhel_life_commonProps, jusinhel_life_array_of_posts] /* 424 */,

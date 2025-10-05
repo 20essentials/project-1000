@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'maxmmh';
-const userId = '';
-const prefixUrl = '';
+const userId = '2d55577d-dae6-4c61-8cad-b304f25f6e88';
+const prefixUrl = 'https://dominicnikolai.github.io/project-352/assets/maxmmh/';
 const followers = 832_325;
 const followed = 50;
 const profileDescription = `Visual Director | 3D & VFX | Event Videos`;
