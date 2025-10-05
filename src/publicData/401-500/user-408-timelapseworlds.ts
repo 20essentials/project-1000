@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'timelapseworlds';
-const userId = '';
-const prefixUrl = '';
+const userId = '6c9dae50-d8e5-4cb3-8f1e-4e011b3d99f2';
+const prefixUrl = 'https://dominicnikolai.github.io/project-350/assets/timelapseworlds/';
 const followers = 338_898;
 const followed = 50;
 const profileDescription = `bending reality`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'pchujoy';
-const userId = '';
-const prefixUrl = '';
+const userId = '364fa9db-19e7-4fd8-a267-dd8c5159577c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-350/assets/pchujoy/';
 const followers = 1_320_898;
 const followed = 543;
 const profileDescription = `Geek, technology, videogames🇵🇪`;
