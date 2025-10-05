@@ -237,6 +237,8 @@ import { swooshdood_array_of_posts, swooshdood_commonProps } from './user-390-sw
 import { vaal_snkrs_array_of_posts, vaal_snkrs_commonProps } from './user-386-vaal-snkrs';
 import { wehavethedata_array_of_posts, wehavethedata_commonProps } from './user-388-wehavethedata';
 import { via13agensoficial_array_of_posts, via13agensoficial_commonProps } from './user-396-13viagensoficial';
+import { abdul_rab_ammar_array_of_posts, abdul_rab_ammar_commonProps } from './user-397-abdul-rab-ammar';
+import { design_insignia_array_of_posts, design_insignia_commonProps } from './user-395-design-insignia';
 
 export const PUBLIC_301_400: arrayOfPosts = [
   [seanaiux_commonProps, seanaiux_array_of_posts] /* 301 */,
@@ -339,5 +341,8 @@ export const PUBLIC_301_400: arrayOfPosts = [
   [cienciainexplicable_commonProps, cienciainexplicable_array_of_posts] /* 392 */,
   [lenny_motion_commonProps, lenny_motion_array_of_posts] /* 393 */,
 
+  [design_insignia_commonProps, design_insignia_array_of_posts] /* 396*/,
   [via13agensoficial_commonProps, via13agensoficial_array_of_posts] /* 396*/,
+  
+  [abdul_rab_ammar_commonProps, abdul_rab_ammar_array_of_posts] /* 397*/,
 ];

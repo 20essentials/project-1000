@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'abdul_rab_ammar';
-const userId = '';
-const prefixUrl = '';
+const userId = '20de9904-f90b-4acb-a19a-0ae9dca9d607';
+const prefixUrl = 'https://dominicnikolai.github.io/project-349/assets/abdul-rab-ammar/';
 const followers = 57_283;
 const followed = 93;
 const profileDescription = `I Design & Develop`;

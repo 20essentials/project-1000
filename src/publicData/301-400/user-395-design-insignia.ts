@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'design_insignia';
-const userId = '';
-const prefixUrl = '';
+const userId = '5bca280f-1608-4b60-821f-69a89362a500';
+const prefixUrl = 'https://dominicnikolai.github.io/project-349/assets/design-insignia/';
 const followers = 283_832;
 const followed = 547;
 const profileDescription = `Helping Content creators upgrade their visuals`;
