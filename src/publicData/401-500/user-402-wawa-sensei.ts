@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'wawa_sensei';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ddf21f3e-75b1-4962-a9f9-58aefeb18dcf';
+const prefixUrl = 'https://dominicnikolai.github.io/project-350/assets/wawa-sensei/';
 const followers = 91_787;
 const followed = 50;
 const profileDescription = `3D Web Developer`;

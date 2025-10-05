@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'bossa_dsg';
-const userId = '';
-const prefixUrl = '';
+const userId = '5aefb3c7-fe5d-4430-9507-773afadce480';
+const prefixUrl = 'https://dominicnikolai.github.io/project-351/assets/bossa-dsg/';
 const followers = 63_600;
 const followed = 322;
 const profileDescription = `Diseñador de marcas`;

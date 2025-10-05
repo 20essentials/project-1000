@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'aplasticplant';
-const userId = '';
-const prefixUrl = '';
+const userId = '58bc4a0d-b6ee-4bf1-b606-f98576cc2bfe';
+const prefixUrl = 'https://dominicnikolai.github.io/project-351/assets/aplasticplant/';
 const followers = 666_893;
 const followed = 149;
 const profileDescription = `when you feel useless just remember you breathe out carbon dioxide for plants`;
