@@ -10,6 +10,9 @@ import { uandersonx_array_of_posts, uandersonx_commonProps } from './user-409-ua
 import { wawa_sensei_array_of_posts, wawa_sensei_commonProps } from './user-402-wawa-sensei';
 import { aplasticplant_array_of_posts, aplasticplant_commonProps } from './user-412-aplasticplant';
 import { bossa_dsg_array_of_posts, bossa_dsg_commonProps } from './user-410-bossa-dsg';
+import { buildwithflux_array_of_posts, buildwithflux_commonProps } from './user-415-buildwithflux';
+import { edmislove5_array_of_posts, edmislove5_commonProps } from './user-417-edmislove5';
+import { emberysociety_array_of_posts, emberysociety_commonProps } from './user-416-emberysociety';
 
 export const PUBLIC_401_500: arrayOfPosts = [
   [akcreationshd_commonProps, akcreationshd_array_of_posts] /* 401 */,
@@ -24,4 +27,8 @@ export const PUBLIC_401_500: arrayOfPosts = [
   [bossa_dsg_commonProps, bossa_dsg_array_of_posts] /* 410 */,
 
   [aplasticplant_commonProps, aplasticplant_array_of_posts] /* 412 */,
+
+  [buildwithflux_commonProps, buildwithflux_array_of_posts] /* 415 */,
+  [emberysociety_commonProps, emberysociety_array_of_posts] /* 416 */,
+  [edmislove5_commonProps, edmislove5_array_of_posts] /* 417 */,
 ];

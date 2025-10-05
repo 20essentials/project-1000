@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'edmislove5';
-const userId = '';
-const prefixUrl = '';
+const userId = '0b852257-604a-4ef3-945b-e10a9c4d0b2a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-351/assets/edmislove5/';
 const followers = 445_832;
 const followed = 595;
 const profileDescription = `EDM is love`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'buildwithflux';
-const userId = '';
-const prefixUrl = '';
+const userId = '4a97cf45-c62f-4f19-bae8-8128eaa48886';
+const prefixUrl = 'https://dominicnikolai.github.io/project-351/assets/buildwithflux/';
 const followers = 123_832;
 const followed = 318;
 const profileDescription = ` AI PCB design`;

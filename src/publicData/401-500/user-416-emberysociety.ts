@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'emberysociety';
-const userId = '';
-const prefixUrl = '';
+const userId = '9db7971e-e0bd-4a16-9160-40c336f95a9d';
+const prefixUrl = 'https://dominicnikolai.github.io/project-351/assets/emberysociety/';
 const followers = 86_832;
 const followed = 24;
 const profileDescription = `One World, One Goal`;
