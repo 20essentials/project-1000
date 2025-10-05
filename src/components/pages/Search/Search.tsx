@@ -14,6 +14,7 @@ import {
 const ROW_ACTIVE_CLASSNAME = 'active-search-item';
 
 export function Search() {
+  const timer = useRef<NodeJS.Timeout | null>(null);
   const [searchText, setSearchText] = useState(() => {
     const inputValueDefault = '';
     const notExistSearchQueryParam = !existTheseQueryParams({
@@ -80,10 +81,13 @@ export function Search() {
   }
 
   function handleChange(e: React.ChangeEvent) {
+    timer.current && clearTimeout(timer.current);
     const inputElement = e.target as HTMLInputElement;
     const { value } = inputElement;
     setSearchText(value);
-    updateURLsearchParams({ arrayOfQueryParamsToSet: [['search', value]] });
+    timer.current = setTimeout(() => {
+      updateURLsearchParams({ arrayOfQueryParamsToSet: [['search', value]] });
+    }, 1000);
   }
 
   useEffect(() => {
@@ -134,8 +138,6 @@ export function Search() {
     };
   }, [wrapCustom]);
 
-  
-
   return (
     <article className='search'>
       <aside className='search-top'>
@@ -144,9 +146,9 @@ export function Search() {
           type='text'
           placeholder='Search some user...'
           autoFocus={true}
-          data-testid="input-search"
+          data-testid='input-search'
           value={searchText}
-          spellCheck="false"
+          spellCheck='false'
         />
         <img
           src='/assets/search-gif.gif'
@@ -163,7 +165,7 @@ export function Search() {
               key={userId}
               onClick={() => {
                 removeAllParamsOfUrl();
-                nextToProfileCreator({ userId })
+                nextToProfileCreator({ userId });
               }}
               ref={el => {
                 el && (arrayOfRows.current[index] = el);
