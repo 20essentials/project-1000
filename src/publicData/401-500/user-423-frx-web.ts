@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'frx_web';
-const userId = '';
-const prefixUrl = '';
+const userId = '16a2f5e2-f181-44bc-8ce4-ecf649a85309';
+const prefixUrl = 'https://dominicnikolai.github.io/project-352/assets/frx-web/';
 const followers = 38_832;
 const followed = 50;
 const profileDescription = `Web Design & Development`;

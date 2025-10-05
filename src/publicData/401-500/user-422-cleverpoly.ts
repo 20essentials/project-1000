@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'cleverpoly';
-const userId = '';
-const prefixUrl = '';
+const userId = '8b32edb5-50e3-4f65-b039-113ab2b3b7a5';
+const prefixUrl = 'https://dominicnikolai.github.io/project-352/assets/cleverpoly/';
 const followers = 438_832;
 const followed = 940;
 const profileDescription = `MAKING CREATIVE 3D VISUALS`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 6;
+const quantityOfVideos = 4;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;

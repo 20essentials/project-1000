@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'alaa_alaff';
-const userId = '';
-const prefixUrl = '';
+const userId = 'a9d21582-a7a1-44ba-9fe2-a0699ec887e2';
+const prefixUrl = 'https://dominicnikolai.github.io/project-352/assets/alaa-alaff/';
 const followers = 84_832;
 const followed = 170;
 const profileDescription = `👨🏻‍💻 Software Engineer`;
