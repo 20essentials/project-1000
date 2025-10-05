@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'canelo_hub';
-const userId = '';
-const prefixUrl = '';
+const userId = '57e146d9-e723-49b1-9f8c-96db183e5dc9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-350/assets/c4nelo-hub/';
 const followers = 604_832;
 const followed = 50;
 const profileDescription = `🐇`;

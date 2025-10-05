@@ -242,6 +242,7 @@ import { design_insignia_array_of_posts, design_insignia_commonProps } from './u
 import { jitu_ux_array_of_posts, jitu_ux_commonProps } from './user-394-jitu-ux';
 import { pysource_array_of_posts, pysource_commonProps } from './user-399-pysource';
 import { sizon95_array_of_posts, sizon95_commonProps } from './user-400-sizon95';
+import { store222_array_of_posts, store222_commonProps } from './user-398-store222';
 
 export const PUBLIC_301_400: arrayOfPosts = [
   [seanaiux_commonProps, seanaiux_array_of_posts] /* 301 */,
@@ -344,12 +345,10 @@ export const PUBLIC_301_400: arrayOfPosts = [
   [cienciainexplicable_commonProps, cienciainexplicable_array_of_posts] /* 392 */,
   [lenny_motion_commonProps, lenny_motion_array_of_posts] /* 393 */,
   [jitu_ux_commonProps, jitu_ux_array_of_posts] /* 394 */,
-
-  [design_insignia_commonProps, design_insignia_array_of_posts] /* 396*/,
+  [design_insignia_commonProps, design_insignia_array_of_posts] /* 395*/,
   [via13agensoficial_commonProps, via13agensoficial_array_of_posts] /* 396*/,
-  
   [abdul_rab_ammar_commonProps, abdul_rab_ammar_array_of_posts] /* 397*/,
-
+  [store222_commonProps, store222_array_of_posts] /* 398*/,
   [pysource_commonProps, pysource_array_of_posts] /* 399 */,
   [sizon95_commonProps, sizon95_array_of_posts] /* 400 */,
 ];
