@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'pysource';
-const userId = '';
-const prefixUrl = '';
+const userId = '2b095745-93bd-4dfd-a7d7-46798e2c8ed0';
+const prefixUrl = 'https://dominicnikolai.github.io/project-349/assets/pysource/';
 const followers = 125_325;
 const followed = 79;
 const profileDescription = `I help you master AI and build any AI Vision solution`;

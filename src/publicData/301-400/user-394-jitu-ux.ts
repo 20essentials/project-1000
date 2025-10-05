@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'jitu_ux';
-const userId = '';
-const prefixUrl = '';
+const userId = '0dc329de-cef0-40d0-9523-6036b6cf21a9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-349/assets/jitu-ux/';
 const followers = 29_832;
 const followed = 50;
 const profileDescription = `+10 Yr experience`;

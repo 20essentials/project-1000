@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'sizon95';
-const userId = '';
-const prefixUrl = '';
+const userId = '4ab2d363-51b7-4073-8695-20c96e72be4f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-349/assets/sizon95/';
 const followers = 36_832;
 const followed = 50;
 const profileDescription = `The one and only omnitrix app that you need`;
