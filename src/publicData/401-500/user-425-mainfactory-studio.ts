@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'mainfactory_studio';
-const userId = '';
-const prefixUrl = '';
+const userId = '1524b735-f949-42c6-9ab2-37cf36569f52';
+const prefixUrl = 'https://dominicnikolai.github.io/project-352/assets/mainfactory-studio/';
 const followers = 28_832;
 const followed = 100;
 const profileDescription = `MaiN is a CGI, Animation, illustrations studio`;

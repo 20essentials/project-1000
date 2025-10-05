@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'jusinhel_life';
-const userId = '';
-const prefixUrl = '';
+const userId = '2a6530f2-a0a9-44d6-bffc-7ab73e5a2dfe';
+const prefixUrl = 'https://dominicnikolai.github.io/project-352/assets/jusinhel-life/';
 const followers = 45_932;
 const followed = 379;
 const profileDescription = `Multi-brand`;

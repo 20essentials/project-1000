@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'libraries';
-const userId = '';
-const prefixUrl = '';
+const userId = 'e48f2ab4-c7cf-48d2-bd3c-2ab3bffc841d';
+const prefixUrl = 'https://dominicnikolai.github.io/project-352/assets/libraries/';
 const followers = 572_832;
 const followed = 473;
 const profileDescription = `Creativity`;
