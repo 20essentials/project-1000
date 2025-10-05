@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'hyperspace_lighting';
-const userId = '';
-const prefixUrl = '';
+const userId = 'bcd70cd0-ee8c-482c-b946-6bef7e193944';
+const prefixUrl = 'https://dominicnikolai.github.io/project-351/assets/hyperspace-lighting/';
 const followers = 372_832;
 const followed = 876;
 const profileDescription = `Ultra-chromatic infinity lighting. Home of the HyperCube.`;

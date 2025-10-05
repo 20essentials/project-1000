@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'thedesignely';
-const userId = '';
-const prefixUrl = '';
+const userId = '6b9b420c-bd02-4fe5-8884-2debaa9356a0';
+const prefixUrl = 'https://dominicnikolai.github.io/project-351/assets/thedesignely/';
 const followers = 738_898;
 const followed = 143;
 const profileDescription = `Product designer in Manchester`;

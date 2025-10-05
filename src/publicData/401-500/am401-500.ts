@@ -13,6 +13,9 @@ import { bossa_dsg_array_of_posts, bossa_dsg_commonProps } from './user-410-boss
 import { buildwithflux_array_of_posts, buildwithflux_commonProps } from './user-415-buildwithflux';
 import { edmislove5_array_of_posts, edmislove5_commonProps } from './user-417-edmislove5';
 import { emberysociety_array_of_posts, emberysociety_commonProps } from './user-416-emberysociety';
+import { hyperspace_lighting_array_of_posts, hyperspace_lighting_commonProps } from './user-413-hyperspace-lighting';
+import { memes_de_perritos_array_of_posts, memes_de_perritos_commonProps } from './user-411-memes-de-perritos';
+import { thedesignely_array_of_posts, thedesignely_commonProps } from './user-414-thedesignely';
 
 export const PUBLIC_401_500: arrayOfPosts = [
   [akcreationshd_commonProps, akcreationshd_array_of_posts] /* 401 */,
@@ -25,9 +28,10 @@ export const PUBLIC_401_500: arrayOfPosts = [
   [timelapseworlds_commonProps, timelapseworlds_array_of_posts] /* 408 */,
   [uandersonx_commonProps, uandersonx_array_of_posts] /* 409 */,
   [bossa_dsg_commonProps, bossa_dsg_array_of_posts] /* 410 */,
-
+  [memes_de_perritos_commonProps, memes_de_perritos_array_of_posts] /* 411 */,
   [aplasticplant_commonProps, aplasticplant_array_of_posts] /* 412 */,
-
+  [hyperspace_lighting_commonProps, hyperspace_lighting_array_of_posts] /* 413 */,
+  [thedesignely_commonProps, thedesignely_array_of_posts] /* 414 */,
   [buildwithflux_commonProps, buildwithflux_array_of_posts] /* 415 */,
   [emberysociety_commonProps, emberysociety_array_of_posts] /* 416 */,
   [edmislove5_commonProps, edmislove5_array_of_posts] /* 417 */,

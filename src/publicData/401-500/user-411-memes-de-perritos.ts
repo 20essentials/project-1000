@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'memes_de_perritos';
-const userId = '';
-const prefixUrl = '';
+const userId = '598a9b22-b9c2-4410-a01e-a3114fd85a75';
+const prefixUrl = 'https://dominicnikolai.github.io/project-351/assets/memes-de-p3rritos/';
 const followers = 844_893;
 const followed = 50;
 const profileDescription = `Memes + perritos = felicidad pura`;
