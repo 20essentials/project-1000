@@ -4,12 +4,12 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'edmclip';
+const username = 'findingml';
 const userId = '';
 const prefixUrl = '';
-const followers = 751_832;
-const followed = 772;
-const profileDescription = ` 🎶 The #1 EDM community on`;
+const followers = 38_832;
+const followed = 204;
+const profileDescription = `Playing With Netssssss`;
 const prefixLetterVideos = 'v';
 const quantityOfVideos = 4;
 const prefixLetterImages = 'f';
@@ -18,10 +18,10 @@ const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
-  `#edm #electronicdancemusic #pop #blackeyedpeas`, /*1*/
-  `Which track does this make you think of? 🤔 #edm #edmmusic #dj #trackid #music #housemusic`, /*2*/
-  `#edm #edmmusic #electronicdancemusic #meme #bro`, /*3*/
-  ``, /*4*/
+  `#reelsinstagram #viralreels #trendingreels #ai#coding#ml#dl#scienceworld #science #mindset#motivation#scienceworld #tech#techworld #python#java#javascript #matlab#R#datascience`, /*1*/
+  `#reelsinstagram #fypシ #tren#viralreels #ai #ml #coding #coders #DataScience #projects`, /*2*/
+  `#reelsinstagram #ai#coding#ml#computerscience #cs#computervision #dl#neuralnetwork #python#c++#viralreels #trendingreels`, /*3*/
+  `#reelsinstagram #foryourpage#ai#coding#ml#reels#codinglife #dl#datastructure #datascience #python #javascript #java#fypage #fypシ #fy #trending #trendingreels #viralvideos #viralreels #viral`, /*4*/
   ``, /*5*/
   ``, /*6*/
   ``, /*7*/
@@ -64,7 +64,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const edmclip_commonProps = generateExactlyCommonProps({
+export const findingml_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -73,7 +73,7 @@ export const edmclip_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const edmclip_videos = generateArrayPostsOfVideos({
+const findingml_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -81,14 +81,14 @@ const edmclip_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const edmclip_images = generateArrayPostsOfImages({
+const findingml_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const edmclip_array_of_posts = [
-  ...edmclip_images,
-  ...edmclip_videos
+export const findingml_array_of_posts = [
+  ...findingml_images,
+  ...findingml_videos
 ];

@@ -4,12 +4,12 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'edmclip';
+const username = 'mohammadshokri';
 const userId = '';
 const prefixUrl = '';
-const followers = 751_832;
-const followed = 772;
-const profileDescription = ` 🎶 The #1 EDM community on`;
+const followers = 75_720;
+const followed = 323;
+const profileDescription = `محمد شکری`;
 const prefixLetterVideos = 'v';
 const quantityOfVideos = 4;
 const prefixLetterImages = 'f';
@@ -18,10 +18,10 @@ const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
-  `#edm #electronicdancemusic #pop #blackeyedpeas`, /*1*/
-  `Which track does this make you think of? 🤔 #edm #edmmusic #dj #trackid #music #housemusic`, /*2*/
-  `#edm #edmmusic #electronicdancemusic #meme #bro`, /*3*/
-  ``, /*4*/
+  `The touch of the leaves and the embrace of nature awaken every sense in your body 🌱👌🏼`, /*1*/
+  `Moon🌙🌒 #moon #night #nature #world #fullmoon #world #god #earth`, /*2*/
+  `Two waves meet, and in their clash, they find a love that only the sea understands`, /*3*/
+  `Snow falls. So do I into memories ❄️👤`, /*4*/
   ``, /*5*/
   ``, /*6*/
   ``, /*7*/
@@ -64,7 +64,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const edmclip_commonProps = generateExactlyCommonProps({
+export const mohammadshokri_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -73,7 +73,7 @@ export const edmclip_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const edmclip_videos = generateArrayPostsOfVideos({
+const mohammadshokri_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -81,14 +81,14 @@ const edmclip_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const edmclip_images = generateArrayPostsOfImages({
+const mohammadshokri_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const edmclip_array_of_posts = [
-  ...edmclip_images,
-  ...edmclip_videos
+export const mohammadshokri_array_of_posts = [
+  ...mohammadshokri_images,
+  ...mohammadshokri_videos
 ];

@@ -4,12 +4,12 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'edmclip';
+const username = 'artsbyana';
 const userId = '';
 const prefixUrl = '';
-const followers = 751_832;
-const followed = 772;
-const profileDescription = ` 🎶 The #1 EDM community on`;
+const followers = 64_834;
+const followed = 291;
+const profileDescription = `Self-taught 🧑‍🎨 Procreate 🎨`;
 const prefixLetterVideos = 'v';
 const quantityOfVideos = 4;
 const prefixLetterImages = 'f';
@@ -18,10 +18,11 @@ const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
-  `#edm #electronicdancemusic #pop #blackeyedpeas`, /*1*/
-  `Which track does this make you think of? 🤔 #edm #edmmusic #dj #trackid #music #housemusic`, /*2*/
-  `#edm #edmmusic #electronicdancemusic #meme #bro`, /*3*/
-  ``, /*4*/
+  `#lineart #digitalart #arttips #arttipsandtricks #artreels`, /*1*/
+  `#tutorial #hands #digitalart #artreel #reels
+`, /*2*/
+  `#artmemes #animation #shrek #shrekmemes #artreels #digitalart #procreatedreams #memes #instaart #kooleensmashorpass #kooleenroastme`, /*3*/
+  `#arttip #arthack #digitalart #procreate #fanart #artreel`, /*4*/
   ``, /*5*/
   ``, /*6*/
   ``, /*7*/
@@ -64,7 +65,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const edmclip_commonProps = generateExactlyCommonProps({
+export const artsbyana_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -73,7 +74,7 @@ export const edmclip_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const edmclip_videos = generateArrayPostsOfVideos({
+const artsbyana_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -81,14 +82,14 @@ const edmclip_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const edmclip_images = generateArrayPostsOfImages({
+const artsbyana_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const edmclip_array_of_posts = [
-  ...edmclip_images,
-  ...edmclip_videos
+export const artsbyana_array_of_posts = [
+  ...artsbyana_images,
+  ...artsbyana_videos
 ];

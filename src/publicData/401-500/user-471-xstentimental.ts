@@ -4,24 +4,24 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'edmclip';
+const username = 'xstentimental';
 const userId = '';
 const prefixUrl = '';
-const followers = 751_832;
-const followed = 772;
-const profileDescription = ` 🎶 The #1 EDM community on`;
+const followers = 282_832;
+const followed = 74;
+const profileDescription = `Your Mind-blowing Canva Hacks`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 4;
+const quantityOfVideos = 6;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
-  `#edm #electronicdancemusic #pop #blackeyedpeas`, /*1*/
-  `Which track does this make you think of? 🤔 #edm #edmmusic #dj #trackid #music #housemusic`, /*2*/
-  `#edm #edmmusic #electronicdancemusic #meme #bro`, /*3*/
-  ``, /*4*/
+  `#graphicdesigner #graphicdesign #genz #graphicdesignstyle #art`, /*1*/
+  `#graphicdesign #genz #graphicdesigner #canva #canvaelements #art #canvacreator`, /*2*/
+  `#graphicdesign #graphicdesigner #artblock #designtips #graphicdesigntips`, /*3*/
+  `#resetindonesia #colorcombination #wargajagawarga #acab #1312 #tetapfokus #indonesia #graphicdesign #graphicdesigner`, /*4*/
   ``, /*5*/
   ``, /*6*/
   ``, /*7*/
@@ -64,7 +64,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const edmclip_commonProps = generateExactlyCommonProps({
+export const xstentimental_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -73,7 +73,7 @@ export const edmclip_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const edmclip_videos = generateArrayPostsOfVideos({
+const xstentimental_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -81,14 +81,14 @@ const edmclip_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const edmclip_images = generateArrayPostsOfImages({
+const xstentimental_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const edmclip_array_of_posts = [
-  ...edmclip_images,
-  ...edmclip_videos
+export const xstentimental_array_of_posts = [
+  ...xstentimental_images,
+  ...xstentimental_videos
 ];

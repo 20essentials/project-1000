@@ -4,12 +4,12 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'edmclip';
+const username = 'banivfx';
 const userId = '';
 const prefixUrl = '';
-const followers = 751_832;
-const followed = 772;
-const profileDescription = ` 🎶 The #1 EDM community on`;
+const followers = 11_322;
+const followed = 144;
+const profileDescription = `VFX & Animation Studio`;
 const prefixLetterVideos = 'v';
 const quantityOfVideos = 4;
 const prefixLetterImages = 'f';
@@ -18,10 +18,10 @@ const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
-  `#edm #electronicdancemusic #pop #blackeyedpeas`, /*1*/
-  `Which track does this make you think of? 🤔 #edm #edmmusic #dj #trackid #music #housemusic`, /*2*/
-  `#edm #edmmusic #electronicdancemusic #meme #bro`, /*3*/
-  ``, /*4*/
+  `#vfx #animacion #libertadores #3d`, /*1*/
+  `#beforeandafter #vfx #breakdown #edicion #argentina`, /*2*/
+  `#spiderman #ironman #hulk #drstrange #marvel #cine #superheroes #rodaje #vfx`, /*3*/
+  `#filmmaking #chroma #croma #rodaje #beforeandafter #vfx`, /*4*/
   ``, /*5*/
   ``, /*6*/
   ``, /*7*/
@@ -64,7 +64,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const edmclip_commonProps = generateExactlyCommonProps({
+export const banivfx_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -73,7 +73,7 @@ export const edmclip_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const edmclip_videos = generateArrayPostsOfVideos({
+const banivfx_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -81,14 +81,14 @@ const edmclip_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const edmclip_images = generateArrayPostsOfImages({
+const banivfx_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const edmclip_array_of_posts = [
-  ...edmclip_images,
-  ...edmclip_videos
+export const banivfx_array_of_posts = [
+  ...banivfx_images,
+  ...banivfx_videos
 ];
