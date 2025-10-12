@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'quekshio';
-const userId = '';
-const prefixUrl = '';
+const userId = '580403bf-b3e8-4e21-ade5-de3e44295ead';
+const prefixUrl = 'https://dominicnikolai.github.io/project-357/assets/quekshio/';
 const followers = 1_300_832;
 const followed = 394;
 const profileDescription = `Film Director / Creator / Cyclist`;

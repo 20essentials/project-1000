@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'expometro';
-const userId = '';
-const prefixUrl = '';
+const userId = '9637b5c7-a68d-4ed3-a652-0ad3fffb4bdb';
+const prefixUrl = 'https://dominicnikolai.github.io/project-357/assets/expometro/';
 const followers = 141_832;
 const followed = 982;
 const profileDescription = `World’s Largest Public Art Show`;

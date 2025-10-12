@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'josiahbout';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c2346963-e89d-4f5a-9eea-7316da78c2c7';
+const prefixUrl = 'https://dominicnikolai.github.io/project-357/assets/josiahbout/';
 const followers = 37_832;
 const followed = 82;
 const profileDescription = `Just a 3D artist sharing what I learn`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'incanserbero';
-const userId = '';
-const prefixUrl = '';
+const userId = '029e929a-1613-4b30-a332-bf7da6078c95';
+const prefixUrl = 'https://dominicnikolai.github.io/project-357/assets/incanserbero/';
 const followers = 59_823;
 const followed = 322;
 const profileDescription = `Lifestyle | Home | Products | & More`;
