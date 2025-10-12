@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'tmlplanet';
-const userId = '';
-const prefixUrl = '';
+const userId = '00d90c04-e048-408d-9056-3e7670eb254e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-354/assets/tmlplanet/';
 const followers = 5_700_832;
 const followed = 32;
 const profileDescription = ` Intrattenimento, curiosità, news, e tante altre cosine belline`;

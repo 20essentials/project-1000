@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'solarity_studio';
-const userId = '';
-const prefixUrl = '';
+const userId = '096439bf-0ab7-4897-a065-e77cff951263';
+const prefixUrl = 'https://dominicnikolai.github.io/project-354/assets/solarity-studio/';
 const followers = 28_832;
 const followed = 50;
 const profileDescription = ` I design and build custom websites.`;

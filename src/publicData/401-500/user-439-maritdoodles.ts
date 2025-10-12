@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'maritdoodles';
-const userId = '';
-const prefixUrl = '';
+const userId = '845b031c-3f4e-4544-84b9-4350c909e62f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-354/assets/maritdoodles/';
 const followers = 142_832;
 const followed = 455;
 const profileDescription = `✨ 3D artist ✨`;
