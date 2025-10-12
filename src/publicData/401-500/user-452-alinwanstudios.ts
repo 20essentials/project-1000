@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'alinwanstudios';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ddcd9715-bca4-4b33-a6bf-cfd0148a0f85';
+const prefixUrl = 'https://dominicnikolai.github.io/project-356/assets/alinwanstudios/';
 const followers = 154_832;
 const followed = 50;
 const profileDescription = `☄️we transform your vision into unlimited reality☄️`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 6;
+const quantityOfVideos = 4;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;

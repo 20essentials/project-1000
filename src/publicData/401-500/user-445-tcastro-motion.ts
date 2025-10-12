@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'tcastro_motion';
-const userId = '';
-const prefixUrl = '';
+const userId = '499cef2a-65a6-4fbf-aa5e-d606d48aa43f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-355/assets/tcastro-motion/';
 const followers = 275_832;
 const followed = 684;
 const profileDescription = `Motion Designer | Criador de Conteúdo`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'innsvx';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ea77b136-0f86-476a-a455-ea608ce3e2ac';
+const prefixUrl = 'https://dominicnikolai.github.io/project-356/assets/innsvx/';
 const followers = 64_432;
 const followed = 194;
 const profileDescription = `we make 3D art! ★`;

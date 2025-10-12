@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'voidstomper';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ee35a31b-6361-49c4-baa7-18bc1d37aaba';
+const prefixUrl = 'https://dominicnikolai.github.io/project-355/assets/voidstomper/';
 const followers = 2_532_898;
 const followed = 135;
 const profileDescription = `everyone I know is lost and bleeding`;
