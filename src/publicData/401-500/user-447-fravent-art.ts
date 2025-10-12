@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'fravent_art';
-const userId = '';
-const prefixUrl = '';
+const userId = 'a487e2f6-64fd-4322-9bbe-2945c4af84d0';
+const prefixUrl = 'https://dominicnikolai.github.io/project-355/assets/fravent-art/';
 const followers = 63_832;
 const followed = 50;
 const profileDescription = `digital Art and sculpting`;

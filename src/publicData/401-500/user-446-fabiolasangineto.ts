@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'fabiolasangineto';
-const userId = '';
-const prefixUrl = '';
+const userId = '183e4bc4-d049-4c19-b376-1d81447b4fc0';
+const prefixUrl = 'https://dominicnikolai.github.io/project-355/assets/fabiolasangineto/';
 const followers = 145_832;
 const followed = 254;
 const profileDescription = `Architect | Visual Artist`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 6;
+const quantityOfVideos = 4;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;

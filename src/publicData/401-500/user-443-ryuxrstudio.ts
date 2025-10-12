@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ryuxrstudio';
-const userId = '';
-const prefixUrl = '';
+const userId = '45d2140c-94d9-44e6-81ff-c7bc462b6844';
+const prefixUrl = 'https://dominicnikolai.github.io/project-355/assets/ryuxrstudio/';
 const followers = 111_832;
 const followed = 381;
 const profileDescription = `3D Art | Desk Setup | Tech`;

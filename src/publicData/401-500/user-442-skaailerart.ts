@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'skaailerart';
-const userId = '';
-const prefixUrl = '';
+const userId = '5998f753-2636-42ca-9323-f3686173fb4f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-355/assets/skaailerart/';
 const followers = 288_832;
 const followed = 168;
 const profileDescription = `⚡️`;
