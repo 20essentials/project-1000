@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'artsbyana';
-const userId = '';
-const prefixUrl = '';
+const userId = '2c9aefd9-2824-4641-8117-3244597fbc53';
+const prefixUrl = 'https://dominicnikolai.github.io/project-358/assets/artsbyana/';
 const followers = 64_834;
 const followed = 291;
 const profileDescription = `Self-taught 🧑‍🎨 Procreate 🎨`;

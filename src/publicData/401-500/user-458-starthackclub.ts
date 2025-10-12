@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'starthackclub';
-const userId = '';
-const prefixUrl = '';
+const userId = '65c1c47d-61a1-4249-94d5-ed3cc7ec06b9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-357/assets/starthackclub/';
 const followers = 122_832;
 const followed = 671;
 const profileDescription = `welcome to hack club! nonprofit for teen coders and electronics makers`;

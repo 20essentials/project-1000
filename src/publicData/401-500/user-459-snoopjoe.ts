@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'snoopjoe';
-const userId = '';
-const prefixUrl = '';
+const userId = '4a353029-1b76-464d-9f43-41237282d283';
+const prefixUrl = 'https://dominicnikolai.github.io/project-357/assets/snoopjoe/';
 const followers = 14_503;
 const followed = 80;
 const profileDescription = `Hybrid Artist based in Benin 🇧🇯`;

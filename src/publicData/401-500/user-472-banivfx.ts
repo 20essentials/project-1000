@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'banivfx';
-const userId = '';
-const prefixUrl = '';
+const userId = 'a3e86ed4-60e3-441a-aaa2-babddeba6d92';
+const prefixUrl = 'https://dominicnikolai.github.io/project-358/assets/banivfx/';
 const followers = 11_322;
 const followed = 144;
 const profileDescription = `VFX & Animation Studio`;
