@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'nowherelad';
-const userId = '';
-const prefixUrl = '';
+const userId = 'dde7d592-00ee-4b67-9798-64470ac3a05c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-353/assets/nowherelad/';
 const followers = 422_832;
 const followed = 446;
 const profileDescription = `prints, socials and patreon`;

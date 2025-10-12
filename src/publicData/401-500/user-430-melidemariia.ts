@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'melidemariia';
-const userId = '';
-const prefixUrl = '';
+const userId = '80dd5da0-4817-4fa3-93ac-7d8847b701cb';
+const prefixUrl = 'https://dominicnikolai.github.io/project-353/assets/melidemariia/';
 const followers = 658_832;
 const followed = 72;
 const profileDescription = `No soy Melissa pero dime Mel :)`;

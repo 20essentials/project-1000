@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'synccreation';
-const userId = '';
-const prefixUrl = '';
+const userId = '2a294d3b-8c45-4a9e-9beb-504d193e5a40';
+const prefixUrl = 'https://dominicnikolai.github.io/project-353/assets/synccreation/';
 const followers = 161_832;
 const followed = 71;
 const profileDescription = `animator`;

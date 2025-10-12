@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'the_poet_engineer';
-const userId = '';
-const prefixUrl = '';
+const userId = '82ef5a79-2975-4ab3-bbe6-2c2e52de5dfd';
+const prefixUrl = 'https://dominicnikolai.github.io/project-353/assets/the-poet-engineer/';
 const followers = 83_832;
 const followed = 128;
 const profileDescription = `⡷neural interface•.⠐⢾`;
