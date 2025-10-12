@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'code4dev';
-const userId = '';
-const prefixUrl = '';
+const userId = '23752598-f9a6-4b28-8fbf-05eaa68927ec';
+const prefixUrl = 'https://dominicnikolai.github.io/project-354/assets/code4dev/';
 const followers = 423_832;
 const followed = 50;
 const profileDescription = `coding tips`;

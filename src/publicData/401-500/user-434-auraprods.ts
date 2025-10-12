@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'auraprods';
-const userId = '';
-const prefixUrl = '';
+const userId = '6f6e905b-17a2-4f52-a088-73fbec176726';
+const prefixUrl = 'https://dominicnikolai.github.io/project-354/assets/auraprods/';
 const followers = 102_833;
 const followed = 442;
 const profileDescription = ` Ayudamos a editores y artistas digitales a vivir de su talento`;

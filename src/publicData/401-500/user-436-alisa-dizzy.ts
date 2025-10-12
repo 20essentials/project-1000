@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'alisa_dizzy';
-const userId = '';
-const prefixUrl = '';
+const userId = '5144e869-e233-4b0e-9909-a0c16c51431e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-354/assets/alisa-dizzy/';
 const followers = 77_993;
 const followed = 50;
 const profileDescription = `design / ai tools / freelance life`;

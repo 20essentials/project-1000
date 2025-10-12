@@ -80,6 +80,10 @@ import { melidemariia_array_of_posts, melidemariia_commonProps } from './user-43
 import { nowherelad_array_of_posts, nowherelad_commonProps } from './user-426-nowherelad';
 import { synccreation_array_of_posts, synccreation_commonProps } from './user-429-synccreation';
 import { the_poet_engineer_array_of_posts, the_poet_engineer_commonProps } from './user-433-the-poet-engineer';
+import { vidronaobra_array_of_posts, vidronaobra_commonProps } from './user-432-vidronaobra';
+import { alisa_dizzy_array_of_posts, alisa_dizzy_commonProps } from './user-436-alisa-dizzy';
+import { auraprods_array_of_posts, auraprods_commonProps } from './user-434-auraprods';
+import { code4dev_array_of_posts, code4dev_commonProps } from './user-438-code4dev';
 
 export const PUBLIC_401_500: arrayOfPosts = [
   [akcreationshd_commonProps, akcreationshd_array_of_posts] /* 401 */,
@@ -113,6 +117,11 @@ export const PUBLIC_401_500: arrayOfPosts = [
   [synccreation_commonProps, synccreation_array_of_posts] /* 429 */,
   [melidemariia_commonProps, melidemariia_array_of_posts] /* 430 */,
   [bowskiverse_commonProps, bowskiverse_array_of_posts] /* 431 */,
-
+  [vidronaobra_commonProps, vidronaobra_array_of_posts] /* 432 */,
   [the_poet_engineer_commonProps, the_poet_engineer_array_of_posts] /* 433 */,
+  [auraprods_commonProps, auraprods_array_of_posts] /* 434 */,
+
+  [alisa_dizzy_commonProps, alisa_dizzy_array_of_posts] /* 436 */,
+
+  [code4dev_commonProps, code4dev_array_of_posts] /* 438 */,
 ];

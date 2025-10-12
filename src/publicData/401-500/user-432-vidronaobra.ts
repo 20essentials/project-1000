@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'vidronaobra';
-const userId = '';
-const prefixUrl = '';
+const userId = '2041c9d1-a63b-42d6-ab2c-1f4a46d7f7c4';
+const prefixUrl = 'https://dominicnikolai.github.io/project-353/assets/vidronaobra/';
 const followers = 332_324;
 const followed = 427;
 const profileDescription = `💚`;
