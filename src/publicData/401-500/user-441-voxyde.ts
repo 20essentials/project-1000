@@ -4,9 +4,9 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'amUserPrivate';
-const userId = '';
-const prefixUrl = '';
+const username = 'voxyde';
+const userId = 'c888e3ea-5b42-479d-949e-9c85c9ba6e5f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-354/assets/voxyde/';
 const followers = 234_832;
 const followed = 210;
 const profileDescription = `The ultimate training grounds for VFX.`;
@@ -67,7 +67,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const amUserPrivate_commonProps = generateExactlyCommonProps({
+export const voxyde_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -76,7 +76,7 @@ export const amUserPrivate_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const amUserPrivate_videos = generateArrayPostsOfVideos({
+const voxyde_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -84,14 +84,14 @@ const amUserPrivate_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const amUserPrivate_images = generateArrayPostsOfImages({
+const voxyde_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const amUserPrivate_array_of_posts = [
-  ...amUserPrivate_images,
-  ...amUserPrivate_videos
+export const voxyde_array_of_posts = [
+  ...voxyde_images,
+  ...voxyde_videos
 ];

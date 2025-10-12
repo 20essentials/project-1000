@@ -88,6 +88,7 @@ import { maritdoodles_array_of_posts, maritdoodles_commonProps } from './user-43
 import { n3rdcev_array_of_posts, n3rdcev_commonProps } from './user-435-n3rdcev';
 import { solarity_studio_array_of_posts, solarity_studio_commonProps } from './user-437-solarity-studio';
 import { tmlplanet_array_of_posts, tmlplanet_commonProps } from './user-440-tmlplanet';
+import { voxyde_array_of_posts, voxyde_commonProps } from './user-441-voxyde';
 
 export const PUBLIC_401_500: arrayOfPosts = [
   [akcreationshd_commonProps, akcreationshd_array_of_posts] /* 401 */,
@@ -130,4 +131,5 @@ export const PUBLIC_401_500: arrayOfPosts = [
   [code4dev_commonProps, code4dev_array_of_posts] /* 438 */,
   [maritdoodles_commonProps, maritdoodles_array_of_posts] /* 439 */,
   [tmlplanet_commonProps, tmlplanet_array_of_posts] /* 440 */,
+  [voxyde_commonProps, voxyde_array_of_posts] /* 441 */,
 ];
