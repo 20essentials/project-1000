@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'mohammadshokri';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ab0c1dfe-a7c0-456f-a277-23f6a0329ca3';
+const prefixUrl = 'https://dominicnikolai.github.io/project-358/assets/mohammadshokri/';
 const followers = 75_720;
 const followed = 323;
 const profileDescription = `محمد شکری`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 4;
+const quantityOfVideos = 3;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
@@ -21,7 +21,7 @@ const arrayDescriptionsOfVideos = [
   `The touch of the leaves and the embrace of nature awaken every sense in your body 🌱👌🏼`, /*1*/
   `Moon🌙🌒 #moon #night #nature #world #fullmoon #world #god #earth`, /*2*/
   `Two waves meet, and in their clash, they find a love that only the sea understands`, /*3*/
-  `Snow falls. So do I into memories ❄️👤`, /*4*/
+  ``, /*4*/
   ``, /*5*/
   ``, /*6*/
   ``, /*7*/

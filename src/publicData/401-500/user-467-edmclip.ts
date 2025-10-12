@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'edmclip';
-const userId = '';
-const prefixUrl = '';
+const userId = '56e7049d-86c9-4f86-a8be-5e95c666cb06';
+const prefixUrl = 'https://dominicnikolai.github.io/project-358/assets/edmclip/';
 const followers = 751_832;
 const followed = 772;
 const profileDescription = ` 🎶 The #1 EDM community on`;

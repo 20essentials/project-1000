@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'purocine99';
-const userId = '';
-const prefixUrl = '';
+const userId = '980bfa93-4b7b-440b-9f87-4617f5130f4f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-358/assets/purocine99/';
 const followers = 51_832;
 const followed = 639;
 const profileDescription = `PuroCine 🍿🎬`;

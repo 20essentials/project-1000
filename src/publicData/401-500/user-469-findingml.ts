@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'findingml';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c1b1c906-3dca-4325-990d-ddbb3b04421e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-358/assets/findingml/';
 const followers = 38_832;
 const followed = 204;
 const profileDescription = `Playing With Netssssss`;

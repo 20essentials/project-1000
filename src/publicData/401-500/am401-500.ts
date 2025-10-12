@@ -115,6 +115,10 @@ import { snoopjoe_array_of_posts, snoopjoe_commonProps } from './user-459-snoopj
 import { starthackclub_array_of_posts, starthackclub_commonProps } from './user-458-starthackclub';
 import { artsbyana_array_of_posts, artsbyana_commonProps } from './user-468-artsbyana';
 import { banivfx_array_of_posts, banivfx_commonProps } from './user-472-banivfx';
+import { edmclip_array_of_posts, edmclip_commonProps } from './user-467-edmclip';
+import { findingml_array_of_posts, findingml_commonProps } from './user-469-findingml';
+import { mohammadshokri_array_of_posts, mohammadshokri_commonProps } from './user-473-mohammadshokri';
+import { purocine99_array_of_posts, purocine99_commonProps } from './user-466-purocine99';
 
 export const PUBLIC_401_500: arrayOfPosts = [
   [akcreationshd_commonProps, akcreationshd_array_of_posts] /* 401 */,
@@ -182,8 +186,11 @@ export const PUBLIC_401_500: arrayOfPosts = [
   [incanserbero_commonProps, incanserbero_array_of_posts] /* 463 */,
   [josiahbout_commonProps, josiahbout_array_of_posts] /* 464 */,
   [designsbysanjanaa_commonProps, designsbysanjanaa_array_of_posts] /* 465 */,
-
+  [purocine99_commonProps, purocine99_array_of_posts] /* 466 */,
+  [edmclip_commonProps, edmclip_array_of_posts] /* 467 */,
   [artsbyana_commonProps, artsbyana_array_of_posts] /* 468 */,
+  [findingml_commonProps, findingml_array_of_posts] /* 469 */,
 
   [banivfx_commonProps, banivfx_array_of_posts] /* 472 */,
+  [mohammadshokri_commonProps, mohammadshokri_array_of_posts] /* 473 */,
 ];
