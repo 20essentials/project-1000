@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'playowgames';
-const userId = '';
-const prefixUrl = '';
+const userId = '3752ae65-23ce-4054-9709-f9cc7e6af038';
+const prefixUrl = 'https://dominicnikolai.github.io/project-356/assets/playowgames/';
 const followers = 439_832;
 const followed = 94;
 const profileDescription = `Indie game studio from 🇸🇪`;

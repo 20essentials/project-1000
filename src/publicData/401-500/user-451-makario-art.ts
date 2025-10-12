@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'makario_art';
-const userId = '';
-const prefixUrl = '';
+const userId = '729f0b7c-9072-4788-8c89-fd41e603605c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-356/assets/makario-art/';
 const followers = 254_324;
 const followed = 207;
 const profileDescription = `✏️ Drawing from memory !`;

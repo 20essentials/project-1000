@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'jameelcodes';
-const userId = '';
-const prefixUrl = '';
+const userId = '5d3680cf-9eb2-4968-833b-9547340075ca';
+const prefixUrl = 'https://dominicnikolai.github.io/project-356/assets/jameelcodes/';
 const followers = 687_832;
 const followed = 50;
 const profileDescription = `Landed 2 SWE jobs`;

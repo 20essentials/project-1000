@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'polyhop';
-const userId = '';
-const prefixUrl = '';
+const userId = '9cd8fa5e-2f2a-4576-816a-1d81e32c4e4d';
+const prefixUrl = 'https://dominicnikolai.github.io/project-356/assets/polyhop/';
 const followers = 114_832;
 const followed = 828;
 const profileDescription = `Daily Generative Art`;
