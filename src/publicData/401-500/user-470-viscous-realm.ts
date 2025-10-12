@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'viscous_realm';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd998e86e-7be9-4beb-b7b3-e1c434687477';
+const prefixUrl = 'https://dominicnikolai.github.io/project-358/assets/viscous-realm/';
 const followers = 339_832;
 const followed = 429;
 const profileDescription = `I like to make unconventional things ✨`;

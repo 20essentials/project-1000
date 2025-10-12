@@ -119,6 +119,8 @@ import { edmclip_array_of_posts, edmclip_commonProps } from './user-467-edmclip'
 import { findingml_array_of_posts, findingml_commonProps } from './user-469-findingml';
 import { mohammadshokri_array_of_posts, mohammadshokri_commonProps } from './user-473-mohammadshokri';
 import { purocine99_array_of_posts, purocine99_commonProps } from './user-466-purocine99';
+import { viscous_realm_array_of_posts, viscous_realm_commonProps } from './user-470-viscous-realm';
+import { xstentimental_array_of_posts, xstentimental_commonProps } from './user-471-xstentimental';
 
 export const PUBLIC_401_500: arrayOfPosts = [
   [akcreationshd_commonProps, akcreationshd_array_of_posts] /* 401 */,
@@ -190,7 +192,8 @@ export const PUBLIC_401_500: arrayOfPosts = [
   [edmclip_commonProps, edmclip_array_of_posts] /* 467 */,
   [artsbyana_commonProps, artsbyana_array_of_posts] /* 468 */,
   [findingml_commonProps, findingml_array_of_posts] /* 469 */,
-
+  [viscous_realm_commonProps, viscous_realm_array_of_posts] /* 470 */,
+  [xstentimental_commonProps, xstentimental_array_of_posts] /* 471 */,
   [banivfx_commonProps, banivfx_array_of_posts] /* 472 */,
   [mohammadshokri_commonProps, mohammadshokri_array_of_posts] /* 473 */,
 ];

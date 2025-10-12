@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'xstentimental';
-const userId = '';
-const prefixUrl = '';
+const userId = '3b66719e-f61c-4444-b4f5-a53ea6a042e9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-358/assets/xstentimental/';
 const followers = 282_832;
 const followed = 74;
 const profileDescription = `Your Mind-blowing Canva Hacks`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 6;
+const quantityOfVideos = 4;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
