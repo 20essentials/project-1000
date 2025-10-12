@@ -72,6 +72,10 @@ import { libraries_array_of_posts, libraries_commonProps } from './user-419-libr
 import { mainfactory_studio_array_of_posts, mainfactory_studio_commonProps } from './user-425-mainfactory-studio';
 import { maxmmh_array_of_posts, maxmmh_commonProps } from './user-421-maxmmh';
 import { mundoinhospito_array_of_posts, mundoinhospito_commonProps } from './user-420-mundoinhospito';
+import { bowskiverse_array_of_posts, bowskiverse_commonProps } from './user-431-bowskiverse';
+import { design_genie_commonProps } from '../301-400/user-311-design-genie';
+import { designgemstudio_array_of_posts, designgemstudio_commonProps } from './user-428-designgemstudio';
+import { jackofftoart_array_of_posts, jackofftoart_commonProps } from './user-427-jackofftoart';
 
 export const PUBLIC_401_500: arrayOfPosts = [
   [akcreationshd_commonProps, akcreationshd_array_of_posts] /* 401 */,
@@ -99,4 +103,9 @@ export const PUBLIC_401_500: arrayOfPosts = [
   [frx_web_commonProps, frx_web_array_of_posts] /* 423 */,
   [jusinhel_life_commonProps, jusinhel_life_array_of_posts] /* 424 */,
   [mainfactory_studio_commonProps, mainfactory_studio_array_of_posts] /* 425 */,
+
+  [jackofftoart_commonProps, jackofftoart_array_of_posts] /* 427 */,
+  [designgemstudio_commonProps, designgemstudio_array_of_posts] /* 428 */,
+
+  [bowskiverse_commonProps, bowskiverse_array_of_posts] /* 431 */,
 ];

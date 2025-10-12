@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'designgemstudio';
-const userId = '';
-const prefixUrl = '';
+const userId = '38f9d84a-df3c-4a45-82a0-80b97302d600';
+const prefixUrl = 'https://dominicnikolai.github.io/project-353/assets/designgemstudio/';
 const followers = 65_523;
 const followed = 79;
 const profileDescription = `Web Design Inspiration`;

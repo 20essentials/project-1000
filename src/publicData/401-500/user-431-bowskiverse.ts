@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'bowskiverse';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd7fc4bb4-f160-4f7a-bb1c-fc924929cc6c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-353/assets/bowskiverse/';
 const followers = 47_832;
 const followed = 946;
 const profileDescription = `welcome to 𝗕𝗢𝗪𝗦𝗞𝗜𝗩𝗘𝗥𝗦𝗘 🌏
