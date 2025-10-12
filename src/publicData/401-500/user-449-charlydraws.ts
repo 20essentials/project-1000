@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'charlydraws';
-const userId = '';
-const prefixUrl = '';
+const userId = '4cf44f11-8b8f-4530-b0ba-2351d8d52f00';
+const prefixUrl = 'https://dominicnikolai.github.io/project-355/assets/charlydraws/';
 const followers = 136_832;
 const followed = 35;
 const profileDescription = `3D Environment Artist`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 6;
+const quantityOfVideos = 4;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;

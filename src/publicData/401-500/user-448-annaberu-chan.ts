@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'annaberu_chan';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd29f134d-286c-4c63-91e9-7634f7eaeefb';
+const prefixUrl = 'https://dominicnikolai.github.io/project-355/assets/annaberu-chan/';
 const followers = 184_832;
 const followed = 78;
 const profileDescription = `Senior 3D Character Artist`;
