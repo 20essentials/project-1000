@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'touchdesigner';
-const userId = '';
-const prefixUrl = '';
+const userId = '162c4019-5778-49fc-a308-0e4cf65f05da';
+const prefixUrl = 'https://dominicnikolai.github.io/project-356/assets/touchdesigner/';
 const followers = 431_832;
 const followed = 882;
 const profileDescription = `Interactivity`;

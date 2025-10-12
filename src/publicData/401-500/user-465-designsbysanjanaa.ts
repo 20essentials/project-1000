@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'designsbysanjanaa';
-const userId = '';
-const prefixUrl = '';
+const userId = '880f045f-e63e-4b9a-8de9-8d55d84d887c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-357/assets/designsbysanjanaa/';
 const followers = 67_832;
 const followed = 431;
 const profileDescription = `Sanjanaa Lalwani | Logo Animation`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 6;
+const quantityOfVideos = 4;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;

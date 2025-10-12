@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'shabik3d';
-const userId = '';
-const prefixUrl = '';
+const userId = '93548b33-2e53-430e-aae5-d87f1969074e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-356/assets/shabik3d/';
 const followers = 77_832;
 const followed = 474;
 const profileDescription = `Ruslan | Stylized 3D Art`;

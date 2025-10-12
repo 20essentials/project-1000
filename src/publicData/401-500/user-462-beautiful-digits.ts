@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'beautiful_digits';
-const userId = '';
-const prefixUrl = '';
+const userId = 'be1c93a5-42d9-4db9-886d-99cbadbae921';
+const prefixUrl = 'https://dominicnikolai.github.io/project-357/assets/beautiful-digits/';
 const followers = 57_322;
 const followed = 321;
 const profileDescription = `Posting data visualizations to make sense of the world`;
