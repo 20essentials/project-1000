@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'aicanfeel';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c7136c03-97d1-4fa9-995b-cfec0bf88b51';
+const prefixUrl = 'https://dominicnikolai.github.io/project-359/assets/aicanfeel/';
 const followers = 245_832;
 const followed = 261;
 const profileDescription = `CGI+VFX+AI w/ Elite Clubs~DJs~Musicians`;

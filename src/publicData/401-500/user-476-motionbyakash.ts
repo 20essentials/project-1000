@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'motionbyakash';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c88c7bc7-80b4-4c79-adf8-1f58ca17e47a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-359/assets/motionbyakash/';
 const followers = 249_832;
 const followed = 156;
 const profileDescription = `Transforming brands with logo animation & design`;

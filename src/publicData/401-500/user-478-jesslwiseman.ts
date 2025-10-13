@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'jesslwiseman';
-const userId = '';
-const prefixUrl = '';
+const userId = '87364cbf-c7a1-4403-b047-3508f10b1190';
+const prefixUrl = 'https://dominicnikolai.github.io/project-359/assets/jesslwiseman/';
 const followers = 161_832;
 const followed = 492;
 const profileDescription = `Painter, Animator, Designer`;

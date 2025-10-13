@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'alex_guevara';
-const userId = '';
-const prefixUrl = '';
+const userId = '83cb3c05-b188-4a63-a822-bbc26da9a899';
+const prefixUrl = 'https://dominicnikolai.github.io/project-359/assets/alex-guevara/';
 const followers = 382_832;
 const followed = 378;
 const profileDescription = `Pure Freundlichkeit`;
