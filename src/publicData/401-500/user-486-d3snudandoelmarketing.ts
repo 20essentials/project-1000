@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'd3snudandoelmarketing';
-const userId = '';
-const prefixUrl = '';
+const userId = '46ab4e16-2f02-4a40-8987-9929db75034d';
+const prefixUrl = 'https://dominicnikolai.github.io/project-360/assets/d3snudandoelmarketing/';
 const followers = 129_832;
 const followed = 350;
 const profileDescription = `📚 Licenciado en Marketing 🇦🇷`;

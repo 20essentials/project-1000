@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'crumb_studio';
-const userId = '';
-const prefixUrl = '';
+const userId = 'b3eb873e-6ffa-441a-979d-3eb46d014c99';
+const prefixUrl = 'https://dominicnikolai.github.io/project-360/assets/crumb-studio/';
 const followers = 128_832;
 const followed = 33;
 const profileDescription = `Story-first motion design for tech brands ready to stand out`;

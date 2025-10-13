@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'davebeesbombs';
-const userId = '';
-const prefixUrl = '';
+const userId = '3a47d666-8d78-4ebc-a472-7c72145e35ad';
+const prefixUrl = 'https://dominicnikolai.github.io/project-360/assets/davebeesbombs/';
 const followers = 42_932;
 const followed = 342;
 const profileDescription = `motion graphics`;

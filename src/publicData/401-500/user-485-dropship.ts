@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'dropship';
-const userId = '';
-const prefixUrl = '';
+const userId = '28b672eb-e4da-4ecd-b6ed-fe0e94234c23';
+const prefixUrl = 'https://dominicnikolai.github.io/project-360/assets/dropship/';
 const followers = 4_723_832;
 const followed = 50;
 const profileDescription = `We help you discover winning products to sell`;
