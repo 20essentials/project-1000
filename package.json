@@ -11,7 +11,8 @@
     "test": "vitest",
     "test:unit": "vitest run tests/unit",
     "test:integration": "vitest run tests/integration",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "clean:reports": "rm -rf test-results playwright-report blob-report"
   },
   "dependencies": {
     "@astrojs/react": "4.3.0",
