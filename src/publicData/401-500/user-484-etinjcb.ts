@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'etinjcb';
-const userId = '';
-const prefixUrl = '';
+const userId = '8e4d43ce-d243-4b04-9508-2872049912eb';
+const prefixUrl = 'https://dominicnikolai.github.io/project-360/assets/etinjcb/';
 const followers = 51_322;
 const followed = 230;
 const profileDescription = `Making animations with code.`;

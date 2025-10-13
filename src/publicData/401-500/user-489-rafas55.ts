@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'rafas55';
-const userId = '';
-const prefixUrl = '';
+const userId = 'af9e97f9-67cd-4502-8c6b-0da9d47dd7b7';
+const prefixUrl = 'https://dominicnikolai.github.io/project-360/assets/rafas55/';
 const followers = 193_832;
 const followed = 50;
 const profileDescription = `:O`;
@@ -14,7 +14,7 @@ const prefixLetterVideos = 'v';
 const quantityOfVideos = 1;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
-const profileImageSrc = `${prefixUrl}p3rfil.avif`;
+const profileImageSrc = `https://20essentials.github.io/project-000-940/assets/j10.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [

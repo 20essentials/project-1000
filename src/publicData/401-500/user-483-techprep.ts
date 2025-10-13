@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'techprep';
-const userId = '';
-const prefixUrl = '';
+const userId = '158fbcdf-1c51-4d30-9d79-88d946e7d37c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-360/assets/techprep/';
 const followers = 19_832;
 const followed = 39;
 const profileDescription = `Don't waste time searching for up to date technical interview questions`;
