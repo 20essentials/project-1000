@@ -121,6 +121,7 @@ import { mohammadshokri_array_of_posts, mohammadshokri_commonProps } from './use
 import { purocine99_array_of_posts, purocine99_commonProps } from './user-466-purocine99';
 import { viscous_realm_array_of_posts, viscous_realm_commonProps } from './user-470-viscous-realm';
 import { xstentimental_array_of_posts, xstentimental_commonProps } from './user-471-xstentimental';
+import { nolia33_array_of_posts, nolia33_commonProps } from './user-474-nolia33';
 
 export const PUBLIC_401_500: arrayOfPosts = [
   [akcreationshd_commonProps, akcreationshd_array_of_posts] /* 401 */,
@@ -196,4 +197,5 @@ export const PUBLIC_401_500: arrayOfPosts = [
   [xstentimental_commonProps, xstentimental_array_of_posts] /* 471 */,
   [banivfx_commonProps, banivfx_array_of_posts] /* 472 */,
   [mohammadshokri_commonProps, mohammadshokri_array_of_posts] /* 473 */,
+  [nolia33_commonProps, nolia33_array_of_posts] /* 474 */,
 ];

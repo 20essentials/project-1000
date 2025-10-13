@@ -4,9 +4,9 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'amUserPrivate';
-const userId = '';
-const prefixUrl = '';
+const username = 'nolia33';
+const userId = '1eb6d9c0-a5b2-480a-b5b9-5dd465eb1fc8';
+const prefixUrl = 'https://dominicnikolai.github.io/project-359/assets/33nolia/';
 const followers = 14_832;
 const followed = 178;
 const profileDescription = `3D digital artist`;
@@ -66,7 +66,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const amUserPrivate_commonProps = generateExactlyCommonProps({
+export const nolia33_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -75,7 +75,7 @@ export const amUserPrivate_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const amUserPrivate_videos = generateArrayPostsOfVideos({
+const nolia33_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -83,14 +83,14 @@ const amUserPrivate_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const amUserPrivate_images = generateArrayPostsOfImages({
+const nolia33_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const amUserPrivate_array_of_posts = [
-  ...amUserPrivate_images,
-  ...amUserPrivate_videos
+export const nolia33_array_of_posts = [
+  ...nolia33_images,
+  ...nolia33_videos
 ];
