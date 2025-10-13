@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'weshore_community';
-const userId = '';
-const prefixUrl = '';
+const userId = '0c69caaf-c919-4894-8e26-44a9c9471d85';
+const prefixUrl = 'https://dominicnikolai.github.io/project-359/assets/weshore-community/';
 const followers = 65_832;
 const followed = 575;
 const profileDescription = `AI, Web Dev, Cybersecurity, Geek Life & memes 😂`;

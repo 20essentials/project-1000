@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'wixstudio';
-const userId = '';
-const prefixUrl = '';
+const userId = '1e890387-7910-45df-a189-dae8edee9611';
+const prefixUrl = 'https://dominicnikolai.github.io/project-359/assets/w1xstudio/';
 const followers = 311_832;
 const followed = 683;
 const profileDescription = `The end-to-end platform for agencies and enterprises`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'thehawkdown';
-const userId = '';
-const prefixUrl = '';
+const userId = 'e2b5d568-1f5a-4632-95e1-0b4f68ef4208';
+const prefixUrl = 'https://dominicnikolai.github.io/project-359/assets/thehawkdown/';
 const followers = 24_423;
 const followed = 134;
 const profileDescription = `Artista`;

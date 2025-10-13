@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'akella';
-const userId = '';
-const prefixUrl = '';
+const userId = 'b100b25f-6820-4802-bc1c-98c0caace518';
+const prefixUrl = 'https://dominicnikolai.github.io/project-360/assets/akella/';
 const followers = 26_832;
 const followed = 203;
 const profileDescription = `٩(◕‿◕｡)۶`;
