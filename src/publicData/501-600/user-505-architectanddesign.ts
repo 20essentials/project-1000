@@ -4,25 +4,24 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'cs2bo3';
+const username = 'architectanddesign';
 const userId = '';
 const prefixUrl = '';
-const followers = 46_832;
-const followed = 50;
-const profileDescription = `Only CS2 📊 Stats `;
+const followers = 8_832_898;
+const followed = 637;
+const profileDescription = `The best Architecture & Design platform`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 3;
+const quantityOfVideos = 4;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
-  `🙌🏻`, /*1*/
-  `#esl #eslproleague #cs2 #cs #highlights #bestmoments`, /*2*/
-  `When the smoke kills better than bullets. #cs2 #cs2moments #cs2clips #cs2funny #cs2funnymoments #dust2
-#smokekill #smoke`, /*3*/
-  ``, /*4*/
+  `#architecture #chinese #arch #tianmenmountain #zhangjiajie #mountain #nature`, /*1*/
+  `#architecture`, /*2*/
+  `#architecture #design #bridge #technology #chinese #engineering`, /*3*/
+  `#architecture #design`, /*4*/
   ``, /*5*/
   ``, /*6*/
   ``, /*7*/
@@ -65,7 +64,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const cs2bo3_commonProps = generateExactlyCommonProps({
+export const architectanddesign_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -74,7 +73,7 @@ export const cs2bo3_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const cs2bo3_videos = generateArrayPostsOfVideos({
+const architectanddesign_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -82,14 +81,14 @@ const cs2bo3_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const cs2bo3_images = generateArrayPostsOfImages({
+const architectanddesign_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const cs2bo3_array_of_posts = [
-  ...cs2bo3_images,
-  ...cs2bo3_videos
+export const architectanddesign_array_of_posts = [
+  ...architectanddesign_images,
+  ...architectanddesign_videos
 ];

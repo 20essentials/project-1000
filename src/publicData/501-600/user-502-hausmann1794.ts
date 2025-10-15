@@ -4,25 +4,24 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'cs2bo3';
+const username = 'hausmann1794';
 const userId = '';
 const prefixUrl = '';
-const followers = 46_832;
+const followers = 18_234;
 const followed = 50;
-const profileDescription = `Only CS2 📊 Stats `;
+const profileDescription = `Born in Rome 230 years ago`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 3;
+const quantityOfVideos = 6;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
-  `🙌🏻`, /*1*/
-  `#esl #eslproleague #cs2 #cs #highlights #bestmoments`, /*2*/
-  `When the smoke kills better than bullets. #cs2 #cs2moments #cs2clips #cs2funny #cs2funnymoments #dust2
-#smokekill #smoke`, /*3*/
-  ``, /*4*/
+  `#Italy #FineWatchmaking #Watches #HausmannLOFT #IndependentWatchmakers #Vintage #VintageWatches #Ressence #Type1 #Multicolor #ROCS`, /*1*/
+  `#Hausmann1794 #Roma #Italia #Orologeria #FineWatchmaking #OrologeriaDiPrecisione #EDGE #JaegerLeCoultre #Jaeger #Reverso #ReversoOne #Enamel #MetiersRares`, /*2*/
+  `#Hausmann1794 #Roma #Italia #Orologeria #FineWatchmaking #OrologeriaDiPrecisione #EDGE #TAGHeuer #DesignedToWin #TAGHeuerFormula1`, /*3*/
+  `#Hausmann1794 #Roma #Italia #Orologeria #FineWatchmaking #OrologeriaDiPrecisione #EDGE #TAGHeuer #DesignedToWin #TAGHeuerFormula1`, /*4*/
   ``, /*5*/
   ``, /*6*/
   ``, /*7*/
@@ -65,7 +64,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const cs2bo3_commonProps = generateExactlyCommonProps({
+export const hausmann1794_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -74,7 +73,7 @@ export const cs2bo3_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const cs2bo3_videos = generateArrayPostsOfVideos({
+const hausmann1794_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -82,14 +81,14 @@ const cs2bo3_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const cs2bo3_images = generateArrayPostsOfImages({
+const hausmann1794_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const cs2bo3_array_of_posts = [
-  ...cs2bo3_images,
-  ...cs2bo3_videos
+export const hausmann1794_array_of_posts = [
+  ...hausmann1794_images,
+  ...hausmann1794_videos
 ];
