@@ -6,7 +6,6 @@ let privateData: arrayOfPosts = [];
 
 if (SHOW_PRIVATE_DATA) {
   privateData = []
-  
   // const module = await import('@/privateData/amPrivateData');
   // privateData = module.PRIVATE_DATA;
 }
