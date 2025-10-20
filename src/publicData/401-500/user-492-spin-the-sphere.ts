@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'spin_the_sphere';
-const userId = '';
-const prefixUrl = '';
+const userId = '8c26acf4-4c58-4860-bfec-03d49e3997c3';
+const prefixUrl = 'https://dominicnikolai.github.io/project-361/assets/spin-the-sphere/';
 const followers = 29_432;
 const followed = 283;
 const profileDescription = `Won AI/Generative Art Institution Award 2023`;

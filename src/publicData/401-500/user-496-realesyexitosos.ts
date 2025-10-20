@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'realesyexitosos';
-const userId = '';
-const prefixUrl = '';
+const userId = 'b5868b55-c07c-4da0-9a36-0c696ebb0d8a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-361/assets/realesyexitosos/';
 const followers = 172_832;
 const followed = 617;
 const profileDescription = `Inspirate y toma acción 🚀`;

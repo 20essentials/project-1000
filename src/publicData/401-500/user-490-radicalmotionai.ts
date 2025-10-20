@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'radicalmotionai';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c31beb28-d570-46c2-83db-de2e632caf1b';
+const prefixUrl = 'https://dominicnikolai.github.io/project-361/assets/radicalmotionai/';
 const followers = 39_030;
 const followed = 261;
 const profileDescription = `Real-time 3D creation and animation. At scale.

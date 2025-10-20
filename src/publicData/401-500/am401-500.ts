@@ -141,6 +141,10 @@ import { chain_paws_array_of_posts, chain_paws_commonProps } from './user-497-ch
 import { flooko_array_of_posts, flooko_commonProps } from './user-491-flooko';
 import { minirule_array_of_posts, minirule_commonProps } from './user-495-minirule';
 import { pstanick_array_of_posts, pstanick_commonProps } from './user-493-pstanick';
+import { radicalmotionai_array_of_posts, radicalmotionai_commonProps } from './user-490-radicalmotionai';
+import { realesyexitosos_array_of_posts, realesyexitosos_commonProps } from './user-496-realesyexitosos';
+import { spacekkabbi_array_of_posts, spacekkabbi_commonProps } from './user-494-spacekkabbi';
+import { spin_the_sphere_array_of_posts, spin_the_sphere_commonProps } from './user-492-spin-the-sphere';
 
 export const PUBLIC_401_500: arrayOfPosts = [
   [akcreationshd_commonProps, akcreationshd_array_of_posts] /* 401 */,
@@ -232,12 +236,12 @@ export const PUBLIC_401_500: arrayOfPosts = [
   [davebeesbombs_commonProps, davebeesbombs_array_of_posts] /* 487 */,
   [crumb_studio_commonProps, crumb_studio_array_of_posts] /* 488 */,
   [rafas55_commonProps, rafas55_array_of_posts] /* 489 */,
-
+  [radicalmotionai_commonProps, radicalmotionai_array_of_posts] /* 490 */,
   [flooko_commonProps, flooko_array_of_posts] /* 491 */,
-
+  [spin_the_sphere_commonProps, spin_the_sphere_array_of_posts] /* 492 */,
   [pstanick_commonProps, pstanick_array_of_posts] /* 493 */,
-
+  [spacekkabbi_commonProps, spacekkabbi_array_of_posts] /* 494 */,
   [minirule_commonProps, minirule_array_of_posts] /* 495 */,
-
+  [realesyexitosos_commonProps, realesyexitosos_array_of_posts] /* 496 */,
   [chain_paws_commonProps, chain_paws_array_of_posts] /* 497 */,
 ];

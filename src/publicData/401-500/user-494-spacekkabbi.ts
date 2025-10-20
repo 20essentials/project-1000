@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'spacekkabbi';
-const userId = '';
-const prefixUrl = '';
+const userId = '0343dcc0-d9e1-4c3b-af48-c34d9e56a451';
+const prefixUrl = 'https://dominicnikolai.github.io/project-361/assets/spacekkabbi/';
 const followers = 21_898;
 const followed = 108;
 const profileDescription = `Art Basel Miami Billboard / Dec`;
