@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ms_catttu';
-const userId = '';
-const prefixUrl = '';
+const userId = 'adde80d2-fb85-4676-b19a-3c6e1325a4db';
+const prefixUrl = 'https://dominicnikolai.github.io/project-369/assets/ms-catttu/';
 const followers = 233_832;
 const followed = 50;
 const profileDescription = `follow </3`;

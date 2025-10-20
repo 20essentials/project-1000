@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'repostlocker';
-const userId = '';
-const prefixUrl = '';
+const userId = 'f67ece26-71c9-4123-be17-cd6f228780b1';
+const prefixUrl = 'https://dominicnikolai.github.io/project-369/assets/repostlocker/';
 const followers = 1_923_832;
 const followed = 966;
 const profileDescription = `make sure to hit the subscribe button 🥰`;

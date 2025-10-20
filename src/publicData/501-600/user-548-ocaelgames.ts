@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ocaelgames';
-const userId = '';
-const prefixUrl = '';
+const userId = '46df586a-81ba-40ce-b730-a1032ddae8ef';
+const prefixUrl = 'https://dominicnikolai.github.io/project-369/assets/ocaelgames/';
 const followers = 148_832;
 const followed = 132;
 const profileDescription = `PES e FIFA Antigos e muito mais… 🎮`;

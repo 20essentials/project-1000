@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'moneyminds';
-const userId = '';
-const prefixUrl = '';
+const userId = '39280693-6856-45d3-a95d-66fafa14298d';
+const prefixUrl = 'https://dominicnikolai.github.io/project-369/assets/moneyminds/';
 const followers = 202_832;
 const followed = 553;
 const profileDescription = `Scegli di essere buono`;
