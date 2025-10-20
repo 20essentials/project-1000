@@ -36,6 +36,10 @@ import { miami_wonderful_array_of_posts, miami_wonderful_commonProps } from './u
 import { mr_temaz0s_array_of_posts, mr_temaz0s_commonProps } from './user-536-mr-temaz0s';
 import { pilotmadeleine_array_of_posts, pilotmadeleine_commonProps } from './user-531-pilotmadeleine';
 import { prattprattpratt_array_of_posts, prattprattpratt_commonProps } from './user-533-prattprattpratt';
+import { agnod3_array_of_posts, agnod3_commonProps } from './user-541-agnod3';
+import { best_songs_by_country_array_of_posts, best_songs_by_country_commonProps } from './user-539-best-songs-by-country';
+import { ciencias_tv_array_of_posts, ciencias_tv_commonProps } from './user-545-ciencias-tv';
+import { explaining_everything_array_of_posts, explaining_everything_commonProps } from './user-544-explaining-everything';
 
 export const PUBLIC_501_600: arrayOfPosts = [
   [cs2bo3_commonProps, cs2bo3_array_of_posts] /* 501 */, 
@@ -75,4 +79,11 @@ export const PUBLIC_501_600: arrayOfPosts = [
   [dpcustomsmx_commonProps, dpcustomsmx_array_of_posts] /* 535 */, 
   [mr_temaz0s_commonProps, mr_temaz0s_array_of_posts] /* 536 */, 
   [gdiaz2022_commonProps, gdiaz2022_array_of_posts] /* 537 */, 
+
+  [best_songs_by_country_commonProps, best_songs_by_country_array_of_posts] /* 539 */, 
+
+  [agnod3_commonProps, agnod3_array_of_posts] /* 541 */, 
+
+  [explaining_everything_commonProps, explaining_everything_array_of_posts] /* 544 */, 
+  [ciencias_tv_commonProps, ciencias_tv_array_of_posts] /* 545 */, 
 ];

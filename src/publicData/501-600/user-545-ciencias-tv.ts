@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ciencias_tv';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c3a42a24-09d0-49e8-99aa-830b4be0f693';
+const prefixUrl = 'https://dominicnikolai.github.io/project-368/assets/ciencias-tv/';
 const followers = 463_832;
 const followed = 234;
 const profileDescription = `Scienziato`;

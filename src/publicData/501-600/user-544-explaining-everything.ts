@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'explaining_everything';
-const userId = '';
-const prefixUrl = '';
+const userId = '247a00d0-c463-4c8d-898f-39026f697186';
+const prefixUrl = 'https://dominicnikolai.github.io/project-368/assets/explaining-everything/';
 const followers = 1_323_832;
 const followed = 426;
 const profileDescription = `Here to explain everything you want to know!

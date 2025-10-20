@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'best_songs_by_country';
-const userId = '';
-const prefixUrl = '';
+const userId = '9be24174-31d5-4ace-8dee-dfb37684399a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-368/assets/best-songs-by-country/';
 const followers = 71_832;
 const followed = 114;
 const profileDescription = `Subscribe to see all of them 👀`;
