@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'chain_paws';
-const userId = '';
-const prefixUrl = '';
+const userId = '6fb4c114-8b87-4ce5-8659-2cab3df40fa9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-361/assets/chain-paws/';
 const followers = 472_832;
 const followed = 50;
 const profileDescription = `🐶`;

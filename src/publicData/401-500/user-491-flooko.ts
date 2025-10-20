@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'flooko';
-const userId = '';
-const prefixUrl = '';
+const userId = '5f1fa37d-457a-40f1-9cb1-ac3478c50db3';
+const prefixUrl = 'https://dominicnikolai.github.io/project-361/assets/flooko/';
 const followers = 158_839;
 const followed = 530;
 const profileDescription = `World-Renowned Artist / Spaceman`;

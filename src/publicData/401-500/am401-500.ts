@@ -137,6 +137,10 @@ import { dropship_array_of_posts, dropship_commonProps } from './user-485-dropsh
 import { etinjcb_array_of_posts, etinjcb_commonProps } from './user-484-etinjcb';
 import { rafas55_array_of_posts, rafas55_commonProps } from './user-489-rafas55';
 import { techprep_array_of_posts, techprep_commonProps } from './user-483-techprep';
+import { chain_paws_array_of_posts, chain_paws_commonProps } from './user-497-chain-paws';
+import { flooko_array_of_posts, flooko_commonProps } from './user-491-flooko';
+import { minirule_array_of_posts, minirule_commonProps } from './user-495-minirule';
+import { pstanick_array_of_posts, pstanick_commonProps } from './user-493-pstanick';
 
 export const PUBLIC_401_500: arrayOfPosts = [
   [akcreationshd_commonProps, akcreationshd_array_of_posts] /* 401 */,
@@ -228,4 +232,12 @@ export const PUBLIC_401_500: arrayOfPosts = [
   [davebeesbombs_commonProps, davebeesbombs_array_of_posts] /* 487 */,
   [crumb_studio_commonProps, crumb_studio_array_of_posts] /* 488 */,
   [rafas55_commonProps, rafas55_array_of_posts] /* 489 */,
+
+  [flooko_commonProps, flooko_array_of_posts] /* 491 */,
+
+  [pstanick_commonProps, pstanick_array_of_posts] /* 493 */,
+
+  [minirule_commonProps, minirule_array_of_posts] /* 495 */,
+
+  [chain_paws_commonProps, chain_paws_array_of_posts] /* 497 */,
 ];

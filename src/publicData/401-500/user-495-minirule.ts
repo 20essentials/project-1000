@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'minirule';
-const userId = '';
-const prefixUrl = '';
+const userId = 'fe9bf6db-71d7-4c3d-a974-4a7b0d5fdfff';
+const prefixUrl = 'https://dominicnikolai.github.io/project-361/assets/minirule/';
 const followers = 348_932;
 const followed = 313;
 const profileDescription = `Official MiniSlot™ 🎰`;
