@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'bvlgari';
-const userId = '';
-const prefixUrl = '';
+const userId = '649ed332-a5e4-47e6-8023-f5bf8c974d8b';
+const prefixUrl = 'https://dominicnikolai.github.io/project-362/assets/bvlgari/';
 const followers = 14_832_325;
 const followed = 627;
 const profileDescription = `The Magnificent Roman High Jeweler`;

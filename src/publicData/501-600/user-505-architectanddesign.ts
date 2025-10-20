@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'architectanddesign';
-const userId = '';
-const prefixUrl = '';
+const userId = '0e37d86f-794d-49b2-bd26-7e2b60293649';
+const prefixUrl = 'https://dominicnikolai.github.io/project-362/assets/architectanddesign/';
 const followers = 8_832_898;
 const followed = 637;
 const profileDescription = `The best Architecture & Design platform`;

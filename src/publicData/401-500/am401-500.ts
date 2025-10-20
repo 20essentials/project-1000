@@ -145,6 +145,7 @@ import { radicalmotionai_array_of_posts, radicalmotionai_commonProps } from './u
 import { realesyexitosos_array_of_posts, realesyexitosos_commonProps } from './user-496-realesyexitosos';
 import { spacekkabbi_array_of_posts, spacekkabbi_commonProps } from './user-494-spacekkabbi';
 import { spin_the_sphere_array_of_posts, spin_the_sphere_commonProps } from './user-492-spin-the-sphere';
+import { eyes3iii_array_of_posts, eyes3iii_commonProps } from './user-498-eyes3iii';
 
 export const PUBLIC_401_500: arrayOfPosts = [
   [akcreationshd_commonProps, akcreationshd_array_of_posts] /* 401 */,
@@ -244,4 +245,5 @@ export const PUBLIC_401_500: arrayOfPosts = [
   [minirule_commonProps, minirule_array_of_posts] /* 495 */,
   [realesyexitosos_commonProps, realesyexitosos_array_of_posts] /* 496 */,
   [chain_paws_commonProps, chain_paws_array_of_posts] /* 497 */,
+  [eyes3iii_commonProps, eyes3iii_array_of_posts] /* 498 */,
 ];

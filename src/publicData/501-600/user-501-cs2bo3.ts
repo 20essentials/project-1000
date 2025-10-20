@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'cs2bo3';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ecd40571-b43d-4507-b408-8a606e2b5035';
+const prefixUrl = 'https://dominicnikolai.github.io/project-362/assets/cs2bo3/';
 const followers = 46_832;
 const followed = 50;
 const profileDescription = `Only CS2 📊 Stats `;
