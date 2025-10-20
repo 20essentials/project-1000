@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'mini_pixelkey';
-const userId = '';
-const prefixUrl = '';
+const userId = '1e6eabed-c47d-48f0-84c4-a518fe47e967';
+const prefixUrl = 'https://dominicnikolai.github.io/project-363/assets/mini-pixelkey/';
 const followers = 89_232;
 const followed = 50;
 const profileDescription = `📸| Las mejores mini cámaras`;

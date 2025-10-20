@@ -8,6 +8,10 @@ import { andreasgysin_array_of_posts, andreasgysin_commonProps } from './user-50
 import { cd_masterizzato_array_of_posts, cd_masterizzato_commonProps } from './user-513-cd-masterizzato';
 import { dante_leoncini_array_of_posts, dante_leoncini_commonProps } from './user-511-dante-leoncini';
 import { digital_byte_array_of_posts, digital_byte_commonProps } from './user-512-digital-byte';
+import { heyselcuk_array_of_posts, heyselcuk_commonProps } from './user-509-heyselcuk';
+import { karlaa_aviles_array_of_posts, karlaa_aviles_commonProps } from './user-510-karlaa-aviles';
+import { mini_pixelkey_array_of_posts, mini_pixelkey_commonProps } from './user-508-mini-pixelkey';
+import { ylegall_array_of_posts, ylegall_commonProps } from './user-506-ylegall';
 
 export const PUBLIC_501_600: arrayOfPosts = [
   [cs2bo3_commonProps, cs2bo3_array_of_posts] /* 501 */, 
@@ -15,9 +19,11 @@ export const PUBLIC_501_600: arrayOfPosts = [
   [paraisosecretos25_commonProps, paraisosecretos25_array_of_posts] /* 503 */, 
   [bvlgari_commonProps, bvlgari_array_of_posts] /* 504 */, 
   [architectanddesign_commonProps, architectanddesign_array_of_posts] /* 505 */, 
-
+  [ylegall_commonProps, ylegall_array_of_posts] /* 506 */, 
   [andreasgysin_commonProps, andreasgysin_array_of_posts] /* 507 */, 
-
+  [mini_pixelkey_commonProps, mini_pixelkey_array_of_posts] /* 508 */, 
+  [heyselcuk_commonProps, heyselcuk_array_of_posts] /* 509 */, 
+  [karlaa_aviles_commonProps, karlaa_aviles_array_of_posts] /* 510 */, 
   [dante_leoncini_commonProps, dante_leoncini_array_of_posts] /* 511 */, 
   [digital_byte_commonProps, digital_byte_array_of_posts] /* 512 */, 
   [cd_masterizzato_commonProps, cd_masterizzato_array_of_posts] /* 513 */, 

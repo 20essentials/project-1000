@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'heyselcuk';
-const userId = '';
-const prefixUrl = '';
+const userId = '905be759-17f2-4069-a91f-5c9af67d9f67';
+const prefixUrl = 'https://dominicnikolai.github.io/project-363/assets/heyselcuk/';
 const followers = 547_832;
 const followed = 377;
 const profileDescription = `Türkiye 🇹🇷 Austria 🇦🇹`;

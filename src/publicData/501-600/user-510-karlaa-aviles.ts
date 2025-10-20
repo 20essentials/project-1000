@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'karlaa_aviles';
-const userId = '';
-const prefixUrl = '';
+const userId = 'bf012faa-f56e-4452-9913-39edfde6ac01';
+const prefixUrl = 'https://dominicnikolai.github.io/project-363/assets/karlaa-aviles/';
 const followers = 132_832;
 const followed = 669;
 const profileDescription = `Content Creator | Journalist |`;

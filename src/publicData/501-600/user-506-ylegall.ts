@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ylegall';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c4331eea-7940-46a1-a323-92b80d217dc9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-363/assets/ylegall/';
 const followers = 47_832;
 const followed = 892;
 const profileDescription = `code based art`;
