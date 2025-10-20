@@ -4,29 +4,26 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'technova_news';
+const username = 'moneyminds';
 const userId = '';
 const prefixUrl = '';
-const followers = 372_832;
-const followed = 386;
-const profileDescription = `Tecnologia, innovazione e futuro`;
+const followers = 202_832;
+const followed = 553;
+const profileDescription = `Scegli di essere buono`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 6;
+const quantityOfVideos = 5;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
-  `#engineering #design #lights #karaoke #texture #wall #architecture #art #digitalart`, /*1*/
-  `#engineering #technology #device #digital`, /*2*/
-  `#nike #shoes #technology #engineering #news
-#upgrade #design`, /*3*/
-  `#exibition #live #drone #device #technology #computer #lightingdesign #china`, /*4*/
-  `Le immagini vengono proiettate su membrane elastiche ultraveloci che rispondono ai movimenti della mano. La tecnologia è già in fase di preparazione per l'implementazione in musei e mostre.
-
-#technology #hologram #engineering #device
-#digital #computer`, /*5*/
+  `#stadio #mercedes #fifa`, /*1*/
+  `#tecnologia #ingegneria #storia #mercedesbenz #innovazione #automobili #motori`, /*2*/
+  `#lusso #innovazione #orologi #tecnologia #successo #ispirazione #moneyminds`, /*3*/
+  `#tecnologia #innovazione #design #ingegneria #moneyminds
+`, /*4*/
+  `#BMW #lusso #tecnologia #sicurezza #innovazione`, /*5*/
   ``, /*6*/
   ``, /*7*/
   ``, /*8*/
@@ -68,7 +65,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const technova_news_commonProps = generateExactlyCommonProps({
+export const moneyminds_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -77,7 +74,7 @@ export const technova_news_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const technova_news_videos = generateArrayPostsOfVideos({
+const moneyminds_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -85,14 +82,14 @@ const technova_news_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const technova_news_images = generateArrayPostsOfImages({
+const moneyminds_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const technova_news_array_of_posts = [
-  ...technova_news_images,
-  ...technova_news_videos
+export const moneyminds_array_of_posts = [
+  ...moneyminds_images,
+  ...moneyminds_videos
 ];

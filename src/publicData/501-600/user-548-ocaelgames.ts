@@ -4,29 +4,27 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'technova_news';
+const username = 'ocaelgames';
 const userId = '';
 const prefixUrl = '';
-const followers = 372_832;
-const followed = 386;
-const profileDescription = `Tecnologia, innovazione e futuro`;
+const followers = 148_832;
+const followed = 132;
+const profileDescription = `PES e FIFA Antigos e muito mais… 🎮`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 6;
+const quantityOfVideos = 4;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
-  `#engineering #design #lights #karaoke #texture #wall #architecture #art #digitalart`, /*1*/
-  `#engineering #technology #device #digital`, /*2*/
-  `#nike #shoes #technology #engineering #news
-#upgrade #design`, /*3*/
-  `#exibition #live #drone #device #technology #computer #lightingdesign #china`, /*4*/
-  `Le immagini vengono proiettate su membrane elastiche ultraveloci che rispondono ai movimenti della mano. La tecnologia è già in fase di preparazione per l'implementazione in musei e mostre.
+  `Arena Corinthians - Copa do Mundo 2014 PS3/XBOX360 #copadomundo #gamesbrasil #games #nostalgia #playstation2 #ps3 #xbox360 #nostalgiagames #eafc #futebol`, /*1*/
+  `PES 2011 PS2 - BARCELONA X REAL MADRID
 
-#technology #hologram #engineering #device
-#digital #computer`, /*5*/
+#pes2011 #efootball #proevolutionsoccer #futebol #playstation #jogosantigos #ps3 #gamesbrasil`, /*2*/
+  `FIFA Soccer 2002 PlayStation 2 #ps2games #fifasoccer #nostalgic #games #ps2 #retrogames`, /*3*/
+  `Pro Evolution Soccer PlayStation 2 #games #proevolutionsoccer #konami #gamesretro #retrogames #ps2 #playstation #nostalgia #jogosantigos`, /*4*/
+  ``, /*5*/
   ``, /*6*/
   ``, /*7*/
   ``, /*8*/
@@ -68,7 +66,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const technova_news_commonProps = generateExactlyCommonProps({
+export const ocaelgames_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -77,7 +75,7 @@ export const technova_news_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const technova_news_videos = generateArrayPostsOfVideos({
+const ocaelgames_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -85,14 +83,14 @@ const technova_news_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const technova_news_images = generateArrayPostsOfImages({
+const ocaelgames_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const technova_news_array_of_posts = [
-  ...technova_news_images,
-  ...technova_news_videos
+export const ocaelgames_array_of_posts = [
+  ...ocaelgames_images,
+  ...ocaelgames_videos
 ];

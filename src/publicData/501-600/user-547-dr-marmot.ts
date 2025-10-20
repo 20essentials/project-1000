@@ -4,12 +4,12 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'technova_news';
+const username = 'dr_marmot';
 const userId = '';
 const prefixUrl = '';
-const followers = 372_832;
-const followed = 386;
-const profileDescription = `Tecnologia, innovazione e futuro`;
+const followers = 558_832;
+const followed = 377;
+const profileDescription = `Marmot Lover 🇯🇵 🇮🇳 🇲🇽 🇧🇷 🇺🇸 🇮🇷`;
 const prefixLetterVideos = 'v';
 const quantityOfVideos = 6;
 const prefixLetterImages = 'f';
@@ -18,16 +18,13 @@ const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
-  `#engineering #design #lights #karaoke #texture #wall #architecture #art #digitalart`, /*1*/
-  `#engineering #technology #device #digital`, /*2*/
-  `#nike #shoes #technology #engineering #news
-#upgrade #design`, /*3*/
-  `#exibition #live #drone #device #technology #computer #lightingdesign #china`, /*4*/
-  `Le immagini vengono proiettate su membrane elastiche ultraveloci che rispondono ai movimenti della mano. La tecnologia è già in fase di preparazione per l'implementazione in musei e mostre.
-
-#technology #hologram #engineering #device
-#digital #computer`, /*5*/
-  ``, /*6*/
+  `Poor thing…don’t hold wild animals.`, /*1*/
+  `I'm getting ready to bring marmots back to Japan!`, /*2*/
+  `In a cozy suburban backyard, a marmot named Oliver happily munching cookies. The sun casts a warm glow, and the gentle rustle of leaves adds a peaceful ambiance.`, /*3*/
+  `It was too fast for me to see`, /*4*/
+  `#marmot#mamochi#funny`, /*5*/
+  `Marmot actually chooses his favorite movie over delicious strawberries.
+`, /*6*/
   ``, /*7*/
   ``, /*8*/
   ``, /*9*/ 
@@ -68,7 +65,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const technova_news_commonProps = generateExactlyCommonProps({
+export const dr_marmot_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -77,7 +74,7 @@ export const technova_news_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const technova_news_videos = generateArrayPostsOfVideos({
+const dr_marmot_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -85,14 +82,14 @@ const technova_news_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const technova_news_images = generateArrayPostsOfImages({
+const dr_marmot_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const technova_news_array_of_posts = [
-  ...technova_news_images,
-  ...technova_news_videos
+export const dr_marmot_array_of_posts = [
+  ...dr_marmot_images,
+  ...dr_marmot_videos
 ];
