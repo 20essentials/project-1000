@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'the_last_knight_14';
-const userId = '';
-const prefixUrl = '';
+const userId = '97cf5fb7-a51c-44a1-9d03-1bc78566544b';
+const prefixUrl = 'https://dominicnikolai.github.io/project-366/assets/the-last-knight-14/';
 const followers = 328_832;
 const followed = 322;
 const profileDescription = `💯⛓️⛓️⛓️⛓️💯`;

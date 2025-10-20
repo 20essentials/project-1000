@@ -24,6 +24,10 @@ import { digitalarabel_array_of_posts, digitalarabel_commonProps } from './user-
 import { fraansssss_array_of_posts, fraansssss_commonProps } from './user-522-fraansssss';
 import { merlinomath_array_of_posts, merlinomath_commonProps } from './user-528-merlinomath';
 import { motionstate_array_of_posts, motionstate_commonProps } from './user-527-motionstate';
+import { oscar_diazx_array_of_posts, oscar_diazx_commonProps } from './user-526-oscar-diazx';
+import { the_last_knight_14_array_of_posts, the_last_knight_14_commonProps } from './user-524-the-last-knight-14';
+import { vertex_cgi_array_of_posts, vertex_cgi_commonProps } from './user-529-vertex-cgi';
+import { weybecstudio_array_of_posts, weybecstudio_commonProps } from './user-525-weybecstudio';
 
 export const PUBLIC_501_600: arrayOfPosts = [
   [cs2bo3_commonProps, cs2bo3_array_of_posts] /* 501 */, 
@@ -49,7 +53,10 @@ export const PUBLIC_501_600: arrayOfPosts = [
   [passportvisionz_commonProps, passportvisionz_array_of_posts] /* 521 */, 
   [fraansssss_commonProps, fraansssss_array_of_posts] /* 522 */, 
   [digitalarabel_commonProps, digitalarabel_array_of_posts] /* 523 */, 
-
+  [the_last_knight_14_commonProps, the_last_knight_14_array_of_posts] /* 524 */, 
+  [weybecstudio_commonProps, weybecstudio_array_of_posts] /* 525 */, 
+  [oscar_diazx_commonProps, oscar_diazx_array_of_posts] /* 526 */, 
   [motionstate_commonProps, motionstate_array_of_posts] /* 527 */, 
   [merlinomath_commonProps, merlinomath_array_of_posts] /* 528 */, 
+  [vertex_cgi_commonProps, vertex_cgi_array_of_posts] /* 529 */, 
 ];

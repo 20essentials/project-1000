@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'weybecstudio';
-const userId = '';
-const prefixUrl = '';
+const userId = '2af4a363-9fc4-4e24-8cb9-a3b4b30ad612';
+const prefixUrl = 'https://dominicnikolai.github.io/project-366/assets/weybecstudio/';
 const followers = 102_832;
 const followed = 58;
 const profileDescription = `Inquiry`;

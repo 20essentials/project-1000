@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'vertex_cgi';
-const userId = '';
-const prefixUrl = '';
+const userId = 'e73ca3b1-1b36-46aa-bb4b-84a979b05b96';
+const prefixUrl = 'https://dominicnikolai.github.io/project-366/assets/vertex-cgi/';
 const followers = 1_432_323;
 const followed = 848;
 const profileDescription = `▶︎ 20 billion organic views for enterprises`;
