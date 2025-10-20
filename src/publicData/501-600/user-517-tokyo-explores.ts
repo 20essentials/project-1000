@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'tokyo_explores';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd189be5a-5205-4c09-84d9-70e9bf81e412';
+const prefixUrl = 'https://dominicnikolai.github.io/project-364/assets/tokyo-explores/';
 const followers = 1_432_324;
 const followed = 577;
 const profileDescription = `🏙️ Discover the best of Tokyo`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'reel_postz';
-const userId = '';
-const prefixUrl = '';
+const userId = '6021ca56-7103-4f8d-ac79-cfe42697721a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-364/assets/reel-postz/';
 const followers = 348_832;
 const followed = 358;
 const profileDescription = `Memes • Relatable`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'passportvisionz';
-const userId = '';
-const prefixUrl = '';
+const userId = '0a8de8f1-c61d-4fc7-8e6c-f1c80caa1b14';
+const prefixUrl = 'https://dominicnikolai.github.io/project-364/assets/passportvisionz/';
 const followers = 87_832;
 const followed = 222;
 const profileDescription = `PASSPORT VISIONZ

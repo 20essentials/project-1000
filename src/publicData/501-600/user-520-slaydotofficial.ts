@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'slaydotofficial';
-const userId = '';
-const prefixUrl = '';
+const userId = '24de5312-5462-4568-8bfd-52a9448386ef';
+const prefixUrl = 'https://dominicnikolai.github.io/project-364/assets/slaydotofficial/';
 const followers = 21_832;
 const followed = 132;
 const profileDescription = `Spot it👀Dot it🔴, Slay it!🤺`;
