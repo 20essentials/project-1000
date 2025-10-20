@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'hausmann1794';
-const userId = '';
-const prefixUrl = '';
+const userId = '701abc80-5d9f-453a-b3b7-5a95dda8c381';
+const prefixUrl = 'https://dominicnikolai.github.io/project-362/assets/hausmann1794/';
 const followers = 18_234;
 const followed = 50;
 const profileDescription = `Born in Rome 230 years ago`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 6;
+const quantityOfVideos = 4;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'kristel_tech';
-const userId = '';
-const prefixUrl = '';
+const userId = '64dbb3b2-9521-448e-aecc-5b3bde0aaae2';
+const prefixUrl = 'https://dominicnikolai.github.io/project-362/assets/kristel-tech/';
 const followers = 118_832;
 const followed = 33;
 const profileDescription = `BSc & MSc Computer Engineering`;

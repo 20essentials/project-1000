@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'paraisosecretos25';
-const userId = '';
-const prefixUrl = '';
+const userId = '3aed12cb-09e8-4c8a-b7b7-c753a8d03e78';
+const prefixUrl = 'https://dominicnikolai.github.io/project-362/assets/paraisosecretos25/';
 const followers = 102_832;
 const followed = 116;
 const profileDescription = ` Explorando cada canto do planeta`;

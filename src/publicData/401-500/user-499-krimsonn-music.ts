@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'krimsonn_music';
-const userId = '';
-const prefixUrl = '';
+const userId = '1bbcfaf2-9985-4eaa-9f66-26730cefc6c9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-362/assets/krimsonn-music/';
 const followers = 461_832;
 const followed = 280;
 const profileDescription = `DJ and Music Producer`;

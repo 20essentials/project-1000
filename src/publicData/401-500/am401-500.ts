@@ -146,6 +146,8 @@ import { realesyexitosos_array_of_posts, realesyexitosos_commonProps } from './u
 import { spacekkabbi_array_of_posts, spacekkabbi_commonProps } from './user-494-spacekkabbi';
 import { spin_the_sphere_array_of_posts, spin_the_sphere_commonProps } from './user-492-spin-the-sphere';
 import { eyes3iii_array_of_posts, eyes3iii_commonProps } from './user-498-eyes3iii';
+import { krimsonn_music_array_of_posts, krimsonn_music_commonProps } from './user-499-krimsonn-music';
+import { kristel_tech_array_of_posts, kristel_tech_commonProps } from './user-500-kristel-tech';
 
 export const PUBLIC_401_500: arrayOfPosts = [
   [akcreationshd_commonProps, akcreationshd_array_of_posts] /* 401 */,
@@ -246,4 +248,6 @@ export const PUBLIC_401_500: arrayOfPosts = [
   [realesyexitosos_commonProps, realesyexitosos_array_of_posts] /* 496 */,
   [chain_paws_commonProps, chain_paws_array_of_posts] /* 497 */,
   [eyes3iii_commonProps, eyes3iii_array_of_posts] /* 498 */,
+  [krimsonn_music_commonProps, krimsonn_music_array_of_posts] /* 499 */,
+  [kristel_tech_commonProps, kristel_tech_array_of_posts] /* 500 */,
 ];
