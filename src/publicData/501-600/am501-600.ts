@@ -20,6 +20,10 @@ import { passportvisionz_array_of_posts, passportvisionz_commonProps } from './u
 import { reel_postz_array_of_posts, reel_postz_commonProps } from './user-515-reel-postz';
 import { slaydotofficial_array_of_posts, slaydotofficial_commonProps } from './user-520-slaydotofficial';
 import { tokyo_explores_array_of_posts, tokyo_explores_commonProps } from './user-517-tokyo-explores';
+import { digitalarabel_array_of_posts, digitalarabel_commonProps } from './user-523-digitalarabel';
+import { fraansssss_array_of_posts, fraansssss_commonProps } from './user-522-fraansssss';
+import { merlinomath_array_of_posts, merlinomath_commonProps } from './user-528-merlinomath';
+import { motionstate_array_of_posts, motionstate_commonProps } from './user-527-motionstate';
 
 export const PUBLIC_501_600: arrayOfPosts = [
   [cs2bo3_commonProps, cs2bo3_array_of_posts] /* 501 */, 
@@ -43,4 +47,9 @@ export const PUBLIC_501_600: arrayOfPosts = [
   [daftpink_art_commonProps, daftpink_art_array_of_posts] /* 519 */, 
   [slaydotofficial_commonProps, slaydotofficial_array_of_posts] /* 520 */, 
   [passportvisionz_commonProps, passportvisionz_array_of_posts] /* 521 */, 
+  [fraansssss_commonProps, fraansssss_array_of_posts] /* 522 */, 
+  [digitalarabel_commonProps, digitalarabel_array_of_posts] /* 523 */, 
+
+  [motionstate_commonProps, motionstate_array_of_posts] /* 527 */, 
+  [merlinomath_commonProps, merlinomath_array_of_posts] /* 528 */, 
 ];

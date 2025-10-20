@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'digitalarabel';
-const userId = '';
-const prefixUrl = '';
+const userId = '5bc52298-addc-4da0-893c-e5cda88a99cd';
+const prefixUrl = 'https://dominicnikolai.github.io/project-366/assets/digitalarabel/';
 const followers = 29_832;
 const followed = 179;
 const profileDescription = ` hago videos sobre arte`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 4;
+const quantityOfVideos = 3;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;

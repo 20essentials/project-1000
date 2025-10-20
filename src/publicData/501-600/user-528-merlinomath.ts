@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'merlinomath';
-const userId = '';
-const prefixUrl = '';
+const userId = 'b522ad11-66df-48eb-bf28-b93775377c7c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-366/assets/merlinomath/';
 const followers = 54_832;
 const followed = 161;
 const profileDescription = ` Matemático con corazón de artista, transformando ecuaciones en arte visual. `;
