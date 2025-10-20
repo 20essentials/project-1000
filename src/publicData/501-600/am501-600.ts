@@ -28,6 +28,10 @@ import { oscar_diazx_array_of_posts, oscar_diazx_commonProps } from './user-526-
 import { the_last_knight_14_array_of_posts, the_last_knight_14_commonProps } from './user-524-the-last-knight-14';
 import { vertex_cgi_array_of_posts, vertex_cgi_commonProps } from './user-529-vertex-cgi';
 import { weybecstudio_array_of_posts, weybecstudio_commonProps } from './user-525-weybecstudio';
+import { dpcustomsmx_array_of_posts, dpcustomsmx_commonProps } from './user-535-dpcustomsmx';
+import { erikdoesvfx_array_of_posts, erikdoesvfx_commonProps } from './user-534-erikdoesvfx';
+import { ernis_guljigit_array_of_posts, ernis_guljigit_commonProps } from './user-530-ernis-guljigit';
+import { gdiaz2022_array_of_posts, gdiaz2022_commonProps } from './user-537-gdiaz2022';
 
 export const PUBLIC_501_600: arrayOfPosts = [
   [cs2bo3_commonProps, cs2bo3_array_of_posts] /* 501 */, 
@@ -59,4 +63,10 @@ export const PUBLIC_501_600: arrayOfPosts = [
   [motionstate_commonProps, motionstate_array_of_posts] /* 527 */, 
   [merlinomath_commonProps, merlinomath_array_of_posts] /* 528 */, 
   [vertex_cgi_commonProps, vertex_cgi_array_of_posts] /* 529 */, 
+  [ernis_guljigit_commonProps, ernis_guljigit_array_of_posts] /* 530 */, 
+
+  [erikdoesvfx_commonProps, erikdoesvfx_array_of_posts] /* 534 */, 
+  [dpcustomsmx_commonProps, dpcustomsmx_array_of_posts] /* 535 */, 
+
+  [gdiaz2022_commonProps, gdiaz2022_array_of_posts] /* 537 */, 
 ];

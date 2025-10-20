@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'dpcustomsmx';
-const userId = '';
-const prefixUrl = '';
+const userId = '54ab342b-4bc8-449a-9e15-bf04dfe6ec73';
+const prefixUrl = 'https://dominicnikolai.github.io/project-367/assets/dpcustomsmx/';
 const followers = 434_832;
 const followed = 918;
 const profileDescription = `Creado para ti, que buscas algo diferente 🙂‍↔️`;

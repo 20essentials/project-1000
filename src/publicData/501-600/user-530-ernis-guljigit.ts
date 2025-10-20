@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ernis_guljigit';
-const userId = '';
-const prefixUrl = '';
+const userId = '1abed207-a2f8-433c-90c8-de677646b44d';
+const prefixUrl = 'https://dominicnikolai.github.io/project-367/assets/ernis-guljigit/';
 const followers = 289_832;
 const followed = 156;
 const profileDescription = `Топ мобилограф в СНГ`;

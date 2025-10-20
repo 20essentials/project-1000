@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'erikdoesvfx';
-const userId = '';
-const prefixUrl = '';
+const userId = '54030249-5ba9-40a0-85bb-d4e201a91374';
+const prefixUrl = 'https://dominicnikolai.github.io/project-367/assets/erikdoesvfx/';
 const followers = 507_832;
 const followed = 50;
 const profileDescription = `My VFX course is finally available`;

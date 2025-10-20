@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'gdiaz2022';
-const userId = '';
-const prefixUrl = '';
+const userId = 'b66bd60f-fe1e-4515-9e23-9240c3bd24d9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-367/assets/gdiaz2022/';
 const followers = 18_832;
 const followed = 112;
 const profileDescription = `Hablemos de emprender!`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 6;
+const quantityOfVideos = 3;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;
