@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'nokttu';
-const userId = '';
-const prefixUrl = '';
+const userId = '621b432a-d4b8-47f3-8bb1-8389cdefe78e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-364/assets/nokttu/';
 const followers = 114_832;
 const followed = 945;
 const profileDescription = `Nokttu the black cat 🖤`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'francescogioia_3dartist';
-const userId = '';
-const prefixUrl = '';
+const userId = '2ed5e7e5-688b-4a75-8697-2fc7e00f98b0';
+const prefixUrl = 'https://dominicnikolai.github.io/project-364/assets/francescogioia-3dartist/';
 const followers = 132_832;
 const followed = 215;
 const profileDescription = `VFX / 3D artist`;

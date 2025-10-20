@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'daftpink_art';
-const userId = '';
-const prefixUrl = '';
+const userId = '4baa809b-c67a-4994-be61-cb8d55b5448c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-364/assets/daftpink-art/';
 const followers = 409_832;
 const followed = 274;
 const profileDescription = `🧶 Fluffy • Shaggy • Custom`;

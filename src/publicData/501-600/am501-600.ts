@@ -12,6 +12,10 @@ import { heyselcuk_array_of_posts, heyselcuk_commonProps } from './user-509-heys
 import { karlaa_aviles_array_of_posts, karlaa_aviles_commonProps } from './user-510-karlaa-aviles';
 import { mini_pixelkey_array_of_posts, mini_pixelkey_commonProps } from './user-508-mini-pixelkey';
 import { ylegall_array_of_posts, ylegall_commonProps } from './user-506-ylegall';
+import { afterspace_array_of_posts, afterspace_commonProps } from './user-518-afterspace';
+import { daftpink_art_array_of_posts, daftpink_art_commonProps } from './user-519-daftpink-art';
+import { francescogioia_3dartist_array_of_posts, francescogioia_3dartist_commonProps } from './user-516-francescogioia-3dartist';
+import { nokttu_array_of_posts, nokttu_commonProps } from './user-514-nokttu';
 
 export const PUBLIC_501_600: arrayOfPosts = [
   [cs2bo3_commonProps, cs2bo3_array_of_posts] /* 501 */, 
@@ -27,4 +31,10 @@ export const PUBLIC_501_600: arrayOfPosts = [
   [dante_leoncini_commonProps, dante_leoncini_array_of_posts] /* 511 */, 
   [digital_byte_commonProps, digital_byte_array_of_posts] /* 512 */, 
   [cd_masterizzato_commonProps, cd_masterizzato_array_of_posts] /* 513 */, 
+  [nokttu_commonProps, nokttu_array_of_posts] /* 514 */, 
+
+  [francescogioia_3dartist_commonProps, francescogioia_3dartist_array_of_posts] /* 516 */, 
+
+  [afterspace_commonProps, afterspace_array_of_posts] /* 518 */, 
+  [daftpink_art_commonProps, daftpink_art_array_of_posts] /* 519 */, 
 ];

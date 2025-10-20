@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'afterspace';
-const userId = '';
-const prefixUrl = '';
+const userId = 'b719b9c8-acd7-4229-a803-651270594ab5';
+const prefixUrl = 'https://dominicnikolai.github.io/project-364/assets/afterspace/';
 const followers = 1_232_832;
 const followed = 139;
 const profileDescription = `Exploring the space🌌`;
