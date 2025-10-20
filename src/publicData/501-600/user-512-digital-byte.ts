@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'digital_byte';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ef3586ec-5bbc-4745-bb72-89925bcd3195';
+const prefixUrl = 'https://dominicnikolai.github.io/project-363/assets/digital-byte/';
 const followers = 108_983;
 const followed = 544;
 const profileDescription = `life is too short to work from home`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'cd_masterizzato';
-const userId = '';
-const prefixUrl = '';
+const userId = '0ff11ce3-fda8-419c-b681-2b618e2882b5';
+const prefixUrl = 'https://dominicnikolai.github.io/project-363/assets/cd-masterizzato/';
 const followers = 323_832;
 const followed = 234;
 const profileDescription = `700 MB`;

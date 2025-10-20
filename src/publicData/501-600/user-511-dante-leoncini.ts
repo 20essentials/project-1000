@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'dante_leoncini';
-const userId = '';
-const prefixUrl = '';
+const userId = '8823bd62-95d0-4e58-a553-022319b3697f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-363/assets/dante-leoncini/';
 const followers = 34_832;
 const followed = 177;
 const profileDescription = `Artista 3D y Programador`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 9;
+const quantityOfVideos = 8;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;

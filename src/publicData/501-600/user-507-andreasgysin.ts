@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'andreasgysin';
-const userId = '';
-const prefixUrl = '';
+const userId = 'e600f09c-52bf-4615-8740-d849bfb0a9f7';
+const prefixUrl = 'https://dominicnikolai.github.io/project-363/assets/andreasgysin/';
 const followers = 58_832;
 const followed = 911;
 const profileDescription = `︻╦╤─ ☮︎`;
