@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'prattprattpratt';
-const userId = '';
-const prefixUrl = '';
+const userId = 'a5df9e27-31f4-4c3a-8de5-77297ccfbd78';
+const prefixUrl = 'https://dominicnikolai.github.io/project-367/assets/prattprattpratt/';
 const followers = 43_832_893;
 const followed = 50;
 const profileDescription = `God first. Grateful to be here.`;

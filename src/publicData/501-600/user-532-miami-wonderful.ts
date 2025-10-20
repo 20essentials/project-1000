@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'miami_wonderful';
-const userId = '';
-const prefixUrl = '';
+const userId = '83cb3c43-9bad-431e-846c-e11c767a355a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-367/assets/miami-wonderful/';
 const followers = 251_828;
 const followed = 261;
 const profileDescription = `We show you what to do in Miami`;

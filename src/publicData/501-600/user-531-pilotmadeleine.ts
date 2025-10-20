@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'pilotmadeleine';
-const userId = '';
-const prefixUrl = '';
+const userId = 'f0d978f3-66b4-4857-9b73-03876c2c9ffb';
+const prefixUrl = 'https://dominicnikolai.github.io/project-367/assets/pilotmadeleine/';
 const followers = 1_532_832;
 const followed = 127;
 const profileDescription = `Germany 🇩🇪 Malta 🇲🇹 USA 🇺🇸`;

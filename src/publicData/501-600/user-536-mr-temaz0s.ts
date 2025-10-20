@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'mr_temaz0s';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c5b1891d-81b5-491e-a42a-2df0bd363b59';
+const prefixUrl = 'https://dominicnikolai.github.io/project-367/assets/mr-temaz0s/';
 const followers = 1_232_832;
 const followed = 323;
 const profileDescription = `| Toda canción se queda en nuestra mente`;

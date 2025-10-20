@@ -32,6 +32,10 @@ import { dpcustomsmx_array_of_posts, dpcustomsmx_commonProps } from './user-535-
 import { erikdoesvfx_array_of_posts, erikdoesvfx_commonProps } from './user-534-erikdoesvfx';
 import { ernis_guljigit_array_of_posts, ernis_guljigit_commonProps } from './user-530-ernis-guljigit';
 import { gdiaz2022_array_of_posts, gdiaz2022_commonProps } from './user-537-gdiaz2022';
+import { miami_wonderful_array_of_posts, miami_wonderful_commonProps } from './user-532-miami-wonderful';
+import { mr_temaz0s_array_of_posts, mr_temaz0s_commonProps } from './user-536-mr-temaz0s';
+import { pilotmadeleine_array_of_posts, pilotmadeleine_commonProps } from './user-531-pilotmadeleine';
+import { prattprattpratt_array_of_posts, prattprattpratt_commonProps } from './user-533-prattprattpratt';
 
 export const PUBLIC_501_600: arrayOfPosts = [
   [cs2bo3_commonProps, cs2bo3_array_of_posts] /* 501 */, 
@@ -64,9 +68,11 @@ export const PUBLIC_501_600: arrayOfPosts = [
   [merlinomath_commonProps, merlinomath_array_of_posts] /* 528 */, 
   [vertex_cgi_commonProps, vertex_cgi_array_of_posts] /* 529 */, 
   [ernis_guljigit_commonProps, ernis_guljigit_array_of_posts] /* 530 */, 
-
+  [pilotmadeleine_commonProps, pilotmadeleine_array_of_posts] /* 531 */, 
+  [miami_wonderful_commonProps, miami_wonderful_array_of_posts] /* 532 */, 
+  [prattprattpratt_commonProps, prattprattpratt_array_of_posts] /* 533 */, 
   [erikdoesvfx_commonProps, erikdoesvfx_array_of_posts] /* 534 */, 
   [dpcustomsmx_commonProps, dpcustomsmx_array_of_posts] /* 535 */, 
-
+  [mr_temaz0s_commonProps, mr_temaz0s_array_of_posts] /* 536 */, 
   [gdiaz2022_commonProps, gdiaz2022_array_of_posts] /* 537 */, 
 ];
