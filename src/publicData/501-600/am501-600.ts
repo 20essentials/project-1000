@@ -40,6 +40,10 @@ import { agnod3_array_of_posts, agnod3_commonProps } from './user-541-agnod3';
 import { best_songs_by_country_array_of_posts, best_songs_by_country_commonProps } from './user-539-best-songs-by-country';
 import { ciencias_tv_array_of_posts, ciencias_tv_commonProps } from './user-545-ciencias-tv';
 import { explaining_everything_array_of_posts, explaining_everything_commonProps } from './user-544-explaining-everything';
+import { florythecutie_array_of_posts, florythecutie_commonProps } from './user-538-florythecutie';
+import { herpetoloco_array_of_posts, herpetoloco_commonProps } from './user-543-herpetoloco';
+import { technova_news_array_of_posts, technova_news_commonProps } from './user-540-technova-news';
+import { voidlore_art_array_of_posts, voidlore_art_commonProps } from './user-542-voidlore-art';
 
 export const PUBLIC_501_600: arrayOfPosts = [
   [cs2bo3_commonProps, cs2bo3_array_of_posts] /* 501 */, 
@@ -79,11 +83,12 @@ export const PUBLIC_501_600: arrayOfPosts = [
   [dpcustomsmx_commonProps, dpcustomsmx_array_of_posts] /* 535 */, 
   [mr_temaz0s_commonProps, mr_temaz0s_array_of_posts] /* 536 */, 
   [gdiaz2022_commonProps, gdiaz2022_array_of_posts] /* 537 */, 
-
+  [florythecutie_commonProps, florythecutie_array_of_posts] /* 538 */, 
   [best_songs_by_country_commonProps, best_songs_by_country_array_of_posts] /* 539 */, 
-
+  [technova_news_commonProps, technova_news_array_of_posts] /* 540 */, 
   [agnod3_commonProps, agnod3_array_of_posts] /* 541 */, 
-
+  [voidlore_art_commonProps, voidlore_art_array_of_posts] /* 542 */, 
+  [herpetoloco_commonProps, herpetoloco_array_of_posts] /* 543 */, 
   [explaining_everything_commonProps, explaining_everything_array_of_posts] /* 544 */, 
   [ciencias_tv_commonProps, ciencias_tv_array_of_posts] /* 545 */, 
 ];

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'voidlore_art';
-const userId = '';
-const prefixUrl = '';
+const userId = '27ac80b0-fac7-48f8-9353-8e820b49488e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-368/assets/voidlore-art/';
 const followers = 14_322;
 const followed = 87;
 const profileDescription = `CONCEPT VISUALS | ART | IMAGINATION`;

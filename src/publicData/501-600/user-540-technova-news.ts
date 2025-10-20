@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'technova_news';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd4eba7e4-8519-4e1a-9d03-4992a68be53f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-368/assets/technova_news/';
 const followers = 372_832;
 const followed = 386;
 const profileDescription = `Tecnologia, innovazione e futuro`;

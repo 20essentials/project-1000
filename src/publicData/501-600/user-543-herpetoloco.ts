@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'herpetoloco';
-const userId = '';
-const prefixUrl = '';
+const userId = '4c355e93-0fc0-400a-845f-241e11039cd9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-368/assets/herpetoloco/';
 const followers = 65_832;
 const followed = 50;
 const profileDescription = `🐍 Reptiles & 🌍 Viajes`;

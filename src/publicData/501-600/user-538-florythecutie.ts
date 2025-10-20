@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'florythecutie';
-const userId = '';
-const prefixUrl = '';
+const userId = '46357aa1-9fbb-422e-91cd-0a6bb5db5a7c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-368/assets/florythecutie/';
 const followers = 17_832;
 const followed = 131;
 const profileDescription = `Hi! I'm Flory the calico - 🇨🇦`;
