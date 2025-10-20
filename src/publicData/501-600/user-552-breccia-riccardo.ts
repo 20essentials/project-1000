@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'breccia_ricardo';
-const userId = '';
-const prefixUrl = '';
+const userId = 'bcc29490-ec67-46da-bb27-7111d16b3c5a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-369/assets/breccia-ricc4rdo/';
 const followers = 92_832;
 const followed = 173;
 const profileDescription = `Docente IED`;

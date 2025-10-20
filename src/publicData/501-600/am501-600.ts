@@ -44,6 +44,10 @@ import { florythecutie_array_of_posts, florythecutie_commonProps } from './user-
 import { herpetoloco_array_of_posts, herpetoloco_commonProps } from './user-543-herpetoloco';
 import { technova_news_array_of_posts, technova_news_commonProps } from './user-540-technova-news';
 import { voidlore_art_array_of_posts, voidlore_art_commonProps } from './user-542-voidlore-art';
+import { alvalayu_array_of_posts, alvalayu_commonProps } from './user-549-alvalayu';
+import { breccia_ricardo_array_of_posts, breccia_ricardo_commonProps } from './user-552-breccia-riccardo';
+import { dr_marmot_array_of_posts, dr_marmot_commonProps } from './user-547-dr-marmot';
+import { la_ciencia_dice_array_of_posts, la_ciencia_dice_commonProps } from './user-553-la-ciencia-dice';
 
 export const PUBLIC_501_600: arrayOfPosts = [
   [cs2bo3_commonProps, cs2bo3_array_of_posts] /* 501 */, 
@@ -91,4 +95,12 @@ export const PUBLIC_501_600: arrayOfPosts = [
   [herpetoloco_commonProps, herpetoloco_array_of_posts] /* 543 */, 
   [explaining_everything_commonProps, explaining_everything_array_of_posts] /* 544 */, 
   [ciencias_tv_commonProps, ciencias_tv_array_of_posts] /* 545 */, 
+  
+  [dr_marmot_commonProps, dr_marmot_array_of_posts] /* 547 */, 
+  
+  [alvalayu_commonProps, alvalayu_array_of_posts] /* 549 */, 
+  
+  [breccia_ricardo_commonProps, breccia_ricardo_array_of_posts] /* 552 */,
+  [la_ciencia_dice_commonProps, la_ciencia_dice_array_of_posts] /* 553 */, 
+
 ];

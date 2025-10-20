@@ -5,13 +5,13 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'la_ciencia_dice';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ed89210a-8a17-4930-9c50-7ca17c17ca0a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-369/assets/la-ciencia-dice/';
 const followers = 6_832_832;
 const followed = 549;
 const profileDescription = `Yo quiero saber, no quiero creer`;
 const prefixLetterVideos = 'v';
-const quantityOfVideos = 6;
+const quantityOfVideos = 5;
 const prefixLetterImages = 'f';
 const quantityOfImages = 0;
 const profileImageSrc = `${prefixUrl}p3rfil.avif`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'alvalayu';
-const userId = '';
-const prefixUrl = '';
+const userId = '6277879f-29f6-4a24-ae40-0a1b2c090a4b';
+const prefixUrl = 'https://dominicnikolai.github.io/project-369/assets/alvalayu/';
 const followers = 50_832;
 const followed = 517;
 const profileDescription = `Segovia`;

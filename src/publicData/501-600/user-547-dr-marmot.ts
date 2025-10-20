@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'dr_marmot';
-const userId = '';
-const prefixUrl = '';
+const userId = '6f28bef1-a3ae-43a3-a5b7-8e255e345cc1';
+const prefixUrl = 'https://dominicnikolai.github.io/project-369/assets/dr_marmot/';
 const followers = 558_832;
 const followed = 377;
 const profileDescription = `Marmot Lover 🇯🇵 🇮🇳 🇲🇽 🇧🇷 🇺🇸 🇮🇷`;
