@@ -4,12 +4,12 @@ import {
   generateArrayPostsOfVideos
 } from '@/publicData/functions/amPublicFunctions';
 
-const username = 'amUserPrivate';
+const username = 'urban_streetart';
 const userId = '';
 const prefixUrl = '';
-const followers = 100_000;
+const followers = 4_832_832;
 const followed = 50;
-const profileDescription = `Hello`;
+const profileDescription = `URBAN STREET ART®️`;
 const prefixLetterVideos = 'v';
 const quantityOfVideos = 6;
 const prefixLetterImages = 'f';
@@ -18,12 +18,12 @@ const profileImageSrc = `${prefixUrl}p3rfil.avif`;
 
 /* prettier-ignore */
 const arrayDescriptionsOfVideos = [
-  ``, /*1*/
-  ``, /*2*/
-  ``, /*3*/
-  ``, /*4*/
-  ``, /*5*/
-  ``, /*6*/
+  `#streetart #artwork #drawing #sketch #painting #tattoo #ink #digitalart #design #instagood #picoftheday #artist #portrait #graffiti #art #photography #illustration #streetartphotography #streetarteverywhere #amazing #beautiful #reels #baseball #skills`, /*1*/
+  ` #art`, /*2*/
+  `#art #streetart`, /*3*/
+  ` 💥 #art`, /*4*/
+  `💥 #art`, /*5*/
+  `💥 #art`, /*6*/
   ``, /*7*/
   ``, /*8*/
   ``, /*9*/ 
@@ -64,7 +64,7 @@ const arrayDescriptionOfImages = [
   ``, /*20*/
 ]
 
-export const amUserPrivate_commonProps = generateExactlyCommonProps({
+export const urban_streetart_commonProps = generateExactlyCommonProps({
   profileImageSrc,
   userId,
   username,
@@ -73,7 +73,7 @@ export const amUserPrivate_commonProps = generateExactlyCommonProps({
   profileDescription
 });
 
-const amUserPrivate_videos = generateArrayPostsOfVideos({
+const urban_streetart_videos = generateArrayPostsOfVideos({
   prefixLetterVideos,
   prefixUrl,
   quantityOfVideos,
@@ -81,14 +81,14 @@ const amUserPrivate_videos = generateArrayPostsOfVideos({
   arrayDescriptionsOfVideos
 });
 
-const amUserPrivate_images = generateArrayPostsOfImages({
+const urban_streetart_images = generateArrayPostsOfImages({
   prefixLetterImages,
   prefixUrl,
   userId,
   quantityOfImages,
 });
 
-export const amUserPrivate_array_of_posts = [
-  ...amUserPrivate_images,
-  ...amUserPrivate_videos
+export const urban_streetart_array_of_posts = [
+  ...urban_streetart_images,
+  ...urban_streetart_videos
 ];
