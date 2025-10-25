@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'uxui_howardle';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ccdb61e7-803d-4e24-9a3b-6076128d6c6dd';
+const prefixUrl = 'https://dominicnikolai.github.io/project-370/assets/uxui-howardle/';
 const followers = 492_324;
 const followed = 263;
 const profileDescription = `Game UI ✦ Web UI ✦ UxUi Designer`;

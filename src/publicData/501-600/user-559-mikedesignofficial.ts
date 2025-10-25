@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'mikedesignofficial';
-const userId = '';
-const prefixUrl = '';
+const userId = '6cdbf607-9e28-4073-a5ea-d73c452c6064';
+const prefixUrl = 'https://dominicnikolai.github.io/project-370/assets/m1kedesignofficial/';
 const followers = 149_832;
 const followed = 284;
 const profileDescription = ` design partner for startup founders`;

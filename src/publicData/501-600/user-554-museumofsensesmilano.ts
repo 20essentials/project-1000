@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'museumofsensesmilano';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd44ea7bf-3167-4dbf-9304-ddc5a8a9b81d';
+const prefixUrl = 'https://dominicnikolai.github.io/project-370/assets/museumofsensesmilano/';
 const followers = 72_832;
 const followed = 79;
 const profileDescription = `✨ Risveglia i tuoi sensi con esperienze immersive`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'swagdog697';
-const userId = '';
-const prefixUrl = '';
+const userId = 'f2e95fc3-1355-47c1-a770-5e38dfa90a07';
+const prefixUrl = 'https://dominicnikolai.github.io/project-370/assets/swagdog697/';
 const followers = 558_832;
 const followed = 775;
 const profileDescription = `$SYNDOG`;
