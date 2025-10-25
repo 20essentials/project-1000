@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'devcorp_pe';
-const userId = '';
-const prefixUrl = '';
+const userId = 'e9aa828c-7978-47d5-aff4-27ad7d0771a0';
+const prefixUrl = 'https://dominicnikolai.github.io/project-374/assets/devcorp-pe/';
 const followers = 8_832;
 const followed = 42;
 const profileDescription = `Tu visión, nuestro código👨🏽‍💻`;

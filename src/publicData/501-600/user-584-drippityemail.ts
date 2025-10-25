@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'drippityemail';
-const userId = '';
-const prefixUrl = '';
+const userId = '70840c03-9df0-4217-a6d1-5fd8aa059c34';
+const prefixUrl = 'https://dominicnikolai.github.io/project-374/assets/drippityemail/';
 const followers = 182_832;
 const followed = 50;
 const profileDescription = `I hope this email finds you well...seriously`;

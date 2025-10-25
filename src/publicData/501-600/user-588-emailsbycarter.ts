@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'emailsbycarter';
-const userId = '';
-const prefixUrl = '';
+const userId = '502a4908-6ad2-4f8b-87a5-a06cbb3f3904';
+const prefixUrl = 'https://dominicnikolai.github.io/project-374/assets/emailsbycarter/';
 const followers = 89_932;
 const followed = 59;
 const profileDescription = `Your favorite email designer 🧑🏼‍💻`;

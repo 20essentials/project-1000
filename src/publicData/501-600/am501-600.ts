@@ -226,6 +226,10 @@ import { juanpablorubio_array_of_posts, juanpablorubio_commonProps } from './use
 import { juan_amonda_array_of_posts } from '../101-200/user-199-juan-amonda';
 import { landey_web_array_of_posts, landey_web_commonProps } from './user-578-landey-web';
 import { pierpy_perry_array_of_posts, pierpy_perry_commonProps } from './user-576-pierpy-perry';
+import { devcorp_pe_array_of_posts, devcorp_pe_commonProps } from './user-583-devcorp-pe';
+import { drippityemail_array_of_posts, drippityemail_commonProps } from './user-584-drippityemail';
+import { emailsbycarter_array_of_posts, emailsbycarter_commonProps } from './user-588-emailsbycarter';
+import { gabrielfong_web_array_of_posts, gabrielfong_web_commonProps } from './user-586-gabrielfong-web';
 
 export const PUBLIC_501_600: arrayOfPosts = [
   [cs2bo3_commonProps, cs2bo3_array_of_posts] /* 501 */,
@@ -319,4 +323,11 @@ export const PUBLIC_501_600: arrayOfPosts = [
   [greybear_design_commonProps, greybear_design_array_of_posts] /* 580 */,
   [bangthebrand_commonProps, bangthebrand_array_of_posts] /* 581 */,
   [callmetesssss_commonProps, callmetesssss_array_of_posts] /* 582 */,
+  [devcorp_pe_commonProps, devcorp_pe_array_of_posts] /* 583 */,
+  [drippityemail_commonProps, drippityemail_array_of_posts] /* 584 */,
+
+  [gabrielfong_web_commonProps, gabrielfong_web_array_of_posts] /* 586 */,
+
+  [emailsbycarter_commonProps, emailsbycarter_array_of_posts] /* 588 */,
+
 ];

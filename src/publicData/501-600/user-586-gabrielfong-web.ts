@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'gabrielfong_web';
-const userId = '';
-const prefixUrl = '';
+const userId = 'cab50b5b-938a-491f-94c4-9001f74d2986';
+const prefixUrl = 'https://dominicnikolai.github.io/project-374/assets/gabrielfong-web/';
 const followers = 27_832;
 const followed = 72;
 const profileDescription = `Te ayudo a conseguir clientes con una página web que convierte.
