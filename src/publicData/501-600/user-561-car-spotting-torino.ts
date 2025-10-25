@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'car_spotting_torino';
-const userId = '';
-const prefixUrl = '';
+const userId = '6eecf128-ed59-45a1-8e5d-277d896a5391';
+const prefixUrl = 'https://dominicnikolai.github.io/project-370/assets/car-spotting-torino/';
 const followers = 215_832;
 const followed = 244;
 const profileDescription = `I TORINO`;

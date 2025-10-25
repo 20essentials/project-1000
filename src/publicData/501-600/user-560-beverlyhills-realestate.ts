@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'beverlyhills_realestate';
-const userId = '';
-const prefixUrl = '';
+const userId = '10ff08da-883c-4244-b6d8-85b89c1a1a26';
+const prefixUrl = 'https://dominicnikolai.github.io/project-370/assets/bev3rlyhills/';
 const followers = 367_932;
 const followed = 234;
 const profileDescription = `discover the finest estates`;

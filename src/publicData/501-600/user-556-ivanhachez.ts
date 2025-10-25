@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ivanhachez';
-const userId = '';
-const prefixUrl = '';
+const userId = '34d2aec9-922c-43d9-b3a6-c0ea4d999a6e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-370/assets/ivanhachez/';
 const followers = 793_832;
 const followed = 269;
 const profileDescription = ` Cine, recomendaciones y entrevistas`;

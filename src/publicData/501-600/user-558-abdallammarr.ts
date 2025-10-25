@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'abdallammarr';
-const userId = '';
-const prefixUrl = '';
+const userId = '24d1f222-8df3-495d-907b-7b5714fbaf09';
+const prefixUrl = 'https://dominicnikolai.github.io/project-370/assets/abdallammarr/';
 const followers = 19_832;
 const followed = 322;
 const profileDescription = `3D Motion Designer`;

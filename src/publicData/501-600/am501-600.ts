@@ -196,6 +196,10 @@ import {
   repostlocker_array_of_posts,
   repostlocker_commonProps
 } from './user-546-repostlocker';
+import { abdallammarr_array_of_posts, abdallammarr_commonProps } from './user-558-abdallammarr';
+import { beverlyhills_realestate_array_of_posts, beverlyhills_realestate_commonProps } from './user-560-beverlyhills-realestate';
+import { car_spotting_torino_array_of_posts, car_spotting_torino_commonProps } from './user-561-car-spotting-torino';
+import { ivanhachez_array_of_posts, ivanhachez_commonProps } from './user-556-ivanhachez';
 
 export const PUBLIC_501_600: arrayOfPosts = [
   [cs2bo3_commonProps, cs2bo3_array_of_posts] /* 501 */,
@@ -260,4 +264,11 @@ export const PUBLIC_501_600: arrayOfPosts = [
   [ms_catttu_commonProps, ms_catttu_array_of_posts] /* 551 */,
   [breccia_ricardo_commonProps, breccia_ricardo_array_of_posts] /* 552 */,
   [la_ciencia_dice_commonProps, la_ciencia_dice_array_of_posts] /* 553 */,
+
+  [ivanhachez_commonProps, ivanhachez_array_of_posts] /* 556 */,
+
+  [abdallammarr_commonProps, abdallammarr_array_of_posts] /* 558 */,
+
+  [beverlyhills_realestate_commonProps, beverlyhills_realestate_array_of_posts] /* 560 */,
+  [car_spotting_torino_commonProps, car_spotting_torino_array_of_posts] /* 561 */,
 ];
