@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'apocalypse6x6';
-const userId = '';
-const prefixUrl = '';
+const userId = 'a96cf8a4-efc5-4c8c-8248-3af1fc2c97c2';
+const prefixUrl = 'https://dominicnikolai.github.io/project-372/assets/apocalypse6x6/';
 const followers = 543_832;
 const followed = 176;
 const profileDescription = `4x4 and 6x6`;

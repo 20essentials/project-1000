@@ -208,6 +208,10 @@ import { novemilagiri_array_of_posts, novemilagiri_commonProps } from './user-56
 import { crabstab_array_of_posts, crabstab_commonProps } from './user-564-crabstab';
 import { nevermindfm_array_of_posts, nevermindfm_commonProps } from './user-566-nevermindfm';
 import { taliqa_ejaz_array_of_posts, taliqa_ejaz_commonProps } from './user-563-taliqa-ejaz';
+import { apocalypse6x6_array_of_posts, apocalypse6x6_commonProps } from './user-570-apocalypse6x6';
+import { arrowxlabs_array_of_posts, arrowxlabs_commonProps } from './user-567-arrowxlabs';
+import { dir_odinlee_array_of_posts, dir_odinlee_commonProps } from './user-572-dir-odinlee';
+import { diy_traps_array_of_posts, diy_traps_commonProps } from './user-568-diy-traps';
 
 export const PUBLIC_501_600: arrayOfPosts = [
   [cs2bo3_commonProps, cs2bo3_array_of_posts] /* 501 */,
@@ -285,4 +289,10 @@ export const PUBLIC_501_600: arrayOfPosts = [
   [crabstab_commonProps, crabstab_array_of_posts] /* 564 */,
 
   [nevermindfm_commonProps, nevermindfm_array_of_posts] /* 566 */,
+  [arrowxlabs_commonProps, arrowxlabs_array_of_posts] /* 567 */,
+  [diy_traps_commonProps, diy_traps_array_of_posts] /* 568 */,
+
+  [apocalypse6x6_commonProps, apocalypse6x6_array_of_posts] /* 570 */,
+
+  [dir_odinlee_commonProps, dir_odinlee_array_of_posts] /* 572 */,
 ];

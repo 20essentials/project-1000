@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'dir_odinlee';
-const userId = '';
-const prefixUrl = '';
+const userId = '8110e4b5-31c2-4d70-8bb9-53f272b85325';
+const prefixUrl = 'https://dominicnikolai.github.io/project-372/assets/dir-odinlee/';
 const followers = 105_832;
 const followed = 323;
 const profileDescription = `I create 3D stories for brands`;

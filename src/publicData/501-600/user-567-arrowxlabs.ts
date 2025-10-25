@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'arrowxlabs';
-const userId = '';
-const prefixUrl = '';
+const userId = '223dff9a-254e-4431-83b5-4a0e00f3cffsdf5';
+const prefixUrl = 'https://dominicnikolai.github.io/project-372/assets/arrowxlabs/';
 const followers = 158_832;
 const followed = 163;
 const profileDescription = `🎮 A Development Agency 👾`;

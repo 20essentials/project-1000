@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'diy_traps';
-const userId = '';
-const prefixUrl = '';
+const userId = '569bdd1a-8dae-4c86-9f07-1bf815b1d490';
+const prefixUrl = 'https://dominicnikolai.github.io/project-372/assets/diy-traps/';
 const followers = 452_832;
 const followed = 402;
 const profileDescription = `DIY Easy Birds Trap 🕳`;
