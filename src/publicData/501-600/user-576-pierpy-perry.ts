@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'pierpy_perry';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd0a371e7-b362-4a7e-a2cc-4bd2d327a46c';
+const prefixUrl = 'https://dominicnikolai.github.io/project-373/assets/pierpy-perry/';
 const followers = 189_832;
 const followed = 54;
 const profileDescription = `🎓 Laureato all'Università della Vita`;

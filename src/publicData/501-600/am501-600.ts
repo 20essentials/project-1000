@@ -224,6 +224,8 @@ import { gracesoluttions_array_of_posts, gracesoluttions_commonProps } from './u
 import { greybear_design_array_of_posts, greybear_design_commonProps } from './user-580-greybear-design';
 import { juanpablorubio_array_of_posts, juanpablorubio_commonProps } from './user-579-juanpablorubio';
 import { juan_amonda_array_of_posts } from '../101-200/user-199-juan-amonda';
+import { landey_web_array_of_posts, landey_web_commonProps } from './user-578-landey-web';
+import { pierpy_perry_array_of_posts, pierpy_perry_commonProps } from './user-576-pierpy-perry';
 
 export const PUBLIC_501_600: arrayOfPosts = [
   [cs2bo3_commonProps, cs2bo3_array_of_posts] /* 501 */,
@@ -310,9 +312,9 @@ export const PUBLIC_501_600: arrayOfPosts = [
   [urban_streetart_commonProps, urban_streetart_array_of_posts] /* 573 */,
   [readymag_commonProps, readymag_array_of_posts] /* 574 */,
   [gracesoluttions_commonProps, gracesoluttions_array_of_posts] /* 575 */,
-
+  [pierpy_perry_commonProps, pierpy_perry_array_of_posts] /* 576 */,
   [aalyadesignss_commonProps, aalyadesignss_array_of_posts] /* 577 */,
-
+  [landey_web_commonProps, landey_web_array_of_posts] /* 578 */,
   [juanpablorubio_commonProps, juanpablorubio_array_of_posts] /* 579 */,
   [greybear_design_commonProps, greybear_design_array_of_posts] /* 580 */,
   [bangthebrand_commonProps, bangthebrand_array_of_posts] /* 581 */,
