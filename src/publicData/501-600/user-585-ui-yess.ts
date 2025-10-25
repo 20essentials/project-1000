@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ui_yess';
-const userId = '';
-const prefixUrl = '';
+const userId = '02eb03cc-33ce-4205-b236-4c884870962e';
+const prefixUrl = 'https://dominicnikolai.github.io/project-374/assets/ui-yess/';
 const followers = 11_832;
 const followed = 25;
 const profileDescription = `ux/ui, tips, vlogs y recursos ☻

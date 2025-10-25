@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ginopatti';
-const userId = '';
-const prefixUrl = '';
+const userId = '691b5bc7-11f0-4550-92cb-b2c0a8d00af0';
+const prefixUrl = 'https://dominicnikolai.github.io/project-374/assets/ginopatti/';
 const followers = 74_832;
 const followed = 35;
 const profileDescription = `Diseñador y desarrollador web`;

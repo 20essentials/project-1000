@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'il_messia';
-const userId = '';
-const prefixUrl = '';
+const userId = '6d414ee5-1d0a-421a-bed5-5e4b6102dbdb';
+const prefixUrl = 'https://dominicnikolai.github.io/project-374/assets/il-messia/';
 const followers = 1_234;
 const followed = 96;
 const profileDescription = `designer 🌴`;
