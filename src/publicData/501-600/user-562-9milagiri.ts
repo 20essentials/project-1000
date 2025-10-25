@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'novemilagiri';
-const userId = '';
-const prefixUrl = '';
+const userId = 'edcefd45-551f-4939-b00f-3ca8d5d7eef4';
+const prefixUrl = 'https://dominicnikolai.github.io/project-371/assets/9milagiri/';
 const followers = 19_800;
 const followed = 181;
 const profileDescription = `Supercar, Potenza e Adrenalina`;

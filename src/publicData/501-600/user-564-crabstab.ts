@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'crabstab';
-const userId = '';
-const prefixUrl = '';
+const userId = '1b0be895-2d80-474a-ac99-de6368231fa7';
+const prefixUrl = 'https://dominicnikolai.github.io/project-371/assets/crabstab/';
 const followers = 118_832;
 const followed = 99;
 const profileDescription = `Art Direction & Illustration`;

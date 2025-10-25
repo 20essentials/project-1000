@@ -5,11 +5,11 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'nevermindfm';
-const userId = '';
-const prefixUrl = '';
+const userId = '9f946bfa-4598-4007-953b-fd292bfcb1bc';
+const prefixUrl = 'https://dominicnikolai.github.io/project-371/assets/nevermindfm/';
 const followers = 3_732_832;
 const followed = 148;
-const profileDescription = `For story share and collab post`;
+const profileDescription = `Music and...`;
 const prefixLetterVideos = 'v';
 const quantityOfVideos = 152;
 const prefixLetterImages = 'f';

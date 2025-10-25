@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'taliqa_ejaz';
-const userId = '';
-const prefixUrl = '';
+const userId = '642dfc5a-ed43-4b08-ac37-23b4b193f94f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-371/assets/taliqa-ejaz/';
 const followers = 193_832;
 const followed = 50;
 const profileDescription = `Get To Next Generation WebDev`;

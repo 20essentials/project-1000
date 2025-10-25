@@ -204,6 +204,10 @@ import { mikedesignofficial_array_of_posts, mikedesignofficial_commonProps } fro
 import { museumofsensesmilano_array_of_posts, museumofsensesmilano_commonProps } from './user-554-museumofsensesmilano';
 import { swagdog697_array_of_posts, swagdog697_commonProps } from './user-555-swagdog697';
 import { uxui_howardle_array_of_posts, uxui_howardle_commonProps } from './user-557-uxui-howardle';
+import { novemilagiri_array_of_posts, novemilagiri_commonProps } from './user-562-9milagiri';
+import { crabstab_array_of_posts, crabstab_commonProps } from './user-564-crabstab';
+import { nevermindfm_array_of_posts, nevermindfm_commonProps } from './user-566-nevermindfm';
+import { taliqa_ejaz_array_of_posts, taliqa_ejaz_commonProps } from './user-563-taliqa-ejaz';
 
 export const PUBLIC_501_600: arrayOfPosts = [
   [cs2bo3_commonProps, cs2bo3_array_of_posts] /* 501 */,
@@ -276,4 +280,9 @@ export const PUBLIC_501_600: arrayOfPosts = [
   [mikedesignofficial_commonProps, mikedesignofficial_array_of_posts] /* 559 */,
   [beverlyhills_realestate_commonProps, beverlyhills_realestate_array_of_posts] /* 560 */,
   [car_spotting_torino_commonProps, car_spotting_torino_array_of_posts] /* 561 */,
+  [novemilagiri_commonProps, novemilagiri_array_of_posts] /* 562 */,
+  [taliqa_ejaz_commonProps, taliqa_ejaz_array_of_posts] /* 563 */,
+  [crabstab_commonProps, crabstab_array_of_posts] /* 564 */,
+
+  [nevermindfm_commonProps, nevermindfm_array_of_posts] /* 566 */,
 ];
