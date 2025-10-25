@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'bangthebrand';
-const userId = '';
-const prefixUrl = '';
+const userId = '0896cc1f-abcf-4473-96d6-f08af13f29f9';
+const prefixUrl = 'https://dominicnikolai.github.io/project-373/assets/bangthebrand/';
 const followers = 464_832;
 const followed = 83;
 const profileDescription = `Branding | Diseño | Web`;

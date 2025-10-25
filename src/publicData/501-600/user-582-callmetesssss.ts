@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'callmetesssss';
-const userId = '';
-const prefixUrl = '';
+const userId = '49605af4-e903-4d69-8228-765ab2cbf241';
+const prefixUrl = 'https://dominicnikolai.github.io/project-373/assets/callmetesssss/';
 const followers = 78_832;
 const followed = 50;
 const profileDescription = `Graphic Designer`;

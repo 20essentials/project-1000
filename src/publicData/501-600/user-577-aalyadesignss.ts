@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'aalyadesignss';
-const userId = '';
-const prefixUrl = '';
+const userId = '4983a581-5f38-4df8-87ed-6fa7823f5e6a';
+const prefixUrl = 'https://dominicnikolai.github.io/project-373/assets/aalyadesignss/';
 const followers = 57_832;
 const followed = 48;
 const profileDescription = `Graphic Designer`;

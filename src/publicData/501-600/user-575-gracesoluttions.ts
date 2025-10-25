@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'gracesoluttions';
-const userId = '';
-const prefixUrl = '';
+const userId = '34ce4057-d5d6-48f8-81f8-6b90f704cba6';
+const prefixUrl = 'https://dominicnikolai.github.io/project-373/assets/gracesoluttions/';
 const followers = 16_832;
 const followed = 533;
 const profileDescription = ` ¿Buscas una web diferente entre tu competencia? ⬇️`;
