@@ -212,6 +212,11 @@ import { apocalypse6x6_array_of_posts, apocalypse6x6_commonProps } from './user-
 import { arrowxlabs_array_of_posts, arrowxlabs_commonProps } from './user-567-arrowxlabs';
 import { dir_odinlee_array_of_posts, dir_odinlee_commonProps } from './user-572-dir-odinlee';
 import { diy_traps_array_of_posts, diy_traps_commonProps } from './user-568-diy-traps';
+import { germanshepherd_array_of_posts, germanshepherd_commonProps } from './user-571-germanshepherd';
+import { readymag_array_of_posts, readymag_commonProps } from './user-574-readymag';
+import { ruby_the_goatv1_array_of_posts, ruby_the_goatv1_commonProps } from './user-569-ruby-the-goatv1';
+import { urban_streetart_array_of_posts, urban_streetart_commonProps } from './user-573-urban-streetart';
+import { yefertech_array_of_posts, yefertech_commonProps } from './user-565-yefertech';
 
 export const PUBLIC_501_600: arrayOfPosts = [
   [cs2bo3_commonProps, cs2bo3_array_of_posts] /* 501 */,
@@ -287,12 +292,15 @@ export const PUBLIC_501_600: arrayOfPosts = [
   [novemilagiri_commonProps, novemilagiri_array_of_posts] /* 562 */,
   [taliqa_ejaz_commonProps, taliqa_ejaz_array_of_posts] /* 563 */,
   [crabstab_commonProps, crabstab_array_of_posts] /* 564 */,
-
+  [yefertech_commonProps, yefertech_array_of_posts] /* 565 */,
   [nevermindfm_commonProps, nevermindfm_array_of_posts] /* 566 */,
   [arrowxlabs_commonProps, arrowxlabs_array_of_posts] /* 567 */,
   [diy_traps_commonProps, diy_traps_array_of_posts] /* 568 */,
-
+  [ruby_the_goatv1_commonProps, ruby_the_goatv1_array_of_posts] /* 569 */,
   [apocalypse6x6_commonProps, apocalypse6x6_array_of_posts] /* 570 */,
-
+  [germanshepherd_commonProps, germanshepherd_array_of_posts] /* 571 */,
   [dir_odinlee_commonProps, dir_odinlee_array_of_posts] /* 572 */,
+  [urban_streetart_commonProps, urban_streetart_array_of_posts] /* 573 */,
+
+  [readymag_commonProps, readymag_array_of_posts] /* 574 */,
 ];

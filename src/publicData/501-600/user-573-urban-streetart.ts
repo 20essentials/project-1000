@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'urban_streetart';
-const userId = '';
-const prefixUrl = '';
+const userId = '4f5e6934-fa28-4cea-98da-38e5c9877723';
+const prefixUrl = 'https://dominicnikolai.github.io/project-372/assets/urb4n-streetart/';
 const followers = 4_832_832;
 const followed = 50;
 const profileDescription = `URBAN STREET ART®️`;

@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'ruby_the_goatv1';
-const userId = '';
-const prefixUrl = '';
+const userId = '1a3ff2cd-6391-49fb-a7ce-13b8bbcf1fc1';
+const prefixUrl = 'https://dominicnikolai.github.io/project-372/assets/ruby-the-goatv1/';
 const followers = 41_832;
 const followed = 32;
 const profileDescription = `Ruby`;

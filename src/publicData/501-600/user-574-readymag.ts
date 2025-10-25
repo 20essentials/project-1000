@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'readymag';
-const userId = '';
-const prefixUrl = '';
+const userId = '060fd58b-455b-43b5-a41c-e502927105f1';
+const prefixUrl = 'https://dominicnikolai.github.io/project-372/assets/readymag/';
 const followers = 483_832;
 const followed = 367;
 const profileDescription = `Your design tool to create outstanding websites

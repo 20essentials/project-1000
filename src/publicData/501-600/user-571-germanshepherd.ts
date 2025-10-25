@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'germanshepherd';
-const userId = '';
-const prefixUrl = '';
+const userId = 'cad4120c-a00d-4fdd-9f62-951b12e15836';
+const prefixUrl = 'https://dominicnikolai.github.io/project-372/assets/germanshepherd/';
 const followers = 53_832;
 const followed = 195;
 const profileDescription = `Smart, loyal, and always protective`;

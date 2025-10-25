@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'yefertech';
-const userId = '';
-const prefixUrl = '';
+const userId = 'b7026b71-1264-478e-8ad6-bcc7c735884f';
+const prefixUrl = 'https://dominicnikolai.github.io/project-374/assets/yefertech/';
 const followers = 322_832;
 const followed = 159;
 const profileDescription = `💻 Tecnología a tu alcance, con lógica y estilo. 💻
