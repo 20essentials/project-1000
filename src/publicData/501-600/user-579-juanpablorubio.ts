@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'juanpablorubio';
-const userId = '';
-const prefixUrl = '';
+const userId = 'd29ea940-39ba-46e7-8398-e687890dc391';
+const prefixUrl = 'https://dominicnikolai.github.io/project-373/assets/juanpablorubio/';
 const followers = 73_832;
 const followed = 648;
 const profileDescription = `🏡Persiguiendo el sueño Colombiano 🇨🇴`;

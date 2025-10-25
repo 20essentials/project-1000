@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'greybear_design';
-const userId = '';
-const prefixUrl = '';
+const userId = '6e9cd98d-1447-4c06-9115-8f0f43a4afc1';
+const prefixUrl = 'https://dominicnikolai.github.io/project-373/assets/greybear-design/';
 const followers = 495_832;
 const followed = 343;
 const profileDescription = `random prototypes

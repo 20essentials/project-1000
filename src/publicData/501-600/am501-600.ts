@@ -221,6 +221,9 @@ import { aalyadesignss_array_of_posts, aalyadesignss_commonProps } from './user-
 import { bangthebrand_array_of_posts, bangthebrand_commonProps } from './user-581-bangthebrand';
 import { callmetesssss_array_of_posts, callmetesssss_commonProps } from './user-582-callmetesssss';
 import { gracesoluttions_array_of_posts, gracesoluttions_commonProps } from './user-575-gracesoluttions';
+import { greybear_design_array_of_posts, greybear_design_commonProps } from './user-580-greybear-design';
+import { juanpablorubio_array_of_posts, juanpablorubio_commonProps } from './user-579-juanpablorubio';
+import { juan_amonda_array_of_posts } from '../101-200/user-199-juan-amonda';
 
 export const PUBLIC_501_600: arrayOfPosts = [
   [cs2bo3_commonProps, cs2bo3_array_of_posts] /* 501 */,
@@ -310,6 +313,8 @@ export const PUBLIC_501_600: arrayOfPosts = [
 
   [aalyadesignss_commonProps, aalyadesignss_array_of_posts] /* 577 */,
 
+  [juanpablorubio_commonProps, juanpablorubio_array_of_posts] /* 579 */,
+  [greybear_design_commonProps, greybear_design_array_of_posts] /* 580 */,
   [bangthebrand_commonProps, bangthebrand_array_of_posts] /* 581 */,
   [callmetesssss_commonProps, callmetesssss_array_of_posts] /* 582 */,
 ];

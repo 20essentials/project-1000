@@ -6,7 +6,7 @@ import {
 
 const username = 'landey_web';
 const userId = '';
-const prefixUrl = '';
+const prefixUrl = 'https://dominicnikolai.github.io/project-373/assets/landey-web/p3rfil.avif';
 const followers = 322_832;
 const followed = 259;
 const profileDescription = `¿Listo para aumentar tus ventas con una web moderna? 😉🚀`;
