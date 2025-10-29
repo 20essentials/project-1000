@@ -338,6 +338,10 @@ import {
   il_messia_commonProps
 } from './user-589-il-messia';
 import { ui_yess_array_of_posts, ui_yess_commonProps } from './user-585-ui-yess';
+import { bitboss_dev_array_of_posts, bitboss_dev_commonProps } from './user-596-bitboss-dev';
+import { chavitocodes_array_of_posts, chavitocodes_commonProps } from './user-595-chavitocodes';
+import { kevinacevedo_dev_array_of_posts, kevinacevedo_dev_commonProps } from './user-590-kevinacevedo-dev';
+import { mejora_tu_seo_array_of_posts, mejora_tu_seo_commonProps } from './user-593-mejora-tu-seo';
 
 export const PUBLIC_501_600: arrayOfPosts = [
   [cs2bo3_commonProps, cs2bo3_array_of_posts] /* 501 */,
@@ -443,5 +447,11 @@ export const PUBLIC_501_600: arrayOfPosts = [
   [gabrielfong_web_commonProps, gabrielfong_web_array_of_posts] /* 586 */,
   [ginopatti_commonProps, ginopatti_array_of_posts] /* 587 */,
   [emailsbycarter_commonProps, emailsbycarter_array_of_posts] /* 588 */,
-  [il_messia_commonProps, il_messia_array_of_posts] /* 589 */
+  [il_messia_commonProps, il_messia_array_of_posts] /* 589 */,
+  [kevinacevedo_dev_commonProps, kevinacevedo_dev_array_of_posts] /* 590 */,
+
+  [mejora_tu_seo_commonProps, mejora_tu_seo_array_of_posts] /* 593 */,
+
+  [chavitocodes_commonProps, chavitocodes_array_of_posts] /* 595 */,
+  [bitboss_dev_commonProps, bitboss_dev_array_of_posts] /* 596 */,
 ];
