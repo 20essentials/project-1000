@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'web_aura';
-const userId = '';
-const prefixUrl = '';
+const userId = 'ceb19a4e-7f9f-41ed-a2f4-7acb9aa99c91';
+const prefixUrl = 'https://dominicnikolai.github.io/project-375/assets/web-aura/';
 const followers = 12_832;
 const followed = 123;
 const profileDescription = `🤍 Link in the future...`;

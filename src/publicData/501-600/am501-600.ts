@@ -342,6 +342,10 @@ import { bitboss_dev_array_of_posts, bitboss_dev_commonProps } from './user-596-
 import { chavitocodes_array_of_posts, chavitocodes_commonProps } from './user-595-chavitocodes';
 import { kevinacevedo_dev_array_of_posts, kevinacevedo_dev_commonProps } from './user-590-kevinacevedo-dev';
 import { mejora_tu_seo_array_of_posts, mejora_tu_seo_commonProps } from './user-593-mejora-tu-seo';
+import { raxitis_array_of_posts, raxitis_commonProps } from './user-597-raxitis';
+import { sheweb_it_array_of_posts, sheweb_it_commonProps } from './user-594-sheweb-it';
+import { tomasgtc_array_of_posts, tomasgtc_commonProps } from './user-592-tomasgtc';
+import { web_aura_array_of_posts, web_aura_commonProps } from './user-591-web-aura';
 
 export const PUBLIC_501_600: arrayOfPosts = [
   [cs2bo3_commonProps, cs2bo3_array_of_posts] /* 501 */,
@@ -449,9 +453,11 @@ export const PUBLIC_501_600: arrayOfPosts = [
   [emailsbycarter_commonProps, emailsbycarter_array_of_posts] /* 588 */,
   [il_messia_commonProps, il_messia_array_of_posts] /* 589 */,
   [kevinacevedo_dev_commonProps, kevinacevedo_dev_array_of_posts] /* 590 */,
-
+  [web_aura_commonProps, web_aura_array_of_posts] /* 591 */,
+  [tomasgtc_commonProps, tomasgtc_array_of_posts] /* 592 */,
   [mejora_tu_seo_commonProps, mejora_tu_seo_array_of_posts] /* 593 */,
-
+  [sheweb_it_commonProps, sheweb_it_array_of_posts] /* 594 */,
   [chavitocodes_commonProps, chavitocodes_array_of_posts] /* 595 */,
   [bitboss_dev_commonProps, bitboss_dev_array_of_posts] /* 596 */,
+  [raxitis_commonProps, raxitis_array_of_posts] /* 597 */,
 ];

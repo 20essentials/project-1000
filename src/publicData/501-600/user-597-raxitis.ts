@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'raxitis';
-const userId = '';
-const prefixUrl = '';
+const userId = 'c207b909-ada8-41b0-b31a-37c72f8ad520';
+const prefixUrl = 'https://dominicnikolai.github.io/project-375/assets/raxitis/';
 const followers = 18_832;
 const followed = 270;
 const profileDescription = `Web Developer`;

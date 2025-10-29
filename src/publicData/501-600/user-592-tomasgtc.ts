@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'tomasgtc';
-const userId = '';
-const prefixUrl = '';
+const userId = 'b4695638-c459-401b-9983-0bbbda3e98fe';
+const prefixUrl = 'https://dominicnikolai.github.io/project-375/assets/tomasgtc/';
 const followers = 2_324;
 const followed = 50;
 const profileDescription = `Marketing + Emprendimiento `;

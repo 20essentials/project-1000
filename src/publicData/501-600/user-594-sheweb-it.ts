@@ -5,8 +5,8 @@ import {
 } from '@/publicData/functions/amPublicFunctions';
 
 const username = 'sheweb_it';
-const userId = '';
-const prefixUrl = '';
+const userId = '05e954c5-bd07-4265-9767-91b17b6282a5';
+const prefixUrl = 'https://dominicnikolai.github.io/project-375/assets/sheweb-it/';
 const followers = 45_832;
 const followed = 210;
 const profileDescription = `Ti creo il sito web, ti rendo indipendent | Formazione web designer | Solo donne
