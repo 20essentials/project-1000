@@ -7,9 +7,7 @@ import {
   useUserCreator,
   type valueOfMODE_GRID
 } from '@/store/useUserCreator';
-import type {
-  postProps,
-} from '@/components/pages/SliderPosts/types.d';
+import type { postProps } from '@/components/pages/SliderPosts/types.d';
 
 export function PostVideoOrImage({
   post,
@@ -110,7 +108,12 @@ export function PostVideoOrImage({
           <img
             className='square_user_creator profile-creator__image'
             src={arrayImages[0]}
-            alt='Post image'
+            alt='Post image 1'
+            onError={e => {
+              const image = e.target as HTMLImageElement;
+              image.onerror = null; // evita loop
+              image.src = '/assets/not-found-image.avif';
+            }}
           />
           <SqureSubSquare />
         </>

@@ -23,6 +23,7 @@ export type postProps = {
   isSaved: boolean;
   isLiked: boolean;
   idPost: string;
+  audioSrc?: string;
 };
 
 export type arrayOfPostProps = postProps[];

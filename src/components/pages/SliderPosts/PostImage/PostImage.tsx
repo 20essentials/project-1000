@@ -44,7 +44,8 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
     profileImageSrc,
     idx,
     userId,
-    idPost
+    idPost,
+    audioSrc
   } = props;
 
   const arrayImagesLength = arrayImages?.length ?? 0;
@@ -145,10 +146,11 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
       ([entry]) => {
         if (entry.isIntersecting) {
           if (!isTheSameuser) {
-  
-
             updateURLsearchParams({
-              arrayOfQueryParamsToSet: [['userId', userId], ['postId', idPost]]
+              arrayOfQueryParamsToSet: [
+                ['userId', userId],
+                ['postId', idPost]
+              ]
             });
           }
 
@@ -201,9 +203,12 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
 
   return (
     <article className='post-image am-post-video-or-image' ref={postImageRef}>
-      {randomSong && (
-        <audio ref={audioRef} src={randomSong} loop preload='auto' />
-      )}
+      <audio
+        ref={audioRef}
+        src={(audioSrc ? audioSrc : randomSong)!}
+        loop
+        preload='auto'
+      />
 
       <section className='layer-1-post-image' ref={layerOfImagesRef}>
         <aside className='layer-1-post-image-inner'>
@@ -215,6 +220,11 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
               alt='image'
               draggable='false'
               onClick={handleAudioToggle}
+              onError={e => {
+                const image = e.target as HTMLImageElement;
+                image.onerror = null; // evita loop
+                image.src = '/assets/not-found-image.avif';
+              }}
             />
           ))}
         </aside>
