@@ -222,7 +222,7 @@ export function PostImage(props: postProps & postComonProps & { idx: number }) {
               onClick={handleAudioToggle}
               onError={e => {
                 const image = e.target as HTMLImageElement;
-                image.onerror = null; // evita loop
+                image.onerror = null; 
                 image.src = '/assets/not-found-image.avif';
               }}
             />
