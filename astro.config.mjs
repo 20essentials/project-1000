@@ -6,7 +6,6 @@ import { envField } from 'astro/config';
 import { id_user_testing } from './src/utils/consts/userIdTesting';
 // import { id_user_testing } from './src/utils/consts/userIdTesting';
 
-
 export default defineConfig({
   build: {
     assets: 'static'
@@ -28,13 +27,12 @@ export default defineConfig({
       THERE_IS_E2E: envField.boolean({ context: 'client', access: 'public' })
     }
   },
-
   //Localhost
   // site: 'http://localhost:4321/',
   site: 'https://project-1000-t1k-tok-minimalist.vercel.app/',
   output: 'server',
   server: {
-    open: `/?userId=${id_user_testing}`,
+    open: `/?userId=${id_user_testing}`
     // open: `/?search=hello`,
   },
   adapter: vercel(),

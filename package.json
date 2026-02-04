@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@astrojs/react": "4.3.0",
-    "@astrojs/vercel": "8.2.0",
+    "@astrojs/vercel": "9.0.4",
     "@clerk/astro": "2.10.2",
     "@gsap/react": "2.1.2",
     "@lottiefiles/dotlottie-react": "0.14.4",
